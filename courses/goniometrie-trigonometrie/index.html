@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Goniometrie a trigonometrie - Naučte se pracovat s goniometrickými funkcemi, řešit rovnice a aplikovat trigonometrii.">
+    <title>Goniometrie a trigonometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Goniometrie a trigonometrie</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Goniometrie a trigonometrie</h1>
+                    <p class="course-description">
+                        Ovládněte goniometrické funkce, jejich grafy a vlastnosti. Naučte se řešit
+                        goniometrické rovnice a aplikovat sinovou a kosinovou větu v praxi.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">7 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~10 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">📝</span>
+                            <span class="stat-value">40+ úloh</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/goniometricke-funkce/index.html" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <!-- Unit circle -->
+                            <circle cx="100" cy="100" r="70" stroke="currentColor" stroke-width="1.5" fill="none"
+                                opacity="0.2" />
+                            <!-- Axes -->
+                            <line x1="20" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="1.5"
+                                opacity="0.3" />
+                            <line x1="100" y1="20" x2="100" y2="180" stroke="currentColor" stroke-width="1.5"
+                                opacity="0.3" />
+                            <!-- Angle arc -->
+                            <path d="M 130 100 A 30 30 0 0 0 121 79" stroke="url(#gGradient1)" stroke-width="2"
+                                fill="none" />
+                            <!-- Radius line (angle ~40°) -->
+                            <line x1="100" y1="100" x2="153" y2="55" stroke="url(#gGradient2)" stroke-width="3"
+                                class="animated-vector" />
+                            <!-- Sin line -->
+                            <line x1="153" y1="55" x2="153" y2="100" stroke="#ef4444" stroke-width="2.5"
+                                stroke-dasharray="5,3" opacity="0.8" />
+                            <!-- Cos line -->
+                            <line x1="100" y1="100" x2="153" y2="100" stroke="#3b82f6" stroke-width="2.5"
+                                stroke-dasharray="5,3" opacity="0.8" />
+                            <!-- Sine wave hint -->
+                            <path d="M 20 140 Q 50 110, 80 140 T 140 140 T 200 140" stroke="url(#gGradient1)"
+                                stroke-width="2" fill="none" opacity="0.5" />
+                            <!-- Points -->
+                            <circle cx="100" cy="100" r="4" fill="#6366f1" />
+                            <circle cx="153" cy="55" r="5" fill="#a855f7" />
+                            <!-- Labels -->
+                            <text x="160" y="108" font-size="11" fill="#3b82f6" font-family="Times New Roman"
+                                font-style="italic">cos</text>
+                            <text x="157" y="78" font-size="11" fill="#ef4444" font-family="Times New Roman"
+                                font-style="italic">sin</text>
+                            <text x="118" y="96" font-size="11" fill="currentColor" font-family="Times New Roman"
+                                font-style="italic" opacity="0.6">α</text>
+                            <!-- Gradients -->
+                            <defs>
+                                <linearGradient id="gGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1" />
+                                    <stop offset="100%" style="stop-color:#a855f7" />
+                                </linearGradient>
+                                <linearGradient id="gGradient2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">sin²α + cos²α = 1</div>
+                        <div class="formula formula-2">sin(α ± β) = sin α cos β ± cos α sin β</div>
+                        <div class="formula formula-3">a/sin α = b/sin β</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress -->
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Od goniometrických funkcí přes rovnice po trigonometrii trojúhelníků</p>
+            </div>
+
+            <div class="chapters-list">
+
+                <!-- Kapitola 1 -->
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Goniometrické funkce a stupňová a oblouková míra</h3>
+                            <p class="chapter-description">Úhly, trojúhelníky, definice goniometrických funkcí, základní
+                                hodnoty a vzorce</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 lekcí</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/goniometricke-funkce/index.html#intro"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Úhly, trojúhelníky a goniometrické funkce</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/goniometricke-funkce/index.html#unit-circle"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Jednotková kružnice</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricke-funkce/index.html#basic-values"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Odvození základních hodnot</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/goniometricke-funkce/index.html#identities"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Základní goniometrické vzorce</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricke-funkce/index.html#radians"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Stupňová a oblouková míra</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 2 -->
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Sinus a kosinus jako funkce</h3>
+                            <p class="chapter-description">Grafy sinusoidy a kosinusoidy, posuny, vlastnosti a
+                                zapamatování hodnot</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 lekcí</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/sinus-kosinus/index.html#intro" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Sinus a kosinus jako funkce</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/sinus-kosinus/index.html#graphs" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Graf funkce sinus a kosinus</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/sinus-kosinus/index.html#transforms" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Posuny grafu funkcí sinus a kosinus</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/sinus-kosinus/index.html#properties" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vlastnosti funkcí sinus a kosinus</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/sinus-kosinus/index.html#values" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Rychlé zapamatování tabulky hodnot</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 3 -->
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Tangens a kotangens jako funkce</h3>
+                            <p class="chapter-description">Grafy, vlastnosti, kompletní tabulka hodnot a praktické
+                                odvození</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 lekcí</span>
+                            <span class="chapter-time">~100 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/tangens-kotangens/index.html#intro" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Tangens a kotangens jako funkce</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/tangens-kotangens/index.html#graphs" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Graf funkce tangens a kotangens</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/tangens-kotangens/index.html#properties"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vlastnosti funkcí tangens a kotangens</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/tangens-kotangens/index.html#values" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kompletní tabulka hodnot</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/tangens-kotangens/index.html#derivation"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Praktické odvození všech hodnot</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/tangens-kotangens/index.html#tancot-derivation"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Odvození hodnot pro tangens a kotangens</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 4 -->
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Vzorce pro goniometrické funkce</h3>
+                            <p class="chapter-description">Součtové, dvojnásobné a další vzorce, použití grafů</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">8 lekcí</span>
+                            <span class="chapter-time">~120 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/vzorce-goniometrie/index.html#sum-diff"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Součtové vzorce</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#double-angle"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzorce pro dvojnásobný úhel</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#half-angle"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzorce pro poloviční úhel</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#sum-product"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Součet a rozdíl ↔ součin</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#graphs" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Grafy s využitím vzorců</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#overview"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Přehled vzorců</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#playground"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Hřiště</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzorce-goniometrie/index.html#exercises"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 5 -->
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Goniometrické výrazy a rovnice</h3>
+                            <p class="chapter-description">Základní i složitější rovnice, substituce, úpravy výrazů</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 lekcí</span>
+                            <span class="chapter-time">~100 min</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/gonio-rovnice/index.html#basic-eq" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Základní goniometrické rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/gonio-rovnice/index.html#basic-subst" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Základní substituce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/gonio-rovnice/index.html#advanced-subst"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Složitější substituce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/gonio-rovnice/index.html#hard-eq" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Těžší goniometrické rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/gonio-rovnice/index.html#simplify" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Úpravy goniometrických výrazů</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/gonio-rovnice/index.html#exercises" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- Kapitola 6 -->
+                <div class="chapter-card chapter-card-active" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Trigonometrie</h3>
+                            <p class="chapter-description">Sinová věta, kosinová věta a další trigonometrické věty</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 lekce</span>
+                            <span class="chapter-time">~60 min</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/trigonometrie/index.html#sine-rule" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Sinová věta a využití</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trigonometrie/index.html#cosine-rule" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kosinová věta a využití</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trigonometrie/index.html#other-theorems"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Další věty</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trigonometrie/index.html#exercises" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 7 (NEW) -->
+                <div class="chapter-card chapter-card-active" data-chapter="7">
+                    <div class="chapter-header">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Trojúhelníky, kružnice opsaná a vepsaná</h3>
+                            <p class="chapter-description">Vlastnosti, konstrukce kružnic, shodnost a podobnost
+                                trojúhelníků</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/trojuhelniky/index.html#properties" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Vlastnosti a středy trojúhelníku</span>
+                                <span class="lesson-badge-new">NOVÉ</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#incircle" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Konstrukce kružnice vepsané</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#circumcircle" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Konstrukce kružnice opsané</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#congruence" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📐</span>
+                                <span class="lesson-title">Shodnost trojúhelníků</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#similarity" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">🔍</span>
+                                <span class="lesson-title">Podobnost a její využití</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#sim-theorems" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Věty o podobnosti (uu, sus...)</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky/index.html#exercises" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Klíčové dovednosti, které získáte po absolvování kurzu</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">📐</div>
+                    <h3>Goniometrické funkce</h3>
+                    <p>Pochopíte definice a vlastnosti sin, cos, tg a cotg a naučíte se jejich hodnoty zpaměti.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📈</div>
+                    <h3>Grafy funkcí</h3>
+                    <p>Zvládnete kreslit a analyzovat grafy všech goniometrických funkcí včetně posunů.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔢</div>
+                    <h3>Goniometrické vzorce</h3>
+                    <p>Ovládnete součtové, dvojnásobné a další vzorce pro úpravy výrazů.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧮</div>
+                    <h3>Rovnice a výrazy</h3>
+                    <p>Budete umět řešit goniometrické rovnice pomocí substitucí a algebraických úprav.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📏</div>
+                    <h3>Trigonometrie trojúhelníků</h3>
+                    <p>Naučíte se aplikovat sinovou a kosinovou větu na výpočty v trojúhelnících.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Matematické myšlení</h3>
+                    <p>Rozvinete schopnost propojovat goniometrii s geometrií a algebraickými technikami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA sekce -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Začni se učit goniometrii a trigonometrii ještě dnes. Registrace je zdarma.</p>
+                <a href="#" class="btn-white btn-large">Začít kurz zdarma</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zápatí -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

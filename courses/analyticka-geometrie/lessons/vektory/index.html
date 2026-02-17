@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vektory v rovině - Operace s vektory, sčítání, odčítání, násobení skalárem, skalární součin.">
+    <title>Vektory v rovině – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 3: Vektory</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 3</h3>
+                    <p>Vektory v rovině</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Základy vektorů
+                    </a>
+                    <a href="#addition" class="sidebar-link" data-section="addition">
+                        <span class="sidebar-icon">2</span>
+                        Sčítání a odčítání
+                    </a>
+                    <a href="#scalar" class="sidebar-link" data-section="scalar">
+                        <span class="sidebar-icon">3</span>
+                        Násobení skalárem
+                    </a>
+                    <a href="#magnitude" class="sidebar-link" data-section="magnitude">
+                        <span class="sidebar-icon">4</span>
+                        Velikost a směr
+                    </a>
+                    <a href="#dotproduct" class="sidebar-link" data-section="dotproduct">
+                        <span class="sidebar-icon">5</span>
+                        Skalární součin
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Základy</div>
+                    <h1>Vektory v rovině</h1>
+                    <p class="lead">
+                        Vektor je matematický objekt, který má <strong>velikost</strong> (délku) a
+                        <strong>směr</strong>.
+                        Vektory jsou základním nástrojem pro popis pohybu, sil a mnoha dalších fyzikálních veličin.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Zápis a reprezentace vektorů</li>
+                                <li>Sčítání a odčítání vektorů</li>
+                                <li>Násobení vektoru skalárem</li>
+                                <li>Velikost vektoru a jednotkový vektor</li>
+                                <li>Skalární součin a jeho význam</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Definice vektoru</h4>
+                        <p>
+                            Vektor <span class="vec">u</span> v rovině je určen uspořádanou dvojicí reálných čísel:
+                        </p>
+                        <div class="equation-large"><span class="vec">u</span> = (u₁, u₂)</div>
+                        <p class="formula-note">
+                            kde u₁ je <strong>první složka</strong> (x-ová) a u₂ je <strong>druhá složka</strong>
+                            (y-ová).
+                        </p>
+                    </div>
+
+                    <!-- Interactive Vector Intro -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní vektor</h3>
+                        <p>Táhněte koncový bod vektoru a sledujte změnu jeho souřadnic:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="introCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📐 Vektor</h4>
+                                    <div class="vector-display">
+                                        <span><span class="vec">u</span> = </span>
+                                        <span id="introVector" class="vector-value">(3, 2)</span>
+                                    </div>
+                                </div>
+                                <div class="vector-info-panel">
+                                    <h4>📊 Vlastnosti</h4>
+                                    <div class="property-row">
+                                        <span>Velikost |<span class="vec">u</span>|:</span>
+                                        <span id="introMagnitude">3.61</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>Úhel s osou x:</span>
+                                        <span id="introAngle">33.7°</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>📍 Bod vs Vektor</h4>
+                            <p><strong>Bod</strong> A = [3, 2] určuje pozici</p>
+                            <p><strong>Vektor</strong> <span class="vec">u</span> = (3, 2) určuje směr a velikost</p>
+                        </div>
+                        <div class="column">
+                            <h4>📏 Polohový vektor</h4>
+                            <p>Vektor z počátku O do bodu A se nazývá <strong>polohový vektor</strong> bodu A.</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="addition">
+                        Pokračovat ke sčítání vektorů →
+                    </button>
+                </section>
+
+                <!-- Section 2: Addition -->
+                <section id="addition" class="lesson-section">
+                    <div class="section-badge">Operace</div>
+                    <h1>Sčítání a odčítání vektorů</h1>
+
+                    <p>
+                        Vektory sčítáme a odčítáme <strong>po složkách</strong>. Geometricky odpovídá
+                        sčítání vektorů pravidlu rovnoběžníku nebo trojúhelníku.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorce</h4>
+                        <p>Pro vektory <span class="vec">u</span> = (u₁, u₂) a <span class="vec">v</span> = (v₁, v₂):
+                        </p>
+                        <div class="equation-large">
+                            <span class="vec">u</span> + <span class="vec">v</span> = (u₁ + v₁, u₂ + v₂)
+                        </div>
+                        <div class="equation-large">
+                            <span class="vec">u</span> - <span class="vec">v</span> = (u₁ - v₁, u₂ - v₂)
+                        </div>
+                    </div>
+
+                    <!-- Interactive Addition Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní sčítání vektorů</h3>
+                        <p>Táhněte koncové body vektorů <span class="vec">u</span> a <span class="vec">v</span> a
+                            sledujte jejich součet:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="additionCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #ef4444"></span><span class="vec">u</span></span>
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #3b82f6"></span><span class="vec">v</span></span>
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #10b981"></span><span class="vec">u</span> + <span
+                                            class="vec">v</span></span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📊 Vektory</h4>
+                                    <div class="vector-row">
+                                        <span class="vector-marker" style="background: #ef4444"><span
+                                                class="vec">u</span></span>
+                                        <span id="addVecU">(3, 1)</span>
+                                    </div>
+                                    <div class="vector-row">
+                                        <span class="vector-marker" style="background: #3b82f6"><span
+                                                class="vec">v</span></span>
+                                        <span id="addVecV">(1, 2)</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>➕ Součet</h4>
+                                    <div class="operation-display">
+                                        <span><span class="vec">u</span> + <span class="vec">v</span> = </span>
+                                        <span id="addResult" class="result-value">(4, 3)</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>➖ Rozdíl</h4>
+                                    <div class="operation-display">
+                                        <span><span class="vec">u</span> - <span class="vec">v</span> = </span>
+                                        <span id="subResult" class="calc-value">(2, -1)</span>
+                                    </div>
+                                </div>
+
+                                <div class="toggle-group">
+                                    <label class="toggle-label">
+                                        <input type="checkbox" id="showParallelogram" checked>
+                                        <span>Zobrazit rovnoběžník</span>
+                                    </label>
+                                    <label class="toggle-label">
+                                        <input type="checkbox" id="showDifference">
+                                        <span>Zobrazit rozdíl</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="scalar">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Scalar Multiplication -->
+                <section id="scalar" class="lesson-section">
+                    <div class="section-badge">Operace</div>
+                    <h1>Násobení vektoru skalárem</h1>
+
+                    <p>
+                        Násobením vektoru reálným číslem (skalárem) změníme jeho <strong>velikost</strong>,
+                        případně i <strong>směr</strong> (při záporném násobiteli).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec</h4>
+                        <p>Pro vektor <span class="vec">u</span> = (u₁, u₂) a skalár k ∈ ℝ:</p>
+                        <div class="equation-large">k · <span class="vec">u</span> = (k · u₁, k · u₂)</div>
+                    </div>
+
+                    <!-- Interactive Scalar Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní násobení skalárem</h3>
+                        <p>Měňte hodnotu skaláru k a sledujte, jak se mění vektor:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="scalarCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📐 Původní vektor</h4>
+                                    <div class="vector-display">
+                                        <span><span class="vec">u</span> = </span>
+                                        <span id="scalarVecU">(2, 1)</span>
+                                    </div>
+                                </div>
+
+                                <div class="control-group slider-highlight">
+                                    <label>Skalár k = <span id="scalarValue">2.0</span></label>
+                                    <input type="range" id="scalarSlider" min="-3" max="3" value="2" step="0.5">
+                                    <div class="slider-labels">
+                                        <span>-3</span>
+                                        <span>0</span>
+                                        <span>3</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>🎯 Výsledek</h4>
+                                    <div class="operation-display">
+                                        <span id="scalarOperation">2 · <span class="vec">u</span> = </span>
+                                        <span id="scalarResult" class="result-value">(4, 2)</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>📊 Porovnání velikostí</h4>
+                                    <div class="property-row">
+                                        <span>|<span class="vec">u</span>| = </span>
+                                        <span id="origMagnitude">2.24</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>|k·<span class="vec">u</span>| = </span>
+                                        <span id="scaledMagnitude">4.47</span>
+                                    </div>
+                                    <div class="property-row highlight-row">
+                                        <span>Poměr:</span>
+                                        <span id="magnitudeRatio">2.00×</span>
+                                    </div>
+                                </div>
+
+                                <div class="scalar-effects">
+                                    <div id="scalarEffect" class="effect-badge effect-positive">
+                                        Vektor je 2× delší, stejný směr
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Speciální případy</h4>
+                            <ul>
+                                <li><strong>k = 1:</strong> vektor se nemění</li>
+                                <li><strong>k = 0:</strong> výsledkem je nulový vektor (0, 0)</li>
+                                <li><strong>k = -1:</strong> opačný vektor (stejná velikost, opačný směr)</li>
+                                <li><strong>k < 0:</strong> vektor mění směr</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="addition">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="magnitude">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Magnitude and Direction -->
+                <section id="magnitude" class="lesson-section">
+                    <div class="section-badge">Vlastnosti</div>
+                    <h1>Velikost a směr vektoru</h1>
+
+                    <p>
+                        Velikost vektoru (také nazývaná norma nebo délka) vypočítáme pomocí
+                        Pythagorovy věty. Jednotkový vektor má velikost 1.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Velikost vektoru</h4>
+                        <p>Pro vektor <span class="vec">u</span> = (u₁, u₂):</p>
+                        <div class="equation-large">|<span class="vec">u</span>| = √(u₁² + u₂²)</div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Jednotkový vektor</h4>
+                        <p>Jednotkový vektor ve směru <span class="vec">u</span>:</p>
+                        <div class="equation-large"><span class="vec">u</span>₀ = <span class="vec">u</span> / |<span
+                                class="vec">u</span>| = (u₁/|<span class="vec">u</span>|, u₂/|<span
+                                class="vec">u</span>|)</div>
+                    </div>
+
+                    <!-- Interactive Magnitude Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Velikost a jednotkový vektor</h3>
+                        <p>Táhněte vektor a sledujte jeho velikost a jednotkový vektor:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="magnitudeCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #6366f1"></span><span class="vec">u</span></span>
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #10b981"></span><span class="vec">u</span>₀
+                                        (jednotkový)</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📐 Vektor</h4>
+                                    <div class="vector-display">
+                                        <span><span class="vec">u</span> = </span>
+                                        <span id="magVector">(3, 4)</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet velikosti</h4>
+                                    <div id="magCalcDetails" class="calculation-details">
+                                        |<span class="vec">u</span>| = √(3² + 4²)<br>
+                                        |<span class="vec">u</span>| = √(9 + 16)<br>
+                                        |<span class="vec">u</span>| = √25 = 5
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>🎯 Velikost</h4>
+                                    <div class="big-result">
+                                        <span>|<span class="vec">u</span>| = </span>
+                                        <span id="magResult" class="result-value-big">5.00</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>📍 Jednotkový vektor</h4>
+                                    <div class="vector-display">
+                                        <span><span class="vec">u</span>₀ = </span>
+                                        <span id="unitVector">(0.6, 0.8)</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>|<span class="vec">u</span>₀| = </span>
+                                        <span>1.00</span>
+                                    </div>
+                                </div>
+
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="showUnitVector" checked>
+                                    <span>Zobrazit jednotkový vektor</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="scalar">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="dotproduct">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Dot Product -->
+                <section id="dotproduct" class="lesson-section">
+                    <div class="section-badge">Skalární součin</div>
+                    <h1>Skalární součin vektorů</h1>
+
+                    <p>
+                        Skalární součin (také dot product) je operace, která dvěma vektorům
+                        přiřadí <strong>reálné číslo</strong>. Je klíčový pro výpočet úhlů mezi vektory.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Skalární součin - algebraicky</h4>
+                        <p>Pro vektory <span class="vec">u</span> = (u₁, u₂) a <span class="vec">v</span> = (v₁, v₂):
+                        </p>
+                        <div class="equation-large"><span class="vec">u</span> · <span class="vec">v</span> = u₁·v₁ +
+                            u₂·v₂</div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Skalární součin - geometricky</h4>
+                        <div class="equation-large"><span class="vec">u</span> · <span class="vec">v</span> = |<span
+                                class="vec">u</span>| · |<span class="vec">v</span>| · cos(φ)</div>
+                        <p class="formula-note">kde φ je úhel mezi vektory</p>
+                    </div>
+
+                    <!-- Interactive Dot Product Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní skalární součin</h3>
+                        <p>Táhněte vektory a sledujte jejich skalární součin a úhel:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="dotCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #ef4444"></span><span class="vec">u</span></span>
+                                    <span class="legend-item"><span class="legend-color"
+                                            style="background: #3b82f6"></span><span class="vec">v</span></span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📊 Vektory</h4>
+                                    <div class="vector-row">
+                                        <span class="vector-marker" style="background: #ef4444"><span
+                                                class="vec">u</span></span>
+                                        <span id="dotVecU">(3, 1)</span>
+                                    </div>
+                                    <div class="vector-row">
+                                        <span class="vector-marker" style="background: #3b82f6"><span
+                                                class="vec">v</span></span>
+                                        <span id="dotVecV">(1, 2)</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div id="dotCalcDetails" class="calculation-details">
+                                        <span class="vec">u</span> · <span class="vec">v</span> = 3·1 + 1·2<br>
+                                        <span class="vec">u</span> · <span class="vec">v</span> = 3 + 2 = 5
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>🎯 Skalární součin</h4>
+                                    <div class="big-result">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = </span>
+                                        <span id="dotResult" class="result-value-big">5</span>
+                                    </div>
+                                </div>
+
+                                <div class="angle-display">
+                                    <h4>📐 Úhel mezi vektory</h4>
+                                    <div class="angle-value">
+                                        <span>φ = </span>
+                                        <span id="angleResult" class="angle-number">45.0°</span>
+                                    </div>
+                                    <div id="angleInterpretation" class="angle-interpretation">
+                                        Ostrý úhel (vektory míří podobným směrem)
+                                    </div>
+                                </div>
+
+                                <div class="dot-indicator">
+                                    <div class="indicator-bar">
+                                        <div id="dotIndicator" class="indicator-fill" style="width: 75%"></div>
+                                    </div>
+                                    <div class="indicator-labels">
+                                        <span>-1 (opačné)</span>
+                                        <span>0 (kolmé)</span>
+                                        <span>+1 (stejné)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Význam skalárního součinu</h4>
+                            <ul>
+                                <li><strong><span class="vec">u</span> · <span class="vec">v</span> > 0:</strong> úhel
+                                    je ostrý (< 90°)</li>
+                                <li><strong><span class="vec">u</span> · <span class="vec">v</span> = 0:</strong>
+                                    vektory jsou kolmé (90°)</li>
+                                <li><strong><span class="vec">u</span> · <span class="vec">v</span>
+                                        < 0:</strong> úhel je tupý (> 90°)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="magnitude">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Vektorový playground</h1>
+
+                    <p>
+                        Experimentujte s vektory! Přidávejte vektory, provádějte operace a
+                        zkoumejte jejich vlastnosti.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="700" height="500"></canvas>
+                            <div class="canvas-instructions">
+                                <span>🖱️ Klikněte pro přidání vektoru | Táhněte koncové body</span>
+                            </div>
+                        </div>
+
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>📊 Vektory (<span id="vectorCount">2</span>)</h4>
+                                <div id="vectorsList" class="vectors-list">
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>➕ Operace</h4>
+                                <div class="operations-panel">
+                                    <div class="operation-row">
+                                        <span><span class="vec">u</span> + <span class="vec">v</span> = </span>
+                                        <span id="playSum" class="op-result">(0, 0)</span>
+                                    </div>
+                                    <div class="operation-row">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = </span>
+                                        <span id="playDot" class="op-result">0</span>
+                                    </div>
+                                    <div class="operation-row">
+                                        <span>Úhel = </span>
+                                        <span id="playAngle" class="op-result">0°</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>🎛️ Nastavení</h4>
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="showSum" checked>
+                                    <span>Zobrazit součet</span>
+                                </label>
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="showLabels" checked>
+                                    <span>Zobrazit popisky</span>
+                                </label>
+                                <label class="toggle-label">
+                                    <input type="checkbox" id="showAngleArc">
+                                    <span>Zobrazit úhel</span>
+                                </label>
+                            </div>
+
+                            <div class="playground-actions">
+                                <button id="clearVectors" class="btn-outline">🗑️ Vymazat</button>
+                                <button id="randomVectors" class="btn-outline">🎲 Náhodné</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="dotproduct">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <p>Otestujte si své znalosti vektorů.</p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Vypočítejte součet vektorů <span class="vec">u</span> = (3, -2) a <span
+                                        class="vec">v</span> = (-1, 5).
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>(2, 3)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>(4, 3)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>(2, 7)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>(-3, 10)</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je velikost vektoru <span class="vec">u</span> = (3, 4)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>7</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>5</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>25</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>√7</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaký je skalární součin vektorů <span class="vec">u</span> = (2, 3) a <span
+                                        class="vec">v</span> = (4, -1)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>11</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>5</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>-5</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>8</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Vektory <span class="vec">u</span> a <span class="vec">v</span> jsou kolmé. Co platí
+                                    pro jejich skalární součin?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = 1</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = 0</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = -1</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span><span class="vec">u</span> · <span class="vec">v</span> = |<span
+                                                class="vec">u</span>| · |<span class="vec">v</span>|</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Gratulujeme!</h2>
+                        <p>Úspěšně jste dokončili lekci o vektorech v rovině.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

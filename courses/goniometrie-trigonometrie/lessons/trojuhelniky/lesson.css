@@ -1,0 +1,209 @@
+/* CSS for Lesson: Trojúhelníky, kružnice opsaná a vepsaná */
+
+/* Inherit base variables from style.css */
+:root {
+    --canvas-bg: rgba(255, 255, 255, 0.5);
+    --canvas-border: rgba(99, 102, 241, 0.1);
+    --point-radius: 6px;
+    --point-hit-radius: 20px;
+}
+
+[data-theme="dark"] {
+    --canvas-bg: rgba(30, 41, 59, 0.5);
+    --canvas-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Specific Lesson Styles */
+.lesson-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.lesson-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 5rem;
+    height: calc(100vh - 7rem);
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    overflow-y: auto;
+}
+
+.lesson-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.lesson-section {
+    margin-bottom: 4rem;
+    scroll-margin-top: 6rem;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+}
+
+.lesson-section.active {
+    opacity: 1;
+}
+
+/* Interactive Canvas Container */
+.interactive-demo {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow-sm);
+}
+
+.demo-canvas-wrapper {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    /* Taller for geometry constructions */
+    background: var(--canvas-bg);
+    border: 1px solid var(--canvas-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: default;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+    /* Prevent scrolling on touch devices while dragging */
+}
+
+/* Controls inside demo */
+.demo-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    user-select: none;
+    color: var(--text-secondary);
+    transition: color 0.2s;
+}
+
+.custom-checkbox:hover {
+    color: var(--text-primary);
+}
+
+.custom-checkbox input {
+    accent-color: var(--accent-primary);
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+/* Tooltips inside canvas (rendered via HTML overlay if needed, or JS) */
+.canvas-tooltip {
+    position: absolute;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.8rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    box-shadow: var(--shadow-md);
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.canvas-tooltip.visible {
+    opacity: 1;
+}
+
+/* Construction Steps Interface */
+.construction-steps {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.step-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.step-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
+.step-btn:hover:not(.active) {
+    background: var(--bg-hover);
+}
+
+/* Congruence Visualizer Specifics */
+.congruence-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .congruence-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Feedback messages */
+.feedback-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    font-size: 0.95rem;
+}
+
+.feedback-box.success {
+    background: rgba(16, 185, 129, 0.1);
+    border-color: rgba(16, 185, 129, 0.2);
+    color: var(--success);
+}
+
+.feedback-box.hidden {
+    display: none;
+}

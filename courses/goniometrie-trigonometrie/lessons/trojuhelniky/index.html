@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Trojúhelníky, kružnice opsaná a vepsaná – vlastnosti, konstrukce, shodnost a podobnost.">
+    <title>Trojúhelníky – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 7</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 7</h3>
+                    <p>Trojúhelníky</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#properties" class="sidebar-link active" data-section="properties">
+                        <span class="sidebar-icon">1</span>
+                        Vlastnosti a středy
+                    </a>
+                    <a href="#incircle" class="sidebar-link" data-section="incircle">
+                        <span class="sidebar-icon">2</span>
+                        Kružnice vepsaná
+                    </a>
+                    <a href="#circumcircle" class="sidebar-link" data-section="circumcircle">
+                        <span class="sidebar-icon">3</span>
+                        Kružnice opsaná
+                    </a>
+                    <a href="#congruence" class="sidebar-link" data-section="congruence">
+                        <span class="sidebar-icon">4</span>
+                        Shodnost trojúhelníků
+                    </a>
+                    <a href="#similarity" class="sidebar-link" data-section="similarity">
+                        <span class="sidebar-icon">5</span>
+                        Podobnost trojúhelníků
+                    </a>
+                    <a href="#sim-theorems" class="sidebar-link" data-section="sim-theorems">
+                        <span class="sidebar-icon">6</span>
+                        Věty o podobnosti
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lesson-content">
+
+                <!-- SECTION 1: Vlastnosti a středy -->
+                <section id="properties" class="lesson-section active">
+                    <span class="section-badge">Kapitola 7 · Část 1</span>
+                    <h1>Trojúhelníky: Vlastnosti a středy</h1>
+                    <p class="lead">
+                        Každý trojúhelník má v sobě ukryté speciální body a čáry. Prozkoumejte interaktivně výšky,
+                        těžnice a střední příčky.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>📐 Interaktivní trojúhelník</h3>
+                        <p>Chyťte a posuňte vrcholy A, B, C. Pomocí zaškrtávátek zobrazte různé vlastnosti.</p>
+                        <div class="construction-steps">
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="checkAltitudes"> <span>Výšky (v)</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="checkMedians"> <span>Těžnice (t)</span>
+                            </label>
+                            <label class="custom-checkbox">
+                                <input type="checkbox" id="checkMidlines"> <span>Střední příčky</span>
+                            </label>
+                        </div>
+                        <div class="demo-canvas-wrapper">
+                            <canvas id="trianglePropertiesCanvas" width="800" height="500"></canvas>
+                        </div>
+                        <div class="info-card" id="propertiesInfo" style="margin-top:1rem;display:none;"></div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>🔍 Klíčové pojmy</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">Výška (v)</span>
+                                <span class="formula-eq">Kolmice z vrcholu na protější stranu</span>
+                                <span class="formula-note">Průsečík = Ortocentrum (V)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Těžnice (t)</span>
+                                <span class="formula-eq">Spojnice vrcholu a středu protější strany</span>
+                                <span class="formula-note">Průsečík = Těžiště (T)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Střední příčka</span>
+                                <span class="formula-eq">Spojnice středů dvou stran</span>
+                                <span class="formula-note">Je rovnoběžná se třetí stranou a má poloviční délku</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#incircle" class="btn btn-primary sidebar-link" data-section="incircle">Kružnice
+                            vepsaná →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: Kružnice vepsaná -->
+                <section id="incircle" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Část 2</span>
+                    <h1>Kružnice vepsaná</h1>
+                    <p class="lead">
+                        Kružnice vepsaná se dotýká všech tří stran trojúhelníku zevnitř. Její střed leží na průsečíku os
+                        vnitřních úhlů.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>✏️ Konstrukce kružnice vepsané</h3>
+                        <p>Postupujte krok za krokem a sestrojte kružnici vepsanou.</p>
+                        <div class="construction-steps">
+                            <div class="step-btn active" onclick="setConstructionStep('incircle', 1)">1. Osy úhlů</div>
+                            <div class="step-btn" onclick="setConstructionStep('incircle', 2)">2. Střed S</div>
+                            <div class="step-btn" onclick="setConstructionStep('incircle', 3)">3. Poloměr ρ</div>
+                            <div class="step-btn" onclick="setConstructionStep('incircle', 4)">4. Kružnice</div>
+                        </div>
+                        <div class="demo-canvas-wrapper">
+                            <canvas id="incircleCanvas" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Vlastnosti</h4>
+                            <p>
+                                • Střed <strong>S</strong> má od všech stran stejnou vzdálenost <strong>ρ</strong>
+                                (ró).<br>
+                                • Střed S leží <strong>vždy uvnitř</strong> trojúhelníku.<br>
+                                • Vzorec pro poloměr: <strong>ρ = S / s</strong> (kde S je obsah a s je polovic obvodu).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#properties" class="btn btn-ghost sidebar-link" data-section="properties">←
+                            Vlastnosti</a>
+                        <a href="#circumcircle" class="btn btn-primary sidebar-link"
+                            data-section="circumcircle">Kružnice opsaná →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: Kružnice opsaná -->
+                <section id="circumcircle" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Část 3</span>
+                    <h1>Kružnice opsaná</h1>
+                    <p class="lead">
+                        Kružnice opsaná prochází všemi třemi vrcholy trojúhelníku. Její střed leží na průsečíku os
+                        stran.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>✏️ Konstrukce kružnice opsané</h3>
+                        <p>Zkuste si zahýbat vrcholy! Kde leží střed u tupoúhlého trojúhelníku?</p>
+                        <div class="construction-steps">
+                            <div class="step-btn active" onclick="setConstructionStep('circumcircle', 1)">1. Osy stran
+                            </div>
+                            <div class="step-btn" onclick="setConstructionStep('circumcircle', 2)">2. Střed O</div>
+                            <div class="step-btn" onclick="setConstructionStep('circumcircle', 3)">3. Kružnice</div>
+                        </div>
+                        <div class="demo-canvas-wrapper">
+                            <canvas id="circumcircleCanvas" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">⚠️</span>
+                        <div class="info-card-content">
+                            <h4>Poloha středu O</h4>
+                            <p>
+                                • <strong>Ostroúhlý</strong> trojúhelník: O leží <strong>uvnitř</strong>.<br>
+                                • <strong>Pravoúhlý</strong> trojúhelník: O leží ve <strong>středu přepony</strong>
+                                (Thaletova věta).<br>
+                                • <strong>Tupoúhlý</strong> trojúhelník: O leží <strong>vně</strong> trojúhelníku.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#incircle" class="btn btn-ghost sidebar-link" data-section="incircle">← Kružnice
+                            vepsaná</a>
+                        <a href="#congruence" class="btn btn-primary sidebar-link" data-section="congruence">Shodnost
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: Shodnost -->
+                <section id="congruence" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Část 4</span>
+                    <h1>Shodnost trojúhelníků</h1>
+                    <p class="lead">
+                        Dva trojúhelníky jsou shodné, pokud se shodují ve všech stranách a úhlech. K ověření stačí znát
+                        jen 3 údaje.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Věty o shodnosti</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sss</span>
+                                <span class="formula-eq">shodují se ve všech 3 stranách</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sus</span>
+                                <span class="formula-eq">shodují se ve 2 stranách a úhlu mezi nimi</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">usu</span>
+                                <span class="formula-eq">shodují se v 1 straně a 2 úhlech k ní přilehlých</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Ssu</span>
+                                <span class="formula-eq">2 strany a úhel proti <strong>větší</strong> z nich</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧪 Laboratoř shodnosti</h3>
+                        <p>Máte dva trojúhelníky. Změňte parametry prvního a sledujte, zda se druhý přizpůsobí (je
+                            shodný).</p>
+                        <div class="demo-canvas-wrapper">
+                            <canvas id="congruenceCanvas" width="800" height="400"></canvas>
+                        </div>
+                        <div class="demo-controls">
+                            <button class="btn btn-sm btn-outline" onclick="setCongruenceMode('sss')">Test SSS</button>
+                            <button class="btn btn-sm btn-outline" onclick="setCongruenceMode('sus')">Test SUS</button>
+                            <button class="btn btn-sm btn-outline" onclick="setCongruenceMode('usu')">Test USU</button>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#circumcircle" class="btn btn-ghost sidebar-link" data-section="circumcircle">←
+                            Kružnice opsaná</a>
+                        <a href="#similarity" class="btn btn-primary sidebar-link" data-section="similarity">Podobnost
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: Podobnost -->
+                <section id="similarity" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Část 5</span>
+                    <h1>Podobnost trojúhelníků</h1>
+                    <p class="lead">
+                        Podobné trojúhelníky mají stejný tvar, ale různou velikost. Jejich strany jsou ve stejném poměru
+                        <em>k</em>.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🔍 Změna měřítka (Zoom)</h3>
+                        <p>Změňte koeficient podobnosti <strong>k</strong>. Sledujte, jak se mění délky stran, ale úhly
+                            zůstávají stejné.</p>
+                        <div class="demo-controls" style="margin-bottom:1rem; border:none;">
+                            <label>Koeficient k: <input type="range" id="scaleSlider" min="0.5" max="2" step="0.1"
+                                    value="1.5"> <span id="scaleValue"
+                                    style="font-weight:bold; color:var(--accent-primary);">1.5x</span></label>
+                        </div>
+                        <div class="demo-canvas-wrapper">
+                            <canvas id="similarityCanvas" width="800" height="450"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Vlastnosti podobnosti</h4>
+                        <p>Pokud jsou trojúhelníky ABC a A'B'C' podobné s koeficientem <em>k</em>:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">Strany</span>
+                                <span class="formula-eq">a' = k·a, b' = k·b, c' = k·c</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Úhly</span>
+                                <span class="formula-eq">α' = α, β' = β, γ' = γ (shodné!)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Obvod a Obsah</span>
+                                <span class="formula-eq">o' = k·o, &nbsp; S' = k²·S</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#congruence" class="btn btn-ghost sidebar-link" data-section="congruence">←
+                            Shodnost</a>
+                        <a href="#sim-theorems" class="btn btn-primary sidebar-link" data-section="sim-theorems">Věty o
+                            podobnosti →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: Věty o podobnosti -->
+                <section id="sim-theorems" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Část 6</span>
+                    <h1>Věty o podobnosti</h1>
+                    <p class="lead">Jak poznat, že jsou dva trojúhelníky podobné, aniž bychom museli měřit všechno?</p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Věty o podobnosti</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">uu</span>
+                                <span class="formula-eq">shodují se ve 2 úhlech (třetí musí být také shodný)</span>
+                                <span class="formula-note">Nejčastější věta!</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sus</span>
+                                <span class="formula-eq">shodují se v poměru 2 stran a úhlu mezi nimi</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Ssu</span>
+                                <span class="formula-eq">poměr 2 stran a shodný úhel proti <strong>větší</strong> z
+                                    nich</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#similarity" class="btn btn-ghost sidebar-link" data-section="similarity">←
+                            Podobnost</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 7: Procvičování -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Kapitola 7 · Procvičování</span>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Ověřte své znalosti o trojúhelnících.</p>
+
+                    <div class="exercise-card" id="ex1">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 1</span>
+                            <span class="exercise-status" id="ex1Status"></span>
+                        </div>
+                        <p class="exercise-question">Kde leží střed kružnice vepsané?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex1" value="a"><span>Na průsečíku os
+                                    stran</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="b"><span>Na průsečíku
+                                    těžnic (v těžišti)</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="c"><span>Na průsečíku os
+                                    vnitřních úhlů</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="d"><span>Na průsečíku výšek
+                                    (v ortocentru)</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex1','c')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex1Feedback"></div>
+                    </div>
+
+                    <div class="exercise-card" id="ex2">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 2</span>
+                            <span class="exercise-status" id="ex2Status"></span>
+                        </div>
+                        <p class="exercise-question">Trojúhelníky ABC a KLM jsou podobné s koeficientem k = 2. Obsah ABC
+                            je 10 cm². Jaký je obsah KLM?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex2" value="a"><span>20
+                                    cm²</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="b"><span>40
+                                    cm²</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="c"><span>10
+                                    cm²</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="d"><span>100
+                                    cm²</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex2','b')">Zkontrolovat (pozor na
+                            S' = k²·S)</button>
+                        <div class="exercise-feedback" id="ex2Feedback"></div>
+                    </div>
+
+                    <div class="exercise-card" id="ex3">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 3</span>
+                            <span class="exercise-status" id="ex3Status"></span>
+                        </div>
+                        <p class="exercise-question">Podle které věty JSOu shodné trojúhelníky, pokud známe délky všech
+                            tří stran?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex3" value="a"><span>sus</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="b"><span>uu</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="c"><span>sss</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="d"><span>usu</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex3','c')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex3Feedback"></div>
+                    </div>
+
+                    <div class="lesson-complete">
+                        <h2>🎉 Kapitola 7 hotová!</h2>
+                        <p>Nyní ovládáte trojúhelníky, jejich středy i kružnice. Skvělá práce!</p>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

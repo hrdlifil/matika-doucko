@@ -1,0 +1,744 @@
+/* Lesson 8: Elipsa - Styles */
+
+/* Lesson Navigation */
+.lesson-nav-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.lesson-course-link {
+    color: var(--accent-primary);
+}
+
+.lesson-course-link:hover {
+    text-decoration: underline;
+}
+
+.lesson-nav-separator {
+    color: var(--text-tertiary);
+}
+
+.lesson-nav-current {
+    color: var(--text-secondary);
+}
+
+/* Main Layout */
+.lesson-main {
+    padding-top: 5rem;
+    min-height: 100vh;
+}
+
+.lesson-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Sidebar */
+.lesson-sidebar {
+    position: sticky;
+    top: 6rem;
+    height: fit-content;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+}
+
+.sidebar-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-header h3 {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-header p {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar-link.active {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.sidebar-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.sidebar-link.active .sidebar-icon {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-progress {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.progress-label {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-small {
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: 10px;
+}
+
+.progress-fill-small {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 10px;
+    transition: width 0.3s;
+}
+
+/* Lesson Content */
+.lesson-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+}
+
+.lesson-section {
+    display: none;
+}
+
+.lesson-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: var(--accent-primary);
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+.lesson-section h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.lesson-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+}
+
+.lesson-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem;
+}
+
+.lead {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.lesson-section p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.lesson-section ul {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.lesson-section li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Info Cards */
+.info-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-lg);
+    margin: 1.5rem 0;
+}
+
+.info-card-warning {
+    background: rgba(245, 158, 11, 0.1);
+    border-color: rgba(245, 158, 11, 0.3);
+}
+
+.info-card-icon {
+    font-size: 1.5rem;
+}
+
+.info-card-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-card-content p {
+    margin-bottom: 0;
+}
+
+/* Formula Highlight */
+.formula-highlight {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(168, 85, 247, 0.15));
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-lg);
+    margin: 1.5rem 0;
+}
+
+.formula-icon {
+    font-size: 2rem;
+}
+
+.formula-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+/* Definition Box */
+.definition-box {
+    padding: 2rem;
+    background: var(--bg-tertiary);
+    border-left: 4px solid var(--accent-primary);
+    border-radius: var(--radius-md);
+    margin: 1.5rem 0;
+}
+
+.definition-box h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent-primary);
+    margin-bottom: 1rem;
+}
+
+.equation-large {
+    font-size: 1.5rem;
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    color: var(--accent-primary);
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-md);
+}
+
+.formula-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+/* Two Columns */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin: 1.5rem 0;
+}
+
+.column {
+    background: var(--bg-tertiary);
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+}
+
+.column h4 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+/* Three Cases */
+.three-cases {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.case-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-sm);
+}
+
+.case-label {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-width: 4rem;
+}
+
+/* Interactive Demo */
+.interactive-demo {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+}
+
+.interactive-demo h3 {
+    margin-top: 0;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.demo-container-large {
+    grid-template-columns: 1fr 340px;
+}
+
+.demo-canvas-wrapper {
+    position: relative;
+    background: var(--bg-primary);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-canvas-wrapper canvas {
+    border-radius: var(--radius-md);
+    cursor: crosshair;
+}
+
+.canvas-instructions {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.demo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Calculation Panel */
+.calc-panel {
+    background: var(--bg-card);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+}
+
+.calc-panel h4 {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+}
+
+.calculation-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.calc-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+}
+
+.calc-value {
+    font-family: 'Times New Roman', serif;
+    font-weight: 600;
+    color: var(--accent-primary);
+}
+
+.calc-value.highlight {
+    font-size: 1.1rem;
+    color: #10b981;
+}
+
+.calc-step-main {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Result Panel */
+.result-panel {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+    border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+/* Control Groups */
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.control-group label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    height: 6px;
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    cursor: grab;
+}
+
+/* Property List */
+.property-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.property {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+}
+
+/* Playground */
+.playground-container {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.playground-canvas-wrapper {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 1rem;
+}
+
+.playground-canvas-wrapper canvas {
+    display: block;
+    border-radius: var(--radius-lg);
+    cursor: crosshair;
+}
+
+.playground-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.playground-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+.playground-panel h4 {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.playground-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.playground-actions button {
+    flex: 1;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* Exercises */
+.exercise-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.exercise {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.exercise-number {
+    font-weight: 600;
+}
+
+.exercise-status {
+    font-size: 0.85rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 50px;
+}
+
+.exercise-status.correct {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10b981;
+}
+
+.exercise-status.incorrect {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.exercise-content {
+    padding: 1.5rem;
+}
+
+.exercise-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    border-color: var(--accent-primary);
+}
+
+.option input {
+    accent-color: var(--accent-primary);
+}
+
+.option.correct {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.option.incorrect {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-check {
+    margin-top: 0.5rem;
+}
+
+.exercise-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    display: none;
+}
+
+.exercise-feedback.show {
+    display: block;
+}
+
+.exercise-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.exercise-feedback.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+/* Lesson Complete */
+.lesson-complete {
+    text-align: center;
+    padding: 3rem;
+    background: var(--bg-tertiary);
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.complete-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.lesson-complete h2 {
+    margin-bottom: 0.5rem;
+}
+
+.lesson-complete p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.btn-prev,
+.btn-next {
+    padding: 0.75rem 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .playground-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .lesson-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .demo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-content {
+        padding: 1.5rem;
+    }
+
+    .lesson-section h1 {
+        font-size: 1.75rem;
+    }
+}

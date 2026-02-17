@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vzdálenosti a odchylky - Vzdálenost bodu od přímky, vzdálenost rovnoběžných přímek, odchylka dvou přímek.">
+    <title>Vzdálenosti a odchylky – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 6: Vzdálenosti a odchylky</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 6</h3>
+                    <p>Vzdálenosti a odchylky</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#point-line" class="sidebar-link" data-section="point-line">
+                        <span class="sidebar-icon">2</span>
+                        Vzdálenost bodu od přímky
+                    </a>
+                    <a href="#parallel" class="sidebar-link" data-section="parallel">
+                        <span class="sidebar-icon">3</span>
+                        Vzdálenost rovnoběžek
+                    </a>
+                    <a href="#angle" class="sidebar-link" data-section="angle">
+                        <span class="sidebar-icon">4</span>
+                        Odchylka přímek
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">5</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Vzdálenosti a odchylky</h1>
+                    <p class="lead">
+                        V této kapitole se naučíte měřit vzdálenost bodu od přímky, vzdálenost mezi
+                        dvěma rovnoběžnými přímkami a úhel (odchylku) dvou přímek. Tyto výpočty
+                        jsou klíčové pro mnoho praktických úloh v analytické geometrii.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Vzorec pro vzdálenost bodu od přímky</li>
+                                <li>Vzdálenost dvou rovnoběžných přímek</li>
+                                <li>Odchylku (úhel) dvou přímek</li>
+                                <li>Praktické aplikace těchto vzorců</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Předpoklady</h2>
+                    <p>
+                        Pro tuto kapitolu budete potřebovat znalost
+                        <strong>obecné rovnice přímky</strong> ve tvaru <em>ax + by + c = 0</em>
+                        a základy práce s <strong>normálovým a směrovým vektorem</strong>.
+                    </p>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">📐</div>
+                        <div class="formula-content">
+                            <h4>Obecná rovnice přímky</h4>
+                            <p>
+                                Přímka <em>p</em>: <strong>ax + by + c = 0</strong>, kde
+                                <span class="vec">n</span> = (a, b) je normálový vektor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="point-line">
+                        Pokračovat ke vzdálenosti bodu od přímky →
+                    </button>
+                </section>
+
+                <!-- Section 2: Point-Line Distance -->
+                <section id="point-line" class="lesson-section">
+                    <div class="section-badge">Vzdálenost bodu od přímky</div>
+                    <h1>Vzdálenost bodu od přímky</h1>
+
+                    <p>
+                        Vzdálenost bodu od přímky je délka <strong>kolmice</strong> spuštěné z bodu
+                        na přímku — tedy nejkratší možná vzdálenost.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec</h4>
+                        <p>
+                            Je-li přímka <em>p</em>: ax + by + c = 0 a bod M = [m₁, m₂], pak vzdálenost
+                            bodu M od přímky <em>p</em> je:
+                        </p>
+                        <div class="equation-large">
+                            d(M, p) = |a·m₁ + b·m₂ + c| / √(a² + b²)
+                        </div>
+                        <p class="formula-note">
+                            V čitateli je <strong>absolutní hodnota</strong> dosazení bodu do rovnice přímky.
+                            Ve jmenovateli je velikost normálového vektoru.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Přímka <em>p</em>: 3x + 4y − 2 = 0, bod M = [1, 3]:</p>
+                            <p>
+                                d = |3·1 + 4·3 − 2| / √(9 + 16) = |3 + 12 − 2| / √25 = 13 / 5 = <strong>2.6</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Point-Line Distance Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Přetahujte bod M a sledujte vzdálenost od přímky. Upravte přímku posuvníky:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="pointLineCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod M</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Přímka p: ax + by + c = 0</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="aValue">3</span></label>
+                                        <input type="range" id="aSlider" min="-5" max="5" value="3" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="bValue">4</span></label>
+                                        <input type="range" id="bSlider" min="-5" max="5" value="4" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="cValue">-2</span></label>
+                                        <input type="range" id="cSlider" min="-10" max="10" value="-2" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Bod M</span>
+                                            <span id="plPointM" class="calc-value">[1.0, 3.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|a·m₁ + b·m₂ + c|</span>
+                                            <span id="plNumerator" class="calc-value">13.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>√(a² + b²)</span>
+                                            <span id="plDenominator" class="calc-value">5.00</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>d(M, p)</span>
+                                            <span id="plDistance" class="calc-value highlight">2.60</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Pozor!</h4>
+                            <p>
+                                Nezapomeňte na <strong>absolutní hodnotu</strong> v čitateli!
+                                Vzdálenost je vždy nezáporné číslo. Bez absolutní hodnoty bychom mohli dostat
+                                záporný výsledek, což by znamenalo, že jsme se spletli.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="parallel">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Parallel Lines Distance -->
+                <section id="parallel" class="lesson-section">
+                    <div class="section-badge">Vzdálenost rovnoběžek</div>
+                    <h1>Vzdálenost rovnoběžných přímek</h1>
+
+                    <p>
+                        Dvě rovnoběžné přímky mají <strong>stejný normálový vektor</strong> (popř. násobky).
+                        Jejich vzdálenost je konstantní a lze ji snadno vypočítat.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec</h4>
+                        <p>
+                            Pro dvě rovnoběžné přímky <em>p</em>: ax + by + c₁ = 0 a
+                            <em>q</em>: ax + by + c₂ = 0 platí:
+                        </p>
+                        <div class="equation-large">
+                            d(p, q) = |c₁ − c₂| / √(a² + b²)
+                        </div>
+                        <p class="formula-note">
+                            Přímky musí mít <strong>stejné koeficienty</strong> a, b (případně je normalizujeme).
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Alternativní postup</h4>
+                            <p>
+                                Vzdálenost rovnoběžek lze také spočítat tak, že na jedné přímce
+                                zvolíme libovolný bod a spočítáme jeho vzdálenost od druhé přímky.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Parallel Distance Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Upravte posuvníky a sledujte vzdálenost dvou rovnoběžných přímek:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="parallelCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Rovnoběžné přímky</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="parAValue">1</span></label>
+                                        <input type="range" id="parASlider" min="-5" max="5" value="1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="parBValue">-1</span></label>
+                                        <input type="range" id="parBSlider" min="-5" max="5" value="-1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c₁ = <span id="c1Value">2</span></label>
+                                        <input type="range" id="c1Slider" min="-10" max="10" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c₂ = <span id="c2Value">-3</span></label>
+                                        <input type="range" id="c2Slider" min="-10" max="10" value="-3" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|c₁ − c₂|</span>
+                                            <span id="parNumerator" class="calc-value">5.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>√(a² + b²)</span>
+                                            <span id="parDenominator" class="calc-value">1.41</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>d(p, q)</span>
+                                            <span id="parDistance" class="calc-value highlight">3.54</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Přímky <em>p</em>: 3x − 4y + 6 = 0 a <em>q</em>: 3x − 4y − 4 = 0:</p>
+                            <p>
+                                d = |6 − (−4)| / √(9 + 16) = 10 / 5 = <strong>2.0</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="point-line">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="angle">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Angle Between Lines -->
+                <section id="angle" class="lesson-section">
+                    <div class="section-badge">Odchylka přímek</div>
+                    <h1>Odchylka dvou přímek</h1>
+
+                    <p>
+                        Odchylka (úhel) dvou přímek je <strong>ostrý úhel</strong>, který přímky svírají.
+                        Je vždy z intervalu ⟨0°, 90°⟩.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pomocí normálových vektorů</h4>
+                        <p>
+                            Pro přímky <em>p</em>: a₁x + b₁y + c₁ = 0 a <em>q</em>: a₂x + b₂y + c₂ = 0
+                            s normálovými vektory <span class="vec">n</span>₁ = (a₁, b₁) a
+                            <span class="vec">n</span>₂ = (a₂, b₂):
+                        </p>
+                        <div class="equation-large">
+                            cos α = |a₁a₂ + b₁b₂| / (√(a₁² + b₁²) · √(a₂² + b₂²))
+                        </div>
+                        <p class="formula-note">
+                            Absolutní hodnota v čitateli zajišťuje, že dostaneme ostrý úhel (0° až 90°).
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Pomocí směrnic</h4>
+                            <p>Pokud známe směrnice k₁ a k₂ dvou přímek:</p>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                tg α = |k₁ − k₂| / |1 + k₁·k₂|
+                            </div>
+                            <p class="formula-note">Platí pro k₁·k₂ ≠ −1.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Speciální případy</h4>
+                            <ul>
+                                <li><strong>α = 0°</strong> — přímky jsou rovnoběžné</li>
+                                <li><strong>α = 90°</strong> — přímky jsou na sebe kolmé</li>
+                            </ul>
+                            <p class="formula-note">
+                                Kolmé přímky: a₁a₂ + b₁b₂ = 0
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Angle Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Otáčejte přímkami a sledujte, jak se mění odchylka:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="angleCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte koncové body přímek</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Přímky</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">p</span>
+                                        <span id="angleLine1">y = 0.5x + 1</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">q</span>
+                                        <span id="angleLine2">y = −2x + 3</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span><span class="vec">n</span>₁ · <span class="vec">n</span>₂</span>
+                                            <span id="angDot" class="calc-value">0.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|<span class="vec">n</span>₁| · |<span class="vec">n</span>₂|</span>
+                                            <span id="angMags" class="calc-value">1.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>cos α</span>
+                                            <span id="angCos" class="calc-value">0.000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Odchylka α</h4>
+                                    <div class="result-display" style="justify-content: center;">
+                                        <span id="angResult" class="result-value"
+                                            style="font-size: 1.5rem;">90.0°</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel" id="angStatusPanel">
+                                    <h4>Vzájemná poloha</h4>
+                                    <div id="angStatus"
+                                        style="text-align: center; font-weight: 600; font-size: 1rem; padding: 0.25rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Přímky <em>p</em>: 2x − y + 1 = 0 a <em>q</em>: x + 3y − 5 = 0:</p>
+                            <p>
+                                cos α = |2·1 + (−1)·3| / (√5 · √10) = |2 − 3| / √50 = 1/√50 ≈ 0.141
+                            </p>
+                            <p>α ≈ <strong>81.9°</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="parallel">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Přidávejte body a přímky,
+                        měřte vzdálenosti a odchylky v reálném čase.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Přetahujte body a konce přímek</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Bod M</h4>
+                                <div class="point-display">
+                                    <span class="point-marker" style="background: #f59e0b;">M</span>
+                                    <span id="playPointM">[2.0, 3.0]</span>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Přímka p</h4>
+                                <div class="control-group">
+                                    <label>a = <span id="playAVal">1</span></label>
+                                    <input type="range" id="playASlider" min="-5" max="5" value="1" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>b = <span id="playBVal">-1</span></label>
+                                    <input type="range" id="playBSlider" min="-5" max="5" value="-1" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>c = <span id="playCVal">0</span></label>
+                                    <input type="range" id="playCSlider" min="-10" max="10" value="0" step="1">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Výsledky</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>d(M, p)</span>
+                                        <span id="playDist" class="calc-value">3.54</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Rovnice přímky</span>
+                                        <span id="playEq" class="calc-value" style="font-size: 0.8rem;">x − y = 0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="angle">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Vypočítejte vzdálenost bodu M = [1, 2] od přímky <em>p</em>: 3x + 4y − 5 = 0.
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>d = 1.2</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>d = 1.6</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>d = 1.0</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>d = 2.0</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je vzdálenost rovnoběžných přímek
+                                    <em>p</em>: 3x − 4y + 6 = 0 a <em>q</em>: 3x − 4y − 4 = 0?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>d = 2.0</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>d = 10.0</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>d = 1.4</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>d = 5.0</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Přímky <em>p</em>: x + y − 1 = 0 a <em>q</em>: x − y + 2 = 0.
+                                    Jaká je jejich odchylka?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>α = 45°</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>α = 60°</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>α = 90°</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>α = 0°</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Bod M leží na přímce <em>p</em>: 2x − y + 3 = 0. Jaká je vzdálenost d(M, p)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span>d = 3</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span>d = 0</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span>d = 1</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span>Nelze určit bez znalosti souřadnic M.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je odchylka přímek <em>p</em>: y = 2x + 1 a <em>q</em>: y = 2x − 3?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex5" value="a">
+                                        <span>α = 0° (rovnoběžné)</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex5" value="b">
+                                        <span>α = 90° (kolmé)</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex5" value="c">
+                                        <span>α = 45°</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex5" value="d">
+                                        <span>α = 180°</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Vzdálenosti a odchylky.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Analytická geometrie - Naučte se pracovat se souřadnicemi, vektory a geometrickými útvary v rovině i prostoru.">
+    <title>Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Analytická geometrie</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Analytická geometrie</h1>
+                    <p class="course-description">
+                        Objevte krásu matematiky prostřednictvím souřadnic a vektorů. Naučte se analyzovat
+                        geometrické útvary pomocí algebraických metod a pochopte souvislosti mezi geometrií a algebrou.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">12 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~15 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">📝</span>
+                            <span class="stat-value">60+ úloh</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="#" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <!-- Coordinate system -->
+                            <line x1="20" y1="180" x2="180" y2="180" stroke="currentColor" stroke-width="2"
+                                opacity="0.3" />
+                            <line x1="20" y1="180" x2="20" y2="20" stroke="currentColor" stroke-width="2"
+                                opacity="0.3" />
+                            <!-- Grid -->
+                            <line x1="60" y1="180" x2="60" y2="20" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <line x1="100" y1="180" x2="100" y2="20" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <line x1="140" y1="180" x2="140" y2="20" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <line x1="20" y1="140" x2="180" y2="140" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <line x1="20" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <line x1="20" y1="60" x2="180" y2="60" stroke="currentColor" stroke-width="1"
+                                opacity="0.1" />
+                            <!-- Circle -->
+                            <circle cx="100" cy="100" r="50" stroke="url(#gradient1)" stroke-width="3" fill="none"
+                                class="animated-circle" />
+                            <!-- Vector -->
+                            <line x1="20" y1="180" x2="140" y2="60" stroke="url(#gradient2)" stroke-width="3"
+                                class="animated-vector" />
+                            <polygon points="140,60 130,75 145,72" fill="url(#gradient2)" />
+                            <!-- Points -->
+                            <circle cx="20" cy="180" r="6" fill="#6366f1" />
+                            <circle cx="140" cy="60" r="6" fill="#a855f7" />
+                            <circle cx="100" cy="100" r="6" fill="#8b5cf6" />
+                            <!-- Gradients -->
+                            <defs>
+                                <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#6366f1" />
+                                    <stop offset="100%" style="stop-color:#a855f7" />
+                                </linearGradient>
+                                <linearGradient id="gradient2" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">y = kx + q</div>
+                        <div class="formula formula-2">|AB| = √[(x₂-x₁)² + (y₂-y₁)²]</div>
+                        <div class="formula formula-3">→v = (a, b)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress -->
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Systematicky strukturovaný kurz od základů po pokročilé koncepty</p>
+            </div>
+
+            <div class="chapters-list">
+                <!-- Kapitola 1 -->
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Úvod do analytické geometrie</h3>
+                            <p class="chapter-description">Kartézská soustava souřadnic, body v rovině, základní pojmy
+                            </p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 lekce</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/uvod/index.html" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Co je analytická geometrie?</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/uvod/index.html#coordinates" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kartézská soustava souřadnic</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod/index.html#points" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Souřadnice bodu v rovině</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/uvod/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Základy souřadnic</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Kapitola 2 -->
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Vzdálenost a střed úsečky</h3>
+                            <p class="chapter-description">Výpočet vzdálenosti dvou bodů, střed úsečky, dělení úsečky
+                            </p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 lekcí</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/vzdalenost-stred/index.html" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzdálenost dvou bodů v rovině</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzdalenost-stred/index.html#midpoint" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Střed úsečky</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/vzdalenost-stred/index.html#ratio" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Dělení úsečky v poměru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzdalenost-stred/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/vzdalenost-stred/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Vzdálenosti a středy</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 3 -->
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Vektory v rovině</h3>
+                            <p class="chapter-description">Zavedení vektorů, operace s vektory, lineární kombinace</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 lekcí</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/vektory/index.html" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Pojem vektoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vektory/index.html#addition" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Sčítání a odčítání vektorů</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vektory/index.html#scalar" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Násobení vektoru skalárem</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/vektory/index.html#magnitude" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Velikost vektoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vektory/index.html#dotproduct" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Skalární součin</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/vektory/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Vektory</span>
+                                <span class="lesson-duration">25 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 4 -->
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Skalární součin</h3>
+                            <p class="chapter-description">Definice, vlastnosti a aplikace skalárního součinu</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 lekcí</span>
+                            <span class="chapter-time">~75 min</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/skalarni-soucin/index.html" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Definice skalárního součinu</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/skalarni-soucin/index.html#properties"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vlastnosti skalárního součinu</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/skalarni-soucin/index.html#angle" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Úhel dvou vektorů</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/skalarni-soucin/index.html#ortho" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kolmost vektorů</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/skalarni-soucin/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/skalarni-soucin/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Skalární součin</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 5 -->
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Přímka v rovině</h3>
+                            <p class="chapter-description">Parametrické, obecné a směrnicové vyjádření přímky</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~100 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/primka-v-rovine/index.html" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Parametrické vyjádření přímky</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/primka-v-rovine/index.html#general" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Obecná rovnice přímky</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/primka-v-rovine/index.html#slope" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Směrnicový tvar přímky</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <li class="lesson-item">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Převody mezi tvary</span>
+                                <span class="lesson-duration">15 min</span>
+                            </li>
+                            <li class="lesson-item">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzájemná poloha přímek</span>
+                                <span class="lesson-duration">15 min</span>
+                            </li>
+                            <a href="lessons/primka-v-rovine/index.html#interactive"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/primka-v-rovine/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Rovnice přímky</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 6 -->
+                <div class="chapter-card chapter-card-active" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Vzdálenosti a odchylky</h3>
+                            <p class="chapter-description">Vzdálenost bodu od přímky, odchylka přímek</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 lekcí</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/vzdalenosti-odchylky/index.html#point-line"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzdálenost bodu od přímky</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/vzdalenosti-odchylky/index.html#parallel"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzdálenost rovnoběžných přímek</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzdalenosti-odchylky/index.html#angle"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Odchylka dvou přímek</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vzdalenosti-odchylky/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/vzdalenosti-odchylky/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Vzdálenosti a odchylky</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 7 -->
+                <div class="chapter-card chapter-card-active" data-chapter="7">
+                    <div class="chapter-header">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kružnice</h3>
+                            <p class="chapter-description">Rovnice kružnice, vzájemná poloha kružnice a přímky</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~75 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kruznice/index.html#center-form" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Středová rovnice kružnice</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kruznice/index.html#general-form" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Obecná rovnice kružnice</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kruznice/index.html#line-circle" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzájemná poloha přímky a kružnice</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/kruznice/index.html#tangent" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Tečna kružnice</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kruznice/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/kruznice/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Kružnice</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 8 -->
+                <div class="chapter-card chapter-card-active" data-chapter="8">
+                    <div class="chapter-header">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Elipsa</h3>
+                            <p class="chapter-description">Definice, rovnice a vlastnosti elipsy</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~75 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/elipsa/index.html#definition" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Definice elipsy</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/elipsa/index.html#equation" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kanonická rovnice elipsy</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/elipsa/index.html#properties" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vlastnosti elipsy</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/elipsa/index.html#eccentricity" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Excentricita</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/elipsa/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/elipsa/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Elipsa</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 9 -->
+                <div class="chapter-card chapter-card-active" data-chapter="9">
+                    <div class="chapter-header">
+                        <div class="chapter-number">9</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Hyperbola</h3>
+                            <p class="chapter-description">Definice, rovnice a vlastnosti hyperboly</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~75 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/hyperbola/index.html#definition" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Definice hyperboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/hyperbola/index.html#equation" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kanonická rovnice hyperboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/hyperbola/index.html#asymptotes" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Asymptoty hyperboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/hyperbola/index.html#eccentricity" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Excentricita</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/hyperbola/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/hyperbola/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Hyperbola</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 10 -->
+                <div class="chapter-card chapter-card-active" data-chapter="10">
+                    <div class="chapter-header">
+                        <div class="chapter-number">10</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Parabola</h3>
+                            <p class="chapter-description">Definice, rovnice a vlastnosti paraboly</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 lekcí</span>
+                            <span class="chapter-time">~75 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/parabola/index.html#definition" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Definice paraboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/parabola/index.html#equation" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kanonická rovnice paraboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/parabola/index.html#properties" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vlastnosti paraboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/parabola/index.html#orientations" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Orientace paraboly</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/parabola/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">Interaktivní playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/parabola/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: Parabola</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 11 -->
+                <div class="chapter-card chapter-card-active" data-chapter="11">
+                    <div class="chapter-header">
+                        <div class="chapter-number">11</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Analytická geometrie v prostoru</h3>
+                            <p class="chapter-description">Rozšíření konceptů do 3D prostoru</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">8 lekcí</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/prostor/index.html#coordinates" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Souřadnice v prostoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#vectors3d" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vektory v prostoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#cross" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vektorový součin</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#line3d" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Přímka v prostoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#plane" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Rovina v prostoru</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#playground"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">🎮</span>
+                                <span class="lesson-title">3D Playground</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/prostor/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Procvičování: 3D geometrie</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 12 -->
+                <div class="chapter-card chapter-card-active" data-chapter="12">
+                    <div class="chapter-header">
+                        <div class="chapter-number">12</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Závěrečné opakování</h3>
+                            <p class="chapter-description">Souhrnné procvičení všech témat, závěrečný test</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">7 sekcí</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Interaktivní</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/opakovani/index.html#intro" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Úvod a přehled</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">5 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#formulas" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📋</span>
+                                <span class="lesson-title">Přehled klíčových vzorců</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#review2d" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📐</span>
+                                <span class="lesson-title">Opakování 2D geometrie</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#conics" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">⭕</span>
+                                <span class="lesson-title">Opakování kuželoseček</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#review3d" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">🧊</span>
+                                <span class="lesson-title">Opakování 3D geometrie</span>
+                                <span class="lesson-badge-new">🎮</span>
+                                <span class="lesson-duration">10 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#exercises"
+                                class="lesson-item lesson-item-link lesson-exercise">
+                                <span class="lesson-icon">✏️</span>
+                                <span class="lesson-title">Souhrnné procvičování</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/opakovani/index.html#test"
+                                class="lesson-item lesson-item-link lesson-test">
+                                <span class="lesson-icon">🎯</span>
+                                <span class="lesson-title">Závěrečný test</span>
+                                <span class="lesson-badge-new">Nové!</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Klíčové dovednosti, které získáte po absolvování kurzu</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">📍</div>
+                    <h3>Práce se souřadnicemi</h3>
+                    <p>Naučíte se efektivně pracovat s kartézskou soustavou souřadnic v rovině i prostoru.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">➡️</div>
+                    <h3>Vektorová algebra</h3>
+                    <p>Zvládnete operace s vektory včetně skalárního a vektorového součinu.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📏</div>
+                    <h3>Rovnice útvarů</h3>
+                    <p>Budete umět zapsat a interpretovat rovnice přímek, kružnic a kuželoseček.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔍</div>
+                    <h3>Polohové úlohy</h3>
+                    <p>Naučíte se řešit úlohy o vzájemné poloze geometrických útvarů.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📐</div>
+                    <h3>Metrické úlohy</h3>
+                    <p>Zvládnete výpočty vzdáleností, úhlů a obsahů pomocí analytických metod.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Matematické myšlení</h3>
+                    <p>Rozvinete schopnost propojovat geometrickou intuici s algebraickými technikami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA sekce -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Začni se učit analytickou geometrii ještě dnes. Registrace je zdarma.</p>
+                <a href="#" class="btn-white btn-large">Začít kurz zdarma</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zápatí -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

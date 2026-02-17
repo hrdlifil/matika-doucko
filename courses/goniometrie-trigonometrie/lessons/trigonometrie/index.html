@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trigonometrie – sinová věta, kosinová věta a další trigonometrické věty.">
+    <title>Trigonometrie – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 6</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 6</h3>
+                    <p>Trigonometrie</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#sine-rule" class="sidebar-link active" data-section="sine-rule">
+                        <span class="sidebar-icon">1</span>
+                        Sinová věta
+                    </a>
+                    <a href="#sine-apps" class="sidebar-link" data-section="sine-apps">
+                        <span class="sidebar-icon">2</span>
+                        Využití sinové věty
+                    </a>
+                    <a href="#cosine-rule" class="sidebar-link" data-section="cosine-rule">
+                        <span class="sidebar-icon">3</span>
+                        Kosinová věta
+                    </a>
+                    <a href="#cosine-apps" class="sidebar-link" data-section="cosine-apps">
+                        <span class="sidebar-icon">4</span>
+                        Využití kosinové věty
+                    </a>
+                    <a href="#other-theorems" class="sidebar-link" data-section="other-theorems">
+                        <span class="sidebar-icon">5</span>
+                        Další věty
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lesson-content">
+
+                <!-- SECTION 1: Sinová věta -->
+                <section id="sine-rule" class="lesson-section active">
+                    <span class="section-badge">Kapitola 6 · Část 1</span>
+                    <h1>Sinová věta</h1>
+                    <p class="lead">
+                        Sinová věta vyjadřuje vztah mezi stranami trojúhelníku a siny protilehlých úhlů.
+                        Je jedním z nejdůležitějších nástrojů pro řešení obecných trojúhelníků.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Sinová věta</h4>
+                        <p>V každém trojúhelníku ABC s protilehlými stranami a, b, c platí:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">Sinová věta</span>
+                                <span class="formula-eq">a / sin α = b / sin β = c / sin γ = 2R</span>
+                                <span class="formula-note">R = poloměr opsané kružnice</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            Ekvivalentně: sin α / a = sin β / b = sin γ / c
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>📊 Trojúhelník a sinová věta</h3>
+                        <p>Trojúhelník ABC s vyznačenými stranami, úhly a opsanou kružnicí o poloměru R.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="sineRuleCanvas" width="700" height="380"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Důkaz sinové věty</h4>
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Výška z vrcholu C</span>
+                                    <div class="step-content">
+                                        Označme v<sub>c</sub> výšku na stranu c.<br>
+                                        Z pravého trojúhelníku: v<sub>c</sub> = a · sin β = b · sin α
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Úprava</span>
+                                    <div class="step-content">
+                                        a · sin β = b · sin α → <strong>a / sin α = b / sin β</strong><br>
+                                        Analogicky pro výšku v<sub>a</sub>: b / sin β = c / sin γ
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Vztah s opsanou kružnicí</span>
+                                    <div class="step-content">
+                                        Pomocí obvodového úhlu nad průměrem 2R: a / sin α = 2R
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Kdy použít sinovou větu?</h4>
+                            <p>
+                                1. Známe <strong>dva úhly a jednu stranu</strong> (úloha AUA nebo UAU).<br>
+                                2. Známe <strong>dvě strany a úhel proti jedné z nich</strong> (úloha SSU — pozor na
+                                nejednoznačnost!).<br>
+                                3. Potřebujeme spočítat poloměr <strong>opsané kružnice</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#sine-apps" class="btn btn-primary sidebar-link" data-section="sine-apps">Využití
+                            sinové věty →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 2: Využití sinové věty -->
+                <section id="sine-apps" class="lesson-section">
+                    <span class="section-badge">Kapitola 6 · Část 2</span>
+                    <h1>Využití sinové věty</h1>
+                    <p class="lead">
+                        Sinová věta slouží k řešení trojúhelníků, kde známe úhly a některé strany.
+                        Ukážeme si typické příklady a upozorníme na nejednoznačné případy.
+                    </p>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 1: V trojúhelníku ABC je α = 40°, β = 75° a a = 10 cm. Najděte b a c.</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Třetí úhel</span>
+                                    <div class="step-content">γ = 180° − 40° − 75° = <strong>65°</strong></div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Sinová věta pro b</span>
+                                    <div class="step-content">
+                                        a / sin α = b / sin β<br>
+                                        b = a · sin β / sin α = 10 · sin 75° / sin 40° ≈ 10 · 0,9659 / 0,6428 ≈
+                                        <strong>15,03 cm</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Sinová věta pro c</span>
+                                    <div class="step-content">
+                                        c = a · sin γ / sin α = 10 · sin 65° / sin 40° ≈ 10 · 0,9063 / 0,6428 ≈
+                                        <strong>14,10 cm</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>b ≈ 15,03 cm</strong>, &nbsp; <strong>c ≈ 14,10
+                                            cm</strong>, &nbsp; γ = 65°</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 2: Nejednoznačný případ (SSU) — a = 8, b = 5, α = 30°. Kolik existuje
+                            trojúhelníků?</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Sinová věta pro β</span>
+                                    <div class="step-content">
+                                        sin β = b · sin α / a = 5 · sin 30° / 8 = 5 · 0,5 / 8 = <strong>0,3125</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Ověření podmínek</span>
+                                    <div class="step-content">
+                                        sin β = 0,3125 &lt; 1 ✅ → β ≈ 18,21°<br>
+                                        Druhá možnost: β' = 180° − 18,21° = 161,79°<br>
+                                        α + β' = 30° + 161,79° = 191,79° &gt; 180° ❌ → <strong>jen jeden
+                                            trojúhelník</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>Existuje právě 1 trojúhelník</strong> s β ≈
+                                        18,21°, γ ≈ 131,79°</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 3: Poloměr opsané kružnice — trojúhelník s a = 6, α = 45°.</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Vzorec</span>
+                                    <div class="step-content">2R = a / sin α</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content">R = a / (2 · sin α) = 6 / (2 · sin 45°) = 6 / (2 · √2/2) =
+                                        6 / √2 = <strong>3√2 ≈ 4,24</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">⚠️</span>
+                        <div class="info-card-content">
+                            <h4>Nejednoznačnost (SSU případ)</h4>
+                            <p>
+                                Když známe 2 strany a úhel proti <em>kratší</em> straně, mohou nastat 3 situace:<br>
+                                <strong>0 řešení</strong> (sin β &gt; 1), <strong>1 řešení</strong> (β = 90° nebo β' dá
+                                součet &gt; 180°), <strong>2 řešení</strong> (obě β platné).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#sine-rule" class="btn btn-ghost sidebar-link" data-section="sine-rule">← Sinová
+                            věta</a>
+                        <a href="#cosine-rule" class="btn btn-primary sidebar-link" data-section="cosine-rule">Kosinová
+                            věta →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 3: Kosinová věta -->
+                <section id="cosine-rule" class="lesson-section">
+                    <span class="section-badge">Kapitola 6 · Část 3</span>
+                    <h1>Kosinová věta</h1>
+                    <p class="lead">
+                        Kosinová věta zobecňuje Pythagorovu větu pro obecné trojúhelníky.
+                        Umožňuje vypočítat stranu z ostatních dvou stran a sevřeného úhlu, nebo naopak úhel ze tří
+                        stran.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Kosinová věta</h4>
+                        <p>V trojúhelníku ABC platí:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">pro stranu c</span>
+                                <span class="formula-eq">c² = a² + b² − 2ab · cos γ</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">pro stranu a</span>
+                                <span class="formula-eq">a² = b² + c² − 2bc · cos α</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">pro stranu b</span>
+                                <span class="formula-eq">b² = a² + c² − 2ac · cos β</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            Pro γ = 90° se redukuje na Pythagorovu větu: c² = a² + b²
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>📊 Kosinová věta — geometrická interpretace</h3>
+                        <p>Trojúhelník se stranami a, b, c a vyznačeným úhlem γ. Zobrazena je i "korekce" oproti
+                            Pythagorovci.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="cosineRuleCanvas" width="700" height="350"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Odvození kosinové věty</h4>
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Souřadnicový přístup</span>
+                                    <div class="step-content">
+                                        Umístíme trojúhelník: C = [0,0], B = [a, 0], A = [b cos γ, b sin γ]
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Vzdálenost AB</span>
+                                    <div class="step-content">
+                                        c² = |AB|² = (a − b cos γ)² + (b sin γ)²<br>
+                                        = a² − 2ab cos γ + b² cos²γ + b² sin²γ<br>
+                                        = a² − 2ab cos γ + b²(cos²γ + sin²γ)<br>
+                                        = <strong>a² + b² − 2ab cos γ</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Inverzní tvar — výpočet úhlu</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">cos γ</span>
+                                <span class="formula-eq">= (a² + b² − c²) / (2ab)</span>
+                                <span class="formula-note">γ = arccos(...)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Kdy použít kosinovou větu?</h4>
+                            <p>
+                                1. Známe <strong>dvě strany a sevřený úhel</strong> (SUS) → spočítáme třetí stranu.<br>
+                                2. Známe <strong>tři strany</strong> (SSS) → spočítáme úhly.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#sine-apps" class="btn btn-ghost sidebar-link" data-section="sine-apps">← Využití
+                            sinové věty</a>
+                        <a href="#cosine-apps" class="btn btn-primary sidebar-link" data-section="cosine-apps">Využití
+                            kosinové věty →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 4: Využití kosinové věty -->
+                <section id="cosine-apps" class="lesson-section">
+                    <span class="section-badge">Kapitola 6 · Část 4</span>
+                    <h1>Využití kosinové věty</h1>
+                    <p class="lead">
+                        Kosinovou větu využíváme ke dvěma hlavním typům úloh: výpočtu třetí strany ze dvou stran a
+                        sevřeného úhlu,
+                        a výpočtu úhlů ze tří daných stran.
+                    </p>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 1: (SUS) — V trojúhelníku ABC je a = 7, b = 5, γ = 60°. Najděte c.</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Kosinová věta</span>
+                                    <div class="step-content">
+                                        c² = a² + b² − 2ab cos γ = 49 + 25 − 2·7·5·cos 60°<br>
+                                        = 74 − 70 · 0,5 = 74 − 35 = <strong>39</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>c = √39 ≈ 6,24</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 2: (SSS) — Trojúhelník má strany a = 8, b = 6, c = 10. Najděte všechny úhly.</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Úhel γ (proti nejdelší straně)</span>
+                                    <div class="step-content">
+                                        cos γ = (a² + b² − c²) / (2ab) = (64 + 36 − 100) / (2·8·6) = 0 / 96 = 0<br>
+                                        <strong>γ = 90°</strong> (pravoúhlý trojúhelník!)
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Úhel α</span>
+                                    <div class="step-content">
+                                        cos α = (b² + c² − a²) / (2bc) = (36 + 100 − 64) / (2·6·10) = 72/120 = 0,6<br>
+                                        <strong>α ≈ 53,13°</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>α ≈ 53,13°</strong>, &nbsp; <strong>β ≈
+                                            36,87°</strong>, &nbsp; <strong>γ = 90°</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 3: Kombinace — a = 12, b = 9, γ = 120°. Najděte c a zbylé úhly.</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Kosinová věta pro c</span>
+                                    <div class="step-content">
+                                        c² = 144 + 81 − 2·12·9·cos 120° = 225 − 216·(−0,5) = 225 + 108 = 333<br>
+                                        <strong>c = √333 ≈ 18,25</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Sinová věta pro α</span>
+                                    <div class="step-content">
+                                        sin α / a = sin γ / c → sin α = 12 · sin 120° / 18,25 ≈ 12 · 0,866 / 18,25 ≈
+                                        0,5695<br>
+                                        <strong>α ≈ 34,72°</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>c ≈ 18,25</strong>, &nbsp; <strong>α ≈
+                                            34,72°</strong>, &nbsp; <strong>β ≈ 25,28°</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#cosine-rule" class="btn btn-ghost sidebar-link" data-section="cosine-rule">← Kosinová
+                            věta</a>
+                        <a href="#other-theorems" class="btn btn-primary sidebar-link"
+                            data-section="other-theorems">Další věty →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 5: Další věty -->
+                <section id="other-theorems" class="lesson-section">
+                    <span class="section-badge">Kapitola 6 · Část 5</span>
+                    <h1>Další trigonometrické věty</h1>
+                    <p class="lead">
+                        Kromě sinové a kosinové věty existují další užitečné vztahy: vzorce pro obsah trojúhelníku,
+                        tangentová věta, Heronův vzorec a poloměry vepsané a opsané kružnice.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Obsah trojúhelníku pomocí sinu</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">S</span>
+                                <span class="formula-eq">= ½ · a · b · sin γ</span>
+                                <span class="formula-note">libovolné dvě strany a sevřený úhel</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">S</span>
+                                <span class="formula-eq">= ½ · a · c · sin β</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">S</span>
+                                <span class="formula-eq">= ½ · b · c · sin α</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Heronův vzorec</h4>
+                        <p>Obsah trojúhelníku pouze ze tří stran:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">s = (a+b+c)/2</span>
+                                <span class="formula-eq">S = √(s(s−a)(s−b)(s−c))</span>
+                                <span class="formula-note">s = polovina obvodu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Poloměr vepsané kružnice</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">r</span>
+                                <span class="formula-eq">= S / s</span>
+                                <span class="formula-note">S = obsah, s = polovina obvodu</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Tangentová věta</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">tg((α−β)/2)</span>
+                                <span class="formula-eq">= (a−b)/(a+b) · cotg(γ/2)</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            Alternativně: (a−b) / (a+b) = tg((α−β)/2) / tg((α+β)/2)
+                        </p>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 1: Obsah — trojúhelník se stranami a = 5, b = 7, γ = 30°</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Vzorec</span>
+                                    <div class="step-content">S = ½ · 5 · 7 · sin 30° = ½ · 35 · 0,5 =
+                                        <strong>8,75</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>S = 8,75 cm²</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 2: Heronův vzorec — trojúhelník 3, 4, 5</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Polovina obvodu</span>
+                                    <div class="step-content">s = (3 + 4 + 5) / 2 = <strong>6</strong></div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Dosadíme</span>
+                                    <div class="step-content">
+                                        S = √(6 · 3 · 2 · 1) = √36 = <strong>6</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>S = 6 cm²</strong> &nbsp; (ověření: ½ · 3 · 4 = 6
+                                        ✅)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad 3: Poloměr vepsané kružnice — trojúhelník 5, 12, 13</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Obsah (pravoúhlý trojúhelník)</span>
+                                    <div class="step-content">S = ½ · 5 · 12 = <strong>30</strong></div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Polovina obvodu</span>
+                                    <div class="step-content">s = (5 + 12 + 13) / 2 = <strong>15</strong></div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content">r = S / s = 30 / 15 = <strong>2</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#cosine-apps" class="btn btn-ghost sidebar-link" data-section="cosine-apps">← Využití
+                            kosinové věty</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: Procvičování -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Kapitola 6 · Procvičování</span>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Ověřte si své znalosti z trigonometrie.</p>
+
+                    <div class="exercise-card" id="ex1">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 1</span>
+                            <span class="exercise-status" id="ex1Status"></span>
+                        </div>
+                        <p class="exercise-question">V trojúhelníku ABC je α = 30°, β = 45°, a = 10. Kolik je b?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex1" value="a"><span>b ≈
+                                    12,25</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="b"><span>b ≈
+                                    14,14</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="c"><span>b ≈
+                                    7,07</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex1" value="d"><span>b ≈
+                                    8,66</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex1','b')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex1Feedback"></div>
+                    </div>
+
+                    <div class="exercise-card" id="ex2">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 2</span>
+                            <span class="exercise-status" id="ex2Status"></span>
+                        </div>
+                        <p class="exercise-question">V trojúhelníku s a = 5, b = 7, γ = 60°. Kolik je c?</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex2" value="a"><span>c = √39 ≈
+                                    6,24</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="b"><span>c = √74 ≈
+                                    8,60</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="c"><span>c = √109 ≈
+                                    10,44</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex2" value="d"><span>c = √29 ≈
+                                    5,39</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex2','a')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex2Feedback"></div>
+                    </div>
+
+                    <div class="exercise-card" id="ex3">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 3</span>
+                            <span class="exercise-status" id="ex3Status"></span>
+                        </div>
+                        <p class="exercise-question">Obsah trojúhelníku se stranami a = 10, b = 6, γ = 90° je:</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex3" value="a"><span>S =
+                                    60</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="b"><span>S =
+                                    30</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="c"><span>S =
+                                    15√3</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex3" value="d"><span>S =
+                                    24</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex3','b')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex3Feedback"></div>
+                    </div>
+
+                    <div class="exercise-card" id="ex4">
+                        <div class="exercise-header">
+                            <span class="exercise-number">Úloha 4</span>
+                            <span class="exercise-status" id="ex4Status"></span>
+                        </div>
+                        <p class="exercise-question">Heronův vzorec pro trojúhelník 7, 8, 9 dá obsah:</p>
+                        <div class="quiz-options">
+                            <label class="quiz-option"><input type="radio" name="ex4" value="a"><span>S = 12√5 ≈
+                                    26,83</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex4" value="b"><span>S =
+                                    24</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex4" value="c"><span>S = 6√15 ≈
+                                    23,24</span></label>
+                            <label class="quiz-option"><input type="radio" name="ex4" value="d"><span>S =
+                                    28</span></label>
+                        </div>
+                        <button class="btn btn-primary btn-sm" onclick="checkExercise('ex4','a')">Zkontrolovat</button>
+                        <div class="exercise-feedback" id="ex4Feedback"></div>
+                    </div>
+
+                    <div class="lesson-complete">
+                        <h2>🎉 Kapitola 6 hotová!</h2>
+                        <p>Zvládli jste sinovou větu, kosinovou větu i další trigonometrické vzorce.</p>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#other-theorems" class="btn btn-ghost sidebar-link" data-section="other-theorems">←
+                            Další věty</a>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

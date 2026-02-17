@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Sinus a kosinus jako funkce, grafy, transformace a vlastnosti – interaktivní lekce">
+    <title>Sinus a kosinus jako funkce – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 2</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 2</h3>
+                    <p>Sinus a kosinus jako funkce</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Sinus a kosinus jako funkce
+                    </a>
+                    <a href="#graphs" class="sidebar-link" data-section="graphs">
+                        <span class="sidebar-icon">2</span>
+                        Graf sin a cos
+                    </a>
+                    <a href="#transforms" class="sidebar-link" data-section="transforms">
+                        <span class="sidebar-icon">3</span>
+                        Posuny grafu
+                    </a>
+                    <a href="#properties" class="sidebar-link" data-section="properties">
+                        <span class="sidebar-icon">4</span>
+                        Vlastnosti funkcí
+                    </a>
+                    <a href="#values" class="sidebar-link" data-section="values">
+                        <span class="sidebar-icon">5</span>
+                        Tabulka hodnot
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">🎮</span>
+                        Hřiště
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main lesson content -->
+            <div class="lesson-content">
+
+                <!-- ============================================================ -->
+                <!-- SECTION 1: Sinus a kosinus jako funkce -->
+                <!-- ============================================================ -->
+                <section id="intro" class="lesson-section active">
+                    <span class="section-badge">Sekce 1</span>
+                    <h1>Sinus a kosinus jako funkce</h1>
+                    <p class="lead">
+                        V první kapitole jsme se naučili, co je sinus a kosinus na jednotkové kružnici.
+                        Teď uděláme klíčový krok — podíváme se na ně jako na <strong>funkce proměnné x</strong>,
+                        které přiřazují každému úhlu konkrétní hodnotu. Tím otevřeme dveře ke grafům,
+                        rovnicím a aplikacím.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Definice</h4>
+                        <p>Funkce <strong>sinus</strong> a <strong>kosinus</strong> jsou definovány pro každé reálné
+                            číslo x:</p>
+                        <ul>
+                            <li><strong>f(x) = sin x</strong> — přiřazuje úhlu x jeho y-ovou souřadnici na jednotkové
+                                kružnici</li>
+                            <li><strong>f(x) = cos x</strong> — přiřazuje úhlu x jeho x-ovou souřadnici na jednotkové
+                                kružnici</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">
+                            <strong>Definiční obor:</strong> D(f) = ℝ (všechna reálná čísla)<br>
+                            <strong>Obor hodnot:</strong> H(f) = [−1, 1]
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Jak to funguje?</h4>
+                            <p>Představte si, že se bod pohybuje po jednotkové kružnici. Jeho y-ová souřadnice
+                                vykresluje sinusovku, x-ová souřadnice kosinusovku. Pohybujte úhlem v demu níže
+                                a sledujte, jak se bod na kružnici promítá do grafu.</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Demo: Unit circle → Graph tracer -->
+                    <div class="interactive-demo">
+                        <h3>🔄 Od kružnice ke grafu</h3>
+                        <p>Táhněte posuvníkem a sledujte, jak se bod na jednotkové kružnici promítá do sinusového a
+                            kosinusového grafu.</p>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="tracerCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Úhel x: <span id="tracerAngleVal">0</span>° = <span id="tracerRadVal">0</span>
+                                    rad</label>
+                                <input type="range" id="tracerSlider" min="0" max="720" value="0" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>Zobrazit:</label>
+                                <div style="display:flex;gap:0.75rem;margin-top:0.25rem;">
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="tracerShowSin" checked> sin x
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="tracerShowCos" checked> cos x
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Klíčové vlastnosti</h3>
+                    <div class="formula-grid">
+                        <div class="formula-card">
+                            <span class="formula-name">Perioda</span>
+                            <span class="formula-eq">sin(x + 2π) = sin x</span>
+                            <span class="formula-note">Hodnoty se opakují po 2π</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Parita sinu</span>
+                            <span class="formula-eq">sin(−x) = −sin x</span>
+                            <span class="formula-note">Sinus je lichá funkce</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Parita kosinu</span>
+                            <span class="formula-eq">cos(−x) = cos x</span>
+                            <span class="formula-note">Kosinus je sudá funkce</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Vzájemný vztah</span>
+                            <span class="formula-eq">cos x = sin(x + π/2)</span>
+                            <span class="formula-note">Kosinus je posunutý sinus</span>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#graphs" class="btn btn-primary sidebar-link" data-section="graphs">Graf sin a cos
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 2: Graf funkce sinus a kosinus -->
+                <!-- ============================================================ -->
+                <section id="graphs" class="lesson-section">
+                    <span class="section-badge">Sekce 2</span>
+                    <h1>Graf funkce sinus a kosinus</h1>
+                    <p class="lead">
+                        Grafy sinu a kosinu jsou jedny z nejdůležitějších křivek v matematice.
+                        Jsou to hladké, periodické vlny, které se opakují každých 2π.
+                        Pojďme si je prohlédnout detailně.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>📊 Sinusovka a kosinusovka</h4>
+                        <ul>
+                            <li><strong>Amplituda:</strong> maximální výchylka od osy x = 1</li>
+                            <li><strong>Perioda:</strong> délka jednoho celého cyklu = 2π ≈ 6,28</li>
+                            <li><strong>Nulové body sin x:</strong> x = kπ (k ∈ ℤ)</li>
+                            <li><strong>Nulové body cos x:</strong> x = π/2 + kπ (k ∈ ℤ)</li>
+                            <li><strong>Maximum sin x:</strong> x = π/2 + 2kπ → sin x = 1</li>
+                            <li><strong>Maximum cos x:</strong> x = 2kπ → cos x = 1</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive Demo: Full sin/cos graphs -->
+                    <div class="interactive-demo">
+                        <h3>📈 Interaktivní graf</h3>
+                        <p>Prozkoumejte grafy sinu a kosinu. Posuvníkem vyberte bod na grafu a sledujte jeho hodnotu.
+                        </p>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="graphCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Bod x: <span id="graphXVal">0</span></label>
+                                <input type="range" id="graphSlider" min="-628" max="628" value="0" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>Zobrazit:</label>
+                                <div style="display:flex;gap:0.75rem;margin-top:0.25rem;">
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="graphShowSin" checked> sin x
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="graphShowCos" checked> cos x
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="control-group" style="min-width: auto;">
+                                <label>Hodnoty:</label>
+                                <div class="calc-display" style="padding: 0.5rem 0.75rem;">
+                                    <div class="calc-step">
+                                        <span>sin x =</span>
+                                        <span class="calc-value" id="graphSinVal" style="color: #f87171;">0.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos x =</span>
+                                        <span class="calc-value" id="graphCosVal" style="color: #60a5fa;">0.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🔍</div>
+                        <div class="info-card-content">
+                            <h4>Porovnání sinusovky a kosinusovky</h4>
+                            <p>Všimněte si, že kosinusovka je ve skutečnosti sinusovka posunutá o π/2 doleva.
+                                To znamená cos x = sin(x + π/2). Obě křivky mají stejný tvar, liší se jen fází.</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#intro" class="btn btn-ghost sidebar-link" data-section="intro">← Úvod</a>
+                        <a href="#transforms" class="btn btn-primary sidebar-link" data-section="transforms">Posuny
+                            grafu →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 3: Posuny grafu -->
+                <!-- ============================================================ -->
+                <section id="transforms" class="lesson-section">
+                    <span class="section-badge">Sekce 3</span>
+                    <h1>Posuny grafu funkcí sinus a kosinus</h1>
+                    <p class="lead">
+                        Obecný tvar sinusoidy je <strong>y = A · sin(ωx + φ) + k</strong>.
+                        Každý parametr mění graf jiným způsobem. Pojďme si to ukázat interaktivně.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>🎛️ Parametry transformace: y = A · sin(ωx + φ) + k</h4>
+                        <ul>
+                            <li><strong>A (amplituda)</strong> — výška vlny. |A| > 1 zvětšuje, |A| < 1 zmenšuje. Záporné
+                                    A překlopí graf.</li>
+                            <li><strong>ω (úhlová frekvence)</strong> — ovlivňuje periodu. Perioda = 2π/|ω|. Větší ω =
+                                kratší vlna.</li>
+                            <li><strong>φ (fáze, fázový posun)</strong> — posouvá graf doleva (φ > 0) nebo doprava (φ <
+                                    0) o −φ/ω.</li>
+                            <li><strong>k (vertikální posun)</strong> — posouvá celý graf nahoru (k > 0) nebo dolů (k <
+                                    0).</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎛️ Transformace sinusoidy</h3>
+                        <div id="transformEq" class="equation-display">y = 1.0 · sin(1.0 · x + 0.0) + 0.0</div>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="transformCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>A (amplituda): <span id="ampVal">1.0</span></label>
+                                <input type="range" id="ampSlider" min="-30" max="30" value="10" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>ω (frekvence): <span id="omegaVal">1.0</span></label>
+                                <input type="range" id="omegaSlider" min="1" max="50" value="10" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>φ (fáze): <span id="phiVal">0.0</span></label>
+                                <input type="range" id="phiSlider" min="-314" max="314" value="0" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>k (posun): <span id="shiftVal">0.0</span></label>
+                                <input type="range" id="shiftSlider" min="-20" max="20" value="0" step="1">
+                            </div>
+                        </div>
+                        <div style="margin-top:0.75rem;">
+                            <label style="font-size:0.85rem;font-weight:600;">Předvolby:</label>
+                            <div class="preset-buttons" style="margin-top:0.4rem;">
+                                <button class="preset-btn" data-preset="default">Základní</button>
+                                <button class="preset-btn" data-preset="double-amp">2× amplituda</button>
+                                <button class="preset-btn" data-preset="half-period">½ perioda</button>
+                                <button class="preset-btn" data-preset="phase-shift">Fázový posun</button>
+                                <button class="preset-btn" data-preset="cosine">Kosinus</button>
+                                <button class="preset-btn" data-preset="shifted-up">Posun nahoru</button>
+                            </div>
+                        </div>
+                        <div class="calc-display" style="margin-top:1rem;">
+                            <div class="calc-step">
+                                <span>Amplituda (|A|):</span>
+                                <span class="calc-value highlight" id="calcAmp">1.0</span>
+                            </div>
+                            <div class="calc-step">
+                                <span>Perioda (2π/|ω|):</span>
+                                <span class="calc-value highlight" id="calcPeriod">6.283</span>
+                            </div>
+                            <div class="calc-step">
+                                <span>Fázový posun (−φ/ω):</span>
+                                <span class="calc-value highlight" id="calcPhase">0.000</span>
+                            </div>
+                            <div class="calc-step">
+                                <span>Vertikální posun (k):</span>
+                                <span class="calc-value highlight" id="calcShift">0.0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#graphs" class="btn btn-ghost sidebar-link" data-section="graphs">← Grafy</a>
+                        <a href="#properties" class="btn btn-primary sidebar-link" data-section="properties">Vlastnosti
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 4: Vlastnosti funkcí -->
+                <!-- ============================================================ -->
+                <section id="properties" class="lesson-section">
+                    <span class="section-badge">Sekce 4</span>
+                    <h1>Vlastnosti funkcí sinus a kosinus</h1>
+                    <p class="lead">
+                        Sinus a kosinus mají řadu důležitých vlastností. Zapněte si jednotlivé vlastnosti
+                        v interaktivním grafu a prozkoumejte je vizuálně.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🔬 Průzkumník vlastností</h3>
+                        <p>Zaškrtněte vlastnosti, které chcete na grafu zvýraznit:</p>
+                        <div class="property-toggles">
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propZeros" checked> Nulové body
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propExtrema"> Extrémy
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propPeriod"> Perioda
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propMonotone"> Monotónnost
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propParity"> Parita (symetrie)
+                            </label>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;margin-bottom:0.5rem;">
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propFuncSin" checked> sin x
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propFuncCos"> cos x
+                            </label>
+                        </div>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="propsCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary table -->
+                    <h3>📋 Přehledová tabulka</h3>
+                    <div class="values-table-wrapper">
+                        <table class="values-table">
+                            <thead>
+                                <tr>
+                                    <th>Vlastnost</th>
+                                    <th>sin x</th>
+                                    <th>cos x</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Definiční obor</td>
+                                    <td>ℝ</td>
+                                    <td>ℝ</td>
+                                </tr>
+                                <tr>
+                                    <td>Obor hodnot</td>
+                                    <td>[−1, 1]</td>
+                                    <td>[−1, 1]</td>
+                                </tr>
+                                <tr>
+                                    <td>Perioda</td>
+                                    <td>2π</td>
+                                    <td>2π</td>
+                                </tr>
+                                <tr>
+                                    <td>Parita</td>
+                                    <td>Lichá: sin(−x) = −sin x</td>
+                                    <td>Sudá: cos(−x) = cos x</td>
+                                </tr>
+                                <tr>
+                                    <td>Nulové body</td>
+                                    <td>x = kπ</td>
+                                    <td>x = π/2 + kπ</td>
+                                </tr>
+                                <tr>
+                                    <td>Maximum = 1</td>
+                                    <td>x = π/2 + 2kπ</td>
+                                    <td>x = 2kπ</td>
+                                </tr>
+                                <tr>
+                                    <td>Minimum = −1</td>
+                                    <td>x = −π/2 + 2kπ</td>
+                                    <td>x = π + 2kπ</td>
+                                </tr>
+                                <tr>
+                                    <td>Rostoucí</td>
+                                    <td>(−π/2 + 2kπ, π/2 + 2kπ)</td>
+                                    <td>(−π + 2kπ, 2kπ)</td>
+                                </tr>
+                                <tr>
+                                    <td>Klesající</td>
+                                    <td>(π/2 + 2kπ, 3π/2 + 2kπ)</td>
+                                    <td>(2kπ, π + 2kπ)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#transforms" class="btn btn-ghost sidebar-link" data-section="transforms">← Posuny</a>
+                        <a href="#values" class="btn btn-primary sidebar-link" data-section="values">Tabulka hodnot
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 5: Rychlé zapamatování tabulky hodnot -->
+                <!-- ============================================================ -->
+                <section id="values" class="lesson-section">
+                    <span class="section-badge">Sekce 5</span>
+                    <h1>Rychlé zapamatování tabulky hodnot</h1>
+                    <p class="lead">
+                        Hodnoty sinu a kosinu pro základní úhly (0°, 30°, 45°, 60°, 90°) se musíte naučit nazpaměť.
+                        Existuje jednoduchý trik — vzor √n / 2.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>🧠 Mnemotechnický vzor: √n / 2</h4>
+                        <p>Hodnoty sinu pro úhly 0°, 30°, 45°, 60°, 90° tvoří řadu:</p>
+                        <div style="text-align:center; font-size:1.15rem; margin: 1rem 0; font-weight:700;">
+                            √0/2, √1/2, √2/2, √3/2, √4/2
+                        </div>
+                        <p>Což je: <strong>0, 1/2, √2/2, √3/2, 1</strong></p>
+                        <p style="margin-top:0.5rem;">Pro <strong>kosinus</strong> je to totéž, ale v opačném pořadí!
+                        </p>
+                    </div>
+
+                    <h3>📊 Tabulka základních hodnot</h3>
+                    <div class="values-table-wrapper">
+                        <table class="values-table">
+                            <thead>
+                                <tr>
+                                    <th>Funkce</th>
+                                    <th>0° (0)</th>
+                                    <th>30° (π/6)</th>
+                                    <th>45° (π/4)</th>
+                                    <th>60° (π/3)</th>
+                                    <th>90° (π/2)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>sin</strong></td>
+                                    <td>0</td>
+                                    <td>1/2</td>
+                                    <td>√2/2</td>
+                                    <td>√3/2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>cos</strong></td>
+                                    <td>1</td>
+                                    <td>√3/2</td>
+                                    <td>√2/2</td>
+                                    <td>1/2</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3 style="margin-top:2rem;">🃏 Kartičky — klikněte pro odkrytí</h3>
+                    <p>Klikněte na kartičku pro zobrazení hodnoty. Zkuste si nejdřív odpovědět sami!</p>
+                    <div class="flashcard-grid" id="flashcardGrid">
+                        <!-- filled by JS -->
+                    </div>
+                    <div style="margin-top:0.75rem;">
+                        <button class="btn btn-ghost" id="resetCards">🔄 Zamíchat a skrýt</button>
+                    </div>
+
+                    <h3 style="margin-top:2rem;">⚡ Kvíz — otestujte se!</h3>
+                    <div class="quiz-area" id="quizArea">
+                        <div class="quiz-question" id="quizQuestion">Klikněte na "Nová otázka"</div>
+                        <div class="quiz-options" id="quizOptions">
+                            <!-- filled by JS -->
+                        </div>
+                        <div class="quiz-score" id="quizScore"></div>
+                        <button class="btn btn-primary" id="quizNext" style="margin-top:1rem;">Nová otázka</button>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#properties" class="btn btn-ghost sidebar-link" data-section="properties">←
+                            Vlastnosti</a>
+                        <a href="#playground" class="btn btn-primary sidebar-link" data-section="playground">Hřiště
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 6: Playground -->
+                <!-- ============================================================ -->
+                <section id="playground" class="lesson-section">
+                    <span class="section-badge">🎮 Hřiště</span>
+                    <h1>Hřiště — prozkoumejte vše</h1>
+                    <p class="lead">
+                        Spojení jednotkové kružnice a grafu transformované sinusoidy.
+                        Všechno na jednom místě — experimentujte!
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní hřiště</h3>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="playgroundCanvas" width="750" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Úhel: <span id="pgAngleVal">0</span>°</label>
+                                <input type="range" id="pgAngleSlider" min="0" max="720" value="0" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>A: <span id="pgAmpVal">1.0</span></label>
+                                <input type="range" id="pgAmpSlider" min="-30" max="30" value="10" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>ω: <span id="pgOmegaVal">1.0</span></label>
+                                <input type="range" id="pgOmegaSlider" min="1" max="40" value="10" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>k: <span id="pgShiftVal">0.0</span></label>
+                                <input type="range" id="pgShiftSlider" min="-20" max="20" value="0" step="1">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#values" class="btn btn-ghost sidebar-link" data-section="values">← Tabulka</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 7: Exercises -->
+                <!-- ============================================================ -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">✏️ Procvičování</span>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Ověřte si, co jste se naučili. Vyberte správnou odpověď a klikněte na
+                        "Zkontrolovat".</p>
+
+                    <div class="exercises-list">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="ex1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaká je perioda funkce sin x?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> π</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> 2π</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> 4π</label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"> 360</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex1','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="ex2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Funkce cos x je:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> Lichá funkce</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> Sudá funkce</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> Ani lichá, ani
+                                        sudá</label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"> Periodická, ale ne
+                                        sudá</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex2','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="ex3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaká je perioda funkce y = sin(2x)?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> 2π</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> π</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> 4π</label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"> π/2</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex3','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="ex4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Kolik je sin 30°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> √3/2</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> √2/2</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> 1/2</label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"> 1</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex4','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="ex5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Graf funkce y = 3sin(x) + 2 má amplitudu a vertikální posun:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> A = 3, k = 2</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> A = 2, k = 3</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> A = 3, k =
+                                        −2</label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"> A = 5, k = 0</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex5','a')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Kapitola 2 dokončena!</h2>
+                        <p>Výborně! Nyní rozumíte sinu a kosinu jako funkcím, jejich grafům, transformacím a
+                            vlastnostem.</p>
+                        <a href="../../index.html" class="btn btn-primary" style="margin-top:1rem;">Zpět na přehled
+                            kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#playground" class="btn btn-ghost sidebar-link" data-section="playground">← Hřiště</a>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+                </section>
+
+            </div> <!-- /lesson-content -->
+        </div> <!-- /lesson-container -->
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

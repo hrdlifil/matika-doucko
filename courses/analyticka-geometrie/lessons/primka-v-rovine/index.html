@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Interaktivní lekce o přímce v rovině - parametrické, obecné a směrnicové vyjádření.">
+    <title>Přímka v rovině – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 5: Přímka v rovině</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 5</h3>
+                    <p>Přímka v rovině</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#parametric" class="sidebar-link" data-section="parametric">
+                        <span class="sidebar-icon">2</span>
+                        Parametrické vyjádření
+                    </a>
+                    <a href="#general" class="sidebar-link" data-section="general">
+                        <span class="sidebar-icon">3</span>
+                        Obecná rovnice
+                    </a>
+                    <a href="#slope" class="sidebar-link" data-section="slope">
+                        <span class="sidebar-icon">4</span>
+                        Směrnicový tvar
+                    </a>
+                    <a href="#interactive" class="sidebar-link" data-section="interactive">
+                        <span class="sidebar-icon">5</span>
+                        Interaktivní playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Přímka v rovině</h1>
+                    <p class="lead">
+                        Přímka je jedním z nejzákladnějších geometrických útvarů. V analytické geometrii
+                        můžeme přímku popsat několika způsoby pomocí rovnic. Každý způsob má své výhody
+                        a je vhodný pro různé situace.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Parametrické vyjádření přímky</li>
+                                <li>Obecnou rovnici přímky</li>
+                                <li>Směrnicový tvar přímky</li>
+                                <li>Převody mezi jednotlivými tvary</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Tři způsoby zápisu přímky</h2>
+                    <div class="equation-cards">
+                        <div class="equation-card">
+                            <h4>Parametrické vyjádření</h4>
+                            <div class="equation">
+                                x = x₀ + t·a<br>
+                                y = y₀ + t·b
+                            </div>
+                            <p>Bod [x₀, y₀] a směrový vektor (a, b)</p>
+                        </div>
+                        <div class="equation-card">
+                            <h4>Obecná rovnice</h4>
+                            <div class="equation">ax + by + c = 0</div>
+                            <p>Koeficienty a, b určují normálový vektor</p>
+                        </div>
+                        <div class="equation-card">
+                            <h4>Směrnicový tvar</h4>
+                            <div class="equation">y = kx + q</div>
+                            <p>k je směrnice, q je úsek na ose y</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="parametric">
+                        Pokračovat k parametrickému vyjádření →
+                    </button>
+                </section>
+
+                <!-- Section 2: Parametric -->
+                <section id="parametric" class="lesson-section">
+                    <div class="section-badge">Parametrické vyjádření</div>
+                    <h1>Parametrické vyjádření přímky</h1>
+
+                    <p>
+                        Přímka je jednoznačně určena <strong>bodem</strong>, kterým prochází,
+                        a <strong>směrovým vektorem</strong>, který udává její směr.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Nechť A = [x₀, y₀] je bod přímky p a <span class="vec">s</span> = (a, b) je její směrový
+                            vektor.
+                            Pak <strong>parametrické vyjádření</strong> přímky p je:
+                        </p>
+                        <div class="equation-large">
+                            x = x₀ + t·a<br>
+                            y = y₀ + t·b
+                        </div>
+                        <p>kde t ∈ ℝ je parametr.</p>
+                    </div>
+
+                    <!-- Interactive Parametric Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Pohybujte posuvníky a sledujte, jak se mění přímka:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="parametricCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Bod A: x₀ = <span id="x0Value">2</span></label>
+                                    <input type="range" id="x0Slider" min="-5" max="5" value="2" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>Bod A: y₀ = <span id="y0Value">1</span></label>
+                                    <input type="range" id="y0Slider" min="-5" max="5" value="1" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>Směrový vektor: a = <span id="aValue">3</span></label>
+                                    <input type="range" id="aSlider" min="-5" max="5" value="3" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>Směrový vektor: b = <span id="bValue">2</span></label>
+                                    <input type="range" id="bSlider" min="-5" max="5" value="2" step="0.5">
+                                </div>
+                                <div class="equation-display">
+                                    <strong>Parametrické rovnice:</strong>
+                                    <div id="parametricEquation" class="live-equation">
+                                        x = 2 + t·3<br>
+                                        y = 1 + t·2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="general">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: General -->
+                <section id="general" class="lesson-section">
+                    <div class="section-badge">Obecná rovnice</div>
+                    <h1>Obecná rovnice přímky</h1>
+
+                    <p>
+                        Obecná rovnice přímky je algebraický zápis, který využívá
+                        <strong>normálový vektor</strong> – vektor kolmý na přímku.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            <strong>Obecná rovnice přímky</strong> má tvar:
+                        </p>
+                        <div class="equation-large">ax + by + c = 0</div>
+                        <p>kde <span class="vec">n</span> = (a, b) je normálový vektor přímky (vektor kolmý na přímku).
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Důležité</h4>
+                            <p>
+                                Normálový vektor <span class="vec">n</span> = (a, b) je <strong>kolmý</strong> ke
+                                směrovému vektoru <span class="vec">s</span>.
+                                Pokud <span class="vec">s</span> = (s₁, s₂), pak <span class="vec">n</span> = (s₂, -s₁)
+                                nebo <span class="vec">n</span> = (-s₂, s₁).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive General Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Měňte koeficienty a, b, c a sledujte změnu přímky:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="generalCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>a = <span id="gAValue">2</span></label>
+                                    <input type="range" id="gASlider" min="-5" max="5" value="2" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>b = <span id="gBValue">3</span></label>
+                                    <input type="range" id="gBSlider" min="-5" max="5" value="3" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>c = <span id="gCValue">-6</span></label>
+                                    <input type="range" id="gCSlider" min="-10" max="10" value="-6" step="0.5">
+                                </div>
+                                <div class="equation-display">
+                                    <strong>Obecná rovnice:</strong>
+                                    <div id="generalEquation" class="live-equation">
+                                        2x + 3y - 6 = 0
+                                    </div>
+                                    <div class="equation-info">
+                                        <span>Normálový vektor: <span class="vec">n</span> = (<span id="normalVector">2,
+                                                3</span>)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="parametric">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="slope">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Slope-Intercept -->
+                <section id="slope" class="lesson-section">
+                    <div class="section-badge">Směrnicový tvar</div>
+                    <h1>Směrnicový tvar přímky</h1>
+
+                    <p>
+                        Směrnicový tvar je nejintuitivnější způsob zápisu přímky.
+                        Přímo ukazuje <strong>sklon</strong> přímky a kde protíná osu y.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            <strong>Směrnicový tvar přímky</strong> je:
+                        </p>
+                        <div class="equation-large">y = kx + q</div>
+                        <p>
+                            kde <strong>k</strong> je směrnice (sklon přímky) a
+                            <strong>q</strong> je úsek na ose y (y-intercept).
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Co je směrnice k?</h4>
+                            <ul>
+                                <li>k > 0: přímka stoupá</li>
+                                <li>k < 0: přímka klesá</li>
+                                <li>k = 0: vodorovná přímka</li>
+                                <li>k = 1: úhel 45°</li>
+                                <li>k = tan(α), kde α je úhel s osou x</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Co je q?</h4>
+                            <ul>
+                                <li>Bod [0, q] leží na přímce</li>
+                                <li>Je to průsečík s osou y</li>
+                                <li>q > 0: nad počátkem</li>
+                                <li>q < 0: pod počátkem</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Slope Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Experimentujte se směrnicí k a úsekem q:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="slopeCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Směrnice k = <span id="kValue">1</span></label>
+                                    <input type="range" id="kSlider" min="-5" max="5" value="1" step="0.25">
+                                </div>
+                                <div class="control-group">
+                                    <label>Úsek q = <span id="qValue">2</span></label>
+                                    <input type="range" id="qSlider" min="-5" max="5" value="2" step="0.5">
+                                </div>
+                                <div class="equation-display">
+                                    <strong>Směrnicový tvar:</strong>
+                                    <div id="slopeEquation" class="live-equation">
+                                        y = 1x + 2
+                                    </div>
+                                    <div class="equation-info">
+                                        <span>Úhel s osou x: <span id="angleValue">45°</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="general">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="interactive">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Interactive Playground -->
+                <section id="interactive" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p>
+                        Tady si můžete libovolně hrát s přímkami! Přetahujte body,
+                        měňte parametry a sledujte, jak se mění všechny tři tvary rovnic současně.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="700" height="500"></canvas>
+                            <div class="canvas-instructions">
+                                <span>🖱️ Táhněte body A a B pro změnu přímky</span>
+                            </div>
+                        </div>
+
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>📍 Souřadnice bodů</h4>
+                                <div class="point-coords">
+                                    <div class="point-coord">
+                                        <span class="point-label point-a">A</span>
+                                        <span id="pointACoords">[2, 1]</span>
+                                    </div>
+                                    <div class="point-coord">
+                                        <span class="point-label point-b">B</span>
+                                        <span id="pointBCoords">[5, 4]</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>📐 Všechny tvary rovnic</h4>
+
+                                <div class="equation-form">
+                                    <div class="form-label">Parametrické:</div>
+                                    <div id="playParamEq" class="form-equation">
+                                        x = 2 + t·3<br>y = 1 + t·3
+                                    </div>
+                                </div>
+
+                                <div class="equation-form">
+                                    <div class="form-label">Obecná:</div>
+                                    <div id="playGeneralEq" class="form-equation">
+                                        3x - 3y - 3 = 0
+                                    </div>
+                                </div>
+
+                                <div class="equation-form">
+                                    <div class="form-label">Směrnicová:</div>
+                                    <div id="playSlopeEq" class="form-equation">
+                                        y = 1x - 1
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>📊 Vlastnosti přímky</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>Směrnice:</span>
+                                        <span id="propSlope">k = 1</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Úhel s osou x:</span>
+                                        <span id="propAngle">45°</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Směrový vektor:</span>
+                                        <span id="propDirection"><span class="vec">s</span> = (3, 3)</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Normálový vektor:</span>
+                                        <span id="propNormal"><span class="vec">n</span> = (3, -3)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-actions">
+                                <button id="resetPlayground" class="btn-outline">🔄 Reset</button>
+                                <button id="randomLine" class="btn-outline">🎲 Náhodná přímka</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="slope">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <p>Otestujte si své znalosti pomocí interaktivních úloh.</p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Přímka prochází bodem A = [1, 2] a má směrový vektor <span class="vec">s</span> =
+                                    (2, 3).
+                                    Jaké je její parametrické vyjádření?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>x = 1 + t·2, y = 2 + t·3</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>x = 2 + t·1, y = 3 + t·2</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>x = 1 + t·3, y = 2 + t·2</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaký je normálový vektor přímky s obecnou rovnicí 3x - 2y + 5 = 0?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span><span class="vec">n</span> = (3, 2)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span><span class="vec">n</span> = (3, -2)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span><span class="vec">n</span> = (-2, 3)</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Přímka má směrnicový tvar y = -2x + 4. Který bod leží na této přímce?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>[1, 2]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>[2, 1]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>[1, 3]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Gratulujeme!</h2>
+                        <p>Úspěšně jste dokončili lekci o přímce v rovině.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="interactive">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

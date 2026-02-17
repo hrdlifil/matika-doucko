@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vzorce pro goniometrické funkce – součtové, dvojnásobné, poloviční a další vzorce s interaktivními vizualizacemi.">
+    <title>Vzorce pro goniometrické funkce – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 4</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson layout -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 4</h3>
+                    <p>Vzorce pro goniometrické funkce</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#sum-diff" class="sidebar-link active" data-section="sum-diff">
+                        <span class="sidebar-icon">1</span>
+                        Součtové vzorce
+                    </a>
+                    <a href="#double-angle" class="sidebar-link" data-section="double-angle">
+                        <span class="sidebar-icon">2</span>
+                        Dvojnásobný úhel
+                    </a>
+                    <a href="#half-angle" class="sidebar-link" data-section="half-angle">
+                        <span class="sidebar-icon">3</span>
+                        Poloviční úhel
+                    </a>
+                    <a href="#sum-product" class="sidebar-link" data-section="sum-product">
+                        <span class="sidebar-icon">4</span>
+                        Součet ↔ součin
+                    </a>
+                    <a href="#graphs" class="sidebar-link" data-section="graphs">
+                        <span class="sidebar-icon">5</span>
+                        Grafy s využitím vzorců
+                    </a>
+                    <a href="#overview" class="sidebar-link" data-section="overview">
+                        <span class="sidebar-icon">6</span>
+                        Přehled vzorců
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">🎮</span>
+                        Hřiště
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main lesson content -->
+            <div class="lesson-content">
+
+                <!-- ============================================================ -->
+                <!-- SECTION 1: Součtové vzorce (Sum/Difference Formulas) -->
+                <!-- ============================================================ -->
+                <section id="sum-diff" class="lesson-section active">
+                    <span class="section-badge">Kapitola 4 · Část 1</span>
+                    <h1>Součtové vzorce</h1>
+                    <p class="lead">
+                        Součtové vzorce nám umožňují vyjádřit goniometrické funkce součtu nebo rozdílu dvou úhlů
+                        pomocí funkcí jednotlivých úhlů. Jsou základním nástrojem pro odvození mnoha dalších vzorců.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Součtové vzorce pro sinus a kosinus</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin(α + β)</span>
+                                <span class="formula-eq">= sin α · cos β + cos α · sin β</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sin(α − β)</span>
+                                <span class="formula-eq">= sin α · cos β − cos α · sin β</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos(α + β)</span>
+                                <span class="formula-eq">= cos α · cos β − sin α · sin β</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos(α − β)</span>
+                                <span class="formula-eq">= cos α · cos β + sin α · sin β</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Součtové vzorce pro tangens</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">tg(α + β)</span>
+                                <span class="formula-eq">= (tg α + tg β) / (1 − tg α · tg β)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tg(α − β)</span>
+                                <span class="formula-eq">= (tg α − tg β) / (1 + tg α · tg β)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní vizualizace součtových vzorců</h3>
+                        <p>Nastavte úhly α a β a sledujte, jak se počítá sin(α + β) a cos(α + β) na jednotkové kružnici.
+                        </p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="sumDiffCanvas" width="750" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>α = <strong id="sumAlphaVal">45</strong>°</label>
+                                    <input type="range" id="sumAlphaSlider" min="0" max="360" value="45" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>β = <strong id="sumBetaVal">30</strong>°</label>
+                                    <input type="range" id="sumBetaSlider" min="0" max="360" value="30" step="1">
+                                </div>
+                                <div class="calc-divider"></div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span class="calc-value" id="sumSinA" style="color:#f87171">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span class="calc-value" id="sumCosA" style="color:#60a5fa">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>sin β</span>
+                                        <span class="calc-value" id="sumSinB" style="color:#f87171">0.500</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos β</span>
+                                        <span class="calc-value" id="sumCosB" style="color:#60a5fa">0.866</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>sin(α+β)</strong></span>
+                                        <span class="calc-value highlight" id="sumSinAB">0.966</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span><strong>cos(α+β)</strong></span>
+                                        <span class="calc-value highlight" id="sumCosAB">0.259</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span><strong>sin(α−β)</strong></span>
+                                        <span class="calc-value" id="sumSinAB2" style="color:#a78bfa">0.259</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span><strong>cos(α−β)</strong></span>
+                                        <span class="calc-value" id="sumCosAB2" style="color:#a78bfa">0.966</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Jak si zapamatovat znaménka?</h4>
+                            <p>U <strong>sinus</strong> — znaménko uprostřed vzorce je <em>stejné</em> jako u argumentu
+                                (+ nebo −).<br>
+                                U <strong>kosinus</strong> — znaménko uprostřed je <em>opačné</em> (+ se změní na − a
+                                naopak).</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#double-angle" class="btn btn-primary sidebar-link"
+                            data-section="double-angle">Dvojnásobný úhel →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 2: Dvojnásobný úhel (Double Angle) -->
+                <!-- ============================================================ -->
+                <section id="double-angle" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Část 2</span>
+                    <h1>Vzorce pro dvojnásobný úhel</h1>
+                    <p class="lead">
+                        Vzorce pro dvojnásobný úhel jsou speciálním případem součtových vzorců, kdy α = β.
+                        Dosazením do součtových vzorců dostaneme elegantní vztahy.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Vzorce pro dvojnásobný úhel</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin 2α</span>
+                                <span class="formula-eq">= 2 · sin α · cos α</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos 2α</span>
+                                <span class="formula-eq">= cos²α − sin²α</span>
+                                <span class="formula-note">= 2cos²α − 1 = 1 − 2sin²α</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tg 2α</span>
+                                <span class="formula-eq">= 2 tg α / (1 − tg²α)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Odvození z součtových vzorců</h4>
+                            <p>sin(α + α) = sin α · cos α + cos α · sin α = <strong>2 sin α cos α</strong><br>
+                                cos(α + α) = cos α · cos α − sin α · sin α = <strong>cos²α − sin²α</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Vizualizace dvojnásobného úhlu</h3>
+                        <p>Pohybem posuvníku měňte úhel α a sledujte vztah mezi α a 2α na jednotkové kružnici i na
+                            grafech.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="doubleAngleCanvas" width="750" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>α = <strong id="dblAlphaVal">30</strong>°</label>
+                                    <input type="range" id="dblAlphaSlider" min="0" max="360" value="30" step="1">
+                                </div>
+                                <div class="calc-divider"></div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span class="calc-value" id="dblSinA" style="color:#f87171">0.500</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span class="calc-value" id="dblCosA" style="color:#60a5fa">0.866</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>sin 2α</strong></span>
+                                        <span class="calc-value" id="dblSin2A" style="color:#fb923c">0.866</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>2·sin α·cos α</span>
+                                        <span class="calc-value" id="dblSin2Acheck" style="color:#fb923c">0.866</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>cos 2α</strong></span>
+                                        <span class="calc-value" id="dblCos2A" style="color:#34d399">0.500</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos²α − sin²α</span>
+                                        <span class="calc-value" id="dblCos2Acheck" style="color:#34d399">0.500</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>tg 2α</strong></span>
+                                        <span class="calc-value" id="dblTg2A" style="color:#818cf8">1.732</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#sum-diff" class="btn btn-ghost sidebar-link" data-section="sum-diff">← Součtové
+                            vzorce</a>
+                        <a href="#half-angle" class="btn btn-primary sidebar-link" data-section="half-angle">Poloviční
+                            úhel →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 3: Poloviční úhel (Half Angle) -->
+                <!-- ============================================================ -->
+                <section id="half-angle" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Část 3</span>
+                    <h1>Vzorce pro poloviční úhel</h1>
+                    <p class="lead">
+                        Vzorce pro poloviční úhel vychází ze vzorců pro dvojnásobný úhel. Umožňují nám vyjádřit
+                        goniometrické funkce poloviny daného úhlu.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Vzorce pro poloviční úhel</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin(α/2)</span>
+                                <span class="formula-eq">= ±√((1 − cos α) / 2)</span>
+                                <span class="formula-note">Znaménko záleží na kvadrantu α/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos(α/2)</span>
+                                <span class="formula-eq">= ±√((1 + cos α) / 2)</span>
+                                <span class="formula-note">Znaménko záleží na kvadrantu α/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tg(α/2)</span>
+                                <span class="formula-eq">= sin α / (1 + cos α)</span>
+                                <span class="formula-note">= (1 − cos α) / sin α</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Odvození z cos 2α</h4>
+                            <p>Z cos 2α = 1 − 2sin²α → sin²α = (1 − cos 2α)/2<br>
+                                Nahradíme α → α/2, 2α → α: <strong>sin²(α/2) = (1 − cos α)/2</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Vizualizace polovičního úhlu</h3>
+                        <p>Nastavte úhel α a sledujte hodnoty pro α/2. Na kružnici je zvýrazněn jak α, tak α/2.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="halfAngleCanvas" width="750" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>α = <strong id="halfAlphaVal">60</strong>°</label>
+                                    <input type="range" id="halfAlphaSlider" min="0" max="360" value="60" step="1">
+                                </div>
+                                <div class="calc-divider"></div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>α/2 =</span>
+                                        <span class="calc-value" id="halfHalfVal">30°</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span class="calc-value" id="halfSinA" style="color:#f87171">0.866</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span class="calc-value" id="halfCosA" style="color:#60a5fa">0.500</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>sin(α/2)</strong></span>
+                                        <span class="calc-value" id="halfSinH" style="color:#fb923c">0.500</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>√((1−cos α)/2)</span>
+                                        <span class="calc-value" id="halfSinHcheck" style="color:#fb923c">0.500</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span><strong>cos(α/2)</strong></span>
+                                        <span class="calc-value" id="halfCosH" style="color:#34d399">0.866</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>√((1+cos α)/2)</span>
+                                        <span class="calc-value" id="halfCosHcheck" style="color:#34d399">0.866</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#double-angle" class="btn btn-ghost sidebar-link" data-section="double-angle">←
+                            Dvojnásobný úhel</a>
+                        <a href="#sum-product" class="btn btn-primary sidebar-link" data-section="sum-product">Součet ↔
+                            součin →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 4: Součet/rozdíl ↔ součin (Sum-to-product) -->
+                <!-- ============================================================ -->
+                <section id="sum-product" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Část 4</span>
+                    <h1>Součet a rozdíl ↔ součin</h1>
+                    <p class="lead">
+                        Tyto vzorce umožňují převést součet nebo rozdíl goniometrických funkcí na součin a naopak.
+                        Jsou nezbytné při řešení goniometrických rovnic a úpravách výrazů.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Vzorce součet → součin</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin α + sin β</span>
+                                <span class="formula-eq">= 2·sin((α+β)/2)·cos((α−β)/2)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sin α − sin β</span>
+                                <span class="formula-eq">= 2·cos((α+β)/2)·sin((α−β)/2)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos α + cos β</span>
+                                <span class="formula-eq">= 2·cos((α+β)/2)·cos((α−β)/2)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos α − cos β</span>
+                                <span class="formula-eq">= −2·sin((α+β)/2)·sin((α−β)/2)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Vzorce součin → součet</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin α · cos β</span>
+                                <span class="formula-eq">= ½[sin(α+β) + sin(α−β)]</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos α · cos β</span>
+                                <span class="formula-eq">= ½[cos(α−β) + cos(α+β)]</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sin α · sin β</span>
+                                <span class="formula-eq">= ½[cos(α−β) − cos(α+β)]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní transformátor vzorců</h3>
+                        <p>Zvolte úhly α a β a vzorec. Uvidíte krok za krokem, jak se výraz transformuje.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="sumProdCanvas" width="750" height="350"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>α = <strong id="spAlphaVal">60</strong>°</label>
+                                    <input type="range" id="spAlphaSlider" min="0" max="360" value="60" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>β = <strong id="spBetaVal">30</strong>°</label>
+                                    <input type="range" id="spBetaSlider" min="0" max="360" value="30" step="1">
+                                </div>
+                                <div class="calc-divider"></div>
+                                <div class="control-group">
+                                    <label>Vzorec:</label>
+                                    <div class="preset-buttons">
+                                        <button class="preset-btn active" data-sp-formula="sinsum">sin α + sin
+                                            β</button>
+                                        <button class="preset-btn" data-sp-formula="sindiff">sin α − sin β</button>
+                                        <button class="preset-btn" data-sp-formula="cossum">cos α + cos β</button>
+                                        <button class="preset-btn" data-sp-formula="cosdiff">cos α − cos β</button>
+                                    </div>
+                                </div>
+                                <div class="calc-divider"></div>
+                                <div id="spOutput" class="calc-display">
+                                    <!-- Filled by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#half-angle" class="btn btn-ghost sidebar-link" data-section="half-angle">← Poloviční
+                            úhel</a>
+                        <a href="#graphs" class="btn btn-primary sidebar-link" data-section="graphs">Grafy s využitím
+                            vzorců →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 5: Grafy s využitím vzorců -->
+                <!-- ============================================================ -->
+                <section id="graphs" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Část 5</span>
+                    <h1>Grafy s využitím vzorců</h1>
+                    <p class="lead">
+                        Goniometrické vzorce nám umožňují zjednodušit složité výrazy a nakreslit jejich grafy.
+                        Porovnejte původní výraz s jeho zjednodušenou formou — oba grafy se zcela překrývají!
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Porovnání grafů: původní vs. zjednodušený výraz</h3>
+                        <p>Vyberte přednastavený vzorec. Modrá křivka = původní výraz, oranžová (čárkovaná) =
+                            zjednodušená forma. Obě se překrývají!</p>
+                        <div class="demo-container-full">
+                            <div class="controls-row">
+                                <div class="control-group">
+                                    <label>Vyberte vzorec:</label>
+                                    <div class="preset-buttons">
+                                        <button class="preset-btn active" data-graph-preset="sin2x">sin 2x = 2sin x cos
+                                            x</button>
+                                        <button class="preset-btn" data-graph-preset="cos2x">cos 2x = cos²x −
+                                            sin²x</button>
+                                        <button class="preset-btn" data-graph-preset="sincos">sin²x + cos²x = 1</button>
+                                        <button class="preset-btn" data-graph-preset="sumsin">sin x + sin 3x</button>
+                                        <button class="preset-btn" data-graph-preset="power">cos²x = (1+cos
+                                            2x)/2</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-canvas-wrapper" style="margin-top:1rem">
+                                <canvas id="graphCompareCanvas" width="750" height="350"></canvas>
+                            </div>
+                            <div id="graphCompareInfo" class="transform-panel" style="margin-top:1rem">
+                                <!-- Filled by JS -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🧠</span>
+                        <div class="info-card-content">
+                            <h4>Proč je to užitečné?</h4>
+                            <p>Při kreslení grafu funkce jako sin²x + cos²x můžeme nejdříve vzorcem
+                                zjistit, že výsledek je konstantní funkce y = 1. To je mnohem snazší nakreslit!</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#sum-product" class="btn btn-ghost sidebar-link" data-section="sum-product">← Součet ↔
+                            součin</a>
+                        <a href="#overview" class="btn btn-primary sidebar-link" data-section="overview">Přehled vzorců
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 6: Přehled vzorců (Overview + Flashcards + Quiz) -->
+                <!-- ============================================================ -->
+                <section id="overview" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Část 6</span>
+                    <h1>Přehled vzorců</h1>
+                    <p class="lead">
+                        Kompletní přehled všech goniometrických vzorců na jednom místě. Klikněte na kartičku pro
+                        zobrazení pravé strany vzorce.
+                    </p>
+
+                    <h2>🃏 Kartičky pro zapamatování</h2>
+                    <div class="flashcard-grid" id="formulaFlashcardGrid">
+                        <!-- Filled by JS -->
+                    </div>
+                    <button class="btn btn-ghost" id="resetFormulaCards">🔄 Zamíchat kartičky</button>
+
+                    <h2 style="margin-top:2.5rem">📝 Kvíz</h2>
+                    <div class="quiz-area">
+                        <p class="quiz-question" id="formulaQuizQ">Načítání...</p>
+                        <div class="quiz-options" id="formulaQuizOpts"></div>
+                        <p class="quiz-score" id="formulaQuizScore">Skóre: 0/0</p>
+                        <button class="btn btn-primary" style="margin-top:1rem" id="formulaQuizNext">Další
+                            otázka</button>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#graphs" class="btn btn-ghost sidebar-link" data-section="graphs">← Grafy</a>
+                        <a href="#playground" class="btn btn-primary sidebar-link" data-section="playground">Hřiště
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 7: Hřiště (Playground) -->
+                <!-- ============================================================ -->
+                <section id="playground" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Hřiště</span>
+                    <h1>🎮 Hřiště</h1>
+                    <p class="lead">
+                        Volné experimentování se všemi vzorci. Nastavte dva úhly a zkontrolujte platnost libovolného
+                        vzorce vizuálně na grafech.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní graf + jednotková kružnice</h3>
+                        <div class="demo-container-full">
+                            <div class="controls-row">
+                                <div class="control-group">
+                                    <label>α = <strong id="pgAlphaVal">45</strong>°</label>
+                                    <input type="range" id="pgAlphaSlider" min="0" max="360" value="45" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>β = <strong id="pgBetaVal">30</strong>°</label>
+                                    <input type="range" id="pgBetaSlider" min="0" max="360" value="30" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>Zobrazit:</label>
+                                    <div class="property-toggles" style="margin:0">
+                                        <label class="property-toggle"><input type="checkbox" id="pgShowSinSum" checked>
+                                            sin(α+β)</label>
+                                        <label class="property-toggle"><input type="checkbox" id="pgShowCosSum">
+                                            cos(α+β)</label>
+                                        <label class="property-toggle"><input type="checkbox" id="pgShowSin2"> sin
+                                            2α</label>
+                                        <label class="property-toggle"><input type="checkbox" id="pgShowCos2"> cos
+                                            2α</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-canvas-wrapper" style="margin-top:1rem">
+                                <canvas id="playgroundCanvas" width="750" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#overview" class="btn btn-ghost sidebar-link" data-section="overview">← Přehled
+                            vzorců</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 8: Procvičování (Exercises) -->
+                <!-- ============================================================ -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Kapitola 4 · Procvičování</span>
+                    <h1>✏️ Procvičování</h1>
+                    <p class="lead">Ověřte si znalost goniometrických vzorců na těchto úlohách.</p>
+
+                    <div class="exercises-list">
+                        <!-- Příklad 1 -->
+                        <div class="exercise" id="ex1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 1</span>
+                                <span class="exercise-status" id="ex1Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Vyjádřete <strong>sin(α + β)</strong> pomocí sin α, cos α, sin β, cos β:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> sin α · sin β + cos
+                                        α · cos β</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> sin α · cos β + cos
+                                        α · sin β</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> sin α · cos β − cos
+                                        α · sin β</label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"> cos α · cos β − sin
+                                        α · sin β</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex1','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 2 -->
+                        <div class="exercise" id="ex2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 2</span>
+                                <span class="exercise-status" id="ex2Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaký je vzorec pro <strong>cos 2α</strong>?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> 2 · cos α · sin
+                                        α</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> cos²α +
+                                        sin²α</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> cos²α −
+                                        sin²α</label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"> 2 · cos²α +
+                                        1</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex2','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 3 -->
+                        <div class="exercise" id="ex3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 3</span>
+                                <span class="exercise-status" id="ex3Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Zjednodušte: <strong>2 sin 15° · cos 15°</strong></p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> sin 30° =
+                                        1/2</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> cos 30° =
+                                        √3/2</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> sin 15° =
+                                        √6/4</label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"> 2 sin 15°</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex3','a')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 4 -->
+                        <div class="exercise" id="ex4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 4</span>
+                                <span class="exercise-status" id="ex4Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Výraz <strong>sin 50° + sin 10°</strong> lze přepsat jako:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> 2·sin 30°·cos 20° =
+                                        cos 20°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> 2·cos 30°·sin 20° =
+                                        √3·sin 20°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> sin 60°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"> 2·sin 60°·cos
+                                        10°</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex4','a')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 5 -->
+                        <div class="exercise" id="ex5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 5</span>
+                                <span class="exercise-status" id="ex5Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaký vzorec platí pro <strong>sin(α/2)</strong>?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> ½ · sin α</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> ±√((1 − cos α) /
+                                        2)</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> sin α / 2</label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"> ±√((1 + cos α) /
+                                        2)</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex5','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 6 -->
+                        <div class="exercise" id="ex6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 6</span>
+                                <span class="exercise-status" id="ex6Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Zjednodušte: <strong>cos²x − sin²x</strong></p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> 1</label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> sin 2x</label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> cos 2x</label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"> 2 cos x</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex6','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete">
+                        <h3>🎉 Gratulujeme!</h3>
+                        <p>Úspěšně jste dokončili lekci o goniometrických vzorcích!</p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#playground" class="btn btn-ghost sidebar-link" data-section="playground">← Hřiště</a>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

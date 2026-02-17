@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Tangens a kotangens jako funkce, grafy, vlastnosti a tabulka hodnot – interaktivní lekce">
+    <title>Tangens a kotangens jako funkce – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 3</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 3</h3>
+                    <p>Tangens a kotangens</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Tangens a kotangens
+                    </a>
+                    <a href="#graphs" class="sidebar-link" data-section="graphs">
+                        <span class="sidebar-icon">2</span>
+                        Graf tg a cotg
+                    </a>
+                    <a href="#properties" class="sidebar-link" data-section="properties">
+                        <span class="sidebar-icon">3</span>
+                        Vlastnosti funkcí
+                    </a>
+                    <a href="#values" class="sidebar-link" data-section="values">
+                        <span class="sidebar-icon">4</span>
+                        Tabulka hodnot
+                    </a>
+                    <a href="#derivation" class="sidebar-link" data-section="derivation">
+                        <span class="sidebar-icon">5</span>
+                        Odvození hodnot
+                    </a>
+                    <a href="#tancot-derivation" class="sidebar-link" data-section="tancot-derivation">
+                        <span class="sidebar-icon">6</span>
+                        Odvození tg a cotg
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">🎮</span>
+                        Hřiště
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main lesson content -->
+            <div class="lesson-content">
+
+                <!-- ============================================================ -->
+                <!-- SECTION 1: Tangens a kotangens jako funkce -->
+                <!-- ============================================================ -->
+                <section id="intro" class="lesson-section active">
+                    <span class="section-badge">Sekce 1</span>
+                    <h1>Tangens a kotangens jako funkce</h1>
+                    <p class="lead">
+                        Už víme, co je sinus a kosinus. Teď přidáme další dvě goniometrické funkce —
+                        <strong>tangens</strong> a <strong>kotangens</strong>. Jsou definovány jako podíly
+                        sinu a kosinu a mají unikátní vlastnosti — zejména <strong>nemají obor hodnot
+                            omezený na [−1, 1]</strong>.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Definice</h4>
+                        <p>Funkce <strong>tangens</strong> a <strong>kotangens</strong> jsou definovány:</p>
+                        <ul>
+                            <li><strong>tg x = sin x / cos x</strong> — definováno pro všechna x, kde cos x ≠ 0</li>
+                            <li><strong>cotg x = cos x / sin x</strong> — definováno pro všechna x, kde sin x ≠ 0</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">
+                            <strong>Definiční obor tg:</strong> D(tg) = ℝ ∖ {π/2 + kπ, k ∈ ℤ}<br>
+                            <strong>Definiční obor cotg:</strong> D(cotg) = ℝ ∖ {kπ, k ∈ ℤ}<br>
+                            <strong>Obor hodnot:</strong> H(tg) = H(cotg) = ℝ (celá reálná osa!)
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Geometrický význam tangentu</h4>
+                            <p>Na jednotkové kružnici je tangens úhlu x roven délce úsečky od průsečíku
+                                přímky (procházející počátkem pod úhlem x) s tečnou kružnice v bodě (1, 0).
+                                Proto se jmenuje „tangens" — z latinského <em>tangere</em> = dotýkat se.</p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Demo: Unit circle → tan/cot tracer -->
+                    <div class="interactive-demo">
+                        <h3>🔄 Tangens na jednotkové kružnici</h3>
+                        <p>Táhněte posuvníkem a sledujte, jak se mění tangens a kotangens úhlu.
+                            Tangens je znázorněn na svislé tečně (oranžově), kotangens na vodorovné tečně (zeleně).</p>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="tracerCanvas" width="750" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Úhel x: <span id="tracerAngleVal">45</span>° = <span
+                                        id="tracerRadVal">0.79</span>
+                                    rad</label>
+                                <input type="range" id="tracerSlider" min="1" max="359" value="45" step="1">
+                            </div>
+                            <div class="control-group" style="min-width: auto;">
+                                <label>Hodnoty:</label>
+                                <div class="calc-display" style="padding: 0.5rem 0.75rem;">
+                                    <div class="calc-step">
+                                        <span>tg x =</span>
+                                        <span class="calc-value" id="tracerTanVal" style="color: #fb923c;">1.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cotg x =</span>
+                                        <span class="calc-value" id="tracerCotVal" style="color: #34d399;">1.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>sin x =</span>
+                                        <span class="calc-value" id="tracerSinVal" style="color: #f87171;">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos x =</span>
+                                        <span class="calc-value" id="tracerCosVal" style="color: #60a5fa;">0.707</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Klíčové vlastnosti</h3>
+                    <div class="formula-grid">
+                        <div class="formula-card">
+                            <span class="formula-name">Perioda</span>
+                            <span class="formula-eq">tg(x + π) = tg x</span>
+                            <span class="formula-note">Perioda je π (ne 2π!)</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Parita</span>
+                            <span class="formula-eq">tg(−x) = −tg x</span>
+                            <span class="formula-note">Obě funkce jsou liché</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Vzájemný vztah</span>
+                            <span class="formula-eq">tg x · cotg x = 1</span>
+                            <span class="formula-note">Jsou navzájem převrácené</span>
+                        </div>
+                        <div class="formula-card">
+                            <span class="formula-name">Asymptoty tg</span>
+                            <span class="formula-eq">x = π/2 + kπ</span>
+                            <span class="formula-note">Tam je cos x = 0</span>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#graphs" class="btn btn-primary sidebar-link" data-section="graphs">Graf tg a cotg
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 2: Graf funkce tangens a kotangens -->
+                <!-- ============================================================ -->
+                <section id="graphs" class="lesson-section">
+                    <span class="section-badge">Sekce 2</span>
+                    <h1>Graf funkce tangens a kotangens</h1>
+                    <p class="lead">
+                        Grafy tangentu a kotangentu vypadají úplně jinak než sinusovka a kosinusovka.
+                        Mají <strong>svislé asymptoty</strong> — body, kde funkce „utíká" do nekonečna.
+                        Perioda je pouze <strong>π</strong> (namísto 2π).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>📊 Tangentovka a kotangentovka</h4>
+                        <ul>
+                            <li><strong>tg x</strong> roste na každém intervalu (kπ − π/2, kπ + π/2) od −∞ do +∞</li>
+                            <li><strong>cotg x</strong> klesá na každém intervalu (kπ, (k+1)π) od +∞ do −∞</li>
+                            <li><strong>Nulové body tg x:</strong> x = kπ (k ∈ ℤ)</li>
+                            <li><strong>Nulové body cotg x:</strong> x = π/2 + kπ (k ∈ ℤ)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive Demo: Full tan/cot graphs -->
+                    <div class="interactive-demo">
+                        <h3>📈 Interaktivní graf</h3>
+                        <p>Prozkoumejte grafy tangentu a kotangentu. Posuvníkem vyberte bod na grafu a sledujte jeho
+                            hodnotu.</p>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="graphCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Bod x: <span id="graphXVal">0</span></label>
+                                <input type="range" id="graphSlider" min="-314" max="314" value="0" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>Zobrazit:</label>
+                                <div style="display:flex;gap:0.75rem;margin-top:0.25rem;">
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="graphShowTan" checked> tg x
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="graphShowCot"> cotg x
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="control-group" style="min-width: auto;">
+                                <label>Hodnoty:</label>
+                                <div class="calc-display" style="padding: 0.5rem 0.75rem;">
+                                    <div class="calc-step">
+                                        <span>tg x =</span>
+                                        <span class="calc-value" id="graphTanVal" style="color: #fb923c;">0.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cotg x =</span>
+                                        <span class="calc-value" id="graphCotVal" style="color: #34d399;">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🔍</div>
+                        <div class="info-card-content">
+                            <h4>Proč tangens „utíká" do nekonečna?</h4>
+                            <p>Protože tg x = sin x / cos x. Když se cos x blíží k nule (u π/2),
+                                dělíme číslem blízkým nule — výsledek rapidně roste. V bodě π/2 je cos x = 0,
+                                takže tangens není definován a graf má svislou asymptotu.</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#intro" class="btn btn-ghost sidebar-link" data-section="intro">← Úvod</a>
+                        <a href="#properties" class="btn btn-primary sidebar-link" data-section="properties">Vlastnosti
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 3: Vlastnosti funkcí tangens a kotangens -->
+                <!-- ============================================================ -->
+                <section id="properties" class="lesson-section">
+                    <span class="section-badge">Sekce 3</span>
+                    <h1>Vlastnosti funkcí tangens a kotangens</h1>
+                    <p class="lead">
+                        Tangens a kotangens mají řadu důležitých vlastností. Zapněte si jednotlivé
+                        vlastnosti v interaktivním grafu a prozkoumejte je vizuálně.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🔬 Průzkumník vlastností</h3>
+                        <p>Zaškrtněte vlastnosti, které chcete na grafu zvýraznit:</p>
+                        <div class="property-toggles">
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propAsymptotes" checked> Asymptoty
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propZeros"> Nulové body
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propPeriod"> Perioda
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propMonotone"> Monotónnost
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propParity"> Parita (symetrie)
+                            </label>
+                        </div>
+                        <div style="display:flex;gap:0.75rem;margin-bottom:0.5rem;">
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propFuncTan" checked> tg x
+                            </label>
+                            <label class="property-toggle">
+                                <input type="checkbox" id="propFuncCot"> cotg x
+                            </label>
+                        </div>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="propsCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary table -->
+                    <h3>📋 Přehledová tabulka</h3>
+                    <div class="values-table-wrapper">
+                        <table class="values-table">
+                            <thead>
+                                <tr>
+                                    <th>Vlastnost</th>
+                                    <th>tg x</th>
+                                    <th>cotg x</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Definiční obor</td>
+                                    <td>ℝ ∖ {π/2 + kπ}</td>
+                                    <td>ℝ ∖ {kπ}</td>
+                                </tr>
+                                <tr>
+                                    <td>Obor hodnot</td>
+                                    <td>ℝ</td>
+                                    <td>ℝ</td>
+                                </tr>
+                                <tr>
+                                    <td>Perioda</td>
+                                    <td>π</td>
+                                    <td>π</td>
+                                </tr>
+                                <tr>
+                                    <td>Parita</td>
+                                    <td>Lichá: tg(−x) = −tg x</td>
+                                    <td>Lichá: cotg(−x) = −cotg x</td>
+                                </tr>
+                                <tr>
+                                    <td>Nulové body</td>
+                                    <td>x = kπ</td>
+                                    <td>x = π/2 + kπ</td>
+                                </tr>
+                                <tr>
+                                    <td>Asymptoty</td>
+                                    <td>x = π/2 + kπ</td>
+                                    <td>x = kπ</td>
+                                </tr>
+                                <tr>
+                                    <td>Monotónnost</td>
+                                    <td>Rostoucí na celém def. oboru</td>
+                                    <td>Klesající na celém def. oboru</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#graphs" class="btn btn-ghost sidebar-link" data-section="graphs">← Grafy</a>
+                        <a href="#values" class="btn btn-primary sidebar-link" data-section="values">Tabulka hodnot
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 4: Kompletní tabulka hodnot -->
+                <!-- ============================================================ -->
+                <section id="values" class="lesson-section">
+                    <span class="section-badge">Sekce 4</span>
+                    <h1>Kompletní tabulka hodnot</h1>
+                    <p class="lead">
+                        Tady máte kompletní přehled hodnot všech čtyř goniometrických funkcí
+                        pro základní úhly. Tyto hodnoty byste měli znát nazpaměť!
+                    </p>
+
+                    <h3>📊 Všechny čtyři funkce</h3>
+                    <div class="values-table-wrapper">
+                        <table class="values-table">
+                            <thead>
+                                <tr>
+                                    <th>Funkce</th>
+                                    <th>0° (0)</th>
+                                    <th>30° (π/6)</th>
+                                    <th>45° (π/4)</th>
+                                    <th>60° (π/3)</th>
+                                    <th>90° (π/2)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>sin</strong></td>
+                                    <td>0</td>
+                                    <td>1/2</td>
+                                    <td>√2/2</td>
+                                    <td>√3/2</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>cos</strong></td>
+                                    <td>1</td>
+                                    <td>√3/2</td>
+                                    <td>√2/2</td>
+                                    <td>1/2</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>tg</strong></td>
+                                    <td>0</td>
+                                    <td>√3/3</td>
+                                    <td>1</td>
+                                    <td>√3</td>
+                                    <td class="undefined-val">—</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>cotg</strong></td>
+                                    <td class="undefined-val">—</td>
+                                    <td>√3</td>
+                                    <td>1</td>
+                                    <td>√3/3</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🧠</div>
+                        <div class="info-card-content">
+                            <h4>Trik pro zapamatování tg a cotg</h4>
+                            <p>Stačí si pamatovat sin a cos! Tangens je vždy sin/cos a kotangens je cos/sin.
+                                Navíc si všimněte symetrie: hodnoty cotg jsou hodnoty tg v opačném pořadí.</p>
+                        </div>
+                    </div>
+
+                    <h3 style="margin-top:2rem;">🃏 Kartičky — klikněte pro odkrytí</h3>
+                    <p>Klikněte na kartičku pro zobrazení hodnoty. Zkuste si nejdřív odpovědět sami!</p>
+                    <div class="flashcard-grid" id="flashcardGrid">
+                        <!-- filled by JS -->
+                    </div>
+                    <div style="margin-top:0.75rem;">
+                        <button class="btn btn-ghost" id="resetCards">🔄 Zamíchat a skrýt</button>
+                    </div>
+
+                    <h3 style="margin-top:2rem;">⚡ Kvíz — otestujte se!</h3>
+                    <div class="quiz-area" id="quizArea">
+                        <div class="quiz-question" id="quizQuestion">Klikněte na "Nová otázka"</div>
+                        <div class="quiz-options" id="quizOptions">
+                            <!-- filled by JS -->
+                        </div>
+                        <div class="quiz-score" id="quizScore"></div>
+                        <button class="btn btn-primary" id="quizNext" style="margin-top:1rem;">Nová otázka</button>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#properties" class="btn btn-ghost sidebar-link" data-section="properties">←
+                            Vlastnosti</a>
+                        <a href="#derivation" class="btn btn-primary sidebar-link" data-section="derivation">Odvození
+                            hodnot →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 5: Praktické odvození všech hodnot -->
+                <!-- ============================================================ -->
+                <section id="derivation" class="lesson-section">
+                    <span class="section-badge">Sekce 5</span>
+                    <h1>Praktické odvození všech hodnot</h1>
+                    <p class="lead">
+                        Nemusíte si hodnoty tupě pamatovat — můžete je <strong>odvodit</strong> pomocí
+                        dvou speciálních trojúhelníků. Projděte si krok za krokem, jak na to.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Dva klíčové trojúhelníky</h4>
+                        <ul>
+                            <li><strong>Trojúhelník 45-45-90:</strong> Rovnoramenný pravoúhlý trojúhelník s odvěsnami
+                                délky 1. Přepona = √2. Dává nám hodnoty pro 45°.</li>
+                            <li><strong>Trojúhelník 30-60-90:</strong> Polovina rovnostranného trojúhelníku. Strany
+                                v poměru 1 : √3 : 2. Dává nám hodnoty pro 30° a 60°.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive derivation canvas -->
+                    <div class="interactive-demo">
+                        <h3>📐 Interaktivní odvození</h3>
+                        <p>Vyberte trojúhelník a sledujte, jak se z něj odvozují hodnoty goniometrických funkcí:</p>
+                        <div style="display:flex;gap:0.5rem;margin-bottom:1rem;">
+                            <button class="preset-btn" id="tri4545" data-triangle="45">Trojúhelník 45-45-90</button>
+                            <button class="preset-btn" id="tri3060" data-triangle="30">Trojúhelník 30-60-90</button>
+                        </div>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="derivationCanvas" width="750" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div id="derivationInfo" class="calc-display" style="margin-top:1rem;">
+                            <p style="text-align:center;color:var(--text-tertiary);margin:0;">Vyberte trojúhelník výše
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💪</div>
+                        <div class="info-card-content">
+                            <h4>Proč je odvozování lepší než memorování</h4>
+                            <p>Pod tlakem u zkoušky snadno zapomenete naučenou tabulku. Ale pokud umíte
+                                nakreslit trojúhelník a spočítat podíl stran, hodnoty si odvodíte vždy znovu.
+                                Stačí si pamatovat dva trojúhelníky!</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#values" class="btn btn-ghost sidebar-link" data-section="values">← Tabulka</a>
+                        <a href="#tancot-derivation" class="btn btn-primary sidebar-link"
+                            data-section="tancot-derivation">Odvození tg a cotg →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 6: Odvození hodnot pro tangens a kotangens -->
+                <!-- ============================================================ -->
+                <section id="tancot-derivation" class="lesson-section">
+                    <span class="section-badge">Sekce 6</span>
+                    <h1>Odvození hodnot pro tangens a kotangens</h1>
+                    <p class="lead">
+                        Hodnoty tangentu a kotangentu se snadno spočítají ze sinu a kosinu.
+                        Sledujte animovaný výpočet pro každý standardní úhel.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>🔑 Klíčové vzorce</h4>
+                        <ul>
+                            <li><strong>tg x = sin x / cos x</strong></li>
+                            <li><strong>cotg x = cos x / sin x = 1 / tg x</strong></li>
+                        </ul>
+                        <p style="margin-top:0.75rem;">Stačí tedy znát sin a cos — tangens a kotangens z nich vždy
+                            dopočítáte!</p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧮 Krok za krokem</h3>
+                        <p>Vyberte úhel a sledujte, jak se z sin a cos vypočítá tg a cotg:</p>
+                        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem;">
+                            <button class="preset-btn" data-derive-angle="0">0°</button>
+                            <button class="preset-btn" data-derive-angle="30">30°</button>
+                            <button class="preset-btn" data-derive-angle="45">45°</button>
+                            <button class="preset-btn" data-derive-angle="60">60°</button>
+                            <button class="preset-btn" data-derive-angle="90">90°</button>
+                        </div>
+                        <div id="deriveOutput" class="derivation-steps">
+                            <p style="text-align:center;color:var(--text-tertiary);">Vyberte úhel výše</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Pozor na dělení nulou!</h4>
+                            <p>Pro 0° je sin 0° = 0, tedy cotg 0° = cos 0° / sin 0° = 1/0 — <strong>není
+                                    definován</strong>.
+                                Podobně pro 90° je cos 90° = 0, tedy tg 90° = sin 90° / cos 90° = 1/0 — <strong>není
+                                    definován</strong>.
+                                Tyto body odpovídají asymptotám na grafech.</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#derivation" class="btn btn-ghost sidebar-link" data-section="derivation">←
+                            Odvození</a>
+                        <a href="#playground" class="btn btn-primary sidebar-link" data-section="playground">Hřiště
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 7: Playground -->
+                <!-- ============================================================ -->
+                <section id="playground" class="lesson-section">
+                    <span class="section-badge">🎮 Hřiště</span>
+                    <h1>Hřiště — prozkoumejte vše</h1>
+                    <p class="lead">
+                        Spojení jednotkové kružnice a grafů všech čtyř goniometrických funkcí.
+                        Všechno na jednom místě — experimentujte!
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní hřiště</h3>
+                        <div class="demo-container demo-container-full">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="playgroundCanvas" width="750" height="400"></canvas>
+                            </div>
+                        </div>
+                        <div class="controls-row">
+                            <div class="control-group">
+                                <label>Úhel: <span id="pgAngleVal">45</span>°</label>
+                                <input type="range" id="pgAngleSlider" min="1" max="359" value="45" step="1">
+                            </div>
+                            <div class="control-group">
+                                <label>Zobrazit:</label>
+                                <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.25rem;">
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="pgShowSin" checked> sin
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="pgShowCos" checked> cos
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="pgShowTan" checked> tg
+                                    </label>
+                                    <label class="property-toggle">
+                                        <input type="checkbox" id="pgShowCot"> cotg
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#tancot-derivation" class="btn btn-ghost sidebar-link"
+                            data-section="tancot-derivation">← Odvození tg/cotg</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 8: Exercises -->
+                <!-- ============================================================ -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">✏️ Procvičování</span>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Ověřte si, co jste se naučili. Vyberte správnou odpověď a klikněte na
+                        "Zkontrolovat".</p>
+
+                    <div class="exercises-list">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="ex1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaká je perioda funkce tg x?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> 2π</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> π</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> π/2</label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"> 4π</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex1','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="ex2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Funkce tg x je:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> Sudá funkce</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> Lichá funkce</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> Ani lichá, ani
+                                        sudá</label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"> Konstantní</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex2','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="ex3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Kolik je tg 45°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> 0</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> 1</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> √3</label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"> Není
+                                        definován</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex3','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="ex4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Kde má funkce tg x svislé asymptoty?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> x = kπ</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> x = π/2 + kπ</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> x = 2kπ</label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"> x = π/4 + kπ</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex4','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="ex5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Kolik je tg 60°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> 1/2</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> √3/3</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> √3</label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"> 1</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex5','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="ex6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaký je vztah mezi tg x a cotg x?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> tg x + cotg x =
+                                        1</label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> tg x · cotg x =
+                                        1</label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> tg x − cotg x =
+                                        0</label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"> tg x / cotg x =
+                                        1</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex6','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Kapitola 3 dokončena!</h2>
+                        <p>Výborně! Nyní rozumíte tangentu a kotangentu jako funkcím, jejich grafům, vlastnostem
+                            a umíte odvodit všechny hodnoty.</p>
+                        <a href="../../index.html" class="btn btn-primary" style="margin-top:1rem;">Zpět na přehled
+                            kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#playground" class="btn btn-ghost sidebar-link" data-section="playground">← Hřiště</a>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+                </section>
+
+            </div> <!-- /lesson-content -->
+        </div> <!-- /lesson-container -->
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

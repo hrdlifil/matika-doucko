@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Vzdálenost a střed úsečky - Výpočet vzdálenosti dvou bodů, střed úsečky, dělení úsečky v poměru.">
+    <title>Vzdálenost a střed úsečky – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 2: Vzdálenost a střed</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 2</h3>
+                    <p>Vzdálenost a střed úsečky</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#distance" class="sidebar-link" data-section="distance">
+                        <span class="sidebar-icon">2</span>
+                        Vzdálenost bodů
+                    </a>
+                    <a href="#midpoint" class="sidebar-link" data-section="midpoint">
+                        <span class="sidebar-icon">3</span>
+                        Střed úsečky
+                    </a>
+                    <a href="#ratio" class="sidebar-link" data-section="ratio">
+                        <span class="sidebar-icon">4</span>
+                        Dělení v poměru
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">5</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Vzdálenost a střed úsečky</h1>
+                    <p class="lead">
+                        V této kapitole se naučíte počítat vzdálenost mezi dvěma body a určovat střed úsečky.
+                        Tyto základní výpočty jsou klíčové pro většinu úloh v analytické geometrii.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Vzorec pro vzdálenost dvou bodů</li>
+                                <li>Výpočet středu úsečky</li>
+                                <li>Dělení úsečky v daném poměru</li>
+                                <li>Praktické aplikace těchto vzorců</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Proč je vzdálenost důležitá?</h2>
+                    <p>
+                        Vzdálenost mezi dvěma body je jedním z nejzákladnějších pojmů v geometrii.
+                        V analytické geometrii můžeme tuto vzdálenost snadno vypočítat pomocí souřadnic bodů.
+                    </p>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">📏</div>
+                        <div class="formula-content">
+                            <h4>Pythagorova věta jako základ</h4>
+                            <p>Vzorec pro vzdálenost vychází přímo z Pythagorovy věty: a² + b² = c²</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="distance">
+                        Pokračovat ke vzdálenosti bodů →
+                    </button>
+                </section>
+
+                <!-- Section 2: Distance -->
+                <section id="distance" class="lesson-section">
+                    <div class="section-badge">Vzdálenost bodů</div>
+                    <h1>Vzdálenost dvou bodů v rovině</h1>
+
+                    <p>
+                        Pro výpočet vzdálenosti dvou bodů využíváme Pythagorovu větu. Vzdálenost je
+                        přeponou pravoúhlého trojúhelníka, jehož odvěsny jsou rozdíly souřadnic.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro vzdálenost</h4>
+                        <p>
+                            Vzdálenost bodů A = [x₁, y₁] a B = [x₂, y₂] je:
+                        </p>
+                        <div class="equation-large">|AB| = √[(x₂ - x₁)² + (y₂ - y₁)²]</div>
+                        <p class="formula-note">
+                            Vzdálenost je vždy <strong>nezáporná</strong> a nezávisí na pořadí bodů.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Distance Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní vzdálenost</h3>
+                        <p>Přetahujte body A a B a sledujte, jak se mění vzdálenost a výpočet:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="distanceCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte body A nebo B</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Souřadnice</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">A</span>
+                                        <span id="distPointA">[1, 1]</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">B</span>
+                                        <span id="distPointB">[4, 5]</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Δx = x₂ - x₁ =</span>
+                                            <span id="deltaX" class="calc-value">3</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Δy = y₂ - y₁ =</span>
+                                            <span id="deltaY" class="calc-value">4</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>|AB| = √(Δx² + Δy²) =</span>
+                                            <span id="distanceResult" class="calc-value highlight">5.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>🔢 Podrobný výpočet</h4>
+                                    <div id="detailedCalc" class="detailed-calculation">
+                                        |AB| = √[(4-1)² + (5-1)²]<br>
+                                        |AB| = √[9 + 16]<br>
+                                        |AB| = √25 = 5
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba</h4>
+                            <p>
+                                Nezapomeňte, že pod odmocninou jsou <strong>druhé mocniny</strong> rozdílů,
+                                ne rozdíly druhých mocnin! <br>
+                                ✓ Správně: √[(x₂ - x₁)² + (y₂ - y₁)²]<br>
+                                ✗ Špatně: √[x₂² - x₁² + y₂² - y₁²]
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="midpoint">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Midpoint -->
+                <section id="midpoint" class="lesson-section">
+                    <div class="section-badge">Střed úsečky</div>
+                    <h1>Střed úsečky</h1>
+
+                    <p>
+                        Střed úsečky je bod, který leží přesně uprostřed mezi dvěma koncovými body.
+                        Jeho souřadnice jsou průměry souřadnic koncových bodů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro střed úsečky</h4>
+                        <p>
+                            Střed S úsečky AB, kde A = [x₁, y₁] a B = [x₂, y₂], má souřadnice:
+                        </p>
+                        <div class="equation-large">S = [(x₁ + x₂)/2, (y₁ + y₂)/2]</div>
+                        <p class="formula-note">
+                            Jednoduše řečeno: střed má souřadnice <strong>aritmetický průměr</strong> odpovídajících
+                            souřadnic.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Midpoint Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní střed úsečky</h3>
+                        <p>Přetahujte body A a B a sledujte, jak se pohybuje střed S:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="midpointCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte body A nebo B | Střed S se počítá automaticky</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Koncové body</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">A</span>
+                                        <span id="midPointA">[0, 0]</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">B</span>
+                                        <span id="midPointB">[4, 2]</span>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet středu</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>xₛ = (x₁ + x₂)/2 =</span>
+                                            <span id="midX" class="calc-value">2.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>yₛ = (y₁ + y₂)/2 =</span>
+                                            <span id="midY" class="calc-value">1.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>🎯 Střed S</h4>
+                                    <div class="result-display">
+                                        <span class="point-marker point-s">S</span>
+                                        <span id="midpointResult" class="result-value">[2.0, 1.0]</span>
+                                    </div>
+                                </div>
+
+                                <div class="verification-panel">
+                                    <h4>✓ Ověření</h4>
+                                    <div class="verification-text">
+                                        <span>|AS| = </span><span id="verifyAS">2.24</span><br>
+                                        <span>|SB| = </span><span id="verifySB">2.24</span><br>
+                                        <small id="verifyStatus" class="verify-ok">✓ Vzdálenosti jsou stejné</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="distance">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="ratio">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Division in Ratio -->
+                <section id="ratio" class="lesson-section">
+                    <div class="section-badge">Dělení v poměru</div>
+                    <h1>Dělení úsečky v daném poměru</h1>
+
+                    <p>
+                        Někdy potřebujeme najít bod, který dělí úsečku v určitém poměru.
+                        Střed je speciální případ - dělí úsečku v poměru 1:1.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro dělení v poměru</h4>
+                        <p>
+                            Bod T dělí úsečku AB v poměru m:n (od A směrem k B):
+                        </p>
+                        <div class="equation-large">
+                            T = [(n·x₁ + m·x₂)/(m+n), (n·y₁ + m·y₂)/(m+n)]
+                        </div>
+                        <p class="formula-note">
+                            Pro m = n = 1 dostaneme vzorec pro střed úsečky.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Ratio Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní dělení v poměru</h3>
+                        <p>Upravte poměr pomocí posuvníků a sledujte, jak se pohybuje bod T:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="ratioCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Koncové body</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">A</span>
+                                        <span id="ratioPointA">[0, 0]</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">B</span>
+                                        <span id="ratioPointB">[6, 4]</span>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label>Hodnota m = <span id="mValue">1</span></label>
+                                    <input type="range" id="mSlider" min="1" max="5" value="1" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>Hodnota n = <span id="nValue">2</span></label>
+                                    <input type="range" id="nSlider" min="1" max="5" value="2" step="1">
+                                </div>
+
+                                <div class="ratio-display">
+                                    <span>Poměr:</span>
+                                    <span id="ratioDisplay" class="ratio-value">1 : 2</span>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>🎯 Bod T</h4>
+                                    <div class="result-display">
+                                        <span class="point-marker point-t">T</span>
+                                        <span id="ratioResult" class="result-value">[2.0, 1.3]</span>
+                                    </div>
+                                </div>
+
+                                <div class="ratio-visual">
+                                    <div class="ratio-bar">
+                                        <div id="ratioBarM" class="ratio-segment ratio-m" style="flex: 1">m</div>
+                                        <div id="ratioBarN" class="ratio-segment ratio-n" style="flex: 2">n</div>
+                                    </div>
+                                    <div class="ratio-labels">
+                                        <span>A</span>
+                                        <span id="ratioTLabel">T</span>
+                                        <span>B</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Příklady poměrů</h4>
+                            <ul>
+                                <li><strong>1:1</strong> - střed úsečky</li>
+                                <li><strong>1:2</strong> - třetinový bod (blíže k A)</li>
+                                <li><strong>2:1</strong> - třetinový bod (blíže k B)</li>
+                                <li><strong>1:3</strong> - čtvrtinový bod</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Speciální případy</h4>
+                            <ul>
+                                <li><strong>m:0</strong> - bod B</li>
+                                <li><strong>0:n</strong> - bod A</li>
+                                <li><strong>m = n</strong> - střed</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="midpoint">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p>
+                        Vytvářejte vlastní body a zkoumejte vzdálenosti, středy a dělení úseček.
+                        Klikněte pro přidání bodů, táhněte pro jejich přesun.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="700" height="500"></canvas>
+                            <div class="canvas-instructions">
+                                <span>🖱️ Klikněte pro přidání bodu | Táhněte pro přesun | Dvojklik pro smazání</span>
+                            </div>
+                        </div>
+
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>📍 Body (<span id="pointCount">0</span>)</h4>
+                                <div id="pointsList" class="points-list">
+                                    <div class="empty-message">Klikněte na plátno pro přidání bodů</div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>📏 Vzdálenosti</h4>
+                                <div id="distancesList" class="distances-list">
+                                    <div class="empty-message">Přidejte alespoň 2 body</div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>🎯 Středy</h4>
+                                <div id="midpointsList" class="midpoints-list">
+                                    <div class="empty-message">Přidejte alespoň 2 body</div>
+                                </div>
+                                <label class="checkbox-label">
+                                    <input type="checkbox" id="showMidpoints" checked>
+                                    <span>Zobrazit středy</span>
+                                </label>
+                            </div>
+
+                            <div class="playground-actions">
+                                <button id="clearPlayground" class="btn-outline">🗑️ Vymazat vše</button>
+                                <button id="addRandomPoints" class="btn-outline">🎲 Náhodné body</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="ratio">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <p>Otestujte si své znalosti pomocí interaktivních úloh.</p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je vzdálenost bodů A = [1, 2] a B = [4, 6]?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>|AB| = 7</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>|AB| = 5</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>|AB| = 25</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>|AB| = √7</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaké jsou souřadnice středu úsečky AB, kde A = [2, 4] a B = [6, 8]?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>S = [8, 12]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>S = [4, 4]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>S = [4, 6]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>S = [3, 5]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Bod T dělí úsečku AB v poměru 1:3 od bodu A. Kde A = [0, 0] a B = [8, 4].
+                                    Jaké jsou souřadnice bodu T?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>T = [2, 1]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>T = [4, 2]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>T = [6, 3]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>T = [3, 1.5]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Bod S = [3, 5] je středem úsečky AB. Pokud A = [1, 2], jaké jsou souřadnice bodu B?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span>B = [2, 3.5]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span>B = [4, 7]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span>B = [5, 8]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span>B = [6, 10]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Gratulujeme!</h2>
+                        <p>Úspěšně jste dokončili lekci o vzdálenosti a středu úsečky.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

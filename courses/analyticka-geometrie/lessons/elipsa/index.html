@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Elipsa - definice, kanonická rovnice, vlastnosti elipsy, excentricita a interaktivní vizualizace.">
+    <title>Elipsa – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 8: Elipsa</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 8</h3>
+                    <p>Elipsa</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#definition" class="sidebar-link" data-section="definition">
+                        <span class="sidebar-icon">2</span>
+                        Definice elipsy
+                    </a>
+                    <a href="#equation" class="sidebar-link" data-section="equation">
+                        <span class="sidebar-icon">3</span>
+                        Kanonická rovnice
+                    </a>
+                    <a href="#properties" class="sidebar-link" data-section="properties">
+                        <span class="sidebar-icon">4</span>
+                        Vlastnosti elipsy
+                    </a>
+                    <a href="#eccentricity" class="sidebar-link" data-section="eccentricity">
+                        <span class="sidebar-icon">5</span>
+                        Excentricita
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Elipsa</h1>
+                    <p class="lead">
+                        Elipsa je jednou z kuželoseček — křivek, které vznikají řezem kužele rovinou.
+                        Setkáte se s ní v astronomii (oběžné dráhy planet), fyzice, architektuře
+                        i lékařství (ultrazvuk). V této kapitole se naučíte ji popsat, nakreslit
+                        a pracovat s jejími vlastnostmi.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Definici elipsy pomocí ohnisek</li>
+                                <li>Kanonickou rovnici a její parametry</li>
+                                <li>Vlastnosti: osy, vrcholy, ohniska</li>
+                                <li>Excentricitu a její geometrický význam</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">🪐</div>
+                        <div class="formula-content">
+                            <h4>Kde se elipsa vyskytuje?</h4>
+                            <p>
+                                Planety obíhají kolem Slunce po <strong>eliptických drahách</strong>
+                                (1. Keplerův zákon). Slunce leží v jednom ohnisku elipsy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="definition">
+                        Pokračovat k definici →
+                    </button>
+                </section>
+
+                <!-- Section 2: Definition -->
+                <section id="definition" class="lesson-section">
+                    <div class="section-badge">Definice</div>
+                    <h1>Definice elipsy</h1>
+
+                    <p>
+                        Elipsa je definována pomocí dvou pevných bodů —
+                        <strong>ohnisek</strong> F₁ a F₂.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Elipsa je množina všech bodů X roviny, pro které platí:
+                        </p>
+                        <div class="equation-large">
+                            |XF₁| + |XF₂| = 2a = konst.
+                        </div>
+                        <p class="formula-note">
+                            Součet vzdáleností od obou ohnisek je pro <strong>každý bod</strong>
+                            na elipse stejný a roven 2a, kde a je délka hlavní poloosy.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Klíčové pojmy</h4>
+                            <ul>
+                                <li><strong>F₁, F₂</strong> — ohniska</li>
+                                <li><strong>S</strong> — střed (průsečík os)</li>
+                                <li><strong>2a</strong> — délka hlavní osy</li>
+                                <li><strong>2b</strong> — délka vedlejší osy</li>
+                                <li><strong>2e</strong> — vzdálenost ohnisek</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Základní vztah</h4>
+                            <div class="equation-large" style="font-size: 1.3rem;">
+                                a² = b² + e²
+                            </div>
+                            <p class="formula-note">
+                                Hlavní poloosa a je vždy <strong>největší</strong>.
+                                Platí a &gt; b &gt; 0 a a &gt; e ≥ 0.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Definition Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Definice elipsy</h3>
+                        <p>Táhněte bod X po elipse a sledujte, že |XF₁| + |XF₂| je konstantní:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="definitionCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod X po elipse</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="defAVal">4.0</span></label>
+                                        <input type="range" id="defASlider" min="2" max="6" value="4" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="defBVal">3.0</span></label>
+                                        <input type="range" id="defBSlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vzdálenosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Bod X</span>
+                                            <span id="defPointX" class="calc-value">[4.0, 0.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|XF₁|</span>
+                                            <span id="defDist1" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|XF₂|</span>
+                                            <span id="defDist2" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>|XF₁| + |XF₂|</span>
+                                            <span id="defSum" class="calc-value highlight">8.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Ověření: 2a</h4>
+                                    <div
+                                        style="text-align: center; font-size: 1.3rem; font-weight: 700; color: #10b981; padding: 0.25rem;">
+                                        <span id="def2a">2a = 8.0</span> ✓
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🧵</div>
+                        <div class="info-card-content">
+                            <h4>Zahradnická konstrukce</h4>
+                            <p>
+                                Elipsu lze sestrojit pomocí <strong>dvou kolíků (ohnisek)</strong>
+                                a provázku délky 2a. Napnete tužku do provázku a objedete —
+                                vznikne dokonalá elipsa!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="equation">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Canonical Equation -->
+                <section id="equation" class="lesson-section">
+                    <div class="section-badge">Kanonická rovnice</div>
+                    <h1>Kanonická rovnice elipsy</h1>
+
+                    <p>
+                        Pokud umístíme střed elipsy do počátku souřadnic a hlavní osu
+                        podél osy x, dostaneme <strong>kanonickou rovnici</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Kanonická rovnice</h4>
+                        <p>
+                            Elipsa se středem v počátku a hlavní osou na ose x:
+                        </p>
+                        <div class="equation-large">
+                            x²/a² + y²/b² = 1
+                        </div>
+                        <p class="formula-note">
+                            Kde a &gt; b &gt; 0. Ohniska leží na ose x: F₁ = [−e, 0], F₂ = [e, 0],
+                            kde e = √(a² − b²).
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Hlavní osa podél osy y</h4>
+                            <p>
+                                Pokud je hlavní osa podél osy y (b &gt; a), rovnice vypadá stejně,
+                                ale ohniska leží na ose y: F₁ = [0, −e], F₂ = [0, e], kde e = √(b² − a²).
+                                Větší jmenovatel vždy určuje hlavní osu.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Equation Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Rovnice elipsy</h3>
+                        <p>Měňte hodnoty a, b a sledujte tvar elipsy a polohu ohnisek:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="equationCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="eqAVal">5.0</span></label>
+                                        <input type="range" id="eqASlider" min="1" max="6" value="5" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="eqBVal">3.0</span></label>
+                                        <input type="range" id="eqBSlider" min="1" max="6" value="3" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vypočtené hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Hlavní poloosa a</span>
+                                            <span id="eqA" class="calc-value">5.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Vedlejší poloosa b</span>
+                                            <span id="eqB" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>e = √(a² − b²)</span>
+                                            <span id="eqE" class="calc-value">4.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Kanonická rovnice</h4>
+                                    <div id="eqEquation"
+                                        style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2rem; font-weight: 600; color: #10b981; padding: 0.5rem;">
+                                        x²/25 + y²/9 = 1
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Ohniska</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>F₁</span>
+                                            <span id="eqF1" class="calc-value">[−4.0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>F₂</span>
+                                            <span id="eqF2" class="calc-value">[4.0, 0]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Elipsa x²/16 + y²/9 = 1:</p>
+                            <p>a² = 16 → a = 4, b² = 9 → b = 3</p>
+                            <p>e = √(16 − 9) = √7 ≈ <strong>2.65</strong></p>
+                            <p>F₁ = [−√7, 0], F₂ = [√7, 0]</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="definition">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="properties">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Properties -->
+                <section id="properties" class="lesson-section">
+                    <div class="section-badge">Vlastnosti</div>
+                    <h1>Vlastnosti elipsy</h1>
+
+                    <p>
+                        Elipsa má řadu důležitých geometrických vlastností — osy souměrnosti,
+                        vrcholy, a speciální body (ohniska).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vrcholy elipsy</h4>
+                        <p>
+                            Průsečíky elipsy s osami souřadnic (pro elipsu
+                            x²/a² + y²/b² = 1 se středem v počátku):
+                        </p>
+                        <div class="three-cases">
+                            <div class="case-item">
+                                <span class="case-label" style="color: #6366f1;">A₁, A₂</span>
+                                <span>Hlavní vrcholy: [−a, 0] a [a, 0]</span>
+                            </div>
+                            <div class="case-item">
+                                <span class="case-label" style="color: #a78bfa;">B₁, B₂</span>
+                                <span>Vedlejší vrcholy: [0, −b] a [0, b]</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Osy souměrnosti</h4>
+                            <ul>
+                                <li><strong>Hlavní osa</strong> — prochází oběma ohnisky, délka 2a</li>
+                                <li><strong>Vedlejší osa</strong> — kolmá na hlavní, délka 2b</li>
+                            </ul>
+                            <p class="formula-note">Elipsa má dvě osy souměrnosti a střed souměrnosti.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Ohniskový trojúhelník</h4>
+                            <p>
+                                Body F₁, B₁ (nebo B₂) a střed S tvoří pravoúhlý trojúhelník s:
+                            </p>
+                            <ul>
+                                <li>Přepona = a (od B₁ k F₂)</li>
+                                <li>Odvěsna = e (od S k F₂)</li>
+                                <li>Odvěsna = b (od S k B₁)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Properties Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Vlastnosti</h3>
+                        <p>Sledujte osy, vrcholy a ohniskový trojúhelník:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="propertiesCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="propAVal">5.0</span></label>
+                                        <input type="range" id="propASlider" min="2" max="6" value="5" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="propBVal">3.0</span></label>
+                                        <input type="range" id="propBSlider" min="1" max="6" value="3" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="propShowTriangle" checked>
+                                            Ohniskový trojúhelník
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Přehled</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Hlavní osa 2a</span>
+                                            <span id="prop2a" class="calc-value">10.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Vedlejší osa 2b</span>
+                                            <span id="prop2b" class="calc-value">6.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>e = √(a² − b²)</span>
+                                            <span id="propE" class="calc-value">4.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Body</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>A₁, A₂</span>
+                                            <span id="propVertA" class="calc-value">[−5, 0], [5, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>B₁, B₂</span>
+                                            <span id="propVertB" class="calc-value">[0, −3], [0, 3]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>F₁, F₂</span>
+                                            <span id="propFoci" class="calc-value">[−4, 0], [4, 0]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="equation">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="eccentricity">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Eccentricity -->
+                <section id="eccentricity" class="lesson-section">
+                    <div class="section-badge">Excentricita</div>
+                    <h1>Excentricita elipsy</h1>
+
+                    <p>
+                        Excentricita (výstřednost) udává, jak moc je elipsa
+                        <strong>protáhlá</strong> oproti kružnici.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice excentricity</h4>
+                        <div class="equation-large">
+                            ε = e / a = √(a² − b²) / a
+                        </div>
+                        <p class="formula-note">
+                            Pro elipsu vždy platí <strong>0 ≤ ε &lt; 1</strong>.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Speciální hodnoty</h4>
+                            <ul>
+                                <li><strong>ε = 0</strong> → kružnice (e = 0, a = b)</li>
+                                <li><strong>ε blízko 0</strong> → téměř kruhová</li>
+                                <li><strong>ε blízko 1</strong> → velmi protáhlá</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Příklady z přírody</h4>
+                            <ul>
+                                <li>Země: ε ≈ 0.017 (téměř kruh)</li>
+                                <li>Mars: ε ≈ 0.093</li>
+                                <li>Halleyova kometa: ε ≈ 0.967</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Eccentricity Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Excentricita</h3>
+                        <p>Posuňte excentricitu od 0 (kružnice) ke skoro 1 (velmi protáhlá):</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="eccentricityCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Excentricita</h4>
+                                    <div class="control-group">
+                                        <label>ε = <span id="eccVal">0.60</span></label>
+                                        <input type="range" id="eccSlider" min="0" max="0.95" value="0.6" step="0.01">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>a = <span id="eccAVal">5.0</span></label>
+                                        <input type="range" id="eccASlider" min="2" max="6" value="5" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>a</span>
+                                            <span id="eccA" class="calc-value">5.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>e = ε · a</span>
+                                            <span id="eccE" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>b = √(a² − e²)</span>
+                                            <span id="eccB" class="calc-value">4.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Tvar</h4>
+                                    <div id="eccShape"
+                                        style="text-align: center; font-weight: 600; font-size: 1.1rem; color: #10b981; padding: 0.5rem;">
+                                        Mírně protáhlá elipsa
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="properties">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Měňte parametry elipsy, posuňte střed
+                        a testujte, zda body leží na elipse, uvnitř, nebo vně.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Přetahujte střed S | Klikněte pro test bodu</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Elipsa</h4>
+                                <div class="calculation-steps">
+                                    <div class="calc-step">
+                                        <span>Střed S</span>
+                                        <span id="playCenter" class="calc-value">[0.0, 0.0]</span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-top: 0.5rem;">
+                                    <label>a = <span id="playAVal">4.0</span></label>
+                                    <input type="range" id="playASlider" min="1" max="6" value="4" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>b = <span id="playBVal">2.5</span></label>
+                                    <input type="range" id="playBSlider" min="0.5" max="6" value="2.5" step="0.5">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Hodnoty</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>e</span>
+                                        <span id="playE" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>ε</span>
+                                        <span id="playEcc" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Rovnice</span>
+                                        <span id="playEq" class="calc-value" style="font-size: 0.8rem;">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Testovaný bod</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>P</span>
+                                        <span id="playTestP" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Poloha</span>
+                                        <span id="playTestResult" class="calc-value">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="eccentricity">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Elipsa má poloosy a = 5, b = 3. Jaká je vzdálenost ohnisek od středu (e)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>e = 2</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>e = 4</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>e = √34</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>e = 8</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je kanonická rovnice elipsy s hlavní poloosou a = 6 a vedlejší poloosou b = 4?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>x²/36 + y²/16 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>x²/6 + y²/4 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>x²/16 + y²/36 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>x²/36 + y²/16 = 0</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Elipsa x²/25 + y²/9 = 1. Kde leží ohniska?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>F = [0, ±4]</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>F = [±4, 0]</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>F = [±5, 0]</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>F = [±3, 0]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je excentricita elipsy x²/100 + y²/64 = 1?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span>ε = 0.36</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span>ε = 0.8</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span>ε = 0.6</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span>ε = 6</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Elipsa má ohniska F₁ = [−3, 0], F₂ = [3, 0] a hlavní poloosu a = 5.
+                                    Jaká je délka vedlejší poloosy b?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex5" value="a">
+                                        <span>b = 2</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex5" value="b">
+                                        <span>b = 4</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex5" value="c">
+                                        <span>b = √34</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex5" value="d">
+                                        <span>b = 8</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Leží bod P = [3, 2] na elipse x²/25 + y²/9 = 1, uvnitř, nebo vně?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex6" value="a">
+                                        <span>Na elipse (hodnota = 1)</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex6" value="b">
+                                        <span>Uvnitř (hodnota &lt; 1)</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex6" value="c">
+                                        <span>Vně (hodnota &gt; 1)</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex6" value="d">
+                                        <span>Nelze určit</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Elipsa.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,517 @@
+﻿
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mnohoúhelníky - interaktivní kapitola planimetrie o n-úhelnících, pravidelných útvarech, čtyřúhelnících a větách pro tečnový a tětivový čtyřúhelník.">
+    <title>Mnohoúhelníky – Planimetrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Planimetrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 3: Mnohoúhelníky</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 3</h3>
+                    <p>Mnohoúhelníky</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#mnohouhelniky-n-uhelniky" class="sidebar-link active"
+                        data-section="mnohouhelniky-n-uhelniky">
+                        <span class="sidebar-icon">1</span>
+                        Mnohoúhelníky (n-úhelníky)
+                    </a>
+                    <a href="#pravidelny-n-uhelnik" class="sidebar-link" data-section="pravidelny-n-uhelnik">
+                        <span class="sidebar-icon">2</span>
+                        Pravidelný n-úhelník
+                    </a>
+                    <a href="#ctyruhelniky" class="sidebar-link" data-section="ctyruhelniky">
+                        <span class="sidebar-icon">3</span>
+                        Čtyřúhelníky
+                    </a>
+                    <a href="#tecnovy-a-tetivovy-ctyruhelnik" class="sidebar-link"
+                        data-section="tecnovy-a-tetivovy-ctyruhelnik">
+                        <span class="sidebar-icon">4</span>
+                        Tečnový a tětivový čtyřúhelník
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="mnohouhelniky-n-uhelniky" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
+                    <h1>Mnohoúhelníky (n-úhelníky)</h1>
+                    <p class="lead">
+                        n-úhelník je rovinný útvar o <strong>n vrcholech</strong> a <strong>n stranách</strong>, kde
+                        n ≥ 3. Pro konvexní n-úhelník platí důležité vztahy pro počet úhlopříček a součet vnitřních
+                        úhlů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vzorce</h4>
+                        <ul>
+                            <li><strong>Počet úhlopříček:</strong> <code>d = n(n - 3) / 2</code></li>
+                            <li><strong>Součet vnitřních úhlů:</strong> <code>S = (n - 2) · 180°</code></li>
+                            <li><strong>Triangulace z jednoho vrcholu:</strong> vždy <code>n - 2</code> trojúhelníků</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Anatomie n-úhelníku</h3>
+                        <p>Měňte počet stran a zapněte úhlopříčky nebo triangulaci. Hodnoty se počítají automaticky.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="polygonBasicsCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">n-úhelník je konvexní, vrcholy jsou značeny A, B, C, ...</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="nSidesSlider">Počet stran n: <strong id="nSidesValue">6</strong></label>
+                                    <input type="range" id="nSidesSlider" min="3" max="12" step="1" value="6">
+                                </div>
+                                <label class="check-row">
+                                    <input type="checkbox" id="showDiagonals" checked>
+                                    <span>Zobrazit úhlopříčky</span>
+                                </label>
+                                <label class="check-row">
+                                    <input type="checkbox" id="showTriangulation" checked>
+                                    <span>Zobrazit triangulaci z vrcholu A</span>
+                                </label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row">
+                                        <span>Typ útvaru</span>
+                                        <span id="polygonNameValue" class="calc-value">šestiúhelník</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Počet úhlopříček d</span>
+                                        <span id="diagonalCountValue" class="calc-value">9</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Součet vnitřních úhlů S</span>
+                                        <span id="angleSumValue" class="calc-value">720°</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Počet trojúhelníků</span>
+                                        <span id="triangleCountValue" class="calc-value">4</span>
+                                    </div>
+                                </div>
+
+                                <button id="resetBasics" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Brilliant tip</h4>
+                            <p>
+                                Vzorec pro součet úhlů není potřeba memorovat bez kontextu. Stačí si představit
+                                rozřezání n-úhelníku na <strong>n - 2 trojúhelníků</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="pravidelny-n-uhelnik">Pravidelný n-úhelník
+                            →</button>
+                    </div>
+                </section>
+                <section id="pravidelny-n-uhelnik" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
+                    <h1>Pravidelný n-úhelník</h1>
+                    <p class="lead">
+                        Pravidelný n-úhelník má všechny strany stejně dlouhé a všechny vnitřní úhly shodné.
+                        Lze ho zapsat přes kružnici opsanou s poloměrem R a středový úhel.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vztahy pro pravidelný n-úhelník</h4>
+                        <ul>
+                            <li><strong>Středový úhel:</strong> <code>φ = 360° / n</code></li>
+                            <li><strong>Vnitřní úhel:</strong> <code>α = (n - 2) · 180° / n</code></li>
+                            <li><strong>Délka strany:</strong> <code>a = 2R · sin(π / n)</code></li>
+                            <li><strong>Apotéma:</strong> <code>r = R · cos(π / n)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Parametry pravidelného n-úhelníku</h3>
+                        <p>Upravujte n, poloměr R a natočení. Sledujte, jak se mění délka strany a úhly.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="regularPolygonCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Rays OA a OB vymezují středový úhel φ</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="regNSlider">Počet stran n: <strong id="regNValue">6</strong></label>
+                                    <input type="range" id="regNSlider" min="3" max="14" step="1" value="6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="regRadiusSlider">Poloměr R: <strong id="regRadiusValue">4.0</strong></label>
+                                    <input type="range" id="regRadiusSlider" min="2" max="6" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="regRotationSlider">Natočení: <strong id="regRotationValue">0°</strong></label>
+                                    <input type="range" id="regRotationSlider" min="0" max="360" step="1" value="0">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showCircumcircle" checked>
+                                    <span>Zobrazit kružnici opsanou</span></label>
+                                <label class="check-row"><input type="checkbox" id="showIncircle" checked>
+                                    <span>Zobrazit kružnici vepsanou</span></label>
+                                <label class="check-row"><input type="checkbox" id="showCentralAngle" checked>
+                                    <span>Zvýraznit středový úhel φ</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Středový úhel φ</span><span id="centralAngleValue"
+                                            class="calc-value">60°</span></div>
+                                    <div class="calc-row"><span>Vnitřní úhel α</span><span id="interiorAngleValue"
+                                            class="calc-value">120°</span></div>
+                                    <div class="calc-row"><span>Délka strany a</span><span id="sideLengthValue"
+                                            class="calc-value">4.00</span></div>
+                                    <div class="calc-row"><span>Obvod P</span><span id="perimeterValue"
+                                            class="calc-value">24.00</span></div>
+                                    <div class="calc-row"><span>Apotéma r</span><span id="apothemValue"
+                                            class="calc-value">3.46</span></div>
+                                </div>
+
+                                <button id="resetRegular" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="mnohouhelniky-n-uhelniky">← Mnohoúhelníky
+                            (n-úhelníky)</button>
+                        <button class="btn-primary btn-next" data-next="ctyruhelniky">Čtyřúhelníky →</button>
+                    </div>
+                </section>
+
+                <section id="ctyruhelniky" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
+                    <h1>Čtyřúhelníky</h1>
+                    <p class="lead">
+                        Čtyřúhelníky lze třídit podle rovnoběžnosti, shodnosti stran, pravých úhlů nebo diagonál.
+                        V tomto panelu porovnáte vlastnosti jednotlivých typů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Přehled typů</h4>
+                        <ul>
+                            <li><strong>Lichoběžník:</strong> právě jedna dvojice protějších stran je rovnoběžná</li>
+                            <li><strong>Rovnoběžník:</strong> obě dvojice protějších stran jsou rovnoběžné</li>
+                            <li><strong>Obdélník:</strong> rovnoběžník se čtyřmi pravými úhly</li>
+                            <li><strong>Kosočtverec:</strong> rovnoběžník se všemi stranami shodnými</li>
+                            <li><strong>Čtverec:</strong> obdélník i kosočtverec současně</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Klasifikace čtyřúhelníků</h3>
+                        <p>Vyberte typ a měňte parametry. Systém průběžně kontroluje hlavní vlastnosti útvaru.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadrilateralCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Zobrazeny jsou i diagonály AC a BD</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="quadTypeSelect">Typ čtyřúhelníku</label>
+                                    <select id="quadTypeSelect">
+                                        <option value="general">Obecný čtyřúhelník</option>
+                                        <option value="trapezoid">Lichoběžník</option>
+                                        <option value="parallelogram">Rovnoběžník</option>
+                                        <option value="rectangle">Obdélník</option>
+                                        <option value="rhombus">Kosočtverec</option>
+                                        <option value="square">Čtverec</option>
+                                        <option value="kite">Deltoid</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="quadWidthSlider">Šířkový parametr: <strong id="quadWidthValue">7.0</strong></label>
+                                    <input type="range" id="quadWidthSlider" min="4" max="10" step="0.2" value="7">
+                                </div>
+                                <div class="control-group">
+                                    <label for="quadHeightSlider">Výškový parametr: <strong id="quadHeightValue">5.0</strong></label>
+                                    <input type="range" id="quadHeightSlider" min="3" max="8" step="0.2" value="5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="quadSkewSlider">Smyk / asymetrie: <strong id="quadSkewValue">1.0</strong></label>
+                                    <input type="range" id="quadSkewSlider" min="-2" max="2" step="0.1" value="1">
+                                </div>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Typ</span><span id="quadTypeValue" class="calc-value">obecný</span>
+                                    </div>
+                                    <div class="calc-row"><span>Rovnoběžné dvojice stran</span><span id="parallelPairsValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Počet pravých úhlů</span><span id="rightAnglesValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Shodnost stran</span><span id="sideEqualityValue"
+                                            class="calc-value">žádná speciální</span></div>
+                                    <div class="calc-row"><span>Diagonály</span><span id="diagPropsValue"
+                                            class="calc-value">obecné</span></div>
+                                    <div class="calc-row"><span>Obsah</span><span id="quadAreaValue"
+                                            class="calc-value">0.00</span></div>
+                                </div>
+
+                                <button id="resetQuad" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <span class="info-card-icon">⚠️</span>
+                        <div class="info-card-content">
+                            <h4>Častá záměna</h4>
+                            <p>
+                                Každý čtverec je obdélník i kosočtverec, ale ne každý obdélník je čtverec.
+                                Vždy kontrolujte všechny podmínky definice.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="pravidelny-n-uhelnik">← Pravidelný
+                            n-úhelník</button>
+                        <button class="btn-primary btn-next" data-next="tecnovy-a-tetivovy-ctyruhelnik">Tečnový a
+                            tětivový čtyřúhelník →</button>
+                    </div>
+                </section>
+                <section id="tecnovy-a-tetivovy-ctyruhelnik" class="lesson-section">
+                    <span class="section-badge">Téma 4</span>
+                    <h1>Tečnový a tětivový čtyřúhelník</h1>
+                    <p class="lead">
+                        Tětivový (cyklický) čtyřúhelník má všechny vrcholy na jedné kružnici. Tečnový čtyřúhelník má
+                        všechny strany tečné k jedné kružnici. Každý typ má charakteristickou rovnost.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Rozhodující vlastnosti</h4>
+                        <ul>
+                            <li><strong>Tětivový:</strong> <code>∠A + ∠C = 180°</code> a <code>∠B + ∠D = 180°</code></li>
+                            <li><strong>Tečnový:</strong> pro strany v pořadí platí <code>a + c = b + d</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Dvě speciální konstrukce vedle sebe</h3>
+                        <p>Vlevo měníte tětivový čtyřúhelník na kružnici, vpravo tečnový čtyřúhelník k vepsané kružnici.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="specialQuadCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Vlevo: tětivový, vpravo: tečnový</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="cyclicRotateSlider">Rotace tětivového: <strong id="cyclicRotateValue">0°</strong></label>
+                                    <input type="range" id="cyclicRotateSlider" min="-45" max="45" step="1" value="0">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cyclicSkewSlider">Asymetrie tětivového: <strong id="cyclicSkewValue">0°</strong></label>
+                                    <input type="range" id="cyclicSkewSlider" min="-30" max="30" step="1" value="0">
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="tangentRotateSlider">Rotace tečnového: <strong id="tangentRotateValue">0°</strong></label>
+                                    <input type="range" id="tangentRotateSlider" min="-40" max="40" step="1" value="0">
+                                </div>
+                                <div class="control-group">
+                                    <label for="tangentSkewSlider">Asymetrie tečnového: <strong id="tangentSkewValue">0°</strong></label>
+                                    <input type="range" id="tangentSkewSlider" min="-24" max="24" step="1" value="0">
+                                </div>
+                                <div class="control-group">
+                                    <label for="incircleRadiusSlider">Poloměr vepsané kružnice r:
+                                        <strong id="incircleRadiusValue">3.0</strong></label>
+                                    <input type="range" id="incircleRadiusSlider" min="2" max="5" step="0.1" value="3">
+                                </div>
+
+                                <label class="check-row">
+                                    <input type="checkbox" id="showTangencyPoints" checked>
+                                    <span>Zobrazit body dotyku vepsané kružnice</span>
+                                </label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Tětivový: ∠A + ∠C / ∠B + ∠D</span><span id="cyclicAnglesValue"
+                                            class="calc-value">180° / 180°</span></div>
+                                    <div class="calc-row"><span>Tečnový: a + c / b + d</span><span id="tangentialSidesValue"
+                                            class="calc-value">0 / 0</span></div>
+                                    <div class="status-row"><span>Kontrola vět</span><span id="specialConclusionValue"
+                                            class="status-chip">čeká na výpočet</span></div>
+                                </div>
+
+                                <button id="resetSpecial" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="ctyruhelniky">← Čtyřúhelníky</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Rychlé ověření porozumění</h1>
+                    <p class="lead">Pět krátkých úloh k ověření hlavních vztahů z kapitoly Mnohoúhelníky.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 1</span>
+                                <span id="ex1Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik úhlopříček má osmiúhelník (n = 8)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> 16</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> 18</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> 20</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="c">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 2</span>
+                                <span id="ex2Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaký je vnitřní úhel pravidelného šestiúhelníku?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> 90°</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> 120°</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> 135°</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 3</span>
+                                <span id="ex3Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Co vždy platí pro každý obdélník?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> Všechny strany jsou shodné</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> Diagonály jsou shodné</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> Diagonály jsou na sebe kolmé</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 4</span>
+                                <span id="ex4Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro tětivový čtyřúhelník platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> Součet protějších úhlů je 180°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> Všechny strany jsou shodné</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> Diagonály jsou vždy kolmé</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="a">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 5</span>
+                                <span id="ex5Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro tečnový čtyřúhelník s délkami stran a, b, c, d v pořadí platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> a + b = c + d</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> a + c = b + d</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> a = c a b = d</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Skvěle, kapitola je hotová</h2>
+                        <p>Můžete pokračovat do další kapitoly nebo se vrátit na přehled kurzu.</p>
+                        <div class="complete-actions">
+                            <a href="../kruh-a-kruznice/index.html" class="btn-primary">Pokračovat na kapitolu 4</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="tecnovy-a-tetivovy-ctyruhelnik">← Tečnový a
+                            tětivový čtyřúhelník</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

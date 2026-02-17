@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skalární součin vektorů - definice, vlastnosti, výpočet úhlu, kolmost vektorů.">
+    <title>Skalární součin – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 4: Skalární součin</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 4</h3>
+                    <p>Skalární součin</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#calculation" class="sidebar-link" data-section="calculation">
+                        <span class="sidebar-icon">2</span>
+                        Výpočet
+                    </a>
+                    <a href="#properties" class="sidebar-link" data-section="properties">
+                        <span class="sidebar-icon">3</span>
+                        Vlastnosti
+                    </a>
+                    <a href="#angle" class="sidebar-link" data-section="angle">
+                        <span class="sidebar-icon">4</span>
+                        Úhel vektorů
+                    </a>
+                    <a href="#ortho" class="sidebar-link" data-section="ortho">
+                        <span class="sidebar-icon">5</span>
+                        Kolmost vektorů
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Skalární součin</h1>
+                    <p class="lead">
+                        Skalární součin je operace, která dvěma vektorům přiřadí reálné číslo (skalár).
+                        Tato operace je klíčová pro výpočet úhlů mezi vektory a ověřování jejich kolmosti.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Definici a výpočet skalárního součinu</li>
+                                <li>Vlastnosti skalárního součinu</li>
+                                <li>Výpočet úhlu dvou vektorů</li>
+                                <li>Podmínku kolmosti vektorů</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>Proč je skalární součin důležitý?</h2>
+                    <div class="equation-cards">
+                        <div class="equation-card">
+                            <h4>Algebraický vzorec</h4>
+                            <div class="equation">
+                                <span class="vec">u</span> · <span class="vec">v</span> = u₁v₁ + u₂v₂
+                            </div>
+                            <p>Součet součinů odpovídajících souřadnic</p>
+                        </div>
+                        <div class="equation-card">
+                            <h4>Geometrický vzorec</h4>
+                            <div class="equation">
+                                <span class="vec">u</span> · <span class="vec">v</span> = |<span class="vec">u</span>| ·
+                                |<span class="vec">v</span>| · cos α
+                            </div>
+                            <p>Součin velikostí krát cosinus úhlu</p>
+                        </div>
+                        <div class="equation-card">
+                            <h4>Test kolmosti</h4>
+                            <div class="equation">
+                                <span class="vec">u</span> ⊥ <span class="vec">v</span> ⇔ <span class="vec">u</span> ·
+                                <span class="vec">v</span> = 0
+                            </div>
+                            <p>Kolmé vektory mají nulový součin</p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="calculation">
+                        Pokračovat k výpočtu →
+                    </button>
+                </section>
+
+                <!-- Section 2: Calculation -->
+                <section id="calculation" class="lesson-section">
+                    <div class="section-badge">Výpočet</div>
+                    <h1>Výpočet skalárního součinu</h1>
+
+                    <p>
+                        Skalární součin dvou vektorů se počítá jako
+                        <strong>součet součinů odpovídajících souřadnic</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Nechť <span class="vec">u</span> = (u₁, u₂) a <span class="vec">v</span> = (v₁, v₂)
+                            jsou vektory v rovině. Jejich <strong>skalární součin</strong> je číslo:
+                        </p>
+                        <div class="equation-large">
+                            <span class="vec">u</span> · <span class="vec">v</span> = u₁ · v₁ + u₂ · v₂
+                        </div>
+                        <p class="formula-note">Výsledkem je vždy reálné číslo (skalár), nikoliv vektor.</p>
+                    </div>
+
+                    <!-- Interactive Calculation Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Přetahujte koncové body vektorů a sledujte, jak se mění hodnota skalárního součinu:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="calcCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Souřadnice vektorů</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">u</span>
+                                        <span class="vec">u</span> = <span id="calcVecU">(3, 1)</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">v</span>
+                                        <span class="vec">v</span> = <span id="calcVecV">(1, 2)</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Postup výpočtu</h4>
+                                    <div class="detailed-calculation" id="calcSteps">
+                                        <!-- JavaScript fills this -->
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="result-display">
+                                        <span class="vec">u</span> · <span class="vec">v</span> =
+                                        <span id="calcResult" class="result-value">5.0</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad výpočtu</h4>
+                            <p>
+                                Pro <span class="vec">u</span> = (2, −3) a <span class="vec">v</span> = (4, 1):
+                            </p>
+                            <p>
+                                <span class="vec">u</span> · <span class="vec">v</span> = 2 · 4 + (−3) · 1 = 8 − 3 =
+                                <strong>5</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                    <button class="btn-primary btn-next" data-next="properties">
+                        Pokračovat k vlastnostem →
+                    </button>
+                </section>
+
+                <!-- Section 3: Properties -->
+                <section id="properties" class="lesson-section">
+                    <div class="section-badge">Vlastnosti</div>
+                    <h1>Vlastnosti skalárního součinu</h1>
+
+                    <p>
+                        Skalární součin má několik důležitých algebraických vlastností,
+                        které nám usnadňují práci s ním.
+                    </p>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Komutativnost</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                <span class="vec">u</span> · <span class="vec">v</span> = <span class="vec">v</span> ·
+                                <span class="vec">u</span>
+                            </div>
+                            <p class="formula-note">Na pořadí vektorů nezáleží.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Distributivnost</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                <span class="vec">u</span> · (<span class="vec">v</span> + <span class="vec">w</span>) =
+                                <span class="vec">u</span> · <span class="vec">v</span> + <span class="vec">u</span> ·
+                                <span class="vec">w</span>
+                            </div>
+                            <p class="formula-note">Můžeme „roznásobovat" závorky.</p>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Asociativnost se skalárem</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                (k · <span class="vec">u</span>) · <span class="vec">v</span> = k · (<span
+                                    class="vec">u</span> · <span class="vec">v</span>)
+                            </div>
+                            <p class="formula-note">Skalární násobek lze vytknout.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Součin se sebou samým</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                <span class="vec">u</span> · <span class="vec">u</span> = |<span class="vec">u</span>|²
+                            </div>
+                            <p class="formula-note">Souvislost s velikostí vektoru.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Pozor na záměnu</h4>
+                            <p>
+                                Skalární součin <span class="vec">u</span> · <span class="vec">v</span> dává
+                                <strong>číslo</strong>, nikoliv vektor. Nezaměňujte s násobením vektoru skalárem
+                                (k · <span class="vec">u</span>), které dává vektor!
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="calculation">← Zpět</button>
+                    <button class="btn-primary btn-next" data-next="angle">
+                        Pokračovat k úhlu vektorů →
+                    </button>
+                </section>
+
+                <!-- Section 4: Angle -->
+                <section id="angle" class="lesson-section">
+                    <div class="section-badge">Úhel vektorů</div>
+                    <h1>Úhel dvou vektorů</h1>
+
+                    <p>
+                        Jednou z nejdůležitějších aplikací skalárního součinu je výpočet úhlu
+                        (odchylky) dvou nenulových vektorů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro výpočet úhlu</h4>
+                        <p>
+                            Pro nenulové vektory <span class="vec">u</span> a <span class="vec">v</span>
+                            platí:
+                        </p>
+                        <div class="equation-large">
+                            cos α = (<span class="vec">u</span> · <span class="vec">v</span>) / (|<span
+                                class="vec">u</span>| · |<span class="vec">v</span>|)
+                        </div>
+                        <p class="formula-note">kde α ∈ ⟨0°, 180°⟩ je úhel (odchylka) vektorů.</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Orientace podle znaménka</h4>
+                            <ul>
+                                <li><strong>Kladný součin</strong> → ostrý úhel (α &lt; 90°)</li>
+                                <li><strong>Nulový součin</strong> → pravý úhel (α = 90°)</li>
+                                <li><strong>Záporný součin</strong> → tupý úhel (α > 90°)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Angle Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Přetahujte vektory a sledujte, jak se mění úhel mezi nimi:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="angleCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Souřadnice vektorů</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">u</span>
+                                        <span class="vec">u</span> = <span id="angleVecU">(3, 0)</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">v</span>
+                                        <span class="vec">v</span> = <span id="angleVecV">(2, 2)</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span><span class="vec">u</span> · <span class="vec">v</span></span>
+                                            <span id="angleDot" class="calc-value">6.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|<span class="vec">u</span>| · |<span class="vec">v</span>|</span>
+                                            <span id="angleMags" class="calc-value">8.49</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>cos α</span>
+                                            <span id="cosVal" class="calc-value">0.707</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Úhel α</h4>
+                                    <div class="result-display">
+                                        <span id="angleVal" class="result-value" style="font-size: 1.5rem;">45.0°</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="properties">← Zpět</button>
+                    <button class="btn-primary btn-next" data-next="ortho">
+                        Pokračovat ke kolmosti →
+                    </button>
+                </section>
+
+                <!-- Section 5: Orthogonality -->
+                <section id="ortho" class="lesson-section">
+                    <div class="section-badge">Kolmost vektorů</div>
+                    <h1>Kolmost vektorů</h1>
+
+                    <p>
+                        Speciální případ nastane, když je úhel mezi vektory roven 90°.
+                        Tehdy říkáme, že jsou vektory <strong>na sebe kolmé</strong> (ortogonální).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Podmínka kolmosti</h4>
+                        <p>
+                            Dva nenulové vektory <span class="vec">u</span> a <span class="vec">v</span>
+                            jsou na sebe kolmé právě tehdy, když je jejich skalární součin roven nule:
+                        </p>
+                        <div class="equation-large">
+                            <span class="vec">u</span> ⊥ <span class="vec">v</span> &nbsp;⇔&nbsp; <span
+                                class="vec">u</span> · <span class="vec">v</span> = 0
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>
+                                Vektory <span class="vec">u</span> = (3, 2) a <span class="vec">v</span> = (−4, 6)
+                                jsou kolmé, protože:
+                            </p>
+                            <p>
+                                <span class="vec">u</span> · <span class="vec">v</span> = 3 · (−4) + 2 · 6 = −12 + 12 =
+                                <strong>0</strong> ✓
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Orthogonality Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Test kolmosti</h3>
+                        <p>Zkuste nastavit vektory tak, aby byly kolmé. Nebo klikněte na tlačítko:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="orthoCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Skalární součin</h4>
+                                    <div class="result-display" style="justify-content: center;">
+                                        <span class="vec">u</span> · <span class="vec">v</span> =
+                                        <span id="orthoDot" class="result-value" style="font-size: 1.5rem;">0.0</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel" id="orthoStatusPanel">
+                                    <h4>Jsou kolmé?</h4>
+                                    <div id="orthoStatus"
+                                        style="text-align: center; font-weight: 600; font-size: 1rem; padding: 0.5rem;">
+                                    </div>
+                                </div>
+                                <button id="makeOrthoBtn" class="btn-primary" style="width: 100%; padding: 0.75rem;">
+                                    🔄 Nastavit kolmý vektor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="angle">← Zpět</button>
+                    <button class="btn-primary btn-next" data-next="playground">
+                        Pokračovat do Playgroundu →
+                    </button>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte s vektory v rovině. Přetahujte koncové body a sledujte
+                        skalární součin, úhel i kolmost v reálném čase.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">Přetahujte červený a modrý bod</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Vektory</h4>
+                                <div class="point-coords">
+                                    <div class="point-coord">
+                                        <span class="point-label point-a">u</span>
+                                        <span id="playVecU">(2.0, 1.0)</span>
+                                    </div>
+                                    <div class="point-coord">
+                                        <span class="point-label point-b">v</span>
+                                        <span id="playVecV">(1.0, 3.0)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Výsledky</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>Skalární součin</span>
+                                        <span id="playDot" class="calc-value">5.0</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Úhel</span>
+                                        <span id="playAngle" class="calc-value">45.0°</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>|<span class="vec">u</span>|</span>
+                                        <span id="playMagU" class="calc-value">2.24</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>|<span class="vec">v</span>|</span>
+                                        <span id="playMagV" class="calc-value">3.16</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Kolmost</h4>
+                                <div id="playOrthoStatus"
+                                    style="text-align: center; font-weight: 600; padding: 0.25rem;">
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                                <button class="btn-primary" id="playOrthoBtn">Kolmý vektor</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="ortho">← Zpět</button>
+                    <button class="btn-primary btn-next" data-next="exercises">
+                        Pokračovat k procvičování →
+                    </button>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="status1"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Vypočítejte skalární součin vektorů
+                                    <span class="vec">u</span> = (2, −3) a <span class="vec">v</span> = (4, 1).
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="q1" value="a">
+                                        <span>11</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="q1" value="b">
+                                        <span>5</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="q1" value="c">
+                                        <span>8</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="q1" value="d">
+                                        <span>−5</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="feedback1"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="status2"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jsou vektory <span class="vec">a</span> = (3, 2) a
+                                    <span class="vec">b</span> = (−4, 6) na sebe kolmé?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="q2" value="a">
+                                        <span>Ano, protože jejich skalární součin je 0.</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="q2" value="b">
+                                        <span>Ne, protože jejich skalární součin není 0.</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="q2" value="c">
+                                        <span>Nelze z daných informací určit.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="feedback2"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="status3"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaký úhel svírají vektory <span class="vec">u</span> = (1, 0) a
+                                    <span class="vec">v</span> = (0, 1)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="q3" value="a">
+                                        <span>0°</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="q3" value="b">
+                                        <span>45°</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="q3" value="c">
+                                        <span>90°</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="q3" value="d">
+                                        <span>180°</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="feedback3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="status4"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Určete hodnotu parametru <em>k</em>, aby vektory
+                                    <span class="vec">u</span> = (k, 3) a <span class="vec">v</span> = (6, −2)
+                                    byly na sebe kolmé.
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="q4" value="a">
+                                        <span>k = 1</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="q4" value="b">
+                                        <span>k = −1</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="q4" value="c">
+                                        <span>k = 9</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="q4" value="d">
+                                        <span>k = −9</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="feedback4"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="status5"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaký je skalární součin <span class="vec">u</span> · <span class="vec">u</span>,
+                                    pokud |<span class="vec">u</span>| = 5?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="q5" value="a">
+                                        <span>5</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="q5" value="b">
+                                        <span>10</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="q5" value="c">
+                                        <span>25</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="q5" value="d">
+                                        <span>√5</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="feedback5"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu o skalárním součinu.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

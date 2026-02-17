@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Goniometrické funkce, stupňová a oblouková míra – interaktivní lekce">
+    <title>Goniometrické funkce – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 1</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Goniometrické funkce</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úhly a trojúhelníky
+                    </a>
+                    <a href="#unit-circle" class="sidebar-link" data-section="unit-circle">
+                        <span class="sidebar-icon">2</span>
+                        Jednotková kružnice
+                    </a>
+                    <a href="#basic-values" class="sidebar-link" data-section="basic-values">
+                        <span class="sidebar-icon">3</span>
+                        Odvození základních hodnot
+                    </a>
+                    <a href="#identities" class="sidebar-link" data-section="identities">
+                        <span class="sidebar-icon">4</span>
+                        Základní vzorce
+                    </a>
+                    <a href="#radians" class="sidebar-link" data-section="radians">
+                        <span class="sidebar-icon">5</span>
+                        Stupňová a oblouková míra
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">🎮</span>
+                        Hřiště
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+
+                <!-- ===================== SECTION 1: INTRO ===================== -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Úhly, trojúhelníky a goniometrické funkce</h1>
+
+                    <p class="lead">
+                        Goniometrické funkce (sinus, kosinus, tangens, kotangens) vznikly z potřeby
+                        měřit a počítat s úhly a stranami trojúhelníků. Začneme tím nejzákladnějším –
+                        pravoúhlým trojúhelníkem.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>📐 Pravoúhlý trojúhelník: pojmy</h4>
+                        <p>V pravoúhlém trojúhelníku s pravým úhlem u vrcholu C rozlišujeme:</p>
+                        <ul>
+                            <li><strong>Přepona</strong> (c) – strana naproti pravému úhlu, nejdelší strana</li>
+                            <li><strong>Protilehlá odvěsna</strong> – strana naproti danému úhlu α</li>
+                            <li><strong>Přilehlá odvěsna</strong> – strana přiléhající k danému úhlu α (a není přepona)
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="definition-box highlight">
+                        <h4>📖 Definice goniometrických funkcí v pravoúhlém trojúhelníku</h4>
+                        <p>Pro ostrý úhel α v pravoúhlém trojúhelníku platí:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin α</span>
+                                <span class="formula-eq">= protilehlá / přepona</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos α</span>
+                                <span class="formula-eq">= přilehlá / přepona</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tan α</span>
+                                <span class="formula-eq">= protilehlá / přilehlá</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cot α</span>
+                                <span class="formula-eq">= přilehlá / protilehlá</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive right triangle demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní pravoúhlý trojúhelník</h3>
+                        <p>Přetáhněte bod B nebo použijte posuvník pro změnu úhlu α. Sledujte, jak se mění hodnoty
+                            goniometrických funkcí:</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="triangleCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Úhel α = <span id="triAngleVal">45</span>°</label>
+                                    <input type="range" id="triAngleSlider" min="5" max="85" value="45" step="1">
+                                </div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span id="triSin" class="calc-value">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span id="triCos" class="calc-value">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>tan α</span>
+                                        <span id="triTan" class="calc-value">1.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cot α</span>
+                                        <span id="triCot" class="calc-value">1.000</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>Protilehlá (a)</span>
+                                        <span id="triA" class="calc-value highlight">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>Přilehlá (b)</span>
+                                        <span id="triB" class="calc-value highlight">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>Přepona (c)</span>
+                                        <span id="triC" class="calc-value highlight">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Využití goniometrických funkcí</h4>
+                            <p>
+                                Goniometrické funkce najdete všude: v <strong>navigaci</strong> (výpočet vzdáleností),
+                                <strong>fyzice</strong> (rozklad sil, vlnění, kyvadlo),
+                                <strong>inženýrství</strong> (výpočet výšky budovy ze vzdálenosti a úhlu pohledu),
+                                <strong>signálech</strong> (zvuk, elektřina) i <strong>počítačové grafice</strong>
+                                (rotace, projekce).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <div></div>
+                        <button class="btn-primary btn-next" data-next="unit-circle">
+                            Pokračovat k jednotkové kružnici →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 2: UNIT CIRCLE ===================== -->
+                <section id="unit-circle" class="lesson-section">
+                    <div class="section-badge">Jednotková kružnice</div>
+                    <h1>Goniometrické funkce na jednotkové kružnici</h1>
+
+                    <p class="lead">
+                        Definice přes pravoúhlý trojúhelník funguje jen pro ostré úhly (0° – 90°).
+                        Abychom mohli pracovat s libovolnými úhly, používáme <strong>jednotkovou kružnici</strong>.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📖 Definice na jednotkové kružnici</h4>
+                        <p>
+                            Jednotková kružnice má střed v počátku souřadnic a poloměr r = 1.
+                            Úhel α měříme od kladné poloosy x proti směru hodinových ručiček.
+                        </p>
+                        <p>
+                            Bod P na kružnici, odpovídající úhlu α, má souřadnice:
+                        </p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">P = </span>
+                                <span class="formula-eq">(cos α, sin α)</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem;">To znamená:</p>
+                        <ul>
+                            <li><strong>cos α</strong> = x-ová souřadnice bodu P</li>
+                            <li><strong>sin α</strong> = y-ová souřadnice bodu P</li>
+                            <li><strong>tan α</strong> = sin α / cos α (pro cos α ≠ 0)</li>
+                            <li><strong>cot α</strong> = cos α / sin α (pro sin α ≠ 0)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive unit circle -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní jednotková kružnice</h3>
+                        <p>Přetáhněte bod P po kružnici nebo použijte posuvník. Sledujte sin α (červeně) a cos α
+                            (modře):</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="unitCircleCanvas" width="500" height="500"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Úhel α = <span id="ucAngleVal">45</span>°</label>
+                                    <input type="range" id="ucAngleSlider" min="0" max="360" value="45" step="1">
+                                </div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span id="ucSin" class="calc-value" style="color: #ef4444;">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span id="ucCos" class="calc-value" style="color: #3b82f6;">0.707</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>tan α</span>
+                                        <span id="ucTan" class="calc-value">1.000</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cot α</span>
+                                        <span id="ucCot" class="calc-value">1.000</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>Bod P</span>
+                                        <span id="ucPoint" class="calc-value highlight">[0.707, 0.707]</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>Kvadrant</span>
+                                        <span id="ucQuadrant" class="calc-value highlight">I</span>
+                                    </div>
+                                </div>
+
+                                <div class="sign-table">
+                                    <h4>Znaménka ve kvadrantech</h4>
+                                    <table class="mini-table">
+                                        <tr>
+                                            <th></th>
+                                            <th>I</th>
+                                            <th>II</th>
+                                            <th>III</th>
+                                            <th>IV</th>
+                                        </tr>
+                                        <tr>
+                                            <td>sin</td>
+                                            <td class="pos">+</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                            <td class="neg">−</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cos</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                            <td class="neg">−</td>
+                                            <td class="pos">+</td>
+                                        </tr>
+                                        <tr>
+                                            <td>tan</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                        </tr>
+                                        <tr>
+                                            <td>cot</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                            <td class="pos">+</td>
+                                            <td class="neg">−</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="basic-values">
+                            Odvození základních hodnot →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 3: BASIC VALUES ===================== -->
+                <section id="basic-values" class="lesson-section">
+                    <div class="section-badge">Základní hodnoty</div>
+                    <h1>Odvození základních hodnot goniometrických funkcí</h1>
+
+                    <p class="lead">
+                        Hodnoty sin, cos, tan a cot pro úhly 0°, 30°, 45°, 60° a 90° jsou zcela zásadní.
+                        Odvodíme je pomocí speciálních trojúhelníků.
+                    </p>
+
+                    <!-- 45° derivation -->
+                    <div class="definition-box">
+                        <h4>📐 Trojúhelník 45°–45°–90° (rovnoramenný pravoúhlý)</h4>
+                        <p>
+                            Pravoúhlý rovnoramenný trojúhelník má dvě odvěsny shodné délky.
+                            Pokud zvolíme odvěsny délky 1, pak podle Pythagorovy věty:
+                        </p>
+                        <p style="text-align: center; font-size: 1.1rem;">
+                            c = √(1² + 1²) = √2
+                        </p>
+                        <p>Proto:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin 45°</span>
+                                <span class="formula-eq">= 1/√2 = √2/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos 45°</span>
+                                <span class="formula-eq">= 1/√2 = √2/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tan 45°</span>
+                                <span class="formula-eq">= 1/1 = 1</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cot 45°</span>
+                                <span class="formula-eq">= 1/1 = 1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 30°, 60° derivation -->
+                    <div class="definition-box">
+                        <h4>📐 Trojúhelník 30°–60°–90° (polovina rovnostranného)</h4>
+                        <p>
+                            Rovnostranný trojúhelník se stranou 2 rozpůlíme (výškou).
+                            Vznikne pravoúhlý trojúhelník s:
+                        </p>
+                        <ul>
+                            <li>Přepona = 2 (strana rovnostranného trojúhelníku)</li>
+                            <li>Kratší odvěsna = 1 (polovina základny)</li>
+                            <li>Delší odvěsna = √(2² − 1²) = √3</li>
+                        </ul>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin 30°</span>
+                                <span class="formula-eq">= 1/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos 30°</span>
+                                <span class="formula-eq">= √3/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">sin 60°</span>
+                                <span class="formula-eq">= √3/2</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos 60°</span>
+                                <span class="formula-eq">= 1/2</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem;">Odtud dále:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">tan 30°</span>
+                                <span class="formula-eq">= (1/2)/(√3/2) = 1/√3 = √3/3</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tan 60°</span>
+                                <span class="formula-eq">= (√3/2)/(1/2) = √3</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cot 30°</span>
+                                <span class="formula-eq">= √3</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cot 60°</span>
+                                <span class="formula-eq">= √3/3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 0° and 90° -->
+                    <div class="definition-box">
+                        <h4>📖 Hodnoty pro 0° a 90° (z jednotkové kružnice)</h4>
+                        <p>
+                            Tyto hodnoty plynnou přímo z definice na jednotkové kružnici:
+                        </p>
+                        <ul>
+                            <li>Úhel 0° → bod (1, 0): <strong>sin 0° = 0, cos 0° = 1</strong></li>
+                            <li>Úhel 90° → bod (0, 1): <strong>sin 90° = 1, cos 90° = 0</strong></li>
+                        </ul>
+                        <p>
+                            tan 0° = 0/1 = 0, cot 0° = 1/0 → <strong>není definován</strong> <br>
+                            tan 90° = 1/0 → <strong>není definován</strong>, cot 90° = 0/1 = 0
+                        </p>
+                    </div>
+
+                    <!-- Interactive special triangles demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní speciální trojúhelníky</h3>
+                        <p>Vyberte úhel a sledujte, jak se trojúhelník mění. Zobrazíme odvození krok za krokem:</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="specialCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="angle-buttons">
+                                    <button class="angle-btn active" data-angle="30">30°</button>
+                                    <button class="angle-btn" data-angle="45">45°</button>
+                                    <button class="angle-btn" data-angle="60">60°</button>
+                                </div>
+                                <div id="specialDerivation" class="derivation-panel">
+                                    <!-- Filled by JS -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Summary table -->
+                    <div class="definition-box highlight">
+                        <h4>📋 Souhrnná tabulka hodnot</h4>
+                        <div class="values-table-wrapper">
+                            <table class="values-table">
+                                <thead>
+                                    <tr>
+                                        <th>α</th>
+                                        <th>0°</th>
+                                        <th>30°</th>
+                                        <th>45°</th>
+                                        <th>60°</th>
+                                        <th>90°</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>sin α</strong></td>
+                                        <td>0</td>
+                                        <td>1/2</td>
+                                        <td>√2/2</td>
+                                        <td>√3/2</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>cos α</strong></td>
+                                        <td>1</td>
+                                        <td>√3/2</td>
+                                        <td>√2/2</td>
+                                        <td>1/2</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>tan α</strong></td>
+                                        <td>0</td>
+                                        <td>√3/3</td>
+                                        <td>1</td>
+                                        <td>√3</td>
+                                        <td>—</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>cot α</strong></td>
+                                        <td>—</td>
+                                        <td>√3</td>
+                                        <td>1</td>
+                                        <td>√3/3</td>
+                                        <td>0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Tip na zapamatování</h4>
+                            <p>
+                                Sin od 0° do 90° roste: 0, 1/2, √2/2, √3/2, 1.<br>
+                                Cos od 0° do 90° klesá: 1, √3/2, √2/2, 1/2, 0.<br>
+                                Všimněte si: sin α = cos(90° − α) — tyto funkce jsou <strong>kofunkce</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="unit-circle">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="identities">
+                            Základní vzorce →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 4: IDENTITIES ===================== -->
+                <section id="identities" class="lesson-section">
+                    <div class="section-badge">Vzorce</div>
+                    <h1>Základní goniometrické vzorce</h1>
+
+                    <p class="lead">
+                        Z definic goniometrických funkcí plynou důležité vztahy – <strong>identity</strong>,
+                        které platí pro všechny úhly, kde jsou funkce definovány.
+                    </p>
+
+                    <!-- Pythagorean identity -->
+                    <div class="definition-box highlight">
+                        <h4>📖 Základní goniometrická identita (Pythagorova věta)</h4>
+                        <p>
+                            Na jednotkové kružnici má bod P souřadnice (cos α, sin α) a leží na kružnici
+                            x² + y² = 1. Proto:
+                        </p>
+                        <div class="formula-card"
+                            style="text-align: center; font-size: 1.3rem; padding: 1rem; max-width: 400px; margin: 1rem auto;">
+                            <strong>sin²α + cos²α = 1</strong>
+                        </div>
+                        <p>
+                            Toto je nejdůležitější goniometrická identita. Platí pro každý úhel α.
+                        </p>
+                    </div>
+
+                    <!-- Quotient identities -->
+                    <div class="definition-box">
+                        <h4>📖 Podílové identity</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">tan α</span>
+                                <span class="formula-eq">= sin α / cos α</span>
+                                <span class="formula-note">(pro cos α ≠ 0)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cot α</span>
+                                <span class="formula-eq">= cos α / sin α</span>
+                                <span class="formula-note">(pro sin α ≠ 0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reciprocal identity -->
+                    <div class="definition-box">
+                        <h4>📖 Součinová identita</h4>
+                        <div class="formula-card"
+                            style="text-align: center; font-size: 1.1rem; padding: 1rem; max-width: 400px; margin: 1rem auto;">
+                            <strong>tan α · cot α = 1</strong>
+                            <span class="formula-note">(pro sin α ≠ 0 a cos α ≠ 0)</span>
+                        </div>
+                        <p>
+                            Důkaz: tan α · cot α = (sin α / cos α) · (cos α / sin α) = 1
+                        </p>
+                    </div>
+
+                    <!-- Derived identities -->
+                    <div class="definition-box">
+                        <h4>📖 Odvozené Pythagorovy identity</h4>
+                        <p>Vydělením identity sin²α + cos²α = 1:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">Dělení cos²α:</span>
+                                <span class="formula-eq">1 + tan²α = 1/cos²α</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Dělení sin²α:</span>
+                                <span class="formula-eq">1 + cot²α = 1/sin²α</span>
+                            </div>
+                        </div>
+                        <p style="margin-top: 1rem;">
+                            <strong>Odvození 1 + tan²α = 1/cos²α:</strong><br>
+                            sin²α + cos²α = 1 &nbsp;|&nbsp; dělíme cos²α<br>
+                            sin²α/cos²α + 1 = 1/cos²α<br>
+                            tan²α + 1 = 1/cos²α &nbsp; ✓
+                        </p>
+                    </div>
+
+                    <!-- Interactive identity verifier -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Ověření identit</h3>
+                        <p>Nastavte libovolný úhel α a sledujte, jak identity platí pro každou hodnotu:</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="identityCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Úhel α = <span id="idAngleVal">45</span>°</label>
+                                    <input type="range" id="idAngleSlider" min="1" max="359" value="45" step="1">
+                                </div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin²α + cos²α</span>
+                                        <span id="idPythag" class="calc-value highlight">= 1.000 ✓</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>tan α · cot α</span>
+                                        <span id="idProduct" class="calc-value highlight">= 1.000 ✓</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>1 + tan²α</span>
+                                        <span id="idTanSq" class="calc-value">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>1/cos²α</span>
+                                        <span id="idSecSq" class="calc-value">—</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>1 + cot²α</span>
+                                        <span id="idCotSq" class="calc-value">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>1/sin²α</span>
+                                        <span id="idCscSq" class="calc-value">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="basic-values">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="radians">
+                            Stupňová a oblouková míra →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 5: RADIANS ===================== -->
+                <section id="radians" class="lesson-section">
+                    <div class="section-badge">Míry úhlů</div>
+                    <h1>Stupňová a oblouková míra</h1>
+
+                    <p class="lead">
+                        Úhly můžeme měřit dvěma způsoby: ve <strong>stupních</strong> (°) nebo v
+                        <strong>radiánech</strong> (rad).
+                        V matematice a fyzice se často používají radiány.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>📖 Stupňová míra</h4>
+                        <p>
+                            Plný úhel = 360°. Jeden stupeň je 1/360 plného otočení.<br>
+                            Dále: 1° = 60' (minut), 1' = 60'' (vteřin).
+                        </p>
+                    </div>
+
+                    <div class="definition-box highlight">
+                        <h4>📖 Oblouková míra (radiány)</h4>
+                        <p>
+                            <strong>1 radián</strong> je úhel, který na jednotkové kružnici (r = 1)
+                            vytyčí oblouk o délce 1.
+                        </p>
+                        <p>
+                            Obvod jednotkové kružnice je 2π, proto:
+                        </p>
+                        <div class="formula-card"
+                            style="text-align: center; font-size: 1.2rem; padding: 1rem; max-width: 400px; margin: 1rem auto;">
+                            <strong>360° = 2π rad</strong>
+                        </div>
+                        <p>Z toho plyne:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">180°</span>
+                                <span class="formula-eq">= π rad</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">90°</span>
+                                <span class="formula-eq">= π/2 rad</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">60°</span>
+                                <span class="formula-eq">= π/3 rad</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">45°</span>
+                                <span class="formula-eq">= π/4 rad</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">30°</span>
+                                <span class="formula-eq">= π/6 rad</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📖 Převodní vzorce</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">Stupně → radiány:</span>
+                                <span class="formula-eq">rad = (stupně · π) / 180</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">Radiány → stupně:</span>
+                                <span class="formula-eq">stupně = (rad · 180) / π</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive radian demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní převod stupňů a radiánů</h3>
+                        <p>Pohybujte posuvníkem a sledujte oblouk na kružnici. Červená čára ukazuje délku oblouku v
+                            radiánech:</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="radianCanvas" width="500" height="500"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Úhel = <span id="radDegVal">180</span>°</label>
+                                    <input type="range" id="radDegSlider" min="0" max="360" value="180" step="1">
+                                </div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>Ve stupních</span>
+                                        <span id="radDeg" class="calc-value">180°</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>V radiánech</span>
+                                        <span id="radRad" class="calc-value highlight">π ≈ 3.142</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>Délka oblouku</span>
+                                        <span id="radArc" class="calc-value">π ≈ 3.142</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>Zlomek kruhu</span>
+                                        <span id="radFrac" class="calc-value">1/2</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>Výpočet</span>
+                                        <span id="radCalc" class="calc-value" style="font-size: 0.85rem;">180·π/180 =
+                                            π</span>
+                                    </div>
+                                </div>
+
+                                <div class="radian-presets">
+                                    <h4>Rychlé volby:</h4>
+                                    <div class="preset-buttons">
+                                        <button class="preset-btn" data-deg="0">0°</button>
+                                        <button class="preset-btn" data-deg="30">30°</button>
+                                        <button class="preset-btn" data-deg="45">45°</button>
+                                        <button class="preset-btn" data-deg="60">60°</button>
+                                        <button class="preset-btn" data-deg="90">90°</button>
+                                        <button class="preset-btn" data-deg="180">180°</button>
+                                        <button class="preset-btn" data-deg="270">270°</button>
+                                        <button class="preset-btn" data-deg="360">360°</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="identities">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">
+                            Hřiště →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 6: PLAYGROUND ===================== -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Hřiště</div>
+                    <h1>Hřiště: Prozkoumejte goniometrické funkce</h1>
+
+                    <p class="lead">
+                        Kombinujte různé pohledy najednou. Klikněte kamkoliv na kružnici nebo zadejte přesný úhel.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="playgroundCanvas" width="550" height="550"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Úhel α = <span id="pgAngleVal">45</span>°</label>
+                                    <input type="range" id="pgAngleSlider" min="0" max="360" value="45" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>
+                                        <input type="checkbox" id="pgShowTriangle" checked> Zobrazit trojúhelník
+                                    </label>
+                                </div>
+                                <div class="control-group">
+                                    <label>
+                                        <input type="checkbox" id="pgShowTan" checked> Zobrazit tečnu (tan)
+                                    </label>
+                                </div>
+                                <div class="calc-display">
+                                    <div class="calc-step">
+                                        <span>sin α</span>
+                                        <span id="pgSin" class="calc-value" style="color:#ef4444;">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cos α</span>
+                                        <span id="pgCos" class="calc-value" style="color:#3b82f6;">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>tan α</span>
+                                        <span id="pgTan" class="calc-value" style="color:#f59e0b;">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>cot α</span>
+                                        <span id="pgCot" class="calc-value" style="color:#a78bfa;">—</span>
+                                    </div>
+                                    <div class="calc-divider"></div>
+                                    <div class="calc-step">
+                                        <span>Radiány</span>
+                                        <span id="pgRad" class="calc-value">—</span>
+                                    </div>
+                                    <div class="calc-step">
+                                        <span>sin²+ cos²</span>
+                                        <span id="pgPythag" class="calc-value highlight">= 1.000 ✓</span>
+                                    </div>
+                                </div>
+                                <button class="btn-outline" id="pgResetBtn" style="width:100%;margin-top:0.5rem;">🔄
+                                    Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="radians">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">
+                            Procvičování →
+                        </button>
+                    </div>
+                </section>
+
+                <!-- ===================== SECTION 7: EXERCISES ===================== -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování: Goniometrické funkce</h1>
+
+                    <div class="exercises-list">
+
+                        <!-- Exercise 1 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span id="ex1Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>V pravoúhlém trojúhelníku je přepona c = 10 a protilehlá odvěsna a = 6. Jaká je
+                                    hodnota sin α?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> 0.8</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> 0.6</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> 0.75</label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"> 1.667</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span id="ex2Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaká je hodnota cos 60°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> √3/2</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> √2/2</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> 1/2</label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"> 1</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span id="ex3Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Převeďte 120° na radiány:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> π/3</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> 2π/3</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> 3π/4</label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"> 4π/3</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span id="ex4Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Pokud sin α = 3/5, jaká je hodnota cos α? (α je ostrý úhel)</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> 4/5</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> 2/5</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> 5/3</label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"> 3/4</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span id="ex5Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Jaká je hodnota tan 30°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> √3</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> 1</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> √3/3</label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"> 1/2</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span id="ex6Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Ve kterém kvadrantu je sin α > 0 a cos α < 0?</p>
+                                        <div class="options">
+                                            <label class="option"><input type="radio" name="ex6" value="a"> I.
+                                                kvadrant</label>
+                                            <label class="option"><input type="radio" name="ex6" value="b"> II.
+                                                kvadrant</label>
+                                            <label class="option"><input type="radio" name="ex6" value="c"> III.
+                                                kvadrant</label>
+                                            <label class="option"><input type="radio" name="ex6" value="d"> IV.
+                                                kvadrant</label>
+                                        </div>
+                                        <button class="btn-primary btn-check" data-exercise="6"
+                                            data-correct="b">Zkontrolovat</button>
+                                        <div id="ex6Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 7 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span id="ex7Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Kolik radiánů je 270°?</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"> π</label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"> 3π/4</label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"> 3π/2</label>
+                                    <label class="option"><input type="radio" name="ex7" value="d"> 2π</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div id="ex7Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 8 -->
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span id="ex8Status" class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Zjednodušte výraz: sin²α + cos²α + tan α · cot α</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"> 1</label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"> 2</label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"> sin²α + 1</label>
+                                    <label class="option"><input type="radio" name="ex8" value="d"> 0</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div id="ex8Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Lesson complete banner -->
+                    <div id="lessonComplete" class="lesson-complete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Zvládli jste všechna cvičení z kapitoly 1!</p>
+                        <a href="../../index.html" class="btn-primary">← Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu →</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Analytická geometrie v prostoru - souřadnice, vektory, vektorový součin, přímka a rovina v 3D.">
+    <title>Analytická geometrie v prostoru – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 11: Geometrie v prostoru</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 11</h3>
+                    <p>Geometrie v prostoru</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>Úvod
+                    </a>
+                    <a href="#coordinates" class="sidebar-link" data-section="coordinates">
+                        <span class="sidebar-icon">2</span>Souřadnice v prostoru
+                    </a>
+                    <a href="#vectors3d" class="sidebar-link" data-section="vectors3d">
+                        <span class="sidebar-icon">3</span>Vektory v prostoru
+                    </a>
+                    <a href="#cross" class="sidebar-link" data-section="cross">
+                        <span class="sidebar-icon">4</span>Vektorový součin
+                    </a>
+                    <a href="#line3d" class="sidebar-link" data-section="line3d">
+                        <span class="sidebar-icon">5</span>Přímka v prostoru
+                    </a>
+                    <a href="#plane" class="sidebar-link" data-section="plane">
+                        <span class="sidebar-icon">6</span>Rovina
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">7</span>Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Analytická geometrie v prostoru</h1>
+                    <p class="lead">
+                        Přecházíme z plochy do prostoru! V této kapitole rozšíříme
+                        známé koncepty — souřadnice, vektory, přímky — do
+                        <strong>tří dimenzí</strong>. Naučíte se pracovat
+                        s body, vektory a geometrickými útvary v 3D prostoru,
+                        včetně zcela nového nástroje — <strong>vektorového součinu</strong>.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Kartézské souřadnice v 3D prostoru [x, y, z]</li>
+                                <li>Operace s vektory v prostoru (sčítání, skalární a vektorový součin)</li>
+                                <li>Vektorový součin a jeho geometrický význam</li>
+                                <li>Parametrické rovnice přímky v prostoru</li>
+                                <li>Obecná rovnice roviny ax + by + cz + d = 0</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">🏗️</div>
+                        <div class="formula-content">
+                            <h4>Kde se 3D geometrie používá?</h4>
+                            <p>
+                                3D analytická geometrie je základem <strong>počítačové grafiky</strong>,
+                                <strong>robotiky</strong>, <strong>fyziky</strong> (mechanika, elektromagnetismus)
+                                a <strong>strojírenství</strong> (CAD/CAM systémy).
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="coordinates">
+                        Pokračovat →
+                    </button>
+                </section>
+
+                <!-- Section 2: Coordinates -->
+                <section id="coordinates" class="lesson-section">
+                    <div class="section-badge">Souřadnice</div>
+                    <h1>Souřadnice v prostoru</h1>
+
+                    <p>
+                        V prostoru přidáváme ke dvěma osám x, y třetí osu <strong>z</strong>,
+                        kolmou na obě. Každý bod je jednoznačně určen třemi souřadnicemi.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Kartézské souřadnice</h4>
+                        <p>
+                            Bod v prostoru zapisujeme jako uspořádanou trojici:
+                        </p>
+                        <div class="equation-large">
+                            A = [x, y, z]
+                        </div>
+                        <p class="formula-note">
+                            Osy tvoří <strong>pravotočivou soustavu</strong> —
+                            při pohledu z kladného konce osy z se osa x otáčí do osy y proti směru hodinových ručiček.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Vzdálenost dvou bodů</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                |AB| = √((x₂−x₁)² + (y₂−y₁)² + (z₂−z₁)²)
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4>Střed úsečky</h4>
+                            <div class="equation-large" style="font-size: 1.2rem;">
+                                S = [(x₁+x₂)/2, (y₁+y₂)/2, (z₁+z₂)/2]
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Coordinates Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: 3D Souřadnice</h3>
+                        <p>Nastavte souřadnice bodu A a B a sledujte je v prostoru:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="coordCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">🖱️ Táhněte myší pro otáčení pohledu</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Bod A</h4>
+                                    <div class="control-group">
+                                        <label>x = <span id="coordAx">2</span></label>
+                                        <input type="range" id="coordAxSlider" min="-4" max="4" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>y = <span id="coordAy">1</span></label>
+                                        <input type="range" id="coordAySlider" min="-4" max="4" value="1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>z = <span id="coordAz">3</span></label>
+                                        <input type="range" id="coordAzSlider" min="-4" max="4" value="3" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📍 Bod B</h4>
+                                    <div class="control-group">
+                                        <label>x = <span id="coordBx">-1</span></label>
+                                        <input type="range" id="coordBxSlider" min="-4" max="4" value="-1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>y = <span id="coordBy">2</span></label>
+                                        <input type="range" id="coordBySlider" min="-4" max="4" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>z = <span id="coordBz">-1</span></label>
+                                        <input type="range" id="coordBzSlider" min="-4" max="4" value="-1" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>📐 Výpočty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|AB|</span>
+                                            <span id="coordDist" class="calc-value highlight">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Střed S</span>
+                                            <span id="coordMid" class="calc-value">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="vectors3d">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Vectors in 3D -->
+                <section id="vectors3d" class="lesson-section">
+                    <div class="section-badge">Vektory</div>
+                    <h1>Vektory v prostoru</h1>
+
+                    <p>
+                        Vektory v prostoru mají tři složky. Většina operací
+                        z 2D se přirozeně rozšiřuje přidáním třetí souřadnice.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vektor v prostoru</h4>
+                        <div class="equation-large">
+                            <span style="position:relative;">
+                                <span class="vec">u</span>
+                            </span> = (u₁, u₂, u₃)
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Operace</h4>
+                            <ul>
+                                <li><strong>Součet:</strong> <span class="vec">u</span> + <span class="vec">v</span> = (u₁+v₁, u₂+v₂, u₃+v₃)</li>
+                                <li><strong>Násobek:</strong> k·<span class="vec">u</span> = (ku₁, ku₂, ku₃)</li>
+                                <li><strong>Velikost:</strong> |<span class="vec">u</span>| = √(u₁² + u₂² + u₃²)</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Skalární součin</h4>
+                            <div class="equation-large" style="font-size: 1.1rem;">
+                                <span class="vec">u</span> · <span class="vec">v</span> = u₁v₁ + u₂v₂ + u₃v₃
+                            </div>
+                            <p class="formula-note">
+                                cos φ = (<span class="vec">u</span> · <span class="vec">v</span>) / (|<span class="vec">u</span>| · |<span class="vec">v</span>|)
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Vectors Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Vektory v prostoru</h3>
+                        <p>Nastavte dva vektory a sledujte jejich součet a skalární součin:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="vectorCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">🖱️ Táhněte pro otáčení</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Vektor <span class="vec">u</span></h4>
+                                    <div class="control-group">
+                                        <label>u₁ = <span id="vecU1">2</span></label>
+                                        <input type="range" id="vecU1Slider" min="-4" max="4" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>u₂ = <span id="vecU2">1</span></label>
+                                        <input type="range" id="vecU2Slider" min="-4" max="4" value="1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>u₃ = <span id="vecU3">0</span></label>
+                                        <input type="range" id="vecU3Slider" min="-4" max="4" value="0" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📍 Vektor <span class="vec">v</span></h4>
+                                    <div class="control-group">
+                                        <label>v₁ = <span id="vecV1">0</span></label>
+                                        <input type="range" id="vecV1Slider" min="-4" max="4" value="0" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>v₂ = <span id="vecV2">2</span></label>
+                                        <input type="range" id="vecV2Slider" min="-4" max="4" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>v₃ = <span id="vecV3">1</span></label>
+                                        <input type="range" id="vecV3Slider" min="-4" max="4" value="1" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>📐 Výsledky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|<span class="vec">u</span>|</span>
+                                            <span id="vecMagU" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|<span class="vec">v</span>|</span>
+                                            <span id="vecMagV" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span><span class="vec">u</span> · <span class="vec">v</span></span>
+                                            <span id="vecDot" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Úhel φ</span>
+                                            <span id="vecAngle" class="calc-value highlight">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <div class="control-group">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="vecShowSum" checked> Zobrazit <span class="vec">u</span> + <span class="vec">v</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="coordinates">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="cross">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Cross Product -->
+                <section id="cross" class="lesson-section">
+                    <div class="section-badge">Vektorový součin</div>
+                    <h1>Vektorový součin</h1>
+
+                    <p>
+                        <strong>Vektorový součin</strong> (cross product) je operace
+                        existující pouze v 3D prostoru. Výsledkem je vektor
+                        kolmý na oba vstupní vektory.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large" style="font-size: 1.2rem;">
+                            <span class="vec">u</span> × <span class="vec">v</span> = (u₂v₃ − u₃v₂, u₃v₁ − u₁v₃, u₁v₂ − u₂v₁)
+                        </div>
+                        <p class="formula-note">
+                            Pamatujte: „střed bez krajů" — pro každou složku
+                            vynásobíme „zbylé" dvě složky a odečteme.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Geometrický význam</h4>
+                            <ul>
+                                <li><strong>Směr:</strong> <span class="vec">u</span> × <span class="vec">v</span> je kolmý na <span class="vec">u</span> i <span class="vec">v</span></li>
+                                <li><strong>Orientace:</strong> pravidlo pravé ruky</li>
+                                <li><strong>Velikost:</strong> |<span class="vec">u</span> × <span class="vec">v</span>| = |<span class="vec">u</span>|·|<span class="vec">v</span>|·sin φ</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Plocha rovnoběžníku</h4>
+                            <p>
+                                Velikost vektorového součinu |<span class="vec">u</span> × <span class="vec">v</span>| odpovídá
+                                <strong>ploše rovnoběžníku</strong> rozepjatého
+                                vektory <span class="vec">u</span> a <span class="vec">v</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Antikomutativita</h4>
+                            <p>
+                                Vektorový součin <strong>není komutativní</strong>:
+                                <span class="vec">u</span> × <span class="vec">v</span> = −(<span class="vec">v</span> × <span class="vec">u</span>). Záleží na pořadí!
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Cross Product Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Vektorový součin</h3>
+                        <p>Nastavte <span class="vec">u</span> a <span class="vec">v</span> a pozorujte kolmý vektor <span class="vec">u</span> × <span class="vec">v</span>:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="crossCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">🖱️ Táhněte pro otáčení pohledu</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Vektor <span class="vec">u</span></h4>
+                                    <div class="control-group">
+                                        <label>u = (<span id="crU1">2</span>, <span id="crU2">0</span>, <span
+                                                id="crU3">0</span>)</label>
+                                        <input type="range" id="crU1S" min="-3" max="3" value="2" step="1">
+                                        <input type="range" id="crU2S" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="crU3S" min="-3" max="3" value="0" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📍 Vektor <span class="vec">v</span></h4>
+                                    <div class="control-group">
+                                        <label>v = (<span id="crV1">0</span>, <span id="crV2">2</span>, <span
+                                                id="crV3">0</span>)</label>
+                                        <input type="range" id="crV1S" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="crV2S" min="-3" max="3" value="2" step="1">
+                                        <input type="range" id="crV3S" min="-3" max="3" value="0" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek <span class="vec">u</span> × <span class="vec">v</span></h4>
+                                    <div id="crossResult"
+                                        style="text-align:center;font-family:'Times New Roman',serif;font-size:1.3rem;font-weight:600;color:#10b981;padding:0.5rem;">
+                                        (0, 0, 4)
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|<span class="vec">u</span> × <span class="vec">v</span>|</span>
+                                            <span id="crossMag" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Plocha ▱</span>
+                                            <span id="crossArea" class="calc-value">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <div class="control-group">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="crossShowPlane" checked> Zobrazit rovnoběžník
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="vectors3d">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="line3d">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Line in 3D -->
+                <section id="line3d" class="lesson-section">
+                    <div class="section-badge">Přímka</div>
+                    <h1>Přímka v prostoru</h1>
+
+                    <p>
+                        Přímku v prostoru nelze zapsat jedinou rovnicí.
+                        Používáme <strong>parametrické vyjádření</strong>
+                        pomocí bodu a směrového vektoru.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Parametrická rovnice přímky</h4>
+                        <p>Přímka procházející bodem A = [a₁, a₂, a₃] se směrovým vektorem <span class="vec">u</span> = (u₁, u₂, u₃):</p>
+                        <div class="equation-large" style="font-size: 1.2rem;">
+                            X = A + t · <span class="vec">u</span>, &nbsp; t ∈ ℝ
+                        </div>
+                        <p class="formula-note">
+                            Po složkách: x = a₁ + t·u₁, &nbsp; y = a₂ + t·u₂, &nbsp; z = a₃ + t·u₃
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Vzájemná poloha přímek v prostoru</h4>
+                            <p>
+                                Na rozdíl od roviny, kde se dvě přímky buď protínají, jsou rovnoběžné, nebo totožné,
+                                v prostoru existuje navíc čtvrtá možnost — přímky mohou být <strong>mimoběžné</strong>
+                                (neleží v jedné rovině).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Line Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Přímka v prostoru</h3>
+                        <p>Nastavte bod A a směrový vektor <span class="vec">u</span>:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="lineCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">🖱️ Táhněte pro otáčení</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Bod A</h4>
+                                    <div class="control-group">
+                                        <label>A = [<span id="lineAx">1</span>, <span id="lineAy">0</span>, <span
+                                                id="lineAz">1</span>]</label>
+                                        <input type="range" id="lineAxS" min="-3" max="3" value="1" step="1">
+                                        <input type="range" id="lineAyS" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="lineAzS" min="-3" max="3" value="1" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📍 Směrový vektor <span class="vec">u</span></h4>
+                                    <div class="control-group">
+                                        <label><span class="vec">u</span> = (<span id="lineUx">2</span>, <span id="lineUy">1</span>, <span
+                                                id="lineUz">-1</span>)</label>
+                                        <input type="range" id="lineUxS" min="-3" max="3" value="2" step="1">
+                                        <input type="range" id="lineUyS" min="-3" max="3" value="1" step="1">
+                                        <input type="range" id="lineUzS" min="-3" max="3" value="-1" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Parametrické rovnice</h4>
+                                    <div id="lineEq" class="equation-block"
+                                        style="font-family:'Times New Roman',serif;font-size:1.05rem;color:#10b981;padding:0.5rem;line-height:1.8;">
+                                        x = 1 + 2t<br>y = t<br>z = 1 − t
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="cross">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="plane">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Plane -->
+                <section id="plane" class="lesson-section">
+                    <div class="section-badge">Rovina</div>
+                    <h1>Rovina v prostoru</h1>
+
+                    <p>
+                        Rovina je základní plošný útvar v 3D prostoru.
+                        Je jednoznačně určena bodem a <strong>normálovým vektorem</strong>
+                        — vektorem kolmým na rovinu.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Obecná rovnice roviny</h4>
+                        <div class="equation-large">
+                            ax + by + cz + d = 0
+                        </div>
+                        <p class="formula-note">
+                            Kde <span class="vec">n</span> = (a, b, c) je normálový vektor roviny.
+                            Pro bod A = [x₀, y₀, z₀] ležící v rovině:
+                            d = −(ax₀ + by₀ + cz₀).
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Vzdálenost bodu od roviny</h4>
+                            <div class="equation-large" style="font-size: 1.1rem;">
+                                d(P, ρ) = |ax₀ + by₀ + cz₀ + d| / √(a² + b² + c²)
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4>Odchylka přímky a roviny</h4>
+                            <p>
+                                Odchylka přímky se směrovým vektorem <span class="vec">u</span> od roviny
+                                s normálou <span class="vec">n</span>:
+                            </p>
+                            <div class="equation-large" style="font-size: 1.1rem;">
+                                sin α = |<span class="vec">u</span> · <span class="vec">n</span>| / (|<span class="vec">u</span>| · |<span class="vec">n</span>|)
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Plane Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Rovina</h3>
+                        <p>Nastavte normálový vektor a bod, sledujte rovinu v 3D:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="planeCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">🖱️ Táhněte pro otáčení</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Normála <span class="vec">n</span></h4>
+                                    <div class="control-group">
+                                        <label><span class="vec">n</span> = (<span id="plNx">1</span>, <span id="plNy">1</span>, <span
+                                                id="plNz">1</span>)</label>
+                                        <input type="range" id="plNxS" min="-3" max="3" value="1" step="1">
+                                        <input type="range" id="plNyS" min="-3" max="3" value="1" step="1">
+                                        <input type="range" id="plNzS" min="-3" max="3" value="1" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📍 Bod na rovině</h4>
+                                    <div class="control-group">
+                                        <label>A = [<span id="plAx">1</span>, <span id="plAy">0</span>, <span
+                                                id="plAz">0</span>]</label>
+                                        <input type="range" id="plAxS" min="-3" max="3" value="1" step="1">
+                                        <input type="range" id="plAyS" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="plAzS" min="-3" max="3" value="0" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Obecná rovnice</h4>
+                                    <div id="planeEq"
+                                        style="text-align:center;font-family:'Times New Roman',serif;font-size:1.2rem;font-weight:600;color:#10b981;padding:0.5rem;">
+                                        x + y + z − 1 = 0
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vzdálenost testovacího bodu</h4>
+                                    <div class="control-group">
+                                        <label>P = [<span id="plPx">0</span>, <span id="plPy">0</span>, <span
+                                                id="plPz">0</span>]</label>
+                                        <input type="range" id="plPxS" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="plPyS" min="-3" max="3" value="0" step="1">
+                                        <input type="range" id="plPzS" min="-3" max="3" value="0" step="1">
+                                    </div>
+                                    <div class="calculation-steps" style="margin-top:0.5rem;">
+                                        <div class="calc-step calc-step-main">
+                                            <span>d(P, ρ)</span>
+                                            <span id="plDist" class="calc-value highlight">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="line3d">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>3D Playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Přidávejte body, vektory a rovinu
+                        do 3D scény. Otáčejte pohledem pro lepší prostorovou orientaci.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Táhněte pro otáčení pohledu</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Bod A</h4>
+                                <div class="control-group">
+                                    <label>A = [<span id="pgAx">2</span>, <span id="pgAy">1</span>, <span
+                                            id="pgAz">3</span>]</label>
+                                    <input type="range" id="pgAxS" min="-4" max="4" value="2" step="1">
+                                    <input type="range" id="pgAyS" min="-4" max="4" value="1" step="1">
+                                    <input type="range" id="pgAzS" min="-4" max="4" value="3" step="1">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Bod B</h4>
+                                <div class="control-group">
+                                    <label>B = [<span id="pgBx">-1</span>, <span id="pgBy">2</span>, <span
+                                            id="pgBz">0</span>]</label>
+                                    <input type="range" id="pgBxS" min="-4" max="4" value="-1" step="1">
+                                    <input type="range" id="pgByS" min="-4" max="4" value="2" step="1">
+                                    <input type="range" id="pgBzS" min="-4" max="4" value="0" step="1">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Výpočty</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>|AB|</span>
+                                        <span id="pgDist" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Střed S</span>
+                                        <span id="pgMid" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Vektor <span class="vec">AB</span></span>
+                                        <span id="pgVec" class="calc-value">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="pgResetBtn">Reset pohledu</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="plane">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 8: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je vzdálenost bodů A = [1, 2, 3] a B = [4, 6, 3]?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1"
+                                            value="a"><span>4</span></label>
+                                    <label class="option"><input type="radio" name="ex1"
+                                            value="b"><span>5</span></label>
+                                    <label class="option"><input type="radio" name="ex1"
+                                            value="c"><span>√34</span></label>
+                                    <label class="option"><input type="radio" name="ex1"
+                                            value="d"><span>7</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočtěte skalární součin <span class="vec">u</span> · <span class="vec">v</span> pro <span class="vec">u</span> = (1, −2, 3) a <span class="vec">v</span> = (4, 0, −1).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2"
+                                            value="a"><span>7</span></label>
+                                    <label class="option"><input type="radio" name="ex2"
+                                            value="b"><span>1</span></label>
+                                    <label class="option"><input type="radio" name="ex2"
+                                            value="c"><span>−1</span></label>
+                                    <label class="option"><input type="radio" name="ex2"
+                                            value="d"><span>3</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočtěte vektorový součin <span class="vec">u</span> × <span class="vec">v</span> pro <span class="vec">u</span> = (1, 0, 0) a <span class="vec">v</span> = (0, 1, 0).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>(0, 0,
+                                            1)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>(0, 0,
+                                            −1)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>(1, 1,
+                                            0)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>(0, 0,
+                                            0)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaký je normálový vektor roviny 2x − 3y + z − 5 = 0?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>(2, 3,
+                                            1)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>(2, −3,
+                                            1)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>(−2, 3,
+                                            −1)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>(2, −3,
+                                            −5)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je vzdálenost bodu P = [1, 1, 1] od roviny x + y + z − 6 = 0?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="a"><span>√3</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>3/√3 =
+                                            √3</span></label>
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="c"><span>3</span></label>
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="d"><span>2√3</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jsou vektory <span class="vec">u</span> = (1, 2, 3) a <span class="vec">v</span> = (2, 4, 6) kolineární?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>Ano, <span class="vec">v</span> =
+                                            2·<span class="vec">u</span></span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>Ne, nejsou
+                                            násobkem</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>Ano, jsou
+                                            kolmé</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>Nelze
+                                            určit</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6"
+                                    data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Analytická geometrie v prostoru.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

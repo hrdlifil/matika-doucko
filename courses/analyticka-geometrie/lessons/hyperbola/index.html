@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hyperbola - definice, kanonická rovnice, asymptoty, excentricita a interaktivní vizualizace.">
+    <title>Hyperbola – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 9: Hyperbola</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 9</h3>
+                    <p>Hyperbola</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#definition" class="sidebar-link" data-section="definition">
+                        <span class="sidebar-icon">2</span>
+                        Definice hyperboly
+                    </a>
+                    <a href="#equation" class="sidebar-link" data-section="equation">
+                        <span class="sidebar-icon">3</span>
+                        Kanonická rovnice
+                    </a>
+                    <a href="#asymptotes" class="sidebar-link" data-section="asymptotes">
+                        <span class="sidebar-icon">4</span>
+                        Asymptoty
+                    </a>
+                    <a href="#eccentricity" class="sidebar-link" data-section="eccentricity">
+                        <span class="sidebar-icon">5</span>
+                        Excentricita
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Hyperbola</h1>
+                    <p class="lead">
+                        Hyperbola je další z kuželoseček — křivka tvořená dvěma symetrickými
+                        větvemi. Najdete ji v navigaci (hyperbolická navigace), fyzice
+                        (dráhy částic), a dokonce v architektuře (chladicí věže).
+                        V této kapitole se naučíte ji popsat, vizualizovat a počítat s ní.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Definici hyperboly pomocí ohnisek</li>
+                                <li>Kanonickou rovnici a její parametry</li>
+                                <li>Asymptoty — přímky, ke kterým se větve blíží</li>
+                                <li>Excentricitu a vztah k tvaru hyperboly</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">📡</div>
+                        <div class="formula-content">
+                            <h4>Kde se hyperbola vyskytuje?</h4>
+                            <p>
+                                Systémy GPS a LORAN určují polohu pomocí
+                                <strong>rozdílu vzdáleností</strong> od vysílačů — to je
+                                přesně definice hyperboly! Tělesa, která obletí Slunce
+                                jen jednou, letí po hyperbolické dráze.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="definition">
+                        Pokračovat k definici →
+                    </button>
+                </section>
+
+                <!-- Section 2: Definition -->
+                <section id="definition" class="lesson-section">
+                    <div class="section-badge">Definice</div>
+                    <h1>Definice hyperboly</h1>
+
+                    <p>
+                        Hyperbola se definuje podobně jako elipsa, ale místo
+                        <strong>součtu</strong> vzdáleností od ohnisek pracujeme s jejich
+                        <strong>rozdílem</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Hyperbola je množina všech bodů X roviny, pro které platí:
+                        </p>
+                        <div class="equation-large">
+                            | |XF₁| − |XF₂| | = 2a = konst.
+                        </div>
+                        <p class="formula-note">
+                            <strong>Absolutní hodnota rozdílu</strong> vzdáleností od obou
+                            ohnisek je pro každý bod na hyperbole stejná a rovna 2a.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Klíčové pojmy</h4>
+                            <ul>
+                                <li><strong>F₁, F₂</strong> — ohniska</li>
+                                <li><strong>S</strong> — střed (průsečík os)</li>
+                                <li><strong>a</strong> — reálná poloosa</li>
+                                <li><strong>b</strong> — imaginární poloosa</li>
+                                <li><strong>e</strong> — excentricita (vzdálenost ohniska)</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Základní vztah</h4>
+                            <div class="equation-large" style="font-size: 1.3rem;">
+                                e² = a² + b²
+                            </div>
+                            <p class="formula-note">
+                                Na rozdíl od elipsy zde platí
+                                e &gt; a. Ohniska leží <strong>dále</strong> od středu
+                                než vrcholy.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Definition Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Definice hyperboly</h3>
+                        <p>Táhněte bod X po hyperbole a sledujte, že ||XF₁| − |XF₂|| je konstantní:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="definitionCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod X po hyperbole</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="defAVal">3.0</span></label>
+                                        <input type="range" id="defASlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="defBVal">2.0</span></label>
+                                        <input type="range" id="defBSlider" min="1" max="5" value="2" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vzdálenosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Bod X</span>
+                                            <span id="defPointX" class="calc-value">[3.0, 0.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|XF₁|</span>
+                                            <span id="defDist1" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|XF₂|</span>
+                                            <span id="defDist2" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>||XF₁| − |XF₂||</span>
+                                            <span id="defDiff" class="calc-value highlight">6.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Ověření: 2a</h4>
+                                    <div
+                                        style="text-align:center;font-size:1.3rem;font-weight:700;color:#10b981;padding:0.25rem;">
+                                        <span id="def2a">2a = 6.0</span> ✓
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🔄</div>
+                        <div class="info-card-content">
+                            <h4>Srovnání s elipsou</h4>
+                            <p>
+                                <strong>Elipsa:</strong> |XF₁| + |XF₂| = 2a (součet = konst.) →
+                                uzavřená křivka<br>
+                                <strong>Hyperbola:</strong> ||XF₁| − |XF₂|| = 2a (rozdíl = konst.) →
+                                dvě větve
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="equation">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Canonical Equation -->
+                <section id="equation" class="lesson-section">
+                    <div class="section-badge">Kanonická rovnice</div>
+                    <h1>Kanonická rovnice hyperboly</h1>
+
+                    <p>
+                        Umístíme-li střed hyperboly do počátku souřadnic s reálnou osou
+                        podél osy x, dostaneme kanonickou rovnici.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Kanonická rovnice</h4>
+                        <p>
+                            Hyperbola se středem v počátku, reálná osa na ose x:
+                        </p>
+                        <div class="equation-large">
+                            x²/a² − y²/b² = 1
+                        </div>
+                        <p class="formula-note">
+                            Kde a, b &gt; 0. Vrcholy: A₁ = [−a, 0], A₂ = [a, 0].
+                            Ohniska: F₁ = [−e, 0], F₂ = [e, 0], kde e = √(a² + b²).
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Reálná osa podél osy y</h4>
+                            <p>
+                                Pokud je reálná osa podél osy y, rovnice má tvar
+                                <strong>y²/a² − x²/b² = 1</strong>.
+                                Ohniska pak leží na ose y.
+                                Záporný člen určuje, ve kterém směru se hyperbola „otevírá".
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Equation Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Rovnice hyperboly</h3>
+                        <p>Měňte hodnoty a, b a sledujte tvar hyperboly:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="equationCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="eqAVal">3.0</span></label>
+                                        <input type="range" id="eqASlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="eqBVal">2.0</span></label>
+                                        <input type="range" id="eqBSlider" min="1" max="5" value="2" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vypočtené hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Reálná poloosa a</span>
+                                            <span id="eqA" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Imaginární poloosa b</span>
+                                            <span id="eqB" class="calc-value">2.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>e = √(a² + b²)</span>
+                                            <span id="eqE" class="calc-value">3.61</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Kanonická rovnice</h4>
+                                    <div id="eqEquation"
+                                        style="text-align:center;font-family:'Times New Roman',serif;font-size:1.2rem;font-weight:600;color:#10b981;padding:0.5rem;">
+                                        x²/9 − y²/4 = 1
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Body</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Vrcholy</span>
+                                            <span id="eqVert" class="calc-value">[±3, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Ohniska</span>
+                                            <span id="eqFoci" class="calc-value">[±3.6, 0]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="definition">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="asymptotes">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Asymptotes -->
+                <section id="asymptotes" class="lesson-section">
+                    <div class="section-badge">Asymptoty</div>
+                    <h1>Asymptoty hyperboly</h1>
+
+                    <p>
+                        Na rozdíl od elipsy se hyperbola táhne do nekonečna.
+                        Její větve se blíží k dvěma přímkám — <strong>asymptotám</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Asymptoty</h4>
+                        <p>
+                            Pro hyperbolu x²/a² − y²/b² = 1 jsou asymptoty:
+                        </p>
+                        <div class="equation-large">
+                            y = ±(b/a) · x
+                        </div>
+                        <p class="formula-note">
+                            Asymptoty procházejí středem hyperboly a tvoří „trychtýř",
+                            ve kterém leží obě větve. Hyperbola se k nim libovolně blíží,
+                            ale nikdy se jich <strong>nedotkne</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💎</div>
+                        <div class="info-card-content">
+                            <h4>Rovnoosá hyperbola</h4>
+                            <p>
+                                Pokud a = b, asymptoty jsou y = ±x (kolmé). Taková
+                                hyperbola se nazývá <strong>rovnoosá</strong>. Její
+                                rovnice je x² − y² = a².
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Asymptotes Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Asymptoty</h3>
+                        <p>Měňte a, b a sledujte, jak se mění asymptoty a „otevřenost" hyperboly:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="asymptoteCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="asyAVal">3.0</span></label>
+                                        <input type="range" id="asyASlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="asyBVal">2.0</span></label>
+                                        <input type="range" id="asyBSlider" min="1" max="5" value="2" step="0.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="asyShowRect" checked>
+                                            Referenční obdélník
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Asymptoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Směrnice k</span>
+                                            <span id="asySlope" class="calc-value">±0.667</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>y₁</span>
+                                            <span id="asyEq1" class="calc-value">y = 0.67x</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>y₂</span>
+                                            <span id="asyEq2" class="calc-value">y = −0.67x</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Úhel mezi asymptotami</h4>
+                                    <div id="asyAngle"
+                                        style="text-align:center;font-size:1.2rem;font-weight:600;color:#a78bfa;padding:0.5rem;">
+                                        67.4°
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="equation">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="eccentricity">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Eccentricity -->
+                <section id="eccentricity" class="lesson-section">
+                    <div class="section-badge">Excentricita</div>
+                    <h1>Excentricita hyperboly</h1>
+
+                    <p>
+                        Excentricita hyperboly vyjadřuje, jak moc je hyperbola
+                        „otevřená".
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice excentricity</h4>
+                        <div class="equation-large">
+                            ε = e / a = √(a² + b²) / a
+                        </div>
+                        <p class="formula-note">
+                            Pro hyperbolu vždy platí <strong>ε &gt; 1</strong>.
+                            Čím větší ε, tím „plošší" a otevřenější hyperbola.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Speciální hodnoty</h4>
+                            <ul>
+                                <li><strong>ε = √2 ≈ 1.41</strong> → rovnoosá (a = b)</li>
+                                <li><strong>ε blízko 1</strong> → úzká, „špičatá"</li>
+                                <li><strong>ε ≫ 1</strong> → velmi otevřená, téměř přímka</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Srovnání kuželoseček</h4>
+                            <ul>
+                                <li><strong>Kružnice:</strong> ε = 0</li>
+                                <li><strong>Elipsa:</strong> 0 &lt; ε &lt; 1</li>
+                                <li><strong>Parabola:</strong> ε = 1</li>
+                                <li><strong>Hyperbola:</strong> ε &gt; 1</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Eccentricity Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Excentricita</h3>
+                        <p>Měňte excentricitu a pozorujte, jak se mění tvar hyperboly:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="eccentricityCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry</h4>
+                                    <div class="control-group">
+                                        <label>ε = <span id="eccVal">1.20</span></label>
+                                        <input type="range" id="eccSlider" min="1.01" max="4" value="1.2" step="0.01">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>a = <span id="eccAVal">3.0</span></label>
+                                        <input type="range" id="eccASlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>a</span>
+                                            <span id="eccA" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>e = ε · a</span>
+                                            <span id="eccE" class="calc-value">3.60</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>b = √(e² − a²)</span>
+                                            <span id="eccB" class="calc-value">1.98</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Tvar</h4>
+                                    <div id="eccShape"
+                                        style="text-align:center;font-weight:600;font-size:1.1rem;color:#10b981;padding:0.5rem;">
+                                        Mírně otevřená
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="asymptotes">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Měňte parametry hyperboly,
+                        posuňte střed a testujte, zda body leží na hyperbole,
+                        mezi větvemi, nebo vně.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Přetahujte střed S | Klikněte pro test bodu</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Hyperbola</h4>
+                                <div class="calculation-steps">
+                                    <div class="calc-step">
+                                        <span>Střed S</span>
+                                        <span id="playCenter" class="calc-value">[0.0, 0.0]</span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-top:0.5rem;">
+                                    <label>a = <span id="playAVal">3.0</span></label>
+                                    <input type="range" id="playASlider" min="1" max="5" value="3" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>b = <span id="playBVal">2.0</span></label>
+                                    <input type="range" id="playBSlider" min="0.5" max="5" value="2" step="0.5">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Hodnoty</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>e</span>
+                                        <span id="playE" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>ε</span>
+                                        <span id="playEcc" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Rovnice</span>
+                                        <span id="playEq" class="calc-value" style="font-size:0.8rem;">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Testovaný bod</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>P</span>
+                                        <span id="playTestP" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Poloha</span>
+                                        <span id="playTestResult" class="calc-value">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="eccentricity">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Hyperbola má poloosy a = 3, b = 4. Jaká je vzdálenost ohnisek od středu (e)?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>e = 7</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>e = 5</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>e = 1</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>e = √7</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je kanonická rovnice hyperboly s a = 4, b = 3,
+                                    reálná osa na ose x?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>x²/16 + y²/9 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>x²/16 − y²/9 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>x²/9 − y²/16 = 1</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>y²/16 − x²/9 = 1</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaké jsou asymptoty hyperboly x²/9 − y²/16 = 1?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>y = ±(3/4)x</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>y = ±(4/3)x</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>y = ±x</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>y = ±(9/16)x</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je excentricita hyperboly x²/9 − y²/16 = 1?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span>ε = 5/4 = 1.25</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span>ε = 5/3 ≈ 1.67</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span>ε = 4/3 ≈ 1.33</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span>ε = 3/5 = 0.6</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Hyperbola má ohniska F = [±5, 0] a reálnou poloosu a = 3.
+                                    Jaká je délka imaginární poloosy b?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex5" value="a">
+                                        <span>b = 2</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex5" value="b">
+                                        <span>b = 4</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex5" value="c">
+                                        <span>b = √34</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex5" value="d">
+                                        <span>b = 8</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Leží bod P = [5, 3] na hyperbole x²/9 − y²/16 = 1,
+                                    mezi větvemi, nebo vně?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex6" value="a">
+                                        <span>Na hyperbole (hodnota = 1)</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex6" value="b">
+                                        <span>Mezi větvemi (hodnota &lt; 1)</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex6" value="c">
+                                        <span>Vně — za větvemi (hodnota &gt; 1)</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex6" value="d">
+                                        <span>Nelze určit</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Hyperbola.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

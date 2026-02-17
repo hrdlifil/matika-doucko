@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kružnice - středová a obecná rovnice kružnice, vzájemná poloha přímky a kružnice, tečna.">
+    <title>Kružnice – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 7: Kružnice</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 7</h3>
+                    <p>Kružnice</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#center-form" class="sidebar-link" data-section="center-form">
+                        <span class="sidebar-icon">2</span>
+                        Středová rovnice
+                    </a>
+                    <a href="#general-form" class="sidebar-link" data-section="general-form">
+                        <span class="sidebar-icon">3</span>
+                        Obecná rovnice
+                    </a>
+                    <a href="#line-circle" class="sidebar-link" data-section="line-circle">
+                        <span class="sidebar-icon">4</span>
+                        Přímka a kružnice
+                    </a>
+                    <a href="#tangent" class="sidebar-link" data-section="tangent">
+                        <span class="sidebar-icon">5</span>
+                        Tečna kružnice
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Kružnice</h1>
+                    <p class="lead">
+                        Kružnice je jedna z nejdůležitějších křivek v analytické geometrii.
+                        V této kapitole se naučíte pracovat s její rovnicí, převádět mezi středovým
+                        a obecným tvarem a řešit vzájemnou polohu přímky a kružnice.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Středovou rovnici kružnice a její parametry</li>
+                                <li>Obecnou rovnici kružnice a převod mezi tvary</li>
+                                <li>Vzájemnou polohu přímky a kružnice</li>
+                                <li>Rovnici tečny ke kružnici</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">⭕</div>
+                        <div class="formula-content">
+                            <h4>Definice kružnice</h4>
+                            <p>
+                                Kružnice je množina všech bodů roviny, které mají od pevného bodu
+                                S (středu) <strong>stejnou vzdálenost</strong> r (poloměr).
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="center-form">
+                        Pokračovat ke středové rovnici →
+                    </button>
+                </section>
+
+                <!-- Section 2: Center Form -->
+                <section id="center-form" class="lesson-section">
+                    <div class="section-badge">Středová rovnice</div>
+                    <h1>Středová rovnice kružnice</h1>
+
+                    <p>
+                        Středová rovnice přímo vyjadřuje definici kružnice — vzdálenost
+                        libovolného bodu [x, y] od středu S = [m, n] je rovna poloměru r.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Středová rovnice</h4>
+                        <p>
+                            Kružnice se středem S = [m, n] a poloměrem r má rovnici:
+                        </p>
+                        <div class="equation-large">
+                            (x − m)² + (y − n)² = r²
+                        </div>
+                        <p class="formula-note">
+                            Každý bod [x, y] ležící na kružnici splňuje tuto rovnici.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Speciální případy</h4>
+                            <ul>
+                                <li>Střed v počátku: <strong>x² + y² = r²</strong></li>
+                                <li>Jednotková kružnice: <strong>x² + y² = 1</strong></li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Co určuje kružnici?</h4>
+                            <ul>
+                                <li>Střed S = [m, n] — poloha</li>
+                                <li>Poloměr r &gt; 0 — velikost</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Center Form Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Přetahujte střed kružnice a měňte poloměr posuvníkem:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="centerFormCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte střed S</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametry kružnice</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Střed S</span>
+                                            <span id="cfCenter" class="calc-value">[0.0, 0.0]</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group" style="margin-top: 0.75rem;">
+                                        <label>Poloměr r = <span id="cfRadiusVal">3.0</span></label>
+                                        <input type="range" id="cfRadiusSlider" min="0.5" max="5" value="3" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Středová rovnice</h4>
+                                    <div id="cfEquation"
+                                        style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.2rem; font-weight: 600; color: #10b981; padding: 0.5rem;">
+                                        x² + y² = 9
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>🔍 Testovat bod</h4>
+                                    <p style="font-size: 0.85rem; color: var(--text-tertiary); margin-bottom: 0.5rem;">
+                                        Klikněte kamkoli na plátno pro test bodu.
+                                    </p>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Bod P</span>
+                                            <span id="cfTestPoint" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|SP|</span>
+                                            <span id="cfTestDist" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Poloha</span>
+                                            <span id="cfTestResult" class="calc-value">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Kružnice se středem S = [2, −1] a poloměrem r = 3:</p>
+                            <p>
+                                (x − 2)² + (y + 1)² = 9
+                            </p>
+                            <p>Leží bod A = [5, −1] na kružnici?
+                                (5 − 2)² + (−1 + 1)² = 9 + 0 = 9 = r² ✓ <strong>Ano!</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="general-form">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: General Form -->
+                <section id="general-form" class="lesson-section">
+                    <div class="section-badge">Obecná rovnice</div>
+                    <h1>Obecná rovnice kružnice</h1>
+
+                    <p>
+                        Roznásobením středové rovnice získáme <strong>obecnou rovnici kružnice</strong>.
+                        Naopak — z obecné rovnice můžeme zpětně dopočítat střed a poloměr.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Obecná rovnice</h4>
+                        <p>
+                            Obecná rovnice kružnice má tvar:
+                        </p>
+                        <div class="equation-large">
+                            x² + y² + Dx + Ey + F = 0
+                        </div>
+                        <p class="formula-note">
+                            Kde střed S = [−D/2, −E/2] a poloměr r = √(D²/4 + E²/4 − F).
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Podmínka existence</h4>
+                            <p>
+                                Aby rovnice skutečně popisovala kružnici, musí platit:
+                                <strong>D²/4 + E²/4 − F &gt; 0</strong>.
+                                Pokud je výraz roven nule, jde o bod; pokud je záporný, rovnice nemá řešení.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive General Form Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Převod mezi tvary</h3>
+                        <p>Upravte koeficienty D, E, F a sledujte, jak se mění kružnice:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="generalFormCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Obecná rovnice: x² + y² + Dx + Ey + F = 0</h4>
+                                    <div class="control-group">
+                                        <label>D = <span id="gfDValue">-4</span></label>
+                                        <input type="range" id="gfDSlider" min="-8" max="8" value="-4" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>E = <span id="gfEValue">2</span></label>
+                                        <input type="range" id="gfESlider" min="-8" max="8" value="2" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>F = <span id="gfFValue">-4</span></label>
+                                        <input type="range" id="gfFSlider" min="-15" max="15" value="-4" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Dopočítané parametry</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Střed S = [−D/2, −E/2]</span>
+                                            <span id="gfCenter" class="calc-value">[2.0, −1.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>r² = D²/4 + E²/4 − F</span>
+                                            <span id="gfR2" class="calc-value">9.00</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>r</span>
+                                            <span id="gfRadius" class="calc-value highlight">3.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Středová rovnice</h4>
+                                    <div id="gfCenterEq"
+                                        style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.1rem; font-weight: 600; color: #10b981; padding: 0.5rem;">
+                                        (x − 2)² + (y + 1)² = 9
+                                    </div>
+                                </div>
+                                <div class="calc-panel" id="gfStatusPanel">
+                                    <div id="gfStatus"
+                                        style="text-align: center; font-weight: 600; font-size: 0.95rem; padding: 0.25rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad: Převod na středový tvar</h4>
+                            <p>x² + y² − 6x + 2y + 1 = 0</p>
+                            <p>D = −6, E = 2, F = 1</p>
+                            <p>S = [3, −1], r = √(9 + 1 − 1) = √9 = <strong>3</strong></p>
+                            <p>→ (x − 3)² + (y + 1)² = 9</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="center-form">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="line-circle">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Line and Circle Position -->
+                <section id="line-circle" class="lesson-section">
+                    <div class="section-badge">Přímka a kružnice</div>
+                    <h1>Vzájemná poloha přímky a kružnice</h1>
+
+                    <p>
+                        Přímka a kružnice mohou být ve třech vzájemných polohách v závislosti
+                        na <strong>vzdálenosti středu od přímky</strong> vzhledem k poloměru.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Tři možnosti</h4>
+                        <p>
+                            Buď d je vzdálenost středu S od přímky p a r poloměr kružnice:
+                        </p>
+                        <div class="three-cases">
+                            <div class="case-item">
+                                <span class="case-label" style="color: #ef4444;">d &gt; r</span>
+                                <span>Vnější přímka — <strong>žádný průsečík</strong></span>
+                            </div>
+                            <div class="case-item">
+                                <span class="case-label" style="color: #f59e0b;">d = r</span>
+                                <span>Tečna — <strong>1 průsečík</strong> (bod dotyku)</span>
+                            </div>
+                            <div class="case-item">
+                                <span class="case-label" style="color: #10b981;">d &lt; r</span>
+                                <span>Sečna — <strong>2 průsečíky</strong></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Line-Circle Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Měňte přímku posuvníky a sledujte průsečíky s kružnicí:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="lineCircleCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte střed S | Posuvníky mění přímku</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Kružnice</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Střed S</span>
+                                            <span id="lcCenter" class="calc-value">[0.0, 0.0]</span>
+                                        </div>
+                                    </div>
+                                    <div class="control-group" style="margin-top: 0.75rem;">
+                                        <label>Poloměr r = <span id="lcRadiusVal">3.0</span></label>
+                                        <input type="range" id="lcRadiusSlider" min="1" max="5" value="3" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Přímka p: ax + by + c = 0</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="lcAValue">0</span></label>
+                                        <input type="range" id="lcASlider" min="-5" max="5" value="0" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="lcBValue">1</span></label>
+                                        <input type="range" id="lcBSlider" min="-5" max="5" value="1" step="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="lcCValue">-2</span></label>
+                                        <input type="range" id="lcCSlider" min="-10" max="10" value="-2" step="1">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>d(S, p)</span>
+                                            <span id="lcDist" class="calc-value">2.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>r</span>
+                                            <span id="lcR" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Porovnání</span>
+                                            <span id="lcCompare" class="calc-value">d &lt; r</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel" id="lcStatusPanel">
+                                    <h4>Vzájemná poloha</h4>
+                                    <div id="lcStatus"
+                                        style="text-align: center; font-weight: 600; font-size: 1rem; padding: 0.25rem;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Algebraický přístup</h4>
+                            <p>
+                                Vzájemnou polohu lze zjistit i <strong>dosazením</strong> rovnice přímky
+                                do rovnice kružnice. Diskriminant výsledné kvadratické rovnice
+                                určí počet průsečíků: D &gt; 0 → 2, D = 0 → 1, D &lt; 0 → 0.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="general-form">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="tangent">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Tangent -->
+                <section id="tangent" class="lesson-section">
+                    <div class="section-badge">Tečna kružnice</div>
+                    <h1>Tečna kružnice</h1>
+
+                    <p>
+                        Tečna je přímka, která se kružnice <strong>dotýká v jednom bodě</strong>.
+                        Je kolmá na poloměr v bodě dotyku.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Rovnice tečny</h4>
+                        <p>
+                            Tečna kružnice x² + y² = r² v bodě dotyku T = [x₀, y₀]:
+                        </p>
+                        <div class="equation-large">
+                            x₀·x + y₀·y = r²
+                        </div>
+                        <p class="formula-note">
+                            Pro kružnici (x − m)² + (y − n)² = r² v bodě T = [x₀, y₀]:<br>
+                            (x₀ − m)(x − m) + (y₀ − n)(y − n) = r²
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Vlastnosti tečny</h4>
+                            <ul>
+                                <li>Tečna ⊥ poloměr v bodě dotyku</li>
+                                <li>Vzdálenost středu od tečny = r</li>
+                                <li>Bod dotyku leží na kružnici</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Tečna z vnějšího bodu</h4>
+                            <p>
+                                Z bodu P vně kružnice existují <strong>právě 2 tečny</strong>.
+                                Obě mají stejnou délku od P k bodu dotyku.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Tangent Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka</h3>
+                        <p>Táhněte bod dotyku T po kružnici a sledujte tečnu:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="tangentCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod T po kružnici</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Kružnice & tečna</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Střed S</span>
+                                            <span id="tanCenter" class="calc-value">[0.0, 0.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Poloměr r</span>
+                                            <span id="tanRadius" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Bod dotyku T</span>
+                                            <span id="tanTouchPoint" class="calc-value">[3.0, 0.0]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice tečny</h4>
+                                    <div id="tanEquation"
+                                        style="text-align: center; font-family: 'Times New Roman', serif; font-size: 1.15rem; font-weight: 600; color: #10b981; padding: 0.5rem;">
+                                        x = 3
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>✓ Ověření</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>d(S, tečna)</span>
+                                            <span id="tanDistCheck" class="calc-value">3.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>d = r ?</span>
+                                            <span id="tanVerify" class="calc-value" style="color: #10b981;">✓ Ano</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Příklad</h4>
+                            <p>Kružnice x² + y² = 25, bod dotyku T = [3, 4]:</p>
+                            <p>Tečna: 3x + 4y = 25</p>
+                            <p>Ověření: d(S, t) = |0 + 0 − 25| / √(9 + 16) = 25/5 = <strong>5 = r</strong> ✓</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="line-circle">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Měňte parametry kružnice, přidejte přímku
+                        a testujte body — vše v reálném čase.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Přetahujte střed S</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Kružnice</h4>
+                                <div class="calculation-steps">
+                                    <div class="calc-step">
+                                        <span>Střed S</span>
+                                        <span id="playCenter" class="calc-value">[0.0, 0.0]</span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-top: 0.5rem;">
+                                    <label>r = <span id="playRVal">3.0</span></label>
+                                    <input type="range" id="playRSlider" min="0.5" max="5" value="3" step="0.5">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Přímka p: ax + by + c = 0</h4>
+                                <div class="control-group">
+                                    <label>a = <span id="playPAVal">1</span></label>
+                                    <input type="range" id="playPASlider" min="-5" max="5" value="1" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>b = <span id="playPBVal">0</span></label>
+                                    <input type="range" id="playPBSlider" min="-5" max="5" value="0" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label>c = <span id="playPCVal">-4</span></label>
+                                    <input type="range" id="playPCSlider" min="-10" max="10" value="-4" step="1">
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Výsledky</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>d(S, p)</span>
+                                        <span id="playDist" class="calc-value">4.00</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Poloha</span>
+                                        <span id="playPosition" class="calc-value">Vnější</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Rovnice</span>
+                                        <span id="playEq" class="calc-value" style="font-size: 0.8rem;">x² + y² =
+                                            9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="tangent">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaká je středová rovnice kružnice se středem S = [2, −3] a poloměrem r = 5?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>(x + 2)² + (y − 3)² = 25</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>(x − 2)² + (y + 3)² = 25</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>(x − 2)² + (y + 3)² = 5</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>(x − 2)² + (y − 3)² = 25</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Určete střed a poloměr kružnice x² + y² − 6x + 4y − 12 = 0.
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>S = [3, −2], r = 5</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>S = [−3, 2], r = 5</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>S = [3, −2], r = 25</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>S = [6, −4], r = √52</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Kružnice x² + y² = 16 a přímka y = 5. Jaká je jejich vzájemná poloha?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>Sečna (2 průsečíky)</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>Tečna (1 průsečík)</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>Vnější přímka (0 průsečíků)</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>Nelze určit</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Napište rovnici tečny kružnice x² + y² = 25 v bodě T = [3, 4].
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex4" value="a">
+                                        <span>3x + 4y = 25</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex4" value="b">
+                                        <span>3x − 4y = 25</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex4" value="c">
+                                        <span>4x + 3y = 25</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex4" value="d">
+                                        <span>3x + 4y = 5</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="a">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Bod A = [1, 2] a kružnice (x − 1)² + (y − 1)² = 4. Kde leží bod A vzhledem ke
+                                    kružnici?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex5" value="a">
+                                        <span>Na kružnici</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex5" value="b">
+                                        <span>Uvnitř kružnice</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex5" value="c">
+                                        <span>Vně kružnice</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex5" value="d">
+                                        <span>Ve středu kružnice</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Rovnice x² + y² + 2x − 4y + 5 = 0 popisuje:
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option" data-value="a">
+                                        <input type="radio" name="ex6" value="a">
+                                        <span>Kružnici s poloměrem 1</span>
+                                    </label>
+                                    <label class="option" data-value="b">
+                                        <input type="radio" name="ex6" value="b">
+                                        <span>Kružnici s poloměrem 0</span>
+                                    </label>
+                                    <label class="option" data-value="c">
+                                        <input type="radio" name="ex6" value="c">
+                                        <span>Jediný bod [−1, 2]</span>
+                                    </label>
+                                    <label class="option" data-value="d">
+                                        <input type="radio" name="ex6" value="d">
+                                        <span>Prázdnou množinu (nemá řešení)</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">
+                                    Zkontrolovat
+                                </button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Kružnice.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

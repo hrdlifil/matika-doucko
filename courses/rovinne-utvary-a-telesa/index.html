@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rovinné útvary a tělesa - Naučte se počítat obsahy, obvody, objemy a povrchy rovinných útvarů i těles.">
+    <title>Rovinné útvary a tělesa – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Rovinné útvary a tělesa</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Rovinné útvary a tělesa</h1>
+                    <p class="course-description">
+                        Kurz propojuje geometrii v rovině i prostoru: od čtverce, obdélníku a kruhu přes pravidelné
+                        mnohoúhelníky až po krychli, kužel a kouli. Struktura je připravená po kapitolách a tématech
+                        pro následné doplnění detailního výukového obsahu.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">5 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~8 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">19 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/zakladni-rovinne-utvary/index.html#ctverec-obsah-obvod-a-dalsi" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <rect x="48" y="106" width="52" height="52" fill="none" stroke="#6366f1" stroke-width="2.8" />
+                            <circle cx="145" cy="130" r="30" fill="none" stroke="#10b981" stroke-width="2.6" opacity="0.9" />
+                            <polygon points="112,86 164,86 138,42" fill="none" stroke="#f59e0b" stroke-width="2.6" />
+                            <line x1="112" y1="86" x2="138" y2="126" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,4" />
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">S = a · b</div>
+                        <div class="formula formula-2">V = (1/3) · S_p · v</div>
+                        <div class="formula formula-3">V_koule = (4/3)πr³</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění obsahu</p>
+            </div>
+
+            <div class="chapters-list">                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Základní rovinné útvary</h3>
+                            <p class="chapter-description">Obsahy, obvody a základní vlastnosti nejdůležitějších rovinných útvarů</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 témat</span>
+                            <span class="chapter-time">~100 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">                            <a href="lessons/zakladni-rovinne-utvary/index.html#ctverec-obsah-obvod-a-dalsi" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Čtverec - obsah, obvod a další</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-rovinne-utvary/index.html#obdelnik-obsah-obvod-a-dalsi" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Obdélník - obsah, obvod a další</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-rovinne-utvary/index.html#trojuhelnik-obsah-obvod-a-dalsi" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Trojúhelník - obsah, obvod a další</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-rovinne-utvary/index.html#rovnobeznik-kosodelnik-a-kosoctverec" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnoběžník - kosodélník a kosočtverec</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-rovinne-utvary/index.html#lichobeznik-obsah-a-obvod" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lichoběžník - obsah a obvod</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Mnohoúhelník a kruh</h3>
+                            <p class="chapter-description">Pravidelné mnohoúhelníky, kruh a přesné odvození klíčových vztahů</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~80 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">                            <a href="lessons/mnohouhelnik-a-kruh/index.html#pravidelny-n-uhelnik-obsah-a-obvod" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Pravidelný n-úhelník - obsah a obvod</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/mnohouhelnik-a-kruh/index.html#kruh-obsah-obvod-a-odvozeni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kruh - obsah, obvod a odvození</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/mnohouhelnik-a-kruh/index.html#presnejsi-odvozeni-obvodu-a-obsahu-kruhu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Přesnější odvození obvodu a obsahu kruhu</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/mnohouhelnik-a-kruh/index.html#kruhova-vysec-kruhova-usec-a-mezikruzi" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kruhová výseč, kruhová úseč a mezikruží</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Základní tělesa</h3>
+                            <p class="chapter-description">Objem, povrch a délkové vztahy krychle, kvádru, válce a kolmého hranolu</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~80 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">                            <a href="lessons/zakladni-telesa/index.html#krychle-objem-povrch-a-uhlopricka" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Krychle - objem, povrch a úhlopříčka</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-telesa/index.html#kvadr-objem-povrch-a-uhlopricka" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvádr - objem, povrch a úhlopříčka</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-telesa/index.html#valec-objem-a-povrch" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Válec - objem a povrch</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/zakladni-telesa/index.html#kolmy-hranol-objem-a-obsah" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kolmý hranol - objem a obsah</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Jehlan a Kužel</h3>
+                            <p class="chapter-description">Objemy a povrchy jehlanů a kuželů včetně komolých variant</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~80 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">                            <a href="lessons/jehlan-a-kuzel/index.html#jehlan-objem-a-povrch" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Jehlan - objem a povrch</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/jehlan-a-kuzel/index.html#rotacni-kuzel-objem-a-povrch" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rotační kužel - objem a povrch</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/jehlan-a-kuzel/index.html#komoly-jehlan-objem-a-povrch" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Komolý jehlan - objem a povrch</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/jehlan-a-kuzel/index.html#komoly-rotacni-kuzel-objem-a-povrch" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Komolý rotační kužel - objem a povrch</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Koule a její části</h3>
+                            <p class="chapter-description">Vztahy pro kouli a výpočty kulových částí</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">                            <a href="lessons/koule-a-jeji-casti/index.html#koule-objem-povrch-a-odvozeni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Koule - objem, povrch a odvození</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>                            <a href="lessons/koule-a-jeji-casti/index.html#kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kulová výseč, kulová úseč, kulová vrstva a vrchlík</span>
+                                <span class="lesson-duration">25 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Přehled hlavních dovedností, které kurz pokrývá</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">◻️</div>
+                    <h3>Rovinné útvary</h3>
+                    <p>Výpočty obsahu a obvodu čtverce, obdélníku, trojúhelníku, rovnoběžníku i lichoběžníku.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⭕</div>
+                    <h3>Kruh a části kruhu</h3>
+                    <p>Obsah, obvod a odvození vztahů pro kruh, výseč, úseč a mezikruží.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧊</div>
+                    <h3>Základní tělesa</h3>
+                    <p>Objem, povrch a úhlopříčky u krychle, kvádru, válce a hranolů.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔺</div>
+                    <h3>Jehlany a kužely</h3>
+                    <p>Výpočty pro přímé i komolé varianty jehlanu a rotačního kužele.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🌐</div>
+                    <h3>Koule</h3>
+                    <p>Objem, povrch a rozšířené pojmy: kulová výseč, úseč, vrstva a vrchlík.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Aplikační myšlení</h3>
+                    <p>Propojení vzorců, odvození a geometrické interpretace pro přijímací testy i praxi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Kurz Rovinné útvary a tělesa je připravený, další krok je doplnění jednotlivých výukových částí.</p>
+                <a href="lessons/zakladni-rovinne-utvary/index.html#ctverec-obsah-obvod-a-dalsi" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>
+
+

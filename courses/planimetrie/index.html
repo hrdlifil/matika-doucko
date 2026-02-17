@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Planimetrie - Naučte se základní rovinnou geometrii: přímky, úhly, trojúhelníky, mnohoúhelníky, kružnice a Heronův vzorec.">
+    <title>Planimetrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Hero -->
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Planimetrie</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Planimetrie</h1>
+                    <p class="course-description">
+                        Vybudujte pevný základ rovinné geometrie od bodu a přímky přes trojúhelníky a mnohoúhelníky
+                        až po kružnici a Heronův vzorec. Kurz je připravený jako přehledná kostra kapitol a témat.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">5 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~7 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">18 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/bod-primka-poloprimka-usecka-uhel/index.html#bod-poloprimka-primka-usecka-a-shodnost"
+                            class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5"
+                                opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5"
+                                opacity="0.3" />
+                            <polygon points="40,160 150,150 100,70" fill="none" stroke="url(#pGradient1)"
+                                stroke-width="3" />
+                            <circle cx="100" cy="120" r="28" fill="none" stroke="#10b981" stroke-width="2.5"
+                                opacity="0.85" />
+                            <line x1="100" y1="70" x2="100" y2="150" stroke="#3b82f6" stroke-width="2"
+                                stroke-dasharray="5,4" />
+                            <circle cx="40" cy="160" r="4.5" fill="#6366f1" />
+                            <circle cx="150" cy="150" r="4.5" fill="#a855f7" />
+                            <circle cx="100" cy="70" r="4.5" fill="#3b82f6" />
+                            <defs>
+                                <linearGradient id="pGradient1" x1="0%" y1="100%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3b82f6" />
+                                    <stop offset="100%" style="stop-color:#8b5cf6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">S = (a · v<sub>a</sub>) / 2</div>
+                        <div class="formula formula-2">s = (a + b + c) / 2</div>
+                        <div class="formula formula-3">r = S / s</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Progress -->
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Content -->
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění obsahu</p>
+            </div>
+
+            <div class="chapters-list">
+                <!-- Kapitola 1 -->
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Bod, přímka, polopřímka, úsečka, úhel</h3>
+                            <p class="chapter-description">Základní pojmy rovinné geometrie a práce s úhly</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/bod-primka-poloprimka-usecka-uhel/index.html#bod-poloprimka-primka-usecka-a-shodnost"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Bod, polopřímka, přímka, úsečka a shodnost</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/bod-primka-poloprimka-usecka-uhel/index.html#polorovina-uhel-a-osa-uhlu"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Polorovina, úhel a osa úhlu</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/bod-primka-poloprimka-usecka-uhel/index.html#dve-primky-odchylka-a-vzdalenost"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Dvě přímky, odchylka a vzdálenost</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 2 -->
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Trojúhelníky, kružnice opsaná a vepsaná</h3>
+                            <p class="chapter-description">Konstrukce kružnic a klíčové věty o trojúhelnících</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 témat</span>
+                            <span class="chapter-time">~120 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#trojuhelniky-vyska-teznice-a-pricka"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Trojúhelníky, výška, těžnice a příčka</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#kruznice-vepsana-a-jeji-konstrukce"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kružnice vepsaná a její konstrukce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#kruznice-opsana-a-jeji-konstrukce"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kružnice opsaná a její konstrukce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#vety-o-shodnosti-trojuhelniku"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Věty o shodnosti trojúhelníků</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#podobnost-trojuhelniku"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Podobnost trojúhelníků</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/trojuhelniky-kruznice-opsana-vepsana/index.html#vety-o-podobnosti-trojuhelniku"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Věty o podobnosti trojúhelníků</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 3 -->
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Mnohoúhelníky</h3>
+                            <p class="chapter-description">n-úhelníky, pravidelné mnohoúhelníky a čtyřúhelníky</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~80 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/mnohouhelniky/index.html#mnohouhelniky-n-uhelniky"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Mnohoúhelníky (n-úhelníky)</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/mnohouhelniky/index.html#pravidelny-n-uhelnik"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Pravidelný n-úhelník</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/mnohouhelniky/index.html#ctyruhelniky"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Čtyřúhelníky</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/mnohouhelniky/index.html#tecnovy-a-tetivovy-ctyruhelnik"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Tečnový a tětivový čtyřúhelník</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 4 -->
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kruh a kružnice</h3>
+                            <p class="chapter-description">Prvky kružnice, vzájemné polohy přímek a kružnic</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kruh-a-kruznice/index.html#kruznice-kruh-tetiva-usec-a-vysec"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Kružnice, kruh, tětiva, úseč a výseč</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/kruh-a-kruznice/index.html#secna-tecna-a-vnejsi-primka"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Sečna, tečna a vnější přímka</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/kruh-a-kruznice/index.html#vzajemna-poloha-dvou-kruznic"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Vzájemná poloha dvou kružnic</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kapitola 5 -->
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Heronův vzorec</h3>
+                            <p class="chapter-description">Odvození i praktické využití Heronova vzorce</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~35 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/heronuv-vzorec/index.html#aplikace-heronova-vzorce"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Aplikace Heronova vzorce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/heronuv-vzorec/index.html#odvozeni-heronova-vzorce"
+                                class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📖</span>
+                                <span class="lesson-title">Odvození Heronova vzorce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn -->
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Přehled hlavních dovedností, které kurz pokrývá</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">📍</div>
+                    <h3>Základní pojmy</h3>
+                    <p>Budete přesně pracovat s body, přímkami, úsečkami, úhly a jejich vztahy.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📐</div>
+                    <h3>Trojúhelníky</h3>
+                    <p>Zvládnete konstrukce, shodnost, podobnost i základní prvky trojúhelníků.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🔷</div>
+                    <h3>Mnohoúhelníky</h3>
+                    <p>Porozumíte vlastnostem n-úhelníků, pravidelných útvarů i speciálních čtyřúhelníků.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⭕</div>
+                    <h3>Kružnice a kruh</h3>
+                    <p>Upevníte si pojmy sečna, tečna, tětiva, výseč, úseč a vzájemné polohy kružnic.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧮</div>
+                    <h3>Heronův vzorec</h3>
+                    <p>Pochopíte, jak Heronův vzorec odvodit a použít ve výpočtech obsahu trojúhelníku.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Geometrické myšlení</h3>
+                    <p>Prohloubíte schopnost propojit konstrukce, důkazy a výpočty v rovinné geometrii.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA sekce -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Kurz Planimetrie je připravený, další krok je doplnění jednotlivých výukových částí.</p>
+                <a href="lessons/bod-primka-poloprimka-usecka-uhel/index.html#bod-poloprimka-primka-usecka-a-shodnost"
+                    class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Zápatí -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

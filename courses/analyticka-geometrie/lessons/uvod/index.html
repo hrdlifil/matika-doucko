@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Úvod do analytické geometrie - Kartézská soustava souřadnic, body v rovině, základní pojmy.">
+    <title>Úvod do analytické geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 1: Úvod</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Úvod do analytické geometrie</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Co je analytická geometrie?
+                    </a>
+                    <a href="#coordinates" class="sidebar-link" data-section="coordinates">
+                        <span class="sidebar-icon">2</span>
+                        Kartézská soustava
+                    </a>
+                    <a href="#points" class="sidebar-link" data-section="points">
+                        <span class="sidebar-icon">3</span>
+                        Body v rovině
+                    </a>
+                    <a href="#vectors" class="sidebar-link" data-section="vectors">
+                        <span class="sidebar-icon">4</span>
+                        Vektory - interaktivně
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">5</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Co je analytická geometrie?</h1>
+                    <p class="lead">
+                        Analytická geometrie je odvětví matematiky, které spojuje algebru a geometrii.
+                        Umožňuje nám popsat geometrické útvary pomocí čísel a rovnic, a naopak - algebraické
+                        vztahy znázornit graficky.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Klíčová myšlenka</h4>
+                            <p>
+                                Každému bodu v rovině přiřadíme dvojici čísel (souřadnice) a naopak -
+                                každé dvojici čísel odpovídá právě jeden bod.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Historie</h2>
+                    <p>
+                        Analytickou geometrii založil v 17. století francouzský filosof a matematik
+                        <strong>René Descartes</strong> (latinsky Cartesius). Proto se souřadnicová soustava
+                        nazývá <em>kartézská</em>.
+                    </p>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>📐 Geometrie</h4>
+                            <ul>
+                                <li>Body, přímky, kružnice</li>
+                                <li>Vzdálenosti a úhly</li>
+                                <li>Tvary a prostorové útvary</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>🔢 Algebra</h4>
+                            <ul>
+                                <li>Čísla a proměnné</li>
+                                <li>Rovnice a nerovnice</li>
+                                <li>Soustavy rovnic</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="coordinates">
+                        Pokračovat ke kartézské soustavě →
+                    </button>
+                </section>
+
+                <!-- Section 2: Coordinate System -->
+                <section id="coordinates" class="lesson-section">
+                    <div class="section-badge">Kartézská soustava</div>
+                    <h1>Kartézská soustava souřadnic</h1>
+
+                    <p>
+                        Kartézská soustava souřadnic je tvořena dvěma navzájem kolmými číselnými osami,
+                        které se protínají v bodě zvaném <strong>počátek</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            <strong>Kartézská soustava souřadnic</strong> v rovině se skládá z:
+                        </p>
+                        <ul>
+                            <li><strong>Osy x</strong> (vodorovná) - nazývá se také osa úseček</li>
+                            <li><strong>Osy y</strong> (svislá) - nazývá se také osa pořadnic</li>
+                            <li><strong>Počátku O</strong> - průsečík os, má souřadnice [0, 0]</li>
+                        </ul>
+                    </div>
+
+                    <!-- Interactive Coordinate System -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní soustava souřadnic</h3>
+                        <p>Klikněte kamkoliv na plátno pro zobrazení souřadnic bodu:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="coordCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="quadrant-info">
+                                    <h4>Kvadranty roviny</h4>
+                                    <div class="quadrant-grid">
+                                        <div class="quadrant q2">II<br><small>x < 0, y> 0</small></div>
+                                        <div class="quadrant q1">I<br><small>x > 0, y > 0</small></div>
+                                        <div class="quadrant q3">III<br><small>x < 0, y < 0</small>
+                                        </div>
+                                        <div class="quadrant q4">IV<br><small>x > 0, y < 0</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="equation-display">
+                                    <strong>Souřadnice bodu:</strong>
+                                    <div id="clickedPoint" class="live-equation">
+                                        Klikněte na plátno...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="points">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Points -->
+                <section id="points" class="lesson-section">
+                    <div class="section-badge">Body v rovině</div>
+                    <h1>Souřadnice bodu v rovině</h1>
+
+                    <p>
+                        Každý bod v rovině je jednoznačně určen <strong>uspořádanou dvojicí</strong>
+                        reálných čísel - jeho souřadnicemi.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Zápis souřadnic</h4>
+                        <p>
+                            Bod A se souřadnicemi x a y zapisujeme jako:
+                        </p>
+                        <div class="equation-large">A = [x, y]</div>
+                        <p>
+                            kde <strong>x</strong> je <em>první souřadnice</em> (x-ová, úsečková) a
+                            <strong>y</strong> je <em>druhá souřadnice</em> (y-ová, pořadnicová).
+                        </p>
+                    </div>
+
+                    <!-- Interactive Point Placement -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Umístěte body do soustavy</h3>
+                        <p>Zadejte souřadnice a sledujte, kde se bod zobrazí:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="pointCanvas" width="500" height="400"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Souřadnice x = <span id="ptXValue">3</span></label>
+                                    <input type="range" id="ptXSlider" min="-5" max="5" value="3" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label>Souřadnice y = <span id="ptYValue">2</span></label>
+                                    <input type="range" id="ptYSlider" min="-5" max="5" value="2" step="0.5">
+                                </div>
+                                <div class="equation-display">
+                                    <strong>Bod A:</strong>
+                                    <div id="pointDisplay" class="live-equation">
+                                        A = [3, 2]
+                                    </div>
+                                    <div class="equation-info">
+                                        Vzdálenost od počátku: <span id="distanceFromOrigin">3.61</span>
+                                    </div>
+                                </div>
+                                <button id="addPointBtn" class="btn-outline" style="margin-top: 1rem;">+ Přidat bod
+                                    B</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="coordinates">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="vectors">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Vectors -->
+                <section id="vectors" class="lesson-section">
+                    <div class="section-badge">Vektory</div>
+                    <h1>Vektory v rovině - interaktivně</h1>
+
+                    <p>
+                        <strong>Vektor</strong> je orientovaná úsečka - má počáteční a koncový bod,
+                        a tedy i směr a velikost. V analytické geometrii popisujeme vektory pomocí souřadnic.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice vektoru</h4>
+                        <p>
+                            Vektor <span class="vec">u</span> z bodu A = [x₁, y₁] do bodu B = [x₂, y₂] má souřadnice:
+                        </p>
+                        <div class="equation-large"><span class="vec">u</span> = (x₂ - x₁, y₂ - y₁)</div>
+                        <p>Vektor zapisujeme do <strong>kulatých závorek</strong>, bod do <strong>hranatých</strong>.
+                        </p>
+                    </div>
+
+                    <!-- Interactive Vector Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Táhněte koncový bod vektoru</h3>
+                        <p>Přetahujte bod B a sledujte, jak se mění souřadnice vektoru:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="vectorCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod B pro změnu vektoru</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="vector-info-panel">
+                                    <h4>📍 Body</h4>
+                                    <div class="point-display">
+                                        <span class="point-marker point-a">A</span>
+                                        <span id="vecPointA">[0, 0]</span>
+                                    </div>
+                                    <div class="point-display">
+                                        <span class="point-marker point-b">B</span>
+                                        <span id="vecPointB">[3, 2]</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>→ Vektor</h4>
+                                    <div class="vector-equation">
+                                        <span><span class="vec">u</span> = </span>
+                                        <span id="vectorCoords" class="highlight">(3, 2)</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>📊 Vlastnosti</h4>
+                                    <div class="property-row">
+                                        <span>Velikost |<span class="vec">u</span>|:</span>
+                                        <span id="vectorMagnitude">3.61</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>Úhel s osou x:</span>
+                                        <span id="vectorAngle">33.7°</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-actions">
+                                    <button id="moveStartPoint" class="btn-outline btn-small">Povolit pohyb bodu
+                                        A</button>
+                                    <button id="resetVector" class="btn-outline btn-small">🔄 Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Důležité rozlišení</h4>
+                            <p>
+                                <strong>Bod</strong> A = [3, 2] určuje pozici v prostoru.<br>
+                                <strong>Vektor</strong> <span class="vec">u</span> = (3, 2) určuje směr a velikost
+                                (posunutí), ne pozici!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="points">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Volné experimentování</h1>
+
+                    <p>
+                        Zde si můžete volně hrát s body a vektory. Přidávejte body, vytvářejte vektory
+                        a sledujte jejich souřadnice v reálném čase.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="700" height="500"></canvas>
+                            <div class="canvas-instructions">
+                                <span>🖱️ Klikněte pro přidání bodu | Táhněte body pro jejich přesun</span>
+                            </div>
+                        </div>
+
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>📍 Seznam bodů</h4>
+                                <div id="pointsList" class="points-list">
+                                    <div class="point-item">
+                                        <span class="point-marker">A</span>
+                                        <span>[2, 3]</span>
+                                    </div>
+                                    <div class="point-item">
+                                        <span class="point-marker">B</span>
+                                        <span>[5, 1]</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>→ Vektory mezi body</h4>
+                                <div id="vectorsList" class="vectors-list">
+                                    <div class="vector-item">
+                                        <span><span class="vec">AB</span> = </span>
+                                        <span class="vector-value">(3, -2)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-panel">
+                                <h4>📏 Vzdálenosti</h4>
+                                <div id="distancesList" class="distances-list">
+                                    <div class="distance-item">
+                                        <span>|AB| = </span>
+                                        <span class="distance-value">3.61</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="playground-actions">
+                                <button id="clearPlayground" class="btn-outline">🗑️ Vymazat vše</button>
+                                <button id="toggleGrid" class="btn-outline">📐 Mřížka</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="vectors">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <p>Otestujte si své znalosti pomocí interaktivních úloh.</p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Ve kterém kvadrantu leží bod A = [-3, 5]?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>I. kvadrant</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>II. kvadrant</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>III. kvadrant</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>IV. kvadrant</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Jaké jsou souřadnice vektoru <span class="vec">AB</span>, pokud A = [1, 2] a B = [4,
+                                    6]?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span><span class="vec">AB</span> = (5, 8)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span><span class="vec">AB</span> = (3, 4)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span><span class="vec">AB</span> = (-3, -4)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span><span class="vec">AB</span> = (4, 6)</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Bod leží na ose x. Která z následujících souřadnic je správná?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>[0, 5]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>[5, 5]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>[5, 0]</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>[0, 0]</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Gratulujeme!</h2>
+                        <p>Úspěšně jste dokončili úvod do analytické geometrie.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

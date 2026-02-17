@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Bod, přímka, polopřímka, úsečka a úhel: interaktivní základy planimetrie se shodností, polorovinou a odchylkou přímek.">
+    <title>Bod, přímka, polopřímka, úsečka, úhel – Planimetrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Planimetrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 1</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Bod, přímka, polopřímka, úsečka, úhel</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#bod-poloprimka-primka-usecka-a-shodnost" class="sidebar-link active"
+                        data-section="bod-poloprimka-primka-usecka-a-shodnost">
+                        <span class="sidebar-icon">1</span>
+                        Bod, polopřímka, přímka, úsečka a shodnost
+                    </a>
+                    <a href="#polorovina-uhel-a-osa-uhlu" class="sidebar-link" data-section="polorovina-uhel-a-osa-uhlu">
+                        <span class="sidebar-icon">2</span>
+                        Polorovina, úhel a osa úhlu
+                    </a>
+                    <a href="#dve-primky-odchylka-a-vzdalenost" class="sidebar-link"
+                        data-section="dve-primky-odchylka-a-vzdalenost">
+                        <span class="sidebar-icon">3</span>
+                        Dvě přímky, odchylka a vzdálenost
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="bod-poloprimka-primka-usecka-a-shodnost" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
+                    <h1>Bod, polopřímka, přímka, úsečka a shodnost</h1>
+                    <p class="lead">
+                        V geometrii rozlišujeme různé útvary: bod (pouze poloha), přímku (nekonečnou na obě strany),
+                        polopřímku (má počátek a pokračuje jedním směrem) a úsečku (má dva krajní body).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Rychlé shrnutí značení</h4>
+                        <ul>
+                            <li><strong>Bod:</strong> A, B, C ...</li>
+                            <li><strong>Přímka:</strong> p nebo AB (v kontextu přímky)</li>
+                            <li><strong>Polopřímka:</strong> AB (počátek A, směr k B)</li>
+                            <li><strong>Úsečka:</strong> |AB| je její délka</li>
+                            <li><strong>Shodnost úseček:</strong> |AB| = |CD|</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Režimy útvaru AB a shodnost úseček</h3>
+                        <p>Táhněte body A, B, C, D. Přepínejte typ útvaru AB a porovnávejte délky úseček AB a CD.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="primitivesCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">🖱️ Táhněte body A, B, C, D</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="primitiveMode">Zobrazený útvar AB</label>
+                                    <select id="primitiveMode">
+                                        <option value="point">Bod A</option>
+                                        <option value="line">Přímka AB</option>
+                                        <option value="ray">Polopřímka AB</option>
+                                        <option value="segment" selected>Úsečka AB</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="congruentSlider">Délka úsečky CD:
+                                        <strong id="congruentLengthValue">5.0</strong></label>
+                                    <input type="range" id="congruentSlider" min="1" max="14" step="0.1" value="5">
+                                </div>
+
+                                <div class="equation-display">
+                                    <div class="calc-row">
+                                        <span>|AB|</span>
+                                        <span id="segmentLengthAB" class="calc-value">0.00</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>|CD|</span>
+                                        <span id="segmentLengthCD" class="calc-value">0.00</span>
+                                    </div>
+                                    <div class="status-row">
+                                        <span>Shodnost úseček</span>
+                                        <span id="congruentState" class="status-chip">Neshodné</span>
+                                    </div>
+                                </div>
+
+                                <p id="primitiveHint" class="control-hint">
+                                    V režimu úsečky sledujte, kdy nastane |AB| = |CD|.
+                                </p>
+
+                                <button id="resetPrimitive" class="btn btn-ghost btn-sm">Obnovit výchozí polohu</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Brilliant tip</h4>
+                            <p>
+                                Vždy si ujasněte, zda řešíte <strong>útvar</strong> (přímka, polopřímka, úsečka) nebo
+                                jen jeho <strong>délku</strong>. Délka má smysl jen u úsečky.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn btn-primary btn-next" data-next="polorovina-uhel-a-osa-uhlu">Polorovina, úhel
+                            a osa úhlu →</button>
+                    </div>
+                </section>
+
+                <section id="polorovina-uhel-a-osa-uhlu" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
+                    <h1>Polorovina, úhel a osa úhlu</h1>
+                    <p class="lead">
+                        Každá přímka dělí rovinu na dvě poloroviny. Dvě polopřímky se společným počátkem tvoří úhel a
+                        osa úhlu jej dělí na dva shodné úhly.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Co číst v interaktivním obrázku</h4>
+                        <ul>
+                            <li><strong>Vlevo:</strong> přímka l, bod P a určení, v které polorovině bod leží.</li>
+                            <li><strong>Vpravo:</strong> úhel α a jeho osa (volitelně zobrazit).</li>
+                            <li><strong>Když P leží na přímce l:</strong> orientovaná vzdálenost je 0.</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Polorovina + úhel v jednom panelu</h3>
+                        <p>Upravte sklon přímky, pozici bodu a velikost úhlu. Sledujte, jak se mění klasifikace.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="halfplaneAngleCanvas" width="700" height="430"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="lineTiltSlider">Sklon přímky l: <strong id="lineTiltValue">25°</strong></label>
+                                    <input type="range" id="lineTiltSlider" min="-70" max="70" step="1" value="25">
+                                </div>
+                                <div class="control-group">
+                                    <label for="pointXSlider">Souřadnice bodu P.x: <strong id="pointXValue">2.0</strong></label>
+                                    <input type="range" id="pointXSlider" min="-8" max="8" step="0.5" value="2">
+                                </div>
+                                <div class="control-group">
+                                    <label for="pointYSlider">Souřadnice bodu P.y: <strong id="pointYValue">1.5</strong></label>
+                                    <input type="range" id="pointYSlider" min="-6" max="6" step="0.5" value="1.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="angleSlider">Velikost úhlu α: <strong id="angleValueInline">62°</strong></label>
+                                    <input type="range" id="angleSlider" min="20" max="160" step="1" value="62">
+                                </div>
+                                <label class="check-row">
+                                    <input type="checkbox" id="showBisector" checked>
+                                    <span>Zobrazit osu úhlu</span>
+                                </label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row">
+                                        <span>Poloha bodu P</span>
+                                        <span id="pointSideStatus" class="calc-value">kladná polorovina</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Úhel</span>
+                                        <span id="angleValue" class="calc-value">α = 62°</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Osa úhlu</span>
+                                        <span id="bisectorValue" class="calc-value">směr 31°</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn btn-ghost btn-prev"
+                            data-prev="bod-poloprimka-primka-usecka-a-shodnost">← Bod, polopřímka, přímka, úsečka a
+                            shodnost</button>
+                        <button class="btn btn-primary btn-next" data-next="dve-primky-odchylka-a-vzdalenost">Dvě
+                            přímky, odchylka a vzdálenost →</button>
+                    </div>
+                </section>
+
+                <section id="dve-primky-odchylka-a-vzdalenost" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
+                    <h1>Dvě přímky, odchylka a vzdálenost</h1>
+                    <p class="lead">
+                        Dvě přímky mohou být různoběžné, rovnoběžné nebo kolmé. Odchylka přímek je ostrý úhel mezi nimi.
+                        Vzdálenost definujeme jen pro rovnoběžky.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Různoběžky:</strong> protínají se v jednom bodě, vzdálenost je 0.</li>
+                            <li><strong>Rovnoběžky:</strong> neprotínají se, vzdálenost je konstantní.</li>
+                            <li><strong>Kolmé přímky:</strong> odchylka je 90°.</li>
+                            <li><strong>Obecně:</strong> pro směrnice m₁, m₂ platí
+                                <code>tan ω = |(m₂ - m₁) / (1 + m₁m₂)|</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Vztah dvou přímek</h3>
+                        <p>Přepněte rovnoběžnost, měňte odchylku a posun. Sledujte průsečík i vzdálenost.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="linesDistanceCanvas" width="700" height="430"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <label class="check-row">
+                                    <input type="checkbox" id="forceParallel">
+                                    <span>Vynutit rovnoběžky</span>
+                                </label>
+                                <div class="control-group">
+                                    <label for="lineAngleSlider">Odchylka druhé přímky:
+                                        <strong id="lineAngleInline">35°</strong></label>
+                                    <input type="range" id="lineAngleSlider" min="5" max="90" step="1" value="35">
+                                </div>
+                                <div class="control-group">
+                                    <label for="lineOffsetSlider">Svislý posun druhé přímky:
+                                        <strong id="lineOffsetInline">2.0</strong></label>
+                                    <input type="range" id="lineOffsetSlider" min="-5" max="5" step="0.5" value="2">
+                                </div>
+
+                                <div class="equation-display">
+                                    <div class="calc-row">
+                                        <span>Vzájemná poloha</span>
+                                        <span id="lineRelation" class="calc-value">různoběžné</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Odchylka přímek</span>
+                                        <span id="lineAngle" class="calc-value">ω = 35°</span>
+                                    </div>
+                                    <div class="calc-row">
+                                        <span>Vzdálenost</span>
+                                        <span id="lineDistance" class="calc-value">d = 0</span>
+                                    </div>
+                                </div>
+
+                                <button id="resetLines" class="btn btn-ghost btn-sm">Obnovit nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <span class="info-card-icon">⚠️</span>
+                        <div class="info-card-content">
+                            <h4>Častá chyba u odchylky</h4>
+                            <p>
+                                Odchylka dvou přímek je vždy <strong>ostrý úhel</strong> v intervalu 0° až 90°.
+                                Nebereme doplňkový tupý úhel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn btn-ghost btn-prev" data-prev="polorovina-uhel-a-osa-uhlu">← Polorovina,
+                            úhel a osa úhlu</button>
+                        <button class="btn btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Rychlé ověření porozumění</h1>
+                    <p class="lead">
+                        Ověřte si klíčové pojmy z kapitoly. U každé otázky vyberte jednu správnou odpověď.
+                    </p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 1</span>
+                                <span id="ex1Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Který útvar má počáteční bod a pokračuje neomezeně jedním směrem?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> Přímka</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> Polopřímka</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> Úsečka</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 2</span>
+                                <span id="ex2Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kdy jsou úsečky AB a CD shodné?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> Když mají stejný směr</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> Když leží na stejné přímce</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> Když platí |AB| = |CD|</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="c">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 3</span>
+                                <span id="ex3Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Co je osa úhlu?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> Přímka rovnoběžná s jedním ramenem úhlu</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> Polopřímka dělící úhel na dva shodné úhly</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> Úsečka spojující vrcholy dvou úhlů</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Otázka 4</span>
+                                <span id="ex4Status" class="exercise-status">Nezodpovězeno</span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je odchylka dvou rovnoběžných přímek?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> 90°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> 0°</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> Závisí na jejich vzdálenosti</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Skvěle, kapitola je hotová</h2>
+                        <p>Můžete pokračovat do další kapitoly nebo se vrátit na přehled kurzu.</p>
+                        <div class="complete-actions">
+                            <a href="../trojuhelniky-kruznice-opsana-vepsana/index.html" class="btn-primary">Pokračovat
+                                na kapitolu 2</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn btn-ghost btn-prev" data-prev="dve-primky-odchylka-a-vzdalenost">← Dvě
+                            přímky, odchylka a vzdálenost</button>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

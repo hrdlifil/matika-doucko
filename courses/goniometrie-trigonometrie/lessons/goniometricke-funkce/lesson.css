@@ -1,0 +1,731 @@
+/* Chapter 1: Goniometrické funkce – Lesson Styles */
+
+/* Lesson Navigation */
+.lesson-nav-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.lesson-course-link {
+    color: var(--accent-primary);
+}
+
+.lesson-separator {
+    color: var(--text-tertiary);
+}
+
+.lesson-current {
+    color: var(--text-secondary);
+}
+
+/* Lesson Main */
+.lesson-main {
+    min-height: 100vh;
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 4rem;
+}
+
+.lesson-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+/* Sidebar */
+.lesson-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 1.5rem;
+    position: sticky;
+    top: calc(var(--nav-height) + 2rem);
+}
+
+.sidebar-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-header h3 {
+    font-size: 0.8rem;
+    color: var(--accent-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar-header p {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    transition: all 0.2s;
+}
+
+.sidebar-link:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.sidebar-link.active {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.sidebar-icon {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    font-size: 0.85rem;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.sidebar-link.active .sidebar-icon {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.sidebar-progress {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.progress-label {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.5rem;
+}
+
+.progress-bar-small {
+    height: 4px;
+    background: var(--bg-tertiary);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill-small {
+    height: 100%;
+    background: var(--accent-primary);
+    border-radius: 2px;
+    transition: width 0.3s;
+}
+
+/* Lesson Content */
+.lesson-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+}
+
+.lesson-section {
+    display: none;
+}
+
+.lesson-section.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Badges & headings */
+.section-badge {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    margin-bottom: 1rem;
+}
+
+.lesson-section h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* Definition boxes */
+.definition-box {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.definition-box.highlight {
+    background: rgba(99, 102, 241, 0.05);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.definition-box h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.definition-box ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.definition-box li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Formula grid */
+.formula-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.formula-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.formula-name {
+    font-weight: 700;
+    color: var(--accent-primary);
+    font-size: 1rem;
+}
+
+.formula-eq {
+    font-size: 1.05rem;
+}
+
+.formula-note {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    margin-top: 0.25rem;
+}
+
+/* Info Cards */
+.info-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-lg);
+    margin: 1.5rem 0;
+}
+
+.info-card-icon {
+    font-size: 1.5rem;
+}
+
+.info-card-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.info-card-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Interactive Demo */
+.interactive-demo {
+    margin: 2rem 0;
+    padding: 2rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+}
+
+.interactive-demo h3 {
+    margin-top: 0;
+}
+
+.demo-container {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.demo-container-large {
+    grid-template-columns: 1fr 240px;
+}
+
+.demo-canvas-wrapper {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-xl);
+    padding: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.demo-canvas-wrapper canvas {
+    display: block;
+    border-radius: var(--radius-lg);
+    max-width: 100%;
+    max-height: 480px;
+    cursor: grab;
+    aspect-ratio: attr(width) / attr(height);
+}
+
+.demo-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    font-size: 0.85rem;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.control-group label {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.control-group input[type="range"] {
+    width: 100%;
+    height: 6px;
+    background: var(--bg-tertiary);
+    border-radius: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.control-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--accent-primary);
+    border-radius: 50%;
+    cursor: grab;
+}
+
+/* Calc Display */
+.calc-display {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+    border: 1px solid var(--border-subtle);
+}
+
+.calc-step {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0;
+    font-size: 0.8rem;
+}
+
+.calc-value {
+    font-weight: 700;
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+.calc-value.highlight {
+    color: var(--accent-primary);
+}
+
+.calc-divider {
+    height: 1px;
+    background: var(--border-subtle);
+    margin: 0.5rem 0;
+}
+
+/* Angle buttons */
+.angle-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.angle-btn {
+    flex: 1;
+    padding: 0.6rem;
+    border: 2px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.angle-btn:hover {
+    border-color: var(--accent-primary);
+}
+
+.angle-btn.active {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+    color: white;
+}
+
+/* Derivation panel */
+.derivation-panel {
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    border: 1px solid var(--border-subtle);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.derivation-panel .deriv-step {
+    padding: 0.3rem 0;
+}
+
+.derivation-panel .deriv-result {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+/* Sign table */
+.sign-table {
+    margin-top: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.sign-table h4 {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+}
+
+.mini-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.mini-table th,
+.mini-table td {
+    padding: 0.35rem 0.5rem;
+    border: 1px solid var(--border-subtle);
+}
+
+.mini-table th {
+    background: var(--bg-tertiary);
+    font-weight: 600;
+}
+
+.mini-table .pos {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.mini-table .neg {
+    color: #ef4444;
+    font-weight: 700;
+}
+
+/* Values table */
+.values-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.values-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.values-table th,
+.values-table td {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-subtle);
+}
+
+.values-table th {
+    background: rgba(99, 102, 241, 0.15);
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.values-table td:first-child {
+    background: var(--bg-tertiary);
+    text-align: left;
+}
+
+.values-table tbody tr:hover {
+    background: rgba(99, 102, 241, 0.05);
+}
+
+/* Radian presets */
+.radian-presets {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.radian-presets h4 {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    margin-bottom: 0.75rem;
+}
+
+.preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.preset-btn {
+    padding: 0.35rem 0.6rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+
+.preset-btn:hover {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+}
+
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Exercises */
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.exercise {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.exercise-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.exercise-number {
+    font-weight: 600;
+}
+
+.exercise-status {
+    font-size: 0.85rem;
+}
+
+.exercise-body {
+    padding: 1.5rem;
+}
+
+.exercise-body p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.option:hover {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.option input[type="radio"] {
+    accent-color: var(--accent-primary);
+}
+
+.option.correct {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+}
+
+.option.incorrect {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.btn-check {
+    margin-top: 0.5rem;
+}
+
+.exercise-feedback {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    display: none;
+}
+
+.exercise-feedback.show {
+    display: block;
+}
+
+.exercise-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.exercise-feedback.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+/* Lesson complete */
+.lesson-complete {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(16, 185, 129, 0.05);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: var(--radius-xl);
+    margin: 2rem 0;
+}
+
+.complete-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .demo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .lesson-container {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-sidebar {
+        position: relative;
+        top: 0;
+    }
+
+    .demo-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .lesson-content {
+        padding: 1.5rem;
+    }
+
+    .lesson-section h1 {
+        font-size: 1.75rem;
+    }
+
+    .formula-grid {
+        grid-template-columns: 1fr;
+    }
+}

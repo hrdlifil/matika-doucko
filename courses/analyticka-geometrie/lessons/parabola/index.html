@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parabola - definice, kanonická rovnice, vlastnosti a interaktivní vizualizace.">
+    <title>Parabola – Analytická geometrie – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Analytická geometrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 10: Parabola</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson Content -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar Navigation -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 10</h3>
+                    <p>Parabola</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod
+                    </a>
+                    <a href="#definition" class="sidebar-link" data-section="definition">
+                        <span class="sidebar-icon">2</span>
+                        Definice paraboly
+                    </a>
+                    <a href="#equation" class="sidebar-link" data-section="equation">
+                        <span class="sidebar-icon">3</span>
+                        Kanonická rovnice
+                    </a>
+                    <a href="#properties" class="sidebar-link" data-section="properties">
+                        <span class="sidebar-icon">4</span>
+                        Vlastnosti paraboly
+                    </a>
+                    <a href="#orientations" class="sidebar-link" data-section="orientations">
+                        <span class="sidebar-icon">5</span>
+                        Orientace paraboly
+                    </a>
+                    <a href="#playground" class="sidebar-link" data-section="playground">
+                        <span class="sidebar-icon">6</span>
+                        Playground
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lesson-content">
+                <!-- Section 1: Intro -->
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Parabola</h1>
+                    <p class="lead">
+                        Parabola je nejznámější kuželosečka — setkáváme se s ní
+                        ve fyzice (dráha vrhu šikmého), technice (satelitní antény,
+                        reflektory), a architektuře (parabolické oblouky).
+                        Na rozdíl od elipsy a hyperboly má parabola
+                        jen <strong>jedno ohnisko</strong> a <strong>jednu řídící přímku</strong>.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co se naučíte</h4>
+                            <ul>
+                                <li>Definici paraboly pomocí ohniska a řídící přímky</li>
+                                <li>Kanonickou rovnici a parametr p</li>
+                                <li>Vlastnosti: vrchol, osa, ohnisko, řídící přímka</li>
+                                <li>Všechny čtyři orientace paraboly</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">📡</div>
+                        <div class="formula-content">
+                            <h4>Kde se parabola vyskytuje?</h4>
+                            <p>
+                                <strong>Parabolický reflektor</strong> (satelitní anténa)
+                                soustředí rovnoběžné paprsky do ohniska — proto přijímač
+                                stojí právě v ohnisku. Stejný princip využívají
+                                reflektory svítilen a mikrofony na stadionech.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🎯</div>
+                        <div class="info-card-content">
+                            <h4>Parabola mezi kuželosečkami</h4>
+                            <p>
+                                Parabola je přechodem mezi elipsou a hyperbolou.
+                                Její excentricita je přesně <strong>ε = 1</strong> —
+                                jediná kuželosečka s touto hodnotou.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="definition">
+                        Pokračovat k definici →
+                    </button>
+                </section>
+
+                <!-- Section 2: Definition -->
+                <section id="definition" class="lesson-section">
+                    <div class="section-badge">Definice</div>
+                    <h1>Definice paraboly</h1>
+
+                    <p>
+                        Parabola se definuje pomocí <strong>ohniska</strong> (bodu F) a
+                        <strong>řídící přímky</strong> (directrix) d.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Parabola je množina všech bodů X roviny, které mají
+                            <strong>stejnou vzdálenost</strong> od ohniska F a od
+                            řídící přímky d:
+                        </p>
+                        <div class="equation-large">
+                            |XF| = d(X, d)
+                        </div>
+                        <p class="formula-note">
+                            Vzdálenost od bodu F se rovná kolmé vzdálenosti od přímky d.
+                            Ohnisko leží na opačné straně než řídící přímka.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Klíčové pojmy</h4>
+                            <ul>
+                                <li><strong>F</strong> — ohnisko (focus)</li>
+                                <li><strong>d</strong> — řídící přímka (directrix)</li>
+                                <li><strong>V</strong> — vrchol (vertex)</li>
+                                <li><strong>p</strong> — parametr (vzdálenost F od d)</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Parametr p</h4>
+                            <div class="equation-large" style="font-size: 1.3rem;">
+                                p = |Fd|
+                            </div>
+                            <p class="formula-note">
+                                Vrchol V leží přesně uprostřed mezi F a d,
+                                tedy ve vzdálenosti p/2 od obou.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Definition Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Definice paraboly</h3>
+                        <p>Táhněte bod X po parabole a sledujte, že |XF| = d(X, d):</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="definitionCanvas" width="600" height="450"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>🖱️ Táhněte bod X po parabole</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametr</h4>
+                                    <div class="control-group">
+                                        <label>p = <span id="defPVal">2.0</span></label>
+                                        <input type="range" id="defPSlider" min="0.5" max="4" value="2" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vzdálenosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Bod X</span>
+                                            <span id="defPointX" class="calc-value">[0.0, 0.0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|XF|</span>
+                                            <span id="defDistF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>d(X, d)</span>
+                                            <span id="defDistD" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>|XF| − d(X, d)</span>
+                                            <span id="defDiff" class="calc-value highlight">0.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Ověření</h4>
+                                    <div
+                                        style="text-align:center;font-size:1.2rem;font-weight:700;color:#10b981;padding:0.25rem;">
+                                        <span id="defVerify">|XF| = d(X,d) ✓</span>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Prvky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Ohnisko F</span>
+                                            <span id="defFocus" class="calc-value">[1.0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řídící přímka</span>
+                                            <span id="defDirectrix" class="calc-value">x = −1.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Vrchol V</span>
+                                            <span id="defVertex" class="calc-value">[0, 0]</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="equation">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 3: Canonical Equation -->
+                <section id="equation" class="lesson-section">
+                    <div class="section-badge">Kanonická rovnice</div>
+                    <h1>Kanonická rovnice paraboly</h1>
+
+                    <p>
+                        Umístíme-li vrchol paraboly do počátku souřadnic a osu
+                        paraboly podél osy x, dostaneme nejjednodušší tvar rovnice.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Kanonická rovnice</h4>
+                        <p>
+                            Parabola s vrcholem v počátku, osou na ose x, otevřená doprava:
+                        </p>
+                        <div class="equation-large">
+                            y² = 2px
+                        </div>
+                        <p class="formula-note">
+                            Kde p &gt; 0 je parametr paraboly. Ohnisko: F = [p/2, 0].
+                            Řídící přímka: x = −p/2.
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📝</div>
+                        <div class="info-card-content">
+                            <h4>Odvození</h4>
+                            <p>
+                                Z definice |XF| = d(X, d) pro bod X = [x, y]:
+                            </p>
+                            <p>
+                                √((x − p/2)² + y²) = x + p/2
+                            </p>
+                            <p>
+                                Po umocnění a zjednodušení: <strong>y² = 2px</strong>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Equation Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Rovnice paraboly</h3>
+                        <p>Měňte parametr p a sledujte, jak se mění „otevřenost" paraboly:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="equationCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametr</h4>
+                                    <div class="control-group">
+                                        <label>p = <span id="eqPVal">2.0</span></label>
+                                        <input type="range" id="eqPSlider" min="0.5" max="6" value="2" step="0.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Vypočtené hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Parametr p</span>
+                                            <span id="eqP" class="calc-value">2.00</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Ohnisko F</span>
+                                            <span id="eqFocus" class="calc-value">[1.0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řídící přímka</span>
+                                            <span id="eqDir" class="calc-value">x = −1.0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Kanonická rovnice</h4>
+                                    <div id="eqEquation"
+                                        style="text-align:center;font-family:'Times New Roman',serif;font-size:1.3rem;font-weight:600;color:#10b981;padding:0.5rem;">
+                                        y² = 4x
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>ℹ️ Úsečka procházející ohniskem</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Délka latus rectum</span>
+                                            <span id="eqLR" class="calc-value">2p = 4</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="definition">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="properties">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 4: Properties -->
+                <section id="properties" class="lesson-section">
+                    <div class="section-badge">Vlastnosti</div>
+                    <h1>Vlastnosti paraboly</h1>
+
+                    <p>
+                        Parabola má několik důležitých geometrických vlastností,
+                        které ji odlišují od ostatních kuželoseček.
+                    </p>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Geometrické prvky</h4>
+                            <ul>
+                                <li><strong>Vrchol V</strong> — nejbližší bod k řídící přímce</li>
+                                <li><strong>Osa paraboly</strong> — osa symetrie, prochází V a F</li>
+                                <li><strong>Ohnisko F</strong> — vzdálenost p/2 od vrcholu</li>
+                                <li><strong>Řídící přímka d</strong> — kolmá na osu, p/2 od V</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Excentricita</h4>
+                            <div class="equation-large" style="font-size: 1.3rem;">
+                                ε = 1
+                            </div>
+                            <p class="formula-note">
+                                Parabola je <strong>jediná kuželosečka</strong> s excentricitou
+                                přesně 1. To z ní dělá hranici mezi elipsou (ε &lt; 1)
+                                a hyperbolou (ε &gt; 1).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">🔬</div>
+                        <div class="info-card-content">
+                            <h4>Latus rectum</h4>
+                            <p>
+                                <strong>Latus rectum</strong> je úsečka kolmá na osu
+                                paraboly procházející ohniskem, jejíž oba konce leží
+                                na parabole. Její délka je <strong>2p</strong>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Properties Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Vlastnosti</h3>
+                        <p>Prohlédněte si geometrické prvky paraboly:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="propertiesCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Parametr</h4>
+                                    <div class="control-group">
+                                        <label>p = <span id="propPVal">2.0</span></label>
+                                        <input type="range" id="propPSlider" min="0.5" max="5" value="2" step="0.5">
+                                    </div>
+                                    <div class="control-group" style="margin-top:0.5rem;">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="propShowLR" checked>
+                                            Zobrazit latus rectum
+                                        </label>
+                                    </div>
+                                    <div class="control-group">
+                                        <label style="display:flex;align-items:center;gap:0.5rem;">
+                                            <input type="checkbox" id="propShowDirectrix" checked>
+                                            Zobrazit řídící přímku
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>📐 Prvky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Vrchol V</span>
+                                            <span class="calc-value">[0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Ohnisko F</span>
+                                            <span id="propF" class="calc-value">[1.0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řídící přímka</span>
+                                            <span id="propDir" class="calc-value">x = −1.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Latus rectum</span>
+                                            <span id="propLR" class="calc-value">2p = 4</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Excentricita ε</span>
+                                            <span class="calc-value highlight">1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="equation">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="orientations">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 5: Orientations -->
+                <section id="orientations" class="lesson-section">
+                    <div class="section-badge">Orientace</div>
+                    <h1>Orientace paraboly</h1>
+
+                    <p>
+                        Parabola se může otevírat do čtyř směrů. Směr určuje,
+                        která proměnná je umocněna a jaké znaménko má parametr.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Čtyři základní orientace</h4>
+                        <div class="four-orientations">
+                            <div class="orientation-item" style="margin-bottom:0.75rem;">
+                                <span style="font-weight:700;color:#6366f1;">→ Doprava:</span>
+                                <span style="font-family:'Times New Roman',serif;">y² = 2px</span>
+                                <span style="color:var(--text-secondary);font-size:0.9rem;">(p &gt; 0)</span>
+                            </div>
+                            <div class="orientation-item" style="margin-bottom:0.75rem;">
+                                <span style="font-weight:700;color:#ef4444;">← Doleva:</span>
+                                <span style="font-family:'Times New Roman',serif;">y² = −2px</span>
+                                <span style="color:var(--text-secondary);font-size:0.9rem;">(p &gt; 0)</span>
+                            </div>
+                            <div class="orientation-item" style="margin-bottom:0.75rem;">
+                                <span style="font-weight:700;color:#10b981;">↑ Nahoru:</span>
+                                <span style="font-family:'Times New Roman',serif;">x² = 2py</span>
+                                <span style="color:var(--text-secondary);font-size:0.9rem;">(p &gt; 0)</span>
+                            </div>
+                            <div class="orientation-item">
+                                <span style="font-weight:700;color:#f59e0b;">↓ Dolů:</span>
+                                <span style="font-family:'Times New Roman',serif;">x² = −2py</span>
+                                <span style="color:var(--text-secondary);font-size:0.9rem;">(p &gt; 0)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Jak poznat orientaci?</h4>
+                            <p>
+                                <strong>Umocněná proměnná ⟹ osa paraboly je kolmá na ni.</strong><br>
+                                Pokud je umocněno y → osa je vodorovná (parabola jde doleva/doprava).<br>
+                                Pokud je umocněno x → osa je svislá (parabola jde nahoru/dolů).<br>
+                                Znaménko před 2p určuje směr otevření.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Orientations Demo -->
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní ukázka: Orientace paraboly</h3>
+                        <p>Vyberte orientaci a sledujte změnu rovnice a polohy ohniska:</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="orientationCanvas" width="600" height="450"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>📍 Nastavení</h4>
+                                    <div class="control-group">
+                                        <label>p = <span id="oriPVal">2.0</span></label>
+                                        <input type="range" id="oriPSlider" min="0.5" max="4" value="2" step="0.5">
+                                    </div>
+                                    <div class="control-group" style="margin-top:0.75rem;">
+                                        <label style="font-weight:600;">Orientace:</label>
+                                        <div class="orientation-buttons"
+                                            style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;margin-top:0.25rem;">
+                                            <button class="btn-orientation active" data-dir="right">→ Doprava</button>
+                                            <button class="btn-orientation" data-dir="left">← Doleva</button>
+                                            <button class="btn-orientation" data-dir="up">↑ Nahoru</button>
+                                            <button class="btn-orientation" data-dir="down">↓ Dolů</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice</h4>
+                                    <div id="oriEquation"
+                                        style="text-align:center;font-family:'Times New Roman',serif;font-size:1.3rem;font-weight:600;color:#10b981;padding:0.5rem;">
+                                        y² = 4x
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Prvky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Ohnisko F</span>
+                                            <span id="oriFocus" class="calc-value">[1.0, 0]</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řídící přímka</span>
+                                            <span id="oriDir" class="calc-value">x = −1.0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Osa</span>
+                                            <span id="oriAxis" class="calc-value">osa x</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="properties">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="playground">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <!-- Section 6: Playground -->
+                <section id="playground" class="lesson-section">
+                    <div class="section-badge">Playground</div>
+                    <h1>Interaktivní playground</h1>
+
+                    <p class="lead">
+                        Experimentujte volně! Měňte parametr p, posuňte vrchol
+                        a testujte, zda body leží na parabole, uvnitř, nebo vně.
+                    </p>
+
+                    <div class="playground-container">
+                        <div class="playground-canvas-wrapper">
+                            <canvas id="playgroundCanvas" width="600" height="450"></canvas>
+                            <div class="canvas-instructions">🖱️ Přetahujte vrchol V | Klikněte pro test bodu</div>
+                        </div>
+                        <div class="playground-sidebar">
+                            <div class="playground-panel">
+                                <h4>Parabola</h4>
+                                <div class="calculation-steps">
+                                    <div class="calc-step">
+                                        <span>Vrchol V</span>
+                                        <span id="playVertex" class="calc-value">[0.0, 0.0]</span>
+                                    </div>
+                                </div>
+                                <div class="control-group" style="margin-top:0.5rem;">
+                                    <label>p = <span id="playPVal">2.0</span></label>
+                                    <input type="range" id="playPSlider" min="0.5" max="6" value="2" step="0.5">
+                                </div>
+                                <div class="control-group" style="margin-top:0.25rem;">
+                                    <label style="font-weight:600;font-size:0.85rem;">Orientace:</label>
+                                    <select id="playOrientation"
+                                        style="width:100%;padding:0.5rem;border-radius:var(--radius-sm);background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border-subtle);">
+                                        <option value="right">→ Doprava (y² = 2px)</option>
+                                        <option value="left">← Doleva (y² = −2px)</option>
+                                        <option value="up">↑ Nahoru (x² = 2py)</option>
+                                        <option value="down">↓ Dolů (x² = −2py)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Hodnoty</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>Ohnisko</span>
+                                        <span id="playFocus" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Rovnice</span>
+                                        <span id="playEq" class="calc-value" style="font-size:0.8rem;">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-panel">
+                                <h4>Testovaný bod</h4>
+                                <div class="property-list">
+                                    <div class="property">
+                                        <span>P</span>
+                                        <span id="playTestP" class="calc-value">—</span>
+                                    </div>
+                                    <div class="property">
+                                        <span>Poloha</span>
+                                        <span id="playTestResult" class="calc-value">—</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="playground-actions">
+                                <button class="btn-outline" id="playResetBtn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="orientations">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <!-- Section 7: Exercises -->
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+
+                    <div class="exercise-container">
+                        <!-- Exercise 1 -->
+                        <div class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Parabola má rovnici y² = 8x. Jaký je parametr p a kde leží ohnisko?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>p = 8, F = [4,
+                                            0]</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>p = 4, F = [2,
+                                            0]</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>p = 2, F = [1,
+                                            0]</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>p = 16, F = [8,
+                                            0]</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 2 -->
+                        <div class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Ohnisko paraboly je F = [0, 3]. Jaká je rovnice paraboly (vrchol v počátku)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>y² =
+                                            12x</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>x² =
+                                            6y</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>x² =
+                                            12y</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>y² =
+                                            6x</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2"
+                                    data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 3 -->
+                        <div class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Řídící přímka paraboly y² = 2px je x = −3. Jaké je p?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>p =
+                                            3</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>p =
+                                            6</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>p =
+                                            1.5</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>p =
+                                            9</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 4 -->
+                        <div class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká rovnice popisuje parabolu otevřenou doleva s parametrem p = 5?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>y² =
+                                            10x</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>y² =
+                                            −10x</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>x² =
+                                            −10y</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>x² =
+                                            10y</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 5 -->
+                        <div class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je délka latus rectum paraboly y² = 6x?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="a"><span>3</span></label>
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="b"><span>6</span></label>
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="c"><span>12</span></label>
+                                    <label class="option"><input type="radio" name="ex5"
+                                            value="d"><span>1.5</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Exercise 6 -->
+                        <div class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Leží bod P = [2, 3] na parabole y² = 8x, uvnitř, nebo vně?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>Na parabole (y²
+                                            = 2px)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>Uvnitř (y² &lt;
+                                            2px)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>Vně (y² &gt;
+                                            2px)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>Nelze
+                                            určit</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6"
+                                    data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lesson Complete -->
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Výborně!</h2>
+                        <p>Dokončili jste kapitolu Parabola.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <button class="btn-outline btn-prev" data-prev="playground">← Zpět</button>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

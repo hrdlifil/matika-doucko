@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kruh a kružnice - interaktivní kapitola planimetrie o tětivách, výsečích, sečnách, tečnách a vzájemné poloze dvou kružnic.">
+    <title>Kruh a kružnice – Planimetrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Planimetrie</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 4: Kruh a kružnice</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 4</h3>
+                    <p>Kruh a kružnice</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#kruznice-kruh-tetiva-usec-a-vysec" class="sidebar-link active"
+                        data-section="kruznice-kruh-tetiva-usec-a-vysec">
+                        <span class="sidebar-icon">1</span>
+                        Kružnice, kruh, tětiva, úseč a výseč
+                    </a>
+                    <a href="#secna-tecna-a-vnejsi-primka" class="sidebar-link"
+                        data-section="secna-tecna-a-vnejsi-primka">
+                        <span class="sidebar-icon">2</span>
+                        Sečna, tečna a vnější přímka
+                    </a>
+                    <a href="#vzajemna-poloha-dvou-kruznic" class="sidebar-link"
+                        data-section="vzajemna-poloha-dvou-kruznic">
+                        <span class="sidebar-icon">3</span>
+                        Vzájemná poloha dvou kružnic
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="kruznice-kruh-tetiva-usec-a-vysec" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
+                    <h1>Kružnice, kruh, tětiva, úseč a výseč</h1>
+                    <p class="lead">
+                        <strong>Kružnice</strong> je množina bodů se stejnou vzdáleností od středu O, zatímco
+                        <strong>kruh</strong> je celá plocha uvnitř kružnice. Z tětivy AB dostaneme dvě důležité
+                        oblasti: <strong>výseč</strong> (omezená dvěma poloměry a obloukem) a <strong>úseč</strong>
+                        (omezená tětivou a obloukem).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod kružnice:</strong> <code>o = 2πr</code></li>
+                            <li><strong>Obsah kruhu:</strong> <code>S = πr²</code></li>
+                            <li><strong>Délka tětivy:</strong> <code>c = 2r sin(φ/2)</code></li>
+                            <li><strong>Délka oblouku:</strong> <code>l = r · φ</code> (φ v radiánech)</li>
+                            <li><strong>Obsah výseče:</strong> <code>S_v = (1/2) r² φ</code></li>
+                            <li><strong>Obsah úseče:</strong> <code>S_u = S_v - (1/2) r² sin φ</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Anatomie kružnice a kruhu</h3>
+                        <p>Měníte poloměr a středový úhel. Sledujte, jak se mění tětiva, oblouk, výseč i úseč.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="circleBasicsCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Body A, B leží na kružnici; O je střed</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="circleRadiusSlider">Poloměr r: <strong id="circleRadiusValue">4.0</strong></label>
+                                    <input type="range" id="circleRadiusSlider" min="2" max="6" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="centralAngleSlider">Středový úhel φ: <strong id="centralAngleValue">110°</strong></label>
+                                    <input type="range" id="centralAngleSlider" min="20" max="170" step="1" value="110">
+                                </div>
+                                <div class="control-group">
+                                    <label for="radiusRotationSlider">Natočení OA: <strong id="radiusRotationValue">20°</strong></label>
+                                    <input type="range" id="radiusRotationSlider" min="0" max="360" step="1" value="20">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showSector" checked>
+                                    <span>Zobrazit výseč</span></label>
+                                <label class="check-row"><input type="checkbox" id="showSegment" checked>
+                                    <span>Zobrazit úseč</span></label>
+                                <label class="check-row"><input type="checkbox" id="showChord" checked>
+                                    <span>Zobrazit tětivu AB</span></label>
+                                <label class="check-row"><input type="checkbox" id="showRadii" checked>
+                                    <span>Zobrazit poloměry OA, OB</span></label>
+                                <label class="check-row"><input type="checkbox" id="showArc" checked>
+                                    <span>Zvýraznit oblouk AB</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod kružnice o</span><span id="circumferenceValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah kruhu S</span><span id="diskAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Tětiva c = |AB|</span><span id="chordLengthValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Délka oblouku l</span><span id="arcLengthValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah výseče S_v</span><span id="sectorAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah úseče S_u</span><span id="segmentAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Úhel v radiánech</span><span id="angleRadiansValue"
+                                            class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="resetCircleBasics" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Tip ve stylu Brilliant</h4>
+                            <p>
+                                Všechny vzorce pro výseč a oblouk jsou nejjednodušší v <strong>radiánech</strong>.
+                                Proto panel ukazuje úhel současně ve stupních i radiánech.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="secna-tecna-a-vnejsi-primka">Sečna, tečna a
+                            vnější přímka →</button>
+                    </div>
+                </section>
+
+                <section id="secna-tecna-a-vnejsi-primka" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
+                    <h1>Sečna, tečna a vnější přímka</h1>
+                    <p class="lead">
+                        Vzájemnou polohu přímky a kružnice určuje vzdálenost středu kružnice od přímky. Označíme-li ji
+                        <code>d</code> a poloměr kružnice <code>r</code>, pak stačí porovnat <code>d</code> a
+                        <code>r</code>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Kritérium podle vzdálenosti</h4>
+                        <ul>
+                            <li><strong>Sečna:</strong> <code>d &lt; r</code> (2 průsečíky)</li>
+                            <li><strong>Tečna:</strong> <code>d = r</code> (1 dotykový bod)</li>
+                            <li><strong>Vnější přímka:</strong> <code>d &gt; r</code> (0 průsečíků)</li>
+                            <li>V dotykovém bodě tečny platí: <strong>poloměr je kolmý na tečnu</strong>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Klasifikace polohy přímky</h3>
+                        <p>Měníte poloměr, vzdálenost i směr přímky. Systém automaticky určí typ polohy.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="lineCircleCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Přerušená úsečka ON značí kolmo měřenou vzdálenost d</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="lineCircleRadiusSlider">Poloměr r: <strong id="lineCircleRadiusValue">3.5</strong></label>
+                                    <input type="range" id="lineCircleRadiusSlider" min="2" max="5" step="0.1" value="3.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="lineDistanceSlider">Vzdálenost d od středu: <strong id="lineDistanceValue">2.0</strong></label>
+                                    <input type="range" id="lineDistanceSlider" min="0" max="6" step="0.1" value="2.0">
+                                </div>
+                                <div class="control-group">
+                                    <label for="lineAngleSlider">Natočení přímky: <strong id="lineAngleValue">35°</strong></label>
+                                    <input type="range" id="lineAngleSlider" min="0" max="180" step="1" value="35">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showDistancePerp" checked>
+                                    <span>Zobrazit kolmou vzdálenost ON</span></label>
+                                <label class="check-row"><input type="checkbox" id="showChordLength" checked>
+                                    <span>Zobrazit sečnu PQ (když existuje)</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>|d|</span><span id="lineAbsDistanceValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Porovnání d vs r</span><span id="lineComparisonValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Počet průsečíků</span><span id="lineIntersectionCountValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Délka sečny |PQ|</span><span id="lineChordLengthValue"
+                                            class="calc-value">—</span></div>
+                                    <div class="status-row"><span>Typ polohy</span><span id="lineTypeValue"
+                                            class="status-chip">čeká na výpočet</span></div>
+                                </div>
+
+                                <button id="resetLineCircle" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <span class="info-card-icon">⚠️</span>
+                        <div class="info-card-content">
+                            <h4>Důležitý detail</h4>
+                            <p>
+                                U tečny rozhoduje přesně rovnost <code>d = r</code>. V počítačové grafice se kvůli
+                                zaokrouhlení pracuje s malou tolerancí, ale matematicky jde o ostrou hranici.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="kruznice-kruh-tetiva-usec-a-vysec">← Kružnice,
+                            kruh, tětiva, úseč a výseč</button>
+                        <button class="btn-primary btn-next" data-next="vzajemna-poloha-dvou-kruznic">Vzájemná poloha
+                            dvou kružnic →</button>
+                    </div>
+                </section>
+
+                <section id="vzajemna-poloha-dvou-kruznic" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
+                    <h1>Vzájemná poloha dvou kružnic</h1>
+                    <p class="lead">
+                        O poloze dvou kružnic rozhoduje vzdálenost středů <code>d</code> a poloměry
+                        <code>r₁, r₂</code>. Klíčové jsou meze <code>r₁ + r₂</code> a <code>|r₁ - r₂|</code>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Všechny případy</h4>
+                        <ul>
+                            <li><strong>d &gt; r₁ + r₂:</strong> kružnice jsou vnější, bez společných bodů</li>
+                            <li><strong>d = r₁ + r₂:</strong> vnější dotyk (1 bod)</li>
+                            <li><strong>|r₁ - r₂| &lt; d &lt; r₁ + r₂:</strong> protínají se (2 body)</li>
+                            <li><strong>d = |r₁ - r₂|:</strong> vnitřní dotyk (1 bod)</li>
+                            <li><strong>d &lt; |r₁ - r₂|:</strong> jedna kružnice je uvnitř druhé, bez průniku</li>
+                            <li><strong>d = 0, r₁ = r₂:</strong> kružnice splývají (nekonečně mnoho bodů)</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Dvě kružnice v pohybu</h3>
+                        <p>Měníte oba poloměry, vzdálenost středů i směr spojnice středů. Sledujte přechody mezi případy.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="twoCirclesCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">O1 a O2 jsou středy; body X, Y jsou případné průsečíky</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="circle1RadiusSlider">Poloměr r₁: <strong id="circle1RadiusValue">3.6</strong></label>
+                                    <input type="range" id="circle1RadiusSlider" min="2" max="5" step="0.1" value="3.6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="circle2RadiusSlider">Poloměr r₂: <strong id="circle2RadiusValue">2.4</strong></label>
+                                    <input type="range" id="circle2RadiusSlider" min="1" max="5" step="0.1" value="2.4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="centerDistanceSlider">Vzdálenost středů d: <strong id="centerDistanceValue">5.2</strong></label>
+                                    <input type="range" id="centerDistanceSlider" min="0" max="9" step="0.1" value="5.2">
+                                </div>
+                                <div class="control-group">
+                                    <label for="centerAngleSlider">Směr O1O2: <strong id="centerAngleValue">10°</strong></label>
+                                    <input type="range" id="centerAngleSlider" min="-180" max="180" step="1" value="10">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showCenterLine" checked>
+                                    <span>Zobrazit spojnici středů O1O2</span></label>
+                                <label class="check-row"><input type="checkbox" id="showCommonChord" checked>
+                                    <span>Zobrazit společnou tětivu XY</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>r₁ + r₂</span><span id="sumRadiiValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>|r₁ - r₂|</span><span id="diffRadiiValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Aktuální d</span><span id="actualDistanceValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Počet průsečíků</span><span id="circleIntersectionsValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Průsečíky</span><span id="intersectionCoordsValue"
+                                            class="calc-value">—</span></div>
+                                    <div class="status-row"><span>Poloha kružnic</span><span id="circlesPositionValue"
+                                            class="status-chip">čeká na výpočet</span></div>
+                                </div>
+
+                                <button id="resetTwoCircles" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Jak si to pamatovat</h4>
+                            <p>
+                                Čísla <code>r₁ + r₂</code> a <code>|r₁ - r₂|</code> tvoří dva prahy. Jakmile se
+                                vzdálenost <code>d</code> mezi středy pohybuje mezi nimi, kružnice se vždy protínají
+                                ve dvou bodech.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="secna-tecna-a-vnejsi-primka">← Sečna, tečna a
+                            vnější přímka</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Rychlé ověření porozumění</h1>
+                    <p class="lead">Šest úloh k upevnění pojmů o kružnici, přímkách a dvou kružnicích.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 1</span><span id="ex1Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Co je kružnice?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> Množina bodů s obsahem πr²</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> Množina bodů se stejnou vzdáleností od středu</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> Vnitřní oblast ohraničená kružnicí</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 2</span><span id="ex2Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Který vzorec platí pro obsah výseče o středovém úhlu φ (v radiánech)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> S_v = r · φ</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> S_v = (1/2) r² φ</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> S_v = πr² / φ</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 3</span><span id="ex3Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Pokud je vzdálenost přímky od středu kružnice menší než poloměr (d &lt; r), jde o:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> tečnu</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> sečnu</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> vnější přímku</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 4</span><span id="ex4Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Co platí v dotykovém bodě tečny?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> Tečna je rovnoběžná s poloměrem</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> Tečna je kolmá na poloměr vedený do dotykového bodu</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> Dotykový bod leží mimo kružnici</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 5</span><span id="ex5Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Pro r₁ = 4, r₂ = 2 a d = 6 jsou kružnice:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> vněji dotykové</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> protínají se ve dvou bodech</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> vnitřně dotykové</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 6</span><span id="ex6Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Pro r₁ = 5, r₂ = 3 a d = 1 platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> kružnice se protínají</label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> kružnice jsou vnější bez společných bodů</label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> jedna kružnice leží uvnitř druhé bez společných bodů</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat odpověď</button>
+                                <div id="ex6Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Skvěle, kapitola je hotová</h2>
+                        <p>Pokračujte na další kapitolu nebo se vraťte na přehled kurzu.</p>
+                        <div class="complete-actions">
+                            <a href="../heronuv-vzorec/index.html" class="btn-primary">Pokračovat na kapitolu 5</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="vzajemna-poloha-dvou-kruznic">← Vzájemná poloha
+                            dvou kružnic</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

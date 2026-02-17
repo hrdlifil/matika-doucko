@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Goniometrické výrazy a rovnice – základní i složitější rovnice, substituce, úpravy výrazů.">
+    <title>Goniometrické výrazy a rovnice – Goniometrie a trigonometrie</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Goniometrie a trigonometrie</a>
+                <span class="lesson-separator">›</span>
+                <span class="lesson-current">Kapitola 5</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Lesson layout -->
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <!-- Sidebar -->
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 5</h3>
+                    <p>Goniometrické výrazy a rovnice</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#basic-eq" class="sidebar-link active" data-section="basic-eq">
+                        <span class="sidebar-icon">1</span>
+                        Základní rovnice
+                    </a>
+                    <a href="#basic-subst" class="sidebar-link" data-section="basic-subst">
+                        <span class="sidebar-icon">2</span>
+                        Základní substituce
+                    </a>
+                    <a href="#advanced-subst" class="sidebar-link" data-section="advanced-subst">
+                        <span class="sidebar-icon">3</span>
+                        Složitější substituce
+                    </a>
+                    <a href="#hard-eq" class="sidebar-link" data-section="hard-eq">
+                        <span class="sidebar-icon">4</span>
+                        Těžší rovnice
+                    </a>
+                    <a href="#simplify" class="sidebar-link" data-section="simplify">
+                        <span class="sidebar-icon">5</span>
+                        Úpravy výrazů
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main lesson content -->
+            <div class="lesson-content">
+
+                <!-- ============================================================ -->
+                <!-- SECTION 1: Základní goniometrické rovnice -->
+                <!-- ============================================================ -->
+                <section id="basic-eq" class="lesson-section active">
+                    <span class="section-badge">Kapitola 5 · Část 1</span>
+                    <h1>Základní goniometrické rovnice</h1>
+                    <p class="lead">
+                        Základní goniometrické rovnice mají tvar sin x = a, cos x = a nebo tg x = a.
+                        Klíčem k jejich řešení je pochopení, kde na jednotkové kružnici se hledané hodnoty nacházejí.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Rovnice sin x = a</h4>
+                        <p>Pro |a| ≤ 1 má řešení:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">x₁</span>
+                                <span class="formula-eq">= arcsin a + 2kπ</span>
+                                <span class="formula-note">k ∈ ℤ</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">x₂</span>
+                                <span class="formula-eq">= π − arcsin a + 2kπ</span>
+                                <span class="formula-note">k ∈ ℤ</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            Pro |a| > 1 rovnice nemá řešení (sin x nabývá hodnot z [−1, 1]).
+                        </p>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Rovnice cos x = a</h4>
+                        <p>Pro |a| ≤ 1 má řešení:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">x</span>
+                                <span class="formula-eq">= ±arccos a + 2kπ</span>
+                                <span class="formula-note">k ∈ ℤ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Rovnice tg x = a</h4>
+                        <p>Pro libovolné a ∈ ℝ má řešení:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">x</span>
+                                <span class="formula-eq">= arctg a + kπ</span>
+                                <span class="formula-note">k ∈ ℤ (perioda tg je π)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Static chart showing unit circle solutions -->
+                    <div class="interactive-demo">
+                        <h3>📊 Grafické řešení rovnice sin x = ½</h3>
+                        <p>Na obrázku jsou vyznačena řešení rovnice sin x = ½ na jednotkové kružnici i na grafu funkce
+                            sinus.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="sinEqCanvas" width="750" height="350"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte sin x = ½</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Najdi základní úhel</span>
+                                    <div class="step-content">arcsin(½) = π/6 (30°)</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Urči všechna řešení</span>
+                                    <div class="step-content">
+                                        x₁ = π/6 + 2kπ &nbsp; nebo &nbsp; x₂ = π − π/6 + 2kπ = 5π/6 + 2kπ
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/6 + 2kπ</strong> &nbsp; nebo &nbsp;
+                                        <strong>x = 5π/6 + 2kπ</strong>, &nbsp; k ∈ ℤ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte cos x = −√2/2</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Najdi základní úhel</span>
+                                    <div class="step-content">arccos(√2/2) = π/4, protože cos je záporný → úhly ve 2. a
+                                        3. kvadrantu</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Urči řešení</span>
+                                    <div class="step-content">x = ±(π − π/4) + 2kπ = ±3π/4 + 2kπ</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = ±3π/4 + 2kπ</strong>, &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte tg x = 1</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Najdi základní úhel</span>
+                                    <div class="step-content">arctg(1) = π/4 (45°)</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/4 + kπ</strong>, &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <a href="#basic-subst" class="btn btn-primary sidebar-link" data-section="basic-subst">Základní
+                            substituce →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 2: Základní substituce -->
+                <!-- ============================================================ -->
+                <section id="basic-subst" class="lesson-section">
+                    <span class="section-badge">Kapitola 5 · Část 2</span>
+                    <h1>Základní substituce</h1>
+                    <p class="lead">
+                        Mnohé goniometrické rovnice lze převést na algebraické rovnice vhodnou substitucí.
+                        Nejčastější substituce je t = sin x nebo t = cos x, čímž rovnici převedeme na rovnici
+                        s neznámou t.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Postup řešení substitucí</h4>
+                        <div class="derivation-steps">
+                            <div class="derivation-step">
+                                <span class="step-title">1. Zvolíme substituci</span>
+                                <div class="step-content">Např. t = sin x, kde t ∈ [−1, 1]</div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">2. Vyřešíme rovnici pro t</span>
+                                <div class="step-content">Dostaneme algebraickou rovnici (lineární, kvadratickou...)
+                                </div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">3. Ověříme podmínky</span>
+                                <div class="step-content">Platí t ∈ [−1, 1]? (pokud t = sin x nebo cos x)</div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">4. Zpětná substituce</span>
+                                <div class="step-content">Z hodnot t určíme x pomocí arcsin, arccos, arctg</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte 2sin²x − sin x − 1 = 0</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Substituce</span>
+                                    <div class="step-content">Položíme <strong>t = sin x</strong>, t ∈ [−1, 1]<br>
+                                        Rovnice: 2t² − t − 1 = 0</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Řešení kvadratické rovnice</span>
+                                    <div class="step-content">
+                                        D = 1 + 8 = 9, √D = 3<br>
+                                        t₁ = (1 + 3) / 4 = <strong>1</strong><br>
+                                        t₂ = (1 − 3) / 4 = <strong>−½</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Ověření podmínek</span>
+                                    <div class="step-content">t₁ = 1 ∈ [−1, 1] ✅ &nbsp;&nbsp; t₂ = −½ ∈ [−1, 1] ✅</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 4: Zpětná substituce</span>
+                                    <div class="step-content">
+                                        sin x = 1 → <strong>x = π/2 + 2kπ</strong><br>
+                                        sin x = −½ → <strong>x = −π/6 + 2kπ</strong> nebo <strong>x = π + π/6 + 2kπ =
+                                            7π/6 + 2kπ</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/2 + 2kπ, &nbsp; x = −π/6 + 2kπ, &nbsp; x =
+                                            7π/6 + 2kπ</strong>, &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>📊 Graf rovnice 2sin²x − sin x − 1 = 0</h3>
+                        <p>Graf funkce f(x) = 2sin²x − sin x − 1. Body průniku s osou x jsou řešení rovnice.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="substCanvas" width="750" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte 2cos²x + 3cos x + 1 = 0</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Substituce</span>
+                                    <div class="step-content">t = cos x, t ∈ [−1, 1] → 2t² + 3t + 1 = 0</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Řešení</span>
+                                    <div class="step-content">
+                                        (2t + 1)(t + 1) = 0<br>
+                                        t₁ = −½, &nbsp; t₂ = −1
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Zpětná substituce</span>
+                                    <div class="step-content">
+                                        cos x = −½ → x = ±2π/3 + 2kπ<br>
+                                        cos x = −1 → x = π + 2kπ
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = ±2π/3 + 2kπ, &nbsp; x = π + 2kπ</strong>,
+                                        &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Kdy použít substituci t = sin x / cos x?</h4>
+                            <p>Substituci používáme, když se v rovnici vyskytuje pouze <strong>jedna</strong>
+                                goniometrická
+                                funkce (nebo lze vše převést na jednu pomocí identity sin²x + cos²x = 1).</p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#basic-eq" class="btn btn-ghost sidebar-link" data-section="basic-eq">← Základní
+                            rovnice</a>
+                        <a href="#advanced-subst" class="btn btn-primary sidebar-link"
+                            data-section="advanced-subst">Složitější substituce →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 3: Složitější substituce -->
+                <!-- ============================================================ -->
+                <section id="advanced-subst" class="lesson-section">
+                    <span class="section-badge">Kapitola 5 · Část 3</span>
+                    <h1>Složitější substituce</h1>
+                    <p class="lead">
+                        Některé rovnice vyžadují pokročilejší substituční techniky. Nejdůležitější je
+                        <strong>univerzální substituce</strong> t = tg(x/2), která převede libovolnou goniometrickou
+                        rovnici na algebraickou.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Univerzální substituce: t = tg(x/2)</h4>
+                        <p>Vyjádření goniometrických funkcí pomocí t = tg(x/2):</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin x</span>
+                                <span class="formula-eq">= 2t / (1 + t²)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">cos x</span>
+                                <span class="formula-eq">= (1 − t²) / (1 + t²)</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tg x</span>
+                                <span class="formula-eq">= 2t / (1 − t²)</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            ⚠️ Substituce platí jen pro x ≠ π + 2kπ (kde tg(x/2) není definován).
+                        </p>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">🔍</span>
+                        <div class="info-card-content">
+                            <h4>Odvození: proč t = tg(x/2) funguje?</h4>
+                            <p>Pomocí vzorců pro dvojnásobný úhel (x = 2·(x/2)):</p>
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">sin x = 2 sin(x/2) cos(x/2)</span>
+                                    <div class="step-content">
+                                        Dělíme čitatele i jmenovatele cos²(x/2):<br>
+                                        = 2·tg(x/2) / (1 + tg²(x/2)) = <strong>2t / (1 + t²)</strong>
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">cos x = cos²(x/2) − sin²(x/2)</span>
+                                    <div class="step-content">
+                                        Dělíme cos²(x/2):<br>
+                                        = (1 − tg²(x/2)) / (1 + tg²(x/2)) = <strong>(1 − t²) / (1 + t²)</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte 3sin x + 4cos x = 5</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Univerzální substituce t = tg(x/2)</span>
+                                    <div class="step-content">
+                                        sin x = 2t/(1+t²), &nbsp; cos x = (1−t²)/(1+t²)<br>
+                                        3·2t/(1+t²) + 4·(1−t²)/(1+t²) = 5
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Vynásobíme (1 + t²)</span>
+                                    <div class="step-content">
+                                        6t + 4 − 4t² = 5 + 5t²<br>
+                                        9t² − 6t + 1 = 0<br>
+                                        (3t − 1)² = 0
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Řešení</span>
+                                    <div class="step-content">t = 1/3, tedy tg(x/2) = 1/3</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = 2·arctg(1/3) + 2kπ</strong>, &nbsp; k ∈ ℤ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>📐 Substituce typu a·sin x + b·cos x = c</h4>
+                        <p>Alternativní postup — převedeme na „amplitudový" tvar:</p>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">a·sin x + b·cos x</span>
+                                <span class="formula-eq">= √(a²+b²) · sin(x + φ)</span>
+                                <span class="formula-note">kde tg φ = b/a</span>
+                            </div>
+                        </div>
+                        <p style="margin-top:0.8rem;font-size:0.85rem;color:var(--text-secondary)">
+                            Rovnice má řešení ⟺ |c| ≤ √(a² + b²)
+                        </p>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte sin x + cos x = 1 (amplitudový tvar)</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Převod na amplitudový tvar</span>
+                                    <div class="step-content">
+                                        a = 1, b = 1 → √(a²+b²) = √2, &nbsp; tg φ = 1 → φ = π/4<br>
+                                        sin x + cos x = √2 · sin(x + π/4)
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Rovnice</span>
+                                    <div class="step-content">
+                                        √2 · sin(x + π/4) = 1 → sin(x + π/4) = 1/√2 = √2/2
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content">
+                                        x + π/4 = π/4 + 2kπ → <strong>x = 2kπ</strong><br>
+                                        x + π/4 = 3π/4 + 2kπ → <strong>x = π/2 + 2kπ</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#basic-subst" class="btn btn-ghost sidebar-link" data-section="basic-subst">← Základní
+                            substituce</a>
+                        <a href="#hard-eq" class="btn btn-primary sidebar-link" data-section="hard-eq">Těžší rovnice
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 4: Těžší goniometrické rovnice -->
+                <!-- ============================================================ -->
+                <section id="hard-eq" class="lesson-section">
+                    <span class="section-badge">Kapitola 5 · Část 4</span>
+                    <h1>Těžší goniometrické rovnice</h1>
+                    <p class="lead">
+                        Složitější rovnice vyžadují kombinaci několika technik — rozkladu na součin, substitucí,
+                        použití vzorců pro dvojnásobný úhel a dalších úprav.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Důležité strategie</h4>
+                        <div class="derivation-steps">
+                            <div class="derivation-step">
+                                <span class="step-title">Rozklad na součin</span>
+                                <div class="step-content">Převedeme rovnici na tvar A · B = 0, poté řešíme A = 0 nebo B
+                                    = 0</div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">Využití identity sin²x + cos²x = 1</span>
+                                <div class="step-content">Převedeme rovnici na jednu proměnnou (t = sin x nebo t = cos
+                                    x)</div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">Vzorce pro dvojnásobný úhel</span>
+                                <div class="step-content">sin 2x = 2sin x cos x, cos 2x = 1 − 2sin²x atd.</div>
+                            </div>
+                            <div class="derivation-step">
+                                <span class="step-title">Převod na stejný argument</span>
+                                <div class="step-content">Pokud se v rovnici vyskytuje sin x i sin 2x, převedeme vše na
+                                    x nebo 2x</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte sin 2x = cos x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Použijeme vzorec pro sin 2x</span>
+                                    <div class="step-content">2 sin x cos x = cos x</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Převedeme na jednu stranu</span>
+                                    <div class="step-content">2 sin x cos x − cos x = 0 → <strong>cos x · (2 sin x − 1)
+                                            = 0</strong></div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Řešíme dva případy</span>
+                                    <div class="step-content">
+                                        <strong>cos x = 0</strong> → x = π/2 + kπ<br>
+                                        <strong>sin x = ½</strong> → x = π/6 + 2kπ nebo x = 5π/6 + 2kπ
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/2 + kπ, &nbsp; x = π/6 + 2kπ, &nbsp; x =
+                                            5π/6 + 2kπ</strong>, &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>📊 Graf rovnice sin 2x = cos x</h3>
+                        <p>Grafy sin 2x (oranžová) a cos x (modrá). Body průniku jsou řešení rovnice.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="hardEqCanvas" width="750" height="300"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte sin²x − cos²x = sin x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Využijeme cos 2x = cos²x − sin²x</span>
+                                    <div class="step-content">sin²x − cos²x = −cos 2x, tedy: −cos 2x = sin x</div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Použijeme cos 2x = 1 − 2sin²x</span>
+                                    <div class="step-content">
+                                        −(1 − 2sin²x) = sin x<br>
+                                        2sin²x − 1 = sin x → 2sin²x − sin x − 1 = 0
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Substituce t = sin x</span>
+                                    <div class="step-content">
+                                        2t² − t − 1 = 0 → (2t + 1)(t − 1) = 0<br>
+                                        t₁ = −½, &nbsp; t₂ = 1
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/2 + 2kπ, &nbsp; x = 7π/6 + 2kπ, &nbsp; x =
+                                            11π/6 + 2kπ</strong>, &nbsp; k ∈ ℤ</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Řešte sin x · cos x = ¼</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Využijeme sin 2x = 2sin x cos x</span>
+                                    <div class="step-content">sin x cos x = sin(2x)/2, tedy: sin(2x)/2 = ¼ → sin(2x) = ½
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Řešíme základní rovnici</span>
+                                    <div class="step-content">2x = π/6 + 2kπ nebo 2x = 5π/6 + 2kπ</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Řešení</span>
+                                    <div class="step-content"><strong>x = π/12 + kπ</strong> &nbsp; nebo &nbsp;
+                                        <strong>x = 5π/12 + kπ</strong>, &nbsp; k ∈ ℤ
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#advanced-subst" class="btn btn-ghost sidebar-link" data-section="advanced-subst">←
+                            Složitější substituce</a>
+                        <a href="#simplify" class="btn btn-primary sidebar-link" data-section="simplify">Úpravy výrazů
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 5: Úpravy goniometrických výrazů -->
+                <!-- ============================================================ -->
+                <section id="simplify" class="lesson-section">
+                    <span class="section-badge">Kapitola 5 · Část 5</span>
+                    <h1>Úpravy goniometrických výrazů</h1>
+                    <p class="lead">
+                        Zjednodušování a dokazování goniometrických identit je klíčová dovednost. Používáme
+                        základní identity, součtové vzorce a různé algebraické úpravy.
+                    </p>
+
+                    <div class="definition-box highlight">
+                        <h4>📐 Základní identity pro úpravy</h4>
+                        <div class="formula-grid">
+                            <div class="formula-card">
+                                <span class="formula-name">sin²x + cos²x</span>
+                                <span class="formula-eq">= 1</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">1 + tg²x</span>
+                                <span class="formula-eq">= 1/cos²x</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">1 + cotg²x</span>
+                                <span class="formula-eq">= 1/sin²x</span>
+                            </div>
+                            <div class="formula-card">
+                                <span class="formula-name">tg x · cotg x</span>
+                                <span class="formula-eq">= 1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Zjednodušte (1 − sin²x) / cos x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Využijeme identitu</span>
+                                    <div class="step-content">1 − sin²x = cos²x</div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Výsledek</span>
+                                    <div class="step-content">cos²x / cos x = <strong>cos x</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Dokažte, že (sin x + cos x)² = 1 + sin 2x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Levá strana — rozepíšeme binomický vzorec</span>
+                                    <div class="step-content">
+                                        (sin x + cos x)² = sin²x + 2 sin x cos x + cos²x
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Využijeme identity</span>
+                                    <div class="step-content">
+                                        = (sin²x + cos²x) + 2 sin x cos x<br>
+                                        = 1 + sin 2x
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ L = P &nbsp; □</span>
+                                    <div class="step-content">Levá strana = pravá strana. Identita je dokázána.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Zjednodušte tg x + cotg x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Přepíšeme na sin a cos</span>
+                                    <div class="step-content">
+                                        tg x + cotg x = sin x / cos x + cos x / sin x
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 2: Společný jmenovatel</span>
+                                    <div class="step-content">
+                                        = (sin²x + cos²x) / (sin x · cos x) = 1 / (sin x · cos x)
+                                    </div>
+                                </div>
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 3: Využijeme sin 2x = 2sin x cos x</span>
+                                    <div class="step-content">
+                                        sin x · cos x = sin(2x)/2
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Výsledek</span>
+                                    <div class="step-content"><strong>tg x + cotg x = 2 / sin 2x</strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-card">
+                        <h4>📝 Příklad: Zjednodušte (1 − cos 2x) / sin 2x</h4>
+                        <button class="solution-toggle">👁 Zobrazit řešení</button>
+                        <div class="solution-steps">
+                            <div class="derivation-steps">
+                                <div class="derivation-step">
+                                    <span class="step-title">Krok 1: Rozepíšeme vzorci</span>
+                                    <div class="step-content">
+                                        1 − cos 2x = 2sin²x (ze vzorce cos 2x = 1 − 2sin²x)<br>
+                                        sin 2x = 2 sin x cos x
+                                    </div>
+                                </div>
+                                <div class="derivation-step"
+                                    style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.05);">
+                                    <span class="step-title">✅ Výsledek</span>
+                                    <div class="step-content">
+                                        2sin²x / (2 sin x cos x) = sin x / cos x = <strong>tg x</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <span class="info-card-icon">💡</span>
+                        <div class="info-card-content">
+                            <h4>Tipy pro úpravy výrazů</h4>
+                            <p>
+                                1. Převeďte vše na sin a cos, pokud si nevíte rady.<br>
+                                2. Hledejte vzorec sin²x + cos²x = 1.<br>
+                                3. Využívejte vzorce pro dvojnásobný úhel.<br>
+                                4. Při důkazu identity upravujte <em>jednu stranu</em> na tvar druhé.<br>
+                                5. Společný jmenovatel je váš přítel.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#hard-eq" class="btn btn-ghost sidebar-link" data-section="hard-eq">← Těžší rovnice</a>
+                        <a href="#exercises" class="btn btn-primary sidebar-link" data-section="exercises">Procvičování
+                            →</a>
+                    </div>
+                </section>
+
+                <!-- ============================================================ -->
+                <!-- SECTION 6: Procvičování (Exercises) -->
+                <!-- ============================================================ -->
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Kapitola 5 · Procvičování</span>
+                    <h1>✏️ Procvičování</h1>
+                    <p class="lead">Ověřte si znalost goniometrických rovnic a úprav výrazů.</p>
+
+                    <div class="exercises-list">
+                        <!-- Příklad 1 -->
+                        <div class="exercise" id="ex1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 1</span>
+                                <span class="exercise-status" id="ex1Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Rovnice <strong>sin x = √3/2</strong> má řešení:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> x = π/6 + 2kπ, x =
+                                        5π/6 + 2kπ</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> x = π/3 + 2kπ, x =
+                                        2π/3 + 2kπ</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> x = π/4 + kπ</label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"> x = ±π/3 +
+                                        2kπ</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex1','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 2 -->
+                        <div class="exercise" id="ex2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 2</span>
+                                <span class="exercise-status" id="ex2Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Rovnice <strong>cos x = −1</strong> má řešení:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> x = 2kπ</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> x = π/2 + kπ</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> x = π + 2kπ</label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"> nemá řešení</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex2','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 3 -->
+                        <div class="exercise" id="ex3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 3</span>
+                                <span class="exercise-status" id="ex3Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Rovnici <strong>2sin²x − 3sin x + 1 = 0</strong> řešíme substitucí t = sin x. Kořeny
+                                    jsou:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> t = 1, t = 2</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> t = ½, t = 1</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> t = −½, t =
+                                        1</label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"> t = ½, t =
+                                        −1</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex3','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 4 -->
+                        <div class="exercise" id="ex4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 4</span>
+                                <span class="exercise-status" id="ex4Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Při univerzální substituci t = tg(x/2) platí, že <strong>sin x</strong> =</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> (1 − t²)/(1 +
+                                        t²)</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> 2t/(1 + t²)</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> 2t/(1 − t²)</label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"> t²/(1 + t²)</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex4','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 5 -->
+                        <div class="exercise" id="ex5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 5</span>
+                                <span class="exercise-status" id="ex5Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Výraz <strong>(1 − cos 2x) / sin 2x</strong> se zjednoduší na:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> cos x</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> sin x</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> tg x</label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"> cotg x</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex5','c')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <!-- Příklad 6 -->
+                        <div class="exercise" id="ex6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Příklad 6</span>
+                                <span class="exercise-status" id="ex6Status">⬜</span>
+                            </div>
+                            <div class="exercise-body">
+                                <p>Rovnice <strong>sin 2x = cos x</strong> se rozloží na:</p>
+                                <div class="options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> sin x · (2cos x + 1)
+                                        = 0</label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> cos x · (2sin x − 1)
+                                        = 0</label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> cos x · (2sin x + 1)
+                                        = 0</label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"> sin x · (2cos x − 1)
+                                        = 0</label>
+                                </div>
+                                <button class="btn btn-primary btn-check"
+                                    onclick="checkExercise('ex6','b')">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete">
+                        <h3>🎉 Gratulujeme!</h3>
+                        <p>Úspěšně jste dokončili lekci o goniometrických výrazech a rovnicích!</p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#simplify" class="btn btn-ghost sidebar-link" data-section="simplify">← Úpravy
+                            výrazů</a>
+                        <a href="../../index.html" class="btn btn-primary">Zpět na kurz</a>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        /* Chapter 5: Goniometrické výrazy a rovnice */
+        document.addEventListener('DOMContentLoaded', function () {
+
+            /* ======= NAVIGATION ======= */
+            const sections = document.querySelectorAll('.lesson-section');
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const progressFill = document.querySelector('.progress-fill-small');
+            const visited = new Set();
+
+            function showSection(id) {
+                sections.forEach(s => s.classList.toggle('active', s.id === id));
+                sidebarLinks.forEach(l => {
+                    if (l.dataset.section) l.classList.toggle('active', l.dataset.section === id);
+                });
+                visited.add(id);
+                if (progressFill) progressFill.style.width = Math.round(visited.size / sections.length * 100) + '%';
+                document.querySelector('.lesson-content').scrollTo({ top: 0, behavior: 'smooth' });
+                drawChartsForSection(id);
+            }
+
+            sidebarLinks.forEach(l => {
+                if (l.dataset.section) l.addEventListener('click', e => { e.preventDefault(); showSection(l.dataset.section); });
+            });
+
+            if (location.hash) { const id = location.hash.slice(1); if (document.getElementById(id)) showSection(id); }
+
+            /* ======= COLLAPSIBLE SOLUTIONS ======= */
+            document.querySelectorAll('.solution-toggle').forEach(btn => {
+                btn.addEventListener('click', function () {
+                    const wrapper = this.closest('.example-card');
+                    const steps = wrapper.querySelector('.solution-steps');
+                    const isOpen = steps.classList.contains('open');
+                    steps.classList.toggle('open');
+                    this.textContent = isOpen ? '👁 Zobrazit řešení' : '🔽 Skrýt řešení';
+                });
+            });
+
+            /* ======= EXERCISES ======= */
+            window.checkExercise = function (id, correct) {
+                const chosen = document.querySelector('input[name="' + id + '"]:checked');
+                const fb = document.getElementById(id + 'Feedback');
+                const st = document.getElementById(id + 'Status');
+                if (!chosen) { fb.textContent = 'Vyberte odpověď.'; fb.className = 'exercise-feedback wrong'; return; }
+                if (chosen.value === correct) {
+                    fb.textContent = '✅ Správně!'; fb.className = 'exercise-feedback correct'; st.textContent = '✅';
+                } else {
+                    fb.textContent = '❌ Špatně, zkuste to znovu.'; fb.className = 'exercise-feedback wrong'; st.textContent = '❌';
+                }
+            };
+
+            /* ======= CANVAS HELPERS ======= */
+            function setupHiDPI(canvas) {
+                const dpr = window.devicePixelRatio || 1;
+                const rect = canvas.getBoundingClientRect();
+                const w = rect.width, h = rect.height;
+                canvas.width = w * dpr; canvas.height = h * dpr;
+                canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+                const ctx = canvas.getContext('2d');
+                ctx.scale(dpr, dpr);
+                return { ctx, w, h };
+            }
+
+            const C = {
+                axis: 'rgba(203,213,225,0.4)', axisLabel: 'rgba(203,213,225,0.65)',
+                grid: 'rgba(148,163,184,0.06)', text: '#e2e8f0',
+                sin: '#f87171', cos: '#60a5fa', tan: '#fb923c',
+                green: '#34d399', accent: '#818cf8',
+                sinGlow: 'rgba(248,113,113,0.35)', cosGlow: 'rgba(96,165,250,0.35)',
+                tanGlow: 'rgba(251,146,60,0.35)', greenGlow: 'rgba(52,211,153,0.35)',
+                accentGlow: 'rgba(129,140,248,0.35)'
+            };
+
+            function drawAxes(ctx, ox, oy, w, h, xMin, xMax, yMin, yMax) {
+                ctx.strokeStyle = C.axis; ctx.lineWidth = 1.2;
+                ctx.beginPath(); ctx.moveTo(0, oy); ctx.lineTo(w, oy); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(ox, 0); ctx.lineTo(ox, h); ctx.stroke();
+                ctx.fillStyle = C.axis;
+                ctx.beginPath(); ctx.moveTo(w - 1, oy); ctx.lineTo(w - 7, oy - 3); ctx.lineTo(w - 7, oy + 3); ctx.fill();
+                ctx.beginPath(); ctx.moveTo(ox, 1); ctx.lineTo(ox - 3, 7); ctx.lineTo(ox + 3, 7); ctx.fill();
+            }
+
+            function toPixel(x, y, ox, oy, sx, sy) {
+                return [ox + x * sx, oy - y * sy];
+            }
+
+            function drawGrid(ctx, ox, oy, w, h, sx, sy, xStep, yStep) {
+                ctx.strokeStyle = C.grid; ctx.lineWidth = 0.5;
+                for (let x = xStep; ox + x * sx < w; x += xStep) {
+                    ctx.beginPath(); ctx.moveTo(ox + x * sx, 0); ctx.lineTo(ox + x * sx, h); ctx.stroke();
+                }
+                for (let x = -xStep; ox + x * sx > 0; x -= xStep) {
+                    ctx.beginPath(); ctx.moveTo(ox + x * sx, 0); ctx.lineTo(ox + x * sx, h); ctx.stroke();
+                }
+                for (let y = yStep; oy - y * sy > 0; y += yStep) {
+                    ctx.beginPath(); ctx.moveTo(0, oy - y * sy); ctx.lineTo(w, oy - y * sy); ctx.stroke();
+                }
+                for (let y = -yStep; oy - y * sy < h; y -= yStep) {
+                    ctx.beginPath(); ctx.moveTo(0, oy - y * sy); ctx.lineTo(w, oy - y * sy); ctx.stroke();
+                }
+            }
+
+            function drawCurve(ctx, ox, oy, sx, sy, fn, xMin, xMax, color, lw) {
+                ctx.strokeStyle = color; ctx.lineWidth = lw || 2.5;
+                ctx.beginPath();
+                const steps = 600;
+                for (let i = 0; i <= steps; i++) {
+                    const x = xMin + (i / steps) * (xMax - xMin);
+                    const y = fn(x);
+                    if (Math.abs(y) > 20) { ctx.stroke(); ctx.beginPath(); continue; }
+                    const [px, py] = toPixel(x, y, ox, oy, sx, sy);
+                    i === 0 ? ctx.moveTo(px, py) : ctx.lineTo(px, py);
+                }
+                ctx.stroke();
+            }
+
+            function drawDot(ctx, px, py, color, glow, r) {
+                ctx.save(); ctx.shadowColor = glow; ctx.shadowBlur = 12;
+                ctx.fillStyle = color; ctx.beginPath(); ctx.arc(px, py, r || 5, 0, Math.PI * 2); ctx.fill();
+                ctx.restore();
+            }
+
+            function drawXLabel(ctx, ox, oy, sx, val, txt) {
+                const px = ox + val * sx;
+                ctx.strokeStyle = C.axis; ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.moveTo(px, oy - 3); ctx.lineTo(px, oy + 3); ctx.stroke();
+                ctx.fillStyle = C.axisLabel; ctx.font = '10px Inter'; ctx.textAlign = 'center'; ctx.textBaseline = 'top';
+                ctx.fillText(txt, px, oy + 5);
+            }
+
+            function drawYLabel(ctx, ox, oy, sy, val, txt) {
+                const py = oy - val * sy;
+                ctx.strokeStyle = C.axis; ctx.lineWidth = 1;
+                ctx.beginPath(); ctx.moveTo(ox - 3, py); ctx.lineTo(ox + 3, py); ctx.stroke();
+                ctx.fillStyle = C.axisLabel; ctx.font = '10px Inter'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+                ctx.fillText(txt, ox - 6, py);
+            }
+
+            /* ======= CHART DRAWING ======= */
+            const chartDrawn = {};
+
+            function drawChartsForSection(id) {
+                if (id === 'basic-eq' && !chartDrawn['sinEq']) { drawSinEqChart(); chartDrawn['sinEq'] = true; }
+                if (id === 'basic-subst' && !chartDrawn['subst']) { drawSubstChart(); chartDrawn['subst'] = true; }
+                if (id === 'hard-eq' && !chartDrawn['hardEq']) { drawHardEqChart(); chartDrawn['hardEq'] = true; }
+            }
+
+            /* --- Chart 1: sin x = 1/2 (unit circle + graph) --- */
+            function drawSinEqChart() {
+                const canvas = document.getElementById('sinEqCanvas');
+                if (!canvas) return;
+                const { ctx, w, h } = setupHiDPI(canvas);
+                ctx.clearRect(0, 0, w * 3, h * 3);
+
+                const ccx = 130, ccy = h / 2, cr = Math.min(100, h / 2 - 30);
+
+                ctx.save(); ctx.shadowColor = C.accentGlow; ctx.shadowBlur = 15;
+                ctx.strokeStyle = C.accent; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.3;
+                ctx.beginPath(); ctx.arc(ccx, ccy, cr, 0, Math.PI * 2); ctx.stroke();
+                ctx.restore();
+
+                ctx.strokeStyle = 'rgba(203,213,225,0.3)'; ctx.lineWidth = 1.5;
+                ctx.beginPath(); ctx.arc(ccx, ccy, cr, 0, Math.PI * 2); ctx.stroke();
+
+                ctx.strokeStyle = C.axis; ctx.lineWidth = 0.8;
+                ctx.beginPath(); ctx.moveTo(ccx - cr - 12, ccy); ctx.lineTo(ccx + cr + 12, ccy); ctx.stroke();
+                ctx.beginPath(); ctx.moveTo(ccx, ccy - cr - 12); ctx.lineTo(ccx, ccy + cr + 12); ctx.stroke();
+
+                const halfY = ccy - cr * 0.5;
+                ctx.setLineDash([5, 4]); ctx.strokeStyle = C.sin; ctx.lineWidth = 1; ctx.globalAlpha = 0.6;
+                ctx.beginPath(); ctx.moveTo(ccx - cr - 8, halfY); ctx.lineTo(ccx + cr + 8, halfY); ctx.stroke();
+                ctx.setLineDash([]); ctx.globalAlpha = 1;
+
+                ctx.fillStyle = C.sin; ctx.font = 'bold 11px Inter'; ctx.textAlign = 'left';
+                ctx.fillText('y = ½', ccx + cr + 12, halfY - 5);
+
+                [Math.PI / 6, 5 * Math.PI / 6].forEach((a, i) => {
+                    const px = ccx + cr * Math.cos(a), py = ccy - cr * Math.sin(a);
+                    ctx.strokeStyle = C.accent; ctx.lineWidth = 1.5; ctx.globalAlpha = 0.7;
+                    ctx.beginPath(); ctx.moveTo(ccx, ccy); ctx.lineTo(px, py); ctx.stroke();
+                    ctx.globalAlpha = 1;
+                    ctx.strokeStyle = C.accent; ctx.lineWidth = 1;
+                    ctx.beginPath(); ctx.arc(ccx, ccy, 20, -a, 0); ctx.stroke();
+                    drawDot(ctx, px, py, C.green, C.greenGlow, 5);
+                    ctx.fillStyle = C.text; ctx.font = 'bold 12px Inter'; ctx.textAlign = 'center';
+                    ctx.fillText(i === 0 ? 'π/6' : '5π/6', px + (i === 0 ? 16 : -16), py - 12);
+                });
+
+                ctx.fillStyle = C.axisLabel; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+                ctx.fillText('Jednotková kružnice', ccx, h - 8);
+
+                var gL = 290, gR = w - 20, gW = gR - gL;
+                var gCy = h / 2, gAmp = Math.min(90, h / 2 - 30);
+                var xMin = -0.5, xMax = 3.3 * Math.PI;
+                var sx = gW / (xMax - xMin), ox = gL - xMin * sx, sy = gAmp;
+
+                drawGrid(ctx, ox, gCy, gR, h, sx, sy, Math.PI / 2, 0.5);
+                drawAxes(ctx, ox, gCy, gR, h, xMin, xMax, -1.3, 1.3);
+
+                [[Math.PI, 'π'], [2 * Math.PI, '2π'], [3 * Math.PI, '3π'],
+                [Math.PI / 2, 'π/2'], [3 * Math.PI / 2, '3π/2'], [5 * Math.PI / 2, '5π/2']].forEach(
+                    ([v, t]) => { if (ox + v * sx < gR - 5) drawXLabel(ctx, ox, gCy, sx, v, t); }
+                );
+                drawYLabel(ctx, ox, gCy, sy, 1, '1');
+                drawYLabel(ctx, ox, gCy, sy, -1, '-1');
+
+                ctx.save(); ctx.shadowColor = C.sinGlow; ctx.shadowBlur = 6;
+                drawCurve(ctx, ox, gCy, sx, sy, Math.sin, xMin, xMax, C.sin, 2.5);
+                ctx.restore();
+
+                var hpx = gCy - 0.5 * sy;
+                ctx.setLineDash([5, 4]); ctx.strokeStyle = C.accent; ctx.lineWidth = 1; ctx.globalAlpha = 0.5;
+                ctx.beginPath(); ctx.moveTo(gL, hpx); ctx.lineTo(gR, hpx); ctx.stroke();
+                ctx.setLineDash([]); ctx.globalAlpha = 1;
+
+                [Math.PI / 6, 5 * Math.PI / 6, Math.PI / 6 + 2 * Math.PI, 5 * Math.PI / 6 + 2 * Math.PI].forEach(x => {
+                    var [px, py] = toPixel(x, 0.5, ox, gCy, sx, sy);
+                    if (px > gL && px < gR) drawDot(ctx, px, py, C.green, C.greenGlow, 5);
+                });
+
+                ctx.fillStyle = C.axisLabel; ctx.font = '11px Inter'; ctx.textAlign = 'center';
+                ctx.fillText('y = sin x', gL + gW / 2, h - 8);
+
+                ctx.fillStyle = C.sin; ctx.font = 'bold 11px Inter'; ctx.textAlign = 'left';
+                ctx.fillText('sin x', gL + 5, 16);
+                ctx.fillStyle = C.green; ctx.fillText('● řešení', gL + 55, 16);
+            }
+
+            /* --- Chart 2: f(x) = 2sin²x − sin x − 1 --- */
+            function drawSubstChart() {
+                const canvas = document.getElementById('substCanvas');
+                if (!canvas) return;
+                const { ctx, w, h } = setupHiDPI(canvas);
+                ctx.clearRect(0, 0, w * 3, h * 3);
+
+                var xMin = -2.2 * Math.PI, xMax = 2.2 * Math.PI;
+                var padL = 45, padR = 20;
+                var gW = w - padL - padR;
+                var sx = gW / (xMax - xMin), ox = padL - xMin * sx;
+                var gCy = h / 2, sy = (h / 2 - 25) / 2;
+
+                drawGrid(ctx, ox, gCy, w, h, sx, sy, Math.PI / 2, 0.5);
+                drawAxes(ctx, ox, gCy, w, h, xMin, xMax, -2.5, 2.5);
+
+                [[-2 * Math.PI, '-2π'], [-Math.PI, '-π'], [Math.PI, 'π'], [2 * Math.PI, '2π']].forEach(
+                    ([v, t]) => drawXLabel(ctx, ox, gCy, sx, v, t)
+                );
+                drawYLabel(ctx, ox, gCy, sy, 1, '1'); drawYLabel(ctx, ox, gCy, sy, -1, '-1');
+                drawYLabel(ctx, ox, gCy, sy, 2, '2');
+
+                var fn = x => { var s = Math.sin(x); return 2 * s * s - s - 1; };
+                ctx.save(); ctx.shadowColor = C.tanGlow; ctx.shadowBlur = 6;
+                drawCurve(ctx, ox, gCy, sx, sy, fn, xMin, xMax, C.tan, 2.5);
+                ctx.restore();
+
+                [Math.PI / 2, -3 * Math.PI / 2, -Math.PI / 6, 7 * Math.PI / 6,
+                -Math.PI / 6 - 2 * Math.PI, 7 * Math.PI / 6 - 2 * Math.PI,
+                -Math.PI / 6 + 2 * Math.PI, Math.PI / 2 - 2 * Math.PI].forEach(z => {
+                    var [px, py] = toPixel(z, 0, ox, gCy, sx, sy);
+                    if (px > padL && px < w - padR) drawDot(ctx, px, py, C.green, C.greenGlow, 5);
+                });
+
+                ctx.fillStyle = C.tan; ctx.font = 'bold 11px Inter'; ctx.textAlign = 'left';
+                ctx.fillText('f(x) = 2sin²x − sin x − 1', padL + 5, 16);
+                ctx.fillStyle = C.green; ctx.fillText('● kořeny  f(x) = 0', padL + 220, 16);
+            }
+
+            /* --- Chart 3: sin 2x vs cos x --- */
+            function drawHardEqChart() {
+                const canvas = document.getElementById('hardEqCanvas');
+                if (!canvas) return;
+                const { ctx, w, h } = setupHiDPI(canvas);
+                ctx.clearRect(0, 0, w * 3, h * 3);
+
+                var xMin = -2.2 * Math.PI, xMax = 2.2 * Math.PI;
+                var padL = 45, padR = 20;
+                var gW = w - padL - padR;
+                var sx = gW / (xMax - xMin), ox = padL - xMin * sx;
+                var gCy = h / 2, sy = (h / 2 - 25);
+
+                drawGrid(ctx, ox, gCy, w, h, sx, sy, Math.PI / 2, 0.5);
+                drawAxes(ctx, ox, gCy, w, h, xMin, xMax, -1.3, 1.3);
+
+                [[-2 * Math.PI, '-2π'], [-Math.PI, '-π'], [Math.PI, 'π'], [2 * Math.PI, '2π']].forEach(
+                    ([v, t]) => drawXLabel(ctx, ox, gCy, sx, v, t)
+                );
+                drawYLabel(ctx, ox, gCy, sy, 1, '1'); drawYLabel(ctx, ox, gCy, sy, -1, '-1');
+
+                ctx.save(); ctx.shadowColor = C.tanGlow; ctx.shadowBlur = 6;
+                drawCurve(ctx, ox, gCy, sx, sy, x => Math.sin(2 * x), xMin, xMax, C.tan, 2.5);
+                ctx.restore();
+
+                ctx.save(); ctx.shadowColor = C.cosGlow; ctx.shadowBlur = 6;
+                drawCurve(ctx, ox, gCy, sx, sy, Math.cos, xMin, xMax, C.cos, 2.5);
+                ctx.restore();
+
+                [-3 * Math.PI / 2, -Math.PI / 2, Math.PI / 2, 3 * Math.PI / 2,
+                Math.PI / 6, 5 * Math.PI / 6, Math.PI / 6 - 2 * Math.PI, 5 * Math.PI / 6 - 2 * Math.PI].forEach(t => {
+                    var [px, py] = toPixel(t, Math.cos(t), ox, gCy, sx, sy);
+                    if (px > padL && px < w - padR) drawDot(ctx, px, py, C.green, C.greenGlow, 5);
+                });
+
+                ctx.fillStyle = C.tan; ctx.font = 'bold 11px Inter'; ctx.textAlign = 'left';
+                ctx.fillText('sin 2x', padL + 5, 16);
+                ctx.fillStyle = C.cos; ctx.fillText('cos x', padL + 65, 16);
+                ctx.fillStyle = C.green; ctx.fillText('● průsečíky', padL + 125, 16);
+            }
+
+            // Draw charts for initial section
+            drawChartsForSection('basic-eq');
+        });
+    </script>
+</body>
+
+</html>
