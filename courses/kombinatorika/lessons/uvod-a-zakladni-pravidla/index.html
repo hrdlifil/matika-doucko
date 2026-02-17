@@ -1,0 +1,583 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kombinatorika - Kapitola 1: Úvod do kombinatoriky, základní pravidlo součinu a základní pravidlo součtu.">
+    <title>Úvod a základní pravidla – Kombinatorika</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Kombinatorika</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 1: Úvod a základní pravidla</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Úvod a základní pravidla</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#uvod-do-kombinatoriky" class="sidebar-link active" data-section="uvod-do-kombinatoriky">
+                        <span class="sidebar-icon">1</span>
+                        Úvod do kombinatoriky
+                    </a>
+                    <a href="#zakladni-pravidlo-soucinu" class="sidebar-link" data-section="zakladni-pravidlo-soucinu">
+                        <span class="sidebar-icon">2</span>
+                        Základní pravidlo součinu
+                    </a>
+                    <a href="#zakladni-pravidlo-souctu" class="sidebar-link" data-section="zakladni-pravidlo-souctu">
+                        <span class="sidebar-icon">3</span>
+                        Základní pravidlo součtu
+                    </a>
+                    <a href="#rozhodovani-soucet-nebo-soucin" class="sidebar-link"
+                        data-section="rozhodovani-soucet-nebo-soucin">
+                        <span class="sidebar-icon">4</span>
+                        Součet nebo součin?
+                    </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na kurz</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="uvod-do-kombinatoriky" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Úvod do kombinatoriky</h1>
+                    <p class="lead">
+                        Kombinatorika řeší otázky typu: <strong>„Kolika různými způsoby?“</strong>.
+                        Nejde jen o mechanické počítání, ale o správný model úlohy: co je jedna možnost, co se smí
+                        opakovat, zda záleží na pořadí a jestli se případy nepřekrývají.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Co přesně počítáme</h4>
+                            <p>
+                                V kombinatorice obvykle počítáme počet prvků konečné množiny výsledků
+                                <span class="math-inline">Ω</span>. Počet možností je její mohutnost
+                                <span class="math-inline">|Ω|</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Základní notace</h4>
+                        <p>
+                            Je-li <span class="math-inline">Ω</span> množina všech přípustných výsledků, pak počet
+                            možných výsledků je:
+                        </p>
+                        <div class="equation-large">N = |Ω|</div>
+                        <p class="formula-note">
+                            Cílem je najít <span class="math-inline">N</span> správným rozdělením úlohy na kroky nebo
+                            případy.
+                        </p>
+                    </div>
+
+                    <h2>Typické otázky před výpočtem</h2>
+                    <div class="concept-grid">
+                        <div class="concept-card">
+                            <h4>Záleží na pořadí?</h4>
+                            <p>Např. kód <span class="math-inline">123</span> je jiný než
+                                <span class="math-inline">321</span>.</p>
+                        </div>
+                        <div class="concept-card">
+                            <h4>Smí se opakovat prvky?</h4>
+                            <p>Např. v PINu ano, při výběru členů týmu většinou ne.</p>
+                        </div>
+                        <div class="concept-card">
+                            <h4>Jde o několik kroků?</h4>
+                            <p>Pak často používáme pravidlo součinu.</p>
+                        </div>
+                        <div class="concept-card">
+                            <h4>Jde o alternativní případy?</h4>
+                            <p>Pak často používáme pravidlo součtu.</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎯 Mini klasifikátor úloh</h3>
+                        <p>Změňte parametry a sledujte, jaký model se pro úlohu hodí:</p>
+
+                        <div class="demo-container">
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="orderSelect">Záleží na pořadí?</label>
+                                    <select id="orderSelect">
+                                        <option value="ano">Ano</option>
+                                        <option value="ne">Ne</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="repetitionSelect">Smí se prvky opakovat?</label>
+                                    <select id="repetitionSelect">
+                                        <option value="ne">Ne</option>
+                                        <option value="ano">Ano</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="allUseSelect">Používáme všechny prvky?</label>
+                                    <select id="allUseSelect">
+                                        <option value="ne">Ne</option>
+                                        <option value="ano">Ano</option>
+                                    </select>
+                                </div>
+
+                                <div class="control-group">
+                                    <label>Počet prvků n = <span id="classifierNValue">6</span></label>
+                                    <input type="range" id="classifierN" min="1" max="10" value="6">
+                                </div>
+                                <div class="control-group">
+                                    <label>Počet vybíraných prvků k = <span id="classifierKValue">3</span></label>
+                                    <input type="range" id="classifierK" min="1" max="10" value="3">
+                                </div>
+                            </div>
+
+                            <div class="demo-result-panel">
+                                <div class="result-block">
+                                    <div class="result-label">Doporučený model</div>
+                                    <div id="classifierModel" class="result-main">Variace bez opakování</div>
+                                    <div id="classifierFormula" class="result-sub">V(n, k) = n! / (n-k)!</div>
+                                    <div id="classifierCount" class="result-count">Pro n = 6, k = 3: V(6,3) = 120</div>
+                                </div>
+                                <div id="classifierWarning" class="demo-warning"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="zakladni-pravidlo-soucinu">
+                        Pokračovat k pravidlu součinu →
+                    </button>
+                </section>
+
+                <section id="zakladni-pravidlo-soucinu" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Základní pravidlo součinu</h1>
+                    <p class="lead">
+                        Pravidlo součinu používáme, když výsledek vzniká jako <strong>sled navazujících voleb</strong>.
+                        Každá další volba se provádí po předchozí, takže celkový počet možností získáme násobením.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Formulace pravidla součinu</h4>
+                        <p>
+                            Pokud má první krok <span class="math-inline">n₁</span> možností, druhý krok
+                            <span class="math-inline">n₂</span> možností, ..., a k-tý krok
+                            <span class="math-inline">n<sub>k</sub></span> možností, pak celkový počet výsledků je:
+                        </p>
+                        <div class="equation-large">N = n₁ · n₂ · ... · n<sub>k</sub></div>
+                        <p class="formula-note">
+                            Intuice: ke každé volbě z prvního kroku se párují všechny volby z druhého kroku atd.
+                        </p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Příklad (krokově)</h4>
+                        <p>
+                            V bufetu vybíráte <strong>1 sendvič</strong> ze 4, <strong>1 nápoj</strong> z 5 a
+                            <strong>1 dezert</strong> ze 3:
+                        </p>
+                        <div class="equation-large">N = 4 · 5 · 3 = 60</div>
+                        <p>Existuje 60 různých trojic (sendvič, nápoj, dezert).</p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Simulátor pravidla součinu</h3>
+                        <p>
+                            Nastavte počty možností ve třech krocích. Strom i výsledek se přepočítají v reálném čase.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="productCanvas" width="720" height="360"></canvas>
+                                <div class="canvas-instructions">
+                                    <span>Každá cesta stromem odpovídá jedné výsledné možnosti.</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Krok 1: n₁ = <span id="prodVal1">3</span></label>
+                                    <input type="range" id="productChoice1" min="1" max="5" value="3">
+                                </div>
+                                <div class="control-group">
+                                    <label>Krok 2: n₂ = <span id="prodVal2">4</span></label>
+                                    <input type="range" id="productChoice2" min="1" max="5" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label>Krok 3: n₃ = <span id="prodVal3">2</span></label>
+                                    <input type="range" id="productChoice3" min="1" max="5" value="2">
+                                </div>
+
+                                <div class="result-block">
+                                    <div class="result-label">Výpočet</div>
+                                    <div id="productEquation" class="result-main">3 · 4 · 2 = 24</div>
+                                    <div id="productTotal" class="result-count">Celkem možností: 24</div>
+                                </div>
+
+                                <div class="sample-space">
+                                    <h4>Ukázka konkrétních výsledků</h4>
+                                    <ul id="productSampleList" class="sample-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>
+                            V jídelně je 4 druhy polévek, 5 hlavních jídel a 3 nápoje.
+                            Kolik různých obědových kombinací (polévka + hlavní jídlo + nápoj) lze vytvořit?
+                        </p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="productChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="productChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="productChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="uvod-do-kombinatoriky">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="zakladni-pravidlo-souctu">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <section id="zakladni-pravidlo-souctu" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Základní pravidlo součtu</h1>
+                    <p class="lead">
+                        Pravidlo součtu používáme, když výsledek vzniká jako <strong>výběr jedné z alternativ</strong>
+                        („buď ... nebo ...“). Abychom mohli počty prostě sečíst, alternativy se nesmí překrývat.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Disjunktní (nepřekrývající se) případy</h4>
+                        <p>
+                            Jsou-li množiny možností <span class="math-inline">A</span> a <span
+                                class="math-inline">B</span> disjunktní, tedy
+                            <span class="math-inline">A ∩ B = ∅</span>, platí:
+                        </p>
+                        <div class="equation-large">|A ∪ B| = |A| + |B|</div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Když se případy překrývají</h4>
+                            <p>
+                                Pokud některé výsledky patří do obou množin, prostý součet je započítá dvakrát.
+                                Pro dvě množiny pak používáme:
+                            </p>
+                            <div class="equation-large">|A ∪ B| = |A| + |B| - |A ∩ B|</div>
+                            <p class="formula-note">
+                                To je nejjednodušší tvar principu inkluze-exkluze.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Simulátor pravidla součtu</h3>
+                        <p>
+                            Nastavte velikosti množin <span class="math-inline">A</span>, <span
+                                class="math-inline">B</span> a jejich průniku. Uvidíte rozdíl mezi naivním součtem a
+                            správným výsledkem.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="sum-visual">
+                                <div class="bar-row">
+                                    <span class="bar-label">|A|</span>
+                                    <div class="bar-track">
+                                        <div id="barA" class="bar bar-a"></div>
+                                    </div>
+                                    <span id="setAValue" class="bar-value">12</span>
+                                </div>
+                                <div class="bar-row">
+                                    <span class="bar-label">|B|</span>
+                                    <div class="bar-track">
+                                        <div id="barB" class="bar bar-b"></div>
+                                    </div>
+                                    <span id="setBValue" class="bar-value">9</span>
+                                </div>
+                                <div class="bar-row">
+                                    <span class="bar-label">|A ∩ B|</span>
+                                    <div class="bar-track">
+                                        <div id="barIntersection" class="bar bar-i"></div>
+                                    </div>
+                                    <span id="setIValue" class="bar-value">0</span>
+                                </div>
+                                <div id="overlapBadge" class="overlap-badge">Případy jsou disjunktní</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Nastavte |A| = <span id="setALabel">12</span></label>
+                                    <input type="range" id="setACount" min="0" max="25" value="12">
+                                </div>
+                                <div class="control-group">
+                                    <label>Nastavte |B| = <span id="setBLabel">9</span></label>
+                                    <input type="range" id="setBCount" min="0" max="25" value="9">
+                                </div>
+                                <div class="control-group">
+                                    <label>Nastavte |A ∩ B| = <span id="setILabel">0</span></label>
+                                    <input type="range" id="setIntersection" min="0" max="25" value="0">
+                                </div>
+
+                                <div class="result-block">
+                                    <div class="result-label">Výpočet</div>
+                                    <div id="unionEquation" class="result-sub">|A ∪ B| = |A| + |B| = 12 + 9 = 21</div>
+                                    <div class="result-grid">
+                                        <div class="result-grid-item">
+                                            <span>Naivní součet</span>
+                                            <strong id="sumNaive">21</strong>
+                                        </div>
+                                        <div class="result-grid-item">
+                                            <span>Správný výsledek</span>
+                                            <strong id="sumCorrect">21</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>
+                            Ve třídě 12 studentů hraje fotbal, 9 studentů hraje basketbal a 4 studenti hrají oboje.
+                            Kolik studentů hraje alespoň jeden z těchto sportů?
+                        </p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="sumChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="sumChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="sumChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="zakladni-pravidlo-soucinu">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="rozhodovani-soucet-nebo-soucin">Pokračovat
+                            →</button>
+                    </div>
+                </section>
+
+                <section id="rozhodovani-soucet-nebo-soucin" class="lesson-section">
+                    <div class="section-badge">Trénink</div>
+                    <h1>Součet nebo součin?</h1>
+                    <p class="lead">
+                        Nejtěžší část bývá rozhodnout, které pravidlo použít.
+                        V těchto mini úlohách vybírejte správné pravidlo. Po chybě se hned zobrazí správné řešení.
+                    </p>
+
+                    <div class="rule-training-grid">
+                        <article class="rule-mini-exercise" data-id="1" data-correct="soucin">
+                            <h4>Úloha 1</h4>
+                            <p>Tvoříte outfit: 5 triček, 3 kalhoty, 2 mikiny. Kolik outfitů?</p>
+                            <div class="rule-choice-row">
+                                <button class="btn-outline rule-choice-btn" data-answer="soucet">Pravidlo součtu</button>
+                                <button class="btn-outline rule-choice-btn" data-answer="soucin">Pravidlo součinu</button>
+                            </div>
+                            <div class="rule-feedback"></div>
+                        </article>
+
+                        <article class="rule-mini-exercise" data-id="2" data-correct="soucet">
+                            <h4>Úloha 2</h4>
+                            <p>Na závěr si vyberete buď dezert (4 možnosti), nebo kávu (3 možnosti), ale ne oboje.</p>
+                            <div class="rule-choice-row">
+                                <button class="btn-outline rule-choice-btn" data-answer="soucet">Pravidlo součtu</button>
+                                <button class="btn-outline rule-choice-btn" data-answer="soucin">Pravidlo součinu</button>
+                            </div>
+                            <div class="rule-feedback"></div>
+                        </article>
+
+                        <article class="rule-mini-exercise" data-id="3" data-correct="soucin">
+                            <h4>Úloha 3</h4>
+                            <p>Kód má tvar: písmeno, písmeno, číslice. K dispozici je 26 písmen a 10 číslic.</p>
+                            <div class="rule-choice-row">
+                                <button class="btn-outline rule-choice-btn" data-answer="soucet">Pravidlo součtu</button>
+                                <button class="btn-outline rule-choice-btn" data-answer="soucin">Pravidlo součinu</button>
+                            </div>
+                            <div class="rule-feedback"></div>
+                        </article>
+
+                        <article class="rule-mini-exercise" data-id="4" data-correct="soucet">
+                            <h4>Úloha 4</h4>
+                            <p>Student je buď ze třídy A (24 studentů), nebo ze třídy B (26 studentů), třídy jsou oddělené.</p>
+                            <div class="rule-choice-row">
+                                <button class="btn-outline rule-choice-btn" data-answer="soucet">Pravidlo součtu</button>
+                                <button class="btn-outline rule-choice-btn" data-answer="soucin">Pravidlo součinu</button>
+                            </div>
+                            <div class="rule-feedback"></div>
+                        </article>
+                    </div>
+
+                    <div class="score-card">
+                        <div class="score-title">Průběžné skóre</div>
+                        <div class="score-value"><span id="ruleScoreCorrect">0</span> / <span id="ruleScoreTotal">4</span></div>
+                        <div id="ruleScoreText" class="score-text">Vyřešte všechny mini úlohy.</div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="zakladni-pravidlo-souctu">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">
+                        Ověřte si, že umíte správně rozlišit pravidlo součinu a součtu a že počítáte bez dvojího započítání.
+                    </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik možností je vybrat <strong>buď</strong> jednu knihu z 8 beletristických
+                                    <strong>nebo</strong> jednu knihu z 5 odborných, když se žánry nepřekrývají?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>40</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>13</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>3</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>8</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kód má 4 pozice a na každé pozici může být libovolná číslice 0–9 (opakování je dovoleno).
+                                    Kolik různých kódů existuje?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>10⁴ = 10000</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>4 · 10 = 40</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>10 + 10 + 10 + 10 = 40</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>10 · 9 · 8 · 7 = 5040</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Outfit tvoříte volbou 1 čepice z 3, 1 bundy z 2 a 1 páru bot z 4. Kolik outfitů můžete sestavit?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>3 + 2 + 4 = 9</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>3 · 2 · 4 = 24</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>3 · 2 + 4 = 10</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>3 · 4 = 12</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>V kurzu je 15 studentů, kteří umí Python, 11 studentů, kteří umí Java, a 6 studentů umí oba jazyky.
+                                    Kolik studentů umí alespoň jeden z těchto jazyků?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>26</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>20</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>9</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>32</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kdy nestačí použít čisté pravidlo součtu <span class="math-inline">|A| + |B|</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>Když jsou množiny disjunktní.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>Když mají množiny neprázdný průnik a některé prvky by se počítaly dvakrát.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>Když je první množina větší než druhá.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>Když používáme tři kroky místo dvou.</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Máte zvládnutý základ kombinatoriky: kdy sčítat, kdy násobit a jak se vyhnout dvojímu započítání.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="rozhodovani-soucet-nebo-soucin">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

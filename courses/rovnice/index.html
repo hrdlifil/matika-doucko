@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rovnice - strukturovaný kurz od úvodu přes lineární a kvadratické rovnice až po soustavy rovnic.">
+    <title>Rovnice – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Rovnice</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Rovnice</h1>
+                    <p class="course-description">
+                        Kurz je připravený jako kompletní struktura kapitol a témat: od základů práce s rovnicemi,
+                        přes lineární a kvadratické rovnice, až po rovnice vyšších mocnin, exponenciální a logaritmické
+                        rovnice a soustavy lineárních rovnic. Obsah je zatím ve formě osnovy pro následné doplnění.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">8 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~8 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">24 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/zaklady-o-rovnicich/index.html#uvod-do-rovnic" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <path d="M40 135 C70 90, 110 170, 150 85" fill="none" stroke="#6366f1" stroke-width="2.8" />
+                            <line x1="40" y1="135" x2="150" y2="85" stroke="#10b981" stroke-width="2.4" stroke-dasharray="5,4" />
+                            <circle cx="40" cy="135" r="4" fill="#6366f1" />
+                            <circle cx="95" cy="110" r="4" fill="#f59e0b" />
+                            <circle cx="150" cy="85" r="4" fill="#10b981" />
+                            <text x="36" y="153" fill="#93c5fd" font-size="10" font-family="Inter">x₁</text>
+                            <text x="91" y="128" fill="#f59e0b" font-size="10" font-family="Inter">x₂</text>
+                            <text x="146" y="103" fill="#10b981" font-size="10" font-family="Inter">x₃</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">ax + b = 0</div>
+                        <div class="formula formula-2">D = b² - 4ac</div>
+                        <div class="formula formula-3">log_a b = x</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění obsahu</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Základy o rovnicích</h3>
+                            <p class="chapter-description">Úvod do pojmu rovnice a pravidla ekvivalentních úprav</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~40 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/zaklady-o-rovnicich/index.html#uvod-do-rovnic" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvod do rovnic</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/zaklady-o-rovnicich/index.html#ekvivalentni-upravy-rovnic" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Ekvivalentní úpravy rovnic</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Doplňující informace</h3>
+                            <p class="chapter-description">Rozšíření: grafické řešení, parametr a vyjádření neznámé</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/doplnujici-informace/index.html#rovnice-jako-funkce-a-graficke-reseni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnice jako funkce a grafické řešení</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/doplnujici-informace/index.html#rovnice-s-parametrem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnice s parametrem</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/doplnujici-informace/index.html#vyjadreni-nezname-ze-vzorce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vyjádření neznámé ze vzorce</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Lineární rovnice</h3>
+                            <p class="chapter-description">Lineární rovnice včetně absolutní hodnoty a grafického řešení</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~80 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/linearni-rovnice/index.html#linearni-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/linearni-rovnice/index.html#linearni-rovnice-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární rovnice s absolutní hodnotou</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/linearni-rovnice/index.html#graficke-reseni-linearnich-rovnic" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Grafické řešení lineárních rovnic</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/linearni-rovnice/index.html#linearni-rovnice-s-parametrem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární rovnice s parametrem</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kvadratické rovnice</h3>
+                            <p class="chapter-description">Kvadratické rovnice, diskriminant a absolutní hodnota</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kvadraticke-rovnice/index.html#kvadraticke-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratické rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/kvadraticke-rovnice/index.html#odvozeni-vzorce-pro-diskriminant" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Odvození vzorce pro diskriminant</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/kvadraticke-rovnice/index.html#kvadraticke-rovnice-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratické rovnice s absolutní hodnotou</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Rovnice v součinovém a podílovém tvaru</h3>
+                            <p class="chapter-description">Postupy pro součinový a podílový tvar rovnic</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~40 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html#rovnice-v-soucinovem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnice v součinovém tvaru</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html#rovnice-v-podilovem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnice v podílovém tvaru</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Rovnice vyšších mocnin</h3>
+                            <p class="chapter-description">Metody řešení rovnic vyšších mocnin krok za krokem</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">5 témat</span>
+                            <span class="chapter-time">~100 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/rovnice-vyssich-mocnin/index.html#uvod-do-rovnic-vyssich-mocnin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvod do rovnic vyšších mocnin</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/rovnice-vyssich-mocnin/index.html#metoda-vytykani" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Metoda vytýkání</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/rovnice-vyssich-mocnin/index.html#metoda-uhadnuti-korene" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Metoda uhádnutí kořene</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/rovnice-vyssich-mocnin/index.html#reseni-pomoci-hornerova-schematu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Řešení pomocí Hornerova schématu</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/rovnice-vyssich-mocnin/index.html#substitucni-metoda" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Substituční metoda</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="7">
+                    <div class="chapter-header">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Exponenciální a logaritmické rovnice</h3>
+                            <p class="chapter-description">Typické postupy pro exponenciální a logaritmické rovnice</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~40 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/exponencialni-a-logaritmicke-rovnice/index.html#exponencialni-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Exponenciální rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/exponencialni-a-logaritmicke-rovnice/index.html#logaritmicke-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Logaritmické rovnice</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="8">
+                    <div class="chapter-header">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Soustavy lineárních rovnic</h3>
+                            <p class="chapter-description">Dosazovací, sčítací a srovnávací metoda řešení soustav</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🎮 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/soustavy-linearnich-rovnic/index.html#soustavy-rovnic-a-dosazovaci-metoda" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Soustavy rovnic a dosazovací metoda</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/soustavy-linearnich-rovnic/index.html#soustavy-rovnic-a-scitaci-metoda" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Soustavy rovnic a sčítací metoda</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/soustavy-linearnich-rovnic/index.html#soustavy-rovnic-a-srovnavaci-metoda" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Soustavy rovnic a srovnávací metoda</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Přehled hlavních dovedností, které kurz pokrývá</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">=</div>
+                    <h3>Úpravy rovnic</h3>
+                    <p>Systematicky provádět ekvivalentní úpravy a kontrolovat podmínky řešení.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">📈</div>
+                    <h3>Grafická interpretace</h3>
+                    <p>Propojovat rovnici s funkcí a využívat grafické řešení tam, kde je výhodné.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">|x|</div>
+                    <h3>Absolutní hodnota</h3>
+                    <p>Rozpadat rovnice s absolutní hodnotou na případy a správně je vyhodnocovat.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">Δ</div>
+                    <h3>Kvadratické postupy</h3>
+                    <p>Používat diskriminant, rozklady i parametrické úlohy u kvadratických rovnic.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">xⁿ</div>
+                    <h3>Vyšší mocniny</h3>
+                    <p>Řešit rovnice vyšších mocnin metodami vytýkání, Hornera i substituce.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⎧</div>
+                    <h3>Soustavy rovnic</h3>
+                    <p>Volit vhodnou metodu řešení soustav lineárních rovnic podle typu zadání.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Kurz Rovnice je připravený jako struktura. V další fázi doplníme detailní výklad a procvičování.</p>
+                <a href="lessons/zaklady-o-rovnicich/index.html#uvod-do-rovnic" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

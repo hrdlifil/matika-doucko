@@ -1,14 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Základní rovinné útvary - kapitola 1 kurzu Rovinné útvary a tělesa.">
+    <meta name="description"
+        content="Základní rovinné útvary - interaktivní kapitola o čtverci, obdélníku, trojúhelníku, rovnoběžníku a lichoběžníku.">
     <title>Základní rovinné útvary – Rovinné útvary a tělesa</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
-    <link rel="stylesheet" href="../../lesson-shell.css">
+    <link rel="stylesheet" href="lesson.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
             <div class="lesson-nav-info">
                 <a href="../../index.html" class="lesson-course-link">Rovinné útvary a tělesa</a>
                 <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 1</span>
+                <span class="lesson-nav-current">Kapitola 1: Základní rovinné útvary</span>
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
@@ -39,58 +40,678 @@
                     <h3>Kapitola 1</h3>
                     <p>Základní rovinné útvary</p>
                 </div>
-                <nav class="sidebar-nav">                    <a href="#ctverec-obsah-obvod-a-dalsi" class="sidebar-link active">
+                <nav class="sidebar-nav">
+                    <a href="#ctverec-obsah-obvod-a-dalsi" class="sidebar-link active"
+                        data-section="ctverec-obsah-obvod-a-dalsi">
                         <span class="sidebar-icon">1</span>
                         Čtverec - obsah, obvod a další
-                    </a>                    <a href="#obdelnik-obsah-obvod-a-dalsi" class="sidebar-link">
+                    </a>
+                    <a href="#obdelnik-obsah-obvod-a-dalsi" class="sidebar-link"
+                        data-section="obdelnik-obsah-obvod-a-dalsi">
                         <span class="sidebar-icon">2</span>
                         Obdélník - obsah, obvod a další
-                    </a>                    <a href="#trojuhelnik-obsah-obvod-a-dalsi" class="sidebar-link">
+                    </a>
+                    <a href="#trojuhelnik-obsah-obvod-a-dalsi" class="sidebar-link"
+                        data-section="trojuhelnik-obsah-obvod-a-dalsi">
                         <span class="sidebar-icon">3</span>
                         Trojúhelník - obsah, obvod a další
-                    </a>                    <a href="#rovnobeznik-kosodelnik-a-kosoctverec" class="sidebar-link">
+                    </a>
+                    <a href="#rovnobeznik-kosodelnik-a-kosoctverec" class="sidebar-link"
+                        data-section="rovnobeznik-kosodelnik-a-kosoctverec">
                         <span class="sidebar-icon">4</span>
                         Rovnoběžník - kosodélník a kosočtverec
-                    </a>                    <a href="#lichobeznik-obsah-a-obvod" class="sidebar-link">
+                    </a>
+                    <a href="#lichobeznik-obsah-a-obvod" class="sidebar-link"
+                        data-section="lichobeznik-obsah-a-obvod">
                         <span class="sidebar-icon">5</span>
                         Lichoběžník - obsah a obvod
                     </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✏️</span>
+                        Procvičování
+                    </a>
                 </nav>
-                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
             </aside>
 
-            <div class="lesson-content">                <section id="ctverec-obsah-obvod-a-dalsi" class="lesson-section">
-                    <div class="section-badge">Téma 1</div>
+            <div class="lesson-content">
+                <section id="ctverec-obsah-obvod-a-dalsi" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
                     <h1>Čtverec - obsah, obvod a další</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="obdelnik-obsah-obvod-a-dalsi" class="lesson-section">
-                    <div class="section-badge">Téma 2</div>
+                    <p class="lead">
+                        <strong>Čtverec</strong> je pravidelný čtyřúhelník: všechny strany mají stejnou délku a všechny
+                        vnitřní úhly jsou pravé. Díky vysoké symetrii se jeho vztahy dají odvodit přímo z jedné
+                        veličiny, nejčastěji ze strany <code>a</code>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>O = 4a</code></li>
+                            <li><strong>Obsah:</strong> <code>S = a²</code></li>
+                            <li><strong>Úhlopříčka:</strong> <code>u = a√2</code></li>
+                            <li><strong>Poloměr vepsané kružnice:</strong> <code>r = a/2</code></li>
+                            <li><strong>Poloměr opsané kružnice:</strong> <code>R = a/√2</code></li>
+                            <li><strong>Z úhlopříčky:</strong> <code>a = u/√2</code>, tedy <code>S = u²/2</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Rychlé odvození úhlopříčky</h4>
+                        <p>
+                            Úhlopříčka čtverce je přepona pravoúhlého trojúhelníku s odvěsnami <code>a</code> a
+                            <code>a</code>. Proto:
+                        </p>
+                        <p class="example-equation"><code>u² = a² + a² = 2a²</code> ⇒ <code>u = a√2</code></p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Čtverec v pohybu</h3>
+                        <p>Měňte délku strany a natočení. Sledujte změny obvodu, obsahu, úhlopříčky i obou kružnic.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="squareCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">A, B, C, D jsou vrcholy čtverce; O je střed</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="squareSideSlider">Strana a: <strong id="squareSideValue">4.5</strong></label>
+                                    <input type="range" id="squareSideSlider" min="1.5" max="9.5" step="0.1" value="4.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="squareRotationSlider">Natočení: <strong id="squareRotationValue">18°</strong></label>
+                                    <input type="range" id="squareRotationSlider" min="0" max="45" step="1" value="18">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showSquareDiagonal" checked>
+                                    <span>Zobrazit úhlopříčky</span></label>
+                                <label class="check-row"><input type="checkbox" id="showSquareIncircle" checked>
+                                    <span>Zobrazit vepsanou kružnici</span></label>
+                                <label class="check-row"><input type="checkbox" id="showSquareCircumcircle" checked>
+                                    <span>Zobrazit opsanou kružnici</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod O</span><span id="squarePerimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S</span><span id="squareAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Úhlopříčka u</span><span id="squareDiagonalValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>r (vepsaná)</span><span id="squareInradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>R (opsaná)</span><span id="squareCircumradiusValue"
+                                            class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="resetSquare" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Pro <code>a = 6 cm</code> dostaneme:</p>
+                        <ul>
+                            <li><code>O = 4 · 6 = 24 cm</code></li>
+                            <li><code>S = 6² = 36 cm²</code></li>
+                            <li><code>u = 6√2 ≈ 8,49 cm</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="obdelnik-obsah-obvod-a-dalsi">Obdélník - obsah,
+                            obvod a další →</button>
+                    </div>
+                </section>
+
+                <section id="obdelnik-obsah-obvod-a-dalsi" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
                     <h1>Obdélník - obsah, obvod a další</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="trojuhelnik-obsah-obvod-a-dalsi" class="lesson-section">
-                    <div class="section-badge">Téma 3</div>
+                    <p class="lead">
+                        <strong>Obdélník</strong> má dvě dvojice stejně dlouhých protilehlých stran a čtyři pravé
+                        úhly. Jeho úhlopříčky mají stejnou délku a půlí se. Každý čtverec je obdélník, ale ne každý
+                        obdélník je čtverec.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>O = 2(a + b)</code></li>
+                            <li><strong>Obsah:</strong> <code>S = a · b</code></li>
+                            <li><strong>Úhlopříčka:</strong> <code>u = √(a² + b²)</code></li>
+                            <li><strong>Poloměr opsané kružnice:</strong> <code>R = u/2</code> (existuje vždy)</li>
+                            <li><strong>Vepsaná kružnice:</strong> existuje jen když <code>a = b</code> (tedy ve čtverci)</li>
+                            <li><strong>Směr diagonály:</strong> <code>tan α = b/a</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Geometrie obdélníku</h3>
+                        <p>Měňte strany obdélníku. Panel zároveň hlídá, kdy se obdélník stane čtvercem.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="rectangleCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Úhlopříčky AC a BD mají stejnou délku</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="rectASlider">Strana a: <strong id="rectAValue">8.0</strong></label>
+                                    <input type="range" id="rectASlider" min="2" max="12" step="0.1" value="8">
+                                </div>
+                                <div class="control-group">
+                                    <label for="rectBSlider">Strana b: <strong id="rectBValue">4.8</strong></label>
+                                    <input type="range" id="rectBSlider" min="1.5" max="9" step="0.1" value="4.8">
+                                </div>
+                                <div class="control-group">
+                                    <label for="rectRotationSlider">Natočení: <strong id="rectRotationValue">12°</strong></label>
+                                    <input type="range" id="rectRotationSlider" min="0" max="40" step="1" value="12">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showRectDiagonals" checked>
+                                    <span>Zobrazit obě úhlopříčky</span></label>
+                                <label class="check-row"><input type="checkbox" id="showRectCircumcircle" checked>
+                                    <span>Zobrazit opsanou kružnici</span></label>
+                                <label class="check-row"><input type="checkbox" id="showRectIncircle">
+                                    <span>Zkusit vepsanou kružnici</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod O</span><span id="rectPerimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S</span><span id="rectAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Úhlopříčka u</span><span id="rectDiagonalValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>R opsané kružnice</span><span id="rectCircumradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Úhel diagonály α</span><span id="rectAngleValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poměr stran a:b</span><span id="rectRatioValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="status-row"><span>Typ útvaru</span><span id="rectTypeValue"
+                                            class="status-chip">obdélník</span></div>
+                                    <div class="status-row"><span>Vepsaná kružnice</span><span id="rectIncircleValue"
+                                            class="status-chip">není aktivní</span></div>
+                                </div>
+
+                                <button id="resetRectangle" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Obdélník se stranami <code>a = 9 cm</code>, <code>b = 4 cm</code>:</p>
+                        <ul>
+                            <li><code>O = 2(9 + 4) = 26 cm</code></li>
+                            <li><code>S = 9 · 4 = 36 cm²</code></li>
+                            <li><code>u = √(81 + 16) = √97 ≈ 9,85 cm</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="ctverec-obsah-obvod-a-dalsi">← Čtverec - obsah,
+                            obvod a další</button>
+                        <button class="btn-primary btn-next" data-next="trojuhelnik-obsah-obvod-a-dalsi">Trojúhelník -
+                            obsah, obvod a další →</button>
+                    </div>
+                </section>
+
+                <section id="trojuhelnik-obsah-obvod-a-dalsi" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
                     <h1>Trojúhelník - obsah, obvod a další</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="rovnobeznik-kosodelnik-a-kosoctverec" class="lesson-section">
-                    <div class="section-badge">Téma 4</div>
+                    <p class="lead">
+                        U trojúhelníku není jeden univerzální vstup. Někdy známe základnu a výšku, jindy jen tři strany.
+                        Proto je důležité umět více cest: <strong>obsah přes výšku</strong>, <strong>Heronův
+                            vzorec</strong>, obvod i semiperimetr.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>O = a + b + c</code></li>
+                            <li><strong>Semiperimetr:</strong> <code>s = (a + b + c) / 2</code></li>
+                            <li><strong>Obsah přes výšku na stranu c:</strong> <code>S = (1/2) · c · v_c</code></li>
+                            <li><strong>Heronův vzorec:</strong> <code>S = √(s(s-a)(s-b)(s-c))</code></li>
+                            <li><strong>Poloměr vepsané kružnice:</strong> <code>r = S/s</code></li>
+                            <li><strong>Poloměr opsané kružnice:</strong> <code>R = abc/(4S)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Podmínka existence trojúhelníku</h4>
+                        <p>
+                            Musí platit trojúhelníková nerovnost:
+                            <code>a + b &gt; c</code>, <code>a + c &gt; b</code>, <code>b + c &gt; a</code>.
+                            Interaktivní panel níže tuto podmínku hlídá automaticky.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Trojúhelník ze tří stran</h3>
+                        <p>Měňte délky stran. Systém počítá obsah dvěma metodami (Heron a základna·výška/2).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="triangleCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Výška v_c je vedena z vrcholu C na stranu c = AB</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="triASlider">Strana a = |BC|: <strong id="triAValue">6.8</strong></label>
+                                    <input type="range" id="triASlider" min="2.5" max="10" step="0.1" value="6.8">
+                                </div>
+                                <div class="control-group">
+                                    <label for="triBSlider">Strana b = |AC|: <strong id="triBValue">5.6</strong></label>
+                                    <input type="range" id="triBSlider" min="2.5" max="10" step="0.1" value="5.6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="triCSlider">Strana c = |AB|: <strong id="triCValue">7.4</strong></label>
+                                    <input type="range" id="triCSlider" min="2.5" max="12" step="0.1" value="7.4">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showTriHeight" checked>
+                                    <span>Zobrazit výšku v_c</span></label>
+                                <label class="check-row"><input type="checkbox" id="showTriMedian" checked>
+                                    <span>Zobrazit těžnici t_c</span></label>
+                                <label class="check-row"><input type="checkbox" id="showTriIncircle" checked>
+                                    <span>Zobrazit vepsanou kružnici</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod O</span><span id="triPerimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Semiperimetr s</span><span id="triSemiperimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Výška v_c</span><span id="triHeightValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah (Heron)</span><span id="triAreaHeronValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah (c·v_c/2)</span><span id="triAreaBaseHeightValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Těžnice t_c</span><span id="triMedianValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>r vepsané kružnice</span><span id="triInradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>R opsané kružnice</span><span id="triCircumradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="status-row"><span>Typ podle úhlů</span><span id="triAngleTypeValue"
+                                            class="status-chip">čeká na výpočet</span></div>
+                                </div>
+
+                                <button id="resetTriangle" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad (Heron)</h4>
+                        <p>Pro strany <code>a = 7</code>, <code>b = 8</code>, <code>c = 9</code>:</p>
+                        <ul>
+                            <li><code>s = (7 + 8 + 9)/2 = 12</code></li>
+                            <li><code>S = √(12·5·4·3) = √720 ≈ 26,83</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="obdelnik-obsah-obvod-a-dalsi">← Obdélník - obsah,
+                            obvod a další</button>
+                        <button class="btn-primary btn-next" data-next="rovnobeznik-kosodelnik-a-kosoctverec">Rovnoběžník
+                            - kosodélník a kosočtverec →</button>
+                    </div>
+                </section>
+
+                <section id="rovnobeznik-kosodelnik-a-kosoctverec" class="lesson-section">
+                    <span class="section-badge">Téma 4</span>
                     <h1>Rovnoběžník - kosodélník a kosočtverec</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="lichobeznik-obsah-a-obvod" class="lesson-section">
-                    <div class="section-badge">Téma 5</div>
+                    <p class="lead">
+                        <strong>Rovnoběžník</strong> má protilehlé strany rovnoběžné a stejně dlouhé. V rámci tématu
+                        rozlišujeme hlavně:
+                        <strong>kosodélník</strong> (obecný „šikmý“ rovnoběžník bez pravého úhlu) a
+                        <strong>kosočtverec</strong> (všechny strany stejně dlouhé).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>O = 2(a + b)</code></li>
+                            <li><strong>Obsah:</strong> <code>S = a · v_a = a · b · sin γ</code></li>
+                            <li><strong>Výška na stranu a:</strong> <code>v_a = b · sin γ</code></li>
+                            <li><strong>Diagonály:</strong> <code>e = √(a² + b² + 2ab cos γ)</code>,
+                                <code>f = √(a² + b² - 2ab cos γ)</code></li>
+                            <li><strong>Kosočtverec:</strong> <code>a = b</code>, navíc <code>S = (e·f)/2</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Přepínání kosodélník / kosočtverec</h3>
+                        <p>Upravujte strany a vnitřní úhel γ. U kosočtverce se automaticky nastaví <code>a = b</code>.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="parallelogramCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">Diagonály se půlí; výška určuje obsah</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="paraTypeSelect">Typ útvaru</label>
+                                    <select id="paraTypeSelect">
+                                        <option value="kosodelnik">Kosodélník</option>
+                                        <option value="kosoctverec">Kosočtverec</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="paraASlider">Strana a: <strong id="paraAValue">7.2</strong></label>
+                                    <input type="range" id="paraASlider" min="2.5" max="10.5" step="0.1" value="7.2">
+                                </div>
+                                <div class="control-group">
+                                    <label for="paraBSlider">Strana b: <strong id="paraBValue">5.0</strong></label>
+                                    <input type="range" id="paraBSlider" min="2.5" max="9.5" step="0.1" value="5.0">
+                                </div>
+                                <div class="control-group">
+                                    <label for="paraAngleSlider">Vnitřní úhel γ: <strong id="paraAngleValue">58°</strong></label>
+                                    <input type="range" id="paraAngleSlider" min="20" max="160" step="1" value="58">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showParaHeight" checked>
+                                    <span>Zobrazit výšku v_a</span></label>
+                                <label class="check-row"><input type="checkbox" id="showParaDiagonals" checked>
+                                    <span>Zobrazit diagonály e, f</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod O</span><span id="paraPerimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Výška v_a</span><span id="paraHeightValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S</span><span id="paraAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Diagonála e</span><span id="paraDiag1Value"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Diagonála f</span><span id="paraDiag2Value"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>S z diagonál (jen kosočtverec)</span><span
+                                            id="paraAreaFromDiagsValue" class="calc-value">—</span></div>
+                                    <div class="status-row"><span>Aktivní režim</span><span id="paraTypeValue"
+                                            class="status-chip">kosodélník</span></div>
+                                </div>
+
+                                <button id="resetParallelogram" class="btn-ghost btn-sm">Obnovit výchozí
+                                    nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>
+                            Kosodélník má <code>a = 10 cm</code>, <code>b = 6 cm</code>, <code>γ = 30°</code>.
+                            Pak <code>S = a·b·sinγ = 10·6·0,5 = 30 cm²</code>.
+                        </p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="trojuhelnik-obsah-obvod-a-dalsi">← Trojúhelník -
+                            obsah, obvod a další</button>
+                        <button class="btn-primary btn-next" data-next="lichobeznik-obsah-a-obvod">Lichoběžník - obsah a
+                            obvod →</button>
+                    </div>
+                </section>
+
+                <section id="lichobeznik-obsah-a-obvod" class="lesson-section">
+                    <span class="section-badge">Téma 5</span>
                     <h1>Lichoběžník - obsah a obvod</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
+                    <p class="lead">
+                        <strong>Lichoběžník</strong> má právě jednu dvojici rovnoběžných stran (základny
+                        <code>a</code> a <code>c</code>). Pro obsah je klíčová výška <code>v</code>. V praxi se často
+                        používá i střední příčka.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obsah:</strong> <code>S = ((a + c)/2) · v</code></li>
+                            <li><strong>Střední příčka:</strong> <code>m = (a + c)/2</code></li>
+                            <li><strong>Obvod:</strong> <code>O = a + b + c + d</code> (b, d jsou ramena)</li>
+                            <li><strong>Rovnoramenný lichoběžník:</strong> <code>b = d</code></li>
+                            <li><strong>Pravoúhlý lichoběžník:</strong> jedno rameno je kolmé na základny</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Stavba lichoběžníku</h3>
+                        <p>Měňte délky základen, výšku i vodorovný posun horní základny a sledujte změny vzorců.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="trapezoidCanvas" width="700" height="430"></canvas>
+                                <div class="canvas-note">m je střední příčka; v je kolmá vzdálenost základen</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="trapASlider">Základna a: <strong id="trapAValue">9.0</strong></label>
+                                    <input type="range" id="trapASlider" min="4" max="12" step="0.1" value="9">
+                                </div>
+                                <div class="control-group">
+                                    <label for="trapCSlider">Základna c: <strong id="trapCValue">5.0</strong></label>
+                                    <input type="range" id="trapCSlider" min="2" max="10" step="0.1" value="5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="trapHeightSlider">Výška v: <strong id="trapHeightValue">3.6</strong></label>
+                                    <input type="range" id="trapHeightSlider" min="1.5" max="7" step="0.1" value="3.6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="trapShiftSlider">Posun horní základny: <strong id="trapShiftValue">0.0</strong></label>
+                                    <input type="range" id="trapShiftSlider" min="-4" max="4" step="0.1" value="0">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="showTrapHeight" checked>
+                                    <span>Zobrazit výšku</span></label>
+                                <label class="check-row"><input type="checkbox" id="showTrapMidline" checked>
+                                    <span>Zobrazit střední příčku m</span></label>
+                                <label class="check-row"><input type="checkbox" id="showTrapDiagonals">
+                                    <span>Zobrazit diagonály</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Rameno b</span><span id="trapBValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Rameno d</span><span id="trapDValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Střední příčka m</span><span id="trapMidlineValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S</span><span id="trapAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obvod O</span><span id="trapPerimeterValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Diagonála AC</span><span id="trapDiagACValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Diagonála BD</span><span id="trapDiagBDValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="status-row"><span>Typ lichoběžníku</span><span id="trapTypeValue"
+                                            class="status-chip">čeká na výpočet</span></div>
+                                </div>
+
+                                <button id="resetTrapezoid" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>
+                            Pro <code>a = 12 cm</code>, <code>c = 8 cm</code>, <code>v = 5 cm</code> je
+                            <code>S = ((12 + 8)/2)·5 = 50 cm²</code>.
+                        </p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="rovnobeznik-kosodelnik-a-kosoctverec">← Rovnoběžník
+                            - kosodélník a kosočtverec</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Kontrolní úlohy</h1>
+                    <p class="lead">Osm úloh pokrývá všechny základní útvary této kapitoly.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 1</span><span id="ex1Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Jaký je obsah čtverce s úhlopříčkou <code>u = 10</code>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> 25</label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> 50</label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> 100</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 2</span><span id="ex2Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Obdélník má strany 8 a 5. Kolik je jeho obvod?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> 26</label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> 40</label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> 13</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 3</span><span id="ex3Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Která trojice stran <strong>netvoří</strong> trojúhelník?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> 3, 4, 8</label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> 4, 4, 7</label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> 7, 8, 9</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="a">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 4</span><span id="ex4Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kolik je přibližně obsah trojúhelníku se stranami 7, 8, 9?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> 20,0</label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> 26,8</label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> 31,5</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 5</span><span id="ex5Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kosodélník má <code>a = 10</code>, <code>b = 6</code>, <code>γ = 30°</code>. Obsah je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> 60</label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> 30</label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> 15</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 6</span><span id="ex6Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kosočtverec má diagonály 10 a 24. Jaký má obsah?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> 120</label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> 240</label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> 60</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="a">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex6Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 7</span><span id="ex7Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Lichoběžník má základny 12 a 8 a výšku 5. Kolik je jeho obsah?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"> 40</label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"> 45</label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"> 50</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7" data-correct="c">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex7Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 8</span><span id="ex8Status"
+                                    class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Střední příčka lichoběžníku se základnami 14 a 6 má délku:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"> 8</label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"> 10</label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"> 20</label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8" data-correct="b">Zkontrolovat
+                                    odpověď</button>
+                                <div id="ex8Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Kapitolu máte splněnou</h2>
+                        <p>Výborně. Můžete pokračovat do kapitoly 2 nebo se vrátit na přehled kurzu.</p>
+                        <div class="complete-actions">
+                            <a href="../mnohouhelnik-a-kruh/index.html" class="btn-primary">Pokračovat na kapitolu 2</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="lichobeznik-obsah-a-obvod">← Lichoběžník - obsah a
+                            obvod</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
-

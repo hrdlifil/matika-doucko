@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kombinatorika - Kapitola 2: Variace, permutace a kombinace bez opakování. Interaktivní výklad faktoriálu, variací, permutací a kombinací.">
+    <title>Variace, permutace a kombinace bez opakování - Kombinatorika</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Kombinatorika</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 2: Variace, permutace a kombinace bez opakování</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 2</h3>
+                    <p>Variace, permutace a kombinace bez opakování</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#faktorial" class="sidebar-link active" data-section="faktorial">
+                        <span class="sidebar-icon">1</span>
+                        Faktoriál
+                    </a>
+                    <a href="#variace-bez-opakovani" class="sidebar-link" data-section="variace-bez-opakovani">
+                        <span class="sidebar-icon">2</span>
+                        Variace bez opakování
+                    </a>
+                    <a href="#permutace-bez-opakovani" class="sidebar-link" data-section="permutace-bez-opakovani">
+                        <span class="sidebar-icon">3</span>
+                        Permutace bez opakování
+                    </a>
+                    <a href="#kombinace-bez-opakovani" class="sidebar-link" data-section="kombinace-bez-opakovani">
+                        <span class="sidebar-icon">4</span>
+                        Kombinace bez opakování
+                    </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 20%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na kurz</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="faktorial" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Faktoriál</h1>
+                    <p class="lead">
+                        Faktoriál je základní stavební kámen celé kombinatoriky. Udává počet uspořádání všech
+                        <span class="math-inline">n</span> různých prvků a objevuje se prakticky ve všech vzorcích
+                        pro variace, permutace i kombinace.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice a klíčové vztahy</h4>
+                        <p>Pro nezáporné celé číslo <span class="math-inline">n</span> definujeme:</p>
+                        <div class="equation-large equation-composed">
+                            <span>n!</span>
+                            <span>=</span>
+                            <span>n · (n - 1) · (n - 2) · ... · 2 · 1</span>
+                        </div>
+                        <div class="equation-large equation-composed">
+                            <span>0!</span>
+                            <span>=</span>
+                            <span>1</span>
+                        </div>
+                        <div class="equation-large equation-composed">
+                            <span>n!</span>
+                            <span>=</span>
+                            <span>n · (n - 1)!</span>
+                            <span class="equation-note">(pro n ≥ 1)</span>
+                        </div>
+                        <p class="formula-note">
+                            Konvence <span class="math-inline">0! = 1</span> zajišťuje, že kombinační vzorce fungují i
+                            pro okrajové případy (například výběr 0 prvků).
+                        </p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Příklad úpravy s faktoriály</h4>
+                        <p>Podíl faktoriálů často zkrátíme rozvojem:</p>
+                        <div class="equation-large equation-composed">
+                            <span>8! / 5!</span>
+                            <span>=</span>
+                            <span>(8 · 7 · 6 · 5!) / 5!</span>
+                            <span>=</span>
+                            <span>8 · 7 · 6</span>
+                            <span>=</span>
+                            <span>336</span>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř faktoriálu</h3>
+                        <p>Změňte hodnotu <span class="math-inline">n</span> a sledujte rozvoj i výslednou hodnotu.</p>
+
+                        <div class="demo-container">
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Vyberte n = <span id="factorialNValue">6</span></label>
+                                    <input type="range" id="factorialN" min="0" max="12" value="6">
+                                </div>
+
+                                <div class="formula-card">
+                                    <h4>Jak číst výsledek</h4>
+                                    <p>
+                                        Při zvětšení <span class="math-inline">n</span> o 1 se faktoriál násobí
+                                        novou hodnotou.
+                                        To je důvod, proč čísla rostou velmi rychle.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="demo-result-panel">
+                                <div class="result-block">
+                                    <div class="result-label">Rozvoj</div>
+                                    <div id="factorialFormula" class="result-sub">6! = 6 · 5 · 4 · 3 · 2 · 1</div>
+                                </div>
+                                <div class="result-block">
+                                    <div class="result-label">Rekurzivní tvar</div>
+                                    <div id="factorialRecurrence" class="result-sub">6! = 6 · 5! = 6 · 120 = 720</div>
+                                </div>
+                                <div class="result-block">
+                                    <div class="result-label">Hodnota</div>
+                                    <div id="factorialValue" class="live-big-number">720</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>Vypočítejte <span class="math-inline">8! / 5!</span>.</p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="factorialChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="factorialChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="factorialChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="variace-bez-opakovani">
+                        Pokračovat k variacím bez opakování →
+                    </button>
+                </section>
+                <section id="variace-bez-opakovani" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Variace bez opakování</h1>
+                    <p class="lead">
+                        Variace bez opakování počítají <strong>uspořádané výběry</strong> délky
+                        <span class="math-inline">k</span> z <span class="math-inline">n</span> různých prvků,
+                        kde každý prvek lze použít nejvýše jednou.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Počet variací <span class="math-inline">k</span>-té třídy z
+                            <span class="math-inline">n</span> prvků značíme
+                            <span class="math-inline">V(n, k)</span> (v některých textech také
+                            <span class="math-inline">V<sub>k</sub>(n)</span>) a platí:
+                        </p>
+                        <div class="equation-large equation-composed">
+                            <span>V(n, k)</span>
+                            <span>=</span>
+                            <span class="math-frac">
+                                <span class="num">n!</span>
+                                <span class="den">(n-k)!</span>
+                            </span>
+                        </div>
+                        <div class="equation-large equation-composed">
+                            <span>V(n, k)</span>
+                            <span>=</span>
+                            <span>n · (n - 1) · ... · (n - k + 1)</span>
+                        </div>
+                        <p class="formula-note">Platí podmínka <span class="math-inline">0 ≤ k ≤ n</span>.</p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Příklad</h4>
+                        <p>
+                            Z 9 finalistů obsazujeme 3 různé funkce (předseda, místopředseda, tajemník). Pořadí
+                            funkcí je důležité:
+                        </p>
+                        <div class="equation-large equation-composed">
+                            <span>V(9, 3)</span>
+                            <span>=</span>
+                            <span>9 · 8 · 7</span>
+                            <span>=</span>
+                            <span>504</span>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní model variací</h3>
+                        <p>
+                            Nastavte <span class="math-inline">n</span> a <span class="math-inline">k</span>.
+                            Vlevo vidíte množinu prvků a ukázkové uspořádané výběry.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="variation-visual">
+                                <div class="visual-label">Množina n prvků</div>
+                                <div id="variationPool" class="token-row"></div>
+
+                                <div class="visual-label">k pozic (na pořadí záleží)</div>
+                                <div id="variationSlots" class="token-row token-row-slots"></div>
+
+                                <div class="sample-space">
+                                    <h4>Ukázka variací</h4>
+                                    <ul id="variationSampleList" class="sample-list"></ul>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Počet prvků n = <span id="variationNValue">7</span></label>
+                                    <input type="range" id="variationN" min="3" max="11" value="7">
+                                </div>
+                                <div class="control-group">
+                                    <label>Počet vybíraných prvků k = <span id="variationKValue">3</span></label>
+                                    <input type="range" id="variationK" min="1" max="11" value="3">
+                                </div>
+
+                                <div class="result-block">
+                                    <div class="result-label">Vzorec</div>
+                                    <div id="variationFormula" class="result-sub">V(7, 3) = 7! / 4!</div>
+                                    <div id="variationProduct" class="result-main">7 · 6 · 5 = 210</div>
+                                    <div id="variationCount" class="result-count">Celkem variací: 210</div>
+                                    <div id="variationWarning" class="demo-warning"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>Z 8 finalistů vybíráme vítěze a druhé místo. Kolik možností existuje?</p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="variationChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="variationChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="variationChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="faktorial">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="permutace-bez-opakovani">Pokračovat →
+                        </button>
+                    </div>
+                </section>
+                <section id="permutace-bez-opakovani" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Permutace bez opakování</h1>
+                    <p class="lead">
+                        Permutace bez opakování jsou všechna možná uspořádání všech
+                        <span class="math-inline">n</span> různých prvků. Je to speciální případ variací, kde vybíráme
+                        všechny prvky, tedy <span class="math-inline">k = n</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large equation-composed">
+                            <span>P(n)</span>
+                            <span>=</span>
+                            <span>n!</span>
+                        </div>
+                        <div class="equation-large equation-composed">
+                            <span>P(n)</span>
+                            <span>=</span>
+                            <span>V(n, n)</span>
+                        </div>
+                        <p class="formula-note">
+                            Každé jiné pořadí všech prvků je jiná permutace.
+                        </p>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Příklad</h4>
+                        <p>Kolika způsoby můžeme seřadit 6 různých knih na polici?</p>
+                        <div class="equation-large equation-composed">
+                            <span>P(6)</span>
+                            <span>=</span>
+                            <span>6!</span>
+                            <span>=</span>
+                            <span>720</span>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Generátor permutací</h3>
+                        <p>
+                            Pro zvolené <span class="math-inline">n</span> zobrazujeme konkrétní permutaci a můžete
+                            procházet různé varianty pořadí.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="permutation-board">
+                                <div class="visual-label">Aktuální permutace</div>
+                                <div id="permCurrent" class="perm-current">A B C D E</div>
+
+                                <div class="control-group">
+                                    <label>
+                                        Pořadí ukázky:
+                                        <span id="permIndexValue">1</span> /
+                                        <span id="permIndexMax">120</span>
+                                    </label>
+                                    <input type="range" id="permIndex" min="1" max="120" value="1">
+                                </div>
+
+                                <div class="challenge-input-row perm-actions">
+                                    <button id="permRandomBtn" class="btn-outline" type="button">Náhodná permutace</button>
+                                    <button id="permFirstBtn" class="btn-outline" type="button">První permutace</button>
+                                </div>
+
+                                <div class="sample-space">
+                                    <h4>První permutace v pořadí</h4>
+                                    <ul id="permSampleList" class="sample-list"></ul>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Počet prvků n = <span id="permNValue">5</span></label>
+                                    <input type="range" id="permN" min="3" max="7" value="5">
+                                </div>
+
+                                <div class="result-block">
+                                    <div class="result-label">Vzorec</div>
+                                    <div id="permFormula" class="result-sub">P(5) = 5!</div>
+                                    <div id="permAsVariation" class="result-sub">P(5) = V(5, 5)</div>
+                                    <div id="permCount" class="live-big-number">120</div>
+                                </div>
+
+                                <div class="formula-card">
+                                    <h4>Interpretace</h4>
+                                    <p>
+                                        Vždy používáme všech <span class="math-inline">n</span> prvků právě jednou.
+                                        Proto je počet permutací přesně <span class="math-inline">n!</span>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>Kolik různých pořadí můžeme vytvořit ze 6 různých předmětů?</p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="permChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="permChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="permChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="variace-bez-opakovani">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="kombinace-bez-opakovani">Pokračovat →
+                        </button>
+                    </div>
+                </section>
+                <section id="kombinace-bez-opakovani" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Kombinace bez opakování</h1>
+                    <p class="lead">
+                        Kombinace bez opakování počítají <strong>neuspořádané výběry</strong>. Záleží jen na tom,
+                        které prvky vybereme, ne v jakém pořadí je napíšeme.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            Počet kombinací <span class="math-inline">k</span> prvků z
+                            <span class="math-inline">n</span> značíme <span class="math-inline">C(n, k)</span>
+                            (často také <span class="math-inline">C<sub>k</sub>(n)</span> nebo
+                            <span class="math-inline">n choose k</span>):
+                        </p>
+                        <div class="equation-large equation-composed">
+                            <span>C(n, k)</span>
+                            <span>=</span>
+                            <span class="math-frac">
+                                <span class="num">n!</span>
+                                <span class="den">k! · (n-k)!</span>
+                            </span>
+                        </div>
+                        <div class="equation-large equation-composed">
+                            <span>C(n, k)</span>
+                            <span>=</span>
+                            <span>C(n, n-k)</span>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Vztah k variacím</h4>
+                            <p>
+                                Každou kombinaci lze uspořádat <span class="math-inline">k!</span> způsoby, takže:
+                            </p>
+                            <div class="equation-large equation-composed">
+                                <span>V(n, k)</span>
+                                <span>=</span>
+                                <span>C(n, k) · k!</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Příklad</h4>
+                        <p>Ze 10 studentů vybíráme 4členný tým. Pořadí v týmu nehraje roli.</p>
+                        <div class="equation-large equation-composed">
+                            <span>C(10, 4)</span>
+                            <span>=</span>
+                            <span>210</span>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní model kombinací</h3>
+                        <p>
+                            Nastavte <span class="math-inline">n</span> a <span class="math-inline">k</span> a
+                            sledujte výsledek, symetrii i vazbu na variace.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="combination-visual">
+                                <div class="visual-label">Množina n prvků</div>
+                                <div id="comboPool" class="token-row"></div>
+
+                                <div class="sample-space">
+                                    <h4>Ukázka kombinací</h4>
+                                    <ul id="comboSampleList" class="sample-list"></ul>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label>Počet prvků n = <span id="comboNValue">10</span></label>
+                                    <input type="range" id="comboN" min="4" max="15" value="10">
+                                </div>
+                                <div class="control-group">
+                                    <label>Počet vybíraných prvků k = <span id="comboKValue">3</span></label>
+                                    <input type="range" id="comboK" min="1" max="15" value="3">
+                                </div>
+
+                                <div class="result-block">
+                                    <div class="result-label">Vzorec</div>
+                                    <div id="comboFormula" class="result-sub">C(10, 3) = 10! / (3! · 7!)</div>
+                                    <div id="comboCount" class="result-main">120</div>
+                                    <div id="comboSymmetry" class="result-sub">C(10, 3) = C(10, 7)</div>
+                                    <div id="comboWarning" class="demo-warning"></div>
+                                </div>
+
+                                <div class="formula-card">
+                                    <h4>Kontrola přes variace</h4>
+                                    <p id="comboRelation" class="relation-text">
+                                        V(10, 3) = C(10, 3) · 3!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="challenge-box">
+                        <h4>Rychlá kontrola</h4>
+                        <p>Ze skupiny 10 lidí vybíráme 3člennou komisi. Kolik různých komisí lze sestavit?</p>
+                        <div class="challenge-input-row">
+                            <input type="number" id="comboChallengeInput" min="0" placeholder="Zadejte výsledek">
+                            <button id="comboChallengeCheck" class="btn-primary">Zkontrolovat</button>
+                        </div>
+                        <div id="comboChallengeFeedback" class="challenge-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="permutace-bez-opakovani">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat k procvičování →
+                        </button>
+                    </div>
+                </section>
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">
+                        Ověřte si, že bezpečně rozlišujete modely a správně počítáte bez opakování.
+                        U každé úlohy se po kontrole zobrazí správná odpověď i vysvětlení.
+                    </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je hodnota <span class="math-inline">0!</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>0</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>1</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>Není definováno</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>10</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte <span class="math-inline">V(7, 3)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>35</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>42</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>210</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>343</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik je <span class="math-inline">P(6)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>720</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>120</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>36</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>64</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Z 12 kandidátů vybíráme předsedu a místopředsedu.
+                                    Který model je správný?
+                                </p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>Kombinace bez opakování C(12, 2)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>Variace bez opakování V(12, 2)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>Permutace P(12)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>Nelze určit</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte <span class="math-inline">C(9, 4)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>126</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>3024</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>36</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>495</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Který vztah je obecně správný pro výběry bez opakování?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>C(n, k) = V(n, k) · k!</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>P(n) = C(n, 2)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>V(n, k) = C(n, k) / k!</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>V(n, k) = C(n, k) · k!</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="d">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>
+                            Zvládli jste faktoriál i všechny tři klíčové modely bez opakování:
+                            variace, permutace a kombinace.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="kombinace-bez-opakovani">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

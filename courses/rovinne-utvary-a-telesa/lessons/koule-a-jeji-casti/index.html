@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Koule a její části - kapitola 5 kurzu Rovinné útvary a tělesa.">
+    <meta name="description"
+        content="Koule a její části - interaktivní kapitola o objemu a povrchu koule, kulové výseči, úseči, vrstvě a vrchlíku.">
     <title>Koule a její části – Rovinné útvary a tělesa</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
-    <link rel="stylesheet" href="../../lesson-shell.css">
+    <link rel="stylesheet" href="lesson.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
             <div class="lesson-nav-info">
                 <a href="../../index.html" class="lesson-course-link">Rovinné útvary a tělesa</a>
                 <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 5</span>
+                <span class="lesson-nav-current">Kapitola 5: Koule a její části</span>
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
@@ -39,34 +40,496 @@
                     <h3>Kapitola 5</h3>
                     <p>Koule a její části</p>
                 </div>
-                <nav class="sidebar-nav">                    <a href="#koule-objem-povrch-a-odvozeni" class="sidebar-link active">
+
+                <nav class="sidebar-nav">
+                    <a href="#koule-objem-povrch-a-odvozeni" class="sidebar-link active" data-section="koule-objem-povrch-a-odvozeni">
                         <span class="sidebar-icon">1</span>
-                        Koule - objem, povrch a odvození
-                    </a>                    <a href="#kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik" class="sidebar-link">
+                        Koule
+                    </a>
+                    <a href="#kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik" class="sidebar-link" data-section="kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik">
                         <span class="sidebar-icon">2</span>
-                        Kulová výseč, kulová úseč, kulová vrstva a vrchlík
+                        Kulové části
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">Q</span>
+                        Procvičování
                     </a>
                 </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
-            <div class="lesson-content">                <section id="koule-objem-povrch-a-odvozeni" class="lesson-section">
-                    <div class="section-badge">Téma 1</div>
+            <div class="lesson-content">
+                <section id="koule-objem-povrch-a-odvozeni" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
                     <h1>Koule - objem, povrch a odvození</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik" class="lesson-section">
-                    <div class="section-badge">Téma 2</div>
+                    <p class="lead">
+                        <strong>Koule</strong> je množina všech bodů prostoru, které mají od středu stejnou vzdálenost
+                        <code>r</code>. V této části si odvodíme přesné vzorce pro objem i povrch, podíváme se na
+                        jejich vzájemnou vazbu a ověříme je v interaktivní laboratoři.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy pro kouli</h4>
+                        <ul>
+                            <li><strong>Objem koule:</strong> <code>V = (4/3)πr<sup>3</sup></code></li>
+                            <li><strong>Povrch koule:</strong> <code>S = 4πr<sup>2</sup></code></li>
+                            <li><strong>Obsah hlavní kružnice:</strong> <code>S<sub>hl</sub> = πr<sup>2</sup></code></li>
+                            <li><strong>Vztah mezi objemem a povrchem:</strong> <code>dV/dr = 4πr<sup>2</sup> = S</code></li>
+                            <li><strong>Měřítko:</strong> při zvětšení poloměru <code>k</code>-krát roste povrch
+                                <code>k<sup>2</sup></code>-krát a objem <code>k<sup>3</sup></code>-krát.</li>
+                        </ul>
+                    </div>
+
+                    <div class="equation-grid">
+                        <div class="equation-card">
+                            <div class="equation-title">Objem</div>
+                            <div class="equation-main">V = (4/3)πr<sup>3</sup></div>
+                            <div class="equation-note">Integrací kruhových řezů kolmo k ose.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Povrch</div>
+                            <div class="equation-main">S = 4πr<sup>2</sup></div>
+                            <div class="equation-note">Stejný jako derivace objemu podle poloměru.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Odvození řezem</div>
+                            <div class="equation-main">ρ(x) = √(r<sup>2</sup> - x<sup>2</sup>)</div>
+                            <div class="equation-note">Poloměr kruhového řezu ve vzdálenosti <code>x</code>.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Obsah řezu</div>
+                            <div class="equation-main">A(x) = πρ(x)<sup>2</sup></div>
+                            <div class="equation-note">Disk, který se v integrálu sčítá po ose x.</div>
+                        </div>
+                    </div>
+
+                    <div class="derivation-box">
+                        <h4>Odvození objemu krok za krokem</h4>
+                        <ol class="derivation-steps">
+                            <li>Vezmeme osu <code>x</code> procházející středem koule a kruhový řez ve vzdálenosti <code>x</code>.</li>
+                            <li>Pro poloměr řezu platí z Pythagorovy věty <code>ρ(x) = √(r² - x²)</code>.</li>
+                            <li>Obsah řezu je <code>A(x) = π(r² - x²)</code>.</li>
+                            <li>Objem je integrál všech těchto disků:
+                                <code>V = ∫<sub>-r</sub><sup>r</sup> π(r² - x²) dx = (4/3)πr³</code>.</li>
+                        </ol>
+                    </div>
+
+                    <div class="brilliant-tip">
+                        <div class="tip-icon">Tip</div>
+                        <div>
+                            <h4>Kontrola jednotek šetří body</h4>
+                            <p>
+                                U koule je častá chyba v mocninách: povrch musí být v jednotkách
+                                <code>cm²</code>, objem v <code>cm³</code>. Jakmile vyjde špatná mocnina,
+                                je výsledek automaticky chybný.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: řezy koule a odvození vzorců</h3>
+                        <p>Měňte poloměr a polohu řezu. Okamžitě uvidíte geometrii řezu i všechny klíčové hodnoty.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="sphereCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Vlevo osový řez pro integrál, vpravo 3D náhled řezu koule</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="sphereRadius">Poloměr koule r: <strong id="sphereRadiusValue">4.0</strong></label>
+                                    <input type="range" id="sphereRadius" min="1.5" max="10" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="sphereSlice">Poloha řezu x/r: <strong id="sphereSliceValue">0.00</strong></label>
+                                    <input type="range" id="sphereSlice" min="-95" max="95" step="1" value="0">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="sphereShowSlice" checked>
+                                    <span>Zobrazit vybraný kruhový řez</span></label>
+                                <label class="check-row"><input type="checkbox" id="sphereShowDerivative" checked>
+                                    <span>Zobrazit vztah dV/dr = S</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Objem koule V</span><span id="sphereVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch koule S</span><span id="sphereSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah hlavní kružnice πr²</span><span id="sphereGreatCircleValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>x (vzdálenost řezu od středu)</span><span id="sphereSliceXValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poloměr řezu ρ(x)</span><span id="sphereSliceRadiusValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah řezu A(x)</span><span id="sphereSliceAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>dV/dr</span><span id="sphereDerivativeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poměr S/V</span><span id="sphereRatioValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="sphereReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Určete objem a povrch koule s poloměrem <code>r = 6 cm</code>.</p>
+                        <ul>
+                            <li><code>V = (4/3)π·6³ = 288π ≈ 904,78 cm³</code></li>
+                            <li><code>S = 4π·6² = 144π ≈ 452,39 cm²</code></li>
+                            <li><code>dV/dr = 4π·6² = 144π = S</code>, vztah je splněn přesně.</li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="113.097" data-tolerance="0.15" data-answer-display="V = (4/3)π·3³ = 36π ≈ 113,10 cm³">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Koule má poloměr <code>r = 3 cm</code>. Zadejte její objem v <code>cm³</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 113.10">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik">Kulová výseč, úseč, vrstva a vrchlík →</button>
+                    </div>
+                </section>
+
+                <section id="kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
                     <h1>Kulová výseč, kulová úseč, kulová vrstva a vrchlík</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
+                    <p class="lead">
+                        Tyto útvary vznikají řezy koule rovinami. Klíč je vždy stejný: přesně určit, co je
+                        <strong>těleso</strong> (objem) a co je jen <strong>část kulové plochy</strong> (povrch).
+                        V této části dostanete jasné definice, správné vzorce a praktické výpočty.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice a značení</h4>
+                        <ul>
+                            <li><strong>Kulový vrchlík:</strong> část <em>kulové plochy</em> odříznutá rovinou; výška <code>v</code>.</li>
+                            <li><strong>Kulová úseč:</strong> těleso omezené vrchlíkem a jednou kruhovou podstavou.</li>
+                            <li><strong>Kulová výseč:</strong> těleso mezi středem koule a kulovým vrchlíkem.</li>
+                            <li><strong>Kulová vrstva:</strong> těleso mezi dvěma rovnoběžnými rovinami; výška <code>h</code>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="equation-grid">
+                        <div class="equation-card">
+                            <div class="equation-title">Kulový vrchlík</div>
+                            <div class="equation-main">S<sub>vrchlík</sub> = 2πrv</div>
+                            <div class="equation-note">Pouze zakřivená plocha, bez podstavy.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Kulová úseč</div>
+                            <div class="equation-main">V<sub>úseč</sub> = πv<sup>2</sup>(r - v/3)</div>
+                            <div class="equation-note">Objem části koule odříznuté jednou rovinou.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Kulová výseč</div>
+                            <div class="equation-main">V<sub>výseč</sub> = (2/3)πr<sup>2</sup>v</div>
+                            <div class="equation-note">Platí i <code>V = (r/3)·S<sub>vrchlík</sub></code>.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Kulová vrstva</div>
+                            <div class="equation-main">V<sub>vrstva</sub> = (πh/6)(3a<sup>2</sup>+3b<sup>2</sup>+h<sup>2</sup>)</div>
+                            <div class="equation-note"><code>a, b</code> jsou poloměry obou podstav.</div>
+                        </div>
+                    </div>
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Užitečné doplňkové vztahy</h4>
+                            <p><code>a² = v(2r-v)</code> pro podstavu kulové úseče.</p>
+                            <p><code>S<sub>úseč</sub> = S<sub>vrchlík</sub> + πa²</code> (pokud počítáme i podstavu).</p>
+                            <p><code>S<sub>pás</sub> = 2πrh</code> je plocha kulového pásu (bez podstav vrstvy).</p>
+                        </div>
+                        <div class="column">
+                            <h4>Typické chyby</h4>
+                            <p>Záměna kulového vrchlíku (plocha) za kulovou úseč (těleso).</p>
+                            <p>Záměna výšky útvaru s poloměrem koule.</p>
+                            <p>Přidání podstavy tam, kde se počítá jen zakřivená část plochy.</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: kulová úseč, vrchlík a výseč</h3>
+                        <p>Měňte poloměr koule a výšku úseče. Uvidíte současně objemy i plochy souvisejících útvarů.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="capCanvas" width="760" height="420"></canvas>
+                                <div class="canvas-note">Řez osou: vrchlík (zakřivená část), úseč (těleso), výseč (od středu)</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="capRadius">Poloměr koule r: <strong id="capRadiusValue">5.0</strong></label>
+                                    <input type="range" id="capRadius" min="2" max="10" step="0.1" value="5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="capHeight">Výška úseče v: <strong id="capHeightValue">2.0</strong></label>
+                                    <input type="range" id="capHeight" min="0.5" max="9" step="0.1" value="2">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="capShowSector" checked>
+                                    <span>Zobrazit kulovou výseč</span></label>
+                                <label class="check-row"><input type="checkbox" id="capShowCone" checked>
+                                    <span>Zobrazit pomocný kužel</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Poloměr podstavy a</span><span id="capBaseRadiusValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Plocha vrchlíku S<sub>vrchlík</sub></span><span id="capSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch úseče (s podstavou)</span><span id="capSolidSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem úseče V<sub>úseč</sub></span><span id="capVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem výseče V<sub>výseč</sub></span><span id="sectorVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem kužele V<sub>kužel</sub></span><span id="coneVolumeValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="capReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad: kulová úseč</h4>
+                        <p>Pro kouli s <code>r = 5 cm</code> a úseč s výškou <code>v = 2 cm</code>:</p>
+                        <ul>
+                            <li><code>a = √(2rv-v²) = √(20-4) = 4 cm</code></li>
+                            <li><code>S<sub>vrchlík</sub> = 2πrv = 20π ≈ 62,83 cm²</code></li>
+                            <li><code>V<sub>úseč</sub> = πv²(r-v/3) = (52/3)π ≈ 54,45 cm³</code></li>
+                            <li><code>V<sub>výseč</sub> = (2/3)πr²v = (100/3)π ≈ 104,72 cm³</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="54.454" data-tolerance="0.25" data-answer-display="V_úseč = (52/3)π ≈ 54,45 cm³">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Vypočtěte objem kulové úseče pro <code>r = 5 cm</code>, <code>v = 2 cm</code> (v <code>cm³</code>).</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 54.45">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: kulová vrstva</h3>
+                        <p>Zvolte dvě rovnoběžné roviny a sledujte výšku vrstvy, poloměry podstav i výsledný objem.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="layerCanvas" width="760" height="420"></canvas>
+                                <div class="canvas-note">Vybarvená část je kulová vrstva mezi dvěma rovinami</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="layerRadius">Poloměr koule r: <strong id="layerRadiusValue">5.0</strong></label>
+                                    <input type="range" id="layerRadius" min="2" max="10" step="0.1" value="5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="layerZ1">Dolní rovina z/r: <strong id="layerZ1Value">-0.60</strong></label>
+                                    <input type="range" id="layerZ1" min="-85" max="-5" step="1" value="-60">
+                                </div>
+                                <div class="control-group">
+                                    <label for="layerZ2">Horní rovina z/r: <strong id="layerZ2Value">0.60</strong></label>
+                                    <input type="range" id="layerZ2" min="5" max="85" step="1" value="60">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="layerShowBases" checked>
+                                    <span>Zobrazit poloměry podstav a, b</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Výška vrstvy h</span><span id="layerHeightValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Dolní podstava a</span><span id="layerBaseAValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Horní podstava b</span><span id="layerBaseBValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Plocha pásu 2πrh</span><span id="layerZoneAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem vrstvy V</span><span id="layerVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch vrstvy (s podstavami)</span><span id="layerTotalSurfaceValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="layerReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad: kulová vrstva</h4>
+                        <p>Koule má <code>r = 5 cm</code>. Roviny jsou v řezu osou v polohách <code>z = -3</code> a <code>z = 3</code>.</p>
+                        <ul>
+                            <li><code>h = 3 - (-3) = 6 cm</code>, <code>a = b = √(25-9) = 4 cm</code></li>
+                            <li><code>V = (πh/6)(3a²+3b²+h²) = 132π ≈ 414,69 cm³</code></li>
+                            <li><code>S<sub>pás</sub> = 2πrh = 60π cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="414.690" data-tolerance="0.35" data-answer-display="V = 132π ≈ 414,69 cm³">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Kulová vrstva má <code>a = 4 cm</code>, <code>b = 4 cm</code>, <code>h = 6 cm</code>. Zadejte její objem v <code>cm³</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 414.69">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="koule-objem-povrch-a-odvozeni">← Koule - objem, povrch a odvození</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Kontrolní úlohy: koule a kulové části</h1>
+                    <p class="lead">
+                        Cílem je správně rozlišit útvary, zvolit správný vzorec a dopočítat výsledek bez záměny
+                        plochy a objemu.
+                    </p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 1</span><span id="ex1Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Koule má poloměr <code>r = 7 cm</code>. Její povrch je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> <code>98π cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> <code>196π cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> <code>343π cm²</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 2</span><span id="ex2Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Koule má průměr <code>d = 10 cm</code>. Její objem je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> <code>250π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> <code>100π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> <code>(500/3)π cm³</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="c">Zkontrolovat odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 3</span><span id="ex3Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Pro kouli <code>r = 10 cm</code> a kulovou úseč výšky <code>v = 2 cm</code> je poloměr podstavy:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> <code>6 cm</code></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> <code>4 cm</code></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> <code>8 cm</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 4</span><span id="ex4Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Objem kulové úseče pro <code>r = 5 cm</code> a <code>v = 2 cm</code> je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> <code>(100/3)π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> <code>(52/3)π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> <code>20π cm³</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 5</span><span id="ex5Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Objem kulové výseče pro <code>r = 5 cm</code> a odpovídající výšku <code>v = 2 cm</code> je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> <code>(52/3)π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> <code>20π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> <code>(100/3)π cm³</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="c">Zkontrolovat odpověď</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 6</span><span id="ex6Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kulová vrstva má <code>a = 4 cm</code>, <code>b = 4 cm</code> a <code>h = 6 cm</code>. Objem je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> <code>92π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> <code>60π cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> <code>132π cm³</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat odpověď</button>
+                                <div id="ex6Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 7</span><span id="ex7Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kulový pás má pro <code>r = 5 cm</code> a <code>h = 6 cm</code> plochu:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"> <code>60π cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"> <code>92π cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"> <code>120π cm²</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex7Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 8</span><span id="ex8Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Který vztah je správný pro kouli?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"> <code>dV/dr = 3πr²</code></label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"> <code>dV/dr = 4πr² = S</code></label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"> <code>dV/dr = 2πr</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex8Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola 5 je splněná</h2>
+                        <p>Zvládli jste kouli i všechny hlavní kulové části včetně správné volby vzorců.</p>
+                        <div class="complete-actions">
+                            <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                            <a href="#koule-objem-povrch-a-odvozeni" class="btn-outline">Projít kapitolu znovu</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="kulova-vysec-kulova-usec-kulova-vrstva-a-vrchlik">← Kulová výseč, úseč, vrstva a vrchlík</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
-

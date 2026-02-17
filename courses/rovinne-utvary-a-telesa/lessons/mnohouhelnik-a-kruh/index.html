@@ -1,19 +1,17 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mnohoúhelník a kruh - kapitola 2 kurzu Rovinné útvary a tělesa.">
+    <meta name="description" content="Mnohoúhelník a kruh - interaktivní kapitola o pravidelném n-úhelníku, kruhu, přesném odvození i kruhových částech.">
     <title>Mnohoúhelník a kruh – Rovinné útvary a tělesa</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
-    <link rel="stylesheet" href="../../lesson-shell.css">
+    <link rel="stylesheet" href="lesson.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <nav class="navbar">
         <div class="nav-container">
@@ -24,7 +22,7 @@
             <div class="lesson-nav-info">
                 <a href="../../index.html" class="lesson-course-link">Rovinné útvary a tělesa</a>
                 <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 2</span>
+                <span class="lesson-nav-current">Kapitola 2: Mnohoúhelník a kruh</span>
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
@@ -39,50 +37,522 @@
                     <h3>Kapitola 2</h3>
                     <p>Mnohoúhelník a kruh</p>
                 </div>
-                <nav class="sidebar-nav">                    <a href="#pravidelny-n-uhelnik-obsah-a-obvod" class="sidebar-link active">
+                <nav class="sidebar-nav">
+                    <a href="#pravidelny-n-uhelnik-obsah-a-obvod" class="sidebar-link active"
+                        data-section="pravidelny-n-uhelnik-obsah-a-obvod">
                         <span class="sidebar-icon">1</span>
-                        Pravidelný n-úhelník - obsah a obvod
-                    </a>                    <a href="#kruh-obsah-obvod-a-odvozeni" class="sidebar-link">
+                        Pravidelný n-úhelník
+                    </a>
+                    <a href="#kruh-obsah-obvod-a-odvozeni" class="sidebar-link"
+                        data-section="kruh-obsah-obvod-a-odvozeni">
                         <span class="sidebar-icon">2</span>
-                        Kruh - obsah, obvod a odvození
-                    </a>                    <a href="#presnejsi-odvozeni-obvodu-a-obsahu-kruhu" class="sidebar-link">
+                        Kruh: obvod, obsah, odvození
+                    </a>
+                    <a href="#presnejsi-odvozeni-obvodu-a-obsahu-kruhu" class="sidebar-link"
+                        data-section="presnejsi-odvozeni-obvodu-a-obsahu-kruhu">
                         <span class="sidebar-icon">3</span>
-                        Přesnější odvození obvodu a obsahu kruhu
-                    </a>                    <a href="#kruhova-vysec-kruhova-usec-a-mezikruzi" class="sidebar-link">
+                        Přesnější odvození
+                    </a>
+                    <a href="#kruhova-vysec-kruhova-usec-a-mezikruzi" class="sidebar-link"
+                        data-section="kruhova-vysec-kruhova-usec-a-mezikruzi">
                         <span class="sidebar-icon">4</span>
-                        Kruhová výseč, kruhová úseč a mezikruží
+                        Výseč, úseč, mezikruží
                     </a>
                 </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
-            <div class="lesson-content">                <section id="pravidelny-n-uhelnik-obsah-a-obvod" class="lesson-section">
-                    <div class="section-badge">Téma 1</div>
+            <div class="lesson-content">
+                <section id="pravidelny-n-uhelnik-obsah-a-obvod" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
                     <h1>Pravidelný n-úhelník - obsah a obvod</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="kruh-obsah-obvod-a-odvozeni" class="lesson-section">
-                    <div class="section-badge">Téma 2</div>
+                    <p class="lead">
+                        Pravidelný <code>n</code>-úhelník je současně <strong>rovnostranný i rovnoúhlý</strong>. Díky symetrii
+                        lze celý útvar rozdělit na <code>n</code> shodných rovnoramenných trojúhelníků se společným vrcholem
+                        ve středu. Právě to dává rychlou cestu k obvodu i obsahu.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>O = n · a</code></li>
+                            <li><strong>Obsah ze strany:</strong> <code>S = (n · a²) / (4 · tan(π/n))</code></li>
+                            <li><strong>Obsah z apotémy:</strong> <code>S = (1/2) · O · r</code></li>
+                            <li><strong>Opsaný poloměr:</strong> <code>R = a / (2 · sin(π/n))</code></li>
+                            <li><strong>Vepsaný poloměr (apotéma):</strong> <code>r = a / (2 · tan(π/n)) = R · cos(π/n)</code></li>
+                            <li><strong>Vnitřní úhel:</strong> <code>α = ((n - 2) · 180°) / n</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Idea odvození obsahu</h4>
+                            <p>Rozdělíme mnohoúhelník na <code>n</code> trojúhelníků se základnou <code>a</code> a výškou <code>r</code>.</p>
+                            <p class="equation-line"><code>S = n · (1/2 · a · r) = (1/2) · (n · a) · r = (1/2) · O · r</code></p>
+                            <p>Pro zápis jen přes stranu dosadíme <code>r = a/(2·tan(π/n))</code>.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Limitní přechod ke kruhu</h4>
+                            <p>
+                                Pokud držíme stejné <code>R</code> a zvyšujeme <code>n</code>, pravidelný mnohoúhelník se stále
+                                lépe blíží kružnici. V limitě dostáváme kruh, což propojuje vzorce pro mnohoúhelník
+                                s kruhem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní laboratoř pravidelného n-úhelníku</h3>
+                        <p>Měňte počet stran, vstupní parametr i natočení. Sledujte současně geometrii i přesné výpočty.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="regularPolygonCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Modrá: n-úhelník, zelená: vepsaná kružnice, oranžová: opsaná kružnice</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="polyInputMode">Zadaná veličina</label>
+                                    <select id="polyInputMode">
+                                        <option value="side">Strana a</option>
+                                        <option value="radius">Opsaný poloměr R</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="polyN">Počet stran n: <strong id="polyNValue">6</strong></label>
+                                    <input type="range" id="polyN" min="3" max="40" step="1" value="6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="polyMeasure"><span id="polyMeasureLabel">Strana a</span>: <strong
+                                            id="polyMeasureValue">4.0</strong></label>
+                                    <input type="range" id="polyMeasure" min="1" max="8" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="polyRotation">Natočení: <strong id="polyRotationValue">12°</strong></label>
+                                    <input type="range" id="polyRotation" min="0" max="60" step="1" value="12">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="polyShowTriangles" checked>
+                                    <span>Zobrazit rozklad na trojúhelníky</span></label>
+                                <label class="check-row"><input type="checkbox" id="polyShowIncircle" checked>
+                                    <span>Zobrazit vepsanou kružnici</span></label>
+                                <label class="check-row"><input type="checkbox" id="polyShowCircumcircle" checked>
+                                    <span>Zobrazit opsanou kružnici</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Strana a</span><span id="polySideValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poloměr r (vepsaná)</span><span id="polyInradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poloměr R (opsaná)</span><span id="polyCircumradiusValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obvod O</span><span id="polyPerimeterValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S</span><span id="polyAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>S = (1/2)·O·r</span><span id="polyAreaAltValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Vnitřní úhel α</span><span id="polyInteriorAngleValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Středový úhel β</span><span id="polyCentralAngleValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>2πR (kružnice se stejným R)</span><span id="polyCirclePerimeterRef"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>πR² (kruh se stejným R)</span><span id="polyCircleAreaRef"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poměr O/(2πR)</span><span id="polyPerimeterRatio"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Poměr S/(πR²)</span><span id="polyAreaRatio"
+                                            class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="polyReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Pravidelný osmiúhelník má stranu <code>a = 5 cm</code>.</p>
+                        <ul>
+                            <li><code>O = 8 · 5 = 40 cm</code></li>
+                            <li><code>S = (8 · 25)/(4 · tan(π/8)) = 50/(tan(22,5°)) ≈ 120,71 cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="41.569" data-tolerance="0.08">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Spočítejte obsah pravidelného šestiúhelníku se stranou <code>a = 4</code>. Zadejte číslo v <code>cm²</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 41.57">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="kruh-obsah-obvod-a-odvozeni">Kruh - obsah, obvod a odvození →</button>
+                    </div>
+                </section>
+
+                <section id="kruh-obsah-obvod-a-odvozeni" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
                     <h1>Kruh - obsah, obvod a odvození</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="presnejsi-odvozeni-obvodu-a-obsahu-kruhu" class="lesson-section">
-                    <div class="section-badge">Téma 3</div>
+                    <p class="lead">
+                        Pro kruh platí dvě základní rovnice: <code>o = 2πr</code> a <code>S = πr²</code>. Důležité je chápat,
+                        že obsah lze odvodit z „rozbalení“ kruhu na útvar, který se v limitě chová jako trojúhelník
+                        (nebo obdélník).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy kruhu</h4>
+                        <ul>
+                            <li><strong>Obvod:</strong> <code>o = 2πr = πd</code></li>
+                            <li><strong>Obsah:</strong> <code>S = πr²</code></li>
+                            <li><strong>Odvození přes trojúhelník:</strong> <code>S = (1/2) · o · r</code></li>
+                            <li><strong>Odvození přes obdélník:</strong> <code>S = (πr) · r</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">⭕</div>
+                        <div class="formula-content">
+                            <h4>Proč právě π?</h4>
+                            <p>
+                                Konstantu <code>π</code> dostáváme jako invariantní poměr <code>o/d</code> u všech kružnic.
+                                Tento poměr je stejný bez ohledu na velikost kruhu, protože obvod i průměr škálují
+                                lineárně stejným koeficientem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Odvození obsahu přes soustředné proužky</h3>
+                        <p>
+                            Kruh rozdělíme na tenké soustředné proužky a „rozbalíme“ je do vodorovných pásků.
+                            Čím více proužků, tím přesněji vzniká trojúhelník se základnou <code>2πr</code> a výškou <code>r</code>.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="circleDerivationCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Vpravo: rozbalené proužky aproximují trojúhelník</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="circleRadius">Poloměr r: <strong id="circleRadiusValue">4.0</strong></label>
+                                    <input type="range" id="circleRadius" min="1" max="10" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="circleSlices">Počet proužků: <strong id="circleSlicesValue">24</strong></label>
+                                    <input type="range" id="circleSlices" min="6" max="120" step="1" value="24">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="circleShowRectangle" checked>
+                                    <span>Zobrazit i obdélník πr × r</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Průměr d</span><span id="circleDiameterValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obvod o = 2πr</span><span id="circleCircumferenceValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah S = πr²</span><span id="circleAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Délka 1 oblouku (vnější)</span><span id="circleSliceArcValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Základna trojúhelníku</span><span id="circleTriBaseValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Výška trojúhelníku</span><span id="circleTriHeightValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Šířka obdélníku</span><span id="circleRectWidthValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Výška obdélníku</span><span id="circleRectHeightValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah z obdélníku</span><span id="circleRectAreaValue"
+                                            class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="circleReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Kruh s poloměrem <code>r = 7 cm</code>:</p>
+                        <ul>
+                            <li><code>o = 2π·7 = 14π ≈ 43,98 cm</code></li>
+                            <li><code>S = π·7² = 49π ≈ 153,94 cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="38.485" data-tolerance="0.05">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Určete obsah kruhu s poloměrem <code>r = 3,5</code>. Zadejte desetinné číslo v <code>cm²</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 38.48">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="pravidelny-n-uhelnik-obsah-a-obvod">← Pravidelný n-úhelník</button>
+                        <button class="btn-primary btn-next" data-next="presnejsi-odvozeni-obvodu-a-obsahu-kruhu">Přesnější odvození →</button>
+                    </div>
+                </section>
+
+                <section id="presnejsi-odvozeni-obvodu-a-obsahu-kruhu" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
                     <h1>Přesnější odvození obvodu a obsahu kruhu</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="kruhova-vysec-kruhova-usec-a-mezikruzi" class="lesson-section">
-                    <div class="section-badge">Téma 4</div>
+                    <p class="lead">
+                        Přesnost zvýšíme klasickou Archimédovou myšlenkou: kruh sevřeme mezi vepsaný a opsaný
+                        pravidelný <code>n</code>-úhelník. Dostaneme dvě meze, které se se zvyšujícím se <code>n</code>
+                        sbližují ke stejné limitě.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Archimédovy meze pro kruh o poloměru r</h4>
+                        <ul>
+                            <li><strong>Vepsaný obvod:</strong> <code>p_in = 2nr sin(π/n)</code></li>
+                            <li><strong>Opsaný obvod:</strong> <code>p_out = 2nr tan(π/n)</code></li>
+                            <li><strong>Vepsaný obsah:</strong> <code>A_in = (1/2)nr² sin(2π/n)</code></li>
+                            <li><strong>Opsaný obsah:</strong> <code>A_out = nr² tan(π/n)</code></li>
+                            <li><strong>Meze pro π:</strong> <code>p_in/(2r) &lt; π &lt; p_out/(2r)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">📐</div>
+                        <div class="info-card-content">
+                            <h4>Historická poznámka</h4>
+                            <p>
+                                Archimédés použil až <code>n = 96</code> a získal klasický interval
+                                <code>3.1408… &lt; π &lt; 3.1428…</code>, což je na antickou dobu mimořádně přesné.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Vepsaný vs. opsaný n-úhelník</h3>
+                        <p>Sledujte, jak se meze pro <code>π</code> a pro obsah kruhu zpřesňují při růstu <code>n</code>.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="precisionCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Zelená: kruh, modrá: vepsaný, oranžová: opsaný mnohoúhelník</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="precisionRadius">Poloměr r: <strong id="precisionRadiusValue">3.0</strong></label>
+                                    <input type="range" id="precisionRadius" min="1" max="7" step="0.1" value="3">
+                                </div>
+                                <div class="control-group">
+                                    <label for="precisionN">Počet stran n: <strong id="precisionNValue">24</strong></label>
+                                    <input type="range" id="precisionN" min="3" max="384" step="1" value="24">
+                                </div>
+                                <div class="control-group">
+                                    <label for="precisionRotation">Natočení: <strong id="precisionRotationValue">0°</strong></label>
+                                    <input type="range" id="precisionRotation" min="0" max="60" step="1" value="0">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="precisionShowInscribed" checked>
+                                    <span>Zobrazit vepsaný mnohoúhelník</span></label>
+                                <label class="check-row"><input type="checkbox" id="precisionShowCircumscribed" checked>
+                                    <span>Zobrazit opsaný mnohoúhelník</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>p_in</span><span id="precisionPInValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>2πr</span><span id="precisionCirclePValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>p_out</span><span id="precisionPOutValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>A_in</span><span id="precisionAInValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>πr²</span><span id="precisionCircleAValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>A_out</span><span id="precisionAOutValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Dolní mez π (obvod)</span><span id="precisionPiLowerPValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Horní mez π (obvod)</span><span id="precisionPiUpperPValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Dolní mez π (obsah)</span><span id="precisionPiLowerAValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Horní mez π (obsah)</span><span id="precisionPiUpperAValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Šířka intervalu (obvod)</span><span id="precisionPerimeterGapValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Šířka intervalu (obsah)</span><span id="precisionAreaGapValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="status-row"><span>Archivní n = 96</span><span id="precisionArchimedesValue"
+                                            class="status-chip">—</span></div>
+                                </div>
+
+                                <div class="inline-actions">
+                                    <button id="precisionDoubleN" class="btn-outline btn-sm">Zdvojnásobit n</button>
+                                    <button id="precisionReset" class="btn-ghost btn-sm">Reset</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check" data-answer="3.1058" data-tolerance="0.003">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>
+                                Pro kruh s <code>r = 1</code> a vepsaný dvanáctiúhelník je dolní odhad
+                                <code>π ≈ p_in/(2r)</code>. Zadejte hodnotu na 4 desetinná místa.
+                            </p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 3.1058">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="kruh-obsah-obvod-a-odvozeni">← Kruh: obvod a obsah</button>
+                        <button class="btn-primary btn-next" data-next="kruhova-vysec-kruhova-usec-a-mezikruzi">Výseč, úseč, mezikruží →</button>
+                    </div>
+                </section>
+
+                <section id="kruhova-vysec-kruhova-usec-a-mezikruzi" class="lesson-section">
+                    <span class="section-badge">Téma 4</span>
                     <h1>Kruhová výseč, kruhová úseč a mezikruží</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
+                    <p class="lead">
+                        V této části propojujeme úhel v radiánech s délkou oblouku a obsahem. Klíčové je odlišit
+                        <strong>výseč</strong> (dvě polopřímky + oblouk), <strong>úseč</strong> (tětiva + oblouk)
+                        a <strong>mezikruží</strong> (rozdíl dvou soustředných kruhů).
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Nejdůležitější vzorce (θ v radiánech)</h4>
+                        <ul>
+                            <li><strong>Délka oblouku:</strong> <code>s = rθ</code></li>
+                            <li><strong>Obsah výseče:</strong> <code>S_v = (1/2)r²θ</code></li>
+                            <li><strong>Obsah kruhové úseče:</strong> <code>S_u = (1/2)r²(θ - sin θ)</code></li>
+                            <li><strong>Délka tětivy:</strong> <code>a = 2r sin(θ/2)</code></li>
+                            <li><strong>Obsah mezikruží:</strong> <code>S_m = π(R² - r²)</code></li>
+                            <li><strong>Obsah mezikruhové výseče:</strong> <code>S_{mv} = (θ/2)(R² - r²)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Přepínací vizualizace: výseč / úseč / mezikruží</h3>
+                        <p>Jedním panelem zkoumejte různé kruhové útvary a sledujte odpovídající vzorce i výpočty.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="circularPartsCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Režim určíte přepínačem vpravo</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="partsMode">Režim</label>
+                                    <select id="partsMode">
+                                        <option value="sector">Kruhová výseč</option>
+                                        <option value="segment">Kruhová úseč</option>
+                                        <option value="annulus">Mezikruží</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="partsOuterRadius">Vnější poloměr R: <strong id="partsOuterRadiusValue">6.0</strong></label>
+                                    <input type="range" id="partsOuterRadius" min="1" max="10" step="0.1" value="6">
+                                </div>
+                                <div class="control-group" id="partsInnerGroup">
+                                    <label for="partsInnerRadius">Vnitřní poloměr r: <strong id="partsInnerRadiusValue">3.0</strong></label>
+                                    <input type="range" id="partsInnerRadius" min="0.3" max="9" step="0.1" value="3">
+                                </div>
+                                <div class="control-group">
+                                    <label for="partsAngle">Středový úhel θ: <strong id="partsAngleValue">90°</strong></label>
+                                    <input type="range" id="partsAngle" min="10" max="170" step="1" value="90">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="partsShowFullCircle" checked>
+                                    <span>Zobrazit celé kružnice v pozadí</span></label>
+                                <label class="check-row"><input type="checkbox" id="partsShowHelpers" checked>
+                                    <span>Zobrazit pomocné úsečky</span></label>
+
+                                <div class="equation-display">
+                                    <div class="status-row"><span>Aktivní režim</span><span id="partsModeValue" class="status-chip">výseč</span></div>
+                                    <div class="calc-row"><span>Vnější oblouk</span><span id="partsArcOuterValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Vnitřní oblouk</span><span id="partsArcInnerValue" class="calc-value">—</span></div>
+                                    <div class="calc-row"><span>Tětiva</span><span id="partsChordValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah výseče</span><span id="partsSectorAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah úseče</span><span id="partsSegmentAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Výška úseče h</span><span id="partsSegmentHeightValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah mezikruží</span><span id="partsAnnulusAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obvod mezikruží</span><span id="partsAnnulusPerimeterValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah mezikruhové výseče</span><span id="partsAnnularSectorAreaValue"
+                                            class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Aktivní vzorec</span><span id="partsCurrentFormula" class="calc-value">S = 1/2 r²θ</span></div>
+                                </div>
+
+                                <button id="partsReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad: kruhová úseč</h4>
+                        <p>Pro <code>r = 10 cm</code>, <code>θ = 60° = π/3</code>:</p>
+                        <ul>
+                            <li><code>S_u = (1/2)·10²·(π/3 - sin(π/3))</code></li>
+                            <li><code>S_u ≈ 9,06 cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad: mezikruží</h4>
+                        <p>Pro <code>R = 9 cm</code>, <code>r = 5 cm</code>:</p>
+                        <ul>
+                            <li><code>S_m = π(9² - 5²) = 56π ≈ 175,93 cm²</code></li>
+                            <li><code>o_m = 2π(R + r) = 28π ≈ 87,96 cm</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="175.929" data-tolerance="0.1">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>
+                                Spočítejte obsah mezikruží pro <code>R = 9</code> a <code>r = 5</code>. Výsledek zapište
+                                desetinně.
+                            </p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 175.93">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Kapitola 2 je splněná</h2>
+                        <p>Mini úlohy máte správně. Můžete pokračovat na kapitolu 3.</p>
+                        <div class="complete-actions">
+                            <a href="../zakladni-telesa/index.html#krychle-objem-povrch-a-uhlopricka" class="btn-primary">Pokračovat na kapitolu 3</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="presnejsi-odvozeni-obvodu-a-obsahu-kruhu">← Přesnější odvození</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
-
 </html>
-

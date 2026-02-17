@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Základní tělesa - kapitola 3 kurzu Rovinné útvary a tělesa.">
+    <meta name="description"
+        content="Základní tělesa - interaktivní kapitola o krychli, kvádru, válci a kolmém hranolu.">
     <title>Základní tělesa – Rovinné útvary a tělesa</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
-    <link rel="stylesheet" href="../../lesson-shell.css">
+    <link rel="stylesheet" href="lesson.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -24,7 +25,7 @@
             <div class="lesson-nav-info">
                 <a href="../../index.html" class="lesson-course-link">Rovinné útvary a tělesa</a>
                 <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 3</span>
+                <span class="lesson-nav-current">Kapitola 3: Základní tělesa</span>
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
@@ -39,50 +40,610 @@
                     <h3>Kapitola 3</h3>
                     <p>Základní tělesa</p>
                 </div>
-                <nav class="sidebar-nav">                    <a href="#krychle-objem-povrch-a-uhlopricka" class="sidebar-link active">
+
+                <nav class="sidebar-nav">
+                    <a href="#krychle-objem-povrch-a-uhlopricka" class="sidebar-link active" data-section="krychle-objem-povrch-a-uhlopricka">
                         <span class="sidebar-icon">1</span>
-                        Krychle - objem, povrch a úhlopříčka
-                    </a>                    <a href="#kvadr-objem-povrch-a-uhlopricka" class="sidebar-link">
+                        Krychle
+                    </a>
+                    <a href="#kvadr-objem-povrch-a-uhlopricka" class="sidebar-link" data-section="kvadr-objem-povrch-a-uhlopricka">
                         <span class="sidebar-icon">2</span>
-                        Kvádr - objem, povrch a úhlopříčka
-                    </a>                    <a href="#valec-objem-a-povrch" class="sidebar-link">
+                        Kvádr
+                    </a>
+                    <a href="#valec-objem-a-povrch" class="sidebar-link" data-section="valec-objem-a-povrch">
                         <span class="sidebar-icon">3</span>
-                        Válec - objem a povrch
-                    </a>                    <a href="#kolmy-hranol-objem-a-obsah" class="sidebar-link">
+                        Válec
+                    </a>
+                    <a href="#kolmy-hranol-objem-a-obsah" class="sidebar-link" data-section="kolmy-hranol-objem-a-obsah">
                         <span class="sidebar-icon">4</span>
-                        Kolmý hranol - objem a obsah
+                        Kolmý hranol
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✍️</span>
+                        Procvičování
                     </a>
                 </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
-            <div class="lesson-content">                <section id="krychle-objem-povrch-a-uhlopricka" class="lesson-section">
-                    <div class="section-badge">Téma 1</div>
+            <div class="lesson-content">
+                <section id="krychle-objem-povrch-a-uhlopricka" class="lesson-section active">
+                    <span class="section-badge">Téma 1</span>
                     <h1>Krychle - objem, povrch a úhlopříčka</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="kvadr-objem-povrch-a-uhlopricka" class="lesson-section">
-                    <div class="section-badge">Téma 2</div>
+                    <p class="lead">
+                        <strong>Krychle</strong> je pravidelný šestistěn. Má 6 shodných čtvercových stěn, 12 stejně dlouhých hran a 8 vrcholů.
+                        Všechny výpočty jdou odvodit z jediné veličiny: délky hrany <code>a</code>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Objem:</strong> <code>V = a³</code></li>
+                            <li><strong>Povrch:</strong> <code>S = 6a²</code></li>
+                            <li><strong>Stěnová úhlopříčka:</strong> <code>u<sub>s</sub> = a√2</code></li>
+                            <li><strong>Tělesová úhlopříčka:</strong> <code>u<sub>t</sub> = a√3</code></li>
+                            <li><strong>Inverzně:</strong> <code>a = ∛V</code> a <code>a = u<sub>t</sub>/√3</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="equation-grid">
+                        <div class="equation-card">
+                            <div class="equation-title">Objem</div>
+                            <div class="equation-main">V = a<sup>3</sup></div>
+                            <div class="equation-note">Tři rozměry jsou stejné: a × a × a.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Povrch</div>
+                            <div class="equation-main">S = 6a<sup>2</sup></div>
+                            <div class="equation-note">Šest čtvercových stěn, každá s obsahem a².</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Stěnová úhlopříčka</div>
+                            <div class="equation-main">u<sub>s</sub> = a√2</div>
+                            <div class="equation-note">Pythagorova věta ve čtverci.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Tělesová úhlopříčka</div>
+                            <div class="equation-main">u<sub>t</sub> = a√3</div>
+                            <div class="equation-note">Pythagorova věta v prostoru: a²+a²+a².</div>
+                        </div>
+                    </div>
+
+                    <div class="brilliant-tip">
+                        <div class="tip-icon">💡</div>
+                        <div>
+                            <h4>Tip ve stylu Brilliant</h4>
+                            <p>Než počítáte, rozhodněte, zda jde o plošnou (a²), nebo prostorovou (a³) veličinu. Už jednotky často odhalí chybu.</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 3D laboratoř krychle</h3>
+                        <p>Měňte hranu a natočení. Sledujte výpočty i úhlopříčky přímo v modelu.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="cubeCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Modře: stěnová úhlopříčka, růžově: tělesová úhlopříčka</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="cubeSideSlider">Hrana a: <strong id="cubeSideValue">4.0</strong></label>
+                                    <input type="range" id="cubeSideSlider" min="1.5" max="10" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cubeYawSlider">Natočení kolem osy z: <strong id="cubeYawValue">42°</strong></label>
+                                    <input type="range" id="cubeYawSlider" min="20" max="70" step="1" value="42">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cubePitchSlider">Náklon: <strong id="cubePitchValue">26°</strong></label>
+                                    <input type="range" id="cubePitchSlider" min="10" max="45" step="1" value="26">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="cubeShowFaceDiagonal" checked>
+                                    <span>Zobrazit stěnovou úhlopříčku</span></label>
+                                <label class="check-row"><input type="checkbox" id="cubeShowBodyDiagonal" checked>
+                                    <span>Zobrazit tělesovou úhlopříčku</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Objem V</span><span id="cubeVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch S</span><span id="cubeSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>u<sub>s</sub> = a√2</span><span id="cubeFaceDiagonalValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>u<sub>t</sub> = a√3</span><span id="cubeBodyDiagonalValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>a z objemu</span><span id="cubeSideFromVolumeValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="cubeReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Pro <code>a = 6 cm</code>:</p>
+                        <ul>
+                            <li><code>V = 6³ = 216 cm³</code></li>
+                            <li><code>S = 6·6² = 216 cm²</code></li>
+                            <li><code>u<sub>s</sub> = 6√2 ≈ 8,49 cm</code></li>
+                            <li><code>u<sub>t</sub> = 6√3 ≈ 10,39 cm</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="10.3923" data-tolerance="0.03" data-answer-display="u_t = 6√3 ≈ 10,39 cm">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Krychle má hranu <code>a = 6 cm</code>. Zadejte délku tělesové úhlopříčky v <code>cm</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 10.39">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="kvadr-objem-povrch-a-uhlopricka">Kvádr - objem, povrch a úhlopříčka →</button>
+                    </div>
+                </section>
+
+                <section id="kvadr-objem-povrch-a-uhlopricka" class="lesson-section">
+                    <span class="section-badge">Téma 2</span>
                     <h1>Kvádr - objem, povrch a úhlopříčka</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="valec-objem-a-povrch" class="lesson-section">
-                    <div class="section-badge">Téma 3</div>
+                    <p class="lead">
+                        <strong>Kvádr</strong> je pravoúhlý hranol s obdélníkovou podstavou. Má tři obecně různé rozměry
+                        <code>a</code>, <code>b</code>, <code>c</code>. Krychle je speciální případ kvádru, kdy <code>a = b = c</code>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Objem:</strong> <code>V = abc</code></li>
+                            <li><strong>Povrch:</strong> <code>S = 2(ab + ac + bc)</code></li>
+                            <li><strong>Tělesová úhlopříčka:</strong> <code>u = √(a² + b² + c²)</code></li>
+                            <li><strong>Stěnové úhlopříčky:</strong> <code>u<sub>ab</sub> = √(a²+b²)</code>, <code>u<sub>ac</sub> = √(a²+c²)</code>, <code>u<sub>bc</sub> = √(b²+c²)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Postup výpočtu v praxi</h4>
+                            <p>1. Spočtěte stěnové obsahy <code>ab</code>, <code>ac</code>, <code>bc</code>.</p>
+                            <p>2. Sečtěte je a vynásobte dvěma pro povrch.</p>
+                            <p>3. Pro tělesovou úhlopříčku použijte jednu Pythagorovu větu v prostoru.</p>
+                        </div>
+                        <div class="column">
+                            <h4>Kontrola výsledků</h4>
+                            <p>Pokud se jeden rozměr výrazně zvětší, objem roste lineárně, ale povrch jen přes dvě stěny, které tento rozměr obsahují.</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní kvádr</h3>
+                        <p>Měňte všechny tři hrany. Sledujte tělesovou i stěnové úhlopříčky.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="cuboidCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Růžově: tělesová úhlopříčka, tyrkysově: stěnová</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="cuboidASlider">Hrana a: <strong id="cuboidAValue">6.5</strong></label>
+                                    <input type="range" id="cuboidASlider" min="2" max="12" step="0.1" value="6.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cuboidBSlider">Hrana b: <strong id="cuboidBValue">4.0</strong></label>
+                                    <input type="range" id="cuboidBSlider" min="1.5" max="10" step="0.1" value="4">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cuboidCSlider">Hrana c: <strong id="cuboidCValue">3.5</strong></label>
+                                    <input type="range" id="cuboidCSlider" min="1.5" max="10" step="0.1" value="3.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cuboidYawSlider">Natočení: <strong id="cuboidYawValue">38°</strong></label>
+                                    <input type="range" id="cuboidYawSlider" min="20" max="70" step="1" value="38">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="cuboidShowBodyDiagonal" checked>
+                                    <span>Zobrazit tělesovou úhlopříčku</span></label>
+                                <label class="check-row"><input type="checkbox" id="cuboidShowFaceDiagonal" checked>
+                                    <span>Zobrazit stěnovou úhlopříčku</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Objem V</span><span id="cuboidVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch S</span><span id="cuboidSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Tělesová u</span><span id="cuboidBodyDiagonalValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>u<sub>ab</sub></span><span id="cuboidDiagABValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>u<sub>ac</sub></span><span id="cuboidDiagACValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>u<sub>bc</sub></span><span id="cuboidDiagBCValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="cuboidReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Pro <code>a = 4 cm</code>, <code>b = 5 cm</code>, <code>c = 12 cm</code>:</p>
+                        <ul>
+                            <li><code>V = 4·5·12 = 240 cm³</code></li>
+                            <li><code>S = 2(4·5 + 4·12 + 5·12) = 2(20 + 48 + 60) = 256 cm²</code></li>
+                            <li><code>u = √(4² + 5² + 12²) = √185 ≈ 13,60 cm</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="13" data-tolerance="0.01" data-answer-display="u = √(3² + 4² + 12²) = 13 cm">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Kvádr má hrany <code>3 cm</code>, <code>4 cm</code>, <code>12 cm</code>. Určete tělesovou úhlopříčku v <code>cm</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 13">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="krychle-objem-povrch-a-uhlopricka">← Krychle - objem, povrch a úhlopříčka</button>
+                        <button class="btn-primary btn-next" data-next="valec-objem-a-povrch">Válec - objem a povrch →</button>
+                    </div>
+                </section>
+
+                <section id="valec-objem-a-povrch" class="lesson-section">
+                    <span class="section-badge">Téma 3</span>
                     <h1>Válec - objem a povrch</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
-                </section>                <section id="kolmy-hranol-objem-a-obsah" class="lesson-section">
-                    <div class="section-badge">Téma 4</div>
+                    <p class="lead">
+                        <strong>Válec</strong> je těleso s kruhovou podstavou o poloměru <code>r</code> a výškou <code>v</code>.
+                        U povrchu odlišujeme plášť a dvě podstavy.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové vztahy</h4>
+                        <ul>
+                            <li><strong>Obsah podstavy:</strong> <code>S<sub>p</sub> = πr²</code></li>
+                            <li><strong>Objem:</strong> <code>V = πr²v</code></li>
+                            <li><strong>Plášť:</strong> <code>S<sub>pl</sub> = 2πrv</code></li>
+                            <li><strong>Celkový povrch:</strong> <code>S = 2πr(r+v)</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="equation-grid">
+                        <div class="equation-card">
+                            <div class="equation-title">Podstava</div>
+                            <div class="equation-main">S<sub>p</sub> = πr<sup>2</sup></div>
+                            <div class="equation-note">Stejný obsah jako kruh.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Objem</div>
+                            <div class="equation-main">V = S<sub>p</sub>·v</div>
+                            <div class="equation-note">Podstava krát výška.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Plášť</div>
+                            <div class="equation-main">S<sub>pl</sub> = 2πrv</div>
+                            <div class="equation-note">Obvod podstavy krát výška.</div>
+                        </div>
+                        <div class="equation-card">
+                            <div class="equation-title">Celkový povrch</div>
+                            <div class="equation-main">S = 2S<sub>p</sub> + S<sub>pl</sub></div>
+                            <div class="equation-note">Dvě podstavy + plášť.</div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Interaktivní válec + rozvinutý plášť</h3>
+                        <p>Měňte poloměr a výšku. Vpravo lze zobrazit rozvinutý plášť (obdélník).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="cylinderCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Šířka pláště po rozvinutí je <code>2πr</code></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="cylinderRadiusSlider">Poloměr r: <strong id="cylinderRadiusValue">3.5</strong></label>
+                                    <input type="range" id="cylinderRadiusSlider" min="1" max="8" step="0.1" value="3.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cylinderHeightSlider">Výška v: <strong id="cylinderHeightValue">7.0</strong></label>
+                                    <input type="range" id="cylinderHeightSlider" min="1" max="14" step="0.1" value="7">
+                                </div>
+                                <div class="control-group">
+                                    <label for="cylinderPerspectiveSlider">Perspektiva: <strong id="cylinderPerspectiveValue">0.35</strong></label>
+                                    <input type="range" id="cylinderPerspectiveSlider" min="0.2" max="0.6" step="0.01" value="0.35">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="cylinderShowNet" checked>
+                                    <span>Zobrazit rozvinutý plášť</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obsah podstavy S<sub>p</sub></span><span id="cylinderBaseAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Plášť S<sub>pl</sub></span><span id="cylinderLateralValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch S</span><span id="cylinderSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem V</span><span id="cylinderVolumeValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obvod podstavy 2πr</span><span id="cylinderCircumferenceValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="cylinderReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Válec má <code>r = 3 cm</code> a <code>v = 10 cm</code>:</p>
+                        <ul>
+                            <li><code>V = π·3²·10 = 90π ≈ 282,74 cm³</code></li>
+                            <li><code>S = 2π·3(3+10) = 78π ≈ 245,04 cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="245.044" data-tolerance="0.2" data-answer-display="S = 2π·3(3+10) = 78π ≈ 245,04 cm²">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Určete povrch válce pro <code>r = 3 cm</code> a <code>v = 10 cm</code> (v <code>cm²</code>).</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 245.04">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="kvadr-objem-povrch-a-uhlopricka">← Kvádr - objem, povrch a úhlopříčka</button>
+                        <button class="btn-primary btn-next" data-next="kolmy-hranol-objem-a-obsah">Kolmý hranol - objem a obsah →</button>
+                    </div>
+                </section>
+
+                <section id="kolmy-hranol-objem-a-obsah" class="lesson-section">
+                    <span class="section-badge">Téma 4</span>
                     <h1>Kolmý hranol - objem a obsah</h1>
-                    <p class="lead">Kostra sekce je připravena pro budoucí interaktivní obsah, vzorce, vizualizace a procvičování.</p>
-                    <div class="topic-note">Připraveno pro budoucí obsah: detailní vysvětlení, příklady, odvození i procvičovací úlohy.</div>
+                    <p class="lead">
+                        U <strong>kolmého hranolu</strong> stojí boční hrany kolmo na podstavu. Díky tomu platí obecné vzorce,
+                        které fungují pro libovolný tvar podstavy.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Obecné vzorce</h4>
+                        <ul>
+                            <li><strong>Objem:</strong> <code>V = S<sub>p</sub> · v</code></li>
+                            <li><strong>Plášť:</strong> <code>S<sub>pl</sub> = o<sub>p</sub> · v</code></li>
+                            <li><strong>Celkový povrch:</strong> <code>S = 2S<sub>p</sub> + o<sub>p</sub>v</code></li>
+                            <li><strong>Kde:</strong> <code>S<sub>p</sub></code> je obsah podstavy, <code>o<sub>p</sub></code> její obvod, <code>v</code> výška hranolu.</li>
+                        </ul>
+                    </div>
+
+                    <div class="formula-highlight">
+                        <div class="formula-icon">🧠</div>
+                        <div class="formula-content">
+                            <h4>Důležitá myšlenka</h4>
+                            <p>Boční stěny jsou obdélníky. Součet jejich obsahů je přesně <code>o<sub>p</sub>·v</code>.</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎮 Kolmý hranol s pravidelnou podstavou</h3>
+                        <p>Zde je konkrétní případ: podstava je pravidelný n-úhelník. Vzorce se počítají automaticky.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="prismCanvas" width="760" height="440"></canvas>
+                                <div class="canvas-note">Měňte n, stranu podstavy a výšku hranolu</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="prismNSlider">Počet stran n: <strong id="prismNValue">6</strong></label>
+                                    <input type="range" id="prismNSlider" min="3" max="10" step="1" value="6">
+                                </div>
+                                <div class="control-group">
+                                    <label for="prismSideSlider">Strana podstavy a: <strong id="prismSideValue">3.5</strong></label>
+                                    <input type="range" id="prismSideSlider" min="1" max="7" step="0.1" value="3.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="prismHeightSlider">Výška v: <strong id="prismHeightValue">8.0</strong></label>
+                                    <input type="range" id="prismHeightSlider" min="2" max="12" step="0.1" value="8">
+                                </div>
+                                <div class="control-group">
+                                    <label for="prismYawSlider">Natočení: <strong id="prismYawValue">32°</strong></label>
+                                    <input type="range" id="prismYawSlider" min="10" max="65" step="1" value="32">
+                                </div>
+
+                                <label class="check-row"><input type="checkbox" id="prismShowTriangulation" checked>
+                                    <span>Zobrazit triangulaci podstavy</span></label>
+
+                                <div class="equation-display">
+                                    <div class="calc-row"><span>Obvod podstavy o<sub>p</sub></span><span id="prismPerimeterValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Obsah podstavy S<sub>p</sub></span><span id="prismBaseAreaValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Plášť S<sub>pl</sub></span><span id="prismLateralValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Povrch S</span><span id="prismSurfaceValue" class="calc-value">0</span></div>
+                                    <div class="calc-row"><span>Objem V</span><span id="prismVolumeValue" class="calc-value">0</span></div>
+                                </div>
+
+                                <button id="prismReset" class="btn-ghost btn-sm">Obnovit výchozí nastavení</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="example-box">
+                        <h4>Řešený příklad</h4>
+                        <p>Kolmý hranol má <code>S<sub>p</sub> = 32 cm²</code>, <code>o<sub>p</sub> = 28 cm</code> a <code>v = 10 cm</code>.</p>
+                        <ul>
+                            <li><code>V = S<sub>p</sub>·v = 32·10 = 320 cm³</code></li>
+                            <li><code>S = 2S<sub>p</sub> + o<sub>p</sub>v = 64 + 280 = 344 cm²</code></li>
+                        </ul>
+                    </div>
+
+                    <div class="quick-check" data-answer="344" data-tolerance="0.01" data-answer-display="S = 2·32 + 28·10 = 344 cm²">
+                        <div class="quick-check-header">Mini úloha</div>
+                        <div class="quick-check-body">
+                            <p>Kolmý hranol má <code>S<sub>p</sub> = 32 cm²</code>, <code>o<sub>p</sub> = 28 cm</code> a <code>v = 10 cm</code>. Určete celkový povrch v <code>cm²</code>.</p>
+                            <div class="quick-check-row">
+                                <input type="text" class="quick-check-input" placeholder="např. 344">
+                                <button class="btn-primary btn-sm quick-check-btn">Ověřit</button>
+                            </div>
+                            <div class="quick-check-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="valec-objem-a-povrch">← Válec - objem a povrch</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Kontrolní úlohy k základním tělesům</h1>
+                    <p class="lead">Ověřte si, že umíte správně volit vzorce, jednotky i výpočtové kroky.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 1</span><span id="ex1Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Krychle má hranu <code>a = 5 cm</code>. Jaký je její povrch?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"> <code>125 cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"> <code>150 cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"> <code>25 cm²</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex1Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 2</span><span id="ex2Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Krychle s hranou <code>a = 2</code> má tělesovou úhlopříčku:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"> <code>2√2</code></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"> <code>4</code></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"> <code>2√3</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="c">Zkontrolovat odpověď</button>
+                                <div id="ex2Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 3</span><span id="ex3Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kvádr má hrany <code>3, 4, 12</code>. Tělesová úhlopříčka je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"> <code>13</code></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"> <code>12</code></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"> <code>11</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex3Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 4</span><span id="ex4Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kvádr má hrany <code>2, 3, 4</code>. Jeho povrch je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"> <code>24</code></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"> <code>52</code></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"> <code>48</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex4Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 5</span><span id="ex5Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Válec má <code>r = 2</code> a <code>v = 5</code>. Jeho objem je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"> <code>20π</code></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"> <code>10π</code></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"> <code>40π</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex5Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 6</span><span id="ex6Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Válec má <code>r = 4</code>, <code>v = 6</code>. Celkový povrch je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"> <code>64π</code></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"> <code>80π</code></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"> <code>96π</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="b">Zkontrolovat odpověď</button>
+                                <div id="ex6Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 7</span><span id="ex7Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kolmý hranol má <code>S<sub>p</sub> = 18 cm²</code> a <code>v = 7 cm</code>. Objem je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"> <code>126 cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"> <code>144 cm³</code></label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"> <code>252 cm³</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex7Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise">
+                            <div class="exercise-header"><span class="exercise-number">Otázka 8</span><span id="ex8Status" class="exercise-status">Nezodpovězeno</span></div>
+                            <div class="exercise-content">
+                                <p>Kolmý hranol má <code>S<sub>p</sub> = 18 cm²</code>, <code>o<sub>p</sub> = 20 cm</code>, <code>v = 7 cm</code>. Celkový povrch je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"> <code>176 cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"> <code>194 cm²</code></label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"> <code>214 cm²</code></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8" data-correct="a">Zkontrolovat odpověď</button>
+                                <div id="ex8Feedback" class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete" style="display:none;">
+                        <div class="complete-icon">✅</div>
+                        <h2>Kapitola 3 je splněná</h2>
+                        <p>Máte hotovo. Můžete pokračovat na jehlany a kužely.</p>
+                        <div class="complete-actions">
+                            <a href="../jehlan-a-kuzel/index.html#jehlan-objem-a-povrch" class="btn-primary">Pokračovat na kapitolu 4</a>
+                            <a href="../../index.html" class="btn-outline">Zpět na kurz</a>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-ghost btn-prev" data-prev="kolmy-hranol-objem-a-obsah">← Kolmý hranol - objem a obsah</button>
+                        <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
-
