@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Funkce - strukturovaný kurz od základních pojmů přes vlastnosti a operace až po lineární, kvadratické, mocninné, exponenciální, logaritmické a cyklometrické funkce.">
+    <title>Funkce – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Funkce</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Funkce</h1>
+                    <p class="course-description">
+                        Kurz je nyní připravený jako kompletní struktura 9 kapitol a 32 témat.
+                        Pokrývá základní pojmy, vlastnosti a operace s funkcemi a navazuje přehledem
+                        nejdůležitějších typů funkcí. Obsah jednotlivých témat je zatím ponechán jako osnova
+                        pro následné doplnění.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">9 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~8 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">32 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/uvod-do-funkci/index.html#definicni-obor-a-obor-hodnot" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <path d="M20 145 C45 120, 70 70, 95 95 C120 120, 145 60, 180 45" fill="none" stroke="#6366f1" stroke-width="2.8" />
+                            <line x1="20" y1="145" x2="180" y2="45" stroke="#10b981" stroke-width="2.2" stroke-dasharray="6,5" />
+                            <circle cx="20" cy="145" r="4" fill="#6366f1" />
+                            <circle cx="95" cy="95" r="4" fill="#f59e0b" />
+                            <circle cx="180" cy="45" r="4" fill="#10b981" />
+                            <text x="25" y="138" fill="#93c5fd" font-size="10" font-family="Inter">f(x)</text>
+                            <text x="98" y="88" fill="#f59e0b" font-size="10" font-family="Inter">g(x)</text>
+                            <text x="144" y="36" fill="#86efac" font-size="10" font-family="Inter">h(x)</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">D(f), H(f)</div>
+                        <div class="formula formula-2">(f∘g)(x) = f(g(x))</div>
+                        <div class="formula formula-3">f⁻¹(x)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění obsahu</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Úvod do funkcí</h3>
+                            <p class="chapter-description">Definice funkce, definiční obor, obor hodnot a základní čtení grafu.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/uvod-do-funkci/index.html#definicni-obor-a-obor-hodnot" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Definiční obor a obor hodnot</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-do-funkci/index.html#co-je-funkci-a-co-neni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Co je funkcí a co není</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-do-funkci/index.html#graf-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Graf funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Vlastnosti funkcí</h3>
+                            <p class="chapter-description">Monotónnost, sudost/lichost, omezenost, extrémy a periodicita.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/vlastnosti-funkci/index.html#monotonnost-a-prosta-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Monotónnost a prostá funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vlastnosti-funkci/index.html#sudost-a-lichost" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Sudost a lichost</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vlastnosti-funkci/index.html#omezenost-a-extremy" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Omezenost a extrémy</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/vlastnosti-funkci/index.html#periodicita" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Periodicita</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Operace s funkcemi</h3>
+                            <p class="chapter-description">Rovnost funkcí, skládání funkcí a inverzní funkce.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/operace-s-funkcemi/index.html#rovnost-funkci" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnost funkcí</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-s-funkcemi/index.html#skladani-funkci" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Skládání funkcí</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-s-funkcemi/index.html#inverzni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Inverzní funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Lineární funkce</h3>
+                            <p class="chapter-description">Předpis přímky, posuny grafu a základní vlastnosti lineární funkce.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/linearni-funkce/index.html#linearni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/linearni-funkce/index.html#predpis-primky-ze-dvou-bodu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Předpis přímky ze dvou bodů</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/linearni-funkce/index.html#posuny-grafu-linearni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu lineární funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/linearni-funkce/index.html#vlastnosti-linearni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti lineární funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kvadratická funkce</h3>
+                            <p class="chapter-description">Parabola, její posuny, vlastnosti a práce s absolutní hodnotou.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kvadraticka-funkce/index.html#kvadraticka-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratická funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kvadraticka-funkce/index.html#posuny-grafu-kvadraticke-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu kvadratické funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kvadraticka-funkce/index.html#vlastnosti-kvadraticke-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti kvadratické funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kvadraticka-funkce/index.html#kvadraticka-funkce-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratická funkce s absolutní hodnotou</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Mocninná funkce</h3>
+                            <p class="chapter-description">Mocninné funkce s kladným i záporným mocnitelem a jejich grafy.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 témat</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/mocninna-funkce/index.html#mocninna-funkce-s-kladnym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Mocninná funkce s kladným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mocninna-funkce/index.html#posuny-grafu-mf-s-kladnym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu MF s kladným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mocninna-funkce/index.html#vlastnosti-mf-s-kladnym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti MF s kladným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mocninna-funkce/index.html#mocninna-funkce-se-zapornym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Mocninná funkce se záporným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mocninna-funkce/index.html#posuny-grafu-mf-se-zapornym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu MF se záporným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mocninna-funkce/index.html#vlastnosti-mf-se-zapornym-mocnitelem" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti MF se záporným mocnitelem</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="7">
+                    <div class="chapter-header">
+                        <div class="chapter-number">7</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Exponenciální funkce</h3>
+                            <p class="chapter-description">Exponenciální funkce, posuny jejího grafu a klíčové vlastnosti.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/exponencialni-funkce/index.html#exponencialni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Exponenciální funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/exponencialni-funkce/index.html#posuny-grafu-exponencialni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu exponenciální funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/exponencialni-funkce/index.html#vlastnosti-exponencialni-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti exponenciální funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="8">
+                    <div class="chapter-header">
+                        <div class="chapter-number">8</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Logaritmická funkce</h3>
+                            <p class="chapter-description">Logaritmická funkce, transformace grafu a základní vlastnosti.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/logaritmicka-funkce/index.html#logaritmicka-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Logaritmická funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/logaritmicka-funkce/index.html#posuny-grafu-logaritmicke-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Posuny grafu logaritmické funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/logaritmicka-funkce/index.html#vlastnosti-logaritmicke-funkce" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vlastnosti logaritmické funkce</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chapter-card chapter-card-active" data-chapter="9">
+                    <div class="chapter-header">
+                        <div class="chapter-number">9</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Cyklometrické funkce</h3>
+                            <p class="chapter-description">Inverzní goniometrické funkce a jejich základní použití.</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~30 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/cyklometricke-funkce/index.html#arcussinus-a-arcuscosinus" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Arcussinus a arcuscosinus</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/cyklometricke-funkce/index.html#arcustangens-a-arcuscotangens" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Arcustangens a arcuscotangens</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se v kurzu pokryje</h2>
+                <p class="section-subtitle">Přehled hlavních bloků připravených v osnově</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">D/H</div>
+                    <h3>Definice funkce</h3>
+                    <p>Definiční obor, obor hodnot a základní rozpoznání, co je a není funkce.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">↗↘</div>
+                    <h3>Vlastnosti funkcí</h3>
+                    <p>Monotónnost, prostota, sudost, lichost, omezenost, extrémy a periodicita.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">∘</div>
+                    <h3>Operace s funkcemi</h3>
+                    <p>Rovnost funkcí, skládání a inverzní funkce včetně práce s předpisy.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">ax+b</div>
+                    <h3>Lineární modely</h3>
+                    <p>Lineární funkce, předpis přímky ze dvou bodů a posuny grafu.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">x²</div>
+                    <h3>Kvadratické a mocninné</h3>
+                    <p>Kvadratické a mocninné funkce s kladným i záporným mocnitelem.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">exp/log</div>
+                    <h3>Další typy funkcí</h3>
+                    <p>Exponenciální, logaritmické a cyklometrické funkce a jejich vlastnosti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Struktura kurzu Funkce je připravená. Další krok je doplnění detailního obsahu jednotlivých témat.</p>
+                <a href="lessons/uvod-do-funkci/index.html#definicni-obor-a-obor-hodnot" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>
