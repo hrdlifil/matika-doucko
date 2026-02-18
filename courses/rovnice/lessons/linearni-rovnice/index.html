@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lineární rovnice - strukturovaná lekce kurzu Rovnice.">
+    <meta name="description"
+        content="Lineární rovnice - interaktivní kapitola: lineární rovnice, absolutní hodnota, grafické řešení a parametr.">
     <title>Lineární rovnice – Rovnice</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -44,11 +45,13 @@
                         <span class="sidebar-icon">1</span>
                         Lineární rovnice
                     </a>
-                    <a href="#linearni-rovnice-s-absolutni-hodnotou" class="sidebar-link" data-section="linearni-rovnice-s-absolutni-hodnotou">
+                    <a href="#linearni-rovnice-s-absolutni-hodnotou" class="sidebar-link"
+                        data-section="linearni-rovnice-s-absolutni-hodnotou">
                         <span class="sidebar-icon">2</span>
                         Lineární rovnice s absolutní hodnotou
                     </a>
-                    <a href="#graficke-reseni-linearnich-rovnic" class="sidebar-link" data-section="graficke-reseni-linearnich-rovnic">
+                    <a href="#graficke-reseni-linearnich-rovnic" class="sidebar-link"
+                        data-section="graficke-reseni-linearnich-rovnic">
                         <span class="sidebar-icon">3</span>
                         Grafické řešení lineárních rovnic
                     </a>
@@ -57,51 +60,694 @@
                         Lineární rovnice s parametrem
                     </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování v kapitole</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh vyřešeno</div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="linearni-rovnice" class="lesson-section active">
+                <section id="linearni-rovnice" class="lesson-section">
                     <span class="section-badge">Téma 1</span>
                     <h1>Lineární rovnice</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Lineární rovnice s jednou neznámou má po úpravě tvar
+                        <span class="math-inline">ax + b = 0</span>. Cílem je najít všechna
+                        <span class="math-inline">x</span>, pro která je rovnost pravdivá.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Klíčová myšlenka</h4>
+                            <p>
+                                U lineární rovnice rozhoduje hlavně koeficient u
+                                <span class="math-inline">x</span>. Pokud je nenulový, řešení je právě jedno.
+                                Pokud je nulový, může být řešení žádné nebo nekonečně mnoho.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Obecný tvar</h4>
+                        <div class="equation-block">ax + b = 0, kde a, b ∈ ℝ</div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Podmínka</th>
+                                    <th>Výsledek</th>
+                                    <th>Počet řešení</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">a ≠ 0</span></td>
+                                    <td><span class="math-inline">x = −b/a</span></td>
+                                    <td>Právě jedno</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">a = 0, b = 0</span></td>
+                                    <td>identita <span class="math-inline">0 = 0</span></td>
+                                    <td>Nekonečně mnoho</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">a = 0, b ≠ 0</span></td>
+                                    <td>spor <span class="math-inline">b = 0</span></td>
+                                    <td>Žádné</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Postup řešení krok za krokem</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Rozevřete závorky a odstraňte zlomky.</span>
+                            <span class="step-text">Rovnici převeďte do přehledného tvaru.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Sečtěte členy s neznámou a konstanty.</span>
+                            <span class="step-text">Cílem je tvar <span class="math-inline">Ax = B</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Vydělte koeficientem u neznámé.</span>
+                            <span class="step-text">Pokud <span class="math-inline">A ≠ 0</span>, dostanete jedno řešení.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Proveďte zkoušku.</span>
+                            <span class="step-text">Dosazením ověříte, že výsledek skutečně platí.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">7x - 9 = 2x + 11</span></p>
+                            <div class="equation-stack">
+                                <div>7x - 2x = 11 + 9</div>
+                                <div>5x = 20</div>
+                                <div class="equation-final">x = 4</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">3(2x - 5) - 4 = 2(x + 7)</span></p>
+                            <div class="equation-stack">
+                                <div>6x - 15 - 4 = 2x + 14</div>
+                                <div>6x - 19 = 2x + 14</div>
+                                <div>4x = 33</div>
+                                <div class="equation-final">x = 33/4 = 8,25</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">(5 - 2x)/3 - (x + 1)/2 = 4</span></p>
+                            <div class="equation-stack">
+                                <div>2(5 - 2x) - 3(x + 1) = 24</div>
+                                <div>10 - 4x - 3x - 3 = 24</div>
+                                <div>7 - 7x = 24</div>
+                                <div>−7x = 17</div>
+                                <div class="equation-final">x = −17/7</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="note-warning">
+                        <strong>Častá chyba:</strong> přenášení členů bez změny znaménka.
+                        Například při přechodu z <span class="math-inline">7x - 9 = 2x + 11</span> na
+                        <span class="math-inline">7x - 2x = 11 + 9</span> se znaménka mění správně.
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-l1" data-type="number" data-answer="4" data-solution="x = 4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">7x - 9 = 2x + 11</span>.</p>
+                                <div class="input-row">
+                                    <label for="l1Input">x = </label>
+                                    <input id="l1Input" class="exercise-input" type="text" placeholder="např. 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l2" data-type="number" data-answer="33/4" data-solution="x = 33/4 = 8,25">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">3(2x - 5) - 4 = 2(x + 7)</span>.</p>
+                                <div class="input-row">
+                                    <label for="l2Input">x = </label>
+                                    <input id="l2Input" class="exercise-input" type="text" placeholder="např. 33/4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l3" data-type="choice" data-answer="c"
+                            data-solution="správně je C: rovnice je identita, má nekonečně mnoho řešení">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má rovnice <span class="math-inline">4(x - 2) = 4x - 8</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l3" value="a">
+                                        <span>Žádné řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l3" value="b">
+                                        <span>Právě jedno řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l3" value="c">
+                                        <span>Nekonečně mnoho řešení.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#linearni-rovnice-s-absolutni-hodnotou" class="btn-primary btn-next-link">Pokračovat na absolutní hodnotu →</a>
+                    </div>
                 </section>
+
                 <section id="linearni-rovnice-s-absolutni-hodnotou" class="lesson-section">
                     <span class="section-badge">Téma 2</span>
                     <h1>Lineární rovnice s absolutní hodnotou</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Absolutní hodnota mění rovnici na úlohu s případy. Zápis
+                        <span class="math-inline">|u(x)|</span> vyjadřuje vzdálenost od nuly, proto je vždy nezáporný.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="definition-box">
+                        <h4>Základní pravidla</h4>
+                        <div class="equation-panel">
+                            <div>|u| = u, pokud u ≥ 0</div>
+                            <div>|u| = −u, pokud u &lt; 0</div>
+                        </div>
+                    </div>
+
+                    <div class="case-grid">
+                        <article class="case-card">
+                            <h3>Tvar <span class="math-inline">|A(x)| = k</span></h3>
+                            <p><span class="math-inline">k &lt; 0</span> ⇒ žádné řešení.</p>
+                            <p><span class="math-inline">k = 0</span> ⇒ <span class="math-inline">A(x) = 0</span>.</p>
+                            <p><span class="math-inline">k &gt; 0</span> ⇒ <span class="math-inline">A(x) = k</span> nebo <span class="math-inline">A(x) = −k</span>.</p>
+                        </article>
+                        <article class="case-card">
+                            <h3>Tvar <span class="math-inline">|A(x)| = B(x)</span></h3>
+                            <p>Nejprve musí platit <span class="math-inline">B(x) ≥ 0</span>.</p>
+                            <p>Pak řešíme případy <span class="math-inline">A(x) = B(x)</span> a <span class="math-inline">A(x) = −B(x)</span>.</p>
+                            <p>Každý výsledek ověřte v původní rovnici.</p>
+                        </article>
+                    </div>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">|2x - 5| = 7</span></p>
+                            <div class="equation-stack">
+                                <div>2x - 5 = 7 nebo 2x - 5 = −7</div>
+                                <div>x = 6 nebo x = −1</div>
+                                <div class="equation-final">K = {−1, 6}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">|3x + 1| = 2x + 5</span></p>
+                            <div class="equation-stack">
+                                <div class="equation-note">Podmínka: 2x + 5 ≥ 0 ⇒ x ≥ −2,5</div>
+                                <div>1) 3x + 1 = 2x + 5 ⇒ x = 4</div>
+                                <div>2) −(3x + 1) = 2x + 5 ⇒ −5x = 6 ⇒ x = −6/5</div>
+                                <div class="equation-final">K = {−6/5, 4}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">|3x - 6| = −2</span></p>
+                            <div class="equation-stack">
+                                <div>|3x - 6| je vždy ≥ 0</div>
+                                <div>Pravá strana je záporná.</div>
+                                <div class="equation-final">Rovnice nemá řešení.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="note-success">
+                        <strong>Důležité:</strong> po rozdělení na případy vždy kontrolujte podmínky
+                        (například <span class="math-inline">B(x) ≥ 0</span>) a proveďte zkoušku dosazením.
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-l4" data-type="set" data-answer="-5,13" data-solution="K = {−5, 13}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">|x - 4| = 9</span>.</p>
+                                <div class="input-row">
+                                    <label for="l4Input">K = </label>
+                                    <input id="l4Input" class="exercise-input" type="text" placeholder="např. -5, 13">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l5" data-type="number" data-answer="-1" data-solution="x = −1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">|x - 1| = x + 3</span>.</p>
+                                <div class="input-row">
+                                    <label for="l5Input">x = </label>
+                                    <input id="l5Input" class="exercise-input" type="text" placeholder="např. -1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l6" data-type="choice" data-answer="b"
+                            data-solution="správně je B: absolutní hodnota nemůže být rovna zápornému číslu">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je množina řešení rovnice <span class="math-inline">|3x - 6| = −2</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l6" value="a">
+                                        <span><span class="math-inline">x = 2</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l6" value="b">
+                                        <span>Žádné řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l6" value="c">
+                                        <span><span class="math-inline">x = −2</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l6" value="d">
+                                        <span>Nekonečně mnoho řešení.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#linearni-rovnice" class="btn-outline btn-prev-link">← Zpět</a>
+                        <a href="#graficke-reseni-linearnich-rovnic" class="btn-primary btn-next-link">Pokračovat na grafické řešení →</a>
+                    </div>
                 </section>
+
                 <section id="graficke-reseni-linearnich-rovnic" class="lesson-section">
                     <span class="section-badge">Téma 3</span>
                     <h1>Grafické řešení lineárních rovnic</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Rovnici <span class="math-inline">ax + b = cx + d</span> lze řešit i graficky:
+                        hledáme průsečík přímek <span class="math-inline">y = ax + b</span> a
+                        <span class="math-inline">y = cx + d</span>.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">+</div>
+                        <div class="info-card-content">
+                            <h4>Vztah ke klasickému řešení</h4>
+                            <p>
+                                Souřadnice průsečíku mají tvar <span class="math-inline">(x, y)</span>.
+                                Hodnota <span class="math-inline">x</span> je právě řešení původní rovnice.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro průsečík (pokud přímky nejsou rovnoběžné)</h4>
+                        <div class="equation-block">x = (d − b)/(a − c), kde a ≠ c</div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Situace</th>
+                                    <th>Geometrický význam</th>
+                                    <th>Počet řešení rovnice</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">a ≠ c</span></td>
+                                    <td>Přímky se protínají v jednom bodě.</td>
+                                    <td>Právě jedno řešení</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">a = c</span>, <span class="math-inline">b ≠ d</span></td>
+                                    <td>Rovnoběžné různé přímky</td>
+                                    <td>Žádné řešení</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">a = c</span>, <span class="math-inline">b = d</span></td>
+                                    <td>Splývající přímky</td>
+                                    <td>Nekonečně mnoho řešení</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">2x + 1 = −x + 7</span></p>
+                            <div class="equation-stack">
+                                <div>3x = 6</div>
+                                <div>x = 2</div>
+                                <div>y = 2·2 + 1 = 5</div>
+                                <div class="equation-final">Průsečík je (2, 5), řešení je x = 2.</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">3x − 4 = 3x + 2</span></p>
+                            <div class="equation-stack">
+                                <div>Po odečtení 3x dostaneme −4 = 2.</div>
+                                <div>Směrnice jsou stejné, absolutní členy jiné.</div>
+                                <div class="equation-final">Přímky jsou rovnoběžné, řešení neexistuje.</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Řešte rovnici: <span class="math-inline">5 − 2x = 5 − 2x</span></p>
+                            <div class="equation-stack">
+                                <div>Obě strany jsou shodné pro každé x.</div>
+                                <div>Graficky jde o jednu a tutéž přímku.</div>
+                                <div class="equation-final">Rovnice má nekonečně mnoho řešení.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="note-warning">
+                        <strong>Pozor:</strong> grafické řešení je při ručním náčrtu pouze přibližné.
+                        Přesnou hodnotu vždy dopočítejte algebraicky.
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-l7" data-type="number" data-answer="3" data-solution="x = 3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete x-souřadnici průsečíku přímek <span class="math-inline">y = 4x - 1</span> a <span class="math-inline">y = x + 8</span>.</p>
+                                <div class="input-row">
+                                    <label for="l7Input">x = </label>
+                                    <input id="l7Input" class="exercise-input" type="text" placeholder="např. 3">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l8" data-type="choice" data-answer="b"
+                            data-solution="správně je B: přímky jsou rovnoběžné, proto nemají průsečík">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik průsečíků mají přímky <span class="math-inline">y = 2x + 5</span> a <span class="math-inline">y = 2x - 1</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l8" value="a">
+                                        <span>Právě jeden průsečík.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l8" value="b">
+                                        <span>Žádný průsečík.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l8" value="c">
+                                        <span>Nekonečně mnoho průsečíků.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l9" data-type="choice" data-answer="c"
+                            data-solution="správně je C: obě strany rovnice jsou stejné, jde o identitu">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 9</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má rovnice <span class="math-inline">5 − 2x = 5 − 2x</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l9" value="a">
+                                        <span>Žádné řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l9" value="b">
+                                        <span>Právě jedno řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l9" value="c">
+                                        <span>Nekonečně mnoho řešení.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#linearni-rovnice-s-absolutni-hodnotou" class="btn-outline btn-prev-link">← Zpět</a>
+                        <a href="#linearni-rovnice-s-parametrem" class="btn-primary btn-next-link">Pokračovat na parametr →</a>
+                    </div>
                 </section>
+
                 <section id="linearni-rovnice-s-parametrem" class="lesson-section">
                     <span class="section-badge">Téma 4</span>
                     <h1>Lineární rovnice s parametrem</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        V rovnici s parametrem hledáme řešení pro neznámou
+                        <span class="math-inline">x</span> podle hodnoty parametru
+                        <span class="math-inline">p</span>, <span class="math-inline">m</span> nebo
+                        <span class="math-inline">k</span>.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="definition-box">
+                        <h4>Nejčastější tvar</h4>
+                        <div class="equation-block">A(p)x = B(p)</div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Podmínka</th>
+                                    <th>Důsledek</th>
+                                    <th>Počet řešení</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">A(p) ≠ 0</span></td>
+                                    <td><span class="math-inline">x = B(p)/A(p)</span></td>
+                                    <td>Právě jedno</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">A(p) = 0</span> a <span class="math-inline">B(p) = 0</span></td>
+                                    <td>identita <span class="math-inline">0 = 0</span></td>
+                                    <td>Nekonečně mnoho</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">A(p) = 0</span> a <span class="math-inline">B(p) ≠ 0</span></td>
+                                    <td>spor <span class="math-inline">0 = c</span></td>
+                                    <td>Žádné</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">(m - 1)x = 2m - 2</span></p>
+                            <div class="equation-stack">
+                                <div>m ≠ 1 ⇒ x = (2m − 2)/(m − 1) = 2</div>
+                                <div>m = 1 ⇒ 0x = 0</div>
+                                <div class="equation-final">Pro m = 1 má rovnice nekonečně mnoho řešení.</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">(k + 3)x = k − 1</span></p>
+                            <div class="equation-stack">
+                                <div>k ≠ −3 ⇒ x = (k − 1)/(k + 3)</div>
+                                <div>k = −3 ⇒ 0x = −4</div>
+                                <div class="equation-final">Pro k = −3 rovnice nemá řešení.</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">(a² − 4)x = a + 2</span></p>
+                            <div class="equation-stack">
+                                <div>a ≠ ±2 ⇒ x = (a + 2)/(a² − 4) = 1/(a − 2)</div>
+                                <div>a = 2 ⇒ 0x = 4 (bez řešení)</div>
+                                <div>a = −2 ⇒ 0x = 0 (nekonečně mnoho řešení)</div>
+                                <div class="equation-final">Je nutné vždy oddělit nulové hodnoty koeficientu.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="note-success">
+                        <strong>Důležité:</strong> nepoužívejte mechanicky dělení výrazem s parametrem.
+                        Nejprve vyšetřete, kdy může být tento výraz nulový.
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-l10" data-type="choice" data-answer="b"
+                            data-solution="správně je B: pro m = 1 dostaneme rovnici 0x = 0">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 10</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro kterou hodnotu <span class="math-inline">m</span> má rovnice <span class="math-inline">(m - 1)x = 2m - 2</span> nekonečně mnoho řešení?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l10" value="a">
+                                        <span><span class="math-inline">m = −1</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l10" value="b">
+                                        <span><span class="math-inline">m = 1</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l10" value="c">
+                                        <span><span class="math-inline">m = 2</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l10" value="d">
+                                        <span>Žádná hodnota <span class="math-inline">m</span>.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l11" data-type="choice" data-answer="a"
+                            data-solution="správně je A: pro k = −3 vyjde 0x = −4, tedy bez řešení">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 11</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro kterou hodnotu <span class="math-inline">k</span> nemá rovnice <span class="math-inline">(k + 3)x = k - 1</span> řešení?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="l11" value="a">
+                                        <span><span class="math-inline">k = −3</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l11" value="b">
+                                        <span><span class="math-inline">k = 0</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l11" value="c">
+                                        <span><span class="math-inline">k = 1</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="l11" value="d">
+                                        <span><span class="math-inline">k = 3</span></span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-l12" data-type="number" data-answer="4" data-solution="x = 4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 12</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Dosadíme <span class="math-inline">p = 5</span> do rovnice <span class="math-inline">(p - 2)x = p + 7</span>. Určete <span class="math-inline">x</span>.</p>
+                                <div class="input-row">
+                                    <label for="l12Input">x = </label>
+                                    <input id="l12Input" class="exercise-input" type="text" placeholder="např. 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola splněna</h2>
+                        <p>Vyřešeno správně: <strong id="finalScore">0 / 12</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="#graficke-reseni-linearnich-rovnic" class="btn-outline btn-prev-link">← Zpět</a>
+                        <a href="../../index.html" class="btn-primary">Dokončit kapitolu</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
     <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>

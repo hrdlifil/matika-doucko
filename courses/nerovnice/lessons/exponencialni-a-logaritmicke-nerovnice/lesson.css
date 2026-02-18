@@ -1,0 +1,55 @@
+@import url("../../lesson-shell.css");
+
+.lesson-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.lead {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.placeholder-card {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.placeholder-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.65rem;
+}
+
+.placeholder-list {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: var(--text-secondary);
+    display: grid;
+    gap: 0.35rem;
+}
+
+.nav-buttons {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.nav-spacer {
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+    .lesson-section h1 {
+        font-size: 1.55rem;
+    }
+
+    .nav-buttons {
+        flex-wrap: wrap;
+    }
+}

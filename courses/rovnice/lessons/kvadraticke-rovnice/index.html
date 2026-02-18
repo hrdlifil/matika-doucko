@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kvadratické rovnice - strukturovaná lekce kurzu Rovnice.">
+    <meta name="description"
+        content="Kvadratické rovnice - interaktivní lekce: řešení kvadratických rovnic, odvození diskriminantu a rovnice s absolutní hodnotou.">
     <title>Kvadratické rovnice – Rovnice</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -44,51 +45,695 @@
                         <span class="sidebar-icon">1</span>
                         Kvadratické rovnice
                     </a>
-                    <a href="#odvozeni-vzorce-pro-diskriminant" class="sidebar-link" data-section="odvozeni-vzorce-pro-diskriminant">
+                    <a href="#odvozeni-vzorce-pro-diskriminant" class="sidebar-link"
+                        data-section="odvozeni-vzorce-pro-diskriminant">
                         <span class="sidebar-icon">2</span>
                         Odvození vzorce pro diskriminant
                     </a>
-                    <a href="#kvadraticke-rovnice-s-absolutni-hodnotou" class="sidebar-link" data-section="kvadraticke-rovnice-s-absolutni-hodnotou">
+                    <a href="#kvadraticke-rovnice-s-absolutni-hodnotou" class="sidebar-link"
+                        data-section="kvadraticke-rovnice-s-absolutni-hodnotou">
                         <span class="sidebar-icon">3</span>
                         Kvadratické rovnice s absolutní hodnotou
                     </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 34%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh vyřešeno</div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
                 <section id="kvadraticke-rovnice" class="lesson-section active">
-                    <span class="section-badge">Téma 1</span>
+                    <div class="section-badge">Téma 1</div>
                     <h1>Kvadratické rovnice</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Kvadratická rovnice je rovnice druhého stupně v jedné neznámé.
+                        Po úpravě má tvar <span class="math-inline">ax² + bx + c = 0</span> s podmínkou
+                        <span class="math-inline">a ≠ 0</span>. V této části projdeme přesný postup řešení,
+                        interpretaci diskriminantu i kontrolu výsledků.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Kdy je rovnice kvadratická?</h4>
+                            <p>
+                                Rozhoduje nejvyšší mocnina neznámé po úpravě na nulový tvar.
+                                Jakmile je nejvyšší mocnina <span class="math-inline">x²</span> a její koeficient je nenulový,
+                                jde o kvadratickou rovnici.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Základní tvar a vzorec</h4>
+                        <div class="equation-large">ax² + bx + c = 0, a ≠ 0</div>
+                        <div class="equation-large">x = (−b ± √(b² − 4ac)) / (2a)</div>
+                        <p class="formula-note">
+                            Výraz <span class="math-inline">D = b² − 4ac</span> nazýváme diskriminant.
+                            Jeho znaménko určuje počet reálných kořenů.
+                        </p>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Hodnota diskriminantu</th>
+                                    <th>Počet reálných kořenů</th>
+                                    <th>Tvar řešení</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">D &gt; 0</span></td>
+                                    <td>Dva různé</td>
+                                    <td><span class="math-inline">x₁, x₂ ∈ ℝ</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">D = 0</span></td>
+                                    <td>Jeden dvojnásobný</td>
+                                    <td><span class="math-inline">x = −b / (2a)</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">D &lt; 0</span></td>
+                                    <td>Žádný reálný</td>
+                                    <td>V reálných číslech bez řešení</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Postup řešení</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Upravte rovnici na tvar <span class="math-inline">ax² + bx + c = 0</span>.</span>
+                            <span class="step-text">Zkontrolujte podmínku <span class="math-inline">a ≠ 0</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Spočítejte diskriminant <span class="math-inline">D = b² − 4ac</span>.</span>
+                            <span class="step-text">Už zde víte, kolik reálných kořenů čekat.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Dosadíte do vzorce pro kořeny.</span>
+                            <span class="step-text">Při <span class="math-inline">D = 0</span> vyjde jeden dvojnásobný kořen.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Proveďte zkoušku dosazením.</span>
+                            <span class="step-text">Ověříte tím, že kořeny skutečně nulují levou stranu.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">x² − 5x + 6 = 0</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">D = 25 − 24 = 1</span></div>
+                                <div><span class="math-inline">x = (5 ± 1) / 2</span></div>
+                                <div class="equation-final">K = {2, 3}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">2x² + 3x − 2 = 0</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">D = 9 + 16 = 25</span></div>
+                                <div><span class="math-inline">x = (−3 ± 5) / 4</span></div>
+                                <div class="equation-final">K = {−2, 1/2}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">3x² − 12x + 12 = 0</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">D = 144 − 144 = 0</span></div>
+                                <div><span class="math-inline">x = 12 / 6 = 2</span></div>
+                                <div class="equation-final">K = {2} (dvojnásobný kořen)</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: koeficienty, kořeny a parabola</h3>
+                        <p>Měňte koeficienty a sledujte, jak se mění graf, diskriminant i řešení rovnice.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadraticCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Tažením posuvníků měníte rovnici v reálném čase</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Koeficienty rovnice</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="quadAVal">1</span></label>
+                                        <input type="range" id="quadA" min="-4" max="4" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="quadBVal">-5</span></label>
+                                        <input type="range" id="quadB" min="-8" max="8" step="0.5" value="-5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="quadCVal">6</span></label>
+                                        <input type="range" id="quadC" min="-10" max="10" step="0.5" value="6">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Aktuální rovnice</h4>
+                                    <div id="quadEquation" class="equation-inline">x² − 5x + 6 = 0</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výpočty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Diskriminant D</span>
+                                            <span id="quadDiscriminant" class="calc-value">1</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kořeny</span>
+                                            <span id="quadRoots" class="calc-value">{2, 3}</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Vrchol paraboly</span>
+                                            <span id="quadVertex" class="calc-value">V(2.5, -0.25)</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Interpretace</span>
+                                            <span id="quadInterpretation" class="calc-value highlight">2 reálné kořeny</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-q1" data-type="set" data-answer="3,4" data-solution="K = {3, 4}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">x² − 7x + 12 = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q1Input">K = </label>
+                                    <input id="q1Input" class="exercise-input" type="text" placeholder="např. 3, 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q2" data-type="set" data-answer="-3/2,1" data-solution="K = {−3/2, 1}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">2x² + x − 3 = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q2Input">K = </label>
+                                    <input id="q2Input" class="exercise-input" type="text" placeholder="např. -3/2, 1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q3" data-type="choice" data-answer="c"
+                            data-solution="správně je C: diskriminant je záporný, rovnice nemá reálné kořeny">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik reálných kořenů má rovnice <span class="math-inline">3x² + 2x + 5 = 0</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="a">
+                                        <span>Dva různé reálné kořeny.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="b">
+                                        <span>Jeden dvojnásobný reálný kořen.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q3" value="c">
+                                        <span>Žádný reálný kořen.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q4" data-type="number" data-answer="3" data-solution="x = 3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete dvojnásobný kořen rovnice <span class="math-inline">x² − 6x + 9 = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q4Input">x = </label>
+                                    <input id="q4Input" class="exercise-input" type="text" placeholder="např. 3">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="odvozeni-vzorce-pro-diskriminant">Pokračovat na odvození diskriminantu →</button>
+                    </div>
                 </section>
+
                 <section id="odvozeni-vzorce-pro-diskriminant" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Odvození vzorce pro diskriminant</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Vzorec pro kořeny kvadratické rovnice nevzniká „z ničeho“. Jde o přímý důsledek
+                        doplnění na čtverec. Tímto postupem se přirozeně objeví člen
+                        <span class="math-inline">b² − 4ac</span>, tedy diskriminant.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="definition-box">
+                        <h4>Odvození krok po kroku (obecně)</h4>
+                        <div class="derivation-steps static-derivation">
+                            <div class="equation-line"><span class="math-inline">ax² + bx + c = 0</span></div>
+                            <div class="equation-line"><span class="math-inline">x² + (b/a)x + (c/a) = 0</span></div>
+                            <div class="equation-line"><span class="math-inline">x² + (b/a)x = −c/a</span></div>
+                            <div class="equation-line"><span class="math-inline">x² + (b/a)x + (b/2a)² = −c/a + (b/2a)²</span></div>
+                            <div class="equation-line"><span class="math-inline">(x + b/2a)² = (b² − 4ac) / (4a²)</span></div>
+                            <div class="equation-line equation-final"><span class="math-inline">x = (−b ± √(b² − 4ac)) / (2a)</span></div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Proč je diskriminant důležitý?</h4>
+                            <p>
+                                Diskriminant je výraz pod odmocninou. Pokud je záporný, v reálných číslech
+                                odmocninu nelze vyčíslit a rovnice nemá reálné řešení.
+                                Pokud je nulový, odmocnina je nulová a oba kořeny splývají.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní odvození na konkrétní rovnici</h3>
+                        <p>Vyberte koeficienty a sledujte jednotlivé kroky odvození i výsledný diskriminant.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="derivation-board">
+                                <div class="derivation-steps" id="derivationStepsLive">
+                                    <div class="equation-line" id="derStep1"></div>
+                                    <div class="equation-line" id="derStep2"></div>
+                                    <div class="equation-line" id="derStep3"></div>
+                                    <div class="equation-line" id="derStep4"></div>
+                                    <div class="equation-line" id="derStep5"></div>
+                                    <div class="equation-line equation-final" id="derStep6"></div>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Koeficienty</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="derAVal">2</span></label>
+                                        <input type="range" id="derA" min="-4" max="4" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="derBVal">3</span></label>
+                                        <input type="range" id="derB" min="-10" max="10" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="derCVal">-2</span></label>
+                                        <input type="range" id="derC" min="-10" max="10" step="0.5" value="-2">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Diskriminant D</span>
+                                            <span id="derDiscriminant" class="calc-value">25</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Počet reálných kořenů</span>
+                                            <span id="derClassification" class="calc-value highlight">2</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel challenge-card">
+                                    <h4>Mini kontrola: doplnění na čtverec</h4>
+                                    <p>
+                                        Pro rovnici <span class="math-inline">x² + px + q = 0</span> přičítáme na obě strany
+                                        hodnotu <span class="math-inline">(p/2)²</span>.
+                                    </p>
+                                    <div class="challenge-row">
+                                        <label for="derChallengeInput">(p/2)² pro p = <strong id="derChallengeP">6</strong></label>
+                                        <input id="derChallengeInput" class="exercise-input" type="text" placeholder="např. 9">
+                                    </div>
+                                    <div class="challenge-actions">
+                                        <button class="btn-primary btn-small" id="derChallengeBtn">Zkontrolovat</button>
+                                        <button class="btn-outline btn-small" id="derChallengeNew">Nový příklad</button>
+                                    </div>
+                                    <div id="derChallengeFeedback" class="exercise-feedback"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-q5" data-type="number" data-answer="0" data-solution="D = 0">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte diskriminant rovnice <span class="math-inline">4x² − 4x + 1 = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q5Input">D = </label>
+                                    <input id="q5Input" class="exercise-input" type="text" placeholder="např. 0">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q6" data-type="choice" data-answer="c"
+                            data-solution="správně je C: při D &lt; 0 nemá kvadratická rovnice reálné kořeny">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Co platí pro kvadratickou rovnici, když <span class="math-inline">D &lt; 0</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q6" value="a">
+                                        <span>Má vždy dva různé reálné kořeny.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q6" value="b">
+                                        <span>Má právě jeden dvojnásobný kořen.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q6" value="c">
+                                        <span>Nemá reálný kořen.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q7" data-type="number" data-answer="4" data-solution="c = 4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">c</span>, aby rovnice <span class="math-inline">x² − 4x + c = 0</span>
+                                    měla právě jeden reálný kořen.</p>
+                                <div class="input-row">
+                                    <label for="q7Input">c = </label>
+                                    <input id="q7Input" class="exercise-input" type="text" placeholder="např. 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q8" data-type="choice" data-answer="b"
+                            data-solution="správně je B: x = (−b ± √(b² − 4ac)) / (2a)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Který vzorec je správný obecný vzorec pro kořeny kvadratické rovnice?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q8" value="a">
+                                        <span><span class="math-inline">x = (−b ± √(b² + 4ac)) / (2a)</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q8" value="b">
+                                        <span><span class="math-inline">x = (−b ± √(b² − 4ac)) / (2a)</span></span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q8" value="c">
+                                        <span><span class="math-inline">x = (b ± √(b² − 4ac)) / a</span></span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="kvadraticke-rovnice">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="kvadraticke-rovnice-s-absolutni-hodnotou">Pokračovat na absolutní hodnotu →</button>
+                    </div>
                 </section>
+
                 <section id="kvadraticke-rovnice-s-absolutni-hodnotou" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Kvadratické rovnice s absolutní hodnotou</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        U rovnic s absolutní hodnotou nejprve analyzujeme pravou stranu a pak rozkládáme úlohu
+                        na případy. Pro tvar <span class="math-inline">|Q(x)| = k</span> s kvadratickým
+                        výrazem <span class="math-inline">Q(x)</span> se řešení převede na dvojici rovnic
+                        <span class="math-inline">Q(x) = k</span> a <span class="math-inline">Q(x) = −k</span>.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="case-grid">
+                        <article class="case-card">
+                            <h3>Tvar <span class="math-inline">|Q(x)| = k</span></h3>
+                            <p><span class="math-inline">k &lt; 0</span> ⇒ žádné řešení.</p>
+                            <p><span class="math-inline">k = 0</span> ⇒ řešíme <span class="math-inline">Q(x) = 0</span>.</p>
+                            <p><span class="math-inline">k &gt; 0</span> ⇒ řešíme dvě rovnice:
+                                <span class="math-inline">Q(x) = k</span> a <span class="math-inline">Q(x) = −k</span>.
+                            </p>
+                        </article>
+                        <article class="case-card">
+                            <h3>Tvar <span class="math-inline">|Q(x)| = L(x)</span></h3>
+                            <p>Nejprve vyžadujeme podmínku <span class="math-inline">L(x) ≥ 0</span>.</p>
+                            <p>Pak řešíme soustavu případů
+                                <span class="math-inline">Q(x) = L(x)</span> a
+                                <span class="math-inline">Q(x) = −L(x)</span>.
+                            </p>
+                            <p>Všechny kandidáty nakonec vždy ověřte v původní rovnici.</p>
+                        </article>
+                    </div>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">|x² − 5x + 6| = 2</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">x² − 5x + 4 = 0</span> ⇒ <span class="math-inline">x = 1, 4</span></div>
+                                <div><span class="math-inline">x² − 5x + 8 = 0</span> ⇒ <span class="math-inline">D = −7</span></div>
+                                <div class="equation-final">K = {1, 4}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">|x² − 4x + 3| = 3</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">x² − 4x = 0</span> ⇒ <span class="math-inline">x = 0, 4</span></div>
+                                <div><span class="math-inline">x² − 4x + 6 = 0</span> ⇒ <span class="math-inline">D = −8</span></div>
+                                <div class="equation-final">K = {0, 4}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Řešte: <span class="math-inline">|2x² + 2x + 5| = 1</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">2x² + 2x + 5 = 2(x + 1/2)² + 9/2 ≥ 9/2</span></div>
+                                <div>Levá strana je vždy alespoň <span class="math-inline">9/2</span>.</div>
+                                <div class="equation-final">Rovnice nemá řešení.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: <span class="math-inline">|ax² + bx + c| = k</span></h3>
+                        <p>Sledujte dva pomocné kvadratické případy a průsečíky grafů <span class="math-inline">y = |Q(x)|</span> a <span class="math-inline">y = k</span>.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="absoluteCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Modře: y = |Q(x)|, oranžově: y = k</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení rovnice</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="absAVal">1</span></label>
+                                        <input type="range" id="absA" min="-3" max="3" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="absBVal">-5</span></label>
+                                        <input type="range" id="absB" min="-8" max="8" step="0.5" value="-5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="absCVal">6</span></label>
+                                        <input type="range" id="absC" min="-10" max="10" step="0.5" value="6">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>k = <span id="absKVal">2</span></label>
+                                        <input type="range" id="absK" min="0" max="10" step="0.5" value="2">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice</h4>
+                                    <div id="absEquation" class="equation-inline">|x² − 5x + 6| = 2</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Rozklad na případy</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span id="absCase1Eq">x² − 5x + 4 = 0</span>
+                                            <span id="absCase1Roots" class="calc-value">{1, 4}</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span id="absCase2Eq">x² − 5x + 8 = 0</span>
+                                            <span id="absCase2Roots" class="calc-value">∅</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Celkové řešení</span>
+                                            <span id="absAllRoots" class="calc-value highlight">{1, 4}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-q9" data-type="set" data-answer="1,4" data-solution="K = {1, 4}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 9</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">|x² − 5x + 6| = 2</span>.</p>
+                                <div class="input-row">
+                                    <label for="q9Input">K = </label>
+                                    <input id="q9Input" class="exercise-input" type="text" placeholder="např. 1, 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q10" data-type="set" data-answer="-1,1" data-solution="K = {−1, 1}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 10</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">|x² − 1| = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q10Input">K = </label>
+                                    <input id="q10Input" class="exercise-input" type="text" placeholder="např. -1, 1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q11" data-type="choice" data-answer="c"
+                            data-solution="správně je C: výraz x² + 2x + 5 je vždy kladný a minimálně 4, proto rovnost s 1 nenastane">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 11</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má rovnice <span class="math-inline">|x² + 2x + 5| = 1</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="q11" value="a">
+                                        <span>Dvě řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q11" value="b">
+                                        <span>Jedno řešení.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="q11" value="c">
+                                        <span>Žádné řešení.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q12" data-type="set" data-answer="0,4" data-solution="K = {0, 4}">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 12</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici: <span class="math-inline">|x² − 4x + 3| = 3</span>.</p>
+                                <div class="input-row">
+                                    <label for="q12Input">K = </label>
+                                    <input id="q12Input" class="exercise-input" type="text" placeholder="např. 0, 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 12</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="odvozeni-vzorce-pro-diskriminant">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit kapitolu</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
+

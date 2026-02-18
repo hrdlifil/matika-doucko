@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Nerovnice - strukturovaný kurz od základů přes lineární a kvadratické nerovnice až po soustavy nerovnic.">
+    <title>Nerovnice – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Nerovnice</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Nerovnice</h1>
+                    <p class="course-description">
+                        Kurz je připravený jako struktura šesti kapitol od základních pojmů přes lineární a
+                        kvadratické nerovnice až po exponenciální, logaritmické nerovnice a soustavy.
+                        Obsah lekcí je připravený v menu a sekcích pro následné doplnění.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">6 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~6 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">16 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/zaklady-o-nerovnicich/index.html#uvod-do-nerovnic" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="40" y1="135" x2="150" y2="85" stroke="#6366f1" stroke-width="2.6" />
+                            <line x1="40" y1="85" x2="150" y2="135" stroke="#10b981" stroke-width="2.2" stroke-dasharray="5,4" />
+                            <circle cx="40" cy="135" r="4" fill="#6366f1" />
+                            <circle cx="95" cy="110" r="4" fill="#f59e0b" />
+                            <circle cx="150" cy="85" r="4" fill="#10b981" />
+                            <text x="36" y="153" fill="#93c5fd" font-size="10" font-family="Inter">&lt;</text>
+                            <text x="91" y="128" fill="#f59e0b" font-size="10" font-family="Inter">≤</text>
+                            <text x="146" y="103" fill="#10b981" font-size="10" font-family="Inter">≥</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">ax + b &lt; 0</div>
+                        <div class="formula formula-2">|x - 2| ≥ 5</div>
+                        <div class="formula formula-3">x² - 4x + 3 ≤ 0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění výkladu</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Základy o nerovnicích</h3>
+                            <p class="chapter-description">Úvod, ekvivalentní úpravy a převod na vhodné typy nerovnic</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/zaklady-o-nerovnicich/index.html#uvod-do-nerovnic" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvod do nerovnic</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/zaklady-o-nerovnicich/index.html#ekvivalentni-upravy-nerovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Ekvivalentní úpravy nerovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/zaklady-o-nerovnicich/index.html#prevod-na-urcity-typ-nerovnic" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Převod na určitý typ nerovnic</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Lineární nerovnice</h3>
+                            <p class="chapter-description">Lineární nerovnice, více podmínek a absolutní hodnota</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/linearni-nerovnice/index.html#linearni-nerovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární nerovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/linearni-nerovnice/index.html#linearni-nerovnice-s-vice-podminkami" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární nerovnice s více podmínkami</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/linearni-nerovnice/index.html#linearni-nerovnice-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Lineární nerovnice s absolutní hodnotou</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kvadratické nerovnice</h3>
+                            <p class="chapter-description">Kvadratické nerovnice a kvadratické nerovnice s absolutní hodnotou</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~30 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kvadraticke-nerovnice/index.html#kvadraticke-nerovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratické nerovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kvadraticke-nerovnice/index.html#kvadraticke-nerovnice-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kvadratické nerovnice s absolutní hodnotou</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Další typy nerovnic</h3>
+                            <p class="chapter-description">Součinový tvar, podílový tvar, vyšší mocniny a absolutní hodnota</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/dalsi-typy-nerovnic/index.html#nerovnice-v-soucinovem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Nerovnice v součinovém tvaru</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/dalsi-typy-nerovnic/index.html#nerovnice-v-podilovem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Nerovnice v podílovém tvaru</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/dalsi-typy-nerovnic/index.html#nerovnice-vyssich-mocnin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Nerovnice vyšších mocnin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/dalsi-typy-nerovnic/index.html#nerovnice-s-absolutni-hodnotou" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Nerovnice s absolutní hodnotou</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Exponenciální a logaritmické nerovnice</h3>
+                            <p class="chapter-description">Exponenciální a logaritmické nerovnice</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~30 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/exponencialni-a-logaritmicke-nerovnice/index.html#exponencialni-nerovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Exponenciální nerovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/exponencialni-a-logaritmicke-nerovnice/index.html#logaritmicke-nerovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Logaritmické nerovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="6">
+                    <div class="chapter-header">
+                        <div class="chapter-number">6</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Soustavy nerovnic</h3>
+                            <p class="chapter-description">Soustavy nerovnic jedné proměnné i více proměnných</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~30 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/soustavy-nerovnic/index.html#soustavy-nerovnic-jedne-promenne" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Soustavy nerovnic jedné proměnné</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/soustavy-nerovnic/index.html#soustavy-nerovnic-vice-promennych" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Soustavy nerovnic více proměnných</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se v kurzu pokryje</h2>
+                <p class="section-subtitle">Přehled témat připravených v osnově</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">&lt; &gt;</div>
+                    <h3>Základy nerovnic</h3>
+                    <p>Práce s významem nerovností a základními pravidly úprav.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">ax+b</div>
+                    <h3>Lineární typy</h3>
+                    <p>Lineární nerovnice včetně více podmínek a absolutní hodnoty.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">x²</div>
+                    <h3>Kvadratické nerovnice</h3>
+                    <p>Řešení kvadratických nerovnic včetně kombinací s absolutní hodnotou.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">xⁿ</div>
+                    <h3>Další tvary</h3>
+                    <p>Součinový a podílový tvar, vyšší mocniny a další varianty.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">log</div>
+                    <h3>Exponenciální a logaritmické</h3>
+                    <p>Nerovnice s exponenciálními a logaritmickými výrazy.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⎧</div>
+                    <h3>Soustavy nerovnic</h3>
+                    <p>Soustavy v jedné proměnné i ve více proměnných.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Struktura kurzu Nerovnice je připravená. Nyní lze postupně doplnit obsah jednotlivých témat.</p>
+                <a href="lessons/zaklady-o-nerovnicich/index.html#uvod-do-nerovnic" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>
+

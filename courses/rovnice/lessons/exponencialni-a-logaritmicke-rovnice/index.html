@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Exponenciální a logaritmické rovnice - strukturovaná lekce kurzu Rovnice.">
+    <meta name="description"
+        content="Exponenciální a logaritmické rovnice - interaktivní lekce: metody řešení, podmínky, ukázky a procvičování.">
     <title>Exponenciální a logaritmické rovnice – Rovnice</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -49,33 +50,617 @@
                         Logaritmické rovnice
                     </a>
                 </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v kapitole</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 50%"></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span>
+                        úloh vyřešeno</div>
+                </div>
+
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
                 <section id="exponencialni-rovnice" class="lesson-section active">
-                    <span class="section-badge">Téma 1</span>
+                    <div class="section-badge">Téma 1</div>
                     <h1>Exponenciální rovnice</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Exponenciální rovnice obsahují neznámou v exponentu, například
+                        <span class="math-inline">2<sup>x+1</sup> = 7</span>.
+                        Základ exponenciální funkce musí splňovat <span class="math-inline">a &gt; 0, a ≠ 1</span>.
+                        Typická výhoda: funkce <span class="math-inline">a<sup>x</sup></span> je prostá,
+                        takže po převedení na stejný základ můžeme porovnat exponenty.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Nejdůležitější princip</h4>
+                            <p>
+                                Pro <span class="math-inline">a &gt; 0, a ≠ 1</span> platí:
+                                <span class="math-inline">a<sup>u</sup> = a<sup>v</sup> ⇔ u = v</span>.
+                                Pokud nelze přepsat obě strany na stejný základ, používáme logaritmování.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Typ úlohy</th>
+                                    <th>Metoda</th>
+                                    <th>Příklad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stejný základ</td>
+                                    <td>Porovnat exponenty</td>
+                                    <td><span class="math-inline">3<sup>2x-1</sup> = 3<sup>5</sup></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Různé základy, ale převoditelné</td>
+                                    <td>Přepsat na společný základ</td>
+                                    <td><span class="math-inline">9<sup>x</sup> = 3<sup>x+2</sup></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Kvadratický tvar v <span class="math-inline">a<sup>x</sup></span></td>
+                                    <td>Substituce <span class="math-inline">t = a<sup>x</sup>, t &gt; 0</span></td>
+                                    <td><span class="math-inline">5<sup>2x</sup> - 6·5<sup>x</sup> + 5 = 0</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Nepřevoditelný tvar</td>
+                                    <td>Logaritmování obou stran</td>
+                                    <td><span class="math-inline">2<sup>x</sup> = 7</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Strategie řešení</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Zkontrolujte definiční podmínky.</span>
+                            <span class="step-text">Exponenciální výraz je vždy kladný, tedy rovnice <span class="math-inline">a<sup>f(x)</sup> = c</span> nemá řešení pro <span class="math-inline">c ≤ 0</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Pokuste se sjednotit základ.</span>
+                            <span class="step-text">Přepis typu <span class="math-inline">9 = 3<sup>2</sup></span> často okamžitě zjednoduší rovnici.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Je-li potřeba, použijte substituci.</span>
+                            <span class="step-text">U tvarů <span class="math-inline">a<sup>2x</sup> + pa<sup>x</sup> + q = 0</span> položte <span class="math-inline">t = a<sup>x</sup></span> a nezapomeňte na podmínku <span class="math-inline">t &gt; 0</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Pokud nelze jinak, logaritmujte.</span>
+                            <span class="step-text">Například <span class="math-inline">a<sup>x</sup> = b</span> vede na <span class="math-inline">x = ln b / ln a</span>, pokud <span class="math-inline">b &gt; 0</span>.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A: stejný základ</h3>
+                            <p class="example-task"><span class="math-inline">2<sup>x+1</sup> = 32</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">32 = 2<sup>5</sup></span></div>
+                                <div><span class="math-inline">2<sup>x+1</sup> = 2<sup>5</sup> ⇒ x + 1 = 5</span></div>
+                                <div class="equation-final">x = 4</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B: převod základu</h3>
+                            <p class="example-task"><span class="math-inline">9<sup>x</sup> = 3<sup>x+2</sup></span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">9<sup>x</sup> = (3<sup>2</sup>)<sup>x</sup> = 3<sup>2x</sup></span></div>
+                                <div><span class="math-inline">3<sup>2x</sup> = 3<sup>x+2</sup> ⇒ 2x = x + 2</span></div>
+                                <div class="equation-final">x = 2</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C: substituce</h3>
+                            <p class="example-task"><span class="math-inline">5<sup>2x</sup> - 6·5<sup>x</sup> + 5 = 0</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">t = 5<sup>x</sup>, t &gt; 0</span></div>
+                                <div><span class="math-inline">t<sup>2</sup> - 6t + 5 = 0 ⇒ (t - 1)(t - 5) = 0</span></div>
+                                <div><span class="math-inline">t = 1 nebo t = 5</span></div>
+                                <div class="equation-final">x = 0 nebo x = 1</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad D: logaritmování</h3>
+                            <p class="example-task"><span class="math-inline">2<sup>x</sup> = 7</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">ln(2<sup>x</sup>) = ln 7</span></div>
+                                <div><span class="math-inline">x ln 2 = ln 7</span></div>
+                                <div class="equation-final"><span class="math-inline">x = ln 7 / ln 2 ≈ 2,807</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: exponenciální rovnice <span class="math-inline">a<sup>mx+n</sup> = k</span></h3>
+                        <p>
+                            Měňte parametry a sledujte průnik grafů <span class="math-inline">y = a<sup>mx+n</sup></span> a
+                            <span class="math-inline">y = k</span>. Uvidíte, kdy je řešení jediné, žádné, nebo nekonečně mnoho.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="expCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Modře: y = a^(mx+n), zeleně: y = k, červeně: řešení</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry</h4>
+                                    <div class="control-group">
+                                        <label for="expBase">Základ a</label>
+                                        <select id="expBase" class="exercise-input select-input">
+                                            <option value="0.5">0,5</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>m = <span id="expMVal">1</span></label>
+                                        <input type="range" id="expM" min="-3" max="3" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>n = <span id="expNVal">0</span></label>
+                                        <input type="range" id="expN" min="-4" max="4" step="0.5" value="0">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>k = <span id="expKVal">8</span></label>
+                                        <input type="range" id="expK" min="-6" max="18" step="0.5" value="8">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice</h4>
+                                    <div id="expEquation" class="equation-inline">2^(x) = 8</div>
+                                    <div id="expCondition" class="equation-note">Podmínka: k &gt; 0</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Monotónnost</span>
+                                            <span id="expTrend" class="calc-value">rostoucí</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řešení</span>
+                                            <span id="expSolution" class="calc-value">x = 3</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kontrola</span>
+                                            <span id="expCheck" class="calc-value">2^3 = 8</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Závěr</span>
+                                            <span id="expSummary" class="calc-value highlight">1 reálné řešení</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-q1" data-type="choice" data-answer="b"
+                            data-solution="správně je B: 2^(x+1) = 32 = 2^5, tedy x + 1 = 5 a x = 4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">2<sup>x+1</sup> = 32</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q1" value="a"><span>x = 3</span></label>
+                                    <label class="option"><input type="radio" name="q1" value="b"><span>x = 4</span></label>
+                                    <label class="option"><input type="radio" name="q1" value="c"><span>x = 5</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q2" data-type="number" data-answer="2"
+                            data-solution="x = 2, protože 3^(2x-1) = 27 = 3^3 ⇒ 2x - 1 = 3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">3<sup>2x-1</sup> = 27</span>.</p>
+                                <div class="input-row">
+                                    <label for="q2Input">x = </label>
+                                    <input id="q2Input" class="exercise-input" type="text" placeholder="např. 2">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q3" data-type="set" data-answer="0,1"
+                            data-solution="K = {0, 1}; po substituci t = 5^x vyjde (t - 1)(t - 5) = 0">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">5<sup>2x</sup> - 6·5<sup>x</sup> + 5 = 0</span>.</p>
+                                <div class="input-row">
+                                    <label for="q3Input">K = </label>
+                                    <input id="q3Input" class="exercise-input" type="text" placeholder="např. 0, 1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q4" data-type="choice" data-answer="c"
+                            data-solution="správně je C: exponenciální výraz je vždy kladný, takže 4^(x-2) = -3 nemá řešení v ℝ">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik reálných řešení má rovnice <span class="math-inline">4<sup>x-2</sup> = -3</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q4" value="a"><span>Právě jedno</span></label>
+                                    <label class="option"><input type="radio" name="q4" value="b"><span>Právě dvě</span></label>
+                                    <label class="option"><input type="radio" name="q4" value="c"><span>Žádné</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q5" data-type="number" data-answer="2.807354922"
+                            data-tolerance="0.005"
+                            data-solution="x = log_2(7) = ln 7 / ln 2 ≈ 2,807">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">2<sup>x</sup> = 7</span> (zaokrouhlete na 3 desetinná místa).</p>
+                                <div class="input-row">
+                                    <label for="q5Input">x ≈ </label>
+                                    <input id="q5Input" class="exercise-input" type="text" placeholder="např. 2,807">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q6" data-type="number" data-answer="2"
+                            data-solution="x = 2, protože 9^x = (3^2)^x = 3^(2x) a tedy 2x = x + 2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">9<sup>x</sup> = 3<sup>x+2</sup></span>.</p>
+                                <div class="input-row">
+                                    <label for="q6Input">x = </label>
+                                    <input id="q6Input" class="exercise-input" type="text" placeholder="např. 2">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="logaritmicke-rovnice">Pokračovat na logaritmické rovnice →</button>
+                    </div>
                 </section>
+
                 <section id="logaritmicke-rovnice" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Logaritmické rovnice</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Logaritmické rovnice obsahují neznámou v argumentu logaritmu,
+                        například <span class="math-inline">log₂(x - 1) = 5</span>.
+                        Nejdůležitější je správně hlídat podmínky:
+                        základ <span class="math-inline">a &gt; 0, a ≠ 1</span> a argument každého logaritmu kladný.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="definition-box">
+                        <h4>Definiční podmínky</h4>
+                        <div class="equation-large">logₐ(u) je definován právě tehdy, když a &gt; 0, a ≠ 1 a u &gt; 0</div>
+                        <p>
+                            U rovnic s více logaritmy je nutné splnit kladnost <strong>každého</strong> argumentu.
+                            Mnoho formálně získaných kořenů odpadne právě při kontrole podmínek.
+                        </p>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Typ úlohy</th>
+                                    <th>Metoda</th>
+                                    <th>Poznámka</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">logₐ f(x) = logₐ g(x)</span></td>
+                                    <td>Položit <span class="math-inline">f(x) = g(x)</span></td>
+                                    <td>Navíc musí platit <span class="math-inline">f(x) &gt; 0, g(x) &gt; 0</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Součet logaritmů</td>
+                                    <td><span class="math-inline">logₐ u + logₐ v = logₐ(uv)</span></td>
+                                    <td>Jen když <span class="math-inline">u &gt; 0, v &gt; 0</span></td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">logₐ f(x) = c</span></td>
+                                    <td>Převod na exponenciální tvar <span class="math-inline">f(x) = a^c</span></td>
+                                    <td>Poté vyřešit běžnou rovnici v <span class="math-inline">x</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Smíšený tvar</td>
+                                    <td>Nejprve upravit logaritmy, potom řešit</td>
+                                    <td>Na konci vždy zkouška v původní rovnici</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A: základní převod</h3>
+                            <p class="example-task"><span class="math-inline">log₂(x - 1) = 3</span></p>
+                            <div class="equation-stack">
+                                <div>Podmínka: <span class="math-inline">x - 1 &gt; 0 ⇒ x &gt; 1</span></div>
+                                <div><span class="math-inline">x - 1 = 2<sup>3</sup> = 8</span></div>
+                                <div class="equation-final">x = 9</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B: součet logaritmů</h3>
+                            <p class="example-task"><span class="math-inline">log₃(x + 1) + log₃(x - 2) = 2</span></p>
+                            <div class="equation-stack">
+                                <div>Podmínky: <span class="math-inline">x &gt; 2</span></div>
+                                <div><span class="math-inline">log₃((x + 1)(x - 2)) = 2</span></div>
+                                <div><span class="math-inline">(x + 1)(x - 2) = 9 ⇒ x<sup>2</sup> - x - 11 = 0</span></div>
+                                <div class="equation-final"><span class="math-inline">x = (1 + 3√5) / 2 ≈ 3,854</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C: dvě řešení</h3>
+                            <p class="example-task"><span class="math-inline">log₅(x<sup>2</sup> - 4) = 1</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">x<sup>2</sup> - 4 = 5</span></div>
+                                <div><span class="math-inline">x<sup>2</sup> = 9 ⇒ x = ±3</span></div>
+                                <div>Kontrola podmínky: <span class="math-inline">x<sup>2</sup> - 4 &gt; 0</span> platí pro obě hodnoty.</div>
+                                <div class="equation-final">K = {−3, 3}</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad D: rovnost logaritmů</h3>
+                            <p class="example-task"><span class="math-inline">ln(x - 1) = ln(2x - 5)</span></p>
+                            <div class="equation-stack">
+                                <div>Podmínky: <span class="math-inline">x - 1 &gt; 0</span> a <span class="math-inline">2x - 5 &gt; 0 ⇒ x &gt; 2,5</span></div>
+                                <div><span class="math-inline">x - 1 = 2x - 5 ⇒ x = 4</span></div>
+                                <div class="equation-final">x = 4 (vyhovuje podmínkám)</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř: logaritmická rovnice <span class="math-inline">logₐ(x - h) = c</span></h3>
+                        <p>
+                            Upravujte parametry a sledujte souvislost mezi rovnicí, definičním oborem
+                            <span class="math-inline">x &gt; h</span> a průnikem grafů <span class="math-inline">y = logₐ(x-h)</span> a <span class="math-inline">y = c</span>.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="logCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Červeně: asymptota x = h, modře: logaritmus, zeleně: y = c</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry</h4>
+                                    <div class="control-group">
+                                        <label for="logBase">Základ a</label>
+                                        <select id="logBase" class="exercise-input select-input">
+                                            <option value="0.5">0,5</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>h = <span id="logHVal">1</span></label>
+                                        <input type="range" id="logH" min="-4" max="4" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="logCVal">2</span></label>
+                                        <input type="range" id="logC" min="-2" max="2" step="0.25" value="2">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice a podmínka</h4>
+                                    <div id="logEquation" class="equation-inline">log_2(x - 1) = 2</div>
+                                    <div id="logDomain" class="equation-note">Podmínka: x &gt; 1</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Monotónnost</span>
+                                            <span id="logTrend" class="calc-value">rostoucí</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Řešení</span>
+                                            <span id="logSolution" class="calc-value">x = 5</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kontrola</span>
+                                            <span id="logCheck" class="calc-value">log_2(4) = 2</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Závěr</span>
+                                            <span id="logSummary" class="calc-value highlight">1 reálné řešení</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-q7" data-type="number" data-answer="33"
+                            data-solution="x = 33, protože log_2(x-1)=5 ⇒ x-1=2^5=32">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">log₂(x - 1) = 5</span>.</p>
+                                <div class="input-row">
+                                    <label for="q7Input">x = </label>
+                                    <input id="q7Input" class="exercise-input" type="text" placeholder="např. 33">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q8" data-type="choice" data-answer="a"
+                            data-solution="správně je A: argument 2x - 7 musí být kladný, tedy x &gt; 7/2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro jaké <span class="math-inline">x</span> je definován výraz <span class="math-inline">log₃(2x - 7)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q8" value="a"><span><span class="math-inline">x &gt; 7/2</span></span></label>
+                                    <label class="option"><input type="radio" name="q8" value="b"><span><span class="math-inline">x ≥ 7/2</span></span></label>
+                                    <label class="option"><input type="radio" name="q8" value="c"><span><span class="math-inline">x &lt; 7/2</span></span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q9" data-type="set" data-answer="-3,3"
+                            data-solution="K = {−3, 3}; po převodu vyjde x^2 - 4 = 5 ⇒ x^2 = 9">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 9</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">log₅(x<sup>2</sup> - 4) = 1</span>.</p>
+                                <div class="input-row">
+                                    <label for="q9Input">K = </label>
+                                    <input id="q9Input" class="exercise-input" type="text" placeholder="např. -3, 3">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q10" data-type="number" data-answer="4"
+                            data-solution="x = 4; z rovnosti ln(x-1) = ln(2x-5) plyne x - 1 = 2x - 5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 10</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">ln(x - 1) = ln(2x - 5)</span>.</p>
+                                <div class="input-row">
+                                    <label for="q10Input">x = </label>
+                                    <input id="q10Input" class="exercise-input" type="text" placeholder="např. 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q11" data-type="number" data-answer="2.464101615"
+                            data-tolerance="0.005"
+                            data-solution="x = -1 + 2√3 ≈ 2,464; druhý kořen nevyhoví podmínce x &gt; 1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 11</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici <span class="math-inline">log₂(x+3) + log₂(x-1) = 3</span> (zaokrouhlete na 3 desetinná místa).</p>
+                                <div class="input-row">
+                                    <label for="q11Input">x ≈ </label>
+                                    <input id="q11Input" class="exercise-input" type="text" placeholder="např. 2,464">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-q12" data-type="choice" data-answer="c"
+                            data-solution="správně je C: podmínky x - 4 &gt; 0 a 1 - x &gt; 0 nelze splnit současně">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 12</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik reálných řešení má rovnice <span class="math-inline">log(x - 4) = log(1 - x)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q12" value="a"><span>Právě jedno: x = 2,5</span></label>
+                                    <label class="option"><input type="radio" name="q12" value="b"><span>Právě jedno: x = 4,5</span></label>
+                                    <label class="option"><input type="radio" name="q12" value="c"><span>Žádné reálné řešení</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 12</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="exponencialni-rovnice">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit kapitolu</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>

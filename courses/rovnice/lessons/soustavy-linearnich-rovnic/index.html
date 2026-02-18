@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Soustavy lineárních rovnic - strukturovaná lekce kurzu Rovnice.">
+    <meta name="description"
+        content="Soustavy lineárních rovnic - interaktivní kapitola: dosazovací, sčítací a srovnávací metoda krok za krokem.">
     <title>Soustavy lineárních rovnic – Rovnice</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -39,56 +40,779 @@
                     <h3>Kapitola 8</h3>
                     <p>Soustavy lineárních rovnic</p>
                 </div>
+
                 <nav class="sidebar-nav">
-                    <a href="#soustavy-rovnic-a-dosazovaci-metoda" class="sidebar-link active" data-section="soustavy-rovnic-a-dosazovaci-metoda">
+                    <a href="#soustavy-rovnic-a-dosazovaci-metoda" class="sidebar-link active"
+                        data-section="soustavy-rovnic-a-dosazovaci-metoda">
                         <span class="sidebar-icon">1</span>
                         Soustavy rovnic a dosazovací metoda
                     </a>
-                    <a href="#soustavy-rovnic-a-scitaci-metoda" class="sidebar-link" data-section="soustavy-rovnic-a-scitaci-metoda">
+                    <a href="#soustavy-rovnic-a-scitaci-metoda" class="sidebar-link"
+                        data-section="soustavy-rovnic-a-scitaci-metoda">
                         <span class="sidebar-icon">2</span>
                         Soustavy rovnic a sčítací metoda
                     </a>
-                    <a href="#soustavy-rovnic-a-srovnavaci-metoda" class="sidebar-link" data-section="soustavy-rovnic-a-srovnavaci-metoda">
+                    <a href="#soustavy-rovnic-a-srovnavaci-metoda" class="sidebar-link"
+                        data-section="soustavy-rovnic-a-srovnavaci-metoda">
                         <span class="sidebar-icon">3</span>
                         Soustavy rovnic a srovnávací metoda
                     </a>
                 </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v kapitole</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 34%"></div>
+                    </div>
+                </div>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh vyřešeno</div>
+                </div>
+
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
                 <section id="soustavy-rovnic-a-dosazovaci-metoda" class="lesson-section active">
-                    <span class="section-badge">Téma 1</span>
+                    <div class="section-badge">Téma 1</div>
                     <h1>Soustavy rovnic a dosazovací metoda</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Dosazovací metoda je ideální ve chvíli, kdy z jedné rovnice snadno vyjádříte jednu neznámou.
+                        Tu následně dosadíte do druhé rovnice, získáte rovnici o jedné neznámé a dopočítáte druhou.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Kdy je metoda nejvýhodnější</h4>
+                            <p>
+                                Nejrychlejší bývá tehdy, když má některá rovnice koeficient <span class="math-inline">1</span>
+                                nebo <span class="math-inline">−1</span> u <span class="math-inline">x</span> či <span class="math-inline">y</span>.
+                                Vyjádření je pak bez zlomků.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Obecný tvar soustavy</h4>
+                        <div class="equation-large">a₁x + b₁y = c₁, &nbsp;&nbsp; a₂x + b₂y = c₂</div>
+                        <p>
+                            Pro lineární soustavu 2x2 rozhoduje determinant
+                            <span class="math-inline">Δ = a₁b₂ − a₂b₁</span>:
+                            pokud <span class="math-inline">Δ ≠ 0</span>, soustava má právě jedno řešení.
+                        </p>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Podmínka</th>
+                                    <th>Geometrie</th>
+                                    <th>Počet řešení</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="math-inline">Δ ≠ 0</span></td>
+                                    <td>Dvě různoběžné přímky</td>
+                                    <td>Právě jedno</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">Δ = 0</span> a rovnice jsou násobné</td>
+                                    <td>Splývající přímky</td>
+                                    <td>Nekonečně mnoho</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="math-inline">Δ = 0</span> a rovnice nejsou násobné</td>
+                                    <td>Rovnoběžné přímky</td>
+                                    <td>Žádné</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Postup dosazovací metody</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Vyjádřete jednu neznámou z první rovnice.</span>
+                            <span class="step-text">Např. <span class="math-inline">x = f(y)</span> nebo <span class="math-inline">y = g(x)</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Dosadíte do druhé rovnice.</span>
+                            <span class="step-text">Vznikne jedna lineární rovnice o jedné neznámé.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Vyřešíte a dopočítáte druhou neznámou.</span>
+                            <span class="step-text">Dosadíte zpět do vyjádřené rovnice.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Uděláte kontrolu obou rovnic.</span>
+                            <span class="step-text">Obě původní rovnice musí vyjít přesně.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">x + y = 7, &nbsp; 2x - y = 8</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">x = 7 - y</span></div>
+                                <div><span class="math-inline">2(7 - y) - y = 8</span></div>
+                                <div><span class="math-inline">14 - 3y = 8 ⇒ y = 2</span></div>
+                                <div class="equation-final"><span class="math-inline">x = 5</span>, tedy <span class="math-inline">(x, y) = (5, 2)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">3x + 2y = 7, &nbsp; x - y = 1</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">x = y + 1</span></div>
+                                <div><span class="math-inline">3(y + 1) + 2y = 7</span></div>
+                                <div><span class="math-inline">5y = 4 ⇒ y = 4/5</span></div>
+                                <div class="equation-final"><span class="math-inline">x = 9/5</span>, tedy <span class="math-inline">(x, y) = (9/5, 4/5)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">4x - 2y = 6, &nbsp; 2x - y = 3</span></p>
+                            <div class="equation-stack">
+                                <div>Druhá rovnice po vynásobení 2: <span class="math-inline">4x - 2y = 6</span></div>
+                                <div>Obě rovnice jsou totožné.</div>
+                                <div class="equation-final">Soustava má nekonečně mnoho řešení.</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Laboratoř: dosazovací metoda</h3>
+                        <p>
+                            První rovnice je v laboratoři vždy ve tvaru <span class="math-inline">x = my + n</span>.
+                            Sledujte, jak po dosazení do druhé rovnice vzniká jediná rovnice v <span class="math-inline">y</span>.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="subCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Fialová a zelená přímka, červeně průsečík (pokud existuje)</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry soustavy</h4>
+                                    <div class="lab-equations">
+                                        <div id="subEq1Text" class="equation-inline">x - y = 2</div>
+                                        <div id="subEq2Text" class="equation-inline">2x - y = 5</div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>m = <span id="subMVal">1</span></label>
+                                        <input type="range" id="subM" min="-4" max="4" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>n = <span id="subNVal">2</span></label>
+                                        <input type="range" id="subN" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>a = <span id="subAVal">2</span></label>
+                                        <input type="range" id="subA" min="-6" max="6" step="1" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="subBVal">-1</span></label>
+                                        <input type="range" id="subB" min="-6" max="6" step="1" value="-1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="subCVal">5</span></label>
+                                        <input type="range" id="subC" min="-12" max="12" step="1" value="5">
+                                    </div>
+                                    <div class="button-row">
+                                        <button class="btn-outline" id="subRandomBtn" type="button">Náhodné zadání</button>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kroky dosazení</h4>
+                                    <div id="subSteps" class="calc-list"></div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calc-line">
+                                        <span>Typ řešení</span>
+                                        <span id="subType" class="pill">Právě 1 řešení</span>
+                                    </div>
+                                    <div class="calc-line">
+                                        <span>Řešení</span>
+                                        <span id="subPoint" class="calc-value">(x, y) = (3, 1)</span>
+                                    </div>
+                                    <div class="equation-note" id="subCheck">Kontrola: obě rovnice vycházejí.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-s1-1" data-type="choice" data-answer="a"
+                            data-solution="(x, y) = (5, 2)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte soustavu <span class="math-inline">x + y = 7, &nbsp; 2x - y = 8</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q1" value="a"><span>(5, 2)</span></label>
+                                    <label class="option"><input type="radio" name="q1" value="b"><span>(2, 5)</span></label>
+                                    <label class="option"><input type="radio" name="q1" value="c"><span>(3, 4)</span></label>
+                                    <label class="option"><input type="radio" name="q1" value="d"><span>(6, 1)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s1-2" data-type="number" data-answer="4/5"
+                            data-solution="y = 4/5, protože ze soustavy 3x + 2y = 7, x - y = 1 vyjde x = y + 1 a 5y = 4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">y</span> v soustavě <span class="math-inline">3x + 2y = 7, &nbsp; x - y = 1</span>.</p>
+                                <div class="input-row">
+                                    <label for="q2Input">y = </label>
+                                    <input id="q2Input" class="exercise-input" type="text" placeholder="např. 4/5">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s1-3" data-type="choice" data-answer="c"
+                            data-solution="soustava má nekonečně mnoho řešení, protože druhá rovnice je polovinou první">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má soustava <span class="math-inline">4x - 2y = 6, &nbsp; 2x - y = 3</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q3" value="a"><span>Žádné</span></label>
+                                    <label class="option"><input type="radio" name="q3" value="b"><span>Právě jedno</span></label>
+                                    <label class="option"><input type="radio" name="q3" value="c"><span>Nekonečně mnoho</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s1-4" data-type="pair" data-answer="15/7,11/7"
+                            data-solution="(x, y) = (15/7, 11/7)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte soustavu <span class="math-inline">x = 2y - 1, &nbsp; 3x + y = 8</span>.</p>
+                                <div class="input-row">
+                                    <label for="q4Input">(x, y) = </label>
+                                    <input id="q4Input" class="exercise-input" type="text" placeholder="např. 2, 1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="soustavy-rovnic-a-scitaci-metoda">Pokračovat na sčítací metodu →</button>
+                    </div>
                 </section>
                 <section id="soustavy-rovnic-a-scitaci-metoda" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Soustavy rovnic a sčítací metoda</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Sčítací (eliminační) metoda spočívá v tom, že vhodně násobíte rovnice tak,
+                        aby se po sečtení nebo odečtení jedna neznámá odstranila.
+                        Poté řešíte rovnost s jedinou neznámou.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Silná stránka metody</h4>
+                            <p>
+                                Metoda je velmi stabilní i pro složitější koeficienty a dobře funguje,
+                                když vyjádření neznámé dosazením vede ke zlomkům.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Princip eliminace</h4>
+                        <div class="equation-large">m₁(a₁x + b₁y = c₁) + m₂(a₂x + b₂y = c₂)</div>
+                        <p>
+                            Volíme násobky <span class="math-inline">m₁, m₂</span> tak, aby
+                            součet koeficientů u jedné neznámé byl nulový.
+                        </p>
+                    </div>
+
+                    <h2>Postup sčítací metody</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Vyberte neznámou, kterou chcete eliminovat.</span>
+                            <span class="step-text">Podle koeficientů zvolte, zda je výhodnější eliminovat <span class="math-inline">x</span> nebo <span class="math-inline">y</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Upravte rovnice násobením.</span>
+                            <span class="step-text">Koeficienty u eliminované neznámé musí být opačné.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Sečtěte (nebo odečtěte) rovnice.</span>
+                            <span class="step-text">Získáte rovnici o jedné neznámé.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Dopočítejte druhou neznámou.</span>
+                            <span class="step-text">Použijte libovolnou původní rovnici.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Zkontrolujte výsledek.</span>
+                            <span class="step-text">Ověřte v obou původních rovnicích.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">2x + 3y = 12, &nbsp; 5x - 3y = 9</span></p>
+                            <div class="equation-stack">
+                                <div>Sečteme rovnice: <span class="math-inline">7x = 21</span></div>
+                                <div><span class="math-inline">x = 3</span></div>
+                                <div><span class="math-inline">2·3 + 3y = 12 ⇒ y = 2</span></div>
+                                <div class="equation-final"><span class="math-inline">(x, y) = (3, 2)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">3x + 2y = 4, &nbsp; 5x - 2y = 12</span></p>
+                            <div class="equation-stack">
+                                <div>Sečtením: <span class="math-inline">8x = 16 ⇒ x = 2</span></div>
+                                <div><span class="math-inline">3·2 + 2y = 4 ⇒ 2y = -2 ⇒ y = -1</span></div>
+                                <div class="equation-final"><span class="math-inline">(x, y) = (2, -1)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">3x - 2y = 7, &nbsp; 6x - 4y = 15</span></p>
+                            <div class="equation-stack">
+                                <div>První rovnici násobíme 2: <span class="math-inline">6x - 4y = 14</span></div>
+                                <div>Porovnání se druhou: <span class="math-inline">6x - 4y = 15</span></div>
+                                <div class="equation-final">Spor, soustava nemá řešení.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Laboratoř: sčítací metoda</h3>
+                        <p>
+                            Vyberte proměnnou k eliminaci a sledujte, jak se automaticky zvolené násobky rovnic
+                            promítnou do výsledné rovnice.
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="elimCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Fialová a zelená přímka, červeně průsečík (pokud existuje)</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Koeficienty soustavy</h4>
+                                    <div class="lab-equations">
+                                        <div id="elimEq1Text" class="equation-inline">2x + 3y = 12</div>
+                                        <div id="elimEq2Text" class="equation-inline">5x - 3y = 9</div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>a₁ = <span id="elimA1Val">2</span></label>
+                                        <input type="range" id="elimA1" min="-6" max="6" step="1" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b₁ = <span id="elimB1Val">3</span></label>
+                                        <input type="range" id="elimB1" min="-6" max="6" step="1" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c₁ = <span id="elimC1Val">12</span></label>
+                                        <input type="range" id="elimC1" min="-12" max="12" step="1" value="12">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>a₂ = <span id="elimA2Val">5</span></label>
+                                        <input type="range" id="elimA2" min="-6" max="6" step="1" value="5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b₂ = <span id="elimB2Val">-3</span></label>
+                                        <input type="range" id="elimB2" min="-6" max="6" step="1" value="-3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c₂ = <span id="elimC2Val">9</span></label>
+                                        <input type="range" id="elimC2" min="-12" max="12" step="1" value="9">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="elimTarget">Eliminovat</label>
+                                        <select id="elimTarget" class="exercise-input select-input">
+                                            <option value="x" selected>x</option>
+                                            <option value="y">y</option>
+                                        </select>
+                                    </div>
+                                    <div class="button-row">
+                                        <button class="btn-outline" id="elimRandomBtn" type="button">Náhodné zadání</button>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Eliminační kroky</h4>
+                                    <div class="calc-list">
+                                        <div id="elimMultipliers" class="calc-line"></div>
+                                        <div id="elimCombined" class="calc-line"></div>
+                                        <div id="elimDerived" class="calc-line"></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calc-line">
+                                        <span>Typ řešení</span>
+                                        <span id="elimType" class="pill">Právě 1 řešení</span>
+                                    </div>
+                                    <div class="calc-line">
+                                        <span>Řešení</span>
+                                        <span id="elimPoint" class="calc-value">(x, y) = (3, 2)</span>
+                                    </div>
+                                    <div class="equation-note" id="elimCheck">Kontrola: obě rovnice vycházejí.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-s2-5" data-type="choice" data-answer="b"
+                            data-solution="(x, y) = (3, 2)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte soustavu <span class="math-inline">2x + 3y = 12, &nbsp; 5x - 3y = 9</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q5" value="a"><span>(2, 3)</span></label>
+                                    <label class="option"><input type="radio" name="q5" value="b"><span>(3, 2)</span></label>
+                                    <label class="option"><input type="radio" name="q5" value="c"><span>(4, 1)</span></label>
+                                    <label class="option"><input type="radio" name="q5" value="d"><span>(3, -2)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s2-6" data-type="number" data-answer="-1"
+                            data-solution="y = -1, protože ze soustavy 4x + 5y = 3, 2x - 5y = 9 vyjde x = 2 a pak y = -1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">y</span> v soustavě <span class="math-inline">4x + 5y = 3, &nbsp; 2x - 5y = 9</span>.</p>
+                                <div class="input-row">
+                                    <label for="q6Input">y = </label>
+                                    <input id="q6Input" class="exercise-input" type="text" placeholder="např. -1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s2-7" data-type="choice" data-answer="c"
+                            data-solution="žádné řešení: po úpravě vyjde spor 6x - 4y = 14 a zároveň 6x - 4y = 15">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má soustava <span class="math-inline">3x - 2y = 7, &nbsp; 6x - 4y = 15</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q7" value="a"><span>Právě jedno</span></label>
+                                    <label class="option"><input type="radio" name="q7" value="b"><span>Nekonečně mnoho</span></label>
+                                    <label class="option"><input type="radio" name="q7" value="c"><span>Žádné</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s2-8" data-type="pair" data-answer="2,-1"
+                            data-solution="(x, y) = (2, -1)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte soustavu <span class="math-inline">3x + 2y = 4, &nbsp; 5x - 2y = 12</span>.</p>
+                                <div class="input-row">
+                                    <label for="q8Input">(x, y) = </label>
+                                    <input id="q8Input" class="exercise-input" type="text" placeholder="např. 2, -1">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="soustavy-rovnic-a-dosazovaci-metoda">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="soustavy-rovnic-a-srovnavaci-metoda">Pokračovat na srovnávací metodu →</button>
+                    </div>
                 </section>
+
                 <section id="soustavy-rovnic-a-srovnavaci-metoda" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Soustavy rovnic a srovnávací metoda</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Srovnávací metoda vychází z toho, že obě rovnice vyjádříte vůči stejné neznámé,
+                        nejčastěji ve tvaru <span class="math-inline">y = f(x)</span> a <span class="math-inline">y = g(x)</span>.
+                        Pak jednoduše položíte <span class="math-inline">f(x) = g(x)</span>.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Propojení s grafem</h4>
+                            <p>
+                                Metoda má přímou grafickou interpretaci: hledáte průsečík dvou přímek
+                                zapsaných jako funkce <span class="math-inline">y(x)</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Jádro metody</h4>
+                        <div class="equation-large">y = f(x), &nbsp; y = g(x) &nbsp;⇒&nbsp; f(x) = g(x)</div>
+                        <p>
+                            Po výpočtu <span class="math-inline">x</span> dopočítáte <span class="math-inline">y</span>
+                            dosazením do kterékoliv z obou rovnic.
+                        </p>
+                    </div>
+
+                    <h2>Postup srovnávací metody</h2>
+                    <ol class="steps-list">
+                        <li>
+                            <span class="step-title">Vyjádřete stejnou neznámou z obou rovnic.</span>
+                            <span class="step-text">Například obě rovnice do tvaru <span class="math-inline">y = ...</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Porovnejte pravé strany.</span>
+                            <span class="step-text">Získáte lineární rovnici v <span class="math-inline">x</span>.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Dopočítejte druhou neznámou.</span>
+                            <span class="step-text">Dosadíte nalezené <span class="math-inline">x</span> do jednoho vyjádření.</span>
+                        </li>
+                        <li>
+                            <span class="step-title">Vyhodnoťte zvláštní případy.</span>
+                            <span class="step-text">Shodné směrnice mohou vést na žádné nebo nekonečně mnoho řešení.</span>
+                        </li>
+                    </ol>
+
+                    <h2>Ukázkové příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">2x + y = 11, &nbsp; x - y = 1</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">y = 11 - 2x</span>, <span class="math-inline">y = x - 1</span></div>
+                                <div><span class="math-inline">11 - 2x = x - 1 ⇒ 3x = 12 ⇒ x = 4</span></div>
+                                <div class="equation-final"><span class="math-inline">y = 3</span>, tedy <span class="math-inline">(x, y) = (4, 3)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">3x - 2y = 4, &nbsp; x + y = 5</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">y = (3x - 4)/2</span>, <span class="math-inline">y = 5 - x</span></div>
+                                <div><span class="math-inline">(3x - 4)/2 = 5 - x ⇒ 5x = 14 ⇒ x = 14/5</span></div>
+                                <div class="equation-final"><span class="math-inline">y = 11/5</span>, tedy <span class="math-inline">(x, y) = (14/5, 11/5)</span></div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">y = 2x + 1, &nbsp; y = 2x - 3</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">2x + 1 = 2x - 3 ⇒ 1 = -3</span></div>
+                                <div>Rovnice je spor.</div>
+                                <div class="equation-final">Žádné řešení (rovnoběžné přímky).</div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Laboratoř: srovnávací metoda</h3>
+                        <p>
+                            Nastavte dvě přímky ve směrnicovém tvaru a sledujte kroky srovnání
+                            i klasifikaci řešení (jedno, žádné, nekonečně mnoho).
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="compCanvas" width="640" height="420"></canvas>
+                                <div class="canvas-instructions">Fialová a zelená přímka, červeně průsečík (pokud existuje)</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry přímek</h4>
+                                    <div class="lab-equations">
+                                        <div id="compEq1Text" class="equation-inline">y = 3x - 2</div>
+                                        <div id="compEq2Text" class="equation-inline">y = -x + 6</div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label>m₁ = <span id="compM1Val">3</span></label>
+                                        <input type="range" id="compM1" min="-4" max="4" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>n₁ = <span id="compN1Val">-2</span></label>
+                                        <input type="range" id="compN1" min="-8" max="8" step="0.5" value="-2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>m₂ = <span id="compM2Val">-1</span></label>
+                                        <input type="range" id="compM2" min="-4" max="4" step="0.5" value="-1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>n₂ = <span id="compN2Val">6</span></label>
+                                        <input type="range" id="compN2" min="-8" max="8" step="0.5" value="6">
+                                    </div>
+                                    <div class="button-row">
+                                        <button class="btn-outline" id="compRandomBtn" type="button">Náhodné zadání</button>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kroky srovnání</h4>
+                                    <div id="compSteps" class="calc-list"></div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calc-line">
+                                        <span>Typ řešení</span>
+                                        <span id="compType" class="pill">Právě 1 řešení</span>
+                                    </div>
+                                    <div class="calc-line">
+                                        <span>Řešení</span>
+                                        <span id="compPoint" class="calc-value">(x, y) = (2, 4)</span>
+                                    </div>
+                                    <div class="equation-note" id="compCheck">Kontrola: y₁ = y₂ v průsečíku.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise-s3-9" data-type="pair" data-answer="2,4"
+                            data-solution="(x, y) = (2, 4)">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 9</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte soustavu <span class="math-inline">y = 3x - 2, &nbsp; y = -x + 6</span>.</p>
+                                <div class="input-row">
+                                    <label for="q9Input">(x, y) = </label>
+                                    <input id="q9Input" class="exercise-input" type="text" placeholder="např. 2, 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s3-10" data-type="number" data-answer="4"
+                            data-solution="x = 4, protože z rovnic y = 0,5x + 4 a y = -x + 10 vyjde 0,5x + 4 = -x + 10">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 10</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">x</span> pro soustavu <span class="math-inline">y = 0,5x + 4, &nbsp; y = -x + 10</span>.</p>
+                                <div class="input-row">
+                                    <label for="q10Input">x = </label>
+                                    <input id="q10Input" class="exercise-input" type="text" placeholder="např. 4">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s3-11" data-type="choice" data-answer="b"
+                            data-solution="žádné řešení: stejné směrnice, různé absolutní členy">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 11</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má soustava <span class="math-inline">y = 2x + 1, &nbsp; y = 2x - 3</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q11" value="a"><span>Právě jedno</span></label>
+                                    <label class="option"><input type="radio" name="q11" value="b"><span>Žádné</span></label>
+                                    <label class="option"><input type="radio" name="q11" value="c"><span>Nekonečně mnoho</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise-s3-12" data-type="choice" data-answer="c"
+                            data-solution="nekonečně mnoho řešení: rovnice y = -3x + 4 a 6x + 2y = 8 popisují stejnou přímku">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 12</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik řešení má soustava <span class="math-inline">y = -3x + 4, &nbsp; 6x + 2y = 8</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="q12" value="a"><span>Právě jedno</span></label>
+                                    <label class="option"><input type="radio" name="q12" value="b"><span>Žádné</span></label>
+                                    <label class="option"><input type="radio" name="q12" value="c"><span>Nekonečně mnoho</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 12</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="soustavy-rovnic-a-scitaci-metoda">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit kapitolu</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
+

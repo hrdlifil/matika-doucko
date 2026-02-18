@@ -1,11 +1,12 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Základy o rovnicích - strukturovaná lekce kurzu Rovnice.">
-    <title>Základy o rovnicích – Rovnice</title>
+    <meta name="description"
+        content="Interaktivní lekce Základy o rovnicích: úvod do rovnic, ekvivalentní úpravy, správné postupy a procvičování.">
+    <title>Základy o rovnicích – Rovnice – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
     <link rel="stylesheet" href="lesson.css">
@@ -48,7 +49,17 @@
                         <span class="sidebar-icon">2</span>
                         Ekvivalentní úpravy rovnic
                     </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
+                    </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
@@ -57,25 +68,410 @@
                     <span class="section-badge">Téma 1</span>
                     <h1>Úvod do rovnic</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Rovnice je matematické tvrzení, že levá a pravá strana mají stejnou hodnotu.
+                        Řešit rovnici znamená najít všechny hodnoty neznámé, pro které tato rovnost platí.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Klíčová myšlenka</h4>
+                            <p>
+                                Každá úspěšně vyřešená rovnice musí splňovat dvě věci: správný postup
+                                a závěrečnou kontrolu dosazením.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Základní definice</h4>
+                        <p>Pro rovnici</p>
+                        <div class="equation-large">3x - 5 = 7</div>
+                        <ul>
+                            <li><strong>neznámá</strong> je <span class="math-inline">x</span>,</li>
+                            <li><strong>levá strana</strong> je výraz <span class="math-inline">L(x) = 3x - 5</span>,</li>
+                            <li><strong>pravá strana</strong> je výraz <span class="math-inline">P(x) = 7</span>,</li>
+                            <li><strong>řešení</strong> je každé číslo, pro které <span class="math-inline">L(x) = P(x)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Kolik může mít rovnice řešení?</h2>
+                    <div class="concept-grid">
+                        <article class="concept-card">
+                            <h3>Jedno řešení</h3>
+                            <div class="concept-equation">2x - 3 = 11</div>
+                            <p>Po úpravě vyjde <span class="math-inline">x = 7</span>.</p>
+                        </article>
+                        <article class="concept-card">
+                            <h3>Žádné řešení</h3>
+                            <div class="concept-equation">2x + 1 = 2x - 3</div>
+                            <p>Po odečtení <span class="math-inline">2x</span> dostaneme spor <span class="math-inline">1 = -3</span>.</p>
+                        </article>
+                        <article class="concept-card">
+                            <h3>Nekonečně mnoho řešení</h3>
+                            <div class="concept-equation">4(x - 2) = 4x - 8</div>
+                            <p>Po roznásobení dostaneme identitu, která platí pro všechna reálná čísla.</p>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎯 Interaktivní ověřovač řešení</h3>
+                        <p>
+                            Posouvejte hodnotu <span class="math-inline">x</span> a sledujte, kdy se levá a pravá strana rovnají.
+                            Tlačítkem si můžete vygenerovat novou rovnici.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel">
+                                <div class="equation-display equation-display-large">
+                                    <strong>Aktuální rovnice</strong>
+                                    <div id="explorerEquation" class="live-equation">2x + 1 = 7</div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="xSlider">Zvolená hodnota: <span id="xValue">0</span></label>
+                                    <input type="range" id="xSlider" min="-10" max="10" value="0" step="1">
+                                </div>
+
+                                <div class="value-grid">
+                                    <div class="value-chip">
+                                        <span class="chip-label">L(x)</span>
+                                        <span id="lhsValue" class="chip-value">1</span>
+                                    </div>
+                                    <div class="value-chip">
+                                        <span class="chip-label">P(x)</span>
+                                        <span id="rhsValue" class="chip-value">7</span>
+                                    </div>
+                                    <div class="value-chip">
+                                        <span class="chip-label">|L(x) - P(x)|</span>
+                                        <span id="diffValue" class="chip-value">6</span>
+                                    </div>
+                                </div>
+
+                                <div id="equationStatus" class="status-pill status-pill-false">Rovnost zatím neplatí.</div>
+                            </div>
+
+                            <div class="demo-actions">
+                                <button id="randomEquationBtn" class="btn-outline">🎲 Nová rovnice</button>
+                                <button id="showSolutionBtn" class="btn-outline">✅ Ukázat řešení</button>
+                                <p class="demo-hint">
+                                    Pokud vyjde <span class="math-inline">L(x) = P(x)</span>, nalezli jste kořen rovnice.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Ukázkový výpočet krok za krokem</h3>
+                        <p>Vyřešme rovnici <span class="math-inline">5x - 7 = 18</span>:</p>
+                        <ol class="steps-list">
+                            <li><span class="step-equation">5x - 7 = 18</span><span class="step-note">Přičteme 7 na obou stranách.</span></li>
+                            <li><span class="step-equation">5x = 25</span><span class="step-note">Vydělíme 5 na obou stranách.</span></li>
+                            <li><span class="step-equation">x = 5</span><span class="step-note">Řešení je jedno číslo.</span></li>
+                        </ol>
+                        <p class="check-line">
+                            Zkouška: <span class="math-inline">5 · 5 - 7 = 25 - 7 = 18</span>, takže řešení je správně.
+                        </p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="ekvivalentni-upravy-rovnic">
+                            Pokračovat na ekvivalentní úpravy →
+                        </button>
+                    </div>
                 </section>
+
                 <section id="ekvivalentni-upravy-rovnic" class="lesson-section">
                     <span class="section-badge">Téma 2</span>
                     <h1>Ekvivalentní úpravy rovnic</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako osnova kapitoly. Navazuje na strukturu kurzu a bude sloužit
-                        jako místo pro detailní výklad, ukázkové příklady a procvičování.
+                        Ekvivalentní úprava zachová množinu řešení. Po každém kroku tedy získáme rovnici,
+                        která má stejné kořeny jako rovnice původní.
                     </p>
-                    <p class="topic-note">Obsah této části bude doplněn v další iteraci.</p>
+
+                    <div class="definition-box">
+                        <h4>Definice ekvivalence</h4>
+                        <p>
+                            Rovnice <span class="math-inline">R₁</span> a <span class="math-inline">R₂</span> jsou ekvivalentní právě tehdy,
+                            když mají stejnou množinu řešení.
+                        </p>
+                        <p class="math-inline centered-math">R₁ ⇔ R₂</p>
+                    </div>
+
+                    <h2>Které úpravy jsou bezpečné?</h2>
+                    <div class="table-wrap">
+                        <table class="rules-table">
+                            <thead>
+                                <tr>
+                                    <th>Úprava</th>
+                                    <th>Typicky platí</th>
+                                    <th>Důležitá poznámka</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Přičíst nebo odečíst stejný výraz na obou stranách</td>
+                                    <td class="status-ok">Ekvivalentní</td>
+                                    <td>Výraz musí být ve všech uvažovaných hodnotách definovaný.</td>
+                                </tr>
+                                <tr>
+                                    <td>Vynásobit nebo vydělit obě strany nenulovou konstantou</td>
+                                    <td class="status-ok">Ekvivalentní</td>
+                                    <td>Dělení nulou není dovoleno.</td>
+                                </tr>
+                                <tr>
+                                    <td>Dělení výrazem s neznámou (např. <span class="math-inline">x</span>)</td>
+                                    <td class="status-risk">Rizikové</td>
+                                    <td>Můžete ztratit řešení, když výraz nabývá nuly.</td>
+                                </tr>
+                                <tr>
+                                    <td>Umocnění obou stran (zejména na sudou mocninu)</td>
+                                    <td class="status-risk">Rizikové</td>
+                                    <td>Můžete získat cizí kořeny, vždy je nutná zkouška.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Správné postupy na příkladech</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A: lineární rovnice</h3>
+                            <p class="example-task">Řeš: <span class="math-inline">2(3x - 1) + 5 = 4x + 9</span></p>
+                            <div class="equation-stack">
+                                <div>2(3x - 1) + 5 = 4x + 9</div>
+                                <div>6x - 2 + 5 = 4x + 9</div>
+                                <div>6x + 3 = 4x + 9</div>
+                                <div>2x = 6</div>
+                                <div class="equation-final">x = 3</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad B: podmínka u jmenovatele</h3>
+                            <p class="example-task">Řeš: <span class="math-inline">(x + 1)/(x - 2) = 3</span>, <span class="math-inline">x ≠ 2</span></p>
+                            <div class="equation-stack">
+                                <div class="equation-note">Podmínka: x ≠ 2</div>
+                                <div>x + 1 = 3(x - 2)</div>
+                                <div>x + 1 = 3x - 6</div>
+                                <div>7 = 2x</div>
+                                <div class="equation-final">x = 7/2</div>
+                            </div>
+                        </article>
+
+                        <article class="example-card">
+                            <h3>Příklad C: cizí kořen po umocnění</h3>
+                            <p class="example-task">Řeš: <span class="math-inline">√(x + 5) = x - 1</span></p>
+                            <div class="equation-stack">
+                                <div class="equation-note">Nejprve podmínka: x ≥ 1</div>
+                                <div>x + 5 = (x - 1)²</div>
+                                <div>x + 5 = x² - 2x + 1</div>
+                                <div>x² - 3x - 4 = 0</div>
+                                <div>x = 4 nebo x = -1</div>
+                                <div class="equation-final">Po zkoušce platí jen x = 4</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧠 Rozhodněte: ekvivalentní nebo ne?</h3>
+                        <p>
+                            U každé situace vyberte správnou možnost. Pokud zvolíte chybně,
+                            uvidíte okamžitě správnou odpověď i zdůvodnění.
+                        </p>
+
+                        <div class="decision-grid">
+                            <article class="decision-card" data-correct="yes"
+                                data-explanation="Stejná operace na obou stranách zachová rovnost i množinu řešení.">
+                                <h4>Situace 1</h4>
+                                <p>Z rovnice <span class="math-inline">x + 4 = 10</span> odečteme 4 na obou stranách.</p>
+                                <div class="decision-actions">
+                                    <button class="decision-btn" data-choice="yes">Ekvivalentní</button>
+                                    <button class="decision-btn" data-choice="no">Neekvivalentní</button>
+                                </div>
+                                <div class="decision-feedback"></div>
+                            </article>
+
+                            <article class="decision-card" data-correct="no"
+                                data-explanation="Dělení výrazem x může odstranit řešení x = 0. U rovnice x² = x by po dělení zůstalo jen x = 1.">
+                                <h4>Situace 2</h4>
+                                <p>U rovnice <span class="math-inline">x² = x</span> vydělíme obě strany výrazem <span class="math-inline">x</span>.</p>
+                                <div class="decision-actions">
+                                    <button class="decision-btn" data-choice="yes">Ekvivalentní</button>
+                                    <button class="decision-btn" data-choice="no">Neekvivalentní</button>
+                                </div>
+                                <div class="decision-feedback"></div>
+                            </article>
+
+                            <article class="decision-card" data-correct="yes"
+                                data-explanation="Po přidání podmínky x ≠ 2 je násobení výrazem (x - 2) bezpečné a ekvivalentní.">
+                                <h4>Situace 3</h4>
+                                <p>U rovnice <span class="math-inline">(x + 1)/(x - 2) = 3</span> násobíme výrazem <span class="math-inline">(x - 2)</span> a zároveň použijeme podmínku <span class="math-inline">x ≠ 2</span>.</p>
+                                <div class="decision-actions">
+                                    <button class="decision-btn" data-choice="yes">Ekvivalentní</button>
+                                    <button class="decision-btn" data-choice="no">Neekvivalentní</button>
+                                </div>
+                                <div class="decision-feedback"></div>
+                            </article>
+
+                            <article class="decision-card" data-correct="no"
+                                data-explanation="Umocnění může vytvořit cizí kořeny, proto jde jen o implikaci a na konci musíme provést zkoušku.">
+                                <h4>Situace 4</h4>
+                                <p>Rovnici <span class="math-inline">√(x + 5) = x - 1</span> umocníme na druhou a výsledek bereme bez zkoušky.</p>
+                                <div class="decision-actions">
+                                    <button class="decision-btn" data-choice="yes">Ekvivalentní</button>
+                                    <button class="decision-btn" data-choice="no">Neekvivalentní</button>
+                                </div>
+                                <div class="decision-feedback"></div>
+                            </article>
+                        </div>
+
+                        <div id="decisionSummary" class="topic-note summary-note hidden">
+                            Všechny situace jsou vyhodnocené.
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="uvod-do-rovnic">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat na procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <span class="section-badge">Procvičování</span>
+                    <h1>Procvičování</h1>
+                    <p class="lead">
+                        Ověřte si, že bezpečně poznáte správné úpravy a umíte rovnici dopočítat do výsledku.
+                        Po odeslání špatné odpovědi se vždy zobrazí správný výsledek.
+                    </p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1" data-type="number" data-answer="5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš rovnici: <span class="math-inline">3(x + 2) - 4 = 2x + 7</span></p>
+                                <div class="input-row">
+                                    <label for="ex1Input">x = </label>
+                                    <input id="ex1Input" type="text" class="exercise-input" placeholder="např. 5 nebo 10/2">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                                <details class="solution-details">
+                                    <summary>Postup řešení</summary>
+                                    <div class="solution-body">
+                                        <div class="equation-stack">
+                                            <div>3(x + 2) - 4 = 2x + 7</div>
+                                            <div>3x + 6 - 4 = 2x + 7</div>
+                                            <div>3x + 2 = 2x + 7</div>
+                                            <div class="equation-final">x = 5</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2" data-type="number" data-answer="5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš rovnici: <span class="math-inline">(x + 3)/(x - 1) = 2</span> (s podmínkou <span class="math-inline">x ≠ 1</span>).</p>
+                                <div class="input-row">
+                                    <label for="ex2Input">x = </label>
+                                    <input id="ex2Input" type="text" class="exercise-input" placeholder="např. 5">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                                <details class="solution-details">
+                                    <summary>Postup řešení</summary>
+                                    <div class="solution-body">
+                                        <div class="equation-stack">
+                                            <div class="equation-note">Podmínka: x ≠ 1</div>
+                                            <div>x + 3 = 2(x - 1)</div>
+                                            <div>x + 3 = 2x - 2</div>
+                                            <div class="equation-final">x = 5</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3" data-type="choice" data-answer="b">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Která úprava obecně <strong>není</strong> ekvivalentní bez dalších podmínek?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>Přičíst stejný výraz na obou stranách rovnice.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>Vydělit obě strany výrazem, který může být roven nule.</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>Vynásobit obě strany nenulovou konstantou.</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4" data-type="set" data-answer="3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš rovnici: <span class="math-inline">√(x + 6) = x</span>. Zapiš všechna řešení oddělená čárkou.</p>
+                                <div class="input-row">
+                                    <label for="ex4Input">Množina řešení = </label>
+                                    <input id="ex4Input" type="text" class="exercise-input" placeholder="např. 3">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                                <details class="solution-details">
+                                    <summary>Postup řešení</summary>
+                                    <div class="solution-body">
+                                        <div class="equation-stack">
+                                            <div class="equation-note">Podmínka: x ≥ 0</div>
+                                            <div>x + 6 = x²</div>
+                                            <div>x² - x - 6 = 0</div>
+                                            <div>x = 3 nebo x = -2</div>
+                                            <div class="equation-final">Po zkoušce platí pouze x = 3</div>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">🎉</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Vyřešené úlohy správně napoprvé: <strong id="finalScore">0 / 4</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="ekvivalentni-upravy-rovnic">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>

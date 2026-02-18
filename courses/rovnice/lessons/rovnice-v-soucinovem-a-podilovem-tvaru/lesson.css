@@ -1,1 +1,52 @@
-﻿@import url("../../lesson-shell.css");
+﻿@import url("../kvadraticke-rovnice/lesson.css");
+
+.math-inline {
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+}
+
+.practice-counter {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.examples-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.equation-inline {
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #10b981;
+    padding: 0.5rem;
+}
+
+.equation-note {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-style: normal;
+}
+
+.note-warning strong,
+.note-success strong {
+    color: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1200px) {
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .equation-inline {
+        font-size: 1.02rem;
+    }
+}
