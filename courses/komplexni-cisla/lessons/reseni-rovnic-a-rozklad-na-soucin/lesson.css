@@ -1,0 +1,79 @@
+﻿@import url("../goniometricky-tvar-komplexniho-cisla/lesson.css");
+
+.lesson-nav-current {
+    color: var(--text-primary);
+}
+
+.lesson-section h1 {
+    font-size: 2.04rem;
+}
+
+.lesson-section .lead {
+    max-width: 88ch;
+}
+
+.equation-large {
+    line-height: 1.8;
+}
+
+.examples-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.examples-grid .example-card {
+    min-height: 168px;
+}
+
+.case-grid {
+    margin-top: 1.25rem;
+}
+
+.case-card .equation-stack {
+    margin-top: 0.65rem;
+}
+
+.interactive-demo {
+    margin-top: 2.25rem;
+}
+
+.demo-canvas-wrapper canvas {
+    width: 100%;
+    height: auto;
+    max-width: 620px;
+}
+
+.equation-inline {
+    line-height: 1.35;
+}
+
+.calc-step span:first-child {
+    color: var(--text-secondary);
+}
+
+.reference-box {
+    margin-top: 2.25rem;
+}
+
+.reference-list a {
+    color: #93c5fd;
+}
+
+.reference-list a:hover {
+    color: #dbeafe;
+}
+
+@media (max-width: 1220px) {
+    .examples-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .lesson-section h1 {
+        font-size: 1.85rem;
+    }
+
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}

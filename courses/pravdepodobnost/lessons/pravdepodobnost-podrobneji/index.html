@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Pravděpodobnost podrobněji: sjednocení jevů, nezávislost jevů, podmíněná pravděpodobnost a Bayesova věta.">
+        content="Pravděpodobnost podrobněji: sjednocení jevů, nezávislost jevů, podmíněná pravděpodobnost, testování a Bayesova věta s interaktivními laboratořemi a procvičováním.">
     <title>Pravděpodobnost podrobněji – Pravděpodobnost – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -54,64 +54,596 @@
                         <span class="sidebar-icon">3</span>
                         Podmíněná pravděpodobnost
                     </a>
-                    <a href="#uvodni-problem-s-testem-a-bayesova-veta" class="sidebar-link" data-section="uvodni-problem-s-testem-a-bayesova-veta">
+                    <a href="#uvodni-problem-s-testem-a-bayesova-veta" class="sidebar-link"
+                        data-section="uvodni-problem-s-testem-a-bayesova-veta">
                         <span class="sidebar-icon">4</span>
-                        Úvodní problém s testem a Bayesova věta
+                        Test a Bayesova věta
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
                     </a>
                 </nav>
 
-                <a href="../../index.html" class="lesson-back-link">← Zpět na kurz</a>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
             </aside>
 
             <div class="lesson-content">
-                <section id="sjednoceni-jevu" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="sjednoceni-jevu" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Sjednocení jevů</h1>
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        Sjednocení jevů <strong>A ∪ B</strong> znamená, že nastane alespoň jeden z jevů:
+                        nastane A, nebo B, nebo oba současně.
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: význam sjednocení jevů, vztahy mezi jevy a základní výpočtové pravidlo.
-                    </p>
-                </section>
 
+                    <div class="definition-box">
+                        <h4>Klíčový vztah</h4>
+                        <div class="equation-large">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</div>
+                        <p>
+                            Průnik <strong>P(A ∩ B)</strong> odčítáme proto, že v součtu <strong>P(A) + P(B)</strong>
+                            je započítán dvakrát.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Disjunktní (neslučitelné) jevy</h4>
+                            <p>Pokud je <strong>A ∩ B = ∅</strong>, pak:</p>
+                            <p class="example-result">P(A ∪ B) = P(A) + P(B)</p>
+                        </div>
+                        <div class="column">
+                            <h4>Obecný případ</h4>
+                            <p>Pokud průnik není prázdný, musí se odečíst:</p>
+                            <p class="example-result">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Laboratoř sjednocení A ∪ B</h3>
+                        <p>Vyberte pokus a dva jevy. Okamžitě uvidíte množiny i kompletní výpočet.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div id="unionOutcomeGrid" class="outcome-grid outcome-grid-compact"></div>
+                                <div class="canvas-instructions">
+                                    <span>Fialová = A, zelená = B, žlutá = A ∩ B, oranžová = poslední náhodný výsledek.</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="unionScenarioSelect">Náhodný pokus</label>
+                                    <select id="unionScenarioSelect">
+                                        <option value="die">Hod férovou kostkou</option>
+                                        <option value="coins">Dva hody mincí</option>
+                                        <option value="cards">Barva náhodně tažené karty</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="unionEventASelect">Jev A</label>
+                                    <select id="unionEventASelect"></select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="unionEventBSelect">Jev B</label>
+                                    <select id="unionEventBSelect"></select>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Množiny</strong>
+                                    <div id="unionASet" class="equation-info"></div>
+                                    <div id="unionBSet" class="equation-info"></div>
+                                    <div id="unionIntersectionSet" class="equation-info"></div>
+                                    <div id="unionUnionSet" class="equation-info"></div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>Pravděpodobnosti</h4>
+                                    <div class="property-row"><span>P(A)</span><span id="unionPA">0</span></div>
+                                    <div class="property-row"><span>P(B)</span><span id="unionPB">0</span></div>
+                                    <div class="property-row"><span>P(A ∩ B)</span><span id="unionPIntersection">0</span></div>
+                                    <div class="property-row"><span>P(A ∪ B)</span><span id="unionPUnion">0</span></div>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Kontrola vzorce</strong>
+                                    <div id="unionFormula" class="live-equation">P(A ∪ B) = P(A) + P(B) - P(A ∩ B)</div>
+                                    <div id="unionEventANote" class="equation-info"></div>
+                                    <div id="unionEventBNote" class="equation-info"></div>
+                                </div>
+
+                                <button id="unionDrawOutcomeBtn" class="btn-outline">Náhodný výsledek</button>
+                                <div class="equation-display">
+                                    <strong>Poslední výsledek</strong>
+                                    <div id="unionDrawResult" class="live-equation">–</div>
+                                    <div id="unionDrawFeedback" class="equation-info">Výsledek zatím nebyl vygenerován.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="nezavislost-jevu">Pokračovat k nezávislosti →</button>
+                    </div>
+                </section>
                 <section id="nezavislost-jevu" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Nezávislost jevů</h1>
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        Jevy <strong>A</strong> a <strong>B</strong> jsou nezávislé, pokud informace o tom, že nastal B,
+                        nemění pravděpodobnost jevu A.
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: definice nezávislosti, intuitivní interpretace a typické příklady.
-                    </p>
-                </section>
 
+                    <div class="definition-box">
+                        <h4>Definice nezávislosti</h4>
+                        <div class="equation-large">A ⫫ B &nbsp;&Longleftrightarrow;&nbsp; P(A ∩ B) = P(A) · P(B)</div>
+                        <p>
+                            Ekvivalentně (pokud <strong>P(B) &gt; 0</strong>) platí
+                            <strong>P(A|B) = P(A)</strong>.
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">!</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba: „disjunktní = nezávislé“</h4>
+                            <p>
+                                Disjunktní jevy (A ∩ B = ∅) jsou při kladných pravděpodobnostech vždy
+                                <strong>závislé</strong>, protože z nastání A plyne nenastání B.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Detektor nezávislosti</h3>
+                        <p>Zvolte pokus, jev A a jev B. Porovnáme teorii i simulaci.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div id="indOutcomeGrid" class="outcome-grid outcome-grid-dense"></div>
+                                <div class="trial-log-panel">
+                                    <h4>Poslední simulované výsledky</h4>
+                                    <div id="indLog" class="trial-log"></div>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="indScenarioSelect">Pokus</label>
+                                    <select id="indScenarioSelect">
+                                        <option value="coins">Dva hody mincí</option>
+                                        <option value="dice">Dva hody kostkou</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="indEventASelect">Jev A</label>
+                                    <select id="indEventASelect"></select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="indEventBSelect">Jev B</label>
+                                    <select id="indEventBSelect"></select>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Teoretická kontrola</strong>
+                                    <div class="equation-info" id="indSetA"></div>
+                                    <div class="equation-info" id="indSetB"></div>
+                                    <div class="equation-info" id="indSetInter"></div>
+                                    <div class="equation-info">P(A) = <span id="indTheoryPA">0</span></div>
+                                    <div class="equation-info">P(B) = <span id="indTheoryPB">0</span></div>
+                                    <div class="equation-info">P(A ∩ B) = <span id="indTheoryInter">0</span></div>
+                                    <div class="equation-info">P(A)·P(B) = <span id="indTheoryProduct">0</span></div>
+                                    <div class="equation-info">|rozdíl| = <span id="indTheoryDiff">0</span></div>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Verdikt</strong>
+                                    <div id="indVerdict" class="live-equation">–</div>
+                                </div>
+
+                                <div class="simulation-actions">
+                                    <button class="btn-outline ind-run-btn" data-run="50">+50 pokusů</button>
+                                    <button class="btn-outline ind-run-btn" data-run="500">+500 pokusů</button>
+                                    <button class="btn-outline ind-run-btn" data-run="5000">+5000 pokusů</button>
+                                </div>
+                                <button id="indResetBtn" class="btn-primary">Reset simulace</button>
+
+                                <div class="vector-info-panel">
+                                    <h4>Empirická data</h4>
+                                    <div class="property-row"><span>Počet pokusů n</span><span id="indTrials">0</span></div>
+                                    <div class="property-row"><span>Počet A / n</span><span id="indHitsA">0</span></div>
+                                    <div class="property-row"><span>Počet B / n</span><span id="indHitsB">0</span></div>
+                                    <div class="property-row"><span>Počet A∩B / n</span><span id="indHitsBoth">0</span></div>
+                                    <div class="property-row"><span>f(A ∩ B)</span><span id="indFreqInter">0</span></div>
+                                    <div class="property-row"><span>f(A)·f(B)</span><span id="indFreqProduct">0</span></div>
+                                    <div class="property-row"><span>|rozdíl|</span><span id="indFreqDiff">0</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="sjednoceni-jevu">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="podminena-pravdepodobnost">Pokračovat k podmíněné pravděpodobnosti →</button>
+                    </div>
+                </section>
                 <section id="podminena-pravdepodobnost" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Podmíněná pravděpodobnost</h1>
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        Podmíněná pravděpodobnost <strong>P(A|B)</strong> je pravděpodobnost jevu A
+                        za podmínky, že víme, že nastal jev B.
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: změna prostoru výsledků při dodatečné informaci a základní vzorec.
-                    </p>
-                </section>
 
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large">P(A|B) = P(A ∩ B) / P(B), &nbsp; P(B) &gt; 0</div>
+                        <p>
+                            Informace „nastal B“ zužuje původní prostor Ω na podmnožinu B.
+                            V ní se pak počítá podíl prvků, které současně patří do A.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Filtrovaný prostor Ω → B</h3>
+                        <p>Zvolte A a B nad prostorem dvou hodů kostkou a sledujte výpočet i simulaci podmíněného výběru.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div id="condOutcomeGrid" class="outcome-grid outcome-grid-dense"></div>
+                                <div class="canvas-instructions">
+                                    <span>Zelená = B, žlutá = A ∩ B, oranžová = poslední výběr z B.</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="condEventASelect">Jev A</label>
+                                    <select id="condEventASelect"></select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="condEventBSelect">Podmínka B</label>
+                                    <select id="condEventBSelect"></select>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Množiny</strong>
+                                    <div id="condSetA" class="equation-info"></div>
+                                    <div id="condSetB" class="equation-info"></div>
+                                    <div id="condSetInter" class="equation-info"></div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>Výpočet</h4>
+                                    <div class="property-row"><span>P(B)</span><span id="condPB">0</span></div>
+                                    <div class="property-row"><span>P(A ∩ B)</span><span id="condPInter">0</span></div>
+                                    <div class="property-row"><span>P(A|B)</span><span id="condPAGivenB">0</span></div>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Rozklad</strong>
+                                    <div id="condFormulaMain" class="live-equation">P(A|B) = P(A ∩ B) / P(B)</div>
+                                    <div id="condFormulaCheck" class="equation-info"></div>
+                                </div>
+
+                                <button id="condDrawBtn" class="btn-outline">Náhodný výběr z B</button>
+                                <div class="equation-display">
+                                    <strong>Poslední výběr</strong>
+                                    <div id="condDrawResult" class="live-equation">–</div>
+                                </div>
+
+                                <div class="simulation-actions">
+                                    <button class="btn-outline cond-run-btn" data-run="20">+20 výběrů z B</button>
+                                    <button class="btn-outline cond-run-btn" data-run="200">+200 výběrů z B</button>
+                                    <button class="btn-outline cond-run-btn" data-run="1000">+1000 výběrů z B</button>
+                                </div>
+                                <button id="condResetBtn" class="btn-primary">Reset simulace</button>
+
+                                <div class="vector-info-panel">
+                                    <h4>Empirický odhad</h4>
+                                    <div class="property-row"><span>Počet výběrů z B</span><span id="condTrials">0</span></div>
+                                    <div class="property-row"><span>Počet výběrů v A ∩ B</span><span id="condHits">0</span></div>
+                                    <div class="property-row"><span>f(A|B)</span><span id="condFreq">0</span></div>
+                                    <div class="property-row"><span>|P(A|B)-f(A|B)|</span><span id="condDiff">0</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="nezavislost-jevu">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="uvodni-problem-s-testem-a-bayesova-veta">Pokračovat k Bayesově větě →</button>
+                    </div>
+                </section>
                 <section id="uvodni-problem-s-testem-a-bayesova-veta" class="lesson-section">
-                    <span class="section-badge">Téma 4</span>
+                    <div class="section-badge">Téma 4</div>
                     <h1>Úvodní problém s testem a Bayesova věta</h1>
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        Pozitivní test neznamená automaticky vysokou pravděpodobnost nemoci.
+                        Rozhoduje i základní četnost výskytu (prevalence).
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: interpretace výsledků testů a postup přepočtu pravděpodobností pomocí Bayesovy věty.
+
+                    <div class="definition-box">
+                        <h4>Bayesova věta pro diagnostický test</h4>
+                        <div class="equation-large">
+                            P(D|+) = [P(+|D) · P(D)] / [P(+|D) · P(D) + P(+|¬D) · P(¬D)]
+                        </div>
+                        <p>
+                            Kde D = „osoba má nemoc“, + = „test je pozitivní“.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Přesnost testu</h4>
+                            <ul>
+                                <li><strong>Senzitivita</strong>: P(+|D)</li>
+                                <li><strong>Specificita</strong>: P(-|¬D)</li>
+                                <li><strong>False positive rate</strong>: P(+|¬D) = 1 - specificita</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Co Bayes vrací</h4>
+                            <ul>
+                                <li><strong>PPV</strong>: P(D|+) = pravděpodobnost nemoci při pozitivním testu</li>
+                                <li><strong>NPV</strong>: P(¬D|-) = pravděpodobnost zdraví při negativním testu</li>
+                                <li>Klíčový vliv má prevalence P(D)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní Bayesův kalkulátor</h3>
+                        <p>Změňte prevalenci, senzitivitu a specificitu. Uvidíte posteriorní pravděpodobnost i tabulku přirozených četností.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div class="bayes-table-wrap">
+                                    <table class="bayes-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Nemoc D</th>
+                                                <th>Bez nemoci ¬D</th>
+                                                <th>Součet</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Test +</td>
+                                                <td id="bayesTP">0</td>
+                                                <td id="bayesFP">0</td>
+                                                <td id="bayesPositiveCount">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Test -</td>
+                                                <td id="bayesFN">0</td>
+                                                <td id="bayesTN">0</td>
+                                                <td id="bayesNegativeCount">0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Součet</td>
+                                                <td id="bayesDiseaseCount">0</td>
+                                                <td id="bayesHealthyCount">0</td>
+                                                <td id="bayesPopulationCount">0</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <p class="table-note">Hodnoty jsou očekávané počty v zadané populaci.</p>
+                                </div>
+
+                                <div class="chart-wrap">
+                                    <div class="chart-row">
+                                        <span class="chart-label">P(D|+) (PPV)</span>
+                                        <div class="chart-bar-bg">
+                                            <div id="bayesTruePositiveBar" class="chart-bar theoretical"></div>
+                                        </div>
+                                        <span id="bayesPPV" class="chart-value">0%</span>
+                                    </div>
+                                    <div class="chart-row">
+                                        <span class="chart-label">P(¬D|+) (falešně +)</span>
+                                        <div class="chart-bar-bg">
+                                            <div id="bayesFalsePositiveBar" class="chart-bar frequency"></div>
+                                        </div>
+                                        <span id="bayesFalsePositivePosterior" class="chart-value">0%</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="bayesPrevalenceInput">Prevalence P(D) v %</label>
+                                    <input id="bayesPrevalenceInput" type="number" min="0.001" max="100" step="0.001" value="1">
+                                </div>
+                                <div class="control-group">
+                                    <label for="bayesSensitivityInput">Senzitivita P(+|D) v %</label>
+                                    <input id="bayesSensitivityInput" type="number" min="0" max="100" step="0.1" value="95">
+                                </div>
+                                <div class="control-group">
+                                    <label for="bayesSpecificityInput">Specificita P(-|¬D) v %</label>
+                                    <input id="bayesSpecificityInput" type="number" min="0" max="100" step="0.1" value="95">
+                                </div>
+                                <div class="control-group">
+                                    <label for="bayesPopulationInput">Velikost modelové populace</label>
+                                    <input id="bayesPopulationInput" type="number" min="1000" max="1000000" step="1000" value="10000">
+                                </div>
+
+                                <div class="preset-buttons">
+                                    <button class="btn-outline bayes-preset-btn" data-prevalence="1" data-sensitivity="95" data-specificity="95">Vzácná nemoc</button>
+                                    <button class="btn-outline bayes-preset-btn" data-prevalence="10" data-sensitivity="95" data-specificity="95">Střední prevalence</button>
+                                    <button class="btn-outline bayes-preset-btn" data-prevalence="30" data-sensitivity="90" data-specificity="92">Vyšší prevalence</button>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Bayesův výpočet</strong>
+                                    <div class="equation-info">Čitatel: <span id="bayesNumerator">0</span></div>
+                                    <div class="equation-info">Jmenovatel: <span id="bayesDenominator">0</span></div>
+                                    <div id="bayesPosterior" class="live-equation">P(D|+) = 0</div>
+                                    <div id="bayesPPositive" class="equation-info">P(+) = 0</div>
+                                    <div id="bayesNPV" class="equation-info">P(¬D|-) = 0</div>
+                                </div>
+
+                                <div class="info-card bayes-info-card">
+                                    <div class="info-card-icon">i</div>
+                                    <div class="info-card-content">
+                                        <h4>Interpretace</h4>
+                                        <p id="bayesInterpretation">
+                                            Nastavte parametry testu a prevalence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="podminena-pravdepodobnost">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičení s okamžitou zpětnou vazbou</h1>
+                    <p>
+                        U každé úlohy po kontrole okamžitě uvidíte správné řešení.
+                        U chybné odpovědi je správný výsledek i postup explicitně dopsán.
                     </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1" data-type="fraction" data-answer="2/3" data-answer-display="2/3"
+                            data-explanation="Na kostce: A = sudé {2,4,6}, B = číslo větší než 3 {4,5,6}. Sjednocení je {2,4,5,6}, tedy 4 z 6 výsledků, takže 4/6 = 2/3.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Na férové kostce: A = „padne sudé číslo“, B = „padne číslo větší než 3“. Určete P(A ∪ B).</p>
+                                <div class="answer-input-row">
+                                    <label for="ex1Input">P(A ∪ B) =</label>
+                                    <input id="ex1Input" type="text" placeholder="např. 2/3 nebo 0,6667">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2" data-type="choice" data-answer="c" data-answer-display="P(A ∩ B) = P(A)·P(B)"
+                            data-explanation="Správné kriterium nezávislosti je P(A ∩ B) = P(A)·P(B).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Které tvrzení přesně charakterizuje nezávislost jevů A a B?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="a">
+                                        <span>A ∪ B = Ω</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="b">
+                                        <span>A ∩ B = ∅</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="c">
+                                        <span>P(A ∩ B) = P(A)·P(B)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex2" value="d">
+                                        <span>P(A|B) = P(B|A)</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3" data-type="fraction" data-answer="1/6" data-answer-display="1/6"
+                            data-explanation="Při podmínce B: „první kostka je 5“ zůstává 6 možností (5,1) až (5,6). Součet 10 nastane jen u (5,5), tedy 1 z 6.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>U dvou hodů kostkou: A = „součet je 10“, B = „první kostka je 5“. Určete P(A|B).</p>
+                                <div class="answer-input-row">
+                                    <label for="ex3Input">P(A|B) =</label>
+                                    <input id="ex3Input" type="text" placeholder="např. 1/6">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise4" data-type="fraction" data-answer="1/6" data-answer-display="1/6 (≈16,67 %)"
+                            data-explanation="Bayes: P(D|+) = (0,99·0,01) / [(0,99·0,01) + (0,05·0,99)] = 0,0099 / 0,0594 = 1/6.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    Test: senzitivita 99 %, specificita 95 %, prevalence nemoci 1 %.
+                                    Jaká je pravděpodobnost, že člověk má nemoc při pozitivním testu?
+                                </p>
+                                <div class="answer-input-row">
+                                    <label for="ex4Input">P(D|+) =</label>
+                                    <input id="ex4Input" type="text" placeholder="např. 1/6, 0.1667 nebo 16.67%">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise5" data-type="choice" data-answer="b" data-answer-display="PPV roste"
+                            data-explanation="Při stejné kvalitě testu vede vyšší prevalence obvykle k vyšší hodnotě P(D|+) (vyšší PPV).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jak se při stejné senzitivě a specificitě typicky změní PPV, když prevalence roste?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex5" value="a">
+                                        <span>PPV klesá</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex5" value="b">
+                                        <span>PPV roste</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex5" value="c">
+                                        <span>PPV je stejné</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex5" value="d">
+                                        <span>PPV vždy vyjde 50 %</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>
+                            Máte zvládnuté sjednocení jevů, nezávislost, podmíněnou pravděpodobnost
+                            i interpretaci testů pomocí Bayesovy věty.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="uvodni-problem-s-testem-a-bayesova-veta">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
     <script src="lesson.js"></script>
 </body>
 

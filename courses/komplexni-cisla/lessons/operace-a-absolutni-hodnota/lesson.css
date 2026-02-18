@@ -1,0 +1,72 @@
+@import url("../uvod-do-komplexnich-cisel/lesson.css");
+
+.lesson-nav-current {
+    color: var(--text-primary);
+}
+
+.lesson-section h1 {
+    font-size: 2.1rem;
+}
+
+.lesson-section .lead {
+    max-width: 86ch;
+}
+
+.equation-large {
+    line-height: 1.8;
+}
+
+.examples-grid .example-card {
+    min-height: 172px;
+}
+
+.calc-panel h4 {
+    margin-bottom: 0.6rem;
+}
+
+.canvas-instructions {
+    width: max-content;
+    max-width: calc(100% - 2rem);
+}
+
+.reference-box {
+    margin: 2rem 0 1.2rem;
+    padding: 1.25rem 1.4rem;
+    border-radius: var(--radius-lg);
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+}
+
+.reference-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.45rem;
+    font-size: 1rem;
+}
+
+.reference-box p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.exercise-input.correct-answer {
+    border-color: #10b981;
+    box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.exercise-input.incorrect-answer {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+@media (max-width: 1024px) {
+    .lesson-section h1 {
+        font-size: 1.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .reference-box {
+        padding: 1rem;
+    }
+}

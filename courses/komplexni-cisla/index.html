@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Komplexní čísla - struktura kurzu od úvodu přes operace a goniometrický tvar až po řešení rovnic a rozklad na součin.">
+    <title>Komplexní čísla – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Komplexní čísla</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Komplexní čísla</h1>
+                    <p class="course-description">
+                        Kurz je připravený jako struktura 4 kapitol. Pokrývá úvod do komplexních čísel, základní
+                        operace a absolutní hodnotu, goniometrický tvar a převody mezi tvary i využití při řešení
+                        rovnic a rozkladu na součin. Obsah jednotlivých sekcí nyní slouží jako připravená osnova.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">4 kapitoly</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~5 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">16 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/uvod-do-komplexnich-cisel/index.html#intro" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="25" y1="170" x2="175" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="100" y1="30" x2="100" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="25" y1="100" x2="175" y2="100" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="100" y1="100" x2="145" y2="65" stroke="#6366f1" stroke-width="2.6" />
+                            <line x1="100" y1="100" x2="135" y2="145" stroke="#10b981" stroke-width="2.6" />
+                            <path d="M120 100 A20 20 0 0 1 114 85" fill="none" stroke="#f59e0b" stroke-width="2.2" />
+                            <circle cx="145" cy="65" r="4" fill="#6366f1" />
+                            <circle cx="135" cy="145" r="4" fill="#10b981" />
+                            <text x="149" y="66" fill="#93c5fd" font-size="10" font-family="Inter">z</text>
+                            <text x="138" y="158" fill="#86efac" font-size="10" font-family="Inter">z'</text>
+                            <text x="119" y="88" fill="#f59e0b" font-size="10" font-family="Inter">φ</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">z = a + bi</div>
+                        <div class="formula formula-2">|z| = √(a² + b²)</div>
+                        <div class="formula formula-3">z = r(cos φ + i sin φ)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění obsahu</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Úvod do komplexních čísel</h3>
+                            <p class="chapter-description">Motivace, řešení rovnic a geometrická interpretace jako rotace</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/uvod-do-komplexnich-cisel/index.html#intro" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvod do komplexních čísel</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-do-komplexnich-cisel/index.html#equations" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Komplexní čísla jako řešení rovnic</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-do-komplexnich-cisel/index.html#rotation" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Komplexní čísla jako rotace</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Operace a absolutní hodnota</h3>
+                            <p class="chapter-description">Sčítání, odčítání, násobení, dělení a absolutní hodnota</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/operace-a-absolutni-hodnota/index.html#scitani-a-odcitani-komplexnich-cisel" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Sčítání a odčítání komplexních čísel</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-a-absolutni-hodnota/index.html#nasobeni-komplexnich-cisel" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Násobení komplexních čísel</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-a-absolutni-hodnota/index.html#deleni-komplexnich-cisel" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Dělení komplexních čísel</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-a-absolutni-hodnota/index.html#absolutni-hodnota-komplexniho-cisla" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Absolutní hodnota komplexního čísla</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Goniometrický tvar komplexního čísla</h3>
+                            <p class="chapter-description">Převody mezi tvary a operace v goniometrickém tvaru</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">6 témat</span>
+                            <span class="chapter-time">~90 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#goniometricky-tvar-komplexniho-cisla" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Goniometrický tvar komplexního čísla</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#prevod-z-algebraickeho-na-goniometricky-tvar" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Převod z algebraického na goniometrický tvar</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#prevod-z-goniometrickeho-na-algebraicky-tvar" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Převod z goniometrického na algebraický tvar</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#soucet-a-rozdil-v-goniometrickem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Součet a rozdíl v goniometrickém tvaru</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#soucin-v-goniometrickem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Součin v goniometrickém tvaru</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/goniometricky-tvar-komplexniho-cisla/index.html#podil-v-goniometrickem-tvaru" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Podíl v goniometrickém tvaru</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Řešení rovnic a rozklad na součin</h3>
+                            <p class="chapter-description">Komplexní řešení kvadratické rovnice a rozklad mnohočlenů</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/reseni-rovnic-a-rozklad-na-soucin/index.html#komplexni-reseni-kvadraticke-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Komplexní řešení kvadratické rovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/reseni-rovnic-a-rozklad-na-soucin/index.html#tvorba-kvadraticke-rovnice" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Tvorba kvadratické rovnice</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/reseni-rovnic-a-rozklad-na-soucin/index.html#rozklad-mnohoclenu-na-soucin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rozklad mnohočlenů na součin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se v kurzu pokryje</h2>
+                <p class="section-subtitle">Přehled hlavních bloků připravených v osnově</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">i</div>
+                    <h3>Základ komplexních čísel</h3>
+                    <p>Význam jednotky i, algebraický tvar a základní motivace zavedení komplexních čísel.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">a+bi</div>
+                    <h3>Algebraické operace</h3>
+                    <p>Sčítání, odčítání, násobení a dělení komplexních čísel krok za krokem.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">|z|</div>
+                    <h3>Absolutní hodnota</h3>
+                    <p>Interpretace velikosti komplexního čísla a její využití ve výpočtech.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">cis φ</div>
+                    <h3>Goniometrický tvar</h3>
+                    <p>Převody mezi algebraickým a goniometrickým tvarem i práce s argumentem.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">z₁z₂</div>
+                    <h3>Operace v goniometrickém tvaru</h3>
+                    <p>Součet, rozdíl, součin a podíl komplexních čísel při práci s úhly a moduly.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">x²</div>
+                    <h3>Rovnice a rozklady</h3>
+                    <p>Komplexní řešení kvadratických rovnic a rozklad mnohočlenů na součin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Struktura kurzu Komplexní čísla je připravená. Nyní lze postupně doplnit detailní obsah témat.</p>
+                <a href="lessons/uvod-do-komplexnich-cisel/index.html#intro" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

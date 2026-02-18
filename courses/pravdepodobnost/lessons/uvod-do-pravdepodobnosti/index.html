@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Úvod do pravděpodobnosti: náhodný pokus, množina výsledků a naivní definice pravděpodobnosti.">
+        content="Úvod do pravděpodobnosti: náhodný pokus, množina výsledků, jevy a naivní definice pravděpodobnosti s interaktivními simulacemi a procvičováním.">
     <title>Úvod do pravděpodobnosti – Pravděpodobnost – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -42,46 +42,542 @@
                 </div>
 
                 <nav class="sidebar-nav">
-                    <a href="#nahodny-pokus-a-mnozina-vysledku" class="sidebar-link active" data-section="nahodny-pokus-a-mnozina-vysledku">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
                         <span class="sidebar-icon">1</span>
-                        Náhodný pokus a množina výsledků
+                        Proč pravděpodobnost
+                    </a>
+                    <a href="#nahodny-pokus-a-mnozina-vysledku" class="sidebar-link" data-section="nahodny-pokus-a-mnozina-vysledku">
+                        <span class="sidebar-icon">2</span>
+                        Náhodný pokus a Ω
+                    </a>
+                    <a href="#jevy-v-omega" class="sidebar-link" data-section="jevy-v-omega">
+                        <span class="sidebar-icon">3</span>
+                        Jevy v množině výsledků
                     </a>
                     <a href="#naivni-definice-pravdepodobnosti" class="sidebar-link" data-section="naivni-definice-pravdepodobnosti">
-                        <span class="sidebar-icon">2</span>
-                        Naivní definice pravděpodobnosti
+                        <span class="sidebar-icon">4</span>
+                        Naivní definice P
+                    </a>
+                    <a href="#simulace" class="sidebar-link" data-section="simulace">
+                        <span class="sidebar-icon">5</span>
+                        Simulace a frekvence
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
                     </a>
                 </nav>
 
-                <a href="../../index.html" class="lesson-back-link">← Zpět na kurz</a>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
             </aside>
 
             <div class="lesson-content">
-                <section id="nahodny-pokus-a-mnozina-vysledku" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
-                    <h1>Náhodný pokus a množina výsledků</h1>
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Úvod</div>
+                    <h1>Úvod do pravděpodobnosti</h1>
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        V této lekci zavedeme dva základní stavební kameny: <strong>náhodný pokus a množinu výsledků Ω</strong>,
+                        a pak na nich postavíme <strong>naivní (klasickou) definici pravděpodobnosti</strong>.
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: definice náhodného pokusu, elementární jevy, prostor všech možných výsledků.
-                    </p>
-                </section>
 
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Co musí po lekci sedět naprosto přesně</h4>
+                            <p>
+                                Budete umět rozlišit výsledek, jev a množinu výsledků, správně je zapisovat a
+                                počítat pravděpodobnost vzorcem <strong>P(A) = |A| / |Ω|</strong> vždy jen tehdy,
+                                když jsou všechny elementární výsledky stejně pravděpodobné.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Deterministická situace</h4>
+                            <ul>
+                                <li>Výsledek je předem jistý.</li>
+                                <li>Při stejných podmínkách vyjde vždy totéž.</li>
+                                <li>Příklad: 2 + 2 = 4.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Náhodná situace</h4>
+                            <ul>
+                                <li>Konkrétní výsledek před pokusem neznáme.</li>
+                                <li>Podmínky umíme opakovat.</li>
+                                <li>Příklad: hod férovou kostkou.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="nahodny-pokus-a-mnozina-vysledku">
+                        Pokračovat k náhodnému pokusu →
+                    </button>
+                </section>
+                <section id="nahodny-pokus-a-mnozina-vysledku" class="lesson-section">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Náhodný pokus a množina výsledků Ω</h1>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <p>
+                            <strong>Náhodný pokus</strong> je opakovatelný proces, jehož konkrétní výsledek předem neznáme.
+                            <strong>Množina výsledků</strong> (sample space) se značí <strong>Ω</strong> a obsahuje všechny
+                            možné elementární výsledky pokusu.
+                        </p>
+                        <div class="equation-large">Ω = {ω₁, ω₂, …, ωₙ}</div>
+                        <p>
+                            Jednotlivý elementární výsledek značíme <strong>ω</strong>. Jev <strong>A</strong> je podmnožina Ω.
+                        </p>
+                    </div>
+
+                    <p>
+                        Interaktivně si vyzkoušejte různé náhodné pokusy. Sledujte, jak se mění velikost Ω, velikost jevu A a
+                        výpočet pravděpodobnosti.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivní laboratoř pokusů</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div id="outcomeGrid" class="outcome-grid"></div>
+                                <div class="canvas-instructions">
+                                    <span>Vybraný jev A je zvýrazněn modře, poslední hod oranžově.</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="expSelect">Vyberte náhodný pokus</label>
+                                    <select id="expSelect">
+                                        <option value="die">Hod férovou kostkou</option>
+                                        <option value="coins">Dva hody mincí</option>
+                                        <option value="suits">Barva náhodně tažené karty</option>
+                                    </select>
+                                </div>
+
+                                <div class="control-group">
+                                    <label for="eventSelect">Vyberte jev A</label>
+                                    <select id="eventSelect"></select>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Zápis jevu</strong>
+                                    <div id="eventSet" class="live-equation">{ }</div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>Počty výsledků</h4>
+                                    <div class="property-row">
+                                        <span>|Ω|</span>
+                                        <span id="omegaSize">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>|A|</span>
+                                        <span id="eventSize">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>P(A)</span>
+                                        <span id="eventProbability">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Výpočet</strong>
+                                    <div id="eventFormula" class="live-equation">P(A) = |A| / |Ω|</div>
+                                    <div id="eventExplanation" class="equation-info"></div>
+                                </div>
+
+                                <button id="drawOutcomeBtn" class="btn-outline">Náhodný výsledek</button>
+                                <div class="equation-display">
+                                    <strong>Poslední výsledek</strong>
+                                    <div id="drawResult" class="live-equation">–</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="jevy-v-omega">Pokračovat →</button>
+                    </div>
+                </section>
+                <section id="jevy-v-omega" class="lesson-section">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Jevy jako podmnožiny Ω</h1>
+
+                    <p>
+                        V pravděpodobnosti je klíčové správně modelovat jevy. Pokud je Ω konečná, každý jev je jednoduše množina
+                        elementárních výsledků.
+                    </p>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Základní typy jevů</h4>
+                            <ul>
+                                <li><strong>Elementární jev</strong>: obsahuje právě jeden výsledek.</li>
+                                <li><strong>Jistý jev</strong>: je celý prostor Ω.</li>
+                                <li><strong>Nemožný jev</strong>: prázdná množina ∅.</li>
+                                <li><strong>Doplňkový jev</strong>: Aᶜ = Ω \ A.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Rychlý příklad</h4>
+                            <p>Hod kostkou: Ω = {1, 2, 3, 4, 5, 6}</p>
+                            <ul>
+                                <li>A = {2, 4, 6} (sudé číslo)</li>
+                                <li>Aᶜ = {1, 3, 5} (liché číslo)</li>
+                                <li>∅ = {} (např. „padne 7“)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Sestavte vlastní jev A</h3>
+                        <p>Klikáním vybírejte výsledky, které patří do jevu A, a sledujte P(A) i P(Aᶜ).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div id="builderGrid" class="outcome-grid"></div>
+                                <div class="canvas-instructions">
+                                    <span>Kliknutím přidáte nebo odeberete výsledek z jevu A.</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="builderExpSelect">Model pokusu</label>
+                                    <select id="builderExpSelect">
+                                        <option value="die">Hod kostkou</option>
+                                        <option value="coins">Dva hody mincí</option>
+                                    </select>
+                                </div>
+
+                                <div class="equation-display">
+                                    <strong>Aktuální jev</strong>
+                                    <div id="builderSet" class="live-equation">A = { }</div>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>Počty a pravděpodobnosti</h4>
+                                    <div class="property-row">
+                                        <span>|A|</span>
+                                        <span id="builderEventSize">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>P(A)</span>
+                                        <span id="builderProbability">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>P(Aᶜ)</span>
+                                        <span id="builderComplementProbability">1</span>
+                                    </div>
+                                </div>
+
+                                <div class="vector-actions">
+                                    <button id="builderClearBtn" class="btn-outline btn-small">Vymazat jev A</button>
+                                    <button id="builderRandomBtn" class="btn-outline btn-small">Náhodně vyplnit A</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="nahodny-pokus-a-mnozina-vysledku">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="naivni-definice-pravdepodobnosti">Pokračovat →</button>
+                    </div>
+                </section>
                 <section id="naivni-definice-pravdepodobnosti" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Naivní definice pravděpodobnosti</h1>
+
                     <p class="lead">
-                        Struktura tématu je připravena. V další fázi sem doplníme výklad, příklady a procvičování.
+                        Pokud je Ω konečná a všechny elementární výsledky jsou stejně pravděpodobné, počítáme pravděpodobnost jevu A
+                        jako poměr počtu příznivých výsledků k počtu všech výsledků.
                     </p>
-                    <p class="topic-note">
-                        Plánovaný obsah: pravděpodobnost jako podíl příznivých a všech stejně pravděpodobných případů.
+
+                    <div class="definition-box">
+                        <h4>Naivní (klasická) definice</h4>
+                        <div class="equation-large">P(A) = |A| / |Ω|</div>
+                        <p>
+                            Platí pouze při <strong>konečném počtu výsledků</strong> a <strong>stejné pravděpodobnosti</strong>
+                            každého elementárního výsledku.
+                        </p>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">!</div>
+                        <div class="info-card-content">
+                            <h4>Kdy tento vzorec nepoužít</h4>
+                            <p>
+                                Například u <strong>neférové kostky</strong>, kde některá čísla padají častěji, nebo u
+                                <strong>spojitých veličin</strong> (např. přesný čas nebo výška), kde Ω není konečná.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="example-grid">
+                        <article class="example-card">
+                            <h3>Příklad 1: Sudé číslo na kostce</h3>
+                            <p>Ω = {1, 2, 3, 4, 5, 6}, A = {2, 4, 6}</p>
+                            <p class="example-result">P(A) = 3/6 = 1/2 = 0.5</p>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad 2: Součet 7 při dvou kostkách</h3>
+                            <p>|Ω| = 36 uspořádaných dvojic, |A| = 6 dvojic se součtem 7</p>
+                            <p class="example-result">P(A) = 6/36 = 1/6 ≈ 0.1667</p>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Kalkulačka naivní pravděpodobnosti</h3>
+                        <p>Zadejte počet příznivých a všech možných výsledků.</p>
+                        <div class="demo-container">
+                            <div class="demo-canvas-wrapper formula-panel">
+                                <div class="formula-center">
+                                    <div class="formula-title">Vzorec</div>
+                                    <div class="equation-large">P(A) = m / n</div>
+                                    <div class="formula-note">kde m = |A|, n = |Ω|, 0 ≤ m ≤ n</div>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="favorableInput">Počet příznivých výsledků m = |A|</label>
+                                    <input id="favorableInput" type="number" min="0" step="1" value="3">
+                                </div>
+                                <div class="control-group">
+                                    <label for="totalInput">Počet všech výsledků n = |Ω|</label>
+                                    <input id="totalInput" type="number" min="1" step="1" value="8">
+                                </div>
+                                <button id="calcProbabilityBtn" class="btn-primary">Spočítat P(A)</button>
+                                <div class="equation-display">
+                                    <strong>Výsledek</strong>
+                                    <div id="calcResult" class="live-equation">P(A) = 3/8 = 0.375</div>
+                                    <div id="calcHint" class="equation-info">Zlomek je již v základním tvaru.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="jevy-v-omega">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="simulace">Pokračovat →</button>
+                    </div>
+                </section>
+                <section id="simulace" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Simulace: teorie vs. relativní četnost</h1>
+
+                    <p>
+                        Naivní definice dává teoretickou hodnotu pravděpodobnosti. V reálném experimentu ji odhadujeme
+                        pomocí relativní četnosti:
                     </p>
+                    <div class="equation-large">fₙ(A) = počet výskytů A / počet pokusů n</div>
+                    <p>
+                        S rostoucím počtem pokusů se relativní četnost obvykle přibližuje teoretické pravděpodobnosti.
+                    </p>
+
+                    <div class="interactive-demo">
+                        <h3>Simulátor četnosti</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <div class="chart-wrap">
+                                    <div class="chart-row">
+                                        <span class="chart-label">Teorie P(A)</span>
+                                        <div class="chart-bar-bg">
+                                            <div id="theoreticalBar" class="chart-bar theoretical" style="width: 0%"></div>
+                                        </div>
+                                        <span id="theoreticalValue" class="chart-value">0</span>
+                                    </div>
+                                    <div class="chart-row">
+                                        <span class="chart-label">Četnost fₙ(A)</span>
+                                        <div class="chart-bar-bg">
+                                            <div id="frequencyBar" class="chart-bar frequency" style="width: 0%"></div>
+                                        </div>
+                                        <span id="frequencyValue" class="chart-value">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="trial-log-panel">
+                                    <h4>Poslední výsledky</h4>
+                                    <div id="trialLog" class="trial-log"></div>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="simExpSelect">Pokus</label>
+                                    <select id="simExpSelect">
+                                        <option value="die">Hod kostkou</option>
+                                        <option value="coins">Dva hody mincí</option>
+                                        <option value="suits">Barva karty</option>
+                                    </select>
+                                </div>
+                                <div class="control-group">
+                                    <label for="simEventSelect">Jev A</label>
+                                    <select id="simEventSelect"></select>
+                                </div>
+
+                                <div class="vector-info-panel">
+                                    <h4>Statistika simulace</h4>
+                                    <div class="property-row">
+                                        <span>Počet pokusů n</span>
+                                        <span id="simTrials">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>Počet úspěchů</span>
+                                        <span id="simHits">0</span>
+                                    </div>
+                                    <div class="property-row">
+                                        <span>Absolutní rozdíl</span>
+                                        <span id="simDifference">0</span>
+                                    </div>
+                                </div>
+
+                                <div class="simulation-actions">
+                                    <button class="btn-outline sim-run-btn" data-run="10">+10 pokusů</button>
+                                    <button class="btn-outline sim-run-btn" data-run="100">+100 pokusů</button>
+                                    <button class="btn-outline sim-run-btn" data-run="1000">+1000 pokusů</button>
+                                </div>
+                                <button id="simResetBtn" class="btn-primary">Reset simulace</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="naivni-definice-pravdepodobnosti">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičení s okamžitou zpětnou vazbou</h1>
+                    <p>Po odeslání uvidíte správné řešení. U chybné odpovědi se správná varianta rovnou zvýrazní.</p>
+
+                    <div class="exercise-container">
+                        <div class="exercise" id="exercise1" data-type="choice" data-answer="b"
+                            data-explanation="Dva hody mincí dávají 4 uspořádané výsledky: OO, OP, PO, PP.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik elementárních výsledků má pokus „dva hody mincí“?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="a">
+                                        <span>2</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="b">
+                                        <span>4</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="c">
+                                        <span>8</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex1" value="d">
+                                        <span>16</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise2" data-type="fraction" data-answer="1/3"
+                            data-explanation="Na kostce je jev A = {5, 6}, takže |A| = 2 a |Ω| = 6. Platí 2/6 = 1/3.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>
+                                    U férové kostky definujte jev A: „padne číslo větší než 4“. Zapište P(A) jako zlomek.
+                                </p>
+                                <div class="answer-input-row">
+                                    <label for="ex2Input">P(A) =</label>
+                                    <input id="ex2Input" type="text" placeholder="např. 1/3">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise3" data-type="choice" data-answer="c"
+                            data-explanation="Naivní definice vyžaduje stejně pravděpodobné výsledky. U nefér kostky to neplatí.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kde nelze bez úprav použít naivní definici P(A) = |A|/|Ω|?</p>
+                                <div class="exercise-options">
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="a">
+                                        <span>Hod férovou kostkou</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="b">
+                                        <span>Losování barvy karty (4 barvy stejně často)</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="c">
+                                        <span>Hod nefér kostkou</span>
+                                    </label>
+                                    <label class="option">
+                                        <input type="radio" name="ex3" value="d">
+                                        <span>Dva hody férovou mincí</span>
+                                    </label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </div>
+
+                        <div class="exercise" id="exercise4" data-type="fraction" data-answer="1/6"
+                            data-explanation="U dvou kostek je 36 stejně pravděpodobných uspořádaných dvojic. Součet 7 vznikne v 6 případech: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je pravděpodobnost, že při dvou hodech kostkou bude součet 7?</p>
+                                <div class="answer-input-row">
+                                    <label for="ex4Input">P(A) =</label>
+                                    <input id="ex4Input" type="text" placeholder="např. 1/6">
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>
+                            Máte zvládnuté základy: model náhodného pokusu, práci s množinou výsledků Ω i naivní definici
+                            pravděpodobnosti.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="simulace">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
     <script src="lesson.js"></script>
 </body>
 

@@ -1,0 +1,621 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Řešení rovnic a rozklad na součin: komplexní řešení kvadratické rovnice, tvorba kvadratické rovnice a rozklad mnohočlenů na součin.">
+    <title>Řešení rovnic a rozklad na součin - Komplexní čísla - ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Komplexní čísla</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 4: Řešení rovnic a rozklad na součin</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 4</h3>
+                    <p>Řešení rovnic a rozklad na součin</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#komplexni-reseni-kvadraticke-rovnice" class="sidebar-link active"
+                        data-section="komplexni-reseni-kvadraticke-rovnice">
+                        <span class="sidebar-icon">1</span>
+                        Komplexní řešení kvadratické rovnice
+                    </a>
+                    <a href="#tvorba-kvadraticke-rovnice" class="sidebar-link" data-section="tvorba-kvadraticke-rovnice">
+                        <span class="sidebar-icon">2</span>
+                        Tvorba kvadratické rovnice
+                    </a>
+                    <a href="#rozklad-mnohoclenu-na-soucin" class="sidebar-link" data-section="rozklad-mnohoclenu-na-soucin">
+                        <span class="sidebar-icon">3</span>
+                        Rozklad mnohočlenů na součin
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 33.4%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh hotovo</div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="komplexni-reseni-kvadraticke-rovnice" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Komplexní řešení kvadratické rovnice</h1>
+                    <p class="lead">
+                        Kvadratická rovnice <span class="math-inline">\(ax^2+bx+c=0\)</span> má v oboru
+                        <span class="math-inline">\(\mathbb{C}\)</span> vždy dva kořeny (počítáme-li násobnosti).
+                        Pokud je diskriminant záporný, kořeny nejsou reálné, ale komplexně sdružené.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy</h4>
+                        <div class="equation-large">
+                            \[
+                            D=b^2-4ac,\qquad
+                            x_{1,2}=\frac{-b\pm\sqrt{D}}{2a},\quad a\neq 0
+                            \]
+                        </div>
+                        <ul>
+                            <li>Pro <span class="math-inline">\(D&gt;0\)</span>: dva různé reálné kořeny.</li>
+                            <li>Pro <span class="math-inline">\(D=0\)</span>: jeden dvojnásobný reálný kořen.</li>
+                            <li>Pro <span class="math-inline">\(D&lt;0\)</span>: dva komplexně sdružené kořeny
+                                <span class="math-inline">\(\alpha\pm\beta i\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="case-grid">
+                        <article class="case-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(x^2-6x+13=0\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(D=(-6)^2-4\cdot1\cdot13=-16\)</span></div>
+                                <div><span class="math-inline">\(x=\frac{6\pm\sqrt{-16}}{2}=\frac{6\pm4i}{2}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x_{1,2}=3\pm2i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="case-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(2x^2+4x+5=0\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(D=4^2-4\cdot2\cdot5=-24\)</span></div>
+                                <div><span class="math-inline">\(x=\frac{-4\pm\sqrt{-24}}{4}=\frac{-4\pm2\sqrt6\,i}{4}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x_{1,2}=-1\pm\frac{\sqrt6}{2}i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Rychlá kontrola správnosti</h4>
+                            <p>
+                                U rovnice <span class="math-inline">\(ax^2+bx+c=0\)</span> musí platit
+                                <span class="math-inline">\(x_1+x_2=-\frac{b}{a}\)</span> a
+                                <span class="math-inline">\(x_1x_2=\frac{c}{a}\)</span>. Tyto dvě kontroly jsou nejrychlejší
+                                způsob, jak odhalit chybu ve výpočtu kořenů.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: kořeny kvadratické rovnice v komplexní rovině</h3>
+                        <p>Měňte koeficienty <strong>a, b, c</strong>. Graf i výpočty se okamžitě aktualizují.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadraticComplexCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Body x₁ a x₂ jsou kořeny rovnice</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Koeficienty rovnice</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="qcAValue">1</span></label>
+                                        <input type="range" id="qcASlider" min="-5" max="5" step="1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="qcBValue">-6</span></label>
+                                        <input type="range" id="qcBSlider" min="-14" max="14" step="1" value="-6">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="qcCValue">13</span></label>
+                                        <input type="range" id="qcCSlider" min="-20" max="20" step="1" value="13">
+                                    </div>
+                                    <button id="qcRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div id="qcEquation" class="equation-inline">x² - 6x + 13 = 0</div>
+                                    <div id="qcRoot1" class="equation-inline equation-inline-secondary">x₁ = 3 + 2i</div>
+                                    <div id="qcRoot2" class="equation-inline equation-inline-secondary">x₂ = 3 - 2i</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>D</span>
+                                            <span id="qcDiscriminant" class="calc-value">-16</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>√D</span>
+                                            <span id="qcSqrtD" class="calc-value">4i</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Typ kořenů</span>
+                                            <span id="qcRootType" class="calc-value highlight">komplexně sdružené</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>x₁ + x₂</span>
+                                            <span id="qcSumCheck" class="calc-value">6 = -b/a</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>x₁ · x₂</span>
+                                            <span id="qcProductCheck" class="calc-value">13 = c/a</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kontrola sdružení</span>
+                                            <span id="qcConjugateCheck" class="calc-value">ano</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="b"
+                            data-correct-label="\(x_{1,2}=4\pm2i\)"
+                            data-explanation="Diskriminant je \(D=(-8)^2-4\cdot1\cdot20=-16\), tedy \(\sqrt{D}=4i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete kořeny rovnice <span class="math-inline">\(x^2-8x+20=0\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(x_{1,2}=4\pm4i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(x_{1,2}=4\pm2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(x_{1,2}=-4\pm2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\(x_{1,2}=8\pm2i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="c"
+                            data-correct-label="\(x^2+4x+13=0\)"
+                            data-explanation="Pro kořeny \(-2\pm3i\) je součet \(-4\) a součin \(13\). Monická rovnice je \(x^2-(-4)x+13=0\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Která rovnice má kořeny <span class="math-inline">\(-2+3i\)</span> a <span class="math-inline">\(-2-3i\)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(x^2-4x+13=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(x^2+4x-13=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(x^2+4x+13=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(x^2-2x+13=0\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="tvorba-kvadraticke-rovnice">
+                            Pokračovat na tvorbu kvadratické rovnice →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="tvorba-kvadraticke-rovnice" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Tvorba kvadratické rovnice</h1>
+                    <p class="lead">
+                        Když znáte kořeny, rovnici umíte složit přímo. Tento postup je zásadní nejen pro kvadratické
+                        rovnice, ale i pro rozklad mnohočlenů vyšších stupňů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Rovnice z kořenů</h4>
+                        <div class="equation-large">
+                            \[
+                            x_1, x_2\ \text{jsou kořeny} \iff a(x-x_1)(x-x_2)=0,\, a\neq0
+                            \]
+                            \[
+                            ax^2-a(x_1+x_2)x+a\,x_1x_2=0
+                            \]
+                        </div>
+                        <ul>
+                            <li>Pro monickou rovnici <span class="math-inline">\(a=1\)</span> platí
+                                <span class="math-inline">\(x^2-Sx+P=0\)</span>, kde
+                                <span class="math-inline">\(S=x_1+x_2\)</span>, <span class="math-inline">\(P=x_1x_2\)</span>.</li>
+                            <li>Pokud má rovnice reálné koeficienty a kořen <span class="math-inline">\(p+qi\)</span>,
+                                pak musí mít i <span class="math-inline">\(p-qi\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task">Kořeny: <span class="math-inline">\(x_1=5,\ x_2=-1\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\((x-5)(x+1)=0\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x^2-4x-5=0\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task">Kořeny: <span class="math-inline">\(3\pm2i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\((x-(3+2i))(x-(3-2i))=0\)</span></div>
+                                <div><span class="math-inline">\((x-3)^2+4=0\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x^2-6x+13=0\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task">Dáno: <span class="math-inline">\(S=7,\ P=10\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(x^2-Sx+P=0\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x^2-7x+10=0\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: sestavte rovnici z kořenů \(p\pm qi\)</h3>
+                        <p>Upravujte hodnoty <strong>a</strong>, <strong>p</strong> a <strong>q</strong>. Sledujte faktorový i rozvinutý tvar.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="builderCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Kořeny jsou symetrické podle osy Re</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry kořenů</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="qbAValue">1</span></label>
+                                        <input type="range" id="qbASlider" min="-4" max="4" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>p = <span id="qbPValue">3</span></label>
+                                        <input type="range" id="qbPSlider" min="-6" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>q = <span id="qbQValue">2</span></label>
+                                        <input type="range" id="qbQSlider" min="0" max="6" step="0.5" value="2">
+                                    </div>
+                                    <button id="qbRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Vytvořená rovnice</h4>
+                                    <div id="qbRoot1" class="equation-inline equation-inline-secondary">x₁ = 3 + 2i</div>
+                                    <div id="qbRoot2" class="equation-inline equation-inline-secondary">x₂ = 3 - 2i</div>
+                                    <div id="qbFactorComplex" class="equation-inline equation-inline-secondary">(x - (3 + 2i))(x - (3 - 2i)) = 0</div>
+                                    <div id="qbFactorReal" class="equation-inline equation-inline-secondary">x² - 6x + 13 = 0</div>
+                                    <div id="qbEquation" class="equation-inline">x² - 6x + 13 = 0</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola přes Vieteho vztahy</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Součet kořenů</span>
+                                            <span id="qbSumCheck" class="calc-value">6 = -B/A</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Součin kořenů</span>
+                                            <span id="qbProductCheck" class="calc-value">13 = C/A</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Koeficienty</span>
+                                            <span id="qbCoeffCheck" class="calc-value highlight">A=1, B=-6, C=13</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="d"
+                            data-correct-label="\(x^2-2x+17=0\)"
+                            data-explanation="Pro \(x_1=1-4i\), \(x_2=1+4i\): součet je \(2\), součin \(17\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Sestavte monickou rovnici s kořeny <span class="math-inline">\(1-4i\)</span> a <span class="math-inline">\(1+4i\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\(x^2+2x+17=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\(x^2-2x-17=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\(x^2-8x+17=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(x^2-2x+17=0\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="b"
+                            data-correct-label="\(x_{1,2}=\frac{5\pm3\sqrt3\,i}{2}\)"
+                            data-explanation="Po vydělení 2 dostaneme \(x^2-5x+13=0\). Diskriminant je \(25-52=-27\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete kořeny rovnice <span class="math-inline">\(2x^2-10x+26=0\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\(x_{1,2}=5\pm3\sqrt3\,i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(x_{1,2}=\frac{5\pm3\sqrt3\,i}{2}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>\(x_{1,2}=\frac{-5\pm3\sqrt3\,i}{2}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\(x_{1,2}=\frac{5\pm\sqrt3\,i}{2}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="komplexni-reseni-kvadraticke-rovnice">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="rozklad-mnohoclenu-na-soucin">Pokračovat na rozklad mnohočlenů →</button>
+                    </div>
+                </section>
+
+                <section id="rozklad-mnohoclenu-na-soucin" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Rozklad mnohočlenů na součin</h1>
+                    <p class="lead">
+                        Jakmile znáte kořeny, můžete mnohočlen přepsat na součin lineárních nebo kvadratických faktorů.
+                        V oboru <span class="math-inline">\(\mathbb{C}\)</span> lze každý mnohočlen (stupně alespoň 1)
+                        rozložit na lineární činitele.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Klíčové věty</h4>
+                        <div class="equation-large">
+                            \[
+                            P(r)=0 \iff (x-r)\ \text{je dělitelem}\ P(x)
+                            \]
+                            \[
+                            P(x)=a\prod_{k=1}^{n}(x-r_k),\quad a\neq0
+                            \]
+                        </div>
+                        <ul>
+                            <li>Pro reálné koeficienty se komplexní kořeny vyskytují ve sdružených dvojicích.</li>
+                            <li>Z dvojice <span class="math-inline">\(p\pm qi\)</span> dostanete reálný faktor
+                                <span class="math-inline">\((x-p)^2+q^2\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(x^3-3x^2+4x-12\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(P(3)=0\Rightarrow (x-3)\)</span></div>
+                                <div><span class="math-inline">\(x^3-3x^2+4x-12=(x-3)(x^2+4)\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\((x-3)(x-2i)(x+2i)\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(x^4+5x^2+6\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\((x^2+2)(x^2+3)\)</span></div>
+                                <div><span class="math-inline">\(x^2+2=(x-i\sqrt2)(x+i\sqrt2)\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(x^4+5x^2+6=\prod (x-r_k)\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(x^3-6x^2+13x-10\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(P(2)=0\Rightarrow (x-2)\)</span></div>
+                                <div><span class="math-inline">\(= (x-2)(x^2-4x+5)\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=(x-2)(x-(2+i))(x-(2-i))\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: rozklad kubického mnohočlenu</h3>
+                        <p>Generujeme mnohočlen tvaru <span class="math-inline">\(a(x-r)((x-p)^2+q^2)\)</span> a sledujeme rozklad nad
+                            <span class="math-inline">\(\mathbb{R}\)</span> i <span class="math-inline">\(\mathbb{C}\)</span>.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="factorCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Kořeny: jeden reálný + sdružená dvojice</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Parametry</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="fcAValue">1</span></label>
+                                        <input type="range" id="fcASlider" min="-3" max="3" step="1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>r = <span id="fcRValue">3</span></label>
+                                        <input type="range" id="fcRSlider" min="-5" max="5" step="1" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>p = <span id="fcPValue">0</span></label>
+                                        <input type="range" id="fcPSlider" min="-4" max="4" step="0.5" value="0">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>q = <span id="fcQValue">2</span></label>
+                                        <input type="range" id="fcQSlider" min="0" max="4" step="0.5" value="2">
+                                    </div>
+                                    <button id="fcRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Rozklad</h4>
+                                    <div id="fcPolynomial" class="equation-inline">x³ - 3x² + 4x - 12</div>
+                                    <div id="fcFactorR" class="equation-inline equation-inline-secondary">(x - 3)(x² + 4)</div>
+                                    <div id="fcFactorC" class="equation-inline equation-inline-secondary">(x - 3)(x - 2i)(x + 2i)</div>
+                                    <div id="fcRootsList" class="equation-inline equation-inline-secondary">Kořeny: 3, 2i, -2i</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Kvocient po dělení (x-r)</span>
+                                            <span id="fcQuotient" class="calc-value">x² + 4</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>P(r)</span>
+                                            <span id="fcPRootCheck" class="calc-value">0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Diskriminant kvadr. faktoru</span>
+                                            <span id="fcDiscCheck" class="calc-value">-16</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Sdružená dvojice</span>
+                                            <span id="fcConjugateText" class="calc-value highlight">ano, protože Δ &lt; 0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="a"
+                            data-correct-label="\((x-3)(x-2i)(x+2i)\)"
+                            data-explanation="Nejprve \(x^3-3x^2+4x-12=(x-3)(x^2+4)\), pak \(x^2+4=(x-2i)(x+2i)\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyberte úplný rozklad nad <span class="math-inline">\(\mathbb{C}\)</span> pro
+                                    <span class="math-inline">\(x^3-3x^2+4x-12\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\((x-3)(x-2i)(x+2i)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\((x+3)(x-2i)(x+2i)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\((x-3)(x^2-4)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\((x-3)(x-4i)(x+4i)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="c"
+                            data-correct-label="\((x-2)(x^2-4x+5)\)"
+                            data-explanation="Po ověření \(P(2)=0\) vyjde po dělení kvocient \(x^2-4x+5\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Rozložte v <span class="math-inline">\(\mathbb{R}[x]\)</span> mnohočlen
+                                    <span class="math-inline">\(x^3-6x^2+13x-10\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>\((x-2)(x^2+4x+5)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>\((x+2)(x^2-4x+5)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\((x-2)(x^2-4x+5)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\((x-1)(x^2-5x+10)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 6</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="reference-box">
+                        <h3>Kontrola matematické správnosti</h3>
+                        <p>Obsah i vzorce v této lekci jsou postavené na standardních definicích kvadratické rovnice,
+                            vztahu mezi kořeny a koeficienty a větách o rozkladu mnohočlenů.</p>
+                        <ul class="reference-list">
+                            <li><a href="https://openstax.org/books/algebra-and-trigonometry-2e/pages/2-5-complex-numbers" target="_blank" rel="noopener noreferrer">OpenStax: Complex Numbers</a></li>
+                            <li><a href="https://openstax.org/books/algebra-and-trigonometry-2e/pages/3-6-zeros-of-polynomial-functions" target="_blank" rel="noopener noreferrer">OpenStax: Zeros of Polynomial Functions</a></li>
+                            <li><a href="https://encyclopediaofmath.org/wiki/Conjugate_roots_theorem" target="_blank" rel="noopener noreferrer">Encyclopedia of Mathematics: Conjugate Roots Theorem</a></li>
+                            <li><a href="https://mathworld.wolfram.com/QuadraticEquation.html" target="_blank" rel="noopener noreferrer">Wolfram MathWorld: Quadratic Equation</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="tvorba-kvadraticke-rovnice">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>
+

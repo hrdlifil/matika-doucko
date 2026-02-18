@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Goniometrický tvar komplexního čísla: převody mezi algebraickým a goniometrickým tvarem, součet, rozdíl, součin a podíl.">
+    <title>Goniometrický tvar komplexního čísla - Komplexní čísla - ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Komplexní čísla</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 3: Goniometrický tvar komplexního čísla</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 3</h3>
+                    <p>Goniometrický tvar komplexního čísla</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#goniometricky-tvar-komplexniho-cisla" class="sidebar-link active"
+                        data-section="goniometricky-tvar-komplexniho-cisla">
+                        <span class="sidebar-icon">1</span>
+                        Goniometrický tvar komplexního čísla
+                    </a>
+                    <a href="#prevod-z-algebraickeho-na-goniometricky-tvar" class="sidebar-link"
+                        data-section="prevod-z-algebraickeho-na-goniometricky-tvar">
+                        <span class="sidebar-icon">2</span>
+                        Převod z algebraického na goniometrický tvar
+                    </a>
+                    <a href="#prevod-z-goniometrickeho-na-algebraicky-tvar" class="sidebar-link"
+                        data-section="prevod-z-goniometrickeho-na-algebraicky-tvar">
+                        <span class="sidebar-icon">3</span>
+                        Převod z goniometrického na algebraický tvar
+                    </a>
+                    <a href="#soucet-a-rozdil-v-goniometrickem-tvaru" class="sidebar-link"
+                        data-section="soucet-a-rozdil-v-goniometrickem-tvaru">
+                        <span class="sidebar-icon">4</span>
+                        Součet a rozdíl v goniometrickém tvaru
+                    </a>
+                    <a href="#soucin-v-goniometrickem-tvaru" class="sidebar-link"
+                        data-section="soucin-v-goniometrickem-tvaru">
+                        <span class="sidebar-icon">5</span>
+                        Součin v goniometrickém tvaru
+                    </a>
+                    <a href="#podil-v-goniometrickem-tvaru" class="sidebar-link"
+                        data-section="podil-v-goniometrickem-tvaru">
+                        <span class="sidebar-icon">6</span>
+                        Podíl v goniometrickém tvaru
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 16.7%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh hotovo</div>
+                </div>
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="goniometricky-tvar-komplexniho-cisla" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Goniometrický tvar komplexního čísla</h1>
+                    <p class="lead">
+                        Každé nenulové komplexní číslo <span class="math-inline">\(z=a+bi\)</span> lze zapsat jako
+                        <span class="math-inline">\(z=r(\cos\varphi+i\sin\varphi)\)</span>.
+                        Modul <span class="math-inline">\(r=|z|\)</span> říká „délku“ vektoru a argument
+                        <span class="math-inline">\(\varphi\)</span> jeho směr.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy</h4>
+                        <div class="equation-large">
+                            \[
+                            z=r(\cos\varphi+i\sin\varphi),\qquad
+                            r=\sqrt{a^2+b^2},\quad
+                            \cos\varphi=\frac{a}{r},\ \sin\varphi=\frac{b}{r}
+                            \]
+                        </div>
+                        <ul>
+                            <li>Pro <span class="math-inline">\(z\neq0\)</span> je <span class="math-inline">\(\varphi\)</span> určeno až na násobky <span class="math-inline">\(2\pi\)</span>.</li>
+                            <li>Všechny argumenty mají tvar <span class="math-inline">\(\varphi+2k\pi,\ k\in\mathbb{Z}\)</span>.</li>
+                            <li>Pro <span class="math-inline">\(z=0\)</span> je argument nedefinovaný.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Hlavní argument</h4>
+                            <p>
+                                Často používáme hlavní argument
+                                <span class="math-inline">\(\mathrm{Arg}(z)\in(-\pi,\pi]\)</span>.
+                                V některých učebnicích se používá interval <span class="math-inline">\([0,2\pi)\)</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(z=1+i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(r=\sqrt{1^2+1^2}=\sqrt2\)</span></div>
+                                <div><span class="math-inline">\(\varphi=45^\circ\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(z=\sqrt2(\cos45^\circ+i\sin45^\circ)\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(z=-\sqrt3+i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(r=2\)</span></div>
+                                <div><span class="math-inline">\(\varphi=150^\circ\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(z=2(\cos150^\circ+i\sin150^\circ)\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: bod v komplexní rovině</h3>
+                        <p>Táhněte bod <strong>Z</strong>. Vpravo se okamžitě aktualizuje modul, argument i zápis v goniometrickém tvaru.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="polarIntroCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Táhněte bod Z nebo použijte posuvníky</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Souřadnice</h4>
+                                    <div class="control-group">
+                                        <label>Re(z) = <span id="introReValue">3</span></label>
+                                        <input type="range" id="introReSlider" min="-6" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Im(z) = <span id="introImValue">2</span></label>
+                                        <input type="range" id="introImSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <button id="introRandomBtn" class="btn-outline btn-small">Náhodné z</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Aktuální zápis</h4>
+                                    <div id="introCartesian" class="equation-inline">z = 3 + 2i</div>
+                                    <div id="introTrig" class="equation-inline equation-inline-secondary">z = 3.606(cos 33.69° + i sin 33.69°)</div>
+                                    <div id="introCis" class="equation-inline equation-inline-secondary">z = 3.606 cis 33.69°</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Parametry</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|z|</span>
+                                            <span id="introModulus" class="calc-value">3.606</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Arg(z) [rad]</span>
+                                            <span id="introArgRad" class="calc-value">0.588</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Arg(z) [°]</span>
+                                            <span id="introArgDeg" class="calc-value">33.69°</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Všechny argumenty</span>
+                                            <span id="introArgFamily" class="calc-value highlight">33.69° + k·360°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="c"
+                            data-correct-label="\(2(\cos120^\circ+i\sin120^\circ)\)"
+                            data-explanation="Pro \(z=-1+\sqrt3\,i\) je \(r=\sqrt{1+3}=2\) a argument je \(120^\circ\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Který goniometrický tvar odpovídá číslu <span class="math-inline">\(z=-1+\sqrt3\,i\)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(2(\cos60^\circ+i\sin60^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(\sqrt2(\cos120^\circ+i\sin120^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(2(\cos120^\circ+i\sin120^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\(2(\cos240^\circ+i\sin240^\circ)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="prevod-z-algebraickeho-na-goniometricky-tvar">
+                            Pokračovat na převod z algebraického tvaru →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="prevod-z-algebraickeho-na-goniometricky-tvar" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Převod z algebraického na goniometrický tvar</h1>
+                    <p class="lead">
+                        Z čísla <span class="math-inline">\(z=a+bi\)</span> počítáme modul
+                        <span class="math-inline">\(r=\sqrt{a^2+b^2}\)</span> a argument
+                        <span class="math-inline">\(\varphi\)</span>.
+                        U argumentu je zásadní správně určit kvadrant.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Bezpečný algoritmus</h4>
+                        <ol class="steps-list">
+                            <li>
+                                <span class="step-title">1) Modul</span>
+                                <span class="step-text">\[
+                                    r=\sqrt{a^2+b^2}
+                                    \]</span>
+                            </li>
+                            <li>
+                                <span class="step-title">2) Argument</span>
+                                <span class="step-text">
+                                    Použijte <span class="math-inline">\(\varphi=\operatorname{atan2}(b,a)\)</span>
+                                    (hlavní argument v intervalu <span class="math-inline">\((-180^\circ,180^\circ]\)</span>).
+                                </span>
+                            </li>
+                            <li>
+                                <span class="step-title">3) Výsledek</span>
+                                <span class="step-text">\[
+                                    z=r(\cos\varphi+i\sin\varphi)=r\,\mathrm{cis}\,\varphi
+                                    \]</span>
+                            </li>
+                        </ol>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba</h4>
+                            <p>
+                                Samotné <span class="math-inline">\(\arctan(b/a)\)</span> nepozná kvadrant.
+                                Pro <span class="math-inline">\((-2,2)\)</span> vychází referenční úhel
+                                <span class="math-inline">\(45^\circ\)</span>, ale správný argument je
+                                <span class="math-inline">\(135^\circ\)</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Řešený příklad</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad</h3>
+                            <p class="example-task"><span class="math-inline">\(z=-2-2i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(r=\sqrt{4+4}=2\sqrt2\)</span></div>
+                                <div><span class="math-inline">\(\varphi=225^\circ\)</span> (nebo <span class="math-inline">\(-135^\circ\)</span>)</div>
+                                <div class="equation-final"><span class="math-inline">\(z=2\sqrt2(\cos225^\circ+i\sin225^\circ)\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: převod \(a+bi \to r(\cos\varphi+i\sin\varphi)\)</h3>
+                        <p>Nastavte <span class="math-inline">\(a\)</span> a <span class="math-inline">\(b\)</span>, sledujte kvadrant, argument a finální zápis.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="algToPolarCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Táhněte bod nebo měňte posuvníky</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Algebraický tvar</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="algReValue">-2</span></label>
+                                        <input type="range" id="algReSlider" min="-6" max="6" step="0.5" value="-2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="algImValue">3</span></label>
+                                        <input type="range" id="algImSlider" min="-6" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="preset-buttons">
+                                        <button class="btn-outline btn-small alg-preset" data-re="2" data-im="2">I</button>
+                                        <button class="btn-outline btn-small alg-preset" data-re="-2" data-im="2">II</button>
+                                        <button class="btn-outline btn-small alg-preset" data-re="-2" data-im="-2">III</button>
+                                        <button class="btn-outline btn-small alg-preset" data-re="2" data-im="-2">IV</button>
+                                    </div>
+                                    <button id="algRandomBtn" class="btn-outline btn-small">Náhodný příklad</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek převodu</h4>
+                                    <div id="algStepFormula" class="equation-inline">φ = atan2(3, -2) = 123.69°</div>
+                                    <div id="algTrigResult" class="equation-inline equation-inline-secondary">z = 3.606(cos 123.69° + i sin 123.69°)</div>
+                                    <div id="algCisResult" class="equation-inline equation-inline-secondary">z = 3.606 cis 123.69°</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrolní hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>|z|</span>
+                                            <span id="algRValue" class="calc-value">3.606</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Referenční úhel α</span>
+                                            <span id="algAlphaValue" class="calc-value">56.31°</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kvadrant</span>
+                                            <span id="algQuadrant" class="calc-value">II</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Argument [0°, 360°)</span>
+                                            <span id="algArgValue0" class="calc-value">123.69°</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Hlavní argument</span>
+                                            <span id="algArgPrincipal" class="calc-value highlight">123.69°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="d"
+                            data-correct-label="\(2\sqrt2(\cos225^\circ+i\sin225^\circ)\)"
+                            data-explanation="Modul je \(2\sqrt2\), číslo je ve III. kvadrantu, proto \(225^\circ\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Převeďte <span class="math-inline">\(z=-2-2i\)</span> do goniometrického tvaru (úhel v <span class="math-inline">\([0^\circ,360^\circ)\)</span>).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(2(\cos225^\circ+i\sin225^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(2\sqrt2(\cos45^\circ+i\sin45^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(2\sqrt2(\cos315^\circ+i\sin315^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(2\sqrt2(\cos225^\circ+i\sin225^\circ)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="goniometricky-tvar-komplexniho-cisla">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="prevod-z-goniometrickeho-na-algebraicky-tvar">
+                            Pokračovat na převod do algebraického tvaru →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="prevod-z-goniometrickeho-na-algebraicky-tvar" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Převod z goniometrického na algebraický tvar</h1>
+                    <p class="lead">
+                        Převod je přímý:
+                        <span class="math-inline">\(a=r\cos\varphi\)</span>,
+                        <span class="math-inline">\(b=r\sin\varphi\)</span>,
+                        takže <span class="math-inline">\(z=a+bi\)</span>.
+                        U speciálních úhlů je výhodné použít přesné hodnoty funkcí.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorce</h4>
+                        <div class="equation-large">
+                            \[
+                            z=r(\cos\varphi+i\sin\varphi)=r\cos\varphi+i\,r\sin\varphi
+                            \]
+                            \[
+                            a=r\cos\varphi,\qquad b=r\sin\varphi
+                            \]
+                        </div>
+                    </div>
+
+                    <h2>Řešený příklad</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad</h3>
+                            <p class="example-task"><span class="math-inline">\(z=6(\cos150^\circ+i\sin150^\circ)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(a=6\cos150^\circ=-3\sqrt3\)</span></div>
+                                <div><span class="math-inline">\(b=6\sin150^\circ=3\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(z=-3\sqrt3+3i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: převod \(r,\varphi \to a+bi\)</h3>
+                        <p>Nastavte modul a úhel. Vpravo vidíte mezikroky i výsledný algebraický tvar.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="polarToAlgCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Táhněte bod nebo změňte r a φ</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Vstupní hodnoty</h4>
+                                    <div class="control-group">
+                                        <label>r = <span id="ptaRValue">4</span></label>
+                                        <input type="range" id="ptaRSlider" min="0" max="8" step="0.5" value="4">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>φ = <span id="ptaAngleValue">60°</span></label>
+                                        <input type="range" id="ptaAngleSlider" min="-180" max="180" step="5" value="60">
+                                    </div>
+                                    <div class="preset-buttons">
+                                        <button class="btn-outline btn-small pta-preset" data-r="4" data-angle="30">30°</button>
+                                        <button class="btn-outline btn-small pta-preset" data-r="4" data-angle="45">45°</button>
+                                        <button class="btn-outline btn-small pta-preset" data-r="4" data-angle="60">60°</button>
+                                        <button class="btn-outline btn-small pta-preset" data-r="4" data-angle="120">120°</button>
+                                    </div>
+                                    <button id="ptaRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div id="ptaCartesianResult" class="equation-inline">z = 2 + 3.464i</div>
+                                    <div id="ptaComplexResult" class="equation-inline equation-inline-secondary">a = r cos φ = 2, b = r sin φ = 3.464</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Mezikroky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>cos φ</span>
+                                            <span id="ptaCosValue" class="calc-value">0.5</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>sin φ</span>
+                                            <span id="ptaSinValue" class="calc-value">0.866</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>a = r cos φ</span>
+                                            <span id="ptaAValue" class="calc-value">2</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>b = r sin φ</span>
+                                            <span id="ptaBValue" class="calc-value highlight">3.464</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="complex-input" data-real="2" data-imag="3.464101615" data-tolerance="0.03"
+                            data-correct-label="\(2+2\sqrt3\,i\)"
+                            data-explanation="Pro \(z=4(\cos60^\circ+i\sin60^\circ)\) vyjde \(a=2\), \(b=2\sqrt3\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Převeďte <span class="math-inline">\(z=4(\cos60^\circ+i\sin60^\circ)\)</span> do tvaru <span class="math-inline">\(a+bi\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 2+3.464i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="prevod-z-algebraickeho-na-goniometricky-tvar">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="soucet-a-rozdil-v-goniometrickem-tvaru">
+                            Pokračovat na součet a rozdíl →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="soucet-a-rozdil-v-goniometrickem-tvaru" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Součet a rozdíl v goniometrickém tvaru</h1>
+                    <p class="lead">
+                        U součtu a rozdílu nepoužíváme jednoduché pravidlo přes moduly a argumenty.
+                        Nejprve čísla převedeme na <span class="math-inline">\(a+bi\)</span>, provedeme operaci a potom
+                        případně vracíme výsledek zpět do goniometrického tvaru.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Správný postup</h4>
+                        <div class="equation-large">
+                            \[
+                            z_1\pm z_2=
+                            (r_1\cos\varphi_1\pm r_2\cos\varphi_2)+
+                            i(r_1\sin\varphi_1\pm r_2\sin\varphi_2)
+                            \]
+                        </div>
+                        <ul>
+                            <li>Sečítáme a odečítáme reálné a imaginární složky.</li>
+                            <li>Teprve z výsledku počítáme nový modul a argument.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešený příklad</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad</h3>
+                            <p class="example-task"><span class="math-inline">\(z_1=2\,\mathrm{cis}\,30^\circ,\ z_2=2\,\mathrm{cis}\,150^\circ\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(z_1=\sqrt3+i,\ z_2=-\sqrt3+i\)</span></div>
+                                <div><span class="math-inline">\(z_1+z_2=2i\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(z_1-z_2=2\sqrt3\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: součet a rozdíl přes převod do \(a+bi\)</h3>
+                        <p>Upravujte oba vstupy v goniometrickém tvaru. Vpravo sledujte převod i finální výsledek.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="addSubPolarCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Modře z₁, oranžově z₂, zeleně z₁+z₂, růžově z₁-z₂</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Vstupní čísla</h4>
+                                    <div class="control-group">
+                                        <label>\(r_1\) = <span id="aspZ1RValue">2</span></label>
+                                        <input type="range" id="aspZ1RSlider" min="0" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_1\) = <span id="aspZ1AValue">30°</span></label>
+                                        <input type="range" id="aspZ1ASlider" min="-180" max="180" step="5" value="30">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(r_2\) = <span id="aspZ2RValue">2</span></label>
+                                        <input type="range" id="aspZ2RSlider" min="0" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_2\) = <span id="aspZ2AValue">150°</span></label>
+                                        <input type="range" id="aspZ2ASlider" min="-180" max="180" step="5" value="150">
+                                    </div>
+                                    <button id="aspRandomBtn" class="btn-outline btn-small">Náhodný příklad</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(z_1\) (alg)</span>
+                                            <span id="aspZ1Cart" class="calc-value">1.732 + 1i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(z_2\) (alg)</span>
+                                            <span id="aspZ2Cart" class="calc-value">-1.732 + 1i</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(z_1+z_2\)</span>
+                                            <span id="aspSumCart" class="calc-value highlight">0 + 2i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(z_1-z_2\)</span>
+                                            <span id="aspDiffCart" class="calc-value">3.464 + 0i</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Goniometrický tvar výsledků</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(z_1+z_2\)</span>
+                                            <span id="aspSumPolar" class="calc-value">2 cis 90°</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(z_1-z_2\)</span>
+                                            <span id="aspDiffPolar" class="calc-value">3.464 cis 0°</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Re součtu</span>
+                                            <span id="aspRealCheck" class="calc-value">1.732 + (-1.732) = 0</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Im součtu</span>
+                                            <span id="aspImagCheck" class="calc-value highlight">1 + 1 = 2</span>
+                                        </div>
+                                    </div>
+                                    <div id="aspMethodNote" class="topic-note compact-note">
+                                        Bezpečná metoda: polar → algebraický tvar → operace → případně zpět do polar.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="complex-input" data-real="3" data-imag="-4" data-tolerance="0.001"
+                            data-correct-label="\(3-4i\)"
+                            data-explanation="Protože \(3\,\mathrm{cis}\,0^\circ=3\) a \(4\,\mathrm{cis}\,90^\circ=4i\), platí \(z_1-z_2=3-4i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočtěte <span class="math-inline">\(z_1-z_2\)</span> pro <span class="math-inline">\(z_1=3\,\mathrm{cis}\,0^\circ\)</span>, <span class="math-inline">\(z_2=4\,\mathrm{cis}\,90^\circ\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 3-4i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="prevod-z-goniometrickeho-na-algebraicky-tvar">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="soucin-v-goniometrickem-tvaru">
+                            Pokračovat na součin →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="soucin-v-goniometrickem-tvaru" class="lesson-section">
+                    <div class="section-badge">Téma 5</div>
+                    <h1>Součin v goniometrickém tvaru</h1>
+                    <p class="lead">
+                        U součinu je goniometrický tvar nejefektivnější:
+                        moduly se násobí, argumenty se sčítají.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Pravidlo</h4>
+                        <div class="equation-large">
+                            \[
+                            z_1z_2=r_1r_2\left(\cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2)\right)
+                            \]
+                        </div>
+                        <ul>
+                            <li><span class="math-inline">\(|z_1z_2|=|z_1||z_2|\)</span>.</li>
+                            <li><span class="math-inline">\(\arg(z_1z_2)=\arg(z_1)+\arg(z_2)\ (\mathrm{mod}\ 2\pi)\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešený příklad</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad</h3>
+                            <p class="example-task"><span class="math-inline">\((3\,\mathrm{cis}\,25^\circ)(2\,\mathrm{cis}\,40^\circ)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(r=3\cdot2=6\)</span></div>
+                                <div><span class="math-inline">\(\varphi=25^\circ+40^\circ=65^\circ\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=6\,\mathrm{cis}\,65^\circ\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: kontrola pravidla pro součin</h3>
+                        <p>Upravujte oba činitele a sledujte součin současně v goniometrickém i algebraickém tvaru.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="multiplyPolarCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Modře z₁, oranžově z₂, zeleně z₁·z₂</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Vstupy</h4>
+                                    <div class="control-group">
+                                        <label>\(r_1\) = <span id="mpZ1RValue">3</span></label>
+                                        <input type="range" id="mpZ1RSlider" min="0" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_1\) = <span id="mpZ1AValue">25°</span></label>
+                                        <input type="range" id="mpZ1ASlider" min="-180" max="180" step="5" value="25">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(r_2\) = <span id="mpZ2RValue">2</span></label>
+                                        <input type="range" id="mpZ2RSlider" min="0" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_2\) = <span id="mpZ2AValue">40°</span></label>
+                                        <input type="range" id="mpZ2ASlider" min="-180" max="180" step="5" value="40">
+                                    </div>
+                                    <button id="mpRandomBtn" class="btn-outline btn-small">Náhodný příklad</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div id="mpZ1Polar" class="equation-inline">z₁ = 3 cis 25°</div>
+                                    <div id="mpZ2Polar" class="equation-inline equation-inline-secondary">z₂ = 2 cis 40°</div>
+                                    <div id="mpProductPolar" class="equation-inline equation-inline-secondary">z₁·z₂ = 6 cis 65°</div>
+                                    <div id="mpProductCart" class="equation-inline equation-inline-secondary">z₁·z₂ = 2.536 + 5.437i</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(|z_1z_2|\) vs \(|z_1||z_2|\)</span>
+                                            <span id="mpModCheck" class="calc-value">6 = 6</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Argument</span>
+                                            <span id="mpArgCheck" class="calc-value highlight">65° = 25° + 40°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="a"
+                            data-correct-label="\(6\,\mathrm{cis}\,65^\circ\)"
+                            data-explanation="Moduly násobíme \(3\cdot2=6\), argumenty sčítáme \(25^\circ+40^\circ\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">\((3\,\mathrm{cis}\,25^\circ)(2\,\mathrm{cis}\,40^\circ)\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(6\,\mathrm{cis}\,65^\circ\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(5\,\mathrm{cis}\,15^\circ\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(6\,\mathrm{cis}(-15^\circ)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\(6\,\mathrm{cis}\,100^\circ\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="soucet-a-rozdil-v-goniometrickem-tvaru">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="podil-v-goniometrickem-tvaru">
+                            Pokračovat na podíl →
+                        </button>
+                    </div>
+                </section>
+
+                <section id="podil-v-goniometrickem-tvaru" class="lesson-section">
+                    <div class="section-badge">Téma 6</div>
+                    <h1>Podíl v goniometrickém tvaru</h1>
+                    <p class="lead">
+                        U podílu dělíme moduly a odečítáme argumenty. Podmínka je
+                        <span class="math-inline">\(z_2\neq0\)</span>, tedy <span class="math-inline">\(r_2>0\)</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Pravidlo</h4>
+                        <div class="equation-large">
+                            \[
+                            \frac{z_1}{z_2}
+                            =\frac{r_1}{r_2}
+                            \left(\cos(\varphi_1-\varphi_2)+i\sin(\varphi_1-\varphi_2)\right),\quad r_2\neq0
+                            \]
+                        </div>
+                        <ul>
+                            <li><span class="math-inline">\(\left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}\)</span>.</li>
+                            <li><span class="math-inline">\(\arg\left(\frac{z_1}{z_2}\right)=\arg(z_1)-\arg(z_2)\ (\mathrm{mod}\ 2\pi)\)</span>.</li>
+                            <li>Kontrola: <span class="math-inline">\(\left(\frac{z_1}{z_2}\right)\cdot z_2=z_1\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešený příklad</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad</h3>
+                            <p class="example-task"><span class="math-inline">\(\frac{6\,\mathrm{cis}\,135^\circ}{3\,\mathrm{cis}\,45^\circ}\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(r=6/3=2\)</span></div>
+                                <div><span class="math-inline">\(\varphi=135^\circ-45^\circ=90^\circ\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=2\,\mathrm{cis}\,90^\circ=2i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: pravidlo pro podíl + numerická kontrola</h3>
+                        <p>Upravujte čitatel i jmenovatel. Vpravo vidíte podíl i kontrolu \((z_1/z_2)\cdot z_2\).</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="dividePolarCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Modře čitatel, oranžově jmenovatel, zeleně podíl</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Čitatel \(z_1\)</h4>
+                                    <div class="control-group">
+                                        <label>\(r_1\) = <span id="dpNumRValue">6</span></label>
+                                        <input type="range" id="dpNumRSlider" min="0" max="8" step="0.5" value="6">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_1\) = <span id="dpNumAValue">135°</span></label>
+                                        <input type="range" id="dpNumASlider" min="-180" max="180" step="5" value="135">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Jmenovatel \(z_2\)</h4>
+                                    <div class="control-group">
+                                        <label>\(r_2\) = <span id="dpDenRValue">3</span></label>
+                                        <input type="range" id="dpDenRSlider" min="0.5" max="8" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>\(\varphi_2\) = <span id="dpDenAValue">45°</span></label>
+                                        <input type="range" id="dpDenASlider" min="-180" max="180" step="5" value="45">
+                                    </div>
+                                    <button id="dpRandomBtn" class="btn-outline btn-small">Náhodný příklad</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek podílu</h4>
+                                    <div id="dpNumPolar" class="equation-inline">z₁ = 6 cis 135°</div>
+                                    <div id="dpDenPolar" class="equation-inline equation-inline-secondary">z₂ = 3 cis 45°</div>
+                                    <div id="dpQuotPolar" class="equation-inline equation-inline-secondary">z₁/z₂ = 2 cis 90°</div>
+                                    <div id="dpQuotCart" class="equation-inline equation-inline-secondary">z₁/z₂ = 0 + 2i</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(|z_1|/|z_2|\)</span>
+                                            <span id="dpModCheck" class="calc-value">2</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(\varphi_1-\varphi_2\)</span>
+                                            <span id="dpArgCheck" class="calc-value">90°</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\((z_1/z_2)\cdot z_2\)</span>
+                                            <span id="dpCheck" class="calc-value highlight">-4.243 + 4.243i</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="complex-input" data-real="0" data-imag="2" data-tolerance="0.001"
+                            data-correct-label="\(2i\)"
+                            data-explanation="\(\frac{6\,\mathrm{cis}\,135^\circ}{3\,\mathrm{cis}\,45^\circ}=2\,\mathrm{cis}\,90^\circ=2i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyjádřete v algebraickém tvaru <span class="math-inline">\(\frac{6\,\mathrm{cis}\,135^\circ}{3\,\mathrm{cis}\,45^\circ}\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 2i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 6</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="reference-box">
+                        <h3>Kontrola správnosti vzorců</h3>
+                        <p>Vzorce a pravidla odpovídají standardním definicím komplexních čísel v goniometrickém tvaru.</p>
+                        <ul class="reference-list">
+                            <li><a href="https://mathworld.wolfram.com/ComplexNumber.html" target="_blank" rel="noopener noreferrer">Wolfram MathWorld - Complex Number</a></li>
+                            <li><a href="https://mathworld.wolfram.com/PolarForm.html" target="_blank" rel="noopener noreferrer">Wolfram MathWorld - Polar Form</a></li>
+                            <li><a href="https://en.wikipedia.org/wiki/Argument_(complex_analysis)" target="_blank" rel="noopener noreferrer">Argument (complex analysis)</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="soucin-v-goniometrickem-tvaru">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>

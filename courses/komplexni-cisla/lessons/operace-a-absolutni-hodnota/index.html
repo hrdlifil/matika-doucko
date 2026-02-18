@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Operace a absolutní hodnota komplexních čísel: sčítání, odčítání, násobení, dělení a modul včetně interaktivních příkladů.">
+    <title>Operace a absolutní hodnota - Komplexní čísla - ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Komplexní čísla</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 2: Operace a absolutní hodnota</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 2</h3>
+                    <p>Operace a absolutní hodnota</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#scitani-a-odcitani-komplexnich-cisel" class="sidebar-link active"
+                        data-section="scitani-a-odcitani-komplexnich-cisel"><span class="sidebar-icon">1</span>Sčítání a odčítání</a>
+                    <a href="#nasobeni-komplexnich-cisel" class="sidebar-link"
+                        data-section="nasobeni-komplexnich-cisel"><span class="sidebar-icon">2</span>Násobení</a>
+                    <a href="#deleni-komplexnich-cisel" class="sidebar-link" data-section="deleni-komplexnich-cisel"><span
+                            class="sidebar-icon">3</span>Dělení</a>
+                    <a href="#absolutni-hodnota-komplexniho-cisla" class="sidebar-link"
+                        data-section="absolutni-hodnota-komplexniho-cisla"><span class="sidebar-icon">4</span>Absolutní hodnota</a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh hotovo</div>
+                </div>
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="scitani-a-odcitani-komplexnich-cisel" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Sčítání a odčítání komplexních čísel</h1>
+                    <p class="lead">
+                        V algebraickém tvaru <span class="math-inline">\(z=a+bi\)</span> počítáme po složkách:
+                        reálné části s reálnými, imaginární s imaginárními.
+                        Z geometrického pohledu v komplexní rovině jde o běžné sčítání a odčítání vektorů.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní pravidla</h4>
+                        <div class="equation-large">
+                            \[(a+bi)+(c+di)=(a+c)+(b+d)i\]
+                            \[(a+bi)-(c+di)=(a-c)+(b-d)i\]
+                        </div>
+                        <ul>
+                            <li>Nezapomeňte, že <span class="math-inline">\(i\)</span> je společný faktor imaginární části.</li>
+                            <li>Znaménko mínus před závorkou mění znaménka obou členů uvnitř.</li>
+                            <li>Výsledek vždy upravte do tvaru <span class="math-inline">\(x+yi\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Typická chyba</h4>
+                            <p>
+                                Při odčítání je časté opomenutí změny znaménka u imaginární části. Například
+                                <span class="math-inline">\((5+2i)-(1+7i)=4-5i\)</span>, nikoli
+                                <span class="math-inline">\(4+5i\)</span>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\((3-2i)+(4+9i)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=(3+4)+(-2+9)i\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=7+7i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\((5+2i)-(1+7i)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=(5-1)+(2-7)i\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=4-5i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\((-6+8i)-(-2-3i)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=(-6+2)+(8+3)i\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=-4+11i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: součet a rozdíl jako vektory</h3>
+                        <p>Táhněte body <strong>z₁</strong> a <strong>z₂</strong>, sledujte součet <strong>z₁+z₂</strong> a rozdíl <strong>z₁-z₂</strong>.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="addSubCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Táhněte body z₁ a z₂ v komplexní rovině</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení hodnot</h4>
+                                    <div class="control-group">
+                                        <label>Re(z₁) = <span id="addZ1ReValue">2</span></label>
+                                        <input type="range" id="addZ1ReSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Im(z₁) = <span id="addZ1ImValue">1.5</span></label>
+                                        <input type="range" id="addZ1ImSlider" min="-6" max="6" step="0.5" value="1.5">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Re(z₂) = <span id="addZ2ReValue">-1</span></label>
+                                        <input type="range" id="addZ2ReSlider" min="-6" max="6" step="0.5" value="-1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Im(z₂) = <span id="addZ2ImValue">2</span></label>
+                                        <input type="range" id="addZ2ImSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <button id="addSubRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>z₁</span>
+                                            <span id="addZ1Value" class="calc-value">2 + 1.5i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>z₂</span>
+                                            <span id="addZ2Value" class="calc-value">-1 + 2i</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>z₁ + z₂</span>
+                                            <span id="addSumValue" class="calc-value highlight">1 + 3.5i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>z₁ - z₂</span>
+                                            <span id="addDiffValue" class="calc-value">3 - 0.5i</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola složek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Re(z₁+z₂)</span>
+                                            <span id="addReCalc" class="calc-value">2 + (-1) = 1</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Im(z₁+z₂)</span>
+                                            <span id="addImCalc" class="calc-value">1.5 + 2 = 3.5</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|z₁+z₂|</span>
+                                            <span id="addSumAbs" class="calc-value">3.640</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|z₁-z₂|</span>
+                                            <span id="addDiffAbs" class="calc-value">3.041</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="b" data-correct-label="\(-5-2i\)"
+                            data-explanation="Reálné části: \(2+(-7)=-5\), imaginární části: \(-5+3=-2\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Spočítejte <span class="math-inline">\((2-5i)+(-7+3i)\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(-9+8i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(-5-2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(5-2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\(-5+2i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="complex-input" data-real="8" data-imag="-5" data-tolerance="0.001"
+                            data-correct-label="\(8-5i\)"
+                            data-explanation="Při odčítání závorky měníme znaménka: \((6+4i)-(-2+9i)=6+4i+2-9i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte <span class="math-inline">\((6+4i)-(-2+9i)\)</span> a zadejte ve tvaru <span class="math-inline">\(a+bi\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 8-5i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="nasobeni-komplexnich-cisel">Pokračovat na násobení →</button>
+                    </div>
+                </section>
+                <section id="nasobeni-komplexnich-cisel" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Násobení komplexních čísel</h1>
+                    <p class="lead">
+                        Násobení je algebraicky podobné násobení dvojčlenů. Klíčové je správně použít vztah
+                        <span class="math-inline">\(i^2=-1\)</span> a sjednotit výsledek do tvaru <span class="math-inline">\(x+yi\)</span>.
+                        Geometricky se násobí moduly a sčítají argumenty.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro součin</h4>
+                        <div class="equation-large">
+                            \[(a+bi)(c+di)=(ac-bd)+(ad+bc)i\]
+                        </div>
+                        <ul>
+                            <li>Reálná část výsledku: <span class="math-inline">\(ac-bd\)</span>.</li>
+                            <li>Imaginární část výsledku: <span class="math-inline">\(ad+bc\)</span>.</li>
+                            <li>Speciálně: násobení číslem <span class="math-inline">\(i\)</span> je rotace o <span class="math-inline">\(90^\circ\)</span>.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\((2+3i)(4-i)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=8-2i+12i-3i^2\)</span></div>
+                                <div><span class="math-inline">\(=8+10i+3\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=11+10i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\((-1+2i)(3+5i)\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=-3-5i+6i+10i^2\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=-13+i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\((1-i)^2\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=1-2i+i^2\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=-2i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: součin a geometrický význam</h3>
+                        <p>Táhněte <strong>z₁</strong>, měňte <strong>z₂</strong> posuvníky a sledujte součin <strong>z₁·z₂</strong>.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="multiplyCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Modře z₁, oranžově z₂, zeleně z₁·z₂</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení z₂</h4>
+                                    <div class="control-group">
+                                        <label>Re(z₂) = <span id="multZ2ReValue">1</span></label>
+                                        <input type="range" id="multZ2ReSlider" min="-4" max="4" step="0.5" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Im(z₂) = <span id="multZ2ImValue">2</span></label>
+                                        <input type="range" id="multZ2ImSlider" min="-4" max="4" step="0.5" value="2">
+                                    </div>
+                                    <button id="multRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výsledek součinu</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>z₁</span>
+                                            <span id="multZ1Value" class="calc-value">2 + 1i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>z₂</span>
+                                            <span id="multZ2Value" class="calc-value">1 + 2i</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>z₁·z₂</span>
+                                            <span id="multProductValue" class="calc-value highlight">0 + 5i</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontroly</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Re = ac - bd</span>
+                                            <span id="multRealCalc" class="calc-value">0</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Im = ad + bc</span>
+                                            <span id="multImagCalc" class="calc-value">5</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|z₁·z₂| vs |z₁||z₂|</span>
+                                            <span id="multModCheck" class="calc-value">5.000 = 5.000</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>arg(z₁·z₂) vs arg(z₁)+arg(z₂)</span>
+                                            <span id="multArgCheck" class="calc-value">90° = 90°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="d" data-correct-label="\(10-10i\)"
+                            data-explanation="\((3+i)(2-4i)=6-12i+2i-4i^2=10-10i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Spočítejte <span class="math-inline">\((3+i)(2-4i)\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\(2-10i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\(10+10i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\(8-8i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(10-10i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="complex-input" data-real="4" data-imag="7" data-tolerance="0.001"
+                            data-correct-label="\(4+7i\)"
+                            data-explanation="\((2-3i)(-1+2i)=-2+4i+3i-6i^2=4+7i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte <span class="math-inline">\((2-3i)(-1+2i)\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 4+7i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="scitani-a-odcitani-komplexnich-cisel">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="deleni-komplexnich-cisel">Pokračovat na dělení →</button>
+                    </div>
+                </section>
+                <section id="deleni-komplexnich-cisel" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Dělení komplexních čísel</h1>
+                    <p class="lead">
+                        Dělení provádíme přes komplexně sdružené číslo jmenovatele.
+                        Cílem je odstranit imaginární jednotku ze jmenovatele, aby výsledek byl ve standardním tvaru
+                        <span class="math-inline">\(x+yi\)</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Vzorec pro podíl</h4>
+                        <div class="equation-large">
+                            \[
+                            \frac{a+bi}{c+di}
+                            =\frac{(a+bi)(c-di)}{(c+di)(c-di)}
+                            =\frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}i,
+                            \quad c^2+d^2\neq0
+                            \]
+                        </div>
+                        <ul>
+                            <li>Komplexně sdružené k <span class="math-inline">\(c+di\)</span> je <span class="math-inline">\(c-di\)</span>.</li>
+                            <li>Jmenovatel po úpravě je vždy reálný: <span class="math-inline">\((c+di)(c-di)=c^2+d^2\)</span>.</li>
+                            <li>Dělení nulou (<span class="math-inline">\(c=d=0\)</span>) není definované.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(\frac{3+7i}{1-2i}\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=\frac{(3+7i)(1+2i)}{1^2+2^2}\)</span></div>
+                                <div><span class="math-inline">\(=\frac{-11+13i}{5}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=-\frac{11}{5}+\frac{13}{5}i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(\frac{5-4i}{2+i}\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=\frac{(5-4i)(2-i)}{2^2+1^2}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=\frac{6}{5}-\frac{13}{5}i\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(\frac{-2+i}{1+i}\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(=\frac{(-2+i)(1-i)}{1^2+1^2}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(=-\frac{1}{2}+\frac{3}{2}i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: dělení krok za krokem</h3>
+                        <p>Upravujte čitatel a jmenovatel. Vpravo vidíte sdružené číslo, mezikroky i finální výsledek.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="divisionCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Modře čitatel, oranžově jmenovatel, zeleně podíl</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Čitatel \(a+bi\)</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="divNumReValue">3</span></label>
+                                        <input type="range" id="divNumReSlider" min="-6" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="divNumImValue">2</span></label>
+                                        <input type="range" id="divNumImSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Jmenovatel \(c+di\)</h4>
+                                    <div class="control-group">
+                                        <label>c = <span id="divDenReValue">2</span></label>
+                                        <input type="range" id="divDenReSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>d = <span id="divDenImValue">-1</span></label>
+                                        <input type="range" id="divDenImSlider" min="-6" max="6" step="0.5" value="-1">
+                                    </div>
+                                    <button id="divRandomBtn" class="btn-outline btn-small">Náhodné zadání</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>Čitatel</span>
+                                            <span id="divNumeratorValue" class="calc-value">3 + 2i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Jmenovatel</span>
+                                            <span id="divDenominatorValue" class="calc-value">2 - 1i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Sdružené číslo</span>
+                                            <span id="divConjugateValue" class="calc-value">2 + 1i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Po roznásobení čitatele</span>
+                                            <span id="divExpandedNumValue" class="calc-value">8 + 1i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Po roznásobení jmenovatele</span>
+                                            <span id="divExpandedDenValue" class="calc-value">5</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Výsledek</span>
+                                            <span id="divResultValue" class="calc-value highlight">1.6 + 0.2i</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>Kontrola: (výsledek)·jmenovatel</span>
+                                            <span id="divCheckValue" class="calc-value">3 + 2i</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="c" data-correct-label="\(1+3i\)"
+                            data-explanation="\(\frac{4+2i}{1-i}=\frac{(4+2i)(1+i)}{1^2+1^2}=\frac{2+6i}{2}=1+3i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">\(\frac{4+2i}{1-i}\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(2+6i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(1-3i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(1+3i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\(3+i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="complex-input" data-real="0.2" data-imag="-2.6" data-tolerance="0.02"
+                            data-correct-label="\(\frac{1}{5}-\frac{13}{5}i\)"
+                            data-explanation="\(\frac{3-5i}{2+i}=\frac{(3-5i)(2-i)}{2^2+1^2}=\frac{1-13i}{5}\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočítejte <span class="math-inline">\(\frac{3-5i}{2+i}\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 0.2-2.6i nebo 1/5-13/5i">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="nasobeni-komplexnich-cisel">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="absolutni-hodnota-komplexniho-cisla">Pokračovat na absolutní hodnotu →</button>
+                    </div>
+                </section>
+                <section id="absolutni-hodnota-komplexniho-cisla" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Absolutní hodnota komplexního čísla</h1>
+                    <p class="lead">
+                        Absolutní hodnota (modul) komplexního čísla je jeho vzdálenost od počátku v komplexní rovině.
+                        Proto je vždy nezáporná. Dává přirozenou míru velikosti čísla
+                        <span class="math-inline">\(z=a+bi\)</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice a důležité vlastnosti</h4>
+                        <div class="equation-large">
+                            \[|z|=\sqrt{a^2+b^2},\quad z=a+bi\]
+                            \[|z|^2=z\overline{z}\]
+                            \[|z_1z_2|=|z_1||z_2|,\qquad \left|\frac{z_1}{z_2}\right|=\frac{|z_1|}{|z_2|}\ (z_2\neq0)\]
+                        </div>
+                        <ul>
+                            <li>Modul je vždy <span class="math-inline">\(\ge 0\)</span>.</li>
+                            <li><span class="math-inline">\(|z|=0\)</span> právě tehdy, když <span class="math-inline">\(z=0\)</span>.</li>
+                            <li>Pro reálné číslo se definice modulu shoduje s běžnou absolutní hodnotou.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Řešené příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(z=3-4i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(|z|=\sqrt{3^2+(-4)^2}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(|z|=5\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(z=-6+8i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(|z|=\sqrt{36+64}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(|z|=10\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(z=1-\sqrt{3}i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(|z|=\sqrt{1^2+(\sqrt{3})^2}\)</span></div>
+                                <div class="equation-final"><span class="math-inline">\(|z|=2\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: modul jako vzdálenost od počátku</h3>
+                        <p>Táhněte bod <strong>z</strong>. Kružnice ukazuje všechna čísla se stejným modulem.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="modulusCanvas" width="620" height="380"></canvas>
+                                <div class="canvas-instructions">Táhněte bod z; kružnice má poloměr |z|</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Souřadnice bodu</h4>
+                                    <div class="control-group">
+                                        <label>Re(z) = <span id="modReValue">3</span></label>
+                                        <input type="range" id="modReSlider" min="-7" max="7" step="0.5" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>Im(z) = <span id="modImValue">4</span></label>
+                                        <input type="range" id="modImSlider" min="-7" max="7" step="0.5" value="4">
+                                    </div>
+                                    <button id="modRandomBtn" class="btn-outline btn-small">Náhodné z</button>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Aktuální hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>z</span>
+                                            <span id="modZValue" class="calc-value">3 + 4i</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>|z|</span>
+                                            <span id="modAbsValue" class="calc-value highlight">5</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>|z|²</span>
+                                            <span id="modSquareValue" class="calc-value">25</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>z·z̄</span>
+                                            <span id="modConjValue" class="calc-value">25</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Krokový výpočet</h4>
+                                    <div id="modDistanceFormula" class="equation-inline-secondary">
+                                        |z| = √(3² + 4²) = 5
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="number-input" data-value="10" data-tolerance="0.001"
+                            data-correct-label="\(10\)" data-explanation="\(|-6+8i|=\sqrt{(-6)^2+8^2}=\sqrt{100}=10\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete <span class="math-inline">\(|-6+8i|\)</span>.</p>
+                                <div class="input-row">
+                                    <input type="text" class="exercise-input" placeholder="např. 10">
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="a" data-correct-label="\(|z^2|=9\)"
+                            data-explanation="Platí \(|z^n|=|z|^n\), proto pro \(|z|=3\) dostaneme \(|z^2|=3^2=9\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Je dáno <span class="math-inline">\(|z|=3\)</span>. Které tvrzení je správné?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"><span>\(|z^2|=9\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"><span>\(|z^2|=6\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"><span>\(|z^2|=3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="d"><span>\(|z^2|=12\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 8</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="reference-box">
+                        <h3>Ověření správnosti vzorců</h3>
+                        <p>
+                            Obsah je sestaven podle standardních definic a pravidel komplexních čísel
+                            (sčítání a odčítání po složkách, součin, podíl přes sdružené číslo, modul a jeho vlastnosti).
+                        </p>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="deleni-komplexnich-cisel">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>

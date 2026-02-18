@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Úvod do komplexních čísel: motivace, řešení rovnic v oboru C a geometrická interpretace násobení jako rotace.">
+    <title>Úvod do komplexních čísel – Komplexní čísla – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Komplexní čísla</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 1: Úvod do komplexních čísel</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Úvod do komplexních čísel</p>
+                </div>
+                <nav class="sidebar-nav">
+                    <a href="#intro" class="sidebar-link active" data-section="intro">
+                        <span class="sidebar-icon">1</span>
+                        Úvod do komplexních čísel
+                    </a>
+                    <a href="#equations" class="sidebar-link" data-section="equations">
+                        <span class="sidebar-icon">2</span>
+                        Komplexní čísla jako řešení rovnic
+                    </a>
+                    <a href="#rotation" class="sidebar-link" data-section="rotation">
+                        <span class="sidebar-icon">3</span>
+                        Komplexní čísla jako rotace
+                    </a>
+                </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 34%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh hotovo</div>
+                </div>
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="intro" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Úvod do komplexních čísel</h1>
+                    <p class="lead">
+                        Reálná čísla nestačí na každou rovnici. Například rovnice <span class="math-inline">\(x^2+1=0\)</span>
+                        nemá v <span class="math-inline">\(\mathbb{R}\)</span> řešení, protože žádné reálné číslo po umocnění
+                        nedá <span class="math-inline">\(-1\)</span>. Proto zavádíme imaginární jednotku
+                        <span class="math-inline">\(i\)</span> s vlastností <span class="math-inline">\(i^2=-1\)</span>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní definice</h4>
+                        <div class="equation-large">\(z = a + bi,\quad a,b\in\mathbb{R},\quad i^2=-1\)</div>
+                        <ul>
+                            <li><span class="math-inline">\(\operatorname{Re}(z)=a\)</span> je reálná část.</li>
+                            <li><span class="math-inline">\(\operatorname{Im}(z)=b\)</span> je imaginární část.</li>
+                            <li><span class="math-inline">\(\overline{z}=a-bi\)</span> je komplexně sdružené číslo.</li>
+                            <li><span class="math-inline">\(|z|=\sqrt{a^2+b^2}\)</span> je modul (vzdálenost od počátku).</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Důležitý detail</h4>
+                            <p>
+                                Komplexní číslo není „větší“ ani „menší“ než jiné komplexní číslo. V oboru
+                                <span class="math-inline">\(\mathbb{C}\)</span> pracujeme hlavně s operacemi, modulem a argumentem.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h2>Rychlé příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(z=-3+4i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(\operatorname{Re}(z)=-3\)</span></div>
+                                <div><span class="math-inline">\(\operatorname{Im}(z)=4\)</span></div>
+                                <div><span class="math-inline">\(|z|=\sqrt{(-3)^2+4^2}=5\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(z=2-5i\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(\overline{z}=2+5i\)</span></div>
+                                <div><span class="math-inline">\(z\overline{z}=|z|^2\)</span></div>
+                                <div><span class="math-inline">\(=(2-5i)(2+5i)=29\)</span></div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(i^{23}\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(i^1=i,\ i^2=-1,\ i^3=-i,\ i^4=1\)</span></div>
+                                <div><span class="math-inline">\(23\equiv 3 \pmod 4\)</span></div>
+                                <div><span class="math-inline">\(i^{23}=i^3=-i\)</span></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: číslo \(z=a+bi\) v komplexní rovině</h3>
+                        <p>Táhněte bod <strong>Z</strong> nebo použijte posuvníky. Sledujte modul, argument a sdružené číslo.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="complexPlaneCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-instructions">Táhněte bod Z v rovině</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Souřadnice čísla</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="reValue">2</span></label>
+                                        <input type="range" id="reSlider" min="-6" max="6" step="0.5" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="imValue">3</span></label>
+                                        <input type="range" id="imSlider" min="-6" max="6" step="0.5" value="3">
+                                    </div>
+                                    <div class="toggle-row">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" id="showConjugate" checked>
+                                            <span>Zobrazit \(\overline{z}\)</span>
+                                        </label>
+                                        <button id="randomComplexBtn" class="btn-outline btn-small">Náhodné \(z\)</button>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Aktuální číslo</h4>
+                                    <div id="complexNumberDisplay" class="equation-inline">\(z = 2 + 3i\)</div>
+                                    <div id="conjugateDisplay" class="equation-inline equation-inline-secondary">\(\overline{z}=2-3i\)</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Parametry</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(|z|\)</span>
+                                            <span id="modulusValue" class="calc-value">3.606</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(\arg(z)\) [rad]</span>
+                                            <span id="argRadValue" class="calc-value">0.983</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(\arg(z)\) [°]</span>
+                                            <span id="argDegValue" class="calc-value highlight">56.31°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="c"
+                            data-correct-label="\(\overline{z}=-2-5i\)"
+                            data-explanation="Komplexně sdružené číslo mění znaménko pouze u imaginární části.">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete sdružené číslo k <span class="math-inline">\(z=-2+5i\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(2+5i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(-2+5i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(-2-5i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\(2-5i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="d"
+                            data-correct-label="\(|3-4i|=5\)"
+                            data-explanation="Modul je \(\sqrt{3^2+(-4)^2}=\sqrt{25}=5\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete modul čísla <span class="math-inline">\(z=3-4i\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(7\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(\sqrt{7}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(5\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-primary btn-next" data-next="equations">Pokračovat na řešení rovnic →</button>
+                    </div>
+                </section>
+
+                <section id="equations" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Komplexní čísla jako řešení rovnic</h1>
+                    <p class="lead">
+                        Kvadratická rovnice <span class="math-inline">\(ax^2+bx+c=0\)</span> má diskriminant
+                        <span class="math-inline">\(D=b^2-4ac\)</span>. Pokud je <span class="math-inline">\(D<0\)</span>,
+                        v reálných číslech řešení neexistuje, ale v oboru komplexních čísel ano:
+                        <span class="math-inline">\(x=\frac{-b}{2a}\pm i\frac{\sqrt{-D}}{2a}\)</span>.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Klíčová věta</h4>
+                            <p>
+                                Fundamentální věta algebry říká, že každý nekonstantní polynom stupně
+                                <span class="math-inline">\(n\)</span> má v <span class="math-inline">\(\mathbb{C}\)</span>
+                                právě <span class="math-inline">\(n\)</span> kořenů (počítáme i násobnosti).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Vzorce pro kořeny kvadratické rovnice</h4>
+                        <div class="equation-large">\(x_{1,2}=\frac{-b\pm\sqrt{D}}{2a},\qquad D=b^2-4ac\)</div>
+                        <ul>
+                            <li><span class="math-inline">\(D&gt;0\)</span>: dva různé reálné kořeny.</li>
+                            <li><span class="math-inline">\(D=0\)</span>: jeden dvojnásobný reálný kořen.</li>
+                            <li><span class="math-inline">\(D&lt;0\)</span>: dva komplexně sdružené kořeny.</li>
+                        </ul>
+                    </div>
+
+                    <h2>Rychlé příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(x^2+1=0\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(x^2=-1\)</span></div>
+                                <div><span class="math-inline">\(x=\pm i\)</span></div>
+                                <div class="equation-final">\(K=\{i,-i\}\)</div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(x^2-6x+13=0\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(D=36-52=-16\)</span></div>
+                                <div><span class="math-inline">\(x=\frac{6\pm\sqrt{-16}}{2}\)</span></div>
+                                <div class="equation-final">\(x=3\pm 2i\)</div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(x^2+4x+5=0\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(D=16-20=-4\)</span></div>
+                                <div><span class="math-inline">\(x=\frac{-4\pm 2i}{2}\)</span></div>
+                                <div class="equation-final">\(x=-2\pm i\)</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: diskriminant a kořeny</h3>
+                        <p>Měňte koeficienty rovnice. Uvidíte typ kořenů i jejich polohu v komplexní rovině.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="rootsCanvas" width="620" height="360"></canvas>
+                                <div class="canvas-instructions">Zeleně jsou zobrazené kořeny rovnice</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Koeficienty</h4>
+                                    <div class="control-group">
+                                        <label>a = <span id="qaValue">1</span></label>
+                                        <input type="range" id="qaSlider" min="-5" max="5" step="1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>b = <span id="qbValue">-6</span></label>
+                                        <input type="range" id="qbSlider" min="-10" max="10" step="1" value="-6">
+                                    </div>
+                                    <div class="control-group">
+                                        <label>c = <span id="qcValue">13</span></label>
+                                        <input type="range" id="qcSlider" min="-15" max="15" step="1" value="13">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Rovnice</h4>
+                                    <div id="quadraticEqDisplay" class="equation-inline">\(x^2-6x+13=0\)</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledky</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(D=b^2-4ac\)</span>
+                                            <span id="discValue" class="calc-value">-16</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(x_1\)</span>
+                                            <span id="root1Value" class="calc-value">\(3+2i\)</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(x_2\)</span>
+                                            <span id="root2Value" class="calc-value">\(3-2i\)</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>Klasifikace</span>
+                                            <span id="rootTypeValue" class="calc-value highlight">2 komplexní kořeny</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="b"
+                            data-correct-label="Rovnice nemá reálné kořeny, v \(\mathbb{C}\) má \(x=-1\pm2i\)."
+                            data-explanation="Pro \(x^2+2x+5=0\) je \(D=4-20=-16&lt;0\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaký typ řešení má rovnice <span class="math-inline">\(x^2+2x+5=0\)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>Dva různé reálné kořeny.</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>Dva komplexně sdružené kořeny.</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>Jeden dvojnásobný reálný kořen.</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>Žádný kořen ani v \(\mathbb{C}\).</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="d"
+                            data-correct-label="\(x=2\pm2i\)"
+                            data-explanation="Pro \(x^2-4x+8=0\) je \(D=16-32=-16\), tedy \(x=\frac{4\pm4i}{2}=2\pm2i\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyberte správné řešení rovnice <span class="math-inline">\(x^2-4x+8=0\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\(x=4\pm2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(x=-2\pm2i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>\(x=2\pm i\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\(x=2\pm2i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intro">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="rotation">Pokračovat na rotace →</button>
+                    </div>
+                </section>
+
+                <section id="rotation" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Komplexní čísla jako rotace</h1>
+                    <p class="lead">
+                        V goniometrickém tvaru <span class="math-inline">\(z=r(\cos\varphi+i\sin\varphi)\)</span>
+                        se násobení chová geometricky:
+                        <span class="math-inline">\(z_1z_2=r_1r_2(\cos(\varphi_1+\varphi_2)+i\sin(\varphi_1+\varphi_2))\)</span>.
+                        To znamená: moduly se násobí a argumenty se sčítají.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Geometrický význam násobení</h4>
+                        <ul>
+                            <li>Násobení číslem <span class="math-inline">\(w\)</span> zvětší/zmenší délku vektoru <span class="math-inline">\(z\)</span> faktorem <span class="math-inline">\(|w|\)</span>.</li>
+                            <li>Současně otočí vektor o úhel <span class="math-inline">\(\arg(w)\)</span>.</li>
+                            <li>Speciálně <span class="math-inline">\(i=\cos\frac{\pi}{2}+i\sin\frac{\pi}{2}\)</span>, takže násobení <span class="math-inline">\(i\)</span> je rotace o <span class="math-inline">\(90^\circ\)</span> proti směru hodinových ručiček.</li>
+                        </ul>
+                        <div class="equation-large">\(w=(a+bi)\Rightarrow (x,y)\mapsto(ax-by,\;bx+ay)\)</div>
+                    </div>
+
+                    <h2>Rychlé příklady</h2>
+                    <div class="examples-grid">
+                        <article class="example-card">
+                            <h3>Příklad A</h3>
+                            <p class="example-task"><span class="math-inline">\(z=1,\;z\cdot i=i\)</span></p>
+                            <div class="equation-stack">
+                                <div>Vektor z osy Re se otočí na osu Im.</div>
+                                <div>Rotace o <span class="math-inline">\(90^\circ\)</span>, délka beze změny.</div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad B</h3>
+                            <p class="example-task"><span class="math-inline">\(z=2+2i,\;w=-1\)</span></p>
+                            <div class="equation-stack">
+                                <div><span class="math-inline">\(zw=-2-2i\)</span></div>
+                                <div>Rotace o <span class="math-inline">\(180^\circ\)</span>, modul se násobí 1.</div>
+                            </div>
+                        </article>
+                        <article class="example-card">
+                            <h3>Příklad C</h3>
+                            <p class="example-task"><span class="math-inline">\(|w|=2,\ \arg(w)=30^\circ\)</span></p>
+                            <div class="equation-stack">
+                                <div>Každý vektor se dvakrát prodlouží.</div>
+                                <div>Současně se otočí o <span class="math-inline">\(30^\circ\)</span>.</div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: násobení jako rotace a škálování</h3>
+                        <p>Táhněte bod <strong>Z</strong> a měňte násobitel <strong>w</strong>. Sledujte výsledný bod <span class="math-inline">\(Z'=wz\)</span>.</p>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="rotationCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-instructions">Modře: z, zeleně: z' = w·z</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Násobitel <span class="math-inline">\(w\)</span></h4>
+                                    <div class="control-group">
+                                        <label><span class="math-inline">\(|w|\)</span> = <span id="mulModValue">1.0</span></label>
+                                        <input type="range" id="mulModSlider" min="0.5" max="2.5" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label><span class="math-inline">\(\arg(w)\)</span> = <span id="mulArgValue">90°</span></label>
+                                        <input type="range" id="mulArgSlider" min="-180" max="180" step="5" value="90">
+                                    </div>
+                                    <div class="preset-buttons">
+                                        <button class="btn-outline btn-small preset-btn" data-mod="1" data-angle="90">\(i\)</button>
+                                        <button class="btn-outline btn-small preset-btn" data-mod="1" data-angle="-90">\(-i\)</button>
+                                        <button class="btn-outline btn-small preset-btn" data-mod="1" data-angle="180">\(-1\)</button>
+                                        <button class="btn-outline btn-small preset-btn" data-mod="2" data-angle="30">\(2\cdot cis\,30^\circ\)</button>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Aktuální transformace</h4>
+                                    <div id="multiplierDisplay" class="equation-inline">\(w=0+1i\)</div>
+                                    <div id="transformDisplay" class="equation-inline equation-inline-secondary">\(z' = w\cdot z\)</div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Hodnoty</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(z\)</span>
+                                            <span id="zValue" class="calc-value">\(2+1i\)</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(z'\)</span>
+                                            <span id="zPrimeValue" class="calc-value">\(-1+2i\)</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(|z'|/|z|\)</span>
+                                            <span id="scaleValue" class="calc-value">1.000</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(\arg(z')-\arg(z)\)</span>
+                                            <span id="angleShiftValue" class="calc-value highlight">90°</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" data-type="choice" data-answer="a"
+                            data-correct-label="Rotace o \(90^\circ\) proti směru hodinových ručiček."
+                            data-explanation="Číslo \(i\) má modul 1 a argument \(90^\circ\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Co geometricky znamená násobení komplexního čísla číslem <span class="math-inline">\(i\)</span>?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>Rotaci o <span class="math-inline">\(90^\circ\)</span> proti směru hodinových ručiček.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>Rotaci o <span class="math-inline">\(90^\circ\)</span> po směru hodinových ručiček.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>Pouze dvojnásobné zvětšení modulu.</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>Zrcadlení podle osy Re.</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" data-type="choice" data-answer="c"
+                            data-correct-label="\((1+i)(1-i)=2\)"
+                            data-explanation="Použijeme vzorec \((a+b)(a-b)=a^2-b^2\): \(1-i^2=2\).">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Spočítejte součin <span class="math-inline">\((1+i)(1-i)\)</span>.</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>\(0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>\(1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\(2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\(2i\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check">Zkontrolovat</button>
+                                <div class="exercise-feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div id="lessonComplete" class="lesson-complete hidden">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Správně vyřešeno: <strong id="finalScore">0 / 6</strong></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="equations">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>

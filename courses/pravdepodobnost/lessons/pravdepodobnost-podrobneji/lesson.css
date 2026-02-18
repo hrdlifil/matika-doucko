@@ -1,2 +1,140 @@
-/* Reuse the shared lesson shell styles for this course. */
-@import url("../../lesson-shell.css");
+@import url("../uvod-do-pravdepodobnosti/lesson.css");
+
+.outcome-grid-compact {
+    grid-template-columns: repeat(auto-fit, minmax(78px, 1fr));
+}
+
+.outcome-grid-dense {
+    grid-template-columns: repeat(auto-fit, minmax(62px, 1fr));
+}
+
+.outcome-chip.in-a {
+    border-color: rgba(99, 102, 241, 0.75);
+    background: rgba(99, 102, 241, 0.22);
+    color: #c7d2fe;
+}
+
+.outcome-chip.in-b {
+    border-color: rgba(16, 185, 129, 0.75);
+    background: rgba(16, 185, 129, 0.2);
+    color: #a7f3d0;
+}
+
+.outcome-chip.in-both {
+    border-color: rgba(245, 158, 11, 0.75);
+    background: rgba(245, 158, 11, 0.22);
+    color: #fde68a;
+}
+
+.outcome-chip.in-condition {
+    border-color: rgba(16, 185, 129, 0.7);
+    background: rgba(16, 185, 129, 0.16);
+    color: #a7f3d0;
+}
+
+.outcome-chip.muted {
+    opacity: 0.45;
+}
+
+.outcome-chip.latest {
+    border-color: rgba(249, 115, 22, 0.85);
+    box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.25);
+    color: #fdba74;
+    opacity: 1;
+}
+
+#indVerdict.independent {
+    color: #10b981;
+}
+
+#indVerdict.dependent {
+    color: #ef4444;
+}
+
+.preset-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+}
+
+.preset-buttons .btn-outline {
+    padding: 0.62rem 0.85rem;
+    font-size: 0.85rem;
+}
+
+.bayes-table-wrap {
+    width: 100%;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--bg-card);
+    padding: 0.8rem;
+    margin-bottom: 1.1rem;
+}
+
+.bayes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+
+.bayes-table th,
+.bayes-table td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.45rem 0.55rem;
+    text-align: center;
+}
+
+.bayes-table thead th {
+    background: rgba(99, 102, 241, 0.14);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.bayes-table tbody td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.table-note {
+    margin: 0.55rem 0 0;
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+.bayes-info-card {
+    margin: 0;
+}
+
+.equation-info code {
+    color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+    .outcome-grid-dense {
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .bayes-table {
+        font-size: 0.8rem;
+    }
+
+    .bayes-table th,
+    .bayes-table td {
+        padding: 0.4rem 0.35rem;
+    }
+
+    .outcome-grid-compact,
+    .outcome-grid-dense {
+        grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+        gap: 0.5rem;
+    }
+
+    .outcome-chip {
+        font-size: 0.82rem;
+        padding: 0.6rem 0.3rem;
+    }
+}

@@ -1,0 +1,79 @@
+@import url("../operace-a-absolutni-hodnota/lesson.css");
+
+.lesson-nav-current {
+    color: var(--text-primary);
+}
+
+.lesson-section h1 {
+    font-size: 2rem;
+}
+
+.lesson-section .lead {
+    max-width: 84ch;
+}
+
+.equation-large {
+    line-height: 1.75;
+}
+
+.examples-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.examples-grid .example-card {
+    min-height: 160px;
+}
+
+.compact-note {
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+}
+
+.reference-box {
+    margin: 2rem 0 1.2rem;
+    padding: 1.2rem 1.35rem;
+    border-radius: var(--radius-lg);
+    background: rgba(59, 130, 246, 0.12);
+    border: 1px solid rgba(59, 130, 246, 0.28);
+}
+
+.reference-box h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.reference-box p {
+    margin-bottom: 0.65rem;
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+}
+
+.reference-list {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+
+.reference-list li {
+    margin-bottom: 0.28rem;
+}
+
+.reference-list a {
+    color: #93c5fd;
+}
+
+.reference-list a:hover {
+    color: #dbeafe;
+}
+
+@media (max-width: 1100px) {
+    .examples-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1024px) {
+    .lesson-section h1 {
+        font-size: 1.82rem;
+    }
+}
