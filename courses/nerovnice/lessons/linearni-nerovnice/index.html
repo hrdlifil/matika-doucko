@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nerovnice - Kapitola 2: Lineární nerovnice. Struktura témat připravena pro doplnění obsahu.">
-    <title>Lineární nerovnice – Nerovnice</title>
+    <meta name="description" content="Lineární nerovnice: lineární nerovnice, více podmínek a absolutní hodnota.">
+    <title>Lineární nerovnice – Nerovnice – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
     <link rel="stylesheet" href="lesson.css">
@@ -13,135 +12,240 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="../../../../index.html" class="logo">
-                <span class="logo-icon">ČVUT</span>
-                <span class="logo-text">FBMI</span>
-            </a>
-            <div class="lesson-nav-info">
-                <a href="../../index.html" class="lesson-course-link">Nerovnice</a>
-                <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 2: Lineární nerovnice</span>
-            </div>
-            <div class="nav-actions">
-                <a href="#" class="btn-ghost">Přihlásit se</a>
-                    </div>
+            <a href="../../../../index.html" class="logo"><span class="logo-icon">ČVUT</span><span class="logo-text">FBMI</span></a>
+            <div class="lesson-nav-info"><a href="../../index.html" class="lesson-course-link">Nerovnice</a><span class="lesson-nav-separator">›</span><span class="lesson-nav-current">Kapitola 2: Lineární nerovnice</span></div>
+            <div class="nav-actions"><a href="#" class="btn-ghost">Přihlásit se</a></div>
         </div>
     </nav>
 
     <main class="lesson-main">
         <div class="lesson-container">
             <aside class="lesson-sidebar">
-                <div class="sidebar-header">
-                    <h3>Kapitola 2</h3>
-                    <p>Lineární nerovnice</p>
-                </div>
-
+                <div class="sidebar-header"><h3>Kapitola 2</h3><p>Lineární nerovnice</p></div>
                 <nav class="sidebar-nav">
-                    <a href="#linearni-nerovnice" class="sidebar-link active">
-                        <span class="sidebar-icon">1</span>
-                        Lineární nerovnice
-                    </a>
-                    <a href="#linearni-nerovnice-s-vice-podminkami" class="sidebar-link">
-                        <span class="sidebar-icon">2</span>
-                        Lineární nerovnice s více podmínkami
-                    </a>
-                    <a href="#linearni-nerovnice-s-absolutni-hodnotou" class="sidebar-link">
-                        <span class="sidebar-icon">3</span>
-                        Lineární nerovnice s absolutní hodnotou
-                    </a>                </nav>
-
-                <div class="sidebar-progress">
-                    <div class="progress-label">Stav kapitoly</div>
-                    <div class="topic-note">Struktura připravena</div>
-                </div>
-
+                    <a href="#linearni-nerovnice" class="sidebar-link active" data-section="linearni-nerovnice"><span class="sidebar-icon">1</span>Lineární nerovnice</a>
+                    <a href="#linearni-nerovnice-s-vice-podminkami" class="sidebar-link" data-section="linearni-nerovnice-s-vice-podminkami"><span class="sidebar-icon">2</span>Více podmínek</a>
+                    <a href="#linearni-nerovnice-s-absolutni-hodnotou" class="sidebar-link" data-section="linearni-nerovnice-s-absolutni-hodnotou"><span class="sidebar-icon">3</span>Absolutní hodnota</a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani"><span class="sidebar-icon">4</span>Procvičování</a>
+                </nav>
+                <div class="sidebar-progress"><div class="progress-label">Pokrok v lekci</div><div class="progress-bar-small"><div class="progress-fill-small" style="width: 25%"></div></div></div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="linearni-nerovnice" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="linearni-nerovnice" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Lineární nerovnice</h1>
-                    <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Lineární nerovnice</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
-                    </p>
+                    <p class="lead">Lineární nerovnice mají tvar \(ax+b\;\square\;c\), kde \(\square\in\{&lt;,\le,&gt;,\ge\}\). Hledáme všechna \(x\), pro která tvrzení platí.</p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Základní pravidla</h4>
+                        <div class="concept-grid">
+                            <article class="concept-card"><h5>Sčítání/Odčítání</h5><p>Přidání stejného výrazu na obou stranách nemění řešení.</p><div class="inline-math">\(a&lt;b\iff a+c&lt;b+c\)</div></article>
+                            <article class="concept-card"><h5>Násobení kladným číslem</h5><p>Znaménko nerovnosti zůstává.</p><div class="inline-math">\(c&gt;0:\;a\le b\iff ac\le bc\)</div></article>
+                            <article class="concept-card"><h5>Násobení záporným číslem</h5><p>Znaménko se obrací.</p><div class="inline-math">\(c&lt;0:\;a\le b\iff ac\ge bc\)</div></article>
+                            <article class="concept-card"><h5>Speciální případ \(a=0\)</h5><p>Po odstranění \(x\) vyjde pravda pro všechna \(x\), nebo spor.</p><div class="inline-math">\(0\cdot x+b\square c\)</div></article>
+                        </div>
                     </div>
 
-                    <div class="nav-buttons">
-                        <span class="nav-spacer"></span>
-                        <a href="#linearni-nerovnice-s-vice-podminkami" class="btn-primary">Další téma →</a>
+                    <div class="worked-example">
+                        <h3>Vzorový příklad</h3>
+                        <p>Vyřeš \(3(2x-1)-5\le4x+7\).</p>
+                        <div class="equation-block">\[
+                            3(2x-1)-5\le4x+7 \Rightarrow 6x-8\le4x+7 \Rightarrow 2x\le15 \Rightarrow x\le\frac{15}{2}
+                        \]</div>
                     </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: řešič \(ax+b\;\square\;c\)</h3>
+                        <p>Nastavte koeficienty a sledujte postup i interval řešení na číselné ose.</p>
+                        <div class="control-grid">
+                            <div class="control-item"><label for="linearOperator">Znaménko</label><select id="linearOperator"><option value="lt">&lt;</option><option value="le">≤</option><option value="gt">&gt;</option><option value="ge">≥</option></select></div>
+                            <div class="control-item control-item-wide"><label for="linearA">\(a\): <span id="linearAValue">3</span></label><input type="range" id="linearA" min="-6" max="6" step="1" value="3"></div>
+                            <div class="control-item control-item-wide"><label for="linearB">\(b\): <span id="linearBValue">-4</span></label><input type="range" id="linearB" min="-10" max="10" step="1" value="-4"></div>
+                            <div class="control-item control-item-wide"><label for="linearC">\(c\): <span id="linearCValue">8</span></label><input type="range" id="linearC" min="-10" max="10" step="1" value="8"></div>
+                        </div>
+                        <div class="canvas-wrap"><canvas id="linearCanvas" width="860" height="220"></canvas></div>
+                        <div class="math-output-grid">
+                            <div class="math-output-card"><span class="output-label">Nerovnice</span><div class="output-value" id="linearInequalityLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Výsledek</span><div class="output-value" id="linearSolutionLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Interval</span><div class="output-value" id="linearIntervalLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Příklady řešení</span><div class="output-value" id="linearSampleLatex"></div></div>
+                        </div>
+                        <div class="steps-list" id="linearSteps"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Vyřeš \(-4x+9&gt;1\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="linear-check" value="a"><span>\(x&gt;2\)</span></label>
+                            <label class="option-item"><input type="radio" name="linear-check" value="b"><span>\(x&lt;2\)</span></label>
+                            <label class="option-item"><input type="radio" name="linear-check" value="c"><span>\(x\ge2\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="linear-check" data-correct="b" data-feedback="linearCheckFeedback" data-correct-label="\(x&lt;2\)" data-explanation="\(-4x&gt;-8\). Při dělení záporným číslem se znaménko obrací.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="linearCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons"><span></span><button class="btn-primary btn-next" data-next="linearni-nerovnice-s-vice-podminkami">Pokračovat →</button></div>
                 </section>
-
                 <section id="linearni-nerovnice-s-vice-podminkami" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Lineární nerovnice s více podmínkami</h1>
-                    <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Lineární nerovnice s více podmínkami</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
-                    </p>
+                    <p class="lead">V jedné úloze často kombinujeme více nerovností. Spojka <strong>a zároveň</strong> znamená průnik, spojka <strong>nebo</strong> znamená sjednocení.</p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Typické situace</h4>
+                        <div class="concept-grid concept-grid-two">
+                            <article class="concept-card"><h5>Řetězová nerovnice</h5><p>Např. \(-3&lt;2x+1\le7\). Řeší se jako dvě podmínky současně.</p></article>
+                            <article class="concept-card"><h5>Dvě samostatné podmínky</h5><p>Např. \(x\le2\) nebo \(x&gt;5\). Výsledek je sjednocení intervalů.</p></article>
+                        </div>
                     </div>
 
-                    <div class="nav-buttons">
-                        <a href="#linearni-nerovnice" class="btn-outline">← Zpět</a>
-                    <a href="#linearni-nerovnice-s-absolutni-hodnotou" class="btn-primary">Další téma →</a>
+                    <div class="worked-example">
+                        <h3>Vzorové výpočty</h3>
+                        <div class="equation-block">\[
+                        -3&lt;2x+1\le7 \Rightarrow -4&lt;2x\le6 \Rightarrow -2&lt;x\le3
+                        \]</div>
+                        <div class="equation-block">\[
+                        5-2x\ge1\;\text{nebo}\;3x-6&gt;9 \Rightarrow x\le2\;\text{nebo}\;x&gt;5
+                        \]</div>
                     </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: skládání podmínek</h3>
+                        <p>Nastavte dvě podmínky pro \(x\), vyberte spojku a porovnejte jednotlivé intervaly s výsledkem.</p>
+                        <div class="control-grid compound-controls">
+                            <div class="control-item"><label for="compoundConnector">Spojka</label><select id="compoundConnector"><option value="and">a zároveň</option><option value="or">nebo</option></select></div>
+                            <div class="control-item"><label for="compOp1">Podmínka A</label><select id="compOp1"><option value="lt">x &lt; a</option><option value="le">x ≤ a</option><option value="gt">x &gt; a</option><option value="ge">x ≥ a</option></select></div>
+                            <div class="control-item control-item-wide"><label for="compVal1">Hodnota a: <span id="compVal1Display">2</span></label><input type="range" id="compVal1" min="-10" max="10" step="1" value="2"></div>
+                            <div class="control-item"><label for="compOp2">Podmínka B</label><select id="compOp2"><option value="lt">x &lt; b</option><option value="le">x ≤ b</option><option value="gt">x &gt; b</option><option value="ge">x ≥ b</option></select></div>
+                            <div class="control-item control-item-wide"><label for="compVal2">Hodnota b: <span id="compVal2Display">6</span></label><input type="range" id="compVal2" min="-10" max="10" step="1" value="6"></div>
+                        </div>
+                        <div class="canvas-wrap"><canvas id="compoundCanvas" width="860" height="300"></canvas></div>
+                        <div class="math-output-grid">
+                            <div class="math-output-card"><span class="output-label">Podmínka A</span><div class="output-value" id="compCond1Latex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Podmínka B</span><div class="output-value" id="compCond2Latex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Kombinace</span><div class="output-value" id="compResultLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Výsledný interval</span><div class="output-value" id="compResultInterval"></div></div>
+                        </div>
+                        <div class="topic-note" id="compInterpretation"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Vyřeš \(2\le x-1&lt;8\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="compound-check" value="a"><span>\((3,9)\)</span></label>
+                            <label class="option-item"><input type="radio" name="compound-check" value="b"><span>\([3,9)\)</span></label>
+                            <label class="option-item"><input type="radio" name="compound-check" value="c"><span>\([2,8)\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="compound-check" data-correct="b" data-feedback="compoundCheckFeedback" data-correct-label="\([3,9)\)" data-explanation="Po přičtení 1: \(3\le x&lt;9\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="compoundCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons"><button class="btn-outline btn-prev" data-prev="linearni-nerovnice">← Zpět</button><button class="btn-primary btn-next" data-next="linearni-nerovnice-s-absolutni-hodnotou">Pokračovat →</button></div>
                 </section>
 
                 <section id="linearni-nerovnice-s-absolutni-hodnotou" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Lineární nerovnice s absolutní hodnotou</h1>
-                    <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Lineární nerovnice s absolutní hodnotou</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
-                    </p>
+                    <p class="lead">Výraz \(|x-a|\) je vzdálenost čísla \(x\) od bodu \(a\). Proto \(|x-a|&lt;r\) znamená "být uvnitř intervalu", zatímco \(|x-a|&gt;r\) znamená "být mimo interval".</p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Klíčové převody</h4>
+                        <div class="equation-block">\[
+                            |A(x)|&lt;k\iff-k&lt;A(x)&lt;k,\quad |A(x)|\le k\iff-k\le A(x)\le k
+                        \]</div>
+                        <div class="equation-block">\[
+                            |A(x)|&gt;k\iff A(x)&lt;-k\ \text{nebo}\ A(x)&gt;k,\quad |A(x)|\ge k\iff A(x)\le-k\ \text{nebo}\ A(x)\ge k
+                        \]</div>
+                        <p class="example-note">Pro \(k&lt;0\): \(|A(x)|\le k\) a \(|A(x)|&lt;k\) nemají řešení. Naopak \(|A(x)|\ge k\) a \(|A(x)|&gt;k\) platí pro všechna \(x\).</p>
                     </div>
 
-                    <div class="nav-buttons">
-                        <a href="#linearni-nerovnice-s-vice-podminkami" class="btn-outline">← Zpět</a>
-                    <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    <div class="worked-example">
+                        <h3>Vzorové výpočty</h3>
+                        <div class="equation-block">\[
+                            |2x-5|\le7\iff -7\le2x-5\le7\iff -1\le x\le6
+                        \]</div>
+                        <div class="equation-block">\[
+                            |3x+1|&gt;4\iff 3x+1&gt;4\ \text{nebo}\ 3x+1&lt;-4\iff x&gt;1\ \text{nebo}\ x&lt;-\frac{5}{3}
+                        \]</div>
                     </div>
-                </section>            </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: \(|x-m|\;\square\;r\)</h3>
+                        <p>Upravte střed \(m\), pravou stranu \(r\) a znaménko. Zobrazí se ekvivalentní tvar i interval řešení.</p>
+                        <div class="control-grid">
+                            <div class="control-item"><label for="absOperator">Znaménko</label><select id="absOperator"><option value="lt">&lt;</option><option value="le">≤</option><option value="gt">&gt;</option><option value="ge">≥</option></select></div>
+                            <div class="control-item control-item-wide"><label for="absCenter">Střed \(m\): <span id="absCenterValue">2</span></label><input type="range" id="absCenter" min="-8" max="8" step="0.5" value="2"></div>
+                            <div class="control-item control-item-wide"><label for="absRadius">Pravá strana \(r\): <span id="absRadiusValue">3</span></label><input type="range" id="absRadius" min="-4" max="8" step="0.5" value="3"></div>
+                        </div>
+                        <div class="canvas-wrap"><canvas id="absCanvas" width="860" height="220"></canvas></div>
+                        <div class="math-output-grid">
+                            <div class="math-output-card"><span class="output-label">Nerovnice</span><div class="output-value" id="absExpressionLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Ekvivalentní tvar</span><div class="output-value" id="absEquivalentLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Řešení</span><div class="output-value" id="absResultLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Příklady řešení</span><div class="output-value" id="absSamplesLatex"></div></div>
+                        </div>
+                        <div class="topic-note" id="absInterpretation"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Vyřeš \(|x-4|\ge3\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="abs-check" value="a"><span>\((1,7)\)</span></label>
+                            <label class="option-item"><input type="radio" name="abs-check" value="b"><span>\((-\infty,1]\cup[7,\infty)\)</span></label>
+                            <label class="option-item"><input type="radio" name="abs-check" value="c"><span>\([-1,7]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="abs-check" data-correct="b" data-feedback="absCheckFeedback" data-correct-label="\((-\infty,1]\cup[7,\infty)\)" data-explanation="Alespoň 3 od bodu 4 znamená vlevo od 1 nebo vpravo od 7, obojí včetně krajů.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="absCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons"><button class="btn-outline btn-prev" data-prev="linearni-nerovnice-s-vice-podminkami">← Zpět</button><button class="btn-primary btn-next" data-next="procvicovani">Pokračovat →</button></div>
+                </section>
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Po špatné odpovědi se vždy ukáže správný výsledek i vysvětlení.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1"><div class="exercise-header"><span class="exercise-number">Úloha 1</span><span class="exercise-status" id="ex1Status"></span></div><div class="exercise-content"><p>Vyřeš \(7-3x&lt;1\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex1" value="a"><span>\(x&gt;2\)</span></label><label class="option"><input type="radio" name="ex1" value="b"><span>\(x&lt;2\)</span></label><label class="option"><input type="radio" name="ex1" value="c"><span>\(x\ge2\)</span></label><label class="option"><input type="radio" name="ex1" value="d"><span>\(x\le2\)</span></label></div><button class="btn-primary btn-check" data-exercise="1" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex1Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise2"><div class="exercise-header"><span class="exercise-number">Úloha 2</span><span class="exercise-status" id="ex2Status"></span></div><div class="exercise-content"><p>Vyřeš \(4x-6\ge4x+2\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex2" value="a"><span>\(\mathbb{R}\)</span></label><label class="option"><input type="radio" name="ex2" value="b"><span>\(\emptyset\)</span></label><label class="option"><input type="radio" name="ex2" value="c"><span>\(x\ge2\)</span></label><label class="option"><input type="radio" name="ex2" value="d"><span>\(x\le2\)</span></label></div><button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex2Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise3"><div class="exercise-header"><span class="exercise-number">Úloha 3</span><span class="exercise-status" id="ex3Status"></span></div><div class="exercise-content"><p>Vyřeš \(-1\le3x+2&lt;11\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex3" value="a"><span>\((-1,3]\)</span></label><label class="option"><input type="radio" name="ex3" value="b"><span>\([-1,3]\)</span></label><label class="option"><input type="radio" name="ex3" value="c"><span>\([-1,3)\)</span></label><label class="option"><input type="radio" name="ex3" value="d"><span>\((-\infty,-1]\cup[3,\infty)\)</span></label></div><button class="btn-primary btn-check" data-exercise="3" data-correct="c">Zkontrolovat</button><div class="exercise-feedback" id="ex3Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise4"><div class="exercise-header"><span class="exercise-number">Úloha 4</span><span class="exercise-status" id="ex4Status"></span></div><div class="exercise-content"><p>Vyřeš \(2x-5&gt;1\) nebo \(x+4\le1\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex4" value="a"><span>\((-3,3)\)</span></label><label class="option"><input type="radio" name="ex4" value="b"><span>\((-\infty,-3]\cup(3,\infty)\)</span></label><label class="option"><input type="radio" name="ex4" value="c"><span>\([-3,3]\)</span></label><label class="option"><input type="radio" name="ex4" value="d"><span>\((-\infty,3]\)</span></label></div><button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex4Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise5"><div class="exercise-header"><span class="exercise-number">Úloha 5</span><span class="exercise-status" id="ex5Status"></span></div><div class="exercise-content"><p>Vyřeš \(|x+2|&lt;5\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex5" value="a"><span>\((-7,3)\)</span></label><label class="option"><input type="radio" name="ex5" value="b"><span>\([-7,3]\)</span></label><label class="option"><input type="radio" name="ex5" value="c"><span>\((-\infty,-7)\cup(3,\infty)\)</span></label><label class="option"><input type="radio" name="ex5" value="d"><span>\((-3,7)\)</span></label></div><button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex5Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise6"><div class="exercise-header"><span class="exercise-number">Úloha 6</span><span class="exercise-status" id="ex6Status"></span></div><div class="exercise-content"><p>Jaké je řešení \(|4x-1|\le-0.5\)?</p><div class="exercise-options"><label class="option"><input type="radio" name="ex6" value="a"><span>\(\mathbb{R}\)</span></label><label class="option"><input type="radio" name="ex6" value="b"><span>\(x=\frac14\)</span></label><label class="option"><input type="radio" name="ex6" value="c"><span>\(\emptyset\)</span></label><label class="option"><input type="radio" name="ex6" value="d"><span>\((-\infty,\frac14]\)</span></label></div><button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat</button><div class="exercise-feedback" id="ex6Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise7"><div class="exercise-header"><span class="exercise-number">Úloha 7</span><span class="exercise-status" id="ex7Status"></span></div><div class="exercise-content"><p>Vyřeš \(|2x-6|&gt;8\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex7" value="a"><span>\((-1,7)\)</span></label><label class="option"><input type="radio" name="ex7" value="b"><span>\((-\infty,-1]\cup[7,\infty)\)</span></label><label class="option"><input type="radio" name="ex7" value="c"><span>\((-\infty,-1)\cup(7,\infty)\)</span></label><label class="option"><input type="radio" name="ex7" value="d"><span>\([-1,7]\)</span></label></div><button class="btn-primary btn-check" data-exercise="7" data-correct="c">Zkontrolovat</button><div class="exercise-feedback" id="ex7Feedback"></div></div></article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;"><div class="complete-icon">✓</div><h2>Lekce dokončena</h2><p>Zvládl/a jste lineární nerovnice, složené podmínky i absolutní hodnotu.</p><a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a></div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev" data-prev="linearni-nerovnice-s-absolutni-hodnotou">← Zpět</button><a href="../../index.html" class="btn-primary">Dokončit lekci</a></div>
+                </section>
+            </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
     <script>
-        if (!window.location.hash) {
-            window.history.replaceState(null, '', '#linearni-nerovnice');
-        }
+        window.MathJax = {
+            tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]']] },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
 </body>
-
 </html>
+
 
 

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Pravděpodobnost - strukturovaný kurz od základních pojmů přes sjednocení a nezávislost jevů až po podmíněnou pravděpodobnost a Bayesovu větu.">
+    <title>Pravděpodobnost – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Pravděpodobnost</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Pravděpodobnost</h1>
+                    <p class="course-description">
+                        Kurz je aktuálně připraven jako struktura dvou kapitol. První kapitola pokrývá
+                        základní pojmy pravděpodobnosti, druhá navazuje sjednocením jevů, nezávislostí,
+                        podmíněnou pravděpodobností a úvodem do Bayesovy věty.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">2 kapitoly</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~3 hodiny</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">6 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/uvod-do-pravdepodobnosti/index.html#nahodny-pokus-a-mnozina-vysledku"
+                            class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <rect x="40" y="45" width="50" height="50" fill="none" stroke="#6366f1" stroke-width="2.4" />
+                            <circle cx="140" cy="70" r="24" fill="none" stroke="#10b981" stroke-width="2.4" />
+                            <path d="M40 145 L165 95" fill="none" stroke="#f59e0b" stroke-width="2.6" />
+                            <text x="46" y="75" fill="#6366f1" font-size="10" font-family="Inter">Ω</text>
+                            <text x="130" y="75" fill="#10b981" font-size="10" font-family="Inter">A</text>
+                            <text x="92" y="116" fill="#f59e0b" font-size="10" font-family="Inter">P(A)</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">P(A)=|A|/|Ω|</div>
+                        <div class="formula formula-2">P(A∪B)=P(A)+P(B)-P(A∩B)</div>
+                        <div class="formula formula-3">P(A|B)=P(A∩B)/P(B)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura je připravena, obsah lekcí doplníme v dalším kroku</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Úvod do pravděpodobnosti</h3>
+                            <p class="chapter-description">Náhodný pokus, množina výsledků a naivní definice pravděpodobnosti</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">📘 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/uvod-do-pravdepodobnosti/index.html#nahodny-pokus-a-mnozina-vysledku" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Náhodný pokus a množina výsledků</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/uvod-do-pravdepodobnosti/index.html#naivni-definice-pravdepodobnosti" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Naivní definice pravděpodobnosti</span>
+                                <span class="lesson-duration">25 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Pravděpodobnost podrobněji</h3>
+                            <p class="chapter-description">Sjednocení a nezávislost jevů, podmíněná pravděpodobnost a Bayesova věta</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~95 min</span>
+                            <span class="chapter-badge-interactive">📘 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/pravdepodobnost-podrobneji/index.html#sjednoceni-jevu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Sjednocení jevů</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/pravdepodobnost-podrobneji/index.html#nezavislost-jevu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Nezávislost jevů</span>
+                                <span class="lesson-duration">20 min</span>
+                            </a>
+                            <a href="lessons/pravdepodobnost-podrobneji/index.html#podminena-pravdepodobnost" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Podmíněná pravděpodobnost</span>
+                                <span class="lesson-duration">25 min</span>
+                            </a>
+                            <a href="lessons/pravdepodobnost-podrobneji/index.html#uvodni-problem-s-testem-a-bayesova-veta" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvodní problém s testem a Bayesova věta</span>
+                                <span class="lesson-duration">30 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se naučíte</h2>
+                <p class="section-subtitle">Přehled dovedností, které kurz pokryje po doplnění obsahu</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">Ω</div>
+                    <h3>Práce s jevy</h3>
+                    <p>Rozlišovat náhodný pokus, množinu výsledků a jevy.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">∪</div>
+                    <h3>Operace s jevy</h3>
+                    <p>Používat sjednocení jevů a správně počítat pravděpodobnosti.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⊥</div>
+                    <h3>Nezávislost</h3>
+                    <p>Rozpoznat nezávislé jevy a pracovat s jejich vztahem.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">P(A|B)</div>
+                    <h3>Podmíněná pravděpodobnost</h3>
+                    <p>Modelovat situace, kde informace mění šanci jevu.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">B</div>
+                    <h3>Bayesova věta</h3>
+                    <p>Interpretovat výsledky testů a aktualizovat odhady.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Pravděpodobnostní myšlení</h3>
+                    <p>Samostatně strukturovat a řešit základní úlohy z praxe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Kurz má hotovou strukturu 2 kapitol a je připraven na doplnění detailního obsahu.</p>
+                <a href="lessons/uvod-do-pravdepodobnosti/index.html#nahodny-pokus-a-mnozina-vysledku" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

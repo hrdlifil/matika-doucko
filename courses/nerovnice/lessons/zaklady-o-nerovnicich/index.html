@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nerovnice - Kapitola 1: Základy o nerovnicích. Struktura témat připravena pro doplnění obsahu.">
-    <title>Základy o nerovnicích – Nerovnice</title>
+    <meta name="description"
+        content="Základy o nerovnicích: úvod do nerovnic, ekvivalentní úpravy a převod na vhodný typ nerovnice.">
+    <title>Základy o nerovnicích – Nerovnice – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
     <link rel="stylesheet" href="lesson.css">
@@ -28,7 +29,7 @@
             </div>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
-                    </div>
+            </div>
         </div>
     </nav>
 
@@ -41,107 +42,484 @@
                 </div>
 
                 <nav class="sidebar-nav">
-                    <a href="#uvod-do-nerovnic" class="sidebar-link active">
+                    <a href="#uvod-do-nerovnic" class="sidebar-link active" data-section="uvod-do-nerovnic">
                         <span class="sidebar-icon">1</span>
                         Úvod do nerovnic
                     </a>
-                    <a href="#ekvivalentni-upravy-nerovnice" class="sidebar-link">
+                    <a href="#ekvivalentni-upravy-nerovnice" class="sidebar-link" data-section="ekvivalentni-upravy-nerovnice">
                         <span class="sidebar-icon">2</span>
-                        Ekvivalentní úpravy nerovnice
+                        Ekvivalentní úpravy
                     </a>
-                    <a href="#prevod-na-urcity-typ-nerovnic" class="sidebar-link">
+                    <a href="#prevod-na-urcity-typ-nerovnic" class="sidebar-link" data-section="prevod-na-urcity-typ-nerovnic">
                         <span class="sidebar-icon">3</span>
-                        Převod na určitý typ nerovnic
-                    </a>                </nav>
+                        Převod na typ nerovnic
+                    </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">4</span>
+                        Procvičování
+                    </a>
+                </nav>
 
                 <div class="sidebar-progress">
-                    <div class="progress-label">Stav kapitoly</div>
-                    <div class="topic-note">Struktura připravena</div>
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
                 </div>
 
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="uvod-do-nerovnic" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="uvod-do-nerovnic" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Úvod do nerovnic</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Úvod do nerovnic</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
+                        Nerovnice vyjadřuje, že jedna hodnota je menší, větší nebo nejvýše/nejméně rovna druhé.
+                        Cílem je najít <strong>množinu všech hodnot</strong>, pro které je tvrzení pravdivé.
                     </p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Základní symboly</h4>
+                        <div class="notation-grid">
+                            <div class="notation-item">
+                                <div class="notation-math">\(a &lt; b\)</div>
+                                <div class="notation-text">\(a\) je menší než \(b\)</div>
+                            </div>
+                            <div class="notation-item">
+                                <div class="notation-math">\(a \le b\)</div>
+                                <div class="notation-text">\(a\) je menší nebo rovno \(b\)</div>
+                            </div>
+                            <div class="notation-item">
+                                <div class="notation-math">\(a &gt; b\)</div>
+                                <div class="notation-text">\(a\) je větší než \(b\)</div>
+                            </div>
+                            <div class="notation-item">
+                                <div class="notation-math">\(a \ge b\)</div>
+                                <div class="notation-text">\(a\) je větší nebo rovno \(b\)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Množina řešení a intervaly</h2>
+                    <p>
+                        Výsledek nerovnice obvykle zapisujeme jako interval. Otevřený krajní bod znamená,
+                        že hodnota do řešení nepatří, uzavřený krajní bod znamená, že patří.
+                    </p>
+                    <div class="equation-block">
+                        \[
+                        x &gt; 3 \iff (3,\infty),\qquad
+                        x \le -1 \iff (-\infty,-1]
+                        \]
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Vzorový příklad</h3>
+                        <p>Vyřešme nerovnici \(2x - 5 \ge 7\).</p>
+                        <div class="steps-list">
+                            <div class="step-item">1. Přičteme \(5\): \(\;2x \ge 12\)</div>
+                            <div class="step-item">2. Vydělíme \(2&gt;0\): \(\;x \ge 6\)</div>
+                            <div class="step-item">3. Řešení: \([6,\infty)\)</div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: nerovnice na číselné ose</h3>
+                        <p>Nastavte nerovnici a sledujte graf, interval i několik hodnot, které podmínku splní.</p>
+
+                        <div class="control-row">
+                            <label for="inequalityOperator">Operátor</label>
+                            <select id="inequalityOperator">
+                                <option value="lt">&lt;</option>
+                                <option value="le">≤</option>
+                                <option value="gt">&gt;</option>
+                                <option value="ge">≥</option>
+                            </select>
+
+                            <label for="boundarySlider">Mezní hodnota: <span id="boundaryValue">2</span></label>
+                            <input type="range" id="boundarySlider" min="-8" max="8" step="1" value="2">
+                        </div>
+
+                        <div class="canvas-wrap">
+                            <canvas id="numberLineCanvas" width="780" height="180"></canvas>
+                        </div>
+
+                        <div class="math-output-grid">
+                            <div class="math-output-card">
+                                <span class="output-label">Nerovnice</span>
+                                <div class="output-value" id="currentInequality">\(x &lt; 2\)</div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Interval</span>
+                                <div class="output-value" id="currentInterval">\((-\infty,2)\)</div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Příklady řešení</span>
+                                <div class="output-value" id="sampleSolutions">\(-8,\,-3,\,1\)</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Který interval odpovídá nerovnici \(x &gt; -2\)?</p>
+                        <div class="options-list">
+                            <label class="option-item">
+                                <input type="radio" name="intro-check" value="a">
+                                <span>\((-\infty,-2]\)</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="radio" name="intro-check" value="b">
+                                <span>\((-2,\infty)\)</span>
+                            </label>
+                            <label class="option-item">
+                                <input type="radio" name="intro-check" value="c">
+                                <span>\([-2,\infty)\)</span>
+                            </label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="intro-check" data-correct="b"
+                            data-feedback="introCheckFeedback"
+                            data-correct-label="\((-2,\infty)\)"
+                            data-explanation="Protože jde o striktní nerovnici \(x &gt; -2\), krajní bod \(-2\) do řešení nepatří.">
+                            Zkontrolovat
+                        </button>
+                        <div class="mini-feedback" id="introCheckFeedback"></div>
                     </div>
 
                     <div class="nav-buttons">
-                        <span class="nav-spacer"></span>
-                        <a href="#ekvivalentni-upravy-nerovnice" class="btn-primary">Další téma →</a>
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="ekvivalentni-upravy-nerovnice">Pokračovat →</button>
                     </div>
                 </section>
 
                 <section id="ekvivalentni-upravy-nerovnice" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Ekvivalentní úpravy nerovnice</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Ekvivalentní úpravy nerovnice</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
+                        Ekvivalentní úprava zachová stejnou množinu řešení. Pravidla jsou téměř stejná jako u rovnic,
+                        ale u násobení nebo dělení záporným číslem se musí <strong>otočit znaménko nerovnosti</strong>.
                     </p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="rules-grid">
+                        <article class="rule-card">
+                            <h4>1) Přičtení/odečtení stejného výrazu</h4>
+                            <p>\(a \le b \iff a+c \le b+c\)</p>
+                            <p class="rule-note">Znaménko se nemění.</p>
+                        </article>
+                        <article class="rule-card">
+                            <h4>2) Násobení/dělení kladným číslem</h4>
+                            <p>Pro \(c&gt;0\): \(a \le b \iff ac \le bc\)</p>
+                            <p class="rule-note">Znaménko se nemění.</p>
+                        </article>
+                        <article class="rule-card">
+                            <h4>3) Násobení/dělení záporným číslem</h4>
+                            <p>Pro \(c&lt;0\): \(a \le b \iff ac \ge bc\)</p>
+                            <p class="rule-note warning">Znaménko se obrací.</p>
+                        </article>
+                        <article class="rule-card">
+                            <h4>4) Funkce na obou stranách</h4>
+                            <p>Striktně rostoucí funkce znak zachová, striktně klesající otočí.</p>
+                            <p class="rule-note">Vždy kontrolujte definiční obor.</p>
+                        </article>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Vzorový příklad 1</h3>
+                        <p>Vyřešme \(-3(2x-1)+5 \le 14\).</p>
+                        <div class="equation-block">
+                            \[
+                            \begin{aligned}
+                            -6x+3+5 &\le 14\\
+                            -6x+8 &\le 14\\
+                            -6x &\le 6\\
+                            x &\ge -1
+                            \end{aligned}
+                            \]
+                        </div>
+                        <p class="example-note">V posledním kroku dělíme číslem \(-6\), proto se \(\le\) mění na \(\ge\).</p>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Vzorový příklad 2: proč nelze „jen vydělit výrazem s \(x\)”</h3>
+                        <p>
+                            U nerovnice \((x-2)(x+1) &gt; 0\) nelze bezpečně dělit výrazem \((x-2)\),
+                            protože neznáme jeho znaménko. Správný postup je převod na součin a znaménková analýza.
+                        </p>
+                    </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: otočit, nechat, nebo rozdělit na případy?</h3>
+                        <p>U každé operace vyberte správné rozhodnutí.</p>
+
+                        <div class="challenge-box">
+                            <div class="challenge-statement" id="flipScenario"></div>
+                            <div class="decision-buttons">
+                                <button class="btn-outline flip-decision-btn" data-answer="flip">Obrátit znaménko</button>
+                                <button class="btn-outline flip-decision-btn" data-answer="keep">Nechat znaménko</button>
+                                <button class="btn-outline flip-decision-btn" data-answer="unknown">Rozdělit na případy</button>
+                            </div>
+                            <div class="challenge-feedback" id="flipFeedback"></div>
+                            <div class="challenge-footer">
+                                <span id="flipScore">Skóre: 0/0</span>
+                                <button class="btn-primary" id="nextFlipChallenge">Další situace</button>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="nav-buttons">
-                        <a href="#uvod-do-nerovnic" class="btn-outline">← Zpět</a>
-                    <a href="#prevod-na-urcity-typ-nerovnic" class="btn-primary">Další téma →</a>
+                        <button class="btn-outline btn-prev" data-prev="uvod-do-nerovnic">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="prevod-na-urcity-typ-nerovnic">Pokračovat →</button>
                     </div>
                 </section>
 
                 <section id="prevod-na-urcity-typ-nerovnic" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Převod na určitý typ nerovnic</h1>
                     <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Převod na určitý typ nerovnic</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
+                        Většinu nerovnic řešíme tak, že je převedeme na standardní typ, kde už máme známou metodu.
+                        Klíčový krok je dostat úlohu do tvaru, kde lze analyzovat znaménko.
                     </p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="type-grid">
+                        <article class="type-card">
+                            <h4>Lineární typ</h4>
+                            <p>\(ax+b \,\square\, 0\)</p>
+                            <p>Izolujeme \(x\), hlídáme dělení záporným číslem.</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Součinový/polynomický typ</h4>
+                            <p>\(P(x)\,\square\,0\)</p>
+                            <p>Rozklad na činitele, nulové body, test intervalů.</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Podílový typ</h4>
+                            <p>\(\dfrac{P(x)}{Q(x)}\,\square\,0\)</p>
+                            <p>Nulové body čitatele i jmenovatele, jmenovatel nikdy nesmí být nula.</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Absolutní hodnota</h4>
+                            <p>\(|A(x)|\,\square\,k\)</p>
+                            <p>Pro \(k&gt;0\): „uvnitř“ (\(&lt;\), \(\le\)) nebo „vně“ (\(&gt;\), \(\ge\)).</p>
+                        </article>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Postup převodu (souhrn)</h3>
+                        <div class="steps-list">
+                            <div class="step-item">1. Přesuňte vše na jednu stranu: \(f(x)\,\square\,0\).</div>
+                            <div class="step-item">2. Zvolte typ: lineární / součinový / podílový / absolutní hodnota.</div>
+                            <div class="step-item">3. Najděte kritické body (kořeny, body mimo definiční obor).</div>
+                            <div class="step-item">4. Vyhodnoťte znaménko na intervalech a zapište řešení.</div>
+                        </div>
+                    </div>
+
+                    <div class="equation-block">
+                        \[
+                        |A(x)| &lt; k \iff -k &lt; A(x) &lt; k,\quad
+                        |A(x)| &gt; k \iff A(x)&lt;-k \ \text{nebo}\ A(x)&gt;k\quad (k&gt;0)
+                        \]
+                    </div>
+                    <p class="example-note">
+                        Pokud \(k&lt;0\), pak \(|A(x)|\le k\) a \(|A(x)|&lt;k\) nemají řešení.
+                        Naopak \(|A(x)|\ge k\) a \(|A(x)|&gt;k\) jsou pro \(k&lt;0\) pravdivé pro všechna reálná \(x\).
+                    </p>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: vyber správný převod</h3>
+                        <p>Zvolte správnou standardní úpravu. Cílem není dopočítat kořeny, ale převést nerovnici do vhodného typu.</p>
+
+                        <div class="conversion-list">
+                            <article class="conversion-task" id="conversionTask1">
+                                <h4>Úloha A</h4>
+                                <p>\(3(x-2)-2(1-x)\le 7\)</p>
+                                <div class="options-list">
+                                    <label class="option-item"><input type="radio" name="conv1" value="a"><span>\(5x-8\le 0\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv1" value="b"><span>\(5x-15\le 0\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv1" value="c"><span>\((x-3)(x+5)\le0\)</span></label>
+                                </div>
+                                <button class="btn-outline conversion-check" data-task="1" data-group="conv1" data-correct="b">Zkontrolovat</button>
+                                <div class="conversion-feedback" id="convFeedback1"></div>
+                            </article>
+
+                            <article class="conversion-task" id="conversionTask2">
+                                <h4>Úloha B</h4>
+                                <p>\(x^2-x-6&gt;0\)</p>
+                                <div class="options-list">
+                                    <label class="option-item"><input type="radio" name="conv2" value="a"><span>\(x(x-1)+6&gt;0\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv2" value="b"><span>\((x-3)(x+2)\le0\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv2" value="c"><span>\((x-3)(x+2)&gt;0\)</span></label>
+                                </div>
+                                <button class="btn-outline conversion-check" data-task="2" data-group="conv2" data-correct="c">Zkontrolovat</button>
+                                <div class="conversion-feedback" id="convFeedback2"></div>
+                            </article>
+
+                            <article class="conversion-task" id="conversionTask3">
+                                <h4>Úloha C</h4>
+                                <p>\(|2x-3|&gt;5\)</p>
+                                <div class="options-list">
+                                    <label class="option-item"><input type="radio" name="conv3" value="a"><span>\(-5\le 2x-3\le5\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv3" value="b"><span>\(2x-3&gt;5\ \text{nebo}\ 2x-3&lt;-5\)</span></label>
+                                    <label class="option-item"><input type="radio" name="conv3" value="c"><span>\(2x-3&gt;5\ \text{a současně}\ 2x-3&lt;-5\)</span></label>
+                                </div>
+                                <button class="btn-outline conversion-check" data-task="3" data-group="conv3" data-correct="b">Zkontrolovat</button>
+                                <div class="conversion-feedback" id="convFeedback3"></div>
+                            </article>
+                        </div>
                     </div>
 
                     <div class="nav-buttons">
-                        <a href="#ekvivalentni-upravy-nerovnice" class="btn-outline">← Zpět</a>
-                    <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                        <button class="btn-outline btn-prev" data-prev="ekvivalentni-upravy-nerovnice">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat →</button>
                     </div>
-                </section>            </div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">
+                        Každou úlohu lze zkontrolovat zvlášť. Pokud odpovíte špatně, okamžitě se zobrazí správný výsledek i postup.
+                    </p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš nerovnici \(\,4-3x&lt;1\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(x&lt;1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(x&gt;1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(x\le1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\(x\ge1\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš dvojitou nerovnici \(\,2&lt;x+5\le9\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\((-3,4]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\([-3,4]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\((-3,4)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\((-\infty,4]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš kvadratickou nerovnici \(\,x^2-x-6\le0\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\((-\infty,-2]\cup[3,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\([-2,3]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\((-2,3)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\([-3,2]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš racionální nerovnici \(\,\frac{x-4}{x+1}&gt;0\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\((-1,4)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\((-\infty,-1)\cup(4,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>\((-\infty,-1]\cup[4,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\((-\infty,4)\setminus\{-1\}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřeš nerovnici s absolutní hodnotou \(\,|3x-6|&lt;9\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\((-1,5)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\([-1,5]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\((-\infty,-1)\cup(5,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\((-5,1)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaké je řešení nerovnice \(\,|2x+1|\ge -4\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>\(\emptyset\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>Všechna reálná čísla \(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\(x\ge -\frac{1}{2}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\(x\ne -\frac{1}{2}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Zvládl/a jste základy práce s nerovnicemi i převod na klíčové typy.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="prevod-na-urcity-typ-nerovnic">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
     <script>
-        if (!window.location.hash) {
-            window.history.replaceState(null, '', '#uvod-do-nerovnic');
-        }
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
 </body>
 
 </html>
-
 

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nerovnice - Kapitola 3: Kvadratické nerovnice. Struktura témat připravena pro doplnění obsahu.">
-    <title>Kvadratické nerovnice – Nerovnice</title>
+    <meta name="description" content="Kvadratické nerovnice a kvadratické nerovnice s absolutní hodnotou.">
+    <title>Kvadratické nerovnice – Nerovnice – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
     <link rel="stylesheet" href="lesson.css">
@@ -13,108 +12,198 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <a href="../../../../index.html" class="logo">
-                <span class="logo-icon">ČVUT</span>
-                <span class="logo-text">FBMI</span>
-            </a>
-            <div class="lesson-nav-info">
-                <a href="../../index.html" class="lesson-course-link">Nerovnice</a>
-                <span class="lesson-nav-separator">›</span>
-                <span class="lesson-nav-current">Kapitola 3: Kvadratické nerovnice</span>
-            </div>
-            <div class="nav-actions">
-                <a href="#" class="btn-ghost">Přihlásit se</a>
-                    </div>
+            <a href="../../../../index.html" class="logo"><span class="logo-icon">ČVUT</span><span class="logo-text">FBMI</span></a>
+            <div class="lesson-nav-info"><a href="../../index.html" class="lesson-course-link">Nerovnice</a><span class="lesson-nav-separator">›</span><span class="lesson-nav-current">Kapitola 3: Kvadratické nerovnice</span></div>
+            <div class="nav-actions"><a href="#" class="btn-ghost">Přihlásit se</a></div>
         </div>
     </nav>
 
     <main class="lesson-main">
         <div class="lesson-container">
             <aside class="lesson-sidebar">
-                <div class="sidebar-header">
-                    <h3>Kapitola 3</h3>
-                    <p>Kvadratické nerovnice</p>
-                </div>
-
+                <div class="sidebar-header"><h3>Kapitola 3</h3><p>Kvadratické nerovnice</p></div>
                 <nav class="sidebar-nav">
-                    <a href="#kvadraticke-nerovnice" class="sidebar-link active">
-                        <span class="sidebar-icon">1</span>
-                        Kvadratické nerovnice
-                    </a>
-                    <a href="#kvadraticke-nerovnice-s-absolutni-hodnotou" class="sidebar-link">
-                        <span class="sidebar-icon">2</span>
-                        Kvadratické nerovnice s absolutní hodnotou
-                    </a>                </nav>
-
-                <div class="sidebar-progress">
-                    <div class="progress-label">Stav kapitoly</div>
-                    <div class="topic-note">Struktura připravena</div>
-                </div>
-
+                    <a href="#kvadraticke-nerovnice" class="sidebar-link active" data-section="kvadraticke-nerovnice"><span class="sidebar-icon">1</span>Kvadratické nerovnice</a>
+                    <a href="#kvadraticke-nerovnice-s-absolutni-hodnotou" class="sidebar-link" data-section="kvadraticke-nerovnice-s-absolutni-hodnotou"><span class="sidebar-icon">2</span>Kvadratické nerovnice s absolutní hodnotou</a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani"><span class="sidebar-icon">3</span>Procvičování</a>
+                </nav>
+                <div class="sidebar-progress"><div class="progress-label">Pokrok v lekci</div><div class="progress-bar-small"><div class="progress-fill-small" style="width: 33%"></div></div></div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="kvadraticke-nerovnice" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="kvadraticke-nerovnice" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Kvadratické nerovnice</h1>
-                    <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Kvadratické nerovnice</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
-                    </p>
+                    <p class="lead">U kvadratické nerovnice nejprve určíme nulové body a pak znaménko výrazu na jednotlivých intervalech.</p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Postup</h4>
+                        <div class="concept-grid">
+                            <article class="concept-card"><h5>Standardní tvar</h5><p>\(ax^2+bx+c\;\square\;0\).</p></article>
+                            <article class="concept-card"><h5>Diskriminant</h5><p>\(D=b^2-4ac\).</p></article>
+                            <article class="concept-card"><h5>Znaménka</h5><p>Pro \(a&gt;0\) je mezi kořeny výraz záporný.</p></article>
+                            <article class="concept-card"><h5>Kraje</h5><p>U \(\le,\ge\) se kořeny zahrnují, u \(&lt;,&gt;\) ne.</p></article>
+                        </div>
+                        <div class="equation-block">\[
+                            D&lt;0:\ \text{bez reálných kořenů},\qquad
+                            D=0:\ \text{dvojnásobný kořen},\qquad
+                            D&gt;0:\ \text{dva různé kořeny}
+                        \]</div>
                     </div>
 
-                    <div class="nav-buttons">
-                        <span class="nav-spacer"></span>
-                        <a href="#kvadraticke-nerovnice-s-absolutni-hodnotou" class="btn-primary">Další téma →</a>
+                    <div class="worked-example">
+                        <h3>Vzorový příklad</h3>
+                        <div class="equation-block">\[
+                            x^2-5x+6&lt;0\iff(x-2)(x-3)&lt;0\Rightarrow x\in(2,3)
+                        \]</div>
+                        <div class="equation-block">\[
+                            -2x^2+8x-6\ge0\iff x^2-4x+3\le0\Rightarrow x\in[1,3]
+                        \]</div>
                     </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: \(\,ax^2+bx+c\;\square\;0\)</h3>
+                        <div class="control-grid">
+                            <div class="control-item"><label for="quadOperator">Znaménko</label><select id="quadOperator"><option value="lt">&lt;</option><option value="le">≤</option><option value="gt">&gt;</option><option value="ge">≥</option></select></div>
+                            <div class="control-item control-item-wide"><label for="quadA">\(a\): <span id="quadAValue">1</span></label><input type="range" id="quadA" min="-4" max="4" step="1" value="1"></div>
+                            <div class="control-item control-item-wide"><label for="quadB">\(b\): <span id="quadBValue">-5</span></label><input type="range" id="quadB" min="-10" max="10" step="1" value="-5"></div>
+                            <div class="control-item control-item-wide"><label for="quadC">\(c\): <span id="quadCValue">6</span></label><input type="range" id="quadC" min="-12" max="12" step="1" value="6"></div>
+                        </div>
+                        <div class="graph-grid">
+                            <div class="canvas-wrap"><canvas id="quadGraphCanvas" width="860" height="320"></canvas><div class="canvas-caption">Graf funkce</div></div>
+                            <div class="canvas-wrap"><canvas id="quadNumberCanvas" width="860" height="180"></canvas><div class="canvas-caption">Řešení na číselné ose</div></div>
+                        </div>
+                        <div class="math-output-grid">
+                            <div class="math-output-card"><span class="output-label">Nerovnice</span><div class="output-value" id="quadInequalityLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Diskriminant</span><div class="output-value" id="quadDiscriminantLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Kořeny</span><div class="output-value" id="quadRootsLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Řešení</span><div class="output-value" id="quadSolutionLatex"></div></div>
+                        </div>
+                        <div class="steps-list" id="quadSteps"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Vyřeš \(\,x^2-4x+3\ge0\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="quad-check" value="a"><span>\((1,3)\)</span></label>
+                            <label class="option-item"><input type="radio" name="quad-check" value="b"><span>\((-\infty,1]\cup[3,\infty)\)</span></label>
+                            <label class="option-item"><input type="radio" name="quad-check" value="c"><span>\([1,3]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="quad-check" data-correct="b" data-feedback="quadCheckFeedback" data-correct-label="\((-\infty,1]\cup[3,\infty)\)" data-explanation="Kořeny jsou 1 a 3. Pro \(a&gt;0\) je výraz nezáporný mimo interval mezi kořeny.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="quadCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons"><span></span><button class="btn-primary btn-next" data-next="kvadraticke-nerovnice-s-absolutni-hodnotou">Pokračovat →</button></div>
                 </section>
 
                 <section id="kvadraticke-nerovnice-s-absolutni-hodnotou" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Kvadratické nerovnice s absolutní hodnotou</h1>
-                    <p class="lead">
-                        Tato sekce je připravená jako struktura pro téma <strong>Kvadratické nerovnice s absolutní hodnotou</strong>.
-                        Obsah (výklad, příklady a procvičování) doplníme v dalším kroku.
-                    </p>
+                    <p class="lead">Nerovnice \(\,|Q(x)|\;\square\;k\) převádíme na dvě podmínky bez absolutní hodnoty a ty pak skládáme průnikem nebo sjednocením.</p>
 
-                    <div class="placeholder-card">
-                        <h2>Plán obsahu</h2>
-                        <ul class="placeholder-list">
-                            <li>Základní definice a důležité poznámky</li>
-                            <li>Typický postup řešení krok za krokem</li>
-                            <li>Vzorové příklady a cvičné úlohy</li>
-                        </ul>
+                    <div class="definition-box">
+                        <h4>Převod na případy</h4>
+                        <div class="equation-block">\[
+                            |Q(x)|&lt;k\iff-k&lt;Q(x)&lt;k,\quad
+                            |Q(x)|\le k\iff-k\le Q(x)\le k
+                        \]</div>
+                        <div class="equation-block">\[
+                            |Q(x)|&gt;k\iff Q(x)&gt;k\ \text{nebo}\ Q(x)&lt;-k,\quad
+                            |Q(x)|\ge k\iff Q(x)\ge k\ \text{nebo}\ Q(x)\le-k
+                        \]</div>
+                        <p class="example-note">Pokud \(k&lt;0\), potom \(|Q(x)|&lt;k\) a \(|Q(x)|\le k\) nemají řešení, zatímco \(|Q(x)|&gt;k\) a \(|Q(x)|\ge k\) platí pro všechna \(x\).</p>
+                        <div class="equation-block">\[
+                            |Q(x)|\le 0\iff Q(x)=0,\qquad |Q(x)|>0\iff Q(x)\neq 0
+                        \]</div>
                     </div>
 
-                    <div class="nav-buttons">
-                        <a href="#kvadraticke-nerovnice" class="btn-outline">← Zpět</a>
-                    <a href="../../index.html" class="btn-primary">Zpět na kurz</a>
+                    <div class="worked-example">
+                        <h3>Vzorový příklad</h3>
+                        <div class="equation-block">\[
+                            |x^2-5x+6|\le2\iff -2\le x^2-5x+6\le2
+                        \]</div>
+                        <div class="equation-block">\[
+                            x^2-5x+8\ge0\ \text{a}\ x^2-5x+4\le0
+                            \Rightarrow x\in[1,4]
+                        \]</div>
                     </div>
-                </section>            </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: \(\,|ax^2+bx+c|\;\square\;k\)</h3>
+                        <div class="control-grid">
+                            <div class="control-item"><label for="absQuadOperator">Znaménko</label><select id="absQuadOperator"><option value="lt">&lt;</option><option value="le">≤</option><option value="gt">&gt;</option><option value="ge">≥</option></select></div>
+                            <div class="control-item control-item-wide"><label for="absQuadA">\(a\): <span id="absQuadAValue">1</span></label><input type="range" id="absQuadA" min="-3" max="3" step="1" value="1"></div>
+                            <div class="control-item control-item-wide"><label for="absQuadB">\(b\): <span id="absQuadBValue">-5</span></label><input type="range" id="absQuadB" min="-10" max="10" step="1" value="-5"></div>
+                            <div class="control-item control-item-wide"><label for="absQuadC">\(c\): <span id="absQuadCValue">6</span></label><input type="range" id="absQuadC" min="-12" max="12" step="1" value="6"></div>
+                            <div class="control-item control-item-wide"><label for="absQuadK">\(k\): <span id="absQuadKValue">2</span></label><input type="range" id="absQuadK" min="-4" max="8" step="0.5" value="2"></div>
+                        </div>
+                        <div class="graph-grid">
+                            <div class="canvas-wrap"><canvas id="absQuadGraphCanvas" width="860" height="320"></canvas><div class="canvas-caption">Graf \(Q(x)\) a hladiny \(y=\pm k\)</div></div>
+                            <div class="canvas-wrap"><canvas id="absQuadNumberCanvas" width="860" height="200"></canvas><div class="canvas-caption">Výsledek na číselné ose</div></div>
+                        </div>
+                        <div class="math-output-grid">
+                            <div class="math-output-card"><span class="output-label">Nerovnice</span><div class="output-value" id="absQuadExpressionLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Převod</span><div class="output-value" id="absQuadEquivalentLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Kombinace</span><div class="output-value" id="absQuadCombineLatex"></div></div>
+                            <div class="math-output-card"><span class="output-label">Řešení</span><div class="output-value" id="absQuadSolutionLatex"></div></div>
+                        </div>
+                        <div class="case-grid" id="absQuadCases"></div>
+                        <div class="steps-list" id="absQuadSteps"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Vyřeš \(\,|x^2-4|&lt;5\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="abs-quad-check" value="a"><span>\((-\infty,-3)\cup(3,\infty)\)</span></label>
+                            <label class="option-item"><input type="radio" name="abs-quad-check" value="b"><span>\((-3,3)\)</span></label>
+                            <label class="option-item"><input type="radio" name="abs-quad-check" value="c"><span>\([-3,3]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="abs-quad-check" data-correct="b" data-feedback="absQuadCheckFeedback" data-correct-label="\((-3,3)\)" data-explanation="\(-5&lt;x^2-4&lt;5\Rightarrow -1&lt;x^2&lt;9\). Levá nerovnost platí vždy, tedy \(x^2&lt;9\Rightarrow -3&lt;x&lt;3\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="absQuadCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons"><button class="btn-outline btn-prev" data-prev="kvadraticke-nerovnice">← Zpět</button><button class="btn-primary btn-next" data-next="procvicovani">Pokračovat →</button></div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Po špatné odpovědi se vždy zobrazí správný výsledek i vysvětlení.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1"><div class="exercise-header"><span class="exercise-number">Úloha 1</span><span class="exercise-status" id="ex1Status"></span></div><div class="exercise-content"><p>Vyřeš \(\,x^2-5x+6&lt;0\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex1" value="a"><span>\((2,3)\)</span></label><label class="option"><input type="radio" name="ex1" value="b"><span>\([2,3]\)</span></label><label class="option"><input type="radio" name="ex1" value="c"><span>\((-\infty,2)\cup(3,\infty)\)</span></label><label class="option"><input type="radio" name="ex1" value="d"><span>\(\emptyset\)</span></label></div><button class="btn-primary btn-check" data-exercise="1" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex1Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise2"><div class="exercise-header"><span class="exercise-number">Úloha 2</span><span class="exercise-status" id="ex2Status"></span></div><div class="exercise-content"><p>Vyřeš \(\,-2x^2+8x-6\ge0\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex2" value="a"><span>\((1,3)\)</span></label><label class="option"><input type="radio" name="ex2" value="b"><span>\([1,3]\)</span></label><label class="option"><input type="radio" name="ex2" value="c"><span>\((-\infty,1]\cup[3,\infty)\)</span></label><label class="option"><input type="radio" name="ex2" value="d"><span>\(\mathbb{R}\)</span></label></div><button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex2Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise3"><div class="exercise-header"><span class="exercise-number">Úloha 3</span><span class="exercise-status" id="ex3Status"></span></div><div class="exercise-content"><p>Vyřeš \(\,x^2-6x+9&gt;0\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex3" value="a"><span>\(\mathbb{R}\)</span></label><label class="option"><input type="radio" name="ex3" value="b"><span>\(\{3\}\)</span></label><label class="option"><input type="radio" name="ex3" value="c"><span>\(\mathbb{R}\setminus\{3\}\)</span></label><label class="option"><input type="radio" name="ex3" value="d"><span>\(\emptyset\)</span></label></div><button class="btn-primary btn-check" data-exercise="3" data-correct="c">Zkontrolovat</button><div class="exercise-feedback" id="ex3Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise4"><div class="exercise-header"><span class="exercise-number">Úloha 4</span><span class="exercise-status" id="ex4Status"></span></div><div class="exercise-content"><p>Vyřeš \(\,|x^2-4|\le0\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex4" value="a"><span>\(\{-2,2\}\)</span></label><label class="option"><input type="radio" name="ex4" value="b"><span>\([-2,2]\)</span></label><label class="option"><input type="radio" name="ex4" value="c"><span>\((-\infty,-2]\cup[2,\infty)\)</span></label><label class="option"><input type="radio" name="ex4" value="d"><span>\(\emptyset\)</span></label></div><button class="btn-primary btn-check" data-exercise="4" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex4Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise5"><div class="exercise-header"><span class="exercise-number">Úloha 5</span><span class="exercise-status" id="ex5Status"></span></div><div class="exercise-content"><p>Vyřeš \(\,|x^2-5x+6|\le2\).</p><div class="exercise-options"><label class="option"><input type="radio" name="ex5" value="a"><span>\((1,4)\)</span></label><label class="option"><input type="radio" name="ex5" value="b"><span>\([1,4]\)</span></label><label class="option"><input type="radio" name="ex5" value="c"><span>\((-\infty,1]\cup[4,\infty)\)</span></label><label class="option"><input type="radio" name="ex5" value="d"><span>\(\emptyset\)</span></label></div><button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex5Feedback"></div></div></article>
+
+                        <article class="exercise" id="exercise6"><div class="exercise-header"><span class="exercise-number">Úloha 6</span><span class="exercise-status" id="ex6Status"></span></div><div class="exercise-content"><p>Jaké je řešení \(\,|x^2+1|&lt;0.2\)?</p><div class="exercise-options"><label class="option"><input type="radio" name="ex6" value="a"><span>\((-0.2,0.2)\)</span></label><label class="option"><input type="radio" name="ex6" value="b"><span>\(\mathbb{R}\)</span></label><label class="option"><input type="radio" name="ex6" value="c"><span>\(\{-1,1\}\)</span></label><label class="option"><input type="radio" name="ex6" value="d"><span>\(\emptyset\)</span></label></div><button class="btn-primary btn-check" data-exercise="6" data-correct="d">Zkontrolovat</button><div class="exercise-feedback" id="ex6Feedback"></div></div></article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;"><div class="complete-icon">✓</div><h2>Lekce dokončena</h2><p>Zvládl/a jste kvadratické nerovnice i jejich verzi s absolutní hodnotou.</p><a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a></div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev" data-prev="kvadraticke-nerovnice-s-absolutni-hodnotou">← Zpět</button><a href="../../index.html" class="btn-primary">Dokončit lekci</a></div>
+                </section>
+            </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
     <script>
-        if (!window.location.hash) {
-            window.history.replaceState(null, '', '#kvadraticke-nerovnice');
-        }
+        window.MathJax = {
+            tex: { inlineMath: [['\\(', '\\)'], ['$', '$']], displayMath: [['\\[', '\\]']] },
+            options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'] }
+        };
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
 </body>
-
 </html>
-
-
