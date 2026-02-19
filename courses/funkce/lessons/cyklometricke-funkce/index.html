@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cyklometrické funkce – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Cyklometrické funkce: arcussinus, arcuscosinus, arcustangens a arcuscotangens, jejich definiční obory, obory hodnot, vztahy a procvičování.">
     <title>Cyklometrické funkce – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -48,38 +49,461 @@
                         <span class="sidebar-icon">2</span>
                         Arcustangens a arcuscotangens
                     </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
+                    </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 33%"></div>
+                    </div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="arcussinus-a-arcuscosinus" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="arcussinus-a-arcuscosinus" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Arcussinus a arcuscosinus</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Cyklometrické funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Cyklometrické funkce jsou inverzní funkce ke goniometrickým funkcím na zvolených
+                        intervalech (hlavních větvích). Pro \(\arcsin\) a \(\arccos\) pracujeme se vstupy
+                        pouze z intervalu \([-1,1]\), protože hodnoty sinu i kosinu leží právě v tomto rozsahu.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice a hlavní větve</h4>
+                        <div class="equation-block">\[
+                            y=\arcsin x \iff \sin y=x,\quad y\in\left[-\frac{\pi}{2},\frac{\pi}{2}\right],\quad x\in[-1,1]
+                        \]</div>
+                        <div class="equation-block">\[
+                            y=\arccos x \iff \cos y=x,\quad y\in[0,\pi],\quad x\in[-1,1]
+                        \]</div>
+                        <div class="equation-block">\[
+                            D(\arcsin)=D(\arccos)=[-1,1]
+                        \]</div>
+                        <div class="equation-block">\[
+                            H(\arcsin)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right],\quad
+                            H(\arccos)=[0,\pi]
+                        \]</div>
+                        <div class="equation-block">\[
+                            \arcsin x+\arccos x=\frac{\pi}{2}\quad\text{pro každé }x\in[-1,1]
+                        \]</div>
+                        <p class="formula-note">
+                            Bez omezení na hlavní větev by \(\sin\) ani \(\cos\) nebyly prosté a inverze by
+                            nebyla jednoznačná.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Základní hodnoty</h4>
+                            <div class="equation-block">\[
+                                \arcsin\left(\frac12\right)=\frac{\pi}{6},\quad
+                                \arcsin\left(-\frac{\sqrt3}{2}\right)=-\frac{\pi}{3}
+                            \]</div>
+                            <div class="equation-block">\[
+                                \arccos\left(\frac12\right)=\frac{\pi}{3},\quad
+                                \arccos\left(-\frac12\right)=\frac{2\pi}{3}
+                            \]</div>
+                            <div class="equation-block">\[
+                                \arcsin(1)=\frac{\pi}{2},\quad \arccos(1)=0,\quad \arccos(-1)=\pi
+                            \]</div>
+                        </div>
+                        <div class="column">
+                            <h4>Užitečné vztahy</h4>
+                            <div class="equation-block">\[
+                                \sin(\arcsin x)=x,\quad \cos(\arccos x)=x
+                            \]</div>
+                            <div class="equation-block">\[
+                                \cos(\arcsin x)=\sqrt{1-x^2}
+                            \]</div>
+                            <div class="equation-block">\[
+                                \sin(\arccos x)=\sqrt{1-x^2}
+                            \]</div>
+                            <p class="topic-note">
+                                Odmocnina je kladná, protože \(\arcsin x\in[-\pi/2,\pi/2]\) a
+                                \(\arccos x\in[0,\pi]\), kde jsou kosinus/sinus v příslušných případech nezáporné.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: grafy \(\arcsin x\) a \(\arccos x\)</h3>
+                        <p>Nastavte \(x_0\in[-1,1]\), sledujte obě hodnoty a ověřte vztah \(\arcsin x_0+\arccos x_0=\frac{\pi}{2}\).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="invSinCosCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-main"></span>\(y=\arcsin x\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-base"></span>\(y=\arccos x\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-point"></span>hodnoty v bodě \(x_0\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="invSinCosX">\(x_0\): <span id="invSinCosXValue">0</span></label>
+                                        <input type="range" id="invSinCosX" min="-1" max="1" step="0.01" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Vyhodnocení</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>\(\arcsin(x_0)\) [rad]</span><span id="invSinCosAsinRad" class="calc-value">0</span></div>
+                                        <div class="calc-step"><span>\(\arcsin(x_0)\) [°]</span><span id="invSinCosAsinDeg" class="calc-value">0°</span></div>
+                                        <div class="calc-step"><span>\(\arccos(x_0)\) [rad]</span><span id="invSinCosAcosRad" class="calc-value">\(\frac{\pi}{2}\)</span></div>
+                                        <div class="calc-step"><span>\(\arccos(x_0)\) [°]</span><span id="invSinCosAcosDeg" class="calc-value">90°</span></div>
+                                        <div class="calc-step"><span>Součet</span><span id="invSinCosSum" class="calc-value">\(\frac{\pi}{2}\)</span></div>
+                                        <div class="calc-step"><span>\(\sin(\arcsin(x_0))\)</span><span id="invSinCosBackSin" class="calc-value">0</span></div>
+                                        <div class="calc-step"><span>\(\cos(\arccos(x_0))\)</span><span id="invSinCosBackCos" class="calc-value">0</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="invSinCosConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Která dvojice oborů hodnot je správně?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="inv-sincos-check" value="a"><span>\(H(\arcsin)=\mathbb{R}\), \(H(\arccos)=\mathbb{R}\)</span></label>
+                            <label class="option"><input type="radio" name="inv-sincos-check" value="b"><span>\(H(\arcsin)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\), \(H(\arccos)=[0,\pi]\)</span></label>
+                            <label class="option"><input type="radio" name="inv-sincos-check" value="c"><span>\(H(\arcsin)=[0,\pi]\), \(H(\arccos)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="inv-sincos-check" data-correct="b"
+                            data-feedback="invSinCosCheckFeedback"
+                            data-correct-label="\(H(\arcsin)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\), \(H(\arccos)=[0,\pi]\)"
+                            data-explanation="Tyto intervaly jsou definované hlavní větve inverzních funkcí k sinu a kosinu.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="invSinCosCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="arcustangens-a-arcuscotangens">Pokračovat ›</button>
                     </div>
                 </section>
                 <section id="arcustangens-a-arcuscotangens" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Arcustangens a arcuscotangens</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Cyklometrické funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Funkce \(\arctan\) a \(\arccot\) inverzně vracejí úhel k dané hodnotě tangens/cotangens.
+                        V této lekci používáme běžnou školní hlavní větev \(\arccot x\in(0,\pi)\), díky níž je
+                        \(\arccot\) na \(\mathbb{R}\) prostá a striktně klesající.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice, obory a limity</h4>
+                        <div class="equation-block">\[
+                            y=\arctan x \iff \tan y=x,\quad y\in\left(-\frac{\pi}{2},\frac{\pi}{2}\right),\quad x\in\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            y=\arccot x \iff \cot y=x,\quad y\in(0,\pi),\quad x\in\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            D(\arctan)=D(\arccot)=\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            H(\arctan)=\left(-\frac{\pi}{2},\frac{\pi}{2}\right),\quad H(\arccot)=(0,\pi)
+                        \]</div>
+                        <div class="equation-block">\[
+                            \arctan x+\arccot x=\frac{\pi}{2}\quad\text{(v této zvolené větvi)}
+                        \]</div>
+                        <div class="equation-block">\[
+                            (\arctan x)'=\frac{1}{1+x^2},\qquad (\arccot x)'=-\frac{1}{1+x^2}
+                        \]</div>
+                        <p class="formula-note">
+                            \(\arctan\) je lichá a striktně rostoucí, \(\arccot\) je striktně klesající.
+                            Obě funkce mají vodorovné asymptoty.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Základní hodnoty</h4>
+                            <div class="equation-block">\[
+                                \arctan(1)=\frac{\pi}{4},\quad
+                                \arctan(\sqrt3)=\frac{\pi}{3},\quad
+                                \arctan(-\sqrt3)=-\frac{\pi}{3}
+                            \]</div>
+                            <div class="equation-block">\[
+                                \arccot(1)=\frac{\pi}{4},\quad
+                                \arccot(\sqrt3)=\frac{\pi}{6},\quad
+                                \arccot(-1)=\frac{3\pi}{4}
+                            \]</div>
+                        </div>
+                        <div class="column">
+                            <h4>Řešení rovnic</h4>
+                            <div class="equation-block">\[
+                                \tan t=2 \iff t=\arctan 2+k\pi,\quad k\in\mathbb{Z}
+                            \]</div>
+                            <div class="equation-block">\[
+                                \cot t=-3 \iff t=\arccot(-3)+k\pi,\quad k\in\mathbb{Z}
+                            \]</div>
+                            <p class="topic-note">
+                                Cyklometrická funkce dává hlavní řešení; perioda \(\pi\) pak generuje všechna řešení.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: grafy \(\arctan x\) a \(\arccot x\)</h3>
+                        <p>Nastavte \(x_0\in\mathbb{R}\), porovnejte hodnoty, derivace a ověřte vztah \(\arctan x_0+\arccot x_0=\frac{\pi}{2}\).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="invTanCotCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-main"></span>\(y=\arctan x\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-base"></span>\(y=\arccot x\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-asymptote"></span>asymptoty</span>
+                                    <span class="legend-item"><span class="legend-color legend-point"></span>hodnoty v bodě \(x_0\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="invTanCotX">\(x_0\): <span id="invTanCotXValue">0</span></label>
+                                        <input type="range" id="invTanCotX" min="-8" max="8" step="0.1" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Vyhodnocení</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>\(\arctan(x_0)\) [rad]</span><span id="invTanCotAtanRad" class="calc-value">0</span></div>
+                                        <div class="calc-step"><span>\(\arctan(x_0)\) [°]</span><span id="invTanCotAtanDeg" class="calc-value">0°</span></div>
+                                        <div class="calc-step"><span>\(\arccot(x_0)\) [rad]</span><span id="invTanCotAcotRad" class="calc-value">\(\frac{\pi}{2}\)</span></div>
+                                        <div class="calc-step"><span>\(\arccot(x_0)\) [°]</span><span id="invTanCotAcotDeg" class="calc-value">90°</span></div>
+                                        <div class="calc-step"><span>Součet</span><span id="invTanCotSum" class="calc-value">\(\frac{\pi}{2}\)</span></div>
+                                        <div class="calc-step"><span>\((\arctan x_0)'\)</span><span id="invTanCotDAtan" class="calc-value">1</span></div>
+                                        <div class="calc-step"><span>\((\arccot x_0)'\)</span><span id="invTanCotDAcot" class="calc-value">-1</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="invTanCotConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Které tvrzení o \(\arctan x\) je správné?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="inv-tancot-check" value="a"><span>\(D(\arctan)=[-1,1]\), \(H(\arctan)=\mathbb{R}\)</span></label>
+                            <label class="option"><input type="radio" name="inv-tancot-check" value="b"><span>\(D(\arctan)=\mathbb{R}\), \(H(\arctan)=\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)</span></label>
+                            <label class="option"><input type="radio" name="inv-tancot-check" value="c"><span>\(\arctan x\) je sudá funkce.</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="inv-tancot-check" data-correct="b"
+                            data-feedback="invTanCotCheckFeedback"
+                            data-correct-label="\(D(\arctan)=\mathbb{R}\), \(H(\arctan)=\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)"
+                            data-explanation="\(\arctan\) je inverzní k \(\tan\) na intervalu \(\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\), proto je tento interval jeho oborem hodnot.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="invTanCotCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="arcussinus-a-arcuscosinus">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat k procvičování ›</button>
+                    </div>
+                </section>
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Po špatné odpovědi se vždy zobrazí správný výsledek i stručné vysvětlení postupu.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaký je definiční obor funkce \(f(x)=\arcsin x\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\([-1,1]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\((0,\pi)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\([0,\infty)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete hlavní hodnotu \(\arcsin\left(\frac12\right)\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(\frac{\pi}{6}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(\frac{5\pi}{6}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(-\frac{\pi}{6}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(\frac{\pi}{3}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete hlavní hodnotu \(\arccos\left(-\frac12\right)\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\(\frac{\pi}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\(-\frac{\pi}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\(\frac{2\pi}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(\frac{4\pi}{3}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaká je hodnota \(\arcsin x+\arccos x\) pro \(x\in[-1,1]\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\(\pi\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(\frac{\pi}{2}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>0</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\(2\pi\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jaký je obor hodnot \(\arctan x\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\((0,\pi)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vypočtěte \(\arctan(1)\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>\(\frac{\pi}{2}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>\(\frac{\pi}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\(\frac{\pi}{4}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\(\pi\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise7">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status" id="ex7Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Při větvi \(\arccot x\in(0,\pi)\) platí \(\arccot(-1)=\)</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"><span>\(-\frac{\pi}{4}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"><span>\(\frac{3\pi}{4}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"><span>\(\frac{\pi}{4}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="d"><span>\(\pi\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex7Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise8">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status" id="ex8Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Vyřešte rovnici \(\arctan x=-\frac{\pi}{3}\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"><span>\(x=-\sqrt3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"><span>\(x=\sqrt3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"><span>\(x=-\frac{1}{\sqrt3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="d"><span>\(x=\frac{1}{\sqrt3}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex8Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p id="lessonScore">Vyhodnocení se zobrazí po zkontrolování všech úloh.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="arcustangens-a-arcuscotangens">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']],
+                macros: {
+                    arccot: '\\operatorname{arccot}'
+                }
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 
