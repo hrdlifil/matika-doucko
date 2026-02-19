@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mocninná funkce – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Mocninná funkce: kladný i záporný mocnitel, posuny grafu, vlastnosti a procvičování.">
     <title>Mocninná funkce – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -40,106 +41,463 @@
                     <p>Mocninná funkce</p>
                 </div>
                 <nav class="sidebar-nav">
-                    <a href="#mocninna-funkce-s-kladnym-mocnitelem" class="sidebar-link active" data-section="mocninna-funkce-s-kladnym-mocnitelem">
-                        <span class="sidebar-icon">1</span>
-                        Mocninná funkce s kladným mocnitelem
-                    </a>
-                    <a href="#posuny-grafu-mf-s-kladnym-mocnitelem" class="sidebar-link" data-section="posuny-grafu-mf-s-kladnym-mocnitelem">
-                        <span class="sidebar-icon">2</span>
-                        Posuny grafu MF s kladným mocnitelem
-                    </a>
-                    <a href="#vlastnosti-mf-s-kladnym-mocnitelem" class="sidebar-link" data-section="vlastnosti-mf-s-kladnym-mocnitelem">
-                        <span class="sidebar-icon">3</span>
-                        Vlastnosti MF s kladným mocnitelem
-                    </a>
-                    <a href="#mocninna-funkce-se-zapornym-mocnitelem" class="sidebar-link" data-section="mocninna-funkce-se-zapornym-mocnitelem">
-                        <span class="sidebar-icon">4</span>
-                        Mocninná funkce se záporným mocnitelem
-                    </a>
-                    <a href="#posuny-grafu-mf-se-zapornym-mocnitelem" class="sidebar-link" data-section="posuny-grafu-mf-se-zapornym-mocnitelem">
-                        <span class="sidebar-icon">5</span>
-                        Posuny grafu MF se záporným mocnitelem
-                    </a>
-                    <a href="#vlastnosti-mf-se-zapornym-mocnitelem" class="sidebar-link" data-section="vlastnosti-mf-se-zapornym-mocnitelem">
-                        <span class="sidebar-icon">6</span>
-                        Vlastnosti MF se záporným mocnitelem
-                    </a>
+                    <a href="#mocninna-funkce-s-kladnym-mocnitelem" class="sidebar-link active"
+                        data-section="mocninna-funkce-s-kladnym-mocnitelem"><span class="sidebar-icon">1</span>Mocninná funkce s kladným mocnitelem</a>
+                    <a href="#posuny-grafu-mf-s-kladnym-mocnitelem" class="sidebar-link"
+                        data-section="posuny-grafu-mf-s-kladnym-mocnitelem"><span class="sidebar-icon">2</span>Posuny grafu MF s kladným mocnitelem</a>
+                    <a href="#vlastnosti-mf-s-kladnym-mocnitelem" class="sidebar-link"
+                        data-section="vlastnosti-mf-s-kladnym-mocnitelem"><span class="sidebar-icon">3</span>Vlastnosti MF s kladným mocnitelem</a>
+                    <a href="#mocninna-funkce-se-zapornym-mocnitelem" class="sidebar-link"
+                        data-section="mocninna-funkce-se-zapornym-mocnitelem"><span class="sidebar-icon">4</span>Mocninná funkce se záporným mocnitelem</a>
+                    <a href="#posuny-grafu-mf-se-zapornym-mocnitelem" class="sidebar-link"
+                        data-section="posuny-grafu-mf-se-zapornym-mocnitelem"><span class="sidebar-icon">5</span>Posuny grafu MF se záporným mocnitelem</a>
+                    <a href="#vlastnosti-mf-se-zapornym-mocnitelem" class="sidebar-link"
+                        data-section="vlastnosti-mf-se-zapornym-mocnitelem"><span class="sidebar-icon">6</span>Vlastnosti MF se záporným mocnitelem</a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 16.7%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování kapitoly</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh správně
+                    </div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="mocninna-funkce-s-kladnym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="mocninna-funkce-s-kladnym-mocnitelem" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Mocninná funkce s kladným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Budeme pracovat s předpisem <span class="math-inline">\(f(x)=a x^n\)</span>, kde
+                        <span class="math-inline">\(n\in\mathbb{N}\)</span> a <span class="math-inline">\(a\neq0\)</span>.
+                        Pro kladný mocnitel vždy platí <span class="math-inline">\(D(f)=\mathbb{R}\)</span>.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="definition-box">
+                        <h4>Nejdůležitější vztahy</h4>
+                        <div class="equation-block">\[
+                            n \text{ sudé} \Rightarrow f(-x)=f(x),\quad
+                            n \text{ liché} \Rightarrow f(-x)=-f(x)
+                        \]</div>
+                        <div class="equation-block">\[
+                            f(0)=0,\qquad x=0\text{ je kořen násobnosti }n
+                        \]</div>
                     </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: rodina funkcí \(a x^n\)</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="posCoreCanvas" width="620" height="420"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="pcA">a: <span id="pcAValue">1</span></label>
+                                        <input id="pcA" type="range" min="-3" max="3" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="pcN">n</label>
+                                        <select id="pcN">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3" selected>3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="pcX">x₀: <span id="pcXValue">1.5</span></label>
+                                        <input id="pcX" type="range" min="-4" max="4" step="0.1" value="1.5">
+                                    </div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="pcFormula" class="calc-value">f(x)=x^3</span></div>
+                                        <div class="calc-step"><span>f(x₀)</span><span id="pcValue" class="calc-value">3.38</span></div>
+                                        <div class="calc-step"><span>Parita</span><span id="pcParity" class="calc-value">lichý</span></div>
+                                        <div class="calc-step"><span>D(f)</span><span id="pcDomain" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>H(f)</span><span id="pcRange" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="pcMonotonic" class="calc-value">roste</span></div>
+                                        <div class="calc-step"><span>Prostota</span><span id="pcInjective" class="calc-value">ano</span></div>
+                                        <div class="calc-step"><span>Kořen</span><span id="pcZero" class="calc-value">x=0</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="pcConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Co platí pro \(f(x)=x^4\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="pc-check" value="a"><span>Je lichá a roste na celé \(\mathbb{R}\).</span></label>
+                            <label class="option"><input type="radio" name="pc-check" value="b"><span>Je sudá, \(D(f)=\mathbb{R}\), \(H(f)=[0,\infty)\).</span></label>
+                            <label class="option"><input type="radio" name="pc-check" value="c"><span>Je sudá a \(H(f)=\mathbb{R}\).</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="pc-check" data-correct="b"
+                            data-feedback="pcCheckFeedback" data-correct-label="varianta b"
+                            data-explanation="Sudý mocnitel dává sudou funkci, při kladném \(a\) je minimum 0.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="pcCheckFeedback"></div>
+                    </div>
+                    <div class="nav-buttons"><span></span><button class="btn-primary btn-next"
+                            data-next="posuny-grafu-mf-s-kladnym-mocnitelem">Pokračovat ›</button></div>
                 </section>
+
                 <section id="posuny-grafu-mf-s-kladnym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Posuny grafu MF s kladným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Pro posuny používáme tvar <span class="math-inline">\(g(x)=a(x-h)^n+k\)</span>.
+                        Parametr \(h\) posouvá vodorovně, parametr \(k\) svisle.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="definition-box">
+                        <h4>Transformace</h4>
+                        <div class="equation-block">\[
+                            h>0:\ \text{doprava},\ h<0:\ \text{doleva},\ k>0:\ \text{nahoru},\ k<0:\ \text{dolů}
+                        \]</div>
                     </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: původní vs. posunutý graf</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper"><canvas id="posShiftCanvas" width="620" height="420"></canvas></div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group"><label for="psA">a: <span id="psAValue">1</span></label><input id="psA" type="range"
+                                            min="-3" max="3" step="0.1" value="1"></div>
+                                    <div class="control-group"><label for="psN">n</label><select id="psN">
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select></div>
+                                    <div class="control-group"><label for="psH">h: <span id="psHValue">2</span></label><input id="psH" type="range"
+                                            min="-5" max="5" step="0.1" value="2"></div>
+                                    <div class="control-group"><label for="psK">k: <span id="psKValue">-1</span></label><input id="psK" type="range"
+                                            min="-6" max="6" step="0.1" value="-1"></div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Výstup</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Původní</span><span id="psBase" class="calc-value">f(x)=x^2</span></div>
+                                        <div class="calc-step"><span>Posunutý</span><span id="psShifted" class="calc-value">g(x)=(x-2)^2-1</span></div>
+                                        <div class="calc-step"><span>Bod [h,k]</span><span id="psKeyPoint" class="calc-value">[2,-1]</span></div>
+                                        <div class="calc-step"><span>Posun</span><span id="psMove" class="calc-value">2 doprava, 1 dolů</span></div>
+                                        <div class="calc-step"><span>Symetrie</span><span id="psSymmetry" class="calc-value">osa x=2</span></div>
+                                        <div class="calc-step"><span>H(g)</span><span id="psRange" class="calc-value">[-1,∞)</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel"><h4>Závěr</h4><p id="psConclusion" class="topic-note"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Kde je vrchol \(g(x)=2(x-3)^4-5\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="ps-check" value="a"><span>[3,-5]</span></label>
+                            <label class="option"><input type="radio" name="ps-check" value="b"><span>[-3,-5]</span></label>
+                            <label class="option"><input type="radio" name="ps-check" value="c"><span>[3,5]</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="ps-check" data-correct="a"
+                            data-feedback="psCheckFeedback" data-correct-label="varianta a"
+                            data-explanation="Ve tvaru \(a(x-h)^n+k\) je klíčový bod \([h,k]\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="psCheckFeedback"></div>
+                    </div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev"
+                            data-prev="mocninna-funkce-s-kladnym-mocnitelem">← Zpět</button><button class="btn-primary btn-next"
+                            data-next="vlastnosti-mf-s-kladnym-mocnitelem">Pokračovat ›</button></div>
                 </section>
+
                 <section id="vlastnosti-mf-s-kladnym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Vlastnosti MF s kladným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        U \(f(x)=a x^n\) rozhoduje o chování pouze parita \(n\) a znaménko \(a\).
+                        To stačí pro určení oboru hodnot, monotónnosti, prostoty i znaménka.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: analyzátor vlastností</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper"><canvas id="posPropsCanvas" width="620" height="420"></canvas></div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group"><label for="ppA">a: <span id="ppAValue">1</span></label><input id="ppA" type="range"
+                                            min="-3" max="3" step="0.1" value="1"></div>
+                                    <div class="control-group"><label for="ppN">n</label><select id="ppN">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4" selected>4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select></div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="ppFormula" class="calc-value">f(x)=x^4</span></div>
+                                        <div class="calc-step"><span>D(f)</span><span id="ppDomain" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>H(f)</span><span id="ppRange" class="calc-value">[0,∞)</span></div>
+                                        <div class="calc-step"><span>Parita</span><span id="ppParity" class="calc-value">sudá</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="ppMonotonic" class="calc-value">klesá, pak roste</span></div>
+                                        <div class="calc-step"><span>Znaménko</span><span id="ppSign" class="calc-value">f(x)≥0</span></div>
+                                        <div class="calc-step"><span>Prostota</span><span id="ppInjective" class="calc-value">ne</span></div>
+                                        <div class="calc-step"><span>Extrém</span><span id="ppExtremum" class="calc-value">minimum 0</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel"><h4>Závěr</h4><p id="ppConclusion" class="topic-note"></p></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaká je monotónnost funkce \(f(x)=-2x^5\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="pp-check" value="a"><span>Rostoucí na \(\mathbb{R}\).</span></label>
+                            <label class="option"><input type="radio" name="pp-check" value="b"><span>Klesající na \(\mathbb{R}\).</span></label>
+                            <label class="option"><input type="radio" name="pp-check" value="c"><span>Klesá pak roste.</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="pp-check" data-correct="b"
+                            data-feedback="ppCheckFeedback" data-correct-label="varianta b"
+                            data-explanation="Lichý mocnitel je základně monotónní na celé \(\mathbb{R}\), záporné \(a\) dá klesání.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="ppCheckFeedback"></div>
+                    </div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev"
+                            data-prev="posuny-grafu-mf-s-kladnym-mocnitelem">← Zpět</button><button class="btn-primary btn-next"
+                            data-next="mocninna-funkce-se-zapornym-mocnitelem">Pokračovat ›</button></div>
                 </section>
+
                 <section id="mocninna-funkce-se-zapornym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 4</span>
+                    <div class="section-badge">Téma 4</div>
                     <h1>Mocninná funkce se záporným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Uvažujeme tvar <span class="math-inline">\(f(x)=a x^{-n}=\frac{a}{x^n}\)</span>.
+                        Kritický bod je \(x=0\), který v definičním oboru nesmí být.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="definition-box">
+                        <h4>Jádro tématu</h4>
+                        <div class="equation-block">\[
+                            D(f)=\mathbb{R}\setminus\{0\},\quad \text{asymptoty: }x=0,\ y=0
+                        \]</div>
                     </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: funkce \(a/x^n\)</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper"><canvas id="negCoreCanvas" width="620" height="420"></canvas></div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group"><label for="ncA">a: <span id="ncAValue">1</span></label><input id="ncA" type="range"
+                                            min="-4" max="4" step="0.1" value="1"></div>
+                                    <div class="control-group"><label for="ncN">n</label><select id="ncN">
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select></div>
+                                    <div class="control-group"><label for="ncX">x₀: <span id="ncXValue">2</span></label><input id="ncX" type="range"
+                                            min="-6" max="6" step="0.1" value="2"></div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="ncFormula" class="calc-value">f(x)=1/x^2</span></div>
+                                        <div class="calc-step"><span>f(x₀)</span><span id="ncValue" class="calc-value">0.25</span></div>
+                                        <div class="calc-step"><span>D(f)</span><span id="ncDomain" class="calc-value">R\{0}</span></div>
+                                        <div class="calc-step"><span>H(f)</span><span id="ncRange" class="calc-value">(0,∞)</span></div>
+                                        <div class="calc-step"><span>Parita</span><span id="ncParity" class="calc-value">sudá</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="ncMonotonic" class="calc-value">roste vlevo, klesá vpravo</span></div>
+                                        <div class="calc-step"><span>Asymptoty</span><span id="ncAsymptotes" class="calc-value">x=0, y=0</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel"><h4>Závěr</h4><p id="ncConclusion" class="topic-note"></p></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaký je definiční obor \(f(x)=1/x^6\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="nc-check" value="a"><span>\(\mathbb{R}\)</span></label>
+                            <label class="option"><input type="radio" name="nc-check" value="b"><span>\(\mathbb{R}\setminus\{0\}\)</span></label>
+                            <label class="option"><input type="radio" name="nc-check" value="c"><span>\((0,\infty)\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="nc-check" data-correct="b"
+                            data-feedback="ncCheckFeedback" data-correct-label="varianta b"
+                            data-explanation="Jmenovatel nesmí být nula.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="ncCheckFeedback"></div>
+                    </div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev"
+                            data-prev="vlastnosti-mf-s-kladnym-mocnitelem">← Zpět</button><button class="btn-primary btn-next"
+                            data-next="posuny-grafu-mf-se-zapornym-mocnitelem">Pokračovat ›</button></div>
                 </section>
+
                 <section id="posuny-grafu-mf-se-zapornym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 5</span>
+                    <div class="section-badge">Téma 5</div>
                     <h1>Posuny grafu MF se záporným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Posunutý tvar je <span class="math-inline">\(g(x)=\frac{a}{(x-h)^n}+k\)</span>.
+                        Svislá asymptota je \(x=h\), vodorovná asymptota je \(y=k\).
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: posunuté asymptoty</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper"><canvas id="negShiftCanvas" width="620" height="420"></canvas></div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group"><label for="nsA">a: <span id="nsAValue">1</span></label><input id="nsA" type="range"
+                                            min="-4" max="4" step="0.1" value="1"></div>
+                                    <div class="control-group"><label for="nsN">n</label><select id="nsN">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select></div>
+                                    <div class="control-group"><label for="nsH">h: <span id="nsHValue">2</span></label><input id="nsH" type="range"
+                                            min="-5" max="5" step="0.1" value="2"></div>
+                                    <div class="control-group"><label for="nsK">k: <span id="nsKValue">-1</span></label><input id="nsK" type="range"
+                                            min="-5" max="5" step="0.1" value="-1"></div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="nsShifted" class="calc-value">g(x)=1/(x-2)-1</span></div>
+                                        <div class="calc-step"><span>Asymptoty</span><span id="nsAsymptotes" class="calc-value">x=2, y=-1</span></div>
+                                        <div class="calc-step"><span>D(g)</span><span id="nsDomain" class="calc-value">R\{2}</span></div>
+                                        <div class="calc-step"><span>H(g)</span><span id="nsRange" class="calc-value">R\{-1}</span></div>
+                                        <div class="calc-step"><span>Symetrie</span><span id="nsSymmetry" class="calc-value">střed [2,-1]</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel"><h4>Závěr</h4><p id="nsConclusion" class="topic-note"></p></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaké asymptoty má \(g(x)=1/(x-2)^3+4\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="ns-check" value="a"><span>x=0, y=0</span></label>
+                            <label class="option"><input type="radio" name="ns-check" value="b"><span>x=2, y=4</span></label>
+                            <label class="option"><input type="radio" name="ns-check" value="c"><span>x=-2, y=4</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="ns-check" data-correct="b"
+                            data-feedback="nsCheckFeedback" data-correct-label="varianta b"
+                            data-explanation="Základní asymptoty x=0, y=0 se posunou na x=h, y=k.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="nsCheckFeedback"></div>
+                    </div>
+                    <div class="nav-buttons"><button class="btn-outline btn-prev"
+                            data-prev="mocninna-funkce-se-zapornym-mocnitelem">← Zpět</button><button class="btn-primary btn-next"
+                            data-next="vlastnosti-mf-se-zapornym-mocnitelem">Pokračovat ›</button></div>
                 </section>
+
                 <section id="vlastnosti-mf-se-zapornym-mocnitelem" class="lesson-section">
-                    <span class="section-badge">Téma 6</span>
+                    <div class="section-badge">Téma 6</div>
                     <h1>Vlastnosti MF se záporným mocnitelem</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Mocninná funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Pro \(f(x)=a/x^n\) vždy platí \(D(f)=\mathbb{R}\setminus\{0\}\), asymptoty \(x=0\), \(y=0\),
+                        a limity \(f(x)\to 0\) pro \(|x|\to\infty\).
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: shrnutí vlastností</h3>
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper"><canvas id="negPropsCanvas" width="620" height="420"></canvas></div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group"><label for="npA">a: <span id="npAValue">-2</span></label><input id="npA" type="range"
+                                            min="-4" max="4" step="0.1" value="-2"></div>
+                                    <div class="control-group"><label for="npN">n</label><select id="npN">
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select></div>
+                                </div>
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="npFormula" class="calc-value">f(x)=-2/x^2</span></div>
+                                        <div class="calc-step"><span>D(f)</span><span id="npDomain" class="calc-value">R\{0}</span></div>
+                                        <div class="calc-step"><span>H(f)</span><span id="npRange" class="calc-value">(-∞,0)</span></div>
+                                        <div class="calc-step"><span>Parita</span><span id="npParity" class="calc-value">sudá</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="npMonotonic" class="calc-value">klesá vlevo, roste vpravo</span></div>
+                                        <div class="calc-step"><span>Znaménko</span><span id="npSign" class="calc-value">vždy záporná</span></div>
+                                        <div class="calc-step"><span>Prostota</span><span id="npInjective" class="calc-value">ne</span></div>
+                                        <div class="calc-step"><span>Asymptoty</span><span id="npAsymptotes" class="calc-value">x=0, y=0</span></div>
+                                    </div>
+                                </div>
+                                <div class="calc-panel result-panel"><h4>Závěr</h4><p id="npConclusion" class="topic-note"></p></div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaký je obor hodnot \(f(x)=-3/x^4\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="np-check" value="a"><span>(0,∞)</span></label>
+                            <label class="option"><input type="radio" name="np-check" value="b"><span>(-∞,0)</span></label>
+                            <label class="option"><input type="radio" name="np-check" value="c"><span>R\{0}</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="np-check" data-correct="b"
+                            data-feedback="npCheckFeedback" data-correct-label="varianta b"
+                            data-explanation="Sudý mocnitel má kladný jmenovatel, záporné \(a\) tedy dává pouze záporné hodnoty.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="npCheckFeedback"></div>
+                    </div>
+
+                    <h2>Procvičování celé kapitoly</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1"><div class="exercise-header"><span class="exercise-number">Úloha 1</span><span class="exercise-status" id="ex1Status"></span></div><div class="exercise-content"><p>Obor hodnot \(2x^4\):</p><div class="exercise-options"><label class="option"><input type="radio" name="ex1" value="a"><span>[0,∞)</span></label><label class="option"><input type="radio" name="ex1" value="b"><span>R</span></label><label class="option"><input type="radio" name="ex1" value="c"><span>(-∞,0]</span></label></div><button class="btn-primary btn-check" data-exercise="1" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex1Feedback"></div></div></article>
+                        <article class="exercise" id="exercise2"><div class="exercise-header"><span class="exercise-number">Úloha 2</span><span class="exercise-status" id="ex2Status"></span></div><div class="exercise-content"><p>Střed \(g(x)=(x+1)^3-2\):</p><div class="exercise-options"><label class="option"><input type="radio" name="ex2" value="a"><span>[1,-2]</span></label><label class="option"><input type="radio" name="ex2" value="b"><span>[-1,-2]</span></label><label class="option"><input type="radio" name="ex2" value="c"><span>[-1,2]</span></label></div><button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex2Feedback"></div></div></article>
+                        <article class="exercise" id="exercise3"><div class="exercise-header"><span class="exercise-number">Úloha 3</span><span class="exercise-status" id="ex3Status"></span></div><div class="exercise-content"><p>Pro \(3/x^5\) platí:</p><div class="exercise-options"><label class="option"><input type="radio" name="ex3" value="a"><span>D=R, H=R</span></label><label class="option"><input type="radio" name="ex3" value="b"><span>D=R\{0}, H=R\{0}</span></label><label class="option"><input type="radio" name="ex3" value="c"><span>D=R\{0}, H=(0,∞)</span></label></div><button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex3Feedback"></div></div></article>
+                        <article class="exercise" id="exercise4"><div class="exercise-header"><span class="exercise-number">Úloha 4</span><span class="exercise-status" id="ex4Status"></span></div><div class="exercise-content"><p>Monotónnost \(1/x^2\):</p><div class="exercise-options"><label class="option"><input type="radio" name="ex4" value="a"><span>roste vlevo, klesá vpravo</span></label><label class="option"><input type="radio" name="ex4" value="b"><span>klesá na obou intervalech</span></label><label class="option"><input type="radio" name="ex4" value="c"><span>roste na obou intervalech</span></label></div><button class="btn-primary btn-check" data-exercise="4" data-correct="a">Zkontrolovat</button><div class="exercise-feedback" id="ex4Feedback"></div></div></article>
+                        <article class="exercise" id="exercise5"><div class="exercise-header"><span class="exercise-number">Úloha 5</span><span class="exercise-status" id="ex5Status"></span></div><div class="exercise-content"><p>Obor hodnot \(-2/(x-1)^2+3\):</p><div class="exercise-options"><label class="option"><input type="radio" name="ex5" value="a"><span>(3,∞)</span></label><label class="option"><input type="radio" name="ex5" value="b"><span>(-∞,3)</span></label><label class="option"><input type="radio" name="ex5" value="c"><span>R\{3}</span></label></div><button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex5Feedback"></div></div></article>
+                        <article class="exercise" id="exercise6"><div class="exercise-header"><span class="exercise-number">Úloha 6</span><span class="exercise-status" id="ex6Status"></span></div><div class="exercise-content"><p>Znaménko \(-4/x^3\) pro \(x>0\):</p><div class="exercise-options"><label class="option"><input type="radio" name="ex6" value="a"><span>kladné</span></label><label class="option"><input type="radio" name="ex6" value="b"><span>záporné</span></label><label class="option"><input type="radio" name="ex6" value="c"><span>nulové</span></label></div><button class="btn-primary btn-check" data-exercise="6" data-correct="b">Zkontrolovat</button><div class="exercise-feedback" id="ex6Feedback"></div></div></article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Dokončili jste kapitolu Mocninná funkce.</p>
+                        <p id="lessonScore"></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons"><button class="btn-outline btn-prev"
+                            data-prev="posuny-grafu-mf-se-zapornym-mocnitelem">← Zpět</button><a href="../../index.html"
+                            class="btn-primary">Dokončit lekci</a></div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 

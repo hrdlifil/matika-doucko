@@ -1,2 +1,200 @@
-﻿@import url('../../lesson-shell.css');
+@import url('../../../analyticka-geometrie/lessons/parabola/lesson.css');
 
+.lesson-nav-current {
+    color: var(--text-primary);
+}
+
+.lesson-back-link {
+    display: inline-block;
+    margin-top: 1.4rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.lesson-back-link:hover {
+    color: var(--accent-primary);
+}
+
+.equation-block {
+    margin: 0.9rem 0;
+    padding: 0.85rem 1rem;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.24);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+.quick-check {
+    margin-top: 1.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+.quick-check h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.topic-note {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.mini-feedback {
+    margin-top: 0.9rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--radius-md);
+    display: none;
+    line-height: 1.5;
+}
+
+.mini-feedback.show {
+    display: block;
+}
+
+.mini-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.mini-feedback.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.option:has(input:disabled) {
+    cursor: default;
+}
+
+.option input:disabled {
+    cursor: default;
+}
+
+.calc-step .calc-value {
+    text-align: right;
+    max-width: 58%;
+}
+
+.calc-step span:first-child {
+    padding-right: 0.55rem;
+}
+
+.control-group select {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.demo-container,
+.demo-container-large {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.demo-container > *,
+.demo-container-large > * {
+    min-width: 0;
+}
+
+.demo-canvas-wrapper {
+    overflow: hidden;
+}
+
+.interactive-demo .demo-canvas-wrapper canvas {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.demo-controls {
+    font-size: 0.92rem;
+    width: 100%;
+}
+
+.demo-controls .calc-panel h4 {
+    font-size: 0.8rem;
+}
+
+.demo-controls .calc-step {
+    font-size: 0.84rem;
+    padding: 0.45rem 0.5rem;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+
+.demo-controls .calc-step span:first-child,
+.demo-controls .calc-step .calc-value {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+.demo-controls .calc-step .calc-value {
+    max-width: 68%;
+    white-space: normal;
+}
+
+.canvas-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 0.85rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.legend-main {
+    background: #6366f1;
+}
+
+.legend-base {
+    background: #f59e0b;
+}
+
+.legend-point {
+    background: #10b981;
+}
+
+.legend-target {
+    background: #f97316;
+}
+
+.legend-asymptote {
+    background: #ef4444;
+}
+
+.legend-asymptote-shift {
+    background: #ec4899;
+}
+
+#lessonScore {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+    .demo-container,
+    .demo-container-large {
+        display: flex;
+        flex-direction: column;
+    }
+}

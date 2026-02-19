@@ -1,2 +1,168 @@
-﻿@import url('../../lesson-shell.css');
+﻿@import url('../../../analyticka-geometrie/lessons/parabola/lesson.css');
 
+.lesson-back-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.lesson-back-link:hover {
+    color: var(--accent-primary);
+}
+
+.practice-counter {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.math-inline {
+    white-space: nowrap;
+}
+
+.equation-block {
+    margin: 0.8rem 0;
+    padding: 0.8rem 1rem;
+    background: rgba(99, 102, 241, 0.08);
+    border: 1px solid rgba(99, 102, 241, 0.24);
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+.quick-check {
+    margin-top: 1.5rem;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+}
+
+.quick-check h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+}
+
+.topic-note {
+    margin: 0;
+    line-height: 1.55;
+}
+
+.mini-feedback {
+    margin-top: 0.9rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--radius-md);
+    display: none;
+    line-height: 1.5;
+}
+
+.mini-feedback.show {
+    display: block;
+}
+
+.mini-feedback.correct {
+    background: rgba(16, 185, 129, 0.1);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #10b981;
+}
+
+.mini-feedback.incorrect {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+}
+
+.calc-step .calc-value {
+    text-align: right;
+    max-width: 62%;
+}
+
+.calc-step span:first-child {
+    padding-right: 0.5rem;
+}
+
+.interactive-demo .demo-canvas-wrapper canvas {
+    width: 100%;
+    height: auto;
+}
+
+.canvas-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 0.85rem;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+}
+
+.legend-main {
+    background: #6366f1;
+}
+
+.legend-base {
+    background: #f97316;
+}
+
+.legend-axis {
+    background: #38bdf8;
+}
+
+.legend-point {
+    background: #ec4899;
+}
+
+.legend-origin {
+    background: #10b981;
+}
+
+.legend-asymptote {
+    background: #ef4444;
+}
+
+.property-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+}
+
+.property-table th,
+.property-table td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.4rem 0.35rem;
+    text-align: center;
+}
+
+.property-table th {
+    background: var(--bg-tertiary);
+}
+
+.option:has(input:disabled) {
+    cursor: default;
+}
+
+.option input:disabled {
+    cursor: default;
+}
+
+#lessonScore {
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1200px) {
+
+    .demo-container,
+    .demo-container-large {
+        grid-template-columns: 1fr;
+    }
+}

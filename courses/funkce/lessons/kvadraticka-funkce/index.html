@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kvadratická funkce – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Kvadratická funkce: podrobný výklad tvarů paraboly, posunů grafu, vlastností a kvadratické funkce s absolutní hodnotou.">
     <title>Kvadratická funkce – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -57,60 +58,592 @@
                         Kvadratická funkce s absolutní hodnotou
                     </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
+                </div>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Procvičování kapitoly</div>
+                    <div class="practice-counter"><strong id="solvedCount">0</strong> / <span id="totalCount">0</span> úloh správně</div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="kvadraticka-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="kvadraticka-funkce" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Kvadratická funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Kvadratická funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Kvadratická funkce má tvar <span class="math-inline">\(f(x)=ax^2+bx+c\)</span> s podmínkou
+                        <span class="math-inline">\(a\ne0\)</span>. Její graf je parabola. Koeficient
+                        <span class="math-inline">\(a\)</span> určuje otevření a „strmost“ paraboly, koeficienty
+                        <span class="math-inline">\(b,c\)</span> určují její polohu.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy</h4>
+                        <div class="equation-block">\[
+                            f(x)=ax^2+bx+c,\qquad a\ne0
+                        \]</div>
+                        <div class="equation-block">\[
+                            x_V=-\frac{b}{2a},\qquad y_V=f(x_V)
+                        \]</div>
+                        <div class="equation-block">\[
+                            f(x)=a(x-p)^2+q,\qquad V=[p,q],\qquad \text{osa: }x=p
+                        \]</div>
+                        <p class="formula-note">
+                            Vrcholový tvar je nejrychlejší cesta k ose souměrnosti, vrcholu, minimu nebo maximu.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Jak číst předpis</h4>
+                            <ul>
+                                <li>\(a&gt;0\): parabola je otevřená nahoru a má minimum.</li>
+                                <li>\(a&lt;0\): parabola je otevřená dolů a má maximum.</li>
+                                <li>\(|a|\) větší znamená užší (strmější) parabolu.</li>
+                                <li>Kořen(y) určují průsečík(y) s osou \(x\).</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Rychlý příklad</h4>
+                            <div class="equation-block">\[
+                                f(x)=x^2-4x+3=(x-2)^2-1
+                            \]</div>
+                            <ul>
+                                <li>Vrchol \(V=[2,-1]\)</li>
+                                <li>Osa souměrnosti \(x=2\)</li>
+                                <li>Kořeny \(x_1=1,\;x_2=3\)</li>
+                                <li>Minimum je \(-1\)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: z koeficientů na celý rozbor paraboly</h3>
+                        <p>Měňte \(a,b,c\) a sledujte graf, vrchol, osu, diskriminant i kořeny v reálném čase.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadCoreCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-parabola"></span>\(f(x)\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-axis"></span>osa souměrnosti</span>
+                                    <span class="legend-item"><span class="legend-color legend-vertex"></span>vrchol</span>
+                                    <span class="legend-item"><span class="legend-color legend-sample"></span>bod \((x_0,f(x_0))\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-root"></span>kořen</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="quadA">Koeficient \(a\): <span id="quadAValue">1</span></label>
+                                        <input type="range" id="quadA" min="-3" max="3" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="quadB">Koeficient \(b\): <span id="quadBValue">-4</span></label>
+                                        <input type="range" id="quadB" min="-10" max="10" step="0.1" value="-4">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="quadC">Koeficient \(c\): <span id="quadCValue">3</span></label>
+                                        <input type="range" id="quadC" min="-10" max="10" step="0.1" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="quadX">Vstup \(x_0\): <span id="quadXValue">0</span></label>
+                                        <input type="range" id="quadX" min="-8" max="8" step="0.1" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="quadCoreFormula" class="calc-value">f(x)=x²-4x+3</span></div>
+                                        <div class="calc-step"><span>Vrcholový tvar</span><span id="quadCoreVertexForm" class="calc-value">f(x)=(x-2)²-1</span></div>
+                                        <div class="calc-step"><span>Vrchol</span><span id="quadCoreVertex" class="calc-value">[2, -1]</span></div>
+                                        <div class="calc-step"><span>Osa</span><span id="quadCoreAxis" class="calc-value">x=2</span></div>
+                                        <div class="calc-step"><span>Diskriminant</span><span id="quadCoreDisc" class="calc-value">D=4</span></div>
+                                        <div class="calc-step"><span>Kořeny</span><span id="quadCoreRoots" class="calc-value">x₁=1, x₂=3</span></div>
+                                        <div class="calc-step"><span>\(f(x_0)\)</span><span id="quadCoreValue" class="calc-value">f(0)=3</span></div>
+                                        <div class="calc-step"><span>Obor hodnot</span><span id="quadCoreRange" class="calc-value">[-1, ∞)</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Interpretace</h4>
+                                    <p id="quadCoreConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Určete vrchol funkce \(f(x)=x^2-4x+3\).</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="core-check" value="a"><span>\([1,-1]\)</span></label>
+                            <label class="option"><input type="radio" name="core-check" value="b"><span>\([2,1]\)</span></label>
+                            <label class="option"><input type="radio" name="core-check" value="c"><span>\([2,-1]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="core-check" data-correct="c"
+                            data-feedback="coreCheckFeedback"
+                            data-correct-label="\([2,-1]\)"
+                            data-explanation="Platí \(x_V=-\frac{b}{2a}=-\frac{-4}{2}=2\) a \(y_V=f(2)=4-8+3=-1\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="coreCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="posuny-grafu-kvadraticke-funkce">Pokračovat ›</button>
                     </div>
                 </section>
                 <section id="posuny-grafu-kvadraticke-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Posuny grafu kvadratické funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Kvadratická funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Posuny zapisujeme nejpřehledněji přes vrcholový tvar. Funkce
+                        <span class="math-inline">\(g(x)=a(x-h)^2+k\)</span> vznikne z
+                        <span class="math-inline">\(f(x)=ax^2\)</span> posunem o \(h\) vodorovně a o \(k\) svisle.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Transformace</h4>
+                        <div class="equation-block">\[
+                            g(x)=f(x-h)+k
+                        \]</div>
+                        <div class="equation-block">\[
+                            g(x)=a(x-h)^2+k,\qquad V=[h,k],\qquad \text{osa: }x=h
+                        \]</div>
+                        <div class="equation-block">\[
+                            h&gt;0:\text{ doprava},\quad h&lt;0:\text{ doleva},\quad
+                            k&gt;0:\text{ nahoru},\quad k&lt;0:\text{ dolů}
+                        \]</div>
+                        <p class="formula-note">
+                            Parametr \(a\) se při posunu nemění, takže otevření paraboly zůstává stejné.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: původní parabola vs. posunutá parabola</h3>
+                        <p>Měňte \(a,h,k\) a porovnávejte oba grafy současně.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadShiftCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-base"></span>\(f(x)=ax^2\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-shift"></span>\(g(x)=a(x-h)^2+k\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-axis"></span>osa \(g\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-vertex"></span>vrcholy</span>
+                                    <span class="legend-item"><span class="legend-color legend-root"></span>kořen \(g\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="qsA">Koeficient \(a\): <span id="qsAValue">1</span></label>
+                                        <input type="range" id="qsA" min="-3" max="3" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qsH">Vodorovný posun \(h\): <span id="qsHValue">2</span></label>
+                                        <input type="range" id="qsH" min="-6" max="6" step="0.1" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qsK">Svislý posun \(k\): <span id="qsKValue">-1</span></label>
+                                        <input type="range" id="qsK" min="-8" max="8" step="0.1" value="-1">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Původní</span><span id="qsBase" class="calc-value">f(x)=x²</span></div>
+                                        <div class="calc-step"><span>Posunutá</span><span id="qsShifted" class="calc-value">g(x)=(x-2)²-1</span></div>
+                                        <div class="calc-step"><span>Vrchol \(g\)</span><span id="qsVertex" class="calc-value">[2, -1]</span></div>
+                                        <div class="calc-step"><span>Osa \(g\)</span><span id="qsAxis" class="calc-value">x=2</span></div>
+                                        <div class="calc-step"><span>Kořeny \(g\)</span><span id="qsRoots" class="calc-value">x₁=1, x₂=3</span></div>
+                                        <div class="calc-step"><span>Posun</span><span id="qsMove" class="calc-value">2 doprava, 1 dolů</span></div>
+                                        <div class="calc-step"><span>Otevření</span><span id="qsOpening" class="calc-value">nahoru</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Interpretace posunu</h4>
+                                    <p id="qsConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Co znamená předpis \(g(x)=f(x-2)+5\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="shift-check" value="a"><span>Posun o 2 doleva a 5 dolů.</span></label>
+                            <label class="option"><input type="radio" name="shift-check" value="b"><span>Posun o 2 doprava a 5 nahoru.</span></label>
+                            <label class="option"><input type="radio" name="shift-check" value="c"><span>Žádný posun, jen změna otevření.</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="shift-check" data-correct="b"
+                            data-feedback="shiftCheckFeedback"
+                            data-correct-label="o 2 doprava a 5 nahoru"
+                            data-explanation="U \(f(x-h)\) je skutečný směr vodorovného posunu opačný než znaménko v závorce.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="shiftCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="kvadraticka-funkce">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="vlastnosti-kvadraticke-funkce">Pokračovat ›</button>
                     </div>
                 </section>
                 <section id="vlastnosti-kvadraticke-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Vlastnosti kvadratické funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Kvadratická funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        U kvadratické funkce vždy platí
+                        <span class="math-inline">\(D(f)=\mathbb{R}\)</span>. Ostatní vlastnosti závisí na vrcholu,
+                        znaménku parametru \(a\) a na počtu reálných kořenů.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Klíčové vlastnosti</h4>
+                        <div class="equation-block">\[
+                            D(f)=\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            H(f)=\begin{cases}
+                                [y_V,\infty), & a&gt;0,\\
+                                (-\infty,y_V], & a&lt;0
+                            \end{cases}
+                        \]</div>
+                        <div class="equation-block">\[
+                            \text{f klesá na }(-\infty,x_V),\ \text{roste na }(x_V,\infty)\ \text{pro }a&gt;0
+                        \]</div>
+                        <div class="equation-block">\[
+                            \text{f roste na }(-\infty,x_V),\ \text{klesá na }(x_V,\infty)\ \text{pro }a&lt;0
+                        \]</div>
+                        <p class="formula-note">
+                            Kvadratická funkce není prostá na celé \(\mathbb{R}\), ale je prostá na každém z intervalů
+                            rozdělených osou souměrnosti.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: automatická analýza vlastností</h3>
+                        <p>Nastavte \(a,b,c\) a sledujte kompletní vlastnosti včetně znaménka a monotónnosti.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadPropsCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-parabola"></span>\(f(x)\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-axis"></span>osa souměrnosti</span>
+                                    <span class="legend-item"><span class="legend-color legend-vertex"></span>vrchol</span>
+                                    <span class="legend-item"><span class="legend-color legend-root"></span>kořen</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="qpA">Koeficient \(a\): <span id="qpAValue">1</span></label>
+                                        <input type="range" id="qpA" min="-3" max="3" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qpB">Koeficient \(b\): <span id="qpBValue">-4</span></label>
+                                        <input type="range" id="qpB" min="-10" max="10" step="0.1" value="-4">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qpC">Koeficient \(c\): <span id="qpCValue">3</span></label>
+                                        <input type="range" id="qpC" min="-10" max="10" step="0.1" value="3">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="qpFormula" class="calc-value">f(x)=x²-4x+3</span></div>
+                                        <div class="calc-step"><span>\(D(f)\)</span><span id="qpDomain" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>\(H(f)\)</span><span id="qpRange" class="calc-value">[-1,∞)</span></div>
+                                        <div class="calc-step"><span>Osa</span><span id="qpAxis" class="calc-value">x=2</span></div>
+                                        <div class="calc-step"><span>Extrém</span><span id="qpExtremum" class="calc-value">min -1 v x=2</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="qpMonotonic" class="calc-value">klesá, pak roste</span></div>
+                                        <div class="calc-step"><span>Prostota na \(\mathbb{R}\)</span><span id="qpInjective" class="calc-value">ne</span></div>
+                                        <div class="calc-step"><span>Kořeny</span><span id="qpRoots" class="calc-value">x₁=1, x₂=3</span></div>
+                                        <div class="calc-step"><span>Znaménko</span><span id="qpSign" class="calc-value">záporná mezi kořeny</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="qpConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Které tvrzení platí pro každou kvadratickou funkci s \(a&gt;0\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="props-check" value="a"><span>Je rostoucí na celé \(\mathbb{R}\).</span></label>
+                            <label class="option"><input type="radio" name="props-check" value="b"><span>Je nejprve klesající, potom rostoucí.</span></label>
+                            <label class="option"><input type="radio" name="props-check" value="c"><span>Má obor hodnot \((-\infty,y_V]\).</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="props-check" data-correct="b"
+                            data-feedback="propsCheckFeedback"
+                            data-correct-label="je nejprve klesající, potom rostoucí"
+                            data-explanation="Parabola otevřená nahoru má minimum ve vrcholu, proto vlevo od vrcholu klesá a vpravo roste.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="propsCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="posuny-grafu-kvadraticke-funkce">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="kvadraticka-funkce-s-absolutni-hodnotou">Pokračovat ›</button>
                     </div>
                 </section>
                 <section id="kvadraticka-funkce-s-absolutni-hodnotou" class="lesson-section">
-                    <span class="section-badge">Téma 4</span>
+                    <div class="section-badge">Téma 4</div>
                     <h1>Kvadratická funkce s absolutní hodnotou</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Kvadratická funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Uvažujme
+                        <span class="math-inline">\(F(x)=|q(x)|\)</span>, kde
+                        <span class="math-inline">\(q(x)=ax^2+bx+c\)</span>. Část grafu pod osou \(x\) se odrazí nad osu \(x\).
+                        Hodnoty \(F(x)\) jsou vždy nezáporné.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Princip absolutní hodnoty</h4>
+                        <div class="equation-block">\[
+                            F(x)=|q(x)|,\qquad q(x)=ax^2+bx+c
+                        \]</div>
+                        <div class="equation-block">\[
+                            |q(x)|=\begin{cases}
+                                q(x), & q(x)\ge0,\\
+                                -q(x), & q(x)&lt;0
+                            \end{cases}
+                        \]</div>
+                        <div class="equation-block">\[
+                            F(x)=0 \iff q(x)=0
+                        \]</div>
+                        <p class="formula-note">
+                            Kořeny se tedy nemění, mění se pouze znaménko záporné části funkce.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: původní parabola a \(|q(x)|\)</h3>
+                        <p>Porovnejte graf \(q(x)\) a graf \(F(x)=|q(x)|\) při stejných koeficientech.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="quadAbsCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-original"></span>\(q(x)=ax^2+bx+c\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-absolute"></span>\(F(x)=|q(x)|\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-axis"></span>osa paraboly \(q\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-root"></span>kořen</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="qaA">Koeficient \(a\): <span id="qaAValue">1</span></label>
+                                        <input type="range" id="qaA" min="-3" max="3" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qaB">Koeficient \(b\): <span id="qaBValue">0</span></label>
+                                        <input type="range" id="qaB" min="-10" max="10" step="0.1" value="0">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="qaC">Koeficient \(c\): <span id="qaCValue">-4</span></label>
+                                        <input type="range" id="qaC" min="-10" max="10" step="0.1" value="-4">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Původní</span><span id="qabsOriginal" class="calc-value">q(x)=x²-4</span></div>
+                                        <div class="calc-step"><span>Po absolutní hodnotě</span><span id="qabsAbsolute" class="calc-value">F(x)=|x²-4|</span></div>
+                                        <div class="calc-step"><span>Kořeny</span><span id="qabsRoots" class="calc-value">x₁=-2, x₂=2</span></div>
+                                        <div class="calc-step"><span>Odraz části grafu</span><span id="qabsReflection" class="calc-value">na intervalu (-2,2)</span></div>
+                                        <div class="calc-step"><span>Minimum \(F\)</span><span id="qabsMinimum" class="calc-value">0 v x=±2</span></div>
+                                        <div class="calc-step"><span>Po částech</span><span id="qabsPiece" class="calc-value">mimo interval beze změny</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Interpretace</h4>
+                                    <p id="qabsConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Pro \(F(x)=|x^2-4|\) se odráží část grafu původní paraboly:</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="abs-check" value="a"><span>na \((-2,2)\)</span></label>
+                            <label class="option"><input type="radio" name="abs-check" value="b"><span>na \((-\infty,-2)\cup(2,\infty)\)</span></label>
+                            <label class="option"><input type="radio" name="abs-check" value="c"><span>nikde, graf se nemění</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="abs-check" data-correct="a"
+                            data-feedback="absCheckFeedback"
+                            data-correct-label="na intervalu \((-2,2)\)"
+                            data-explanation="Na \((-2,2)\) je výraz \(x^2-4\) záporný, proto se po absolutní hodnotě převrátí nad osu \(x\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="absCheckFeedback"></div>
+                    </div>
+
+                    <h2>Procvičování celé kapitoly</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete vrchol funkce \(f(x)=2x^2-8x+5\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\([2,-3]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\([2,3]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\([4,-3]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\([1,-1]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>K funkci \(f(x)=x^2\) vezměte \(g(x)=f(x-3)-4\). Kde je vrchol \(g\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\([3,-4]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\([-3,-4]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\([3,4]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\([0,-4]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete obor hodnot funkce \(f(x)=-x^2+4x-3\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\([1,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\((-\infty,1]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\((-\infty,-1]\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(\mathbb{R}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kde je funkce \(f(x)=x^2-5x+6\) záporná?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>pro \(x&lt;2\) nebo \(x&gt;3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>jen pro \(x=2\) a \(x=3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>pro \(2&lt;x&lt;3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>nikde</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kolik reálných kořenů má rovnice \(3x^2+6x+3=0\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>dva různé</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>jeden dvojnásobný</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>žádný reálný</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>nekonečně mnoho</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kdy se graf funkce \(F(x)=|x^2-1|\) shoduje s původní funkcí \(q(x)=x^2-1\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>jen pro \(-1&lt;x&lt;1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>pro \(x\le-1\) nebo \(x\ge1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>na celé \(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>nikde</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Prošli jste předpis, posuny, vlastnosti i absolutní hodnotu kvadratické funkce.</p>
+                        <p id="lessonScore"></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="vlastnosti-kvadraticke-funkce">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 
 </html>
+

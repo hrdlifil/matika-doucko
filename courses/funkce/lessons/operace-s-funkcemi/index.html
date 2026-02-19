@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Operace s funkcemi – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Operace s funkcemi: rovnost funkcí, skládání funkcí a inverzní funkce s interaktivními ukázkami a procvičováním.">
     <title>Operace s funkcemi – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -52,50 +53,634 @@
                         <span class="sidebar-icon">3</span>
                         Inverzní funkce
                     </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">&#10003;</span>
+                        Procvičování
+                    </a>
                 </nav>
-                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
+                </div>
+                <a href="../../index.html" class="lesson-back-link">&larr; Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="rovnost-funkci" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="rovnost-funkci" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Rovnost funkcí</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Operace s funkcemi</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Dvě funkce jsou stejné pouze tehdy, když se shodují jako celé zobrazení: mají stejný
+                        definiční obor a každému vstupu přiřazují stejnou hodnotu. Stejný „vzhled“ předpisu nestačí.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice rovnosti funkcí</h4>
+                        <div class="equation-block">\[
+                            f=g\iff D(f)=D(g)\ \land\ \forall x\in D(f):\ f(x)=g(x).
+                        \]</div>
+                        <p class="formula-note">
+                            V obecné teorii funkcí se navíc sleduje i stejný kodomén. Ve středoškolské praxi bývá
+                            klíčové porovnat hlavně definiční obor a hodnoty na něm.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Typické situace</h4>
+                            <ul>
+                                <li>\(x^2-1\) a \((x-1)(x+1)\): na \(\mathbb{R}\) stejné funkce.</li>
+                                <li>\(\sqrt{x^2}\) a \(|x|\): na \(\mathbb{R}\) stejné funkce.</li>
+                                <li>\(\sqrt{x^2}\) a \(x\): na \(\mathbb{R}\) obecně různé funkce.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Častá chyba</h4>
+                            <p>
+                                Funkce
+                                \(f(x)=\frac{x^2-1}{x-1}\)
+                                a
+                                \(g(x)=x+1\)
+                                dávají stejné hodnoty pro \(x\ne1\),
+                                ale na maximálních definičních oborech nejsou rovné,
+                                protože \(1\in D(g)\), zatímco \(1\notin D(f)\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: test rovnosti funkcí</h3>
+                        <p>Vyberte dvojici funkcí, nastavte \(x_0\) a zkontrolujte obory i hodnoty.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="equalityCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-f"></span>\(f\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-g"></span>\(g\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-x0"></span>\(x_0\)</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="eqScenario">Scénář</label>
+                                        <select id="eqScenario">
+                                            <option value="rational_max">\(\frac{x^2-1}{x-1}\) vs. \(x+1\) (max. obory)</option>
+                                            <option value="rational_restricted">\(\frac{x^2-1}{x-1}\) vs. \(x+1\) na \(\mathbb{R}\setminus\{1\}\)</option>
+                                            <option value="root_abs">\(\sqrt{x^2}\) vs. \(|x|\)</option>
+                                            <option value="root_x">\(\sqrt{x^2}\) vs. \(x\)</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="eqX">\(x_0\): <span id="eqXValue">0</span></label>
+                                        <input type="range" id="eqX" min="-6" max="6" step="0.1" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Porovnání</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(f(x)\)</span>
+                                            <span id="eqFormulaF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(g(x)\)</span>
+                                            <span id="eqFormulaG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(D(f)\)</span>
+                                            <span id="eqDomainF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(D(g)\)</span>
+                                            <span id="eqDomainG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(f(x_0)\)</span>
+                                            <span id="eqValueF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(g(x_0)\)</span>
+                                            <span id="eqValueG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(f(x_0)-g(x_0)\)</span>
+                                            <span id="eqDiff" class="calc-value highlight">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="eqConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Které tvrzení je správná podmínka rovnosti funkcí?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="eq-check" value="a"><span>Stačí, že po úpravě vyjde stejný algebraický tvar předpisu.</span></label>
+                            <label class="option"><input type="radio" name="eq-check" value="b"><span>Musí mít stejný definiční obor a stejné hodnoty pro každé \(x\) z tohoto oboru.</span></label>
+                            <label class="option"><input type="radio" name="eq-check" value="c"><span>Stačí, že se shodují v několika testovaných bodech.</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="eq-check" data-correct="b"
+                            data-feedback="eqCheckFeedback"
+                            data-correct-label="stejný definiční obor + stejné hodnoty pro všechna x"
+                            data-explanation="Rovnost funkcí je univerzální tvrzení pro celý definiční obor, ne jen pro vybrané body.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="eqCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="skladani-funkci">Pokračovat ›</button>
                     </div>
                 </section>
+
                 <section id="skladani-funkci" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Skládání funkcí</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Operace s funkcemi</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Skládání funkcí znamená, že výstup první funkce používáme jako vstup druhé.
+                        Klíčové je správné pořadí a správný definiční obor složené funkce.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice a definiční obor</h4>
+                        <div class="equation-block">\[
+                            (f\circ g)(x)=f(g(x)).
+                        \]</div>
+                        <div class="equation-block">\[
+                            D(f\circ g)=\{x\in D(g)\mid g(x)\in D(f)\}.
+                        \]</div>
+                        <p class="formula-note">
+                            Obecně neplatí \(f\circ g=g\circ f\). Pořadí může měnit předpis i definiční obor.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Nezaměňovat</h4>
+                            <ul>
+                                <li>\((f\circ g)(x)\) není \(f(x)\cdot g(x)\).</li>
+                                <li>\(f\circ g\) a \(g\circ f\) často existují na jiných oborech.</li>
+                                <li>I když se v jednom bodě rovnají, nemusí jít o stejnou funkci.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Asociativita</h4>
+                            <p>
+                                Pokud jsou všechny složené funkce definované, pak
+                                \(((h\circ g)\circ f)(x)=h(g(f(x)))=(h\circ(g\circ f))(x)\).
+                                Závorky tedy můžeme u trojitého skládání vynechat.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: pořadí skládání</h3>
+                        <p>Porovnejte \((f\circ g)(x)\) a \((g\circ f)(x)\) v různých scénářích.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="compositionCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-f"></span>\(f\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-g"></span>\(g\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-fg"></span>\(f\circ g\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-gf"></span>\(g\circ f\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="compScenario">Scénář</label>
+                                        <select id="compScenario">
+                                            <option value="linear_quadratic">\(f(x)=x^2+1,\ g(x)=2x-3\)</option>
+                                            <option value="sqrt_linear">\(f(x)=\sqrt{x},\ g(x)=x-1\)</option>
+                                            <option value="reciprocal_quadratic">\(f(x)=\frac1x,\ g(x)=x^2-4\)</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="compX">\(x_0\): <span id="compXValue">0</span></label>
+                                        <input type="range" id="compX" min="-6" max="6" step="0.1" value="0">
+                                    </div>
+                                    <label class="toggle-label">
+                                        <input type="checkbox" id="compShowReverse" checked>
+                                        <span>Zobrazit i \(g\circ f\)</span>
+                                    </label>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(f(x)\)</span>
+                                            <span id="compFormulaF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(g(x)\)</span>
+                                            <span id="compFormulaG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\((f\circ g)(x)\)</span>
+                                            <span id="compFormulaFG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\((g\circ f)(x)\)</span>
+                                            <span id="compFormulaGF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(D(f\circ g)\)</span>
+                                            <span id="compDomainFG" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(D(g\circ f)\)</span>
+                                            <span id="compDomainGF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(g(x_0)\)</span>
+                                            <span id="compGX" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\((f\circ g)(x_0)\)</span>
+                                            <span id="compFGX" class="calc-value highlight">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(f(x_0)\)</span>
+                                            <span id="compFX" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\((g\circ f)(x_0)\)</span>
+                                            <span id="compGFX" class="calc-value highlight">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="compOrderNote" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Pro \(f(x)=\sqrt{x}\) a \(g(x)=x-4\) je definiční obor \((f\circ g)(x)\):</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="comp-check" value="a"><span>\(\mathbb{R}\)</span></label>
+                            <label class="option"><input type="radio" name="comp-check" value="b"><span>\([0,\infty)\)</span></label>
+                            <label class="option"><input type="radio" name="comp-check" value="c"><span>\([4,\infty)\)</span></label>
+                            <label class="option"><input type="radio" name="comp-check" value="d"><span>\(( -\infty,4]\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="comp-check" data-correct="c"
+                            data-feedback="compCheckFeedback" data-correct-label="\([4,\infty)\)"
+                            data-explanation="Musí platit \(g(x)=x-4\ge0\), protože to je vstup do odmocniny.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="compCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="rovnost-funkci">&larr; Zpět</button>
+                        <button class="btn-primary btn-next" data-next="inverzni-funkce">Pokračovat ›</button>
                     </div>
                 </section>
+
                 <section id="inverzni-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Inverzní funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Operace s funkcemi</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Inverzní funkce „obrací“ přiřazení: výstup původní funkce se stává vstupem a naopak.
+                        Existuje jen tehdy, když je původní funkce na zvoleném oboru prostá a na svůj obor hodnot surjektivní.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-block">\[
+                            f^{-1}\text{ je inverzní k }f\iff
+                            f^{-1}(f(x))=x\ \text{pro všechna }x\in D(f)
+                            \ \land\ f(f^{-1}(y))=y\ \text{pro všechna }y\in D(f^{-1}).
+                        \]</div>
+                        <div class="equation-block">\[
+                            D(f^{-1})=H(f),\qquad H(f^{-1})=D(f).
+                        \]</div>
+                        <p class="formula-note">
+                            Grafy \(f\) a \(f^{-1}\) jsou osově souměrné podle přímky \(y=x\).
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Jak najít inverzní funkci</h4>
+                            <ol>
+                                <li>Zapište \(y=f(x)\).</li>
+                                <li>Vyjádřete \(x\) pomocí \(y\).</li>
+                                <li>Prohoďte \(x\) a \(y\).</li>
+                                <li>Ohlídejte správné obory (případně omezte obor původní funkce).</li>
+                            </ol>
+                        </div>
+                        <div class="column">
+                            <h4>Kritický příklad</h4>
+                            <p>
+                                Funkce \(f(x)=x^2\) na \(\mathbb{R}\) inverzní funkci nemá (není prostá).
+                                Po omezení na \([0,\infty)\) už ano a platí
+                                \(f^{-1}(x)=\sqrt{x}\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: funkce a její inverze</h3>
+                        <p>Sledujte body \((x_0,f(x_0))\) a jejich obraz po zrcadlení podle \(y=x\).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="inverseCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-f"></span>\(f\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-inv"></span>\(f^{-1}\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-identity"></span>\(y=x\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="invScenario">Scénář</label>
+                                        <select id="invScenario">
+                                            <option value="linear">\(f(x)=2x-3\)</option>
+                                            <option value="cubic">\(f(x)=x^3\)</option>
+                                            <option value="quadratic_restricted">\(f(x)=x^2\) na \([0,\infty)\)</option>
+                                            <option value="exponential">\(f(x)=e^x\)</option>
+                                        </select>
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="invX">\(x_0\): <span id="invXValue">0</span></label>
+                                        <input type="range" id="invX" min="-4" max="4" step="0.1" value="0">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="invY">\(y_0\) pro test \(f(f^{-1}(y_0))\): <span id="invYValue">1</span></label>
+                                        <input type="range" id="invY" min="-4" max="4" step="0.1" value="1">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Ověření</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step">
+                                            <span>\(f(x)\)</span>
+                                            <span id="invFormulaF" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(f^{-1}(x)\)</span>
+                                            <span id="invFormulaInv" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(D(f)\)</span>
+                                            <span id="invDomain" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(H(f)\)</span>
+                                            <span id="invRange" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(f(x_0)\)</span>
+                                            <span id="invFx" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(f^{-1}(f(x_0))\)</span>
+                                            <span id="invInvFx" class="calc-value highlight">—</span>
+                                        </div>
+                                        <div class="calc-step">
+                                            <span>\(f^{-1}(y_0)\)</span>
+                                            <span id="invInvY" class="calc-value">—</span>
+                                        </div>
+                                        <div class="calc-step calc-step-main">
+                                            <span>\(f(f^{-1}(y_0))\)</span>
+                                            <span id="invFInvY" class="calc-value highlight">—</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="invConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaká je inverzní funkce k \(f(x)=x^2\) na oboru \([0,\infty)\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="inv-check" value="a"><span>\(f^{-1}(x)=\sqrt{x}\)</span></label>
+                            <label class="option"><input type="radio" name="inv-check" value="b"><span>\(f^{-1}(x)=\pm\sqrt{x}\)</span></label>
+                            <label class="option"><input type="radio" name="inv-check" value="c"><span>\(f^{-1}(x)=x^2\)</span></label>
+                            <label class="option"><input type="radio" name="inv-check" value="d"><span>\(f^{-1}(x)=\frac1x\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="inv-check" data-correct="a"
+                            data-feedback="invCheckFeedback" data-correct-label="\(\sqrt{x}\)"
+                            data-explanation="Na omezeném oboru \([0,\infty)\) je \(x^2\) prostá a inverzí je hlavní odmocnina.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="invCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="skladani-funkci">&larr; Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat k procvičování ›</button>
+                    </div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Po špatné odpovědi se vždy zobrazí správná odpověď i stručné vysvětlení.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jsou funkce \(f(x)=x^2-1\) a \(g(x)=(x-1)(x+1)\) na \(\mathbb{R}\) rovné?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>Ano</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>Ne</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Na maximálních definičních oborech jsou funkce \(f(x)=\frac{x^2-1}{x-1}\) a \(g(x)=x+1\):</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>rovné</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>nerovné (liší se definičním oborem)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>rovné jen pro záporná \(x\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>nerovné, protože pro žádné \(x\) nedají stejnou hodnotu</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Je dáno \(f(x)=\sqrt{x}\), \(g(x)=x-4\). Definiční obor \((f\circ g)(x)\) je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\([0,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\([4,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(( -\infty,4]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro \(f(x)=2x+3\), \(g(x)=x^2\) je \((g\circ f)(x)\):</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\((2x+3)^2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(2x^2+3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>\(x^2+2x+3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\(2x^2+9\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Inverzní funkce k \(f(x)=3x-5\) je:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(f^{-1}(x)=\frac{x+5}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(f^{-1}(x)=3x+5\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(f^{-1}(x)=\frac{x-5}{3}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\(f^{-1}(x)=\frac{1}{3x-5}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>K \(f(x)=x^2\) na \([0,\infty)\) platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>inverzní funkce neexistuje</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>\(f^{-1}(x)=\pm\sqrt{x}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\(f^{-1}(x)=\sqrt{x}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\(f^{-1}(x)=x^2\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise7">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 7</span>
+                                <span class="exercise-status" id="ex7Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro bijekci \(f:D\to H\) je definiční obor inverzní funkce \(f^{-1}\):</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex7" value="a"><span>\(D\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="b"><span>\(H\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="c"><span>\(D\cap H\)</span></label>
+                                    <label class="option"><input type="radio" name="ex7" value="d"><span>vždy \(\mathbb{R}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="7" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex7Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise8">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 8</span>
+                                <span class="exercise-status" id="ex8Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Jsou-li \(f\) a \(g\) navzájem inverzní, pak pro všechna \(x\in D(g)\) platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex8" value="a"><span>\(f(g(x))=0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="b"><span>\(f(g(x))=f(x)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="c"><span>\(f(g(x))=g(x)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex8" value="d"><span>\(f(g(x))=x\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="8" data-correct="d">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex8Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display:none;">
+                        <div class="complete-icon">&#10003;</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p id="lessonScore">Vyhodnocení se zobrazí po zkontrolování všech úloh.</p>
+                        <a href="../../index.html" class="btn-primary">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="inverzni-funkce">&larr; Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 
 </html>
+
+

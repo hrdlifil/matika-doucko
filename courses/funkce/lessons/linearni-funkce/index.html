@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Lineární funkce – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Lineární funkce: definice, předpis přímky ze dvou bodů, posuny grafu lineární funkce a vlastnosti lineární funkce.">
     <title>Lineární funkce – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -57,59 +58,567 @@
                         Vlastnosti lineární funkce
                     </a>
                 </nav>
-                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
+                </div>
+                <a href="../../index.html" class="lesson-back-link">&larr; Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="linearni-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="linearni-funkce" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Lineární funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Lineární funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Lineární funkce má tvar \(f(x)=ax+b\). Koeficient \(a\) určuje sklon přímky a koeficient
+                        \(b\) určuje průsečík s osou \(y\). Jde o nejdůležitější model pro situace, kde se veličina
+                        mění rovnoměrně.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Základní vztahy</h4>
+                        <div class="equation-block">\[
+                            f(x)=ax+b,
+                            \qquad a,b\in\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            a=\frac{\Delta y}{\Delta x}
+                            \quad\text{(směrnice, změna na 1 jednotku v ose }x\text{)}
+                        \]</div>
+                        <div class="equation-block">\[
+                            P_y=(0,b),
+                            \qquad
+                            P_x=\left(-\frac{b}{a},0\right)\text{ pro }a\ne0
+                        \]</div>
+                        <p class="formula-note">
+                            Pokud \(a=0\), dostaneme konstantní funkci \(f(x)=b\) a graf je vodorovná přímka.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Co číst z předpisu</h4>
+                            <ul>
+                                <li>\(a>0\): funkce je rostoucí na \(\mathbb{R}\).</li>
+                                <li>\(a&lt;0\): funkce je klesající na \(\mathbb{R}\).</li>
+                                <li>\(a=0\): funkce je konstantní.</li>
+                                <li>\(|a|\) určuje „strmost“ přímky.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Mini příklady</h4>
+                            <div class="equation-block">\(f(x)=2x-3\): roste, \(P_y=(0,-3)\), \(x_0=1.5\).</div>
+                            <div class="equation-block">\(g(x)=-\frac12x+4\): klesá, \(P_y=(0,4)\), \(x_0=8\).</div>
+                            <div class="equation-block">\(h(x)=5\): konstantní, bez nulového bodu.</div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: směrnice, posun a hodnota v bodě</h3>
+                        <p>Měňte \(a\), \(b\) a vstup \(x_0\). Sledujte graf i okamžitou interpretaci.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="linearCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-line"></span>\(f(x)\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-x0"></span>bod \((x_0,f(x_0))\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-yint"></span>\(P_y\)</span>
+                                </div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="linA">Směrnice \(a\): <span id="linAValue">1</span></label>
+                                        <input type="range" id="linA" min="-4" max="4" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="linB">Posun \(b\): <span id="linBValue">0</span></label>
+                                        <input type="range" id="linB" min="-6" max="6" step="0.1" value="0">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="linX">Vstup \(x_0\): <span id="linXValue">2</span></label>
+                                        <input type="range" id="linX" min="-7" max="7" step="0.1" value="2">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="linFormula" class="calc-value">f(x)=x</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="linMonotonic" class="calc-value">rostoucí</span></div>
+                                        <div class="calc-step"><span>\(f(x_0)\)</span><span id="linValue" class="calc-value">2</span></div>
+                                        <div class="calc-step"><span>Nulový bod</span><span id="linZero" class="calc-value">x=0</span></div>
+                                        <div class="calc-step"><span>Obor hodnot</span><span id="linRange" class="calc-value">R</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Interpretace</h4>
+                                    <p id="linConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Co znamená směrnice \(a=-3\) v předpisu \(f(x)=ax+b\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="lin-check" value="a"><span>Funkce je rostoucí a na každou 1 jednotku v \(x\) stoupne o 3.</span></label>
+                            <label class="option"><input type="radio" name="lin-check" value="b"><span>Funkce je klesající a na každou 1 jednotku v \(x\) klesne o 3.</span></label>
+                            <label class="option"><input type="radio" name="lin-check" value="c"><span>Graf je vodorovná přímka \(y=-3\).</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="lin-check" data-correct="b"
+                            data-feedback="linCheckFeedback"
+                            data-correct-label="klesající funkce s poklesem o 3 na jednotku x"
+                            data-explanation="Směrnice udává změnu \(\Delta y\) při \(\Delta x=1\). Záporná směrnice znamená klesání.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="linCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="predpis-primky-ze-dvou-bodu">Pokračovat ›</button>
                     </div>
                 </section>
+
                 <section id="predpis-primky-ze-dvou-bodu" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Předpis přímky ze dvou bodů</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Lineární funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Máme-li dva různé body \(A(x_1,y_1)\) a \(B(x_2,y_2)\) s \(x_1\ne x_2\), existuje právě jedna
+                        lineární funkce, jejíž graf jimi prochází.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Postup výpočtu</h4>
+                        <div class="equation-block">\[
+                            a=\frac{y_2-y_1}{x_2-x_1}
+                        \]</div>
+                        <div class="equation-block">\[
+                            b=y_1-a x_1
+                        \]</div>
+                        <div class="equation-block">\[
+                            y=ax+b
+                            \quad\text{(ekvivalentně }y-y_1=a(x-x_1)\text{)}
+                        \]</div>
+                        <p class="formula-note">
+                            Když \(x_1=x_2\), dostáváme svislou přímku \(x=x_1\). Ta není grafem funkce \(y=f(x)\).
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: sestavení předpisu krok za krokem</h3>
+                        <p>Změňte souřadnice bodů a sledujte výpočet směrnice i absolutního členu.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="twoPointCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-point-a"></span>bod A</span>
+                                    <span class="legend-item"><span class="legend-color legend-point-b"></span>bod B</span>
+                                    <span class="legend-item"><span class="legend-color legend-line-two"></span>určená přímka</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Body</h4>
+                                    <div class="control-group">
+                                        <label for="tpX1">\(x_1\): <span id="tpX1Value">-2</span></label>
+                                        <input type="range" id="tpX1" min="-6" max="6" step="1" value="-2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="tpY1">\(y_1\): <span id="tpY1Value">1</span></label>
+                                        <input type="range" id="tpY1" min="-6" max="6" step="1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="tpX2">\(x_2\): <span id="tpX2Value">3</span></label>
+                                        <input type="range" id="tpX2" min="-6" max="6" step="1" value="3">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="tpY2">\(y_2\): <span id="tpY2Value">4</span></label>
+                                        <input type="range" id="tpY2" min="-6" max="6" step="1" value="4">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výpočet</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Směrnice</span><span id="tpSlopeStep" class="calc-value">a = 0.6</span></div>
+                                        <div class="calc-step"><span>Absolutní člen</span><span id="tpInterceptStep" class="calc-value">b = 2.2</span></div>
+                                        <div class="calc-step calc-step-main"><span>Předpis</span><span id="tpEquation" class="calc-value highlight">y = 0.6x + 2.2</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Kontrola</h4>
+                                    <p id="tpConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Body \(A(1,2)\) a \(B(4,8)\) určují přímku:</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="tp-check" value="a"><span>\(y=2x\)</span></label>
+                            <label class="option"><input type="radio" name="tp-check" value="b"><span>\(y=\frac{1}{2}x+\frac{3}{2}\)</span></label>
+                            <label class="option"><input type="radio" name="tp-check" value="c"><span>\(y=2x-1\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="tp-check" data-correct="a"
+                            data-feedback="tpCheckFeedback"
+                            data-correct-label="y = 2x"
+                            data-explanation="\(a=(8-2)/(4-1)=2\) a \(b=2-2\cdot1=0\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="tpCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="linearni-funkce">‹ Zpět</button>
+                        <button class="btn-primary btn-next" data-next="posuny-grafu-linearni-funkce">Pokračovat ›</button>
                     </div>
                 </section>
+
                 <section id="posuny-grafu-linearni-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Posuny grafu lineární funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Lineární funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Základní transformace lineární funkce jsou svislý a vodorovný posun. Směrnice zůstává stejná,
+                        mění se jen poloha přímky.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Transformace</h4>
+                        <div class="equation-block">\[
+                            g(x)=f(x-h)+k
+                        \]</div>
+                        <div class="equation-block">\[
+                            f(x)=ax+b
+                            \Rightarrow
+                            g(x)=a(x-h)+b+k=ax+(b-ah+k)
+                        \]</div>
+                        <div class="equation-block">\[
+                            h>0\Rightarrow\text{posun doprava},\quad
+                            h<0\Rightarrow\text{posun doleva},\quad
+                            k>0\Rightarrow\text{nahoru},\quad
+                            k<0\Rightarrow\text{dolů}
+                        \]</div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: původní vs. posunutý graf</h3>
+                        <p>Měňte parametry a sledujte, jak se mění přímka \(g(x)=f(x-h)+k\).</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="shiftCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-line"></span>\(f(x)\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-shift"></span>\(g(x)=f(x-h)+k\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-yint"></span>průsečíky s osou \(y\)</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="shA">Směrnice \(a\): <span id="shAValue">1</span></label>
+                                        <input type="range" id="shA" min="-4" max="4" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="shB">\(b\) v \(f(x)=ax+b\): <span id="shBValue">-1</span></label>
+                                        <input type="range" id="shB" min="-6" max="6" step="0.1" value="-1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="shH">Vodorovný posun \(h\): <span id="shHValue">2</span></label>
+                                        <input type="range" id="shH" min="-5" max="5" step="0.1" value="2">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="shK">Svislý posun \(k\): <span id="shKValue">1</span></label>
+                                        <input type="range" id="shK" min="-5" max="5" step="0.1" value="1">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Výsledek</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Původní</span><span id="shOriginal" class="calc-value">f(x)=x-1</span></div>
+                                        <div class="calc-step"><span>Posunutá</span><span id="shShifted" class="calc-value">g(x)=x-2</span></div>
+                                        <div class="calc-step"><span>Směrnice \(g\)</span><span id="shSlope" class="calc-value">1</span></div>
+                                        <div class="calc-step"><span>\(g(0)\)</span><span id="shIntercept" class="calc-value">-2</span></div>
+                                        <div class="calc-step"><span>Nulový bod \(g\)</span><span id="shRoot" class="calc-value">x=2</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Interpretace posunu</h4>
+                                    <p id="shConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Jaký je vodorovný posun při transformaci \(g(x)=f(x-3)\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="sh-check" value="a"><span>o 3 doleva</span></label>
+                            <label class="option"><input type="radio" name="sh-check" value="b"><span>o 3 doprava</span></label>
+                            <label class="option"><input type="radio" name="sh-check" value="c"><span>žádný, mění se jen sklon</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="sh-check" data-correct="b"
+                            data-feedback="shCheckFeedback"
+                            data-correct-label="o 3 doprava"
+                            data-explanation="U výrazu \(f(x-h)\) je znaménko uvnitř závorky opačně než skutečný směr posunu.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="shCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="predpis-primky-ze-dvou-bodu">‹ Zpět</button>
+                        <button class="btn-primary btn-next" data-next="vlastnosti-linearni-funkce">Pokračovat ›</button>
                     </div>
                 </section>
+
                 <section id="vlastnosti-linearni-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 4</span>
+                    <div class="section-badge">Téma 4</div>
                     <h1>Vlastnosti lineární funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Lineární funkce</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        U lineární funkce lze všechny klíčové vlastnosti určit přímo z koeficientů \(a\) a \(b\):
+                        definiční obor, obor hodnot, monotónnost, prostotu, paritu i znaménko.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Přehled pro \(f(x)=ax+b\)</h4>
+                        <div class="equation-block">\[
+                            D(f)=\mathbb{R}
+                        \]</div>
+                        <div class="equation-block">\[
+                            H(f)=\begin{cases}
+                            \mathbb{R}, & a\ne0,\\
+                            \{b\}, & a=0
+                            \end{cases}
+                        \]</div>
+                        <div class="equation-block">\[
+                            f\text{ je prostá }\Leftrightarrow a\ne0
+                        \]</div>
+                        <div class="equation-block">\[
+                            f\text{ je lichá }\Leftrightarrow b=0,
+                            \qquad
+                            f\text{ je sudá }\Leftrightarrow a=0
+                        \]</div>
+                        <p class="formula-note">
+                            Nulová funkce \(f(x)=0\) je současně sudá i lichá.
+                        </p>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Interaktivně: automatická analýza vlastností</h3>
+                        <p>Nastavte \(a\) a \(b\), přímka se překreslí a vlastnosti se okamžitě přepočítají.</p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-canvas-wrapper">
+                                <canvas id="propertiesCanvas" width="620" height="420"></canvas>
+                                <div class="canvas-legend">
+                                    <span class="legend-item"><span class="legend-color legend-line"></span>\(f(x)\)</span>
+                                    <span class="legend-item"><span class="legend-color legend-root"></span>nulový bod</span>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Nastavení</h4>
+                                    <div class="control-group">
+                                        <label for="prA">Směrnice \(a\): <span id="prAValue">1</span></label>
+                                        <input type="range" id="prA" min="-4" max="4" step="0.1" value="1">
+                                    </div>
+                                    <div class="control-group">
+                                        <label for="prB">Absolutní člen \(b\): <span id="prBValue">0</span></label>
+                                        <input type="range" id="prB" min="-6" max="6" step="0.1" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div class="calculation-steps">
+                                        <div class="calc-step"><span>Předpis</span><span id="prFormula" class="calc-value">f(x)=x</span></div>
+                                        <div class="calc-step"><span>\(D(f)\)</span><span id="prDomain" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>\(H(f)\)</span><span id="prRange" class="calc-value">R</span></div>
+                                        <div class="calc-step"><span>Monotónnost</span><span id="prMonotonic" class="calc-value">rostoucí</span></div>
+                                        <div class="calc-step"><span>Prostota</span><span id="prInjective" class="calc-value">ano</span></div>
+                                        <div class="calc-step"><span>Sudost/lichost</span><span id="prParity" class="calc-value">lichá</span></div>
+                                        <div class="calc-step"><span>Nulový bod</span><span id="prZero" class="calc-value">x=0</span></div>
+                                        <div class="calc-step"><span>Znaménko</span><span id="prSign" class="calc-value">x&gt;0: kladná</span></div>
+                                    </div>
+                                </div>
+
+                                <div class="calc-panel result-panel">
+                                    <h4>Závěr</h4>
+                                    <p id="prConclusion" class="topic-note"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Kdy je lineární funkce \(f(x)=ax+b\) prostá na \(\mathbb{R}\)?</p>
+                        <div class="exercise-options">
+                            <label class="option"><input type="radio" name="pr-check" value="a"><span>Vždy, protože je to přímka.</span></label>
+                            <label class="option"><input type="radio" name="pr-check" value="b"><span>Právě tehdy, když \(a\ne0\).</span></label>
+                            <label class="option"><input type="radio" name="pr-check" value="c"><span>Právě tehdy, když \(b=0\).</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="pr-check" data-correct="b"
+                            data-feedback="prCheckFeedback"
+                            data-correct-label="právě tehdy, když a není nula"
+                            data-explanation="Pro \(a=0\) je funkce konstantní, takže různým vstupům přiřazuje stejnou hodnotu.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="prCheckFeedback"></div>
+                    </div>
+
+                    <h2>Procvičování celé kapitoly</h2>
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Najděte nulový bod funkce \(f(x)=-3x+6\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(x=-2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(x=2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(x=3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>nulový bod neexistuje</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Body \(A(1,3)\), \(B(4,-3)\) určují přímku:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(y=-2x+5\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(y=2x+1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(y=-\frac12x+\frac72\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(x=1\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Nechť \(f(x)=x-1\). Jaký předpis má \(g(x)=f(x-2)+3\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\(g(x)=x-2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\(g(x)=x\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\(g(x)=x+2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\(g(x)=x-4\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro \(f(x)=0x-4\) platí:</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\(H(f)=\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(H(f)=\{-4\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>funkce je lichá</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>funkce je prostá</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Kde je kladná funkce \(f(x)=2x-5\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(x&lt;\frac52\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(x\le\frac52\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(x>\frac52\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\(x\ge\frac52\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Která lineární funkce je současně sudá i lichá?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>\(f(x)=2x\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>\(f(x)=3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>\(f(x)=x+1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>\(f(x)=0\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="d">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Prošli jste předpis lineární funkce, konstrukci ze dvou bodů, posuny i vlastnosti.</p>
+                        <p id="lessonScore"></p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="posuny-grafu-linearni-funkce">‹ Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 

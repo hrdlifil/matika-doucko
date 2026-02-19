@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Úvod do funkcí – Funkce – připravená struktura témat pro doplnění obsahu.">
+    <meta name="description"
+        content="Úvod do funkcí: definiční obor, obor hodnot, rozpoznání funkce a čtení grafu funkce.">
     <title>Úvod do funkcí – Funkce – ČVUT FBMI</title>
     <link rel="stylesheet" href="../../../../style.css">
     <link rel="stylesheet" href="../../course.css">
@@ -52,49 +53,524 @@
                         <span class="sidebar-icon">3</span>
                         Graf funkce
                     </a>
+                    <a href="#procvicovani" class="sidebar-link" data-section="procvicovani">
+                        <span class="sidebar-icon">4</span>
+                        Procvičování
+                    </a>
                 </nav>
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 25%"></div>
+                    </div>
+                </div>
                 <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
             </aside>
 
             <div class="lesson-content">
-                <section id="definicni-obor-a-obor-hodnot" class="lesson-section">
-                    <span class="section-badge">Téma 1</span>
+                <section id="definicni-obor-a-obor-hodnot" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
                     <h1>Definiční obor a obor hodnot</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Úvod do funkcí</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Každá funkce přiřazuje vstupu číslo na výstupu. Ne všechny vstupy ale musí být povolené.
+                        Proto vždy určujeme <strong>definiční obor</strong> a <strong>obor hodnot</strong>.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="info-card">
+                        <div class="info-card-icon">D/H</div>
+                        <div class="info-card-content">
+                            <h4>Formální zápis</h4>
+                            <p>
+                                Funkci zapisujeme jako \(f: D(f) \to M\), kde \(D(f)\) je množina vstupů.
+                                Obor hodnot je \(H(f)=\{f(x)\mid x\in D(f)\}\), tedy skutečně dosažené výstupy.
+                                Vždy platí \(H(f)\subseteq M\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Jak určovat definiční obor z předpisu</h4>
+                        <div class="concept-grid">
+                            <article class="concept-card">
+                                <h5>Zlomek</h5>
+                                <p>Jmenovatel nesmí být nula.</p>
+                                <div class="inline-math">\(\frac{1}{x-2}\Rightarrow x\ne2\)</div>
+                            </article>
+                            <article class="concept-card">
+                                <h5>Sudá odmocnina</h5>
+                                <p>Výraz pod odmocninou musí být nezáporný.</p>
+                                <div class="inline-math">\(\sqrt{x+1}\Rightarrow x\ge-1\)</div>
+                            </article>
+                            <article class="concept-card">
+                                <h5>Logaritmus</h5>
+                                <p>Argument logaritmu musí být kladný.</p>
+                                <div class="inline-math">\(\ln(2x-5)\Rightarrow x>\frac52\)</div>
+                            </article>
+                            <article class="concept-card">
+                                <h5>Polynom</h5>
+                                <p>Polynomy jsou definované pro všechna reálná čísla.</p>
+                                <div class="inline-math">\(x^2-4x+7\Rightarrow D(f)=\mathbb{R}\)</div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Rychlé vzory</h3>
+                        <div class="equation-block">\[
+                            f(x)=\frac{1}{x-2},\quad D(f)=\mathbb{R}\setminus\{2\},\quad H(f)=\mathbb{R}\setminus\{0\}
+                        \]</div>
+                        <div class="equation-block">\[
+                            g(x)=\sqrt{x+1},\quad D(g)=[-1,\infty),\quad H(g)=[0,\infty)
+                        \]</div>
+                        <div class="equation-block">\[
+                            h(x)=x^2-4,\quad D(h)=\mathbb{R},\quad H(h)=[-4,\infty)
+                        \]</div>
+                    </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: laboratoř definičního oboru</h3>
+                        <p>Zvolte funkci, nastavte vstup \(x_0\) a sledujte, zda je hodnota definovaná.</p>
+
+                        <div class="control-grid">
+                            <div class="control-item">
+                                <label for="drFunction">Vyberte funkci</label>
+                                <select id="drFunction">
+                                    <option value="linear">f(x) = 2x - 1</option>
+                                    <option value="quadratic">f(x) = x^2 - 4</option>
+                                    <option value="reciprocal">f(x) = 1 / (x - 2)</option>
+                                    <option value="root">f(x) = sqrt(x + 1)</option>
+                                    <option value="absolute">f(x) = |x| - 2</option>
+                                </select>
+                            </div>
+                            <div class="control-item control-item-wide">
+                                <label for="drX">Vybraný vstup \(x_0\): <span id="drXValue">0</span></label>
+                                <input type="range" id="drX" min="-8" max="8" step="0.25" value="0">
+                            </div>
+                        </div>
+
+                        <div class="canvas-wrap">
+                            <canvas id="domainRangeCanvas" width="860" height="320"></canvas>
+                        </div>
+
+                        <div class="math-output-grid">
+                            <div class="math-output-card">
+                                <span class="output-label">Předpis</span>
+                                <div class="output-value" id="drFormulaLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Definiční obor</span>
+                                <div class="output-value" id="drDomainLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Obor hodnot</span>
+                                <div class="output-value" id="drRangeLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Hodnota v bodě \(x_0\)</span>
+                                <div class="output-value" id="drValueLatex"></div>
+                            </div>
+                        </div>
+                        <div class="topic-note" id="drInterpretation"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Určete definiční obor funkce \(p(x)=\sqrt{9-x^2}\).</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="dr-check" value="a"><span>\((-\infty,\infty)\)</span></label>
+                            <label class="option-item"><input type="radio" name="dr-check" value="b"><span>\([-3,3]\)</span></label>
+                            <label class="option-item"><input type="radio" name="dr-check" value="c"><span>\((-3,3)\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="dr-check" data-correct="b"
+                            data-feedback="drCheckFeedback" data-correct-label="\([-3,3]\)"
+                            data-explanation="Pod odmocninou musí platit \(9-x^2\ge0\Rightarrow x^2\le9\Rightarrow -3\le x\le3\).">Zkontrolovat</button>
+                        <div class="mini-feedback" id="drCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <span></span>
+                        <button class="btn-primary btn-next" data-next="co-je-funkci-a-co-neni">Pokračovat →</button>
                     </div>
                 </section>
                 <section id="co-je-funkci-a-co-neni" class="lesson-section">
-                    <span class="section-badge">Téma 2</span>
+                    <div class="section-badge">Téma 2</div>
                     <h1>Co je funkcí a co není</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Úvod do funkcí</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Relace je funkcí právě tehdy, když <strong>každému vstupu \(x\)</strong> přiřadí
+                        <strong>právě jednu</strong> hodnotu \(y\). Jedno \(x\) tedy nesmí mít dvě různé hodnoty.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Přesná podmínka</h4>
+                        <div class="equation-block">\[
+                            \forall x\in D\ \exists!\ y\in H:\ y=f(x)
+                        \]</div>
+                        <p>
+                            Symbol \(\exists!\) znamená „existuje právě jedno“. Je to nejdůležitější znak funkce.
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Je funkce</h4>
+                            <ul>
+                                <li>Tabulka, kde se žádné \(x\) neopakuje s jiným \(y\).</li>
+                                <li>Graf přímky, paraboly, exponenciály.</li>
+                                <li>Předpis, který každému \(x\in D\) vrátí jedno číslo.</li>
+                            </ul>
+                        </div>
+                        <div class="column">
+                            <h4>Není funkce</h4>
+                            <ul>
+                                <li>Svislá přímka \(x=c\) (jedno \(x\), více \(y\)).</li>
+                                <li>Kružnice (pro stejné \(x\) obvykle dvě \(y\)).</li>
+                                <li>Relace s nejednoznačným přiřazením.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">VLT</div>
+                        <div class="info-card-content">
+                            <h4>Vertikální test přímkou</h4>
+                            <p>
+                                Graf je funkcí právě tehdy, když žádná svislá přímka neprotne graf ve více než jednom bodě.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: je to funkce?</h3>
+                        <p>Vyberte relaci, rozhodněte a zkontrolujte si výsledek.</p>
+
+                        <div class="control-grid relation-grid">
+                            <div class="control-item control-item-wide">
+                                <label for="relationScenario">Scénář relace</label>
+                                <select id="relationScenario">
+                                    <option value="parabola">Body paraboly</option>
+                                    <option value="circle">Body kružnice</option>
+                                    <option value="vertical">Svislá přímka x = 2</option>
+                                    <option value="polyline">Lomená čára bez kolize x</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="canvas-wrap">
+                            <canvas id="relationCanvas" width="860" height="320"></canvas>
+                        </div>
+
+                        <div class="math-output-grid">
+                            <div class="math-output-card">
+                                <span class="output-label">Relace</span>
+                                <div class="output-value" id="relationLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Kontrola stejného \(x\)</span>
+                                <div class="output-value" id="relationCollisionLatex"></div>
+                            </div>
+                        </div>
+
+                        <div class="options-list compact-options">
+                            <label class="option-item"><input type="radio" name="relation-answer" value="yes"><span>Ano, je to funkce</span></label>
+                            <label class="option-item"><input type="radio" name="relation-answer" value="no"><span>Ne, není to funkce</span></label>
+                        </div>
+                        <button id="relationCheckBtn" class="btn-outline">Zkontrolovat odpověď</button>
+                        <div class="mini-feedback" id="relationFeedback"></div>
+                        <div class="topic-note" id="relationHint"></div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Který graf určitě <strong>není</strong> grafem funkce \(y=f(x)\)?</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="fn-check" value="a"><span>Parabola \(y=x^2\)</span></label>
+                            <label class="option-item"><input type="radio" name="fn-check" value="b"><span>Kružnice \(x^2+y^2=4\)</span></label>
+                            <label class="option-item"><input type="radio" name="fn-check" value="c"><span>Přímka \(y=-3x+1\)</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="fn-check" data-correct="b"
+                            data-feedback="fnCheckFeedback" data-correct-label="Kružnice \(x^2+y^2=4\)"
+                            data-explanation="Například pro \(x=0\) dostaneme \(y=2\) i \(y=-2\), tedy dvě hodnoty pro stejný vstup.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="fnCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="definicni-obor-a-obor-hodnot">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="graf-funkce">Pokračovat →</button>
                     </div>
                 </section>
                 <section id="graf-funkce" class="lesson-section">
-                    <span class="section-badge">Téma 3</span>
+                    <div class="section-badge">Téma 3</div>
                     <h1>Graf funkce</h1>
                     <p class="lead">
-                        Tato část je připravená jako osnova lekce <strong>Úvod do funkcí</strong>.
-                        Detailní výklad, příklady a procvičování budou doplněny v další fázi.
+                        Graf funkce je množina všech bodů \((x,f(x))\), kde \(x\) běží přes definiční obor.
+                        Čtení grafu znamená umět z polohy bodu určit vstup i výstup.
                     </p>
-                    <div class="topic-note">
-                        Struktura sekce je hotová. Obsah bude doplněn podle navazujících instrukcí.
+
+                    <div class="definition-box">
+                        <h4>Definice grafu</h4>
+                        <div class="equation-block">\[
+                            G_f=\{(x,f(x))\mid x\in D(f)\}
+                        \]</div>
+                        <p>
+                            Když znáte \(x\), odečtete z grafu \(y=f(x)\). Když znáte \(y\), hledáte body grafu s touto hodnotou.
+                        </p>
+                    </div>
+
+                    <div class="worked-example">
+                        <h3>Postup: od předpisu ke grafu</h3>
+                        <p>Pro \(f(x)=x^2-2x-3\) vytvoříme tabulku několika bodů:</p>
+                        <table class="value-table">
+                            <thead>
+                                <tr>
+                                    <th>\(x\)</th>
+                                    <th>\(-1\)</th>
+                                    <th>\(0\)</th>
+                                    <th>\(1\)</th>
+                                    <th>\(2\)</th>
+                                    <th>\(3\)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>\(f(x)\)</td>
+                                    <td>\(0\)</td>
+                                    <td>\(-3\)</td>
+                                    <td>\(-4\)</td>
+                                    <td>\(-3\)</td>
+                                    <td>\(0\)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p>Po vykreslení bodů dostaneme parabolu s vrcholem v bodě \((1,-4)\).</p>
+                    </div>
+
+                    <div class="interactive-panel">
+                        <h3>Interaktivně: graf a předpis</h3>
+                        <p>Změňte parametry a sledujte, jak se mění graf, obor hodnot i tabulka hodnot.</p>
+
+                        <div class="control-grid graph-controls">
+                            <div class="control-item">
+                                <label for="graphFamily">Typ funkce</label>
+                                <select id="graphFamily">
+                                    <option value="linear">Lineární ax + b</option>
+                                    <option value="quadratic">Kvadratická ax^2 + bx + c</option>
+                                    <option value="absolute">Absolutní a|x - h| + k</option>
+                                </select>
+                            </div>
+                            <div class="control-item">
+                                <label for="graphParam1"><span id="param1Label">\(a\)</span>: <span id="param1Value">1</span></label>
+                                <input type="range" id="graphParam1" min="-4" max="4" step="0.5" value="1.5">
+                            </div>
+                            <div class="control-item">
+                                <label for="graphParam2"><span id="param2Label">\(b\)</span>: <span id="param2Value">0</span></label>
+                                <input type="range" id="graphParam2" min="-6" max="6" step="0.5" value="-1">
+                            </div>
+                            <div class="control-item" id="graphParam3Wrap">
+                                <label for="graphParam3"><span id="param3Label">\(c\)</span>: <span id="param3Value">0</span></label>
+                                <input type="range" id="graphParam3" min="-6" max="6" step="0.5" value="0">
+                            </div>
+                        </div>
+
+                        <div class="canvas-wrap">
+                            <canvas id="graphCanvas" width="860" height="340"></canvas>
+                        </div>
+
+                        <div class="math-output-grid">
+                            <div class="math-output-card">
+                                <span class="output-label">Aktuální předpis</span>
+                                <div class="output-value" id="graphFormulaLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Definiční obor</span>
+                                <div class="output-value" id="graphDomainLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Obor hodnot</span>
+                                <div class="output-value" id="graphRangeLatex"></div>
+                            </div>
+                            <div class="math-output-card">
+                                <span class="output-label">Tabulka hodnot</span>
+                                <div class="output-value" id="graphTableLatex"></div>
+                            </div>
+                        </div>
+
+                        <div class="point-check">
+                            <h4>Kontrola bodu na grafu</h4>
+                            <p>Zadejte bod \((x,y)\) a ověřte, jestli leží na aktuálním grafu.</p>
+                            <div class="point-check-row">
+                                <label for="pointX">\(x\)</label>
+                                <input id="pointX" type="number" step="0.5" value="1">
+                                <label for="pointY">\(y\)</label>
+                                <input id="pointY" type="number" step="0.5" value="0">
+                                <button id="pointCheckBtn" class="btn-outline">Ověřit bod</button>
+                            </div>
+                            <div class="mini-feedback" id="pointFeedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="quick-check">
+                        <h3>Rychlá kontrola</h3>
+                        <p>Pro funkci \(f(x)=2x-3\) platí:</p>
+                        <div class="options-list">
+                            <label class="option-item"><input type="radio" name="graph-check" value="a"><span>bod \((2,1)\) na grafu neleží</span></label>
+                            <label class="option-item"><input type="radio" name="graph-check" value="b"><span>bod \((2,1)\) na grafu leží</span></label>
+                            <label class="option-item"><input type="radio" name="graph-check" value="c"><span>bod \((2,-1)\) na grafu leží</span></label>
+                        </div>
+                        <button class="btn-outline mini-check-btn" data-group="graph-check" data-correct="b"
+                            data-feedback="graphCheckFeedback" data-correct-label="bod \((2,1)\) na grafu leží"
+                            data-explanation="\(f(2)=2\cdot2-3=1\), takže bod \((2,1)\) je správně.">Zkontrolovat</button>
+                        <div class="mini-feedback" id="graphCheckFeedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="co-je-funkci-a-co-neni">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="procvicovani">Pokračovat k procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="procvicovani" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Procvičování</h1>
+                    <p class="lead">Po špatné odpovědi se vždy zobrazí správný výsledek i krátké vysvětlení.</p>
+
+                    <div class="exercise-container">
+                        <article class="exercise" id="exercise1">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status" id="ex1Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete definiční obor funkce \(f(x)=\frac{1}{x+3}\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex1" value="a"><span>\(\mathbb{R}\setminus\{3\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="b"><span>\(\mathbb{R}\setminus\{-3\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="c"><span>\(\mathbb{R}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex1" value="d"><span>\((-3,\infty)\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="1" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex1Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise2">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status" id="ex2Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Která relace je funkcí?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex2" value="a"><span>\(\{(-1,2),(0,1),(1,0)\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="b"><span>\(\{(-1,2),(-1,3),(0,0)\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="c"><span>\(\{(2,-1),(2,1)\}\)</span></label>
+                                    <label class="option"><input type="radio" name="ex2" value="d"><span>\(\{(0,0),(0,1),(1,1)\}\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="2" data-correct="a">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex2Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise3">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status" id="ex3Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Určete obor hodnot funkce \(g(x)=x^2+1\).</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex3" value="a"><span>\((-\infty,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="b"><span>\([0,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="c"><span>\([1,\infty)\)</span></label>
+                                    <label class="option"><input type="radio" name="ex3" value="d"><span>\((-\infty,1]\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="3" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex3Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise4">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status" id="ex4Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Bod \((2,5)\) leží na grafu funkce \(f(x)=ax+1\). Jaká je hodnota \(a\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex4" value="a"><span>\(a=1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="b"><span>\(a=2\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="c"><span>\(a=3\)</span></label>
+                                    <label class="option"><input type="radio" name="ex4" value="d"><span>\(a=4\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="4" data-correct="b">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex4Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise5">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status" id="ex5Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Pro funkci \(f(x)=|x-4|-2\) je hodnota \(f(1)\):</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex5" value="a"><span>\(-1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="b"><span>\(0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="c"><span>\(1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex5" value="d"><span>\(3\)</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="5" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex5Feedback"></div>
+                            </div>
+                        </article>
+
+                        <article class="exercise" id="exercise6">
+                            <div class="exercise-header">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status" id="ex6Status"></span>
+                            </div>
+                            <div class="exercise-content">
+                                <p>Je výraz \(\sqrt{x-2}\) definovaný pro \(x=1\)?</p>
+                                <div class="exercise-options">
+                                    <label class="option"><input type="radio" name="ex6" value="a"><span>Ano, protože odmocnina je vždy definovaná</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="b"><span>Ano, vyjde \(-1\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="c"><span>Ne, protože \(1-2&lt;0\)</span></label>
+                                    <label class="option"><input type="radio" name="ex6" value="d"><span>Ne, protože \(x=1\) není celé číslo</span></label>
+                                </div>
+                                <button class="btn-primary btn-check" data-exercise="6" data-correct="c">Zkontrolovat</button>
+                                <div class="exercise-feedback" id="ex6Feedback"></div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Lekce dokončena</h2>
+                        <p>Zvládli jste definiční obor, rozpoznání funkce i práci s grafem.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="graf-funkce">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
 
-    <script src="../../lesson-shell.js"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
     <script src="lesson.js"></script>
 </body>
 
