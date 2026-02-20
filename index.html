@@ -13,18 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
     <!-- Navigace -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#top" class="logo">
                 <span class="logo-icon">ČVUT</span>
                 <span class="logo-text">FBMI</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#kurzy">Kurzy</a></li>
                 <li><a href="#procvicovani">Procvičování</a></li>
-                <li><a href="#komunita">Komunita</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="#" class="btn-ghost">Přihlásit se</a>
@@ -41,7 +40,7 @@
                 <p class="hero-subtitle">Ovládni matematiku potřebnou pro přijímací zkoušky na ČVUT FBMI.
                     Interaktivní úlohy, vizuální vysvětlení a procvičování zaměřené na přijímací testy.</p>
                 <div class="hero-cta">
-                    <a href="#" class="btn-primary btn-large">Začít se učit</a>
+                    <a href="#kurzy" class="btn-primary btn-large">Začít se učit</a>
                     <a href="#" class="btn-outline btn-large">Prozkoumat kurzy</a>
                 </div>
                 <div class="hero-stats">
@@ -56,22 +55,22 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="hero-card card-1">
+                <a href="courses/analyticka-geometrie/index.html" class="hero-card card-1">
                     <div class="card-icon">📐</div>
                     <span>Geometrie</span>
-                </div>
-                <div class="hero-card card-2">
+                </a>
+                <a href="courses/kombinatorika/index.html" class="hero-card card-2">
                     <div class="card-icon">🧮</div>
                     <span>Počty</span>
-                </div>
-                <div class="hero-card card-3">
+                </a>
+                <a href="courses/rovnice/index.html" class="hero-card card-3">
                     <div class="card-icon">Σ</div>
                     <span>Algebra</span>
-                </div>
-                <div class="hero-card card-4">
+                </a>
+                <a href="courses/komplexni-cisla/index.html" class="hero-card card-4">
                     <div class="card-icon">π</div>
                     <span>Čísla</span>
-                </div>
+                </a>
                 <div class="floating-shape shape-1"></div>
                 <div class="floating-shape shape-2"></div>
                 <div class="floating-shape shape-3"></div>
@@ -120,9 +119,7 @@
             </div>
             <div class="courses-grid">
                 <a href="courses/analyticka-geometrie/index.html" class="course-card">
-                    <div class="course-image course-image-4">
-                        <span class="course-level">Pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-analyticka-geometrie">
                     </div>
                     <div class="course-content">
                         <h3>Analytická geometrie</h3>
@@ -135,9 +132,7 @@
                     </div>
                 </a>
                 <a href="courses/goniometrie-trigonometrie/index.html" class="course-card">
-                    <div class="course-image course-image-1">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-goniometrie-trigonometrie">
                     </div>
                     <div class="course-content">
                         <h3>Goniometrie a trigonometrie</h3>
@@ -150,9 +145,7 @@
                     </div>
                 </a>
                 <a href="courses/komplexni-cisla/index.html" class="course-card">
-                    <div class="course-image course-image-4">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-komplexni-cisla">
                     </div>
                     <div class="course-content">
                         <h3>Komplexní čísla</h3>
@@ -165,9 +158,7 @@
                     </div>
                 </a>
                 <a href="courses/planimetrie/index.html" class="course-card">
-                    <div class="course-image course-image-3">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-planimetrie">
                     </div>
                     <div class="course-content">
                         <h3>Planimetrie</h3>
@@ -180,9 +171,7 @@
                     </div>
                 </a>
                 <a href="courses/rovinne-utvary-a-telesa/index.html" class="course-card">
-                    <div class="course-image course-image-2">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-rovinne-utvary-a-telesa">
                     </div>
                     <div class="course-content">
                         <h3>Rovinné útvary a tělesa</h3>
@@ -195,9 +184,7 @@
                     </div>
                 </a>
                 <a href="courses/kombinatorika/index.html" class="course-card">
-                    <div class="course-image course-image-4">
-                        <span class="course-level">Stredne pokrocily</span>
-                        <span class="course-badge-new">Novy</span>
+                    <div class="course-image course-image-kombinatorika">
                     </div>
                     <div class="course-content">
                         <h3>Kombinatorika</h3>
@@ -210,9 +197,7 @@
                     </div>
                 </a>
                 <a href="courses/pravdepodobnost/index.html" class="course-card">
-                    <div class="course-image course-image-3">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-pravdepodobnost">
                     </div>
                     <div class="course-content">
                         <h3>Pravděpodobnost</h3>
@@ -225,9 +210,7 @@
                     </div>
                 </a>
                 <a href="courses/rovnice/index.html" class="course-card">
-                    <div class="course-image course-image-1">
-                        <span class="course-level">Stredne pokrocily</span>
-                        <span class="course-badge-new">Novy</span>
+                    <div class="course-image course-image-rovnice">
                     </div>
                     <div class="course-content">
                         <h3>Rovnice</h3>
@@ -240,9 +223,7 @@
                     </div>
                 </a>
                 <a href="courses/funkce/index.html" class="course-card">
-                    <div class="course-image course-image-4">
-                        <span class="course-level">Středně pokročilý</span>
-                        <span class="course-badge-new">Nový</span>
+                    <div class="course-image course-image-funkce">
                     </div>
                     <div class="course-content">
                         <h3>Funkce</h3>
@@ -255,9 +236,7 @@
                     </div>
                 </a>
                 <a href="courses/nerovnice/index.html" class="course-card">
-                    <div class="course-image course-image-2">
-                        <span class="course-level">Stredne pokrocily</span>
-                        <span class="course-badge-new">Novy</span>
+                    <div class="course-image course-image-nerovnice">
                     </div>
                     <div class="course-content">
                         <h3>Nerovnice</h3>
@@ -270,9 +249,7 @@
                     </div>
                 </a>
                 <a href="courses/mnoziny/index.html" class="course-card">
-                    <div class="course-image course-image-1">
-                        <span class="course-level">Stredne pokrocily</span>
-                        <span class="course-badge-new">Novy</span>
+                    <div class="course-image course-image-mnoziny">
                     </div>
                     <div class="course-content">
                         <h3>Množiny</h3>
@@ -294,7 +271,7 @@
             <div class="cta-content">
                 <h2>Připraven ovládnout matematiku?</h2>
                 <p>Připoj se k naší komunitě studentů a začni svou cestu ještě dnes. Začátek je zdarma.</p>
-                <a href="#" class="btn-white btn-large">Začít se učit zdarma</a>
+                <a href="#kurzy" class="btn-white btn-large">Začít se učit zdarma</a>
             </div>
         </div>
     </section>
@@ -316,22 +293,10 @@
                     <a href="#">Procvičování</a>
                     <a href="#">Výzvy</a>
                 </div>
-                <div class="footer-column">
-                    <h4>Komunita</h4>
-                    <a href="#">Fórum</a>
-                    <a href="#">Discord</a>
-                    <a href="#">Události</a>
-                </div>
-                <div class="footer-column">
-                    <h4>Společnost</h4>
-                    <a href="#">O nás</a>
-                    <a href="#">Kariéra</a>
-                    <a href="#">Kontakt</a>
-                </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+            <p>&copy; 2026 ČVUT FBMI. Všechna práva vyhrazena.</p>
         </div>
     </footer>
 

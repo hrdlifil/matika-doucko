@@ -349,6 +349,7 @@ img {
 
 .hero-card {
     position: absolute;
+    z-index: 1;
     background: var(--bg-card);
     border: 1px solid var(--border-light);
     border-radius: var(--radius-lg);
@@ -404,6 +405,7 @@ img {
 
 .floating-shape {
     position: absolute;
+    pointer-events: none;
     border-radius: 50%;
     background: var(--gradient-primary);
     opacity: 0.1;
@@ -571,6 +573,9 @@ img {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .course-image-1 {
@@ -587,6 +592,73 @@ img {
 
 .course-image-4 {
     background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+/* Dedicated course thumbnails */
+.course-image-analyticka-geometrie {
+    background-image:
+        linear-gradient(135deg, rgba(67, 56, 202, 0.5), rgba(99, 102, 241, 0.25)),
+        url("assets/course-cards/analyticka-geometrie.svg");
+}
+
+.course-image-goniometrie-trigonometrie {
+    background-image:
+        linear-gradient(135deg, rgba(14, 116, 144, 0.45), rgba(99, 102, 241, 0.25)),
+        url("assets/course-cards/goniometrie-trigonometrie.svg");
+}
+
+.course-image-komplexni-cisla {
+    background-image:
+        linear-gradient(135deg, rgba(88, 28, 135, 0.5), rgba(79, 70, 229, 0.25)),
+        url("assets/course-cards/komplexni-cisla.svg");
+}
+
+.course-image-planimetrie {
+    background-image:
+        linear-gradient(135deg, rgba(6, 95, 70, 0.45), rgba(5, 150, 105, 0.25)),
+        url("assets/course-cards/planimetrie.svg");
+}
+
+.course-image-rovinne-utvary-a-telesa {
+    background-image:
+        linear-gradient(135deg, rgba(146, 64, 14, 0.5), rgba(234, 88, 12, 0.25)),
+        url("assets/course-cards/rovinne-utvary-a-telesa.svg");
+}
+
+.course-image-kombinatorika {
+    background-image:
+        linear-gradient(135deg, rgba(157, 23, 77, 0.45), rgba(147, 51, 234, 0.25)),
+        url("assets/course-cards/kombinatorika.svg");
+}
+
+.course-image-pravdepodobnost {
+    background-image:
+        linear-gradient(135deg, rgba(30, 64, 175, 0.45), rgba(13, 148, 136, 0.25)),
+        url("assets/course-cards/pravdepodobnost.svg");
+}
+
+.course-image-rovnice {
+    background-image:
+        linear-gradient(135deg, rgba(49, 46, 129, 0.5), rgba(79, 70, 229, 0.25)),
+        url("assets/course-cards/rovnice.svg");
+}
+
+.course-image-funkce {
+    background-image:
+        linear-gradient(135deg, rgba(76, 29, 149, 0.5), rgba(168, 85, 247, 0.25)),
+        url("assets/course-cards/funkce.svg");
+}
+
+.course-image-nerovnice {
+    background-image:
+        linear-gradient(135deg, rgba(127, 29, 29, 0.45), rgba(220, 38, 38, 0.2)),
+        url("assets/course-cards/nerovnice.svg");
+}
+
+.course-image-mnoziny {
+    background-image:
+        linear-gradient(135deg, rgba(6, 78, 59, 0.45), rgba(16, 185, 129, 0.2)),
+        url("assets/course-cards/mnoziny.svg");
 }
 
 /* Course card as link */

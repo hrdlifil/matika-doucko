@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Funkce">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#581c87"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <path d="M70 300H595M100 55V320" stroke="rgba(255,255,255,0.55)" stroke-width="2"/>
+  <path d="M100 270L260 160L410 115L560 90" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M120 105Q230 260 355 210T575 62" fill="none" stroke="#f472b6" stroke-width="4" stroke-linecap="round"/>
+  <path d="M110 286Q200 170 300 170Q450 170 575 300" fill="none" stroke="#fbbf24" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="260" cy="160" r="6" fill="#22d3ee"/>
+  <circle cx="355" cy="210" r="6" fill="#f472b6"/>
+  <circle cx="300" cy="170" r="6" fill="#fbbf24"/>
+</svg>
