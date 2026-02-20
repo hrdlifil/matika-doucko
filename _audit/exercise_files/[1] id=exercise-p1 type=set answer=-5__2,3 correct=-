@@ -1,0 +1,58 @@
+Q: Vyřešte rovnici: (x-3)(2x+5)=0.
+SolutionText: K = {−5/2, 3}
+
+[2] id=exercise-p2 type=set answer=0,4 correct=-
+Q: Vyřešte rovnici: x(x-4)^2=0.
+SolutionText: K = {0, 4}
+
+[3] id=exercise-p3 type=choice answer=b correct=-
+Q: Jaká je množina řešení v ℝ pro rovnici (x²+1)(x-2)=0?
+Options:
+  (a) K = ∅
+  (b) K = {2} <= key
+  (c) K = {−1, 1, 2}
+  (d) Nekonečně mnoho řešení
+SolutionText: správně je B: v reálných číslech platí jen x = 2
+
+[4] id=exercise-p4 type=number answer=7 correct=-
+Q: Určete dvojnásobný kořen rovnice (x-7)^2(x+1)=0.
+SolutionText: dvojnásobný kořen je x = 7
+
+[5] id=exercise-p5 type=choice answer=b correct=-
+Q: Student řeší (x-4)(x+3)=0 tak, že rovnici vydělí (x-4). Co platí?
+Options:
+  (a) Postup je vždy správný, řešení je jen x = -3.
+  (b) Postup je chybný, protože se ztratí kořen x = 4. <= key
+  (c) Rovnice má nekonečně mnoho řešení.
+  (d) Rovnice nemá řešení.
+SolutionText: správně je B: dělení výrazem (x−4) ztratí kořen x = 4
+
+[6] id=exercise-r1 type=number answer=8 correct=-
+Q: Vyřešte rovnici: (x-8)/(x+1)=0.
+SolutionText: x = 8
+
+[7] id=exercise-r2 type=number answer=-7 correct=-
+Q: Vyřešte rovnici: 3/(x-2)=1/(x+4).
+SolutionText: x = −7
+
+[8] id=exercise-r3 type=number answer=7/2 correct=-
+Q: Vyřešte rovnici: (x+1)/(x-2)=3.
+SolutionText: x = 7/2
+
+[9] id=exercise-r4 type=choice answer=a correct=-
+Q: Jaké je řešení rovnice (x²-1)/(x-1)=0 v ℝ?
+Options:
+  (a) K = {−1} <= key
+  (b) K = {−1, 1}
+  (c) K = {1}
+  (d) K = ∅
+SolutionText: správně je A: z podmínky x ≠ 1 vychází jediný kořen x = −1
+
+[10] id=exercise-r5 type=choice answer=c correct=-
+Q: Kolik řešení má rovnice (x-4)/(x-4)=0 v ℝ?
+Options:
+  (a) Právě jedno řešení.
+  (b) Nekonečně mnoho řešení.
+  (c) Žádné řešení. <= key
+  (d) Dvě řešení.
+SolutionText: správně je C: při x ≠ 4 je levá strana rovna 1, takže rovnice 1 = 0 nemá řešení

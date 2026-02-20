@@ -1,0 +1,62 @@
+Q: Vyřešte rovnici 2x+1 = 32.
+Options:
+  (a) x = 3
+  (b) x = 4 <= key
+  (c) x = 5
+SolutionText: správně je B: 2^(x+1) = 32 = 2^5, tedy x + 1 = 5 a x = 4
+
+[2] id=exercise-q2 type=number answer=2 correct=-
+Q: Vyřešte rovnici 32x-1 = 27.
+SolutionText: x = 2, protože 3^(2x-1) = 27 = 3^3 ⇒ 2x - 1 = 3
+
+[3] id=exercise-q3 type=set answer=0,1 correct=-
+Q: Vyřešte rovnici 52x - 6·5x + 5 = 0.
+SolutionText: K = {0, 1}; po substituci t = 5^x vyjde (t - 1)(t - 5) = 0
+
+[4] id=exercise-q4 type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice 4x-2 = -3?
+Options:
+  (a) Právě jedno
+  (b) Právě dvě
+  (c) Žádné <= key
+SolutionText: správně je C: exponenciální výraz je vždy kladný, takže 4^(x-2) = -3 nemá řešení v ℝ
+
+[5] id=exercise-q5 type=number answer=2.807354922 correct=-
+Q: Vyřešte rovnici 2x = 7 (zaokrouhlete na 3 desetinná místa).
+SolutionText: x = log_2(7) = ln 7 / ln 2 ≈ 2,807
+
+[6] id=exercise-q6 type=number answer=2 correct=-
+Q: Vyřešte rovnici 9x = 3x+2.
+SolutionText: x = 2, protože 9^x = (3^2)^x = 3^(2x) a tedy 2x = x + 2
+
+[7] id=exercise-q7 type=number answer=33 correct=-
+Q: Vyřešte rovnici log₂(x - 1) = 5.
+SolutionText: x = 33, protože log_2(x-1)=5 ⇒ x-1=2^5=32
+
+[8] id=exercise-q8 type=choice answer=a correct=-
+Q: Pro jaké x je definován výraz log₃(2x - 7)?
+Options:
+  (a) x &gt; 7/2 <= key
+  (b) x ≥ 7/2
+  (c) x &lt; 7/2
+SolutionText: správně je A: argument 2x - 7 musí být kladný, tedy x &gt; 7/2
+
+[9] id=exercise-q9 type=set answer=-3,3 correct=-
+Q: Vyřešte rovnici log₅(x2 - 4) = 1.
+SolutionText: K = {−3, 3}; po převodu vyjde x^2 - 4 = 5 ⇒ x^2 = 9
+
+[10] id=exercise-q10 type=number answer=4 correct=-
+Q: Vyřešte rovnici ln(x - 1) = ln(2x - 5).
+SolutionText: x = 4; z rovnosti ln(x-1) = ln(2x-5) plyne x - 1 = 2x - 5
+
+[11] id=exercise-q11 type=number answer=2.464101615 correct=-
+Q: Vyřešte rovnici log₂(x+3) + log₂(x-1) = 3 (zaokrouhlete na 3 desetinná místa).
+SolutionText: x = -1 + 2√3 ≈ 2,464; druhý kořen nevyhoví podmínce x &gt; 1
+
+[12] id=exercise-q12 type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice log(x - 4) = log(1 - x)?
+Options:
+  (a) Právě jedno: x = 2,5
+  (b) Právě jedno: x = 4,5
+  (c) Žádné reálné řešení <= key
+SolutionText: správně je C: podmínky x - 4 &gt; 0 a 1 - x &gt; 0 nelze splnit současně

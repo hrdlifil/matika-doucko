@@ -1,0 +1,3403 @@
+========================================================================================================================
+courses/analyticka-geometrie/lessons/elipsa/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Elipsa má poloosy a = 5, b = 3. Jaká je vzdálenost ohnisek od středu (e)?
+Options:
+  (a) e = 2
+  (b) e = 4 <= key
+  (c) e = √34
+  (d) e = 8
+
+[2] type=- answer=- correct=a
+Q: Jaká je kanonická rovnice elipsy s hlavní poloosou a = 6 a vedlejší poloosou b = 4?
+Options:
+  (a) x²/36 + y²/16 = 1 <= key
+  (b) x²/6 + y²/4 = 1
+  (c) x²/16 + y²/36 = 1
+  (d) x²/36 + y²/16 = 0
+
+[3] type=- answer=- correct=b
+Q: Elipsa x²/25 + y²/9 = 1. Kde leží ohniska?
+Options:
+  (a) F = [0, ±4]
+  (b) F = [±4, 0] <= key
+  (c) F = [±5, 0]
+  (d) F = [±3, 0]
+
+[4] type=- answer=- correct=c
+Q: Jaká je excentricita elipsy x²/100 + y²/64 = 1?
+Options:
+  (a) ε = 0.36
+  (b) ε = 0.8
+  (c) ε = 0.6 <= key
+  (d) ε = 6
+
+[5] type=- answer=- correct=b
+Q: Elipsa má ohniska F₁ = [−3, 0], F₂ = [3, 0] a hlavní poloosu a = 5.
+                                    Jaká je délka vedlejší poloosy b?
+Options:
+  (a) b = 2
+  (b) b = 4 <= key
+  (c) b = √34
+  (d) b = 8
+
+[6] type=- answer=- correct=b
+Q: Leží bod P = [3, 2] na elipse x²/25 + y²/9 = 1, uvnitř, nebo vně?
+Options:
+  (a) Na elipse (hodnota = 1)
+  (b) Uvnitř (hodnota < 1) <= key
+  (c) Vně (hodnota > 1)
+  (d) Nelze určit
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/hyperbola/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Hyperbola má poloosy a = 3, b = 4. Jaká je vzdálenost ohnisek od středu (e)?
+Options:
+  (a) e = 7
+  (b) e = 5 <= key
+  (c) e = 1
+  (d) e = √7
+
+[2] type=- answer=- correct=b
+Q: Jaká je kanonická rovnice hyperboly s a = 4, b = 3,
+                                    reálná osa na ose x?
+Options:
+  (a) x²/16 + y²/9 = 1
+  (b) x²/16 − y²/9 = 1 <= key
+  (c) x²/9 − y²/16 = 1
+  (d) y²/16 − x²/9 = 1
+
+[3] type=- answer=- correct=b
+Q: Jaké jsou asymptoty hyperboly x²/9 − y²/16 = 1?
+Options:
+  (a) y = ±(3/4)x
+  (b) y = ±(4/3)x <= key
+  (c) y = ±x
+  (d) y = ±(9/16)x
+
+[4] type=- answer=- correct=b
+Q: Jaká je excentricita hyperboly x²/9 − y²/16 = 1?
+Options:
+  (a) ε = 5/4 = 1.25
+  (b) ε = 5/3 ≈ 1.67 <= key
+  (c) ε = 4/3 ≈ 1.33
+  (d) ε = 3/5 = 0.6
+
+[5] type=- answer=- correct=b
+Q: Hyperbola má ohniska F = [±5, 0] a reálnou poloosu a = 3.
+                                    Jaká je délka imaginární poloosy b?
+Options:
+  (a) b = 2
+  (b) b = 4 <= key
+  (c) b = √34
+  (d) b = 8
+
+[6] type=- answer=- correct=c
+Q: Leží bod P = [5, 3] na hyperbole x²/9 − y²/16 = 1,
+                                    mezi větvemi, nebo vně?
+Options:
+  (a) Na hyperbole (hodnota = 1)
+  (b) Mezi větvemi (hodnota < 1)
+  (c) Vně — za větvemi (hodnota > 1) <= key
+  (d) Nelze určit
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/kruznice/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaká je středová rovnice kružnice se středem S = [2, −3] a poloměrem r = 5?
+Options:
+  (a) (x + 2)² + (y − 3)² = 25
+  (b) (x − 2)² + (y + 3)² = 25 <= key
+  (c) (x − 2)² + (y + 3)² = 5
+  (d) (x − 2)² + (y − 3)² = 25
+
+[2] type=- answer=- correct=a
+Q: Určete střed a poloměr kružnice x² + y² − 6x + 4y − 12 = 0.
+Options:
+  (a) S = [3, −2], r = 5 <= key
+  (b) S = [−3, 2], r = 5
+  (c) S = [3, −2], r = 25
+  (d) S = [6, −4], r = √52
+
+[3] type=- answer=- correct=c
+Q: Kružnice x² + y² = 16 a přímka y = 5. Jaká je jejich vzájemná poloha?
+Options:
+  (a) Sečna (2 průsečíky)
+  (b) Tečna (1 průsečík)
+  (c) Vnější přímka (0 průsečíků) <= key
+  (d) Nelze určit
+
+[4] type=- answer=- correct=a
+Q: Napište rovnici tečny kružnice x² + y² = 25 v bodě T = [3, 4].
+Options:
+  (a) 3x + 4y = 25 <= key
+  (b) 3x − 4y = 25
+  (c) 4x + 3y = 25
+  (d) 3x + 4y = 5
+
+[5] type=- answer=- correct=b
+Q: Bod A = [1, 2] a kružnice (x − 1)² + (y − 1)² = 4. Kde leží bod A vzhledem ke
+                                    kružnici?
+Options:
+  (a) Na kružnici
+  (b) Uvnitř kružnice <= key
+  (c) Vně kružnice
+  (d) Ve středu kružnice
+
+[6] type=- answer=- correct=c
+Q: Rovnice x² + y² + 2x − 4y + 5 = 0 popisuje:
+Options:
+  (a) Kružnici s poloměrem 1
+  (b) Kružnici s poloměrem 0
+  (c) Jediný bod [−1, 2] <= key
+  (d) Prázdnou množinu (nemá řešení)
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/opakovani/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaká je velikost vektoru u = (3, −4)?
+Options:
+  (a) 7
+  (b) 5 <= key
+  (c) √7
+  (d) 1
+
+[2] type=- answer=- correct=a
+Q: Jsou vektory u = (2, 3) a v = (−3,
+                                    2) kolmé?
+Options:
+  (a) Ano, u · v = 0 <= key
+  (b) Ne, u · v = −6
+  (c) Ne, u · v = 12
+  (d) Nelze určit
+
+[3] type=- answer=- correct=d
+Q: Jaká je vzdálenost bodu P = [3, 4] od přímky 3x + 4y − 10 = 0?
+Options:
+  (a) 3
+  (b) 15/5 = 3
+  (c) 5
+  (d) |9+16−10|/5 = 3 <= key
+
+[4] type=- answer=- correct=a
+Q: Přímka prochází body A = [1, 2] a B = [3, 6]. Jaká je směrnice k?
+Options:
+  (a) k = 2 <= key
+  (b) k = 1/2
+  (c) k = 4
+  (d) k = −2
+
+[5] type=- answer=- correct=a
+Q: Kružnice má rovnici (x−2)² + (y+1)² = 9. Jaký je střed a poloměr?
+Options:
+  (a) S = [2, −1], r = 3 <= key
+  (b) S = [−2, 1], r = 9
+  (c) S = [2, 1], r = 3
+  (d) S = [2, −1], r = 9
+
+[6] type=- answer=- correct=a
+Q: Elipsa x²/25 + y²/9 = 1 má a = 5, b = 3. Jaká je vzdálenost ohnisek?
+Options:
+  (a) 2c = 2√(25−9) = 8 <= key
+  (b) 2c = 2√(25+9) = 2√34
+  (c) 2c = 10
+  (d) 2c = 6
+
+[7] type=- answer=- correct=a
+Q: Hyperbola x²/4 − y²/9 = 1. Jaké jsou asymptoty?
+Options:
+  (a) y = ±(3/2)x <= key
+  (b) y = ±(2/3)x
+  (c) y = ±2x
+  (d) y = ±3x
+
+[8] type=- answer=- correct=a
+Q: Parabola y² = 8x. Kde leží ohnisko?
+Options:
+  (a) F = [2, 0] <= key
+  (b) F = [4, 0]
+  (c) F = [0, 2]
+  (d) F = [8, 0]
+
+[9] type=- answer=- correct=a
+Q: Jaká je odchylka přímek p: 2x − y + 1 = 0 a q: x + 2y − 3 = 0?
+Options:
+  (a) 90° (kolmé) <= key
+  (b) 45°
+  (c) 60°
+  (d) 0° (rovnoběžné)
+
+[10] type=- answer=- correct=a
+Q: Jaká je vzdálenost bodů A = [1, 0, 2] a B = [4, 4, 2] v prostoru?
+Options:
+  (a) 5 <= key
+  (b) 7
+  (c) √41
+  (d) 3
+
+[11] type=- answer=- correct=a
+Q: Jaká je plocha rovnoběžníku rozepjatého vektory u = (1, 0,
+                                    0) a v = (0, 3, 0)?
+Options:
+  (a) 3 <= key
+  (b) 0
+  (c) 1
+  (d) √10
+
+[12] type=- answer=- correct=a
+Q: Jaká je vzdálenost bodu P = [0, 0, 0] od roviny 2x + 2y + z − 3 = 0?
+Options:
+  (a) 1 <= key
+  (b) 3
+  (c) 3/√9 = 1
+  (d) √3
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/parabola/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Parabola má rovnici y² = 8x. Jaký je parametr p a kde leží ohnisko?
+Options:
+  (a) p = 8, F = [4, 0]
+  (b) p = 4, F = [2, 0] <= key
+  (c) p = 2, F = [1, 0]
+  (d) p = 16, F = [8, 0]
+
+[2] type=- answer=- correct=c
+Q: Ohnisko paraboly je F = [0, 3]. Jaká je rovnice paraboly (vrchol v počátku)?
+Options:
+  (a) y² = 12x
+  (b) x² = 6y
+  (c) x² = 12y <= key
+  (d) y² = 6x
+
+[3] type=- answer=- correct=b
+Q: Řídící přímka paraboly y² = 2px je x = −3. Jaké je p?
+Options:
+  (a) p = 3
+  (b) p = 6 <= key
+  (c) p = 1.5
+  (d) p = 9
+
+[4] type=- answer=- correct=b
+Q: Jaká rovnice popisuje parabolu otevřenou doleva s parametrem p = 5?
+Options:
+  (a) y² = 10x
+  (b) y² = −10x <= key
+  (c) x² = −10y
+  (d) x² = 10y
+
+[5] type=- answer=- correct=b
+Q: Jaká je délka latus rectum paraboly y² = 6x?
+Options:
+  (a) 3
+  (b) 6 <= key
+  (c) 12
+  (d) 1.5
+
+[6] type=- answer=- correct=b
+Q: Leží bod P = [2, 3] na parabole y² = 8x, uvnitř, nebo vně?
+Options:
+  (a) Na parabole (y² = 2px)
+  (b) Uvnitř (y² < 2px) <= key
+  (c) Vně (y² > 2px)
+  (d) Nelze určit
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/primka-v-rovine/index.html
+========================================================================================================================
+[1] type=- answer=- correct=a
+Q: Přímka prochází bodem A = [1, 2] a má směrový vektor s =
+                                    (2, 3).
+                                    Jaké je její parametrické vyjádření?
+Options:
+  (a) x = 1 + t·2, y = 2 + t·3 <= key
+  (b) x = 2 + t·1, y = 3 + t·2
+  (c) x = 1 + t·3, y = 2 + t·2
+
+[2] type=- answer=- correct=b
+Q: Jaký je normálový vektor přímky s obecnou rovnicí 3x - 2y + 5 = 0?
+Options:
+  (a) n = (3, 2)
+  (b) n = (3, -2) <= key
+  (c) n = (-2, 3)
+
+[3] type=- answer=- correct=a
+Q: Přímka má směrnicový tvar y = -2x + 4. Který bod leží na této přímce?
+Options:
+  (a) [1, 2] <= key
+  (b) [2, 1]
+  (c) [1, 3]
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/prostor/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaká je vzdálenost bodů A = [1, 2, 3] a B = [4, 6, 3]?
+Options:
+  (a) 4
+  (b) 5 <= key
+  (c) √34
+  (d) 7
+
+[2] type=- answer=- correct=b
+Q: Vypočtěte skalární součin u · v pro u = (1, −2, 3) a v = (4, 0, −1).
+Options:
+  (a) 7
+  (b) 1 <= key
+  (c) −1
+  (d) 3
+
+[3] type=- answer=- correct=a
+Q: Vypočtěte vektorový součin u × v pro u = (1, 0, 0) a v = (0, 1, 0).
+Options:
+  (a) (0, 0, 1) <= key
+  (b) (0, 0, −1)
+  (c) (1, 1, 0)
+  (d) (0, 0, 0)
+
+[4] type=- answer=- correct=b
+Q: Jaký je normálový vektor roviny 2x − 3y + z − 5 = 0?
+Options:
+  (a) (2, 3, 1)
+  (b) (2, −3, 1) <= key
+  (c) (−2, 3, −1)
+  (d) (2, −3, −5)
+
+[5] type=- answer=- correct=a
+Q: Jaká je vzdálenost bodu P = [1, 1, 1] od roviny x + y + z − 6 = 0?
+Options:
+  (a) √3 <= key
+  (b) 3/√3 = √3
+  (c) 3
+  (d) 2√3
+
+[6] type=- answer=- correct=a
+Q: Jsou vektory u = (1, 2, 3) a v = (2, 4, 6) kolineární?
+Options:
+  (a) Ano, v = 2· u <= key
+  (b) Ne, nejsou násobkem
+  (c) Ano, jsou kolmé
+  (d) Nelze určit
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/skalarni-soucin/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vypočítejte skalární součin vektorů u = (2, −3) a v = (4, 1).
+Options:
+  (a) 11
+  (b) 5 <= key
+  (c) 8
+  (d) −5
+
+[2] type=- answer=- correct=a
+Q: Jsou vektory a = (3, 2) a b = (−4, 6) na sebe kolmé?
+Options:
+  (a) Ano, protože jejich skalární součin je 0. <= key
+  (b) Ne, protože jejich skalární součin není 0.
+  (c) Nelze z daných informací určit.
+
+[3] type=- answer=- correct=c
+Q: Jaký úhel svírají vektory u = (1, 0) a v = (0, 1)?
+Options:
+  (a) 0°
+  (b) 45°
+  (c) 90° <= key
+  (d) 180°
+
+[4] type=- answer=- correct=a
+Q: Určete hodnotu parametru k , aby vektory u = (k, 3) a v = (6, −2)
+                                    byly na sebe kolmé.
+Options:
+  (a) k = 1 <= key
+  (b) k = −1
+  (c) k = 9
+  (d) k = −9
+
+[5] type=- answer=- correct=c
+Q: Jaký je skalární součin u · u ,
+                                    pokud | u | = 5?
+Options:
+  (a) 5
+  (b) 10
+  (c) 25 <= key
+  (d) √5
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/uvod/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Ve kterém kvadrantu leží bod A = [-3, 5]?
+Options:
+  (a) I. kvadrant
+  (b) II. kvadrant <= key
+  (c) III. kvadrant
+  (d) IV. kvadrant
+
+[2] type=- answer=- correct=b
+Q: Jaké jsou souřadnice vektoru AB , pokud A = [1, 2] a B = [4,
+                                    6]?
+Options:
+  (a) AB = (5, 8)
+  (b) AB = (3, 4) <= key
+  (c) AB = (-3, -4)
+  (d) AB = (4, 6)
+
+[3] type=- answer=- correct=c
+Q: Bod leží na ose x. Která z následujících souřadnic je správná?
+Options:
+  (a) [0, 5]
+  (b) [5, 5]
+  (c) [5, 0] <= key
+  (d) [0, 0]
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/vektory/index.html
+========================================================================================================================
+[1] type=- answer=- correct=a
+Q: Vypočítejte součet vektorů u = (3, -2) a v = (-1, 5).
+Options:
+  (a) (2, 3) <= key
+  (b) (4, 3)
+  (c) (2, 7)
+  (d) (-3, 10)
+
+[2] type=- answer=- correct=b
+Q: Jaká je velikost vektoru u = (3, 4)?
+Options:
+  (a) 7
+  (b) 5 <= key
+  (c) 25
+  (d) √7
+
+[3] type=- answer=- correct=b
+Q: Jaký je skalární součin vektorů u = (2, 3) a v = (4, -1)?
+Options:
+  (a) 11
+  (b) 5 <= key
+  (c) -5
+  (d) 8
+
+[4] type=- answer=- correct=b
+Q: Vektory u a v jsou kolmé. Co platí
+                                    pro jejich skalární součin?
+Options:
+  (a) u · v = 1
+  (b) u · v = 0 <= key
+  (c) u · v = -1
+  (d) u · v = | u | · | v |
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/vzdalenost-stred/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaká je vzdálenost bodů A = [1, 2] a B = [4, 6]?
+Options:
+  (a) |AB| = 7
+  (b) |AB| = 5 <= key
+  (c) |AB| = 25
+  (d) |AB| = √7
+
+[2] type=- answer=- correct=c
+Q: Jaké jsou souřadnice středu úsečky AB, kde A = [2, 4] a B = [6, 8]?
+Options:
+  (a) S = [8, 12]
+  (b) S = [4, 4]
+  (c) S = [4, 6] <= key
+  (d) S = [3, 5]
+
+[3] type=- answer=- correct=a
+Q: Bod T dělí úsečku AB v poměru 1:3 od bodu A. Kde A = [0, 0] a B = [8, 4].
+                                    Jaké jsou souřadnice bodu T?
+Options:
+  (a) T = [2, 1] <= key
+  (b) T = [4, 2]
+  (c) T = [6, 3]
+  (d) T = [3, 1.5]
+
+[4] type=- answer=- correct=c
+Q: Bod S = [3, 5] je středem úsečky AB. Pokud A = [1, 2], jaké jsou souřadnice bodu B?
+Options:
+  (a) B = [2, 3.5]
+  (b) B = [4, 7]
+  (c) B = [5, 8] <= key
+  (d) B = [6, 10]
+
+
+========================================================================================================================
+courses/analyticka-geometrie/lessons/vzdalenosti-odchylky/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vypočítejte vzdálenost bodu M = [1, 2] od přímky p : 3x + 4y − 5 = 0.
+Options:
+  (a) d = 1.2
+  (b) d = 1.6 <= key
+  (c) d = 1.0
+  (d) d = 2.0
+
+[2] type=- answer=- correct=a
+Q: Jaká je vzdálenost rovnoběžných přímek p : 3x − 4y + 6 = 0 a q : 3x − 4y − 4 = 0?
+Options:
+  (a) d = 2.0 <= key
+  (b) d = 10.0
+  (c) d = 1.4
+  (d) d = 5.0
+
+[3] type=- answer=- correct=c
+Q: Přímky p : x + y − 1 = 0 a q : x − y + 2 = 0.
+                                    Jaká je jejich odchylka?
+Options:
+  (a) α = 45°
+  (b) α = 60°
+  (c) α = 90° <= key
+  (d) α = 0°
+
+[4] type=- answer=- correct=b
+Q: Bod M leží na přímce p : 2x − y + 3 = 0. Jaká je vzdálenost d(M, p)?
+Options:
+  (a) d = 3
+  (b) d = 0 <= key
+  (c) d = 1
+  (d) Nelze určit bez znalosti souřadnic M.
+
+[5] type=- answer=- correct=a
+Q: Jaká je odchylka přímek p : y = 2x + 1 a q : y = 2x − 3?
+Options:
+  (a) α = 0° (rovnoběžné) <= key
+  (b) α = 90° (kolmé)
+  (c) α = 45°
+  (d) α = 180°
+
+
+========================================================================================================================
+courses/funkce/lessons/cyklometricke-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Která dvojice oborů hodnot je správně?
+Options:
+  (a) \(H(\arcsin)=\mathbb{R}\), \(H(\arccos)=\mathbb{R}\)
+  (b) \(H(\arcsin)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\), \(H(\arccos)=[0,\pi]\) <= key
+  (c) \(H(\arcsin)=[0,\pi]\), \(H(\arccos)=\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)
+
+[2] type=- answer=- correct=b
+Q: Které tvrzení o \(\arctan x\) je správné?
+Options:
+  (a) \(D(\arctan)=[-1,1]\), \(H(\arctan)=\mathbb{R}\)
+  (b) \(D(\arctan)=\mathbb{R}\), \(H(\arctan)=\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\) <= key
+  (c) \(\arctan x\) je sudá funkce.
+
+[3] type=- answer=- correct=b
+Q: Jaký je definiční obor funkce \(f(x)=\arcsin x\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \([-1,1]\) <= key
+  (c) \((0,\pi)\)
+  (d) \([0,\infty)\)
+
+[4] type=- answer=- correct=a
+Q: Určete hlavní hodnotu \(\arcsin\left(\frac12\right)\).
+Options:
+  (a) \(\frac{\pi}{6}\) <= key
+  (b) \(\frac{5\pi}{6}\)
+  (c) \(-\frac{\pi}{6}\)
+  (d) \(\frac{\pi}{3}\)
+
+[5] type=- answer=- correct=c
+Q: Určete hlavní hodnotu \(\arccos\left(-\frac12\right)\).
+Options:
+  (a) \(\frac{\pi}{3}\)
+  (b) \(-\frac{\pi}{3}\)
+  (c) \(\frac{2\pi}{3}\) <= key
+  (d) \(\frac{4\pi}{3}\)
+
+[6] type=- answer=- correct=b
+Q: Jaká je hodnota \(\arcsin x+\arccos x\) pro \(x\in[-1,1]\)?
+Options:
+  (a) \(\pi\)
+  (b) \(\frac{\pi}{2}\) <= key
+  (c) 0
+  (d) \(2\pi\)
+
+[7] type=- answer=- correct=c
+Q: Jaký je obor hodnot \(\arctan x\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(\left[-\frac{\pi}{2},\frac{\pi}{2}\right]\)
+  (c) \(\left(-\frac{\pi}{2},\frac{\pi}{2}\right)\) <= key
+  (d) \((0,\pi)\)
+
+[8] type=- answer=- correct=c
+Q: Vypočtěte \(\arctan(1)\).
+Options:
+  (a) \(\frac{\pi}{2}\)
+  (b) \(\frac{\pi}{3}\)
+  (c) \(\frac{\pi}{4}\) <= key
+  (d) \(\pi\)
+
+[9] type=- answer=- correct=b
+Q: Při větvi \(\arccot x\in(0,\pi)\) platí \(\arccot(-1)=\)
+Options:
+  (a) \(-\frac{\pi}{4}\)
+  (b) \(\frac{3\pi}{4}\) <= key
+  (c) \(\frac{\pi}{4}\)
+  (d) \(\pi\)
+
+[10] type=- answer=- correct=a
+Q: Vyřešte rovnici \(\arctan x=-\frac{\pi}{3}\).
+Options:
+  (a) \(x=-\sqrt3\) <= key
+  (b) \(x=\sqrt3\)
+  (c) \(x=-\frac{1}{\sqrt3}\)
+  (d) \(x=\frac{1}{\sqrt3}\)
+
+
+========================================================================================================================
+courses/funkce/lessons/exponencialni-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Které tvrzení je pro exponenciální funkci \(f(x)=a^x\) (s \(a>0,\ a\neq1\)) vždy pravdivé?
+Options:
+  (a) \(D(f)=(0,\infty)\), \(H(f)=\mathbb{R}\)
+  (b) \(D(f)=\mathbb{R}\), \(H(f)=(0,\infty)\) <= key
+  (c) Graf vždy protne osu \(x\) v jednom bodě.
+
+[2] type=- answer=- correct=b
+Q: Jaká je vodorovná asymptota funkce \(g(x)=2^{x-3}+5\)?
+Options:
+  (a) \(y=0\)
+  (b) \(y=5\) <= key
+  (c) \(x=5\)
+
+[3] type=- answer=- correct=b
+Q: Které tvrzení o rovnici \(a^x=b\) (pro \(a>0,\ a\neq1\)) je správné?
+Options:
+  (a) Pro každé \(b\in\mathbb{R}\) existuje právě jedno řešení.
+  (b) Pro \(b>0\) existuje právě jedno řešení, pro \(b\le0\) žádné. <= key
+  (c) Pro \(b=0\) existuje řešení \(x=-\infty\).
+
+[4] type=- answer=- correct=b
+Q: Jaký je obor hodnot funkce \(f(x)=3^x\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \((0,\infty)\) <= key
+  (c) \([0,\infty)\)
+  (d) \((-\infty,0)\)
+
+[5] type=- answer=- correct=b
+Q: Vyřešte rovnici \(2^x=8\).
+Options:
+  (a) \(x=2\)
+  (b) \(x=3\) <= key
+  (c) \(x=4\)
+  (d) \(x=8\)
+
+[6] type=- answer=- correct=c
+Q: Funkce \(f(x)=\left(\frac13\right)^x\) je na \(\mathbb{R}\):
+Options:
+  (a) striktně rostoucí
+  (b) konstantní
+  (c) striktně klesající <= key
+  (d) ani rostoucí ani klesající
+
+[7] type=- answer=- correct=c
+Q: Jaká je vodorovná asymptota funkce \(g(x)=2^{x-3}+5\)?
+Options:
+  (a) \(x=5\)
+  (b) \(y=0\)
+  (c) \(y=5\) <= key
+  (d) asymptota neexistuje
+
+[8] type=- answer=- correct=b
+Q: Určete obor hodnot funkce \(g(x)=-3\cdot2^x+4\).
+Options:
+  (a) \((4,\infty)\)
+  (b) \((-\infty,4)\) <= key
+  (c) \((0,\infty)\)
+  (d) \(\mathbb{R}\)
+
+[9] type=- answer=- correct=c
+Q: Vyřešte \(\left(\frac12\right)^{x-1}=4\).
+Options:
+  (a) \(x=3\)
+  (b) \(x=1\)
+  (c) \(x=-1\) <= key
+  (d) \(x=-3\)
+
+[10] type=- answer=- correct=a
+Q: Vypočtěte \(g(0)\) pro \(g(x)=3\cdot2^{x-2}-1\).
+Options:
+  (a) \(-\frac14\) <= key
+  (b) \(\frac14\)
+  (c) \(\frac34\)
+  (d) \(-\frac34\)
+
+[11] type=- answer=- correct=c
+Q: Které tvrzení o základní exponenciále \(f(x)=a^x\) je pravdivé?
+Options:
+  (a) Graf protíná osu \(x\) ve dvou bodech.
+  (b) Graf protíná osu \(x\) právě v jednom bodě.
+  (c) Graf osu \(x\) neprotíná, má asymptotu \(y=0\). <= key
+  (d) Graf má obor hodnot \(\mathbb{R}\).
+
+
+========================================================================================================================
+courses/funkce/lessons/kvadraticka-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=c
+Q: Určete vrchol funkce \(f(x)=x^2-4x+3\).
+Options:
+  (a) \([1,-1]\)
+  (b) \([2,1]\)
+  (c) \([2,-1]\) <= key
+
+[2] type=- answer=- correct=b
+Q: Co znamená předpis \(g(x)=f(x-2)+5\)?
+Options:
+  (a) Posun o 2 doleva a 5 dolů.
+  (b) Posun o 2 doprava a 5 nahoru. <= key
+  (c) Žádný posun, jen změna otevření.
+
+[3] type=- answer=- correct=b
+Q: Které tvrzení platí pro každou kvadratickou funkci s \(a>0\)?
+Options:
+  (a) Je rostoucí na celé \(\mathbb{R}\).
+  (b) Je nejprve klesající, potom rostoucí. <= key
+  (c) Má obor hodnot \((-\infty,y_V]\).
+
+[4] type=- answer=- correct=a
+Q: Pro \(F(x)=|x^2-4|\) se odráží část grafu původní paraboly:
+Options:
+  (a) na \((-2,2)\) <= key
+  (b) na \((-\infty,-2)\cup(2,\infty)\)
+  (c) nikde, graf se nemění
+
+[5] type=- answer=- correct=a
+Q: Určete vrchol funkce \(f(x)=2x^2-8x+5\).
+Options:
+  (a) \([2,-3]\) <= key
+  (b) \([2,3]\)
+  (c) \([4,-3]\)
+  (d) \([1,-1]\)
+
+[6] type=- answer=- correct=a
+Q: K funkci \(f(x)=x^2\) vezměte \(g(x)=f(x-3)-4\). Kde je vrchol \(g\)?
+Options:
+  (a) \([3,-4]\) <= key
+  (b) \([-3,-4]\)
+  (c) \([3,4]\)
+  (d) \([0,-4]\)
+
+[7] type=- answer=- correct=b
+Q: Určete obor hodnot funkce \(f(x)=-x^2+4x-3\).
+Options:
+  (a) \([1,\infty)\)
+  (b) \((-\infty,1]\) <= key
+  (c) \((-\infty,-1]\)
+  (d) \(\mathbb{R}\)
+
+[8] type=- answer=- correct=c
+Q: Kde je funkce \(f(x)=x^2-5x+6\) záporná?
+Options:
+  (a) pro \(x<2\) nebo \(x>3\)
+  (b) jen pro \(x=2\) a \(x=3\)
+  (c) pro \(2<x<3\) <= key
+  (d) nikde
+
+[9] type=- answer=- correct=b
+Q: Kolik reálných kořenů má rovnice \(3x^2+6x+3=0\)?
+Options:
+  (a) dva různé
+  (b) jeden dvojnásobný <= key
+  (c) žádný reálný
+  (d) nekonečně mnoho
+
+[10] type=- answer=- correct=b
+Q: Kdy se graf funkce \(F(x)=|x^2-1|\) shoduje s původní funkcí \(q(x)=x^2-1\)?
+Options:
+  (a) jen pro \(-1<x<1\)
+  (b) pro \(x\le-1\) nebo \(x\ge1\) <= key
+  (c) na celé \(\mathbb{R}\)
+  (d) nikde
+
+
+========================================================================================================================
+courses/funkce/lessons/linearni-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Co znamená směrnice \(a=-3\) v předpisu \(f(x)=ax+b\)?
+Options:
+  (a) Funkce je rostoucí a na každou 1 jednotku v \(x\) stoupne o 3.
+  (b) Funkce je klesající a na každou 1 jednotku v \(x\) klesne o 3. <= key
+  (c) Graf je vodorovná přímka \(y=-3\).
+
+[2] type=- answer=- correct=a
+Q: Body \(A(1,2)\) a \(B(4,8)\) určují přímku:
+Options:
+  (a) \(y=2x\) <= key
+  (b) \(y=\frac{1}{2}x+\frac{3}{2}\)
+  (c) \(y=2x-1\)
+
+[3] type=- answer=- correct=b
+Q: Jaký je vodorovný posun při transformaci \(g(x)=f(x-3)\)?
+Options:
+  (a) o 3 doleva
+  (b) o 3 doprava <= key
+  (c) žádný, mění se jen sklon
+
+[4] type=- answer=- correct=b
+Q: Kdy je lineární funkce \(f(x)=ax+b\) prostá na \(\mathbb{R}\)?
+Options:
+  (a) Vždy, protože je to přímka.
+  (b) Právě tehdy, když \(a\ne0\). <= key
+  (c) Právě tehdy, když \(b=0\).
+
+[5] type=- answer=- correct=b
+Q: Najděte nulový bod funkce \(f(x)=-3x+6\).
+Options:
+  (a) \(x=-2\)
+  (b) \(x=2\) <= key
+  (c) \(x=3\)
+  (d) nulový bod neexistuje
+
+[6] type=- answer=- correct=a
+Q: Body \(A(1,3)\), \(B(4,-3)\) určují přímku:
+Options:
+  (a) \(y=-2x+5\) <= key
+  (b) \(y=2x+1\)
+  (c) \(y=-\frac12x+\frac72\)
+  (d) \(x=1\)
+
+[7] type=- answer=- correct=b
+Q: Nechť \(f(x)=x-1\). Jaký předpis má \(g(x)=f(x-2)+3\)?
+Options:
+  (a) \(g(x)=x-2\)
+  (b) \(g(x)=x\) <= key
+  (c) \(g(x)=x+2\)
+  (d) \(g(x)=x-4\)
+
+[8] type=- answer=- correct=b
+Q: Pro \(f(x)=0x-4\) platí:
+Options:
+  (a) \(H(f)=\mathbb{R}\)
+  (b) \(H(f)=\{-4\}\) <= key
+  (c) funkce je lichá
+  (d) funkce je prostá
+
+[9] type=- answer=- correct=c
+Q: Kde je kladná funkce \(f(x)=2x-5\)?
+Options:
+  (a) \(x<\frac52\)
+  (b) \(x\le\frac52\)
+  (c) \(x>\frac52\) <= key
+  (d) \(x\ge\frac52\)
+
+[10] type=- answer=- correct=d
+Q: Která lineární funkce je současně sudá i lichá?
+Options:
+  (a) \(f(x)=2x\)
+  (b) \(f(x)=3\)
+  (c) \(f(x)=x+1\)
+  (d) \(f(x)=0\) <= key
+
+
+========================================================================================================================
+courses/funkce/lessons/logaritmicka-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Které tvrzení je pro \(f(x)=\log_a x\) (\(a>0,\ a\neq1\)) vždy pravdivé?
+Options:
+  (a) \(D(f)=\mathbb{R}\), \(H(f)=(0,\infty)\)
+  (b) \(D(f)=(0,\infty)\), \(H(f)=\mathbb{R}\) <= key
+  (c) Graf má vodorovnou asymptotu \(y=0\).
+
+[2] type=- answer=- correct=b
+Q: Jaká je svislá asymptota funkce \(g(x)=\log_2(x-4)+3\)?
+Options:
+  (a) \(y=4\)
+  (b) \(x=4\) <= key
+  (c) \(x=-4\)
+
+[3] type=- answer=- correct=b
+Q: Které tvrzení o rovnici \(\log_a x=b\) (\(a>0,\ a\neq1\)) je správné?
+Options:
+  (a) Má řešení jen pro \(b>0\).
+  (b) Má pro každé \(b\in\mathbb{R}\) právě jedno řešení \(x>0\). <= key
+  (c) Má vždy dvě řešení díky symetrii grafu.
+
+[4] type=- answer=- correct=b
+Q: Jaký je definiční obor funkce \(f(x)=\log_2 x\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \((0,\infty)\) <= key
+  (c) \([0,\infty)\)
+  (d) \(( -\infty,0)\)
+
+[5] type=- answer=- correct=c
+Q: Vyřešte rovnici \(\log_3 x=2\).
+Options:
+  (a) \(x=6\)
+  (b) \(x=8\)
+  (c) \(x=9\) <= key
+  (d) \(x=2\)
+
+[6] type=- answer=- correct=b
+Q: Vyřešte rovnici \(\log_{\frac12} x=-3\).
+Options:
+  (a) \(x=\frac18\)
+  (b) \(x=8\) <= key
+  (c) \(x=3\)
+  (d) \(x=-8\)
+
+[7] type=- answer=- correct=c
+Q: Jaká je asymptota funkce \(g(x)=\log_2(x-4)+1\)?
+Options:
+  (a) \(y=1\)
+  (b) \(x=0\)
+  (c) \(x=4\) <= key
+  (d) \(y=4\)
+
+[8] type=- answer=- correct=d
+Q: Určete obor hodnot funkce \(g(x)=-2\log_5(x)+3\).
+Options:
+  (a) \((0,\infty)\)
+  (b) \((3,\infty)\)
+  (c) \(( -\infty,3)\)
+  (d) \(\mathbb{R}\) <= key
+
+[9] type=- answer=- correct=b
+Q: Funkce \(f(x)=\log_{\frac13}x\) je na \((0,\infty)\):
+Options:
+  (a) striktně rostoucí
+  (b) striktně klesající <= key
+  (c) konstantní
+  (d) periodická
+
+[10] type=- answer=- correct=c
+Q: Vyřešte \(\log_2(x-1)=3\).
+Options:
+  (a) \(x=7\)
+  (b) \(x=8\)
+  (c) \(x=9\) <= key
+  (d) \(x=10\)
+
+[11] type=- answer=- correct=a
+Q: Vypočtěte \(\log_{10}(0.001)\).
+Options:
+  (a) \(-3\) <= key
+  (b) \(-2\)
+  (c) \(3\)
+  (d) \(0.001\)
+
+
+========================================================================================================================
+courses/funkce/lessons/mocninna-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Co platí pro \(f(x)=x^4\)?
+Options:
+  (a) Je lichá a roste na celé \(\mathbb{R}\).
+  (b) Je sudá, \(D(f)=\mathbb{R}\), \(H(f)=[0,\infty)\). <= key
+  (c) Je sudá a \(H(f)=\mathbb{R}\).
+
+[2] type=- answer=- correct=a
+Q: Kde je vrchol \(g(x)=2(x-3)^4-5\)?
+Options:
+  (a) [3,-5] <= key
+  (b) [-3,-5]
+  (c) [3,5]
+
+[3] type=- answer=- correct=b
+Q: Jaká je monotónnost funkce \(f(x)=-2x^5\)?
+Options:
+  (a) Rostoucí na \(\mathbb{R}\).
+  (b) Klesající na \(\mathbb{R}\). <= key
+  (c) Klesá pak roste.
+
+[4] type=- answer=- correct=b
+Q: Jaký je definiční obor \(f(x)=1/x^6\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(\mathbb{R}\setminus\{0\}\) <= key
+  (c) \((0,\infty)\)
+
+[5] type=- answer=- correct=b
+Q: Jaké asymptoty má \(g(x)=1/(x-2)^3+4\)?
+Options:
+  (a) x=0, y=0
+  (b) x=2, y=4 <= key
+  (c) x=-2, y=4
+
+[6] type=- answer=- correct=b
+Q: Jaký je obor hodnot \(f(x)=-3/x^4\)?
+Options:
+  (a) (0,∞)
+  (b) (-∞,0) <= key
+  (c) R\{0}
+
+[7] type=- answer=- correct=a
+Q: Obor hodnot \(2x^4\):
+Options:
+  (a) [0,∞) <= key
+  (b) R
+  (c) (-∞,0]
+
+[8] type=- answer=- correct=b
+Q: Střed \(g(x)=(x+1)^3-2\):
+Options:
+  (a) [1,-2]
+  (b) [-1,-2] <= key
+  (c) [-1,2]
+
+[9] type=- answer=- correct=b
+Q: Pro \(3/x^5\) platí:
+Options:
+  (a) D=R, H=R
+  (b) D=R\{0}, H=R\{0} <= key
+  (c) D=R\{0}, H=(0,∞)
+
+[10] type=- answer=- correct=a
+Q: Monotónnost \(1/x^2\):
+Options:
+  (a) roste vlevo, klesá vpravo <= key
+  (b) klesá na obou intervalech
+  (c) roste na obou intervalech
+
+[11] type=- answer=- correct=b
+Q: Obor hodnot \(-2/(x-1)^2+3\):
+Options:
+  (a) (3,∞)
+  (b) (-∞,3) <= key
+  (c) R\{3}
+
+[12] type=- answer=- correct=b
+Q: Znaménko \(-4/x^3\) pro \(x>0\):
+Options:
+  (a) kladné
+  (b) záporné <= key
+  (c) nulové
+
+
+========================================================================================================================
+courses/funkce/lessons/operace-s-funkcemi/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Které tvrzení je správná podmínka rovnosti funkcí?
+Options:
+  (a) Stačí, že po úpravě vyjde stejný algebraický tvar předpisu.
+  (b) Musí mít stejný definiční obor a stejné hodnoty pro každé \(x\) z tohoto oboru. <= key
+  (c) Stačí, že se shodují v několika testovaných bodech.
+
+[2] type=- answer=- correct=c
+Q: Pro \(f(x)=\sqrt{x}\) a \(g(x)=x-4\) je definiční obor \((f\circ g)(x)\):
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \([0,\infty)\)
+  (c) \([4,\infty)\) <= key
+  (d) \(( -\infty,4]\)
+
+[3] type=- answer=- correct=a
+Q: Jaká je inverzní funkce k \(f(x)=x^2\) na oboru \([0,\infty)\)?
+Options:
+  (a) \(f^{-1}(x)=\sqrt{x}\) <= key
+  (b) \(f^{-1}(x)=\pm\sqrt{x}\)
+  (c) \(f^{-1}(x)=x^2\)
+  (d) \(f^{-1}(x)=\frac1x\)
+
+[4] type=- answer=- correct=a
+Q: Jsou funkce \(f(x)=x^2-1\) a \(g(x)=(x-1)(x+1)\) na \(\mathbb{R}\) rovné?
+Options:
+  (a) Ano <= key
+  (b) Ne
+
+[5] type=- answer=- correct=b
+Q: Na maximálních definičních oborech jsou funkce \(f(x)=\frac{x^2-1}{x-1}\) a \(g(x)=x+1\):
+Options:
+  (a) rovné
+  (b) nerovné (liší se definičním oborem) <= key
+  (c) rovné jen pro záporná \(x\)
+  (d) nerovné, protože pro žádné \(x\) nedají stejnou hodnotu
+
+[6] type=- answer=- correct=c
+Q: Je dáno \(f(x)=\sqrt{x}\), \(g(x)=x-4\). Definiční obor \((f\circ g)(x)\) je:
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \([0,\infty)\)
+  (c) \([4,\infty)\) <= key
+  (d) \(( -\infty,4]\)
+
+[7] type=- answer=- correct=a
+Q: Pro \(f(x)=2x+3\), \(g(x)=x^2\) je \((g\circ f)(x)\):
+Options:
+  (a) \((2x+3)^2\) <= key
+  (b) \(2x^2+3\)
+  (c) \(x^2+2x+3\)
+  (d) \(2x^2+9\)
+
+[8] type=- answer=- correct=a
+Q: Inverzní funkce k \(f(x)=3x-5\) je:
+Options:
+  (a) \(f^{-1}(x)=\frac{x+5}{3}\) <= key
+  (b) \(f^{-1}(x)=3x+5\)
+  (c) \(f^{-1}(x)=\frac{x-5}{3}\)
+  (d) \(f^{-1}(x)=\frac{1}{3x-5}\)
+
+[9] type=- answer=- correct=c
+Q: K \(f(x)=x^2\) na \([0,\infty)\) platí:
+Options:
+  (a) inverzní funkce neexistuje
+  (b) \(f^{-1}(x)=\pm\sqrt{x}\)
+  (c) \(f^{-1}(x)=\sqrt{x}\) <= key
+  (d) \(f^{-1}(x)=x^2\)
+
+[10] type=- answer=- correct=b
+Q: Pro bijekci \(f:D\to H\) je definiční obor inverzní funkce \(f^{-1}\):
+Options:
+  (a) \(D\)
+  (b) \(H\) <= key
+  (c) \(D\cap H\)
+  (d) vždy \(\mathbb{R}\)
+
+[11] type=- answer=- correct=d
+Q: Jsou-li \(f\) a \(g\) navzájem inverzní, pak pro všechna \(x\in D(g)\) platí:
+Options:
+  (a) \(f(g(x))=0\)
+  (b) \(f(g(x))=f(x)\)
+  (c) \(f(g(x))=g(x)\)
+  (d) \(f(g(x))=x\) <= key
+
+
+========================================================================================================================
+courses/funkce/lessons/uvod-do-funkci/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Určete definiční obor funkce \(p(x)=\sqrt{9-x^2}\).
+
+[2] type=- answer=- correct=b
+Q: Který graf určitě není grafem funkce \(y=f(x)\)?
+
+[3] type=- answer=- correct=b
+Q: Pro funkci \(f(x)=2x-3\) platí:
+
+[4] type=- answer=- correct=b
+Q: Určete definiční obor funkce \(f(x)=\frac{1}{x+3}\).
+Options:
+  (a) \(\mathbb{R}\setminus\{3\}\)
+  (b) \(\mathbb{R}\setminus\{-3\}\) <= key
+  (c) \(\mathbb{R}\)
+  (d) \((-3,\infty)\)
+
+[5] type=- answer=- correct=a
+Q: Která relace je funkcí?
+Options:
+  (a) \(\{(-1,2),(0,1),(1,0)\}\) <= key
+  (b) \(\{(-1,2),(-1,3),(0,0)\}\)
+  (c) \(\{(2,-1),(2,1)\}\)
+  (d) \(\{(0,0),(0,1),(1,1)\}\)
+
+[6] type=- answer=- correct=c
+Q: Určete obor hodnot funkce \(g(x)=x^2+1\).
+Options:
+  (a) \((-\infty,\infty)\)
+  (b) \([0,\infty)\)
+  (c) \([1,\infty)\) <= key
+  (d) \((-\infty,1]\)
+
+[7] type=- answer=- correct=b
+Q: Bod \((2,5)\) leží na grafu funkce \(f(x)=ax+1\). Jaká je hodnota \(a\)?
+Options:
+  (a) \(a=1\)
+  (b) \(a=2\) <= key
+  (c) \(a=3\)
+  (d) \(a=4\)
+
+[8] type=- answer=- correct=c
+Q: Pro funkci \(f(x)=|x-4|-2\) je hodnota \(f(1)\):
+Options:
+  (a) \(-1\)
+  (b) \(0\)
+  (c) \(1\) <= key
+  (d) \(3\)
+
+[9] type=- answer=- correct=c
+Q: Je výraz \(\sqrt{x-2}\) definovaný pro \(x=1\)?
+Options:
+  (a) Ano, protože odmocnina je vždy definovaná
+  (b) Ano, vyjde \(-1\)
+  (c) Ne, protože \(1-2<0\) <= key
+  (d) Ne, protože \(x=1\) není celé číslo
+
+
+========================================================================================================================
+courses/funkce/lessons/vlastnosti-funkci/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Které tvrzení je obecně pravdivé?
+Options:
+  (a) Každá monotónní funkce je prostá.
+  (b) Každá striktně monotónní funkce je prostá. <= key
+  (c) Každá prostá funkce je monotónní na \(\mathbb{R}\).
+
+[2] type=- answer=- correct=a
+Q: Určete paritu funkce \(f(x)=x^4-3\).
+Options:
+  (a) Sudá <= key
+  (b) Lichá
+  (c) Ani sudá, ani lichá
+
+[3] type=- answer=- correct=b
+Q: Co platí pro každou spojitou funkci na uzavřeném intervalu \([a,b]\)?
+Options:
+  (a) Nemusí mít absolutní extrémy.
+  (b) Má absolutní maximum i minimum. <= key
+  (c) Má vždy pouze lokální extrémy.
+
+[4] type=- answer=- correct=b
+Q: Jaká je základní perioda funkce \(f(x)=\sin(3x)\)?
+Options:
+  (a) \(2\pi\)
+  (b) \(\frac{2\pi}{3}\) <= key
+  (c) \(\frac{\pi}{3}\)
+
+[5] type=- answer=- correct=b
+Q: Která funkce je na \(\mathbb{R}\) striktně rostoucí a zároveň prostá?
+Options:
+  (a) \(f(x)=x^2\)
+  (b) \(f(x)=2x-5\) <= key
+  (c) \(f(x)=|x|\)
+  (d) \(f(x)=3\)
+
+[6] type=- answer=- correct=c
+Q: Funkce \(f(x)=2\) na \(\mathbb{R}\) je:
+Options:
+  (a) prostá
+  (b) striktně rostoucí
+  (c) neklesající, ale ne prostá <= key
+  (d) lichá
+
+[7] type=- answer=- correct=b
+Q: Určete paritu funkce \(f(x)=x^3+x\).
+Options:
+  (a) Sudá
+  (b) Lichá <= key
+  (c) Ani sudá, ani lichá
+  (d) Konstantní
+
+[8] type=- answer=- correct=c
+Q: Funkce \(f(x)=\frac{1}{1+x^2}\) je na \(\mathbb{R}\):
+Options:
+  (a) neomezená shora
+  (b) omezená zdola, ale ne shora
+  (c) omezená shora i zdola <= key
+  (d) má hodnoty menší než \(-1\)
+
+[9] type=- answer=- correct=a
+Q: Na intervalu \([-1,5]\) má funkce \(f(x)=x^2-4x+1\) absolutní minimum:
+Options:
+  (a) \(-3\) v bodě \(x=2\) <= key
+  (b) \(1\) v bodě \(x=0\)
+  (c) \(-3\) v bodě \(x=-1\)
+  (d) minimum neexistuje
+
+[10] type=- answer=- correct=c
+Q: Jaká je základní perioda \(f(x)=\cos(4x)\)?
+Options:
+  (a) \(2\pi\)
+  (b) \(\pi\)
+  (c) \(\frac{\pi}{2}\) <= key
+  (d) \(\frac{\pi}{4}\)
+
+[11] type=- answer=- correct=a
+Q: Která funkce je periodická s periodou \(\pi\)?
+Options:
+  (a) \(\tan x\) <= key
+  (b) \(\sin x\)
+  (c) \(x^2\)
+  (d) \(e^x\)
+
+[12] type=- answer=- correct=c
+Q: Je funkce \(f(x)=x^2\) periodická na \(\mathbb{R}\)?
+Options:
+  (a) Ano, s periodou \(2\pi\)
+  (b) Ano, s periodou \(\pi\)
+  (c) Ne, není periodická <= key
+  (d) Ano, s periodou 1
+
+
+========================================================================================================================
+courses/goniometrie-trigonometrie/lessons/goniometricke-funkce/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: V pravoúhlém trojúhelníku je přepona c = 10 a protilehlá odvěsna a = 6. Jaká je
+                                    hodnota sin α?
+Options:
+  (a) 0.8
+  (b) 0.6 <= key
+  (c) 0.75
+  (d) 1.667
+
+[2] type=- answer=- correct=c
+Q: Jaká je hodnota cos 60°?
+Options:
+  (a) √3/2
+  (b) √2/2
+  (c) 1/2 <= key
+  (d) 1
+
+[3] type=- answer=- correct=b
+Q: Převeďte 120° na radiány:
+Options:
+  (a) π/3
+  (b) 2π/3 <= key
+  (c) 3π/4
+  (d) 4π/3
+
+[4] type=- answer=- correct=a
+Q: Pokud sin α = 3/5, jaká je hodnota cos α? (α je ostrý úhel)
+Options:
+  (a) 4/5 <= key
+  (b) 2/5
+  (c) 5/3
+  (d) 3/4
+
+[5] type=- answer=- correct=c
+Q: Jaká je hodnota tan 30°?
+Options:
+  (a) √3
+  (b) 1
+  (c) √3/3 <= key
+  (d) 1/2
+
+[6] type=- answer=- correct=b
+Q: Ve kterém kvadrantu je sin α > 0 a cos α < 0?
+Options:
+  (a) I. kvadrant
+  (b) II. kvadrant <= key
+  (c) III. kvadrant
+  (d) IV. kvadrant
+
+[7] type=- answer=- correct=c
+Q: Kolik radiánů je 270°?
+Options:
+  (a) π
+  (b) 3π/4
+  (c) 3π/2 <= key
+  (d) 2π
+
+[8] type=- answer=- correct=b
+Q: Zjednodušte výraz: sin²α + cos²α + tan α · cot α
+Options:
+  (a) 1
+  (b) 2 <= key
+  (c) sin²α + 1
+  (d) 0
+
+
+========================================================================================================================
+courses/kombinatorika/lessons/uvod-a-zakladni-pravidla/index.html
+========================================================================================================================
+[1] type=- answer=soucet correct=-
+Q: Pravidlo součtu
+
+[2] type=- answer=soucin correct=-
+Q: Pravidlo součinu
+
+[3] type=- answer=- correct=soucin
+Q: Tvoříte outfit: 5 triček, 3 kalhoty, 2 mikiny. Kolik outfitů?
+
+[4] type=- answer=- correct=soucet
+Q: Na závěr si vyberete buď dezert (4 možnosti), nebo kávu (3 možnosti), ale ne oboje.
+
+[5] type=- answer=- correct=soucin
+Q: Kód má tvar: písmeno, písmeno, číslice. K dispozici je 26 písmen a 10 číslic.
+
+[6] type=- answer=- correct=soucet
+Q: Student je buď ze třídy A (24 studentů), nebo ze třídy B (26 studentů), třídy jsou oddělené.
+
+[7] type=- answer=- correct=b
+Q: Kolik možností je vybrat buď jednu knihu z 8 beletristických nebo jednu knihu z 5 odborných, když se žánry nepřekrývají?
+Options:
+  (a) 40
+  (b) 13 <= key
+  (c) 3
+  (d) 8
+
+[8] type=- answer=- correct=a
+Q: Kód má 4 pozice a na každé pozici může být libovolná číslice 0–9 (opakování je dovoleno).
+                                    Kolik různých kódů existuje?
+Options:
+  (a) 10⁴ = 10000 <= key
+  (b) 4 · 10 = 40
+  (c) 10 + 10 + 10 + 10 = 40
+  (d) 10 · 9 · 8 · 7 = 5040
+
+[9] type=- answer=- correct=b
+Q: Outfit tvoříte volbou 1 čepice z 3, 1 bundy z 2 a 1 páru bot z 4. Kolik outfitů můžete sestavit?
+Options:
+  (a) 3 + 2 + 4 = 9
+  (b) 3 · 2 · 4 = 24 <= key
+  (c) 3 · 2 + 4 = 10
+  (d) 3 · 4 = 12
+
+[10] type=- answer=- correct=b
+Q: V kurzu je 15 studentů, kteří umí Python, 11 studentů, kteří umí Java, a 6 studentů umí oba jazyky.
+                                    Kolik studentů umí alespoň jeden z těchto jazyků?
+Options:
+  (a) 26
+  (b) 20 <= key
+  (c) 9
+  (d) 32
+
+[11] type=- answer=- correct=b
+Q: Kdy nestačí použít čisté pravidlo součtu |A| + |B| ?
+Options:
+  (a) Když jsou množiny disjunktní.
+  (b) Když mají množiny neprázdný průnik a některé prvky by se počítaly dvakrát. <= key
+  (c) Když je první množina větší než druhá.
+  (d) Když používáme tři kroky místo dvou.
+
+
+========================================================================================================================
+courses/kombinatorika/lessons/variace-permutace-a-kombinace-bez-opakovani/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaká je hodnota 0! ?
+Options:
+  (a) 0
+  (b) 1 <= key
+  (c) Není definováno
+  (d) 10
+
+[2] type=- answer=- correct=c
+Q: Vypočítejte V(7, 3) .
+Options:
+  (a) 35
+  (b) 42
+  (c) 210 <= key
+  (d) 343
+
+[3] type=- answer=- correct=a
+Q: Kolik je P(6) ?
+Options:
+  (a) 720 <= key
+  (b) 120
+  (c) 36
+  (d) 64
+
+[4] type=- answer=- correct=b
+Q: Z 12 kandidátů vybíráme předsedu a místopředsedu.
+                                    Který model je správný?
+Options:
+  (a) Kombinace bez opakování C(12, 2)
+  (b) Variace bez opakování V(12, 2) <= key
+  (c) Permutace P(12)
+  (d) Nelze určit
+
+[5] type=- answer=- correct=a
+Q: Vypočítejte C(9, 4) .
+Options:
+  (a) 126 <= key
+  (b) 3024
+  (c) 36
+  (d) 495
+
+[6] type=- answer=- correct=d
+Q: Který vztah je obecně správný pro výběry bez opakování?
+Options:
+  (a) C(n, k) = V(n, k) · k!
+  (b) P(n) = C(n, 2)
+  (c) V(n, k) = C(n, k) / k!
+  (d) V(n, k) = C(n, k) · k! <= key
+
+
+========================================================================================================================
+courses/kombinatorika/lessons/variace-permutace-a-kombinace-s-opakovanim/index.html
+========================================================================================================================
+[1] type=- answer=- correct=c
+Q: Vypočítejte V o (4, 3) .
+Options:
+  (a) 24
+  (b) 48
+  (c) 64 <= key
+  (d) 81
+
+[2] type=- answer=- correct=b
+Q: Tvoříme pětimístné kódy z číslic 0 až 9, číslice se mohou opakovat.
+                                    Který model je správný?
+Options:
+  (a) V(10, 5)
+  (b) V o (10, 5) <= key
+  (c) C(10, 5)
+  (d) P(10)
+
+[3] type=- answer=- correct=b
+Q: Kolik různých uspořádání má slovo TATAR ?
+Options:
+  (a) 20
+  (b) 30 <= key
+  (c) 60
+  (d) 120
+
+[4] type=- answer=- correct=c
+Q: Který vzorec je správný pro permutace s opakováním?
+Options:
+  (a) P = n k
+  (b) P = n! · (n 1 ! ... n r !)
+  (c) P = n! / (n 1 ! ... n r !) <= key
+  (d) P = C(n, k)
+
+[5] type=- answer=- correct=c
+Q: Vypočítejte C o (5, 3) .
+Options:
+  (a) 15
+  (b) 25
+  (c) 35 <= key
+  (d) 56
+
+[6] type=- answer=- correct=b
+Q: Ze 4 druhů sladkostí vybíráme 6 kusů, opakování je dovoleno.
+                                    Kolik různých výběrů existuje?
+Options:
+  (a) 56
+  (b) 84 <= key
+  (c) 120
+  (d) 210
+
+
+========================================================================================================================
+courses/kombinatorika/lessons/zobecneni-a-binomicka-veta/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vypočítejte 8!/6! .
+Options:
+  (a) 48
+  (b) 56 <= key
+  (c) 64
+  (d) 72
+
+[2] type=- answer=- correct=b
+Q: Řešte v N : n!/(n-3)! = 120 .
+Options:
+  (a) n = 5
+  (b) n = 6 <= key
+  (c) n = 7
+  (d) n = 8
+
+[3] type=- answer=- correct=b
+Q: Určete hodnotu C(9,7) .
+Options:
+  (a) 28
+  (b) 36 <= key
+  (c) 42
+  (d) 72
+
+[4] type=- answer=- correct=b
+Q: Řešte: C(n,2) = 28 .
+Options:
+  (a) n = 7
+  (b) n = 8 <= key
+  (c) n = 9
+  (d) n = 10
+
+[5] type=- answer=- correct=b
+Q: Jaký je koeficient u členu a 4 b 2 v (a+b) 6 ?
+Options:
+  (a) 12
+  (b) 15 <= key
+  (c) 20
+  (d) 30
+
+[6] type=- answer=- correct=c
+Q: Určete koeficient u x 2 v rozvoji (2x-3) 4 .
+Options:
+  (a) 144
+  (b) -216
+  (c) 216 <= key
+  (d) 324
+
+[7] type=- answer=- correct=d
+Q: Kolik je součet prvků v 7. řádku Pascalova trojúhelníku?
+Options:
+  (a) 64
+  (b) 98
+  (c) 112
+  (d) 128 <= key
+
+[8] type=- answer=- correct=b
+Q: Který zápis odpovídá Pascalovu pravidlu pro C(8,3) ?
+Options:
+  (a) C(8,3) = C(7,3) + C(7,4)
+  (b) C(8,3) = C(7,2) + C(7,3) <= key
+  (c) C(8,3) = C(8,2) + C(8,3)
+  (d) C(8,3) = C(7,1) + C(7,2)
+
+
+========================================================================================================================
+courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html
+========================================================================================================================
+[1] type=choice answer=c correct=-
+Q: Který goniometrický tvar odpovídá číslu \(z=-1+\sqrt3\,i\) ?
+Options:
+  (a) \(2(\cos60^\circ+i\sin60^\circ)\)
+  (b) \(\sqrt2(\cos120^\circ+i\sin120^\circ)\)
+  (c) \(2(\cos120^\circ+i\sin120^\circ)\) <= key
+  (d) \(2(\cos240^\circ+i\sin240^\circ)\)
+
+[2] type=choice answer=d correct=-
+Q: Převeďte \(z=-2-2i\) do goniometrického tvaru (úhel v \([0^\circ,360^\circ)\) ).
+Options:
+  (a) \(2(\cos225^\circ+i\sin225^\circ)\)
+  (b) \(2\sqrt2(\cos45^\circ+i\sin45^\circ)\)
+  (c) \(2\sqrt2(\cos315^\circ+i\sin315^\circ)\)
+  (d) \(2\sqrt2(\cos225^\circ+i\sin225^\circ)\) <= key
+
+[3] type=choice answer=a correct=-
+Q: Určete \((3\,\mathrm{cis}\,25^\circ)(2\,\mathrm{cis}\,40^\circ)\) .
+Options:
+  (a) \(6\,\mathrm{cis}\,65^\circ\) <= key
+  (b) \(5\,\mathrm{cis}\,15^\circ\)
+  (c) \(6\,\mathrm{cis}(-15^\circ)\)
+  (d) \(6\,\mathrm{cis}\,100^\circ\)
+
+
+========================================================================================================================
+courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html
+========================================================================================================================
+[1] type=choice answer=b correct=-
+Q: Spočítejte \((2-5i)+(-7+3i)\) .
+Options:
+  (a) \(-9+8i\)
+  (b) \(-5-2i\) <= key
+  (c) \(5-2i\)
+  (d) \(-5+2i\)
+
+[2] type=choice answer=d correct=-
+Q: Spočítejte \((3+i)(2-4i)\) .
+Options:
+  (a) \(2-10i\)
+  (b) \(10+10i\)
+  (c) \(8-8i\)
+  (d) \(10-10i\) <= key
+
+[3] type=choice answer=c correct=-
+Q: Určete \(\frac{4+2i}{1-i}\) .
+Options:
+  (a) \(2+6i\)
+  (b) \(1-3i\)
+  (c) \(1+3i\) <= key
+  (d) \(3+i\)
+
+[4] type=choice answer=a correct=-
+Q: Je dáno \(|z|=3\) . Které tvrzení je správné?
+Options:
+  (a) \(|z^2|=9\) <= key
+  (b) \(|z^2|=6\)
+  (c) \(|z^2|=3\)
+  (d) \(|z^2|=12\)
+
+
+========================================================================================================================
+courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html
+========================================================================================================================
+[1] type=choice answer=b correct=-
+Q: Určete kořeny rovnice \(x^2-8x+20=0\) .
+Options:
+  (a) \(x_{1,2}=4\pm4i\)
+  (b) \(x_{1,2}=4\pm2i\) <= key
+  (c) \(x_{1,2}=-4\pm2i\)
+  (d) \(x_{1,2}=8\pm2i\)
+
+[2] type=choice answer=c correct=-
+Q: Která rovnice má kořeny \(-2+3i\) a \(-2-3i\) ?
+Options:
+  (a) \(x^2-4x+13=0\)
+  (b) \(x^2+4x-13=0\)
+  (c) \(x^2+4x+13=0\) <= key
+  (d) \(x^2-2x+13=0\)
+
+[3] type=choice answer=d correct=-
+Q: Sestavte monickou rovnici s kořeny \(1-4i\) a \(1+4i\) .
+Options:
+  (a) \(x^2+2x+17=0\)
+  (b) \(x^2-2x-17=0\)
+  (c) \(x^2-8x+17=0\)
+  (d) \(x^2-2x+17=0\) <= key
+
+[4] type=choice answer=b correct=-
+Q: Určete kořeny rovnice \(2x^2-10x+26=0\) .
+Options:
+  (a) \(x_{1,2}=5\pm3\sqrt3\,i\)
+  (b) \(x_{1,2}=\frac{5\pm3\sqrt3\,i}{2}\) <= key
+  (c) \(x_{1,2}=\frac{-5\pm3\sqrt3\,i}{2}\)
+  (d) \(x_{1,2}=\frac{5\pm\sqrt3\,i}{2}\)
+
+[5] type=choice answer=a correct=-
+Q: Vyberte úplný rozklad nad \(\mathbb{C}\) pro \(x^3-3x^2+4x-12\) .
+Options:
+  (a) \((x-3)(x-2i)(x+2i)\) <= key
+  (b) \((x+3)(x-2i)(x+2i)\)
+  (c) \((x-3)(x^2-4)\)
+  (d) \((x-3)(x-4i)(x+4i)\)
+
+[6] type=choice answer=c correct=-
+Q: Rozložte v \(\mathbb{R}[x]\) mnohočlen \(x^3-6x^2+13x-10\) .
+Options:
+  (a) \((x-2)(x^2+4x+5)\)
+  (b) \((x+2)(x^2-4x+5)\)
+  (c) \((x-2)(x^2-4x+5)\) <= key
+  (d) \((x-1)(x^2-5x+10)\)
+
+
+========================================================================================================================
+courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html
+========================================================================================================================
+[1] type=choice answer=c correct=-
+Q: Určete sdružené číslo k \(z=-2+5i\) .
+Options:
+  (a) \(2+5i\)
+  (b) \(-2+5i\)
+  (c) \(-2-5i\) <= key
+  (d) \(2-5i\)
+
+[2] type=choice answer=d correct=-
+Q: Určete modul čísla \(z=3-4i\) .
+Options:
+  (a) \(1\)
+  (b) \(7\)
+  (c) \(\sqrt{7}\)
+  (d) \(5\) <= key
+
+[3] type=choice answer=b correct=-
+Q: Jaký typ řešení má rovnice \(x^2+2x+5=0\) ?
+Options:
+  (a) Dva různé reálné kořeny.
+  (b) Dva komplexně sdružené kořeny. <= key
+  (c) Jeden dvojnásobný reálný kořen.
+  (d) Žádný kořen ani v \(\mathbb{C}\).
+
+[4] type=choice answer=d correct=-
+Q: Vyberte správné řešení rovnice \(x^2-4x+8=0\) .
+Options:
+  (a) \(x=4\pm2i\)
+  (b) \(x=-2\pm2i\)
+  (c) \(x=2\pm i\)
+  (d) \(x=2\pm2i\) <= key
+
+[5] type=choice answer=a correct=-
+Q: Co geometricky znamená násobení komplexního čísla číslem \(i\) ?
+Options:
+  (a) Rotaci o \(90^\circ\) proti směru hodinových ručiček. <= key
+  (b) Rotaci o \(90^\circ\) po směru hodinových ručiček.
+  (c) Pouze dvojnásobné zvětšení modulu.
+  (d) Zrcadlení podle osy Re.
+
+[6] type=choice answer=c correct=-
+Q: Spočítejte součin \((1+i)(1-i)\) .
+Options:
+  (a) \(0\)
+  (b) \(1\)
+  (c) \(2\) <= key
+  (d) \(2i\)
+
+
+========================================================================================================================
+courses/mnoziny/lessons/kartezsky-soucin-mnozin/index.html
+========================================================================================================================
+[1] type=choice answer=c correct=-
+Q: Který zápis přesně odpovídá definici \(A\times B\)?
+Options:
+  (a) \(A\times B=\{(a,b)\mid a\in A\lor b\in B\}\)
+  (b) \(A\times B=\{(a,b)\mid a,b\in A\}\)
+  (c) \(A\times B=\{(a,b)\mid a\in A\land b\in B\}\) <= key
+  (d) \(A\times B=\{a+b\mid a\in A,b\in B\}\)
+
+[2] type=number answer=20 correct=-
+Q: Mějme \(|A|=4\) a \(|B|=5\). Určete \(|A\times B|\).
+
+[3] type=choice answer=a correct=-
+Q: Pro \(A=\{1,2\}\), \(B=\{a,b,c\}\) platí:
+Options:
+  (a) \((2,c)\in A\times B\) <= key
+  (b) \((c,2)\in A\times B\)
+  (c) \((1,1)\in A\times B\)
+  (d) \((a,b)\in A\times B\)
+
+[4] type=number answer=60 correct=-
+Q: Pokud \(|A|=3\), \(|B|=4\), \(|C|=5\), kolik prvků má \(A\times B\times C\)?
+
+[5] type=choice answer=b correct=-
+Q: Jakou mohutnost má \(\mathbb{N}\times\mathbb{N}\)?
+Options:
+  (a) Konečnou
+  (b) Spočetně nekonečnou <= key
+  (c) Nespočetně nekonečnou
+  (d) Nelze rozhodnout
+
+[6] type=choice answer=c correct=-
+Q: Které tvrzení je správně?
+Options:
+  (a) \([0,1]\times[0,1]\) je spočetně nekonečná množina.
+  (b) \(\mathbb{R}\times\mathbb{R}\) je konečná množina.
+  (c) \([0,1]\times[0,1]\) je nespočetně nekonečná množina. <= key
+  (d) \(\mathbb{N}\times\mathbb{N}\) je konečná množina.
+
+
+========================================================================================================================
+courses/mnoziny/lessons/operace-s-mnozinami/index.html
+========================================================================================================================
+[1] type=- answer={2,6,10} correct=-
+Q: Určete A ∩ B, pokud A = {1, 2, 4, 6, 8, 10} a B = {2, 3, 5, 6, 9, 10}.
+
+[2] type=- answer={1,2,3,4,5,6,7,8} correct=-
+Q: Určete A ∪ B, pokud A = {1, 2, 3, 6, 7} a B = {2, 4, 5, 7, 8}.
+
+[3] type=- answer={0,3,5,6} correct=-
+Q: Určete B \ A, pokud A = {1, 2, 4, 7} a B = {0, 1, 2, 3, 5, 6, 7}.
+
+[4] type=- answer={0,3,4,7,8,9} correct=-
+Q: Určete A c , pokud U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} a A = {1, 2, 5, 6}.
+
+[5] type=set answer={1,3,5} correct=-
+Q: Vypočtěte A ∩ B, kde A = {1, 2, 3, 4, 5} a B = {0, 1, 3, 5, 7}.
+
+[6] type=set answer={0,1,2,3,4,5,6,8} correct=-
+Q: Vypočtěte A ∪ B, kde A = {1, 2, 4, 6, 8} a B = {0, 2, 3, 5, 6}.
+
+[7] type=set answer={2,6,9} correct=-
+Q: Vypočtěte A \ B, kde A = {1, 2, 4, 6, 7, 9} a B = {1, 3, 4, 5, 7}.
+
+[8] type=set answer={1,3,6,8,9} correct=-
+Q: Mějme U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} a A = {0, 2, 4, 5, 7}. Určete A c .
+
+[9] type=choice answer=b correct=-
+Q: Které tvrzení je správně?
+Options:
+  (a) A \ B = B \ A pro každé množiny A, B
+  (b) A \ B = A ∩ B c <= key
+  (c) A ∩ B vždy obsahuje všechny prvky z A i B
+  (d) A c = A
+
+[10] type=choice answer=c correct=-
+Q: Který z De Morganových zákonů je správně?
+Options:
+  (a) (A ∪ B) c = A c ∪ B c
+  (b) (A ∩ B) c = A ∩ B
+  (c) (A ∩ B) c = A c ∪ B c <= key
+  (d) (A \ B) c = A ∪ B
+
+
+========================================================================================================================
+courses/mnoziny/lessons/zobrazeni-mnozin/index.html
+========================================================================================================================
+[1] type=choice answer=b correct=-
+Q: Necht \(|A|=3\), \(|B|=5\). Ktere tvrzeni je pravdive?
+Options:
+  (a) Existuje surjektivni zobrazeni \(f\colon A\to B\).
+  (b) Zadne zobrazeni \(f\colon A\to B\) nemuze byt surjektivni. <= key
+  (c) Kazde zobrazeni \(f\colon A\to B\) je bijektivni.
+  (d) Kazde zobrazeni \(f\colon A\to B\) je surjektivni i injektivni.
+
+[2] type=choice answer=d correct=-
+Q: Urcete vlastnosti \(f\colon\mathbb{R}\to\mathbb{R},\ f(x)=x^2\).
+Options:
+  (a) Jen injektivni
+  (b) Jen surjektivni
+  (c) Bijektivni
+  (d) Ani injektivni, ani surjektivni <= key
+
+[3] type=number answer=25 correct=-
+Q: Necht \(f(x)=2x-1\), \(g(x)=x^2\). Vypoctete \((g\circ f)(3)\).
+
+[4] type=choice answer=a correct=-
+Q: Pro bijekce \(f\colon A\to B\), \(g\colon B\to C\) je inverze kompozice:
+Options:
+  (a) \((g\circ f)^{-1}=f^{-1}\circ g^{-1}\) <= key
+  (b) \((g\circ f)^{-1}=g^{-1}\circ f^{-1}\)
+  (c) \((g\circ f)^{-1}=g\circ f\)
+  (d) Inverze kompozice obecne neexistuje.
+
+[5] type=number answer=7 correct=-
+Q: Je dano \(f(x)=3x-5\). Urcete \(f^{-1}(16)\).
+
+[6] type=choice answer=c correct=-
+Q: Pokud je \(g\circ f\) injektivni, co nutne plati?
+Options:
+  (a) \(g\) je surjektivni.
+  (b) \(g\) je injektivni.
+  (c) \(f\) je injektivni. <= key
+  (d) \(f\) je surjektivni.
+
+[7] type=choice answer=b correct=-
+Q: Ktera podminka je nutna a zaroven postacujici pro existenci inverzniho zobrazeni \(f^{-1}\)?
+Options:
+  (a) \(f\) je pouze injektivni.
+  (b) \(f\) je bijektivni. <= key
+  (c) \(f\) je pouze surjektivni.
+  (d) \(A\) i \(B\) jsou nekonecne mnoziny.
+
+
+========================================================================================================================
+courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vyřeš \((x-5)(x+2)<0\).
+
+[2] type=- answer=- correct=b
+Q: Vyřeš \(\frac{(x-1)(x+4)}{x-3}\le0\).
+
+[3] type=- answer=- correct=b
+Q: Vyřeš \((x-2)^2(x+1)^3\ge0\).
+
+[4] type=- answer=- correct=a
+Q: Vyřeš \(|x^2-1|\le3\).
+
+[5] type=- answer=- correct=a
+Q: Vyřeš \((x-4)(x+1)(x-2)\le0\).
+Options:
+  (a) \(( -\infty,-1]\cup[2,4]\) <= key
+  (b) \([-1,2]\cup[4,\infty)\)
+  (c) \(( -\infty,-1)\cup(2,4)\)
+  (d) \([-1,4]\)
+
+[6] type=- answer=- correct=b
+Q: Vyřeš \((x+3)^2(x-1)>0\).
+Options:
+  (a) \((-3,1)\cup(1,\infty)\)
+  (b) \((1,\infty)\) <= key
+  (c) \(( -\infty,-3)\cup(1,\infty)\)
+  (d) \([1,\infty)\)
+
+[7] type=- answer=- correct=a
+Q: Vyřeš \(\frac{(x-2)(x+1)}{(x-4)(x+3)}>0\).
+Options:
+  (a) \(( -\infty,-3)\cup(-1,2)\cup(4,\infty)\) <= key
+  (b) \(( -\infty,-3]\cup[-1,2]\cup[4,\infty)\)
+  (c) \((-3,-1)\cup(2,4)\)
+  (d) \(( -\infty,-3)\cup(2,4)\)
+
+[8] type=- answer=- correct=c
+Q: Vyřeš \(\frac{x-5}{x-5}\ge0\).
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(\emptyset\)
+  (c) \(\mathbb{R}\setminus\{5\}\) <= key
+  (d) \(\{5\}\)
+
+[9] type=- answer=- correct=a
+Q: Vyřeš \(x^4-5x^2+4\le0\).
+Options:
+  (a) \([-2,-1]\cup[1,2]\) <= key
+  (b) \(( -\infty,-2]\cup[-1,1]\cup[2,\infty)\)
+  (c) \((-2,-1)\cup(1,2)\)
+  (d) \([1,4]\)
+
+[10] type=- answer=- correct=a
+Q: Vyřeš \((x-1)^4(x+2)^3<0\).
+Options:
+  (a) \((-\infty,-2)\) <= key
+  (b) \((-\infty,-2]\)
+  (c) \(( -\infty,-2)\cup\{1\}\)
+  (d) \((-2,\infty)\)
+
+[11] type=- answer=- correct=b
+Q: Vyřeš \(|(x-1)(x+1)|\le0\).
+Options:
+  (a) \([-1,1]\)
+  (b) \(\{-1,1\}\) <= key
+  (c) \(( -\infty,-1]\cup[1,\infty)\)
+  (d) \(\emptyset\)
+
+[12] type=- answer=- correct=b
+Q: Vyřeš \(|x^2-4x+3|>2\).
+Options:
+  (a) \((2-\sqrt3,2+\sqrt3)\)
+  (b) \((-\infty,2-\sqrt3)\cup(2+\sqrt3,\infty)\) <= key
+  (c) \(( -\infty,2-\sqrt3]\cup[2+\sqrt3,\infty)\)
+  (d) \(\mathbb{R}\)
+
+
+========================================================================================================================
+courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vyřeš \(\left(\frac13\right)^{2x-1}\le\left(\frac13\right)^5\).
+
+[2] type=- answer=- correct=b
+Q: Vyřeš \(\log_2(x)+\log_2(x-2)\ge3\).
+
+[3] type=- answer=- correct=b
+Q: Vyřeš \(2^{x+1}>8\).
+Options:
+  (a) \(x\ge2\)
+  (b) \(x>2\) <= key
+  (c) \(x<2\)
+  (d) \(x\le2\)
+
+[4] type=- answer=- correct=a
+Q: Vyřeš \(\left(\frac13\right)^{2x-1}\le\left(\frac13\right)^5\).
+Options:
+  (a) \(x\ge3\) <= key
+  (b) \(x\le3\)
+  (c) \(x>3\)
+  (d) \(x<3\)
+
+[5] type=- answer=- correct=b
+Q: Vyřeš \(5^{x^2-4}\ge1\).
+Options:
+  (a) \((-2,2)\)
+  (b) \((-\infty,-2]\cup[2,\infty)\) <= key
+  (c) \((-\infty,-2)\cup(2,\infty)\)
+  (d) \(\mathbb{R}\)
+
+[6] type=- answer=- correct=a
+Q: Vyřeš \(\log_2(x-1)<3\).
+Options:
+  (a) \((1,9)\) <= key
+  (b) \([1,9]\)
+  (c) \((-\infty,9)\)
+  (d) \((1,8)\)
+
+[7] type=- answer=- correct=a
+Q: Vyřeš \(\log_{1/2}(2x+3)\ge-1\).
+Options:
+  (a) \((-\tfrac32,-\tfrac12]\) <= key
+  (b) \([-\tfrac32,-\tfrac12]\)
+  (c) \((-\infty,-\tfrac12]\)
+  (d) \((-\tfrac32,\infty)\)
+
+[8] type=- answer=- correct=a
+Q: Vyřeš \(\log_3(x^2-4)\le2\).
+Options:
+  (a) \([-\sqrt{13},-2)\cup(2,\sqrt{13}]\) <= key
+  (b) \((-\infty,-2)\cup(2,\infty)\)
+  (c) \([-\sqrt{13},\sqrt{13}]\)
+  (d) \((2,\sqrt{13}]\)
+
+[9] type=- answer=- correct=b
+Q: Vyřeš \(4^{x-1}<7\).
+Options:
+  (a) \(x>1+\log_4 7\)
+  (b) \(x<1+\log_4 7\approx2.40\) <= key
+  (c) \(x\le1+\log_4 7\)
+  (d) \(x<\log_4 7\)
+
+
+========================================================================================================================
+courses/nerovnice/lessons/kvadraticke-nerovnice/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vyřeš \(\,x^2-4x+3\ge0\).
+
+[2] type=- answer=- correct=b
+Q: Vyřeš \(\,|x^2-4|<5\).
+
+[3] type=- answer=- correct=a
+Q: Vyřeš \(\,x^2-5x+6<0\).
+Options:
+  (a) \((2,3)\) <= key
+  (b) \([2,3]\)
+  (c) \((-\infty,2)\cup(3,\infty)\)
+  (d) \(\emptyset\)
+
+[4] type=- answer=- correct=b
+Q: Vyřeš \(\,-2x^2+8x-6\ge0\).
+Options:
+  (a) \((1,3)\)
+  (b) \([1,3]\) <= key
+  (c) \((-\infty,1]\cup[3,\infty)\)
+  (d) \(\mathbb{R}\)
+
+[5] type=- answer=- correct=c
+Q: Vyřeš \(\,x^2-6x+9>0\).
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(\{3\}\)
+  (c) \(\mathbb{R}\setminus\{3\}\) <= key
+  (d) \(\emptyset\)
+
+[6] type=- answer=- correct=a
+Q: Vyřeš \(\,|x^2-4|\le0\).
+Options:
+  (a) \(\{-2,2\}\) <= key
+  (b) \([-2,2]\)
+  (c) \((-\infty,-2]\cup[2,\infty)\)
+  (d) \(\emptyset\)
+
+[7] type=- answer=- correct=b
+Q: Vyřeš \(\,|x^2-5x+6|\le2\).
+Options:
+  (a) \((1,4)\)
+  (b) \([1,4]\) <= key
+  (c) \((-\infty,1]\cup[4,\infty)\)
+  (d) \(\emptyset\)
+
+[8] type=- answer=- correct=d
+Q: Jaké je řešení \(\,|x^2+1|<0.2\)?
+Options:
+  (a) \((-0.2,0.2)\)
+  (b) \(\mathbb{R}\)
+  (c) \(\{-1,1\}\)
+  (d) \(\emptyset\) <= key
+
+
+========================================================================================================================
+courses/nerovnice/lessons/linearni-nerovnice/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Vyřeš \(-4x+9>1\).
+
+[2] type=- answer=- correct=b
+Q: Vyřeš \(2\le x-1<8\).
+
+[3] type=- answer=- correct=b
+Q: Vyřeš \(|x-4|\ge3\).
+
+[4] type=- answer=- correct=a
+Q: Vyřeš \(7-3x<1\).
+Options:
+  (a) \(x>2\) <= key
+  (b) \(x<2\)
+  (c) \(x\ge2\)
+  (d) \(x\le2\)
+
+[5] type=- answer=- correct=b
+Q: Vyřeš \(4x-6\ge4x+2\).
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(\emptyset\) <= key
+  (c) \(x\ge2\)
+  (d) \(x\le2\)
+
+[6] type=- answer=- correct=c
+Q: Vyřeš \(-1\le3x+2<11\).
+Options:
+  (a) \((-1,3]\)
+  (b) \([-1,3]\)
+  (c) \([-1,3)\) <= key
+  (d) \((-\infty,-1]\cup[3,\infty)\)
+
+[7] type=- answer=- correct=b
+Q: Vyřeš \(2x-5>1\) nebo \(x+4\le1\).
+Options:
+  (a) \((-3,3)\)
+  (b) \((-\infty,-3]\cup(3,\infty)\) <= key
+  (c) \([-3,3]\)
+  (d) \((-\infty,3]\)
+
+[8] type=- answer=- correct=a
+Q: Vyřeš \(|x+2|<5\).
+Options:
+  (a) \((-7,3)\) <= key
+  (b) \([-7,3]\)
+  (c) \((-\infty,-7)\cup(3,\infty)\)
+  (d) \((-3,7)\)
+
+[9] type=- answer=- correct=c
+Q: Jaké je řešení \(|4x-1|\le-0.5\)?
+Options:
+  (a) \(\mathbb{R}\)
+  (b) \(x=\frac14\)
+  (c) \(\emptyset\) <= key
+  (d) \((-\infty,\frac14]\)
+
+[10] type=- answer=- correct=c
+Q: Vyřeš \(|2x-6|>8\).
+Options:
+  (a) \((-1,7)\)
+  (b) \((-\infty,-1]\cup[7,\infty)\)
+  (c) \((-\infty,-1)\cup(7,\infty)\) <= key
+  (d) \([-1,7]\)
+
+
+========================================================================================================================
+courses/nerovnice/lessons/soustavy-nerovnic/index.html
+========================================================================================================================
+[1] type=- answer=- correct=a
+Q: Vyřeš soustavu \(\{\,3x-1>5,\;x+4\le10\,\}\).
+
+[2] type=- answer=- correct=b
+Q: Který bod patří do soustavy \(\{\,x+y\le4,\;x-y\ge0\,\}\)?
+
+[3] type=- answer=- correct=a
+Q: Vyřeš \(\{\,3x-1>5,\;x+4\le10\,\}\).
+Options:
+  (a) \((2,6]\) <= key
+  (b) \([2,6]\)
+  (c) \((2,\infty)\)
+  (d) \(( -\infty,6]\)
+
+[4] type=- answer=- correct=b
+Q: Vyřeš \(\{\,-2x+4\le0,\;x-3<2\,\}\).
+Options:
+  (a) \((2,5)\)
+  (b) \([2,5)\) <= key
+  (c) \([2,5]\)
+  (d) \(( -\infty,5)\)
+
+[5] type=- answer=- correct=a
+Q: Vyřeš \(\{\,x^2-9\le0,\;x>1\,\}\).
+Options:
+  (a) \((1,3]\) <= key
+  (b) \([1,3]\)
+  (c) \((1,\infty)\)
+  (d) \(( -\infty,-3]\cup(1,3]\)
+
+[6] type=- answer=- correct=a
+Q: Vyřeš \(\{\,|x+2|\ge5,\;x<4\,\}\).
+Options:
+  (a) \(( -\infty,-7]\cup[3,4)\) <= key
+  (b) \(( -7,3)\)
+  (c) \(( -\infty,-7)\cup(3,4)\)
+  (d) \(( -\infty,4)\)
+
+[7] type=- answer=- correct=a
+Q: Patří bod \((4,1)\) do soustavy \(\{\,x+y\le6,\;x-2y\ge0\,\}\)?
+Options:
+  (a) Ano <= key
+  (b) Ne
+
+[8] type=- answer=- correct=b
+Q: Pro soustavu \(\{\,2x+y>3,\;y\le2\,\}\) vyber správný typ hranic.
+Options:
+  (a) Obě hranice plné
+  (b) První čárkovaná, druhá plná <= key
+  (c) První plná, druhá čárkovaná
+  (d) Obě hranice čárkované
+
+[9] type=- answer=- correct=a
+Q: Jaké jsou vrcholy řešení soustavy \(\{\,x\ge0,\;y\ge0,\;x+y\le4\,\}\)?
+Options:
+  (a) \((0,0),(4,0),(0,4)\) <= key
+  (b) \((0,0),(4,4),(0,4)\)
+  (c) \(( -4,0),(0,4),(4,0)\)
+  (d) Neexistuje žádná omezená oblast
+
+[10] type=- answer=- correct=c
+Q: Vyřeš soustavu \(\{\,x+y\le1,\;x+y>3\,\}\).
+Options:
+  (a) \(\mathbb{R}^2\)
+  (b) Pruh mezi dvěma rovnoběžkami
+  (c) \(\emptyset\) <= key
+  (d) Přímka \(x+y=2\)
+
+
+========================================================================================================================
+courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html
+========================================================================================================================
+[1] type=- answer=flip correct=-
+Q: Obrátit znaménko
+
+[2] type=- answer=keep correct=-
+Q: Nechat znaménko
+
+[3] type=- answer=unknown correct=-
+Q: Rozdělit na případy
+
+[4] type=- answer=- correct=b
+Q: Který interval odpovídá nerovnici \(x > -2\)?
+
+[5] type=- answer=- correct=b
+Q: \(3(x-2)-2(1-x)\le 7\)
+
+[6] type=- answer=- correct=c
+Q: \(x^2-x-6>0\)
+
+[7] type=- answer=- correct=b
+Q: \(|2x-3|>5\)
+
+[8] type=- answer=- correct=b
+Q: Vyřeš nerovnici \(\,4-3x<1\).
+Options:
+  (a) \(x<1\)
+  (b) \(x>1\) <= key
+  (c) \(x\le1\)
+  (d) \(x\ge1\)
+
+[9] type=- answer=- correct=a
+Q: Vyřeš dvojitou nerovnici \(\,2<x+5\le9\).
+Options:
+  (a) \((-3,4]\) <= key
+  (b) \([-3,4]\)
+  (c) \((-3,4)\)
+  (d) \((-\infty,4]\)
+
+[10] type=- answer=- correct=b
+Q: Vyřeš kvadratickou nerovnici \(\,x^2-x-6\le0\).
+Options:
+  (a) \((-\infty,-2]\cup[3,\infty)\)
+  (b) \([-2,3]\) <= key
+  (c) \((-2,3)\)
+  (d) \([-3,2]\)
+
+[11] type=- answer=- correct=b
+Q: Vyřeš racionální nerovnici \(\,\frac{x-4}{x+1}>0\).
+Options:
+  (a) \((-1,4)\)
+  (b) \((-\infty,-1)\cup(4,\infty)\) <= key
+  (c) \((-\infty,-1]\cup[4,\infty)\)
+  (d) \((-\infty,4)\setminus\{-1\}\)
+
+[12] type=- answer=- correct=a
+Q: Vyřeš nerovnici s absolutní hodnotou \(\,|3x-6|<9\).
+Options:
+  (a) \((-1,5)\) <= key
+  (b) \([-1,5]\)
+  (c) \((-\infty,-1)\cup(5,\infty)\)
+  (d) \((-5,1)\)
+
+[13] type=- answer=- correct=b
+Q: Jaké je řešení nerovnice \(\,|2x+1|\ge -4\)?
+Options:
+  (a) \(\emptyset\)
+  (b) Všechna reálná čísla \(\mathbb{R}\) <= key
+  (c) \(x\ge -\frac{1}{2}\)
+  (d) \(x\ne -\frac{1}{2}\)
+
+
+========================================================================================================================
+courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Který útvar má počáteční bod a pokračuje neomezeně jedním směrem?
+Options:
+  (a) Přímka
+  (b) Polopřímka <= key
+  (c) Úsečka
+
+[2] type=- answer=- correct=c
+Q: Kdy jsou úsečky AB a CD shodné?
+Options:
+  (a) Když mají stejný směr
+  (b) Když leží na stejné přímce
+  (c) Když platí |AB| = |CD| <= key
+
+[3] type=- answer=- correct=b
+Q: Co je osa úhlu?
+Options:
+  (a) Přímka rovnoběžná s jedním ramenem úhlu
+  (b) Polopřímka dělící úhel na dva shodné úhly <= key
+  (c) Úsečka spojující vrcholy dvou úhlů
+
+[4] type=- answer=- correct=b
+Q: Jaká je odchylka dvou rovnoběžných přímek?
+Options:
+  (a) 90°
+  (b) 0° <= key
+  (c) Závisí na jejich vzdálenosti
+
+
+========================================================================================================================
+courses/planimetrie/lessons/heronuv-vzorec/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Co značí ve Heronově vzorci proměnná s ?
+Options:
+  (a) Délku nejdelší strany
+  (b) Poloviční obvod trojúhelníku <= key
+  (c) Výšku na stranu c
+
+[2] type=- answer=- correct=a
+Q: Jaký je obsah trojúhelníku se stranami 13, 14, 15?
+Options:
+  (a) 84 <= key
+  (b) 91
+  (c) 96
+
+[3] type=- answer=- correct=a
+Q: Pro strany 5, 6, 7 je semiperimetr s roven:
+Options:
+  (a) 9 <= key
+  (b) 8
+  (c) 7
+
+[4] type=- answer=- correct=b
+Q: Který vztah je klíčový v odvození přes projekci x ?
+Options:
+  (a) x = (a+b+c)/2
+  (b) x = (b² + c² - a²)/(2c) <= key
+  (c) x = √(ab)
+
+[5] type=- answer=- correct=a
+Q: Pokud je výraz s(s-a)(s-b)(s-c) záporný, znamená to typicky:
+Options:
+  (a) Chybu v zadání, strany netvoří trojúhelník <= key
+  (b) Že jde o pravoúhlý trojúhelník
+  (c) Že je obsah záporný
+
+[6] type=- answer=- correct=b
+Q: Hlavní výhoda Heronova vzorce v praxi je, že:
+Options:
+  (a) nepotřebuje žádné odmocniny
+  (b) stačí znát pouze délky všech tří stran <= key
+  (c) platí jen pro rovnostranné trojúhelníky
+
+
+========================================================================================================================
+courses/planimetrie/lessons/kruh-a-kruznice/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Co je kružnice?
+Options:
+  (a) Množina bodů s obsahem πr²
+  (b) Množina bodů se stejnou vzdáleností od středu <= key
+  (c) Vnitřní oblast ohraničená kružnicí
+
+[2] type=- answer=- correct=b
+Q: Který vzorec platí pro obsah výseče o středovém úhlu φ (v radiánech)?
+Options:
+  (a) S_v = r · φ
+  (b) S_v = (1/2) r² φ <= key
+  (c) S_v = πr² / φ
+
+[3] type=- answer=- correct=b
+Q: Pokud je vzdálenost přímky od středu kružnice menší než poloměr (d < r), jde o:
+Options:
+  (a) tečnu
+  (b) sečnu <= key
+  (c) vnější přímku
+
+[4] type=- answer=- correct=b
+Q: Co platí v dotykovém bodě tečny?
+Options:
+  (a) Tečna je rovnoběžná s poloměrem
+  (b) Tečna je kolmá na poloměr vedený do dotykového bodu <= key
+  (c) Dotykový bod leží mimo kružnici
+
+[5] type=- answer=- correct=a
+Q: Pro r₁ = 4, r₂ = 2 a d = 6 jsou kružnice:
+Options:
+  (a) vněji dotykové <= key
+  (b) protínají se ve dvou bodech
+  (c) vnitřně dotykové
+
+[6] type=- answer=- correct=c
+Q: Pro r₁ = 5, r₂ = 3 a d = 1 platí:
+Options:
+  (a) kružnice se protínají
+  (b) kružnice jsou vnější bez společných bodů
+  (c) jedna kružnice leží uvnitř druhé bez společných bodů <= key
+
+
+========================================================================================================================
+courses/planimetrie/lessons/mnohouhelniky/index.html
+========================================================================================================================
+[1] type=- answer=- correct=c
+Q: Kolik úhlopříček má osmiúhelník (n = 8)?
+Options:
+  (a) 16
+  (b) 18
+  (c) 20 <= key
+
+[2] type=- answer=- correct=b
+Q: Jaký je vnitřní úhel pravidelného šestiúhelníku?
+Options:
+  (a) 90°
+  (b) 120° <= key
+  (c) 135°
+
+[3] type=- answer=- correct=b
+Q: Co vždy platí pro každý obdélník?
+Options:
+  (a) Všechny strany jsou shodné
+  (b) Diagonály jsou shodné <= key
+  (c) Diagonály jsou na sebe kolmé
+
+[4] type=- answer=- correct=a
+Q: Pro tětivový čtyřúhelník platí:
+Options:
+  (a) Součet protějších úhlů je 180° <= key
+  (b) Všechny strany jsou shodné
+  (c) Diagonály jsou vždy kolmé
+
+[5] type=- answer=- correct=b
+Q: Pro tečnový čtyřúhelník s délkami stran a, b, c, d v pořadí platí:
+Options:
+  (a) a + b = c + d
+  (b) a + c = b + d <= key
+  (c) a = c a b = d
+
+
+========================================================================================================================
+courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Co platí pro příčku trojúhelníku spojující středy dvou stran?
+Options:
+  (a) Je kolmá na třetí stranu
+  (b) Je rovnoběžná s třetí stranou a má polovinu její délky <= key
+  (c) Vždy prochází těžištěm
+
+[2] type=- answer=- correct=b
+Q: Kde leží střed kružnice vepsané?
+Options:
+  (a) V průsečíku os stran
+  (b) V průsečíku os vnitřních úhlů <= key
+  (c) V průsečíku výšek
+
+[3] type=- answer=- correct=b
+Q: Jaký údaj je navíc potřeba u věty SUS pro shodnost trojúhelníků?
+Options:
+  (a) Obsah trojúhelníku
+  (b) Úhel sevřený mezi těmi dvěma stranami <= key
+  (c) Poloměr kružnice opsané
+
+[4] type=- answer=- correct=b
+Q: Pro podobné trojúhelníky s koeficientem k = 2 platí poměr obsahů:
+Options:
+  (a) 2
+  (b) 4 <= key
+  (c) 8
+
+[5] type=- answer=- correct=a
+Q: Která věta o podobnosti trojúhelníků využívá shodu dvou úhlů?
+Options:
+  (a) uu <= key
+  (b) sus
+  (c) sss
+
+[6] type=- answer=- correct=b
+Q: Pokud v trojúhelníku OA = OB = OC, bod O je:
+Options:
+  (a) incenter
+  (b) circumcenter (střed opsané kružnice) <= key
+  (c) těžiště
+
+
+========================================================================================================================
+courses/pravdepodobnost/lessons/pravdepodobnost-podrobneji/index.html
+========================================================================================================================
+[1] type=fraction answer=2/3 correct=-
+Q: Na férové kostce: A = „padne sudé číslo“, B = „padne číslo větší než 3“. Určete P(A ∪ B).
+
+[2] type=choice answer=c correct=-
+Q: Které tvrzení přesně charakterizuje nezávislost jevů A a B?
+Options:
+  (a) A ∪ B = Ω
+  (b) A ∩ B = ∅
+  (c) P(A ∩ B) = P(A)·P(B) <= key
+  (d) P(A|B) = P(B|A)
+
+[3] type=fraction answer=1/6 correct=-
+Q: U dvou hodů kostkou: A = „součet je 10“, B = „první kostka je 5“. Určete P(A|B).
+
+[4] type=fraction answer=1/6 correct=-
+Q: Test: senzitivita 99 %, specificita 95 %, prevalence nemoci 1 %.
+                                    Jaká je pravděpodobnost, že člověk má nemoc při pozitivním testu?
+
+[5] type=choice answer=b correct=-
+Q: Jak se při stejné senzitivě a specificitě typicky změní PPV, když prevalence roste?
+Options:
+  (a) PPV klesá
+  (b) PPV roste <= key
+  (c) PPV je stejné
+  (d) PPV vždy vyjde 50 %
+
+
+========================================================================================================================
+courses/pravdepodobnost/lessons/uvod-do-pravdepodobnosti/index.html
+========================================================================================================================
+[1] type=choice answer=b correct=-
+Q: Kolik elementárních výsledků má pokus „dva hody mincí“?
+Options:
+  (a) 2
+  (b) 4 <= key
+  (c) 8
+  (d) 16
+
+[2] type=fraction answer=1/3 correct=-
+Q: U férové kostky definujte jev A: „padne číslo větší než 4“. Zapište P(A) jako zlomek.
+
+[3] type=choice answer=c correct=-
+Q: Kde nelze bez úprav použít naivní definici P(A) = |A|/|Ω|?
+Options:
+  (a) Hod férovou kostkou
+  (b) Losování barvy karty (4 barvy stejně často)
+  (c) Hod nefér kostkou <= key
+  (d) Dva hody férovou mincí
+
+[4] type=fraction answer=1/6 correct=-
+Q: Jaká je pravděpodobnost, že při dvou hodech kostkou bude součet 7?
+
+
+========================================================================================================================
+courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html
+========================================================================================================================
+[1] type=- answer=96 correct=-
+Q: Pravidelný čtyřboký jehlan má a = 6 cm a v = 8 cm . Určete objem v cm³ .
+
+[2] type=- answer=282.743 correct=-
+Q: Určete povrch kužele pro r = 5 cm , v = 12 cm (v cm² ).
+
+[3] type=- answer=224 correct=-
+Q: Pro komolý jehlan z příkladu ( a₁ = 8 , a₂ = 4 , v = 6 ) určete objem v cm³ .
+
+[4] type=- answer=661.829 correct=-
+Q: Určete objem komolého kužele s R = 7 , r = 3 , v = 8 v cm³ .
+
+[5] type=- answer=- correct=a
+Q: Jehlan má obsah podstavy S p = 54 cm² a výšku v = 10 cm . Jeho objem je:
+Options:
+  (a) 180 cm³ <= key
+  (b) 540 cm³
+  (c) 270 cm³
+
+[6] type=- answer=- correct=b
+Q: Pravidelný čtyřboký jehlan má a = 10 , v = 12 . Sklonová výška je:
+Options:
+  (a) √119
+  (b) 13 <= key
+  (c) 17
+
+[7] type=- answer=- correct=a
+Q: Rotační kužel má r = 3 , v = 4 . Jeho objem je:
+Options:
+  (a) 12π <= key
+  (b) 36π
+  (c) 15π
+
+[8] type=- answer=- correct=b
+Q: Kužel má r = 4 , v = 3 . Celkový povrch je:
+Options:
+  (a) 20π
+  (b) 36π <= key
+  (c) 48π
+
+[9] type=- answer=- correct=b
+Q: Komolý jehlan má S 1 = 81 , S 2 = 25 , v = 9 . Objem je:
+Options:
+  (a) 351
+  (b) 453 <= key
+  (c) 531
+
+[10] type=- answer=- correct=b
+Q: Čtyřboký komolý jehlan má a₁ = 6 , a₂ = 2 , v = 4 . Sklonová výška je:
+Options:
+  (a) 4
+  (b) √20 <= key
+  (c) √32
+
+[11] type=- answer=- correct=b
+Q: Komolý kužel má R = 6 , r = 2 , v = 9 . Jeho objem je:
+Options:
+  (a) 108π
+  (b) 156π <= key
+  (c) 204π
+
+[12] type=- answer=- correct=b
+Q: Komolý kužel má R = 8 , r = 5 , v = 4 . Jaký je plášť?
+Options:
+  (a) 52π
+  (b) 65π <= key
+  (c) 91π
+
+
+========================================================================================================================
+courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html
+========================================================================================================================
+[1] type=- answer=113.097 correct=-
+Q: Koule má poloměr r = 3 cm . Zadejte její objem v cm³ .
+
+[2] type=- answer=54.454 correct=-
+Q: Vypočtěte objem kulové úseče pro r = 5 cm , v = 2 cm (v cm³ ).
+
+[3] type=- answer=414.690 correct=-
+Q: Kulová vrstva má a = 4 cm , b = 4 cm , h = 6 cm . Zadejte její objem v cm³ .
+
+[4] type=- answer=- correct=b
+Q: Koule má poloměr r = 7 cm . Její povrch je:
+Options:
+  (a) 98π cm²
+  (b) 196π cm² <= key
+  (c) 343π cm²
+
+[5] type=- answer=- correct=c
+Q: Koule má průměr d = 10 cm . Její objem je:
+Options:
+  (a) 250π cm³
+  (b) 100π cm³
+  (c) (500/3)π cm³ <= key
+
+[6] type=- answer=- correct=a
+Q: Pro kouli r = 10 cm a kulovou úseč výšky v = 2 cm je poloměr podstavy:
+Options:
+  (a) 6 cm <= key
+  (b) 4 cm
+  (c) 8 cm
+
+[7] type=- answer=- correct=b
+Q: Objem kulové úseče pro r = 5 cm a v = 2 cm je:
+Options:
+  (a) (100/3)π cm³
+  (b) (52/3)π cm³ <= key
+  (c) 20π cm³
+
+[8] type=- answer=- correct=c
+Q: Objem kulové výseče pro r = 5 cm a odpovídající výšku v = 2 cm je:
+Options:
+  (a) (52/3)π cm³
+  (b) 20π cm³
+  (c) (100/3)π cm³ <= key
+
+[9] type=- answer=- correct=c
+Q: Kulová vrstva má a = 4 cm , b = 4 cm a h = 6 cm . Objem je:
+Options:
+  (a) 92π cm³
+  (b) 60π cm³
+  (c) 132π cm³ <= key
+
+[10] type=- answer=- correct=a
+Q: Kulový pás má pro r = 5 cm a h = 6 cm plochu:
+Options:
+  (a) 60π cm² <= key
+  (b) 92π cm²
+  (c) 120π cm²
+
+[11] type=- answer=- correct=b
+Q: Který vztah je správný pro kouli?
+Options:
+  (a) dV/dr = 3πr²
+  (b) dV/dr = 4πr² = S <= key
+  (c) dV/dr = 2πr
+
+
+========================================================================================================================
+courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html
+========================================================================================================================
+[1] type=- answer=41.569 correct=-
+Q: Spočítejte obsah pravidelného šestiúhelníku se stranou a = 4 . Zadejte číslo v cm² .
+
+[2] type=- answer=38.485 correct=-
+Q: Určete obsah kruhu s poloměrem r = 3,5 . Zadejte desetinné číslo v cm² .
+
+[3] type=- answer=3.1058 correct=-
+Q: Pro kruh s r = 1 a vepsaný dvanáctiúhelník je dolní odhad π ≈ p_in/(2r) . Zadejte hodnotu na 4 desetinná místa.
+
+[4] type=- answer=175.929 correct=-
+Q: Spočítejte obsah mezikruží pro R = 9 a r = 5 . Výsledek zapište
+                                desetinně.
+
+
+========================================================================================================================
+courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html
+========================================================================================================================
+[1] type=- answer=- correct=b
+Q: Jaký je obsah čtverce s úhlopříčkou u = 10 ?
+Options:
+  (a) 25
+  (b) 50 <= key
+  (c) 100
+
+[2] type=- answer=- correct=a
+Q: Obdélník má strany 8 a 5. Kolik je jeho obvod?
+Options:
+  (a) 26 <= key
+  (b) 40
+  (c) 13
+
+[3] type=- answer=- correct=a
+Q: Která trojice stran netvoří trojúhelník?
+Options:
+  (a) 3, 4, 8 <= key
+  (b) 4, 4, 7
+  (c) 7, 8, 9
+
+[4] type=- answer=- correct=b
+Q: Kolik je přibližně obsah trojúhelníku se stranami 7, 8, 9?
+Options:
+  (a) 20,0
+  (b) 26,8 <= key
+  (c) 31,5
+
+[5] type=- answer=- correct=b
+Q: Kosodélník má a = 10 , b = 6 , γ = 30° . Obsah je:
+Options:
+  (a) 60
+  (b) 30 <= key
+  (c) 15
+
+[6] type=- answer=- correct=a
+Q: Kosočtverec má diagonály 10 a 24. Jaký má obsah?
+Options:
+  (a) 120 <= key
+  (b) 240
+  (c) 60
+
+[7] type=- answer=- correct=c
+Q: Lichoběžník má základny 12 a 8 a výšku 5. Kolik je jeho obsah?
+Options:
+  (a) 40
+  (b) 45
+  (c) 50 <= key
+
+[8] type=- answer=- correct=b
+Q: Střední příčka lichoběžníku se základnami 14 a 6 má délku:
+Options:
+  (a) 8
+  (b) 10 <= key
+  (c) 20
+
+
+========================================================================================================================
+courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html
+========================================================================================================================
+[1] type=- answer=10.3923 correct=-
+Q: Krychle má hranu a = 6 cm . Zadejte délku tělesové úhlopříčky v cm .
+
+[2] type=- answer=13 correct=-
+Q: Kvádr má hrany 3 cm , 4 cm , 12 cm . Určete tělesovou úhlopříčku v cm .
+
+[3] type=- answer=245.044 correct=-
+Q: Určete povrch válce pro r = 3 cm a v = 10 cm (v cm² ).
+
+[4] type=- answer=344 correct=-
+Q: Kolmý hranol má S p = 32 cm² , o p = 28 cm a v = 10 cm . Určete celkový povrch v cm² .
+
+[5] type=- answer=- correct=b
+Q: Krychle má hranu a = 5 cm . Jaký je její povrch?
+Options:
+  (a) 125 cm²
+  (b) 150 cm² <= key
+  (c) 25 cm²
+
+[6] type=- answer=- correct=c
+Q: Krychle s hranou a = 2 má tělesovou úhlopříčku:
+Options:
+  (a) 2√2
+  (b) 4
+  (c) 2√3 <= key
+
+[7] type=- answer=- correct=a
+Q: Kvádr má hrany 3, 4, 12 . Tělesová úhlopříčka je:
+Options:
+  (a) 13 <= key
+  (b) 12
+  (c) 11
+
+[8] type=- answer=- correct=b
+Q: Kvádr má hrany 2, 3, 4 . Jeho povrch je:
+Options:
+  (a) 24
+  (b) 52 <= key
+  (c) 48
+
+[9] type=- answer=- correct=a
+Q: Válec má r = 2 a v = 5 . Jeho objem je:
+Options:
+  (a) 20π <= key
+  (b) 10π
+  (c) 40π
+
+[10] type=- answer=- correct=b
+Q: Válec má r = 4 , v = 6 . Celkový povrch je:
+Options:
+  (a) 64π
+  (b) 80π <= key
+  (c) 96π
+
+[11] type=- answer=- correct=a
+Q: Kolmý hranol má S p = 18 cm² a v = 7 cm . Objem je:
+Options:
+  (a) 126 cm³ <= key
+  (b) 144 cm³
+  (c) 252 cm³
+
+[12] type=- answer=- correct=a
+Q: Kolmý hranol má S p = 18 cm² , o p = 20 cm , v = 7 cm . Celkový povrch je:
+Options:
+  (a) 176 cm² <= key
+  (b) 194 cm²
+  (c) 214 cm²
+
+
+========================================================================================================================
+courses/rovnice/lessons/doplnujici-informace/index.html
+========================================================================================================================
+[1] type=set answer=-1,3 correct=-
+Q: Najděte všechna řešení rovnice x 2 = 2x + 3 .
+
+[2] type=number answer=3.2360679775 correct=-
+Q: U rovnice 2x + 1 = x 2 - 3 zapište větší kořen (přibližně).
+
+[3] type=choice answer=a correct=-
+Q: Co představují průsečíky grafů y = f(x) a y = g(x) ?
+Options:
+  (a) Řešení rovnice f(x) = g(x) . <= key
+  (b) Body, kde má funkce automaticky maximum.
+  (c) Body, kde se vždy rovná nule derivace.
+  (d) Body, kde končí definiční obor obou funkcí.
+
+[4] type=choice answer=a correct=-
+Q: Pro kterou hodnotu p nemá rovnice (p - 1)x = p + 3 řešení?
+Options:
+  (a) p = 1 <= key
+  (b) p = -3
+  (c) p = 0
+  (d) Rovnice má řešení pro všechna p .
+
+[5] type=number answer=2 correct=-
+Q: Dosadíme p = 5 do rovnice (p - 2)x = p + 1 . Jaké je x ?
+
+[6] type=choice answer=b correct=-
+Q: Pro kterou hodnotu k má rovnice x 2 - 2(k + 1)x + k 2 - 1 = 0 právě jedno reálné řešení?
+Options:
+  (a) k > -1
+  (b) k = -1 <= key
+  (c) k < -1
+  (d) Žádná hodnota k .
+
+[7] type=number answer=6 correct=-
+Q: Dosadíme m = 4 do rovnice (m - 2)x = m 2 - 4 . Určete x .
+
+[8] type=number answer=6 correct=-
+Q: Ze vztahu v = v 0 + at spočítejte t pro v = 23 , v 0 = 5 , a = 3 .
+
+[9] type=choice answer=b correct=-
+Q: Vyjádřete h ze vzorce S = (ah)/2 .
+Options:
+  (a) h = S/(2a)
+  (b) h = 2S/a <= key
+  (c) h = 2a/S
+  (d) h = a/(2S)
+
+[10] type=number answer=15 correct=-
+Q: Použijte R 2 = RR 1 /(R 1 - R) .
+                                    Pro R = 6 a R 1 = 10 určete R 2 .
+
+[11] type=choice answer=c correct=-
+Q: Jak správně vyjádříte poloměr z rovnice A = πr 2 v geometrii?
+Options:
+  (a) r = A/π
+  (b) r = ±√(A/π)
+  (c) r = √(A/π), r ≥ 0 <= key
+  (d) r = √(π/A)
+
+[12] type=number answer=8 correct=-
+Q: Ze vzorce S = (a v a )/2 vyjádřete a pro S = 24 a v a = 6 .
+
+
+========================================================================================================================
+courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html
+========================================================================================================================
+[1] type=choice answer=b correct=-
+Q: Vyřešte rovnici 2 x+1 = 32 .
+Options:
+  (a) x = 3
+  (b) x = 4 <= key
+  (c) x = 5
+
+[2] type=number answer=2 correct=-
+Q: Vyřešte rovnici 3 2x-1 = 27 .
+
+[3] type=set answer=0,1 correct=-
+Q: Vyřešte rovnici 5 2x - 6·5 x + 5 = 0 .
+
+[4] type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice 4 x-2 = -3 ?
+Options:
+  (a) Právě jedno
+  (b) Právě dvě
+  (c) Žádné <= key
+
+[5] type=number answer=2.807354922 correct=-
+Q: Vyřešte rovnici 2 x = 7 (zaokrouhlete na 3 desetinná místa).
+
+[6] type=number answer=2 correct=-
+Q: Vyřešte rovnici 9 x = 3 x+2 .
+
+[7] type=number answer=33 correct=-
+Q: Vyřešte rovnici log₂(x - 1) = 5 .
+
+[8] type=choice answer=a correct=-
+Q: Pro jaké x je definován výraz log₃(2x - 7) ?
+Options:
+  (a) x > 7/2 <= key
+  (b) x ≥ 7/2
+  (c) x < 7/2
+
+[9] type=set answer=-3,3 correct=-
+Q: Vyřešte rovnici log₅(x 2 - 4) = 1 .
+
+[10] type=number answer=4 correct=-
+Q: Vyřešte rovnici ln(x - 1) = ln(2x - 5) .
+
+[11] type=number answer=2.464101615 correct=-
+Q: Vyřešte rovnici log₂(x+3) + log₂(x-1) = 3 (zaokrouhlete na 3 desetinná místa).
+
+[12] type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice log(x - 4) = log(1 - x) ?
+Options:
+  (a) Právě jedno: x = 2,5
+  (b) Právě jedno: x = 4,5
+  (c) Žádné reálné řešení <= key
+
+
+========================================================================================================================
+courses/rovnice/lessons/kvadraticke-rovnice/index.html
+========================================================================================================================
+[1] type=set answer=3,4 correct=-
+Q: Vyřešte rovnici: x² − 7x + 12 = 0 .
+
+[2] type=set answer=-3/2,1 correct=-
+Q: Vyřešte rovnici: 2x² + x − 3 = 0 .
+
+[3] type=choice answer=c correct=-
+Q: Kolik reálných kořenů má rovnice 3x² + 2x + 5 = 0 ?
+Options:
+  (a) Dva různé reálné kořeny.
+  (b) Jeden dvojnásobný reálný kořen.
+  (c) Žádný reálný kořen. <= key
+
+[4] type=number answer=3 correct=-
+Q: Určete dvojnásobný kořen rovnice x² − 6x + 9 = 0 .
+
+[5] type=number answer=0 correct=-
+Q: Vypočítejte diskriminant rovnice 4x² − 4x + 1 = 0 .
+
+[6] type=choice answer=c correct=-
+Q: Co platí pro kvadratickou rovnici, když D < 0 ?
+Options:
+  (a) Má vždy dva různé reálné kořeny.
+  (b) Má právě jeden dvojnásobný kořen.
+  (c) Nemá reálný kořen. <= key
+
+[7] type=number answer=4 correct=-
+Q: Určete c , aby rovnice x² − 4x + c = 0 měla právě jeden reálný kořen.
+
+[8] type=choice answer=b correct=-
+Q: Který vzorec je správný obecný vzorec pro kořeny kvadratické rovnice?
+Options:
+  (a) x = (−b ± √(b² + 4ac)) / (2a)
+  (b) x = (−b ± √(b² − 4ac)) / (2a) <= key
+  (c) x = (b ± √(b² − 4ac)) / a
+
+[9] type=set answer=1,4 correct=-
+Q: Vyřešte rovnici: |x² − 5x + 6| = 2 .
+
+[10] type=set answer=-1,1 correct=-
+Q: Vyřešte rovnici: |x² − 1| = 0 .
+
+[11] type=choice answer=c correct=-
+Q: Kolik řešení má rovnice |x² + 2x + 5| = 1 ?
+Options:
+  (a) Dvě řešení.
+  (b) Jedno řešení.
+  (c) Žádné řešení. <= key
+
+[12] type=set answer=0,4 correct=-
+Q: Vyřešte rovnici: |x² − 4x + 3| = 3 .
+
+
+========================================================================================================================
+courses/rovnice/lessons/linearni-rovnice/index.html
+========================================================================================================================
+[1] type=number answer=4 correct=-
+Q: Vyřešte rovnici: 7x - 9 = 2x + 11 .
+
+[2] type=number answer=33/4 correct=-
+Q: Vyřešte rovnici: 3(2x - 5) - 4 = 2(x + 7) .
+
+[3] type=choice answer=c correct=-
+Q: Kolik řešení má rovnice 4(x - 2) = 4x - 8 ?
+Options:
+  (a) Žádné řešení.
+  (b) Právě jedno řešení.
+  (c) Nekonečně mnoho řešení. <= key
+
+[4] type=set answer=-5,13 correct=-
+Q: Vyřešte rovnici: |x - 4| = 9 .
+
+[5] type=number answer=-1 correct=-
+Q: Vyřešte rovnici: |x - 1| = x + 3 .
+
+[6] type=choice answer=b correct=-
+Q: Jaká je množina řešení rovnice |3x - 6| = −2 ?
+Options:
+  (a) x = 2
+  (b) Žádné řešení. <= key
+  (c) x = −2
+  (d) Nekonečně mnoho řešení.
+
+[7] type=number answer=3 correct=-
+Q: Určete x-souřadnici průsečíku přímek y = 4x - 1 a y = x + 8 .
+
+[8] type=choice answer=b correct=-
+Q: Kolik průsečíků mají přímky y = 2x + 5 a y = 2x - 1 ?
+Options:
+  (a) Právě jeden průsečík.
+  (b) Žádný průsečík. <= key
+  (c) Nekonečně mnoho průsečíků.
+
+[9] type=choice answer=c correct=-
+Q: Kolik řešení má rovnice 5 − 2x = 5 − 2x ?
+Options:
+  (a) Žádné řešení.
+  (b) Právě jedno řešení.
+  (c) Nekonečně mnoho řešení. <= key
+
+[10] type=choice answer=b correct=-
+Q: Pro kterou hodnotu m má rovnice (m - 1)x = 2m - 2 nekonečně mnoho řešení?
+Options:
+  (a) m = −1
+  (b) m = 1 <= key
+  (c) m = 2
+  (d) Žádná hodnota m .
+
+[11] type=choice answer=a correct=-
+Q: Pro kterou hodnotu k nemá rovnice (k + 3)x = k - 1 řešení?
+Options:
+  (a) k = −3 <= key
+  (b) k = 0
+  (c) k = 1
+  (d) k = 3
+
+[12] type=number answer=4 correct=-
+Q: Dosadíme p = 5 do rovnice (p - 2)x = p + 7 . Určete x .
+
+
+========================================================================================================================
+courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html
+========================================================================================================================
+[1] type=set answer=-5/2,3 correct=-
+Q: Vyřešte rovnici: (x-3)(2x+5)=0 .
+
+[2] type=set answer=0,4 correct=-
+Q: Vyřešte rovnici: x(x-4)^2=0 .
+
+[3] type=choice answer=b correct=-
+Q: Jaká je množina řešení v ℝ pro rovnici (x²+1)(x-2)=0 ?
+Options:
+  (a) K = ∅
+  (b) K = {2} <= key
+  (c) K = {−1, 1, 2}
+  (d) Nekonečně mnoho řešení
+
+[4] type=number answer=7 correct=-
+Q: Určete dvojnásobný kořen rovnice (x-7)^2(x+1)=0 .
+
+[5] type=choice answer=b correct=-
+Q: Student řeší (x-4)(x+3)=0 tak, že rovnici vydělí (x-4) . Co platí?
+Options:
+  (a) Postup je vždy správný, řešení je jen x = -3 .
+  (b) Postup je chybný, protože se ztratí kořen x = 4 . <= key
+  (c) Rovnice má nekonečně mnoho řešení.
+  (d) Rovnice nemá řešení.
+
+[6] type=number answer=8 correct=-
+Q: Vyřešte rovnici: (x-8)/(x+1)=0 .
+
+[7] type=number answer=-7 correct=-
+Q: Vyřešte rovnici: 3/(x-2)=1/(x+4) .
+
+[8] type=number answer=7/2 correct=-
+Q: Vyřešte rovnici: (x+1)/(x-2)=3 .
+
+[9] type=choice answer=a correct=-
+Q: Jaké je řešení rovnice (x²-1)/(x-1)=0 v ℝ ?
+Options:
+  (a) K = {−1} <= key
+  (b) K = {−1, 1}
+  (c) K = {1}
+  (d) K = ∅
+
+[10] type=choice answer=c correct=-
+Q: Kolik řešení má rovnice (x-4)/(x-4)=0 v ℝ ?
+Options:
+  (a) Právě jedno řešení.
+  (b) Nekonečně mnoho řešení.
+  (c) Žádné řešení. <= key
+  (d) Dvě řešení.
+
+
+========================================================================================================================
+courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html
+========================================================================================================================
+[1] type=choice answer=c correct=-
+Q: Jaký stupeň má rovnice x⁵ - 4x + 1 = 0 ?
+Options:
+  (a) 3
+  (b) 4
+  (c) 5 <= key
+
+[2] type=choice answer=b correct=-
+Q: Kolik kořenů má v komplexních číslech polynom 4. stupně (včetně násobností)?
+Options:
+  (a) Nejvýše 2
+  (b) Přesně 4 <= key
+  (c) Vždy nekonečně mnoho
+
+[3] type=choice answer=a correct=-
+Q: Co platí pro polynomickou rovnici lichého stupně s reálnými koeficienty?
+Options:
+  (a) Má alespoň jeden reálný kořen. <= key
+  (b) Nikdy nemá reálný kořen.
+  (c) Vždy má přesně dva reálné kořeny.
+
+[4] type=set answer=0,1,4 correct=-
+Q: Vyřešte rovnici: x⁴ - 5x³ + 4x² = 0 .
+
+[5] type=set answer=-3,0,3 correct=-
+Q: Vyřešte rovnici: 2x⁵ - 18x³ = 0 .
+
+[6] type=choice answer=c correct=-
+Q: Jaká je násobnost kořene x = 0 v rovnici x³(x - 2) = 0 ?
+Options:
+  (a) 1
+  (b) 2
+  (c) 3 <= key
+
+[7] type=set answer=1,2,3 correct=-
+Q: Vyřešte rovnici: x³ - 6x² + 11x - 6 = 0 .
+
+[8] type=choice answer=b correct=-
+Q: Které číslo je kořenem rovnice 2x³ - 3x² - 8x + 12 = 0 ?
+Options:
+  (a) x = 1
+  (b) x = 2 <= key
+  (c) x = 7/2
+
+[9] type=set answer=-2,-1,2 correct=-
+Q: Vyřešte rovnici: x³ + x² - 4x - 4 = 0 .
+
+[10] type=number answer=0 correct=-
+Q: Jaký je zbytek při dělení x³ - 6x² + 11x - 6 výrazem x - 1 ?
+
+[11] type=set answer=-3,1,2,3 correct=-
+Q: Vyřešte rovnici: x⁴ - 3x³ - 7x² + 27x - 18 = 0 .
+
+[12] type=choice answer=b correct=-
+Q: Co platí, když při dělení P(x) výrazem x - r vyjde zbytek 0?
+Options:
+  (a) r není kořen.
+  (b) (x - r) je činitel P(x) . <= key
+  (c) Polynom nelze dále rozkládat.
+
+[13] type=set answer=-2,-1,1,2 correct=-
+Q: Vyřešte rovnici: x⁴ - 5x² + 4 = 0 .
+
+[14] type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice x⁴ + 4x² + 4 = 0 ?
+Options:
+  (a) 4 reálná řešení
+  (b) 2 reálná řešení
+  (c) Žádné reálné řešení <= key
+
+[15] type=choice answer=c correct=-
+Q: Jaká substituce je nejvhodnější pro rovnici x⁶ - 7x³ + 6 = 0 ?
+Options:
+  (a) t = x
+  (b) t = x²
+  (c) t = x³ <= key
+
+
+========================================================================================================================
+courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html
+========================================================================================================================
+[1] type=choice answer=a correct=-
+Q: Vyřešte soustavu x + y = 7,   2x - y = 8 .
+Options:
+  (a) (5, 2) <= key
+  (b) (2, 5)
+  (c) (3, 4)
+  (d) (6, 1)
+
+[2] type=number answer=4/5 correct=-
+Q: Určete y v soustavě 3x + 2y = 7,   x - y = 1 .
+
+[3] type=choice answer=c correct=-
+Q: Kolik řešení má soustava 4x - 2y = 6,   2x - y = 3 ?
+Options:
+  (a) Žádné
+  (b) Právě jedno
+  (c) Nekonečně mnoho <= key
+
+[4] type=pair answer=15/7,11/7 correct=-
+Q: Vyřešte soustavu x = 2y - 1,   3x + y = 8 .
+
+[5] type=choice answer=b correct=-
+Q: Vyřešte soustavu 2x + 3y = 12,   5x - 3y = 9 .
+Options:
+  (a) (2, 3)
+  (b) (3, 2) <= key
+  (c) (4, 1)
+  (d) (3, -2)
+
+[6] type=number answer=-1 correct=-
+Q: Určete y v soustavě 4x + 5y = 3,   2x - 5y = 9 .
+
+[7] type=choice answer=c correct=-
+Q: Kolik řešení má soustava 3x - 2y = 7,   6x - 4y = 15 ?
+Options:
+  (a) Právě jedno
+  (b) Nekonečně mnoho
+  (c) Žádné <= key
+
+[8] type=pair answer=2,-1 correct=-
+Q: Vyřešte soustavu 3x + 2y = 4,   5x - 2y = 12 .
+
+[9] type=pair answer=2,4 correct=-
+Q: Vyřešte soustavu y = 3x - 2,   y = -x + 6 .
+
+[10] type=number answer=4 correct=-
+Q: Určete x pro soustavu y = 0,5x + 4,   y = -x + 10 .
+
+[11] type=choice answer=b correct=-
+Q: Kolik řešení má soustava y = 2x + 1,   y = 2x - 3 ?
+Options:
+  (a) Právě jedno
+  (b) Žádné <= key
+  (c) Nekonečně mnoho
+
+[12] type=choice answer=c correct=-
+Q: Kolik řešení má soustava y = -3x + 4,   6x + 2y = 8 ?
+Options:
+  (a) Právě jedno
+  (b) Žádné
+  (c) Nekonečně mnoho <= key
+
+
+========================================================================================================================
+courses/rovnice/lessons/zaklady-o-rovnicich/index.html
+========================================================================================================================
+[1] type=number answer=5 correct=-
+Q: Vyřeš rovnici: 3(x + 2) - 4 = 2x + 7
+
+[2] type=number answer=5 correct=-
+Q: Vyřeš rovnici: (x + 3)/(x - 1) = 2 (s podmínkou x ≠ 1 ).
+
+[3] type=choice answer=b correct=-
+Q: Která úprava obecně není ekvivalentní bez dalších podmínek?
+Options:
+  (a) Přičíst stejný výraz na obou stranách rovnice.
+  (b) Vydělit obě strany výrazem, který může být roven nule. <= key
+  (c) Vynásobit obě strany nenulovou konstantou.
+
+[4] type=set answer=3 correct=-
+Q: Vyřeš rovnici: √(x + 6) = x . Zapiš všechna řešení oddělená čárkou.
+
+[5] type=- answer=- correct=yes
+Q: Z rovnice x + 4 = 10 odečteme 4 na obou stranách.
+
+[6] type=- answer=- correct=no
+Q: U rovnice x² = x vydělíme obě strany výrazem x .
+
+[7] type=- answer=- correct=yes
+Q: U rovnice (x + 1)/(x - 2) = 3 násobíme výrazem (x - 2) a zároveň použijeme podmínku x ≠ 2 .
+
+[8] type=- answer=- correct=no
+Q: Rovnici √(x + 5) = x - 1 umocníme na druhou a výsledek bereme bez zkoušky.
+

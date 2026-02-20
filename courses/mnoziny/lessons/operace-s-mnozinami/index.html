@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Operace s množinami: průnik, sjednocení, rozdíl a doplněk množiny. Interaktivní výklad, Vennovy diagramy a procvičování.">
+    <title>Operace s množinami - Množiny - ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Množiny</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 3: Operace s množinami</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 3</h3>
+                    <p>Operace s množinami</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#overview" class="sidebar-link active" data-section="overview">
+                        <span class="sidebar-icon">1</span>
+                        Přehled operací
+                    </a>
+                    <a href="#intersection" class="sidebar-link" data-section="intersection">
+                        <span class="sidebar-icon">2</span>
+                        Průnik množin
+                    </a>
+                    <a href="#union" class="sidebar-link" data-section="union">
+                        <span class="sidebar-icon">3</span>
+                        Sjednocení množin
+                    </a>
+                    <a href="#difference" class="sidebar-link" data-section="difference">
+                        <span class="sidebar-icon">4</span>
+                        Rozdíl množin
+                    </a>
+                    <a href="#complement" class="sidebar-link" data-section="complement">
+                        <span class="sidebar-icon">5</span>
+                        Doplněk množiny
+                    </a>
+                    <a href="#lab" class="sidebar-link" data-section="lab">
+                        <span class="sidebar-icon">6</span>
+                        Interaktivní laboratoř
+                    </a>
+                    <a href="#exercises" class="sidebar-link" data-section="exercises">
+                        <span class="sidebar-icon">✓</span>
+                        Procvičování
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 14.2857%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="overview" class="lesson-section active">
+                    <div class="section-badge">Přehled</div>
+                    <h1>Operace s množinami</h1>
+                    <p class="lead">
+                        V této kapitole projdeme čtyři základní operace: <strong>průnik</strong>,
+                        <strong>sjednocení</strong>, <strong>rozdíl</strong> a <strong>doplněk</strong> množiny.
+                        Každá operace je definovaná přesně, ale zároveň se dá velmi dobře chápat vizuálně přes Vennovy
+                        diagramy.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Důležitá poznámka k zápisu</h4>
+                            <p>
+                                U doplňku vždy pracujeme vzhledem k <strong>univerzální množině</strong> U.
+                                Bez určení U není doplněk jednoznačný.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="formula-table">
+                        <div class="formula-row formula-head">
+                            <div>Operace</div>
+                            <div>Značka</div>
+                            <div>Definice</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Průnik</div>
+                            <div class="symbol">A ∩ B</div>
+                            <div>{ x ∈ U | x ∈ A a zároveň x ∈ B }</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Sjednocení</div>
+                            <div class="symbol">A ∪ B</div>
+                            <div>{ x ∈ U | x ∈ A nebo x ∈ B }</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Rozdíl</div>
+                            <div class="symbol">A \ B</div>
+                            <div>{ x ∈ U | x ∈ A a x ∉ B }</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Doplněk</div>
+                            <div class="symbol">A<sup>c</sup></div>
+                            <div>U \ A = { x ∈ U | x ∉ A }</div>
+                        </div>
+                    </div>
+
+                    <div class="theorem-card">
+                        <h4>Klíčové vztahy, které budeme používat</h4>
+                        <div class="equation-list">
+                            <div class="equation-large">A ∩ B = B ∩ A</div>
+                            <div class="equation-large">A ∪ B = B ∪ A</div>
+                            <div class="equation-large">A \ B ≠ B \ A (obecně)</div>
+                            <div class="equation-large">A \ B = A ∩ B<sup>c</sup></div>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="intersection">
+                        Pokračovat na průnik množin →
+                    </button>
+                </section>
+
+                <section id="intersection" class="lesson-section">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Průnik množin</h1>
+                    <p>
+                        <strong>Průnik</strong> obsahuje právě ty prvky, které patří současně do obou množin.
+                        Je to "společná část" množin A a B.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large">A ∩ B = { x ∈ U | x ∈ A ∧ x ∈ B }</div>
+                        <p>
+                            Pokud množiny nemají společný prvek, potom platí A ∩ B = ∅ a říkáme, že jsou
+                            disjunktní.
+                        </p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Řešený příklad</h3>
+                        <p>
+                            A = {1, 2, 3, 5, 8}, B = {0, 2, 4, 5, 7, 8}
+                        </p>
+                        <p class="example-step">
+                            Společné prvky obou množin jsou 2, 5 a 8.
+                        </p>
+                        <div class="equation-large">A ∩ B = {2, 5, 8}</div>
+                    </div>
+
+                    <div class="quick-check" data-answer="{2,6,10}">
+                        <h3>Rychlá kontrola</h3>
+                        <p class="quick-check-question">
+                            Určete A ∩ B, pokud A = {1, 2, 4, 6, 8, 10} a B = {2, 3, 5, 6, 9, 10}.
+                        </p>
+                        <div class="quick-check-input-row">
+                            <input type="text" class="set-input" placeholder="Např. {2, 6, 10}">
+                            <button class="btn-primary btn-quick-check">Zkontrolovat</button>
+                        </div>
+                        <div class="quick-check-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="overview">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="union">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <section id="union" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Sjednocení množin</h1>
+                    <p>
+                        <strong>Sjednocení</strong> obsahuje všechny prvky, které patří alespoň do jedné z množin.
+                        Prvek se v množině zapisuje jen jednou, i když je v obou množinách.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large">A ∪ B = { x ∈ U | x ∈ A ∨ x ∈ B }</div>
+                        <p>
+                            Pro konečné množiny platí důležitý vzorec:
+                        </p>
+                        <div class="equation-large">|A ∪ B| = |A| + |B| - |A ∩ B|</div>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Řešený příklad</h3>
+                        <p>
+                            A = {1, 2, 3, 5, 8}, B = {0, 2, 4, 5, 7, 8}
+                        </p>
+                        <p class="example-step">
+                            Do sjednocení vezmeme všechny různé prvky z A i B.
+                        </p>
+                        <div class="equation-large">A ∪ B = {0, 1, 2, 3, 4, 5, 7, 8}</div>
+                    </div>
+
+                    <div class="quick-check" data-answer="{1,2,3,4,5,6,7,8}">
+                        <h3>Rychlá kontrola</h3>
+                        <p class="quick-check-question">
+                            Určete A ∪ B, pokud A = {1, 2, 3, 6, 7} a B = {2, 4, 5, 7, 8}.
+                        </p>
+                        <div class="quick-check-input-row">
+                            <input type="text" class="set-input" placeholder="Např. {1, 2, 3, 4, 5, 6, 7, 8}">
+                            <button class="btn-primary btn-quick-check">Zkontrolovat</button>
+                        </div>
+                        <div class="quick-check-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="intersection">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="difference">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <section id="difference" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Rozdíl množin</h1>
+                    <p>
+                        <strong>Rozdíl množin</strong> A \ B obsahuje prvky, které jsou v A, ale nejsou v B.
+                        Na rozdíl od průniku a sjednocení zde záleží na pořadí.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large">A \ B = { x ∈ U | x ∈ A ∧ x ∉ B }</div>
+                        <p>
+                            Obecně neplatí komutativita:
+                        </p>
+                        <div class="equation-large">A \ B ≠ B \ A</div>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Řešený příklad</h3>
+                        <p>
+                            A = {1, 2, 3, 5, 8}, B = {0, 2, 4, 5, 7, 8}
+                        </p>
+                        <div class="equation-large">A \ B = {1, 3}</div>
+                        <div class="equation-large">B \ A = {0, 4, 7}</div>
+                        <p class="example-step">
+                            Výsledky jsou různé, protože odčítáme jinou množinu.
+                        </p>
+                    </div>
+
+                    <div class="quick-check" data-answer="{0,3,5,6}">
+                        <h3>Rychlá kontrola</h3>
+                        <p class="quick-check-question">
+                            Určete B \ A, pokud A = {1, 2, 4, 7} a B = {0, 1, 2, 3, 5, 6, 7}.
+                        </p>
+                        <div class="quick-check-input-row">
+                            <input type="text" class="set-input" placeholder="Např. {0, 3, 5, 6}">
+                            <button class="btn-primary btn-quick-check">Zkontrolovat</button>
+                        </div>
+                        <div class="quick-check-feedback"></div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">!</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba</h4>
+                            <p>
+                                Studenti často zamění A \ B a B \ A. Vždy si nejdřív řekněte:
+                                "Beru prvky z první množiny a odstraňuji ty, které leží ve druhé."
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="union">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="complement">Pokračovat →</button>
+                    </div>
+                </section>
+
+                <section id="complement" class="lesson-section">
+                    <div class="section-badge">Téma 4</div>
+                    <h1>Doplněk množiny</h1>
+                    <p>
+                        <strong>Doplněk množiny A</strong> obsahuje všechny prvky univerzální množiny U,
+                        které nejsou v A.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice</h4>
+                        <div class="equation-large">A<sup>c</sup> = U \ A = { x ∈ U | x ∉ A }</div>
+                        <p>
+                            Doplňek je vždy definovaný vzhledem ke konkrétní univerzální množině U.
+                        </p>
+                    </div>
+
+                    <div class="example-card">
+                        <h3>Řešený příklad</h3>
+                        <p>
+                            U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A = {1, 3, 4, 7}
+                        </p>
+                        <p class="example-step">
+                            Vezmeme prvky U, které nejsou v A.
+                        </p>
+                        <div class="equation-large">A<sup>c</sup> = {0, 2, 5, 6, 8, 9}</div>
+                    </div>
+
+                    <div class="theorem-card">
+                        <h4>De Morganovy zákony</h4>
+                        <div class="equation-large">(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∩ B<sup>c</sup></div>
+                        <div class="equation-large">(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></div>
+                        <p class="formula-note">
+                            Tyto vztahy jsou velmi důležité při úpravách výrazů a důkazech.
+                        </p>
+                    </div>
+
+                    <div class="quick-check" data-answer="{0,3,4,7,8,9}">
+                        <h3>Rychlá kontrola</h3>
+                        <p class="quick-check-question">
+                            Určete A<sup>c</sup>, pokud U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} a A = {1, 2, 5, 6}.
+                        </p>
+                        <div class="quick-check-input-row">
+                            <input type="text" class="set-input" placeholder="Např. {0, 3, 4, 7, 8, 9}">
+                            <button class="btn-primary btn-quick-check">Zkontrolovat</button>
+                        </div>
+                        <div class="quick-check-feedback"></div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="difference">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="lab">Pokračovat do laboratoře →</button>
+                    </div>
+                </section>
+
+                <section id="lab" class="lesson-section">
+                    <div class="section-badge">Interaktivní laboratoř</div>
+                    <h1>Vennův diagram a operace v reálném čase</h1>
+                    <p>
+                        Nastavte množiny A a B klikáním na prvky univerzální množiny a sledujte,
+                        jak se mění zvýrazněná oblast diagramu i výsledná množina.
+                    </p>
+
+                    <div class="interactive-demo venn-lab">
+                        <div class="lab-grid">
+                            <div class="lab-canvas-wrapper">
+                                <canvas id="vennCanvas" width="640" height="380"></canvas>
+                                <div class="canvas-instructions">
+                                    Zvýrazněná oblast odpovídá právě zvolené operaci.
+                                </div>
+                            </div>
+
+                            <div class="lab-controls">
+                                <div class="control-panel">
+                                    <h4>Univerzální množina U</h4>
+                                    <p id="universeDisplay" class="universe-display"></p>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Operace</h4>
+                                    <label for="operationSelect" class="select-label">Vyberte operaci:</label>
+                                    <select id="operationSelect">
+                                        <option value="intersection">A ∩ B</option>
+                                        <option value="union">A ∪ B</option>
+                                        <option value="differenceAB">A \ B</option>
+                                        <option value="differenceBA">B \ A</option>
+                                        <option value="complementA">A<sup>c</sup></option>
+                                        <option value="complementB">B<sup>c</sup></option>
+                                    </select>
+                                    <p id="operationDescription" class="operation-description"></p>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Množina A</h4>
+                                    <div id="setAChips" class="chip-grid"></div>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Množina B</h4>
+                                    <div id="setBChips" class="chip-grid"></div>
+                                </div>
+
+                                <div class="control-panel result-panel">
+                                    <h4>Výsledek</h4>
+                                    <div id="resultEquation" class="result-equation"></div>
+                                    <div id="resultMeta" class="result-meta"></div>
+                                </div>
+
+                                <div class="panel-actions">
+                                    <button id="randomizeSets" class="btn-outline">Náhodné množiny</button>
+                                    <button id="clearSets" class="btn-outline">Vymazat A i B</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="complement">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="exercises">Pokračovat na procvičování →</button>
+                    </div>
+                </section>
+
+                <section id="exercises" class="lesson-section">
+                    <div class="section-badge">Procvičování</div>
+                    <h1>Procvičování: operace s množinami</h1>
+                    <p>
+                        Každá úloha po odeslání ukáže výsledek. Pokud odpověď není správná,
+                        zobrazí se i správné řešení.
+                    </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise-card" data-type="set" data-answer="{1,3,5}">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Vypočtěte A ∩ B, kde A = {1, 2, 3, 4, 5} a B = {0, 1, 3, 5, 7}.
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zapište množinu">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="set" data-answer="{0,1,2,3,4,5,6,8}">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Vypočtěte A ∪ B, kde A = {1, 2, 4, 6, 8} a B = {0, 2, 3, 5, 6}.
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zapište množinu">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="set" data-answer="{2,6,9}">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Vypočtěte A \ B, kde A = {1, 2, 4, 6, 7, 9} a B = {1, 3, 4, 5, 7}.
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zapište množinu">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="set" data-answer="{1,3,6,8,9}">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Mějme U = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9} a A = {0, 2, 4, 5, 7}. Určete A<sup>c</sup>.
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zapište množinu">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="b" data-name="ex5">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Které tvrzení je správně?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="a">
+                                    <span class="option-text">A \ B = B \ A pro každé množiny A, B</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="b">
+                                    <span class="option-text">A \ B = A ∩ B<sup>c</sup></span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="c">
+                                    <span class="option-text">A ∩ B vždy obsahuje všechny prvky z A i B</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="d">
+                                    <span class="option-text">A<sup>c</sup> = A</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="c" data-name="ex6">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Který z De Morganových zákonů je správně?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="a">
+                                    <span class="option-text">(A ∪ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="b">
+                                    <span class="option-text">(A ∩ B)<sup>c</sup> = A ∩ B</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="c">
+                                    <span class="option-text">(A ∩ B)<sup>c</sup> = A<sup>c</sup> ∪ B<sup>c</sup></span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="d">
+                                    <span class="option-text">(A \ B)<sup>c</sup> = A ∪ B</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Výborně</h2>
+                        <p>Dokončili jste kapitolu Operace s množinami.</p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="lab">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="lesson.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+Q: Vyřešte rovnici: x² − 7x + 12 = 0.
+SolutionText: K = {3, 4}
+
+[2] id=exercise-q2 type=set answer=-3/2,1 correct=-
+Q: Vyřešte rovnici: 2x² + x − 3 = 0.
+SolutionText: K = {−3/2, 1}
+
+[3] id=exercise-q3 type=choice answer=c correct=-
+Q: Kolik reálných kořenů má rovnice 3x² + 2x + 5 = 0?
+Options:
+  (a) Dva různé reálné kořeny.
+  (b) Jeden dvojnásobný reálný kořen.
+  (c) Žádný reálný kořen. <= key
+SolutionText: správně je C: diskriminant je záporný, rovnice nemá reálné kořeny
+
+[4] id=exercise-q4 type=number answer=3 correct=-
+Q: Určete dvojnásobný kořen rovnice x² − 6x + 9 = 0.
+SolutionText: x = 3
+
+[5] id=exercise-q5 type=number answer=0 correct=-
+Q: Vypočítejte diskriminant rovnice 4x² − 4x + 1 = 0.
+SolutionText: D = 0
+
+[6] id=exercise-q6 type=choice answer=c correct=-
+Q: Co platí pro kvadratickou rovnici, když D &lt; 0?
+Options:
+  (a) Má vždy dva různé reálné kořeny.
+  (b) Má právě jeden dvojnásobný kořen.
+  (c) Nemá reálný kořen. <= key
+SolutionText: správně je C: při D &lt; 0 nemá kvadratická rovnice reálné kořeny
+
+[7] id=exercise-q7 type=number answer=4 correct=-
+Q: Určete c, aby rovnice x² − 4x + c = 0 měla právě jeden reálný kořen.
+SolutionText: c = 4
+
+[8] id=exercise-q8 type=choice answer=b correct=-
+Q: Který vzorec je správný obecný vzorec pro kořeny kvadratické rovnice?
+Options:
+  (a) x = (−b ± √(b² + 4ac)) / (2a)
+  (b) x = (−b ± √(b² − 4ac)) / (2a) <= key
+  (c) x = (b ± √(b² − 4ac)) / a
+SolutionText: správně je B: x = (−b ± √(b² − 4ac)) / (2a)
+
+[9] id=exercise-q9 type=set answer=1,4 correct=-
+Q: Vyřešte rovnici: |x² − 5x + 6| = 2.
+SolutionText: K = {1, 4}
+
+[10] id=exercise-q10 type=set answer=-1,1 correct=-
+Q: Vyřešte rovnici: |x² − 1| = 0.
+SolutionText: K = {−1, 1}
+
+[11] id=exercise-q11 type=choice answer=c correct=-
+Q: Kolik řešení má rovnice |x² + 2x + 5| = 1?
+Options:
+  (a) Dvě řešení.
+  (b) Jedno řešení.
+  (c) Žádné řešení. <= key
+SolutionText: správně je C: výraz x² + 2x + 5 je vždy kladný a minimálně 4, proto rovnost s 1 nenastane
+
+[12] id=exercise-q12 type=set answer=0,4 correct=-
+Q: Vyřešte rovnici: |x² − 4x + 3| = 3.
+SolutionText: K = {0, 4}

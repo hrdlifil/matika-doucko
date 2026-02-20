@@ -1,0 +1,372 @@
+﻿@import url("../operace-s-mnozinami/lesson.css");
+
+.compact-table .formula-row {
+    grid-template-columns: 1.15fr 1fr 2.2fr;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.column {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.column h4 {
+    margin-bottom: 0.55rem;
+}
+
+.math-line {
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    font-size: 1.05rem;
+    color: #c4b5fd;
+}
+
+.equation-small {
+    font-size: 1.12rem;
+    line-height: 1.55;
+}
+
+.builder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem;
+}
+
+.builder-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.builder-panel h4 {
+    margin: 0 0 0.65rem;
+    font-size: 0.92rem;
+}
+
+.builder-panel-wide {
+    grid-column: 1 / -1;
+}
+
+.math-result {
+    margin-bottom: 0.45rem;
+    color: var(--text-primary);
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    line-height: 1.55;
+    word-break: break-word;
+}
+
+.dynamic-math {
+    color: var(--text-primary);
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+    line-height: 1.58;
+}
+
+.math-meta {
+    margin-top: 0.55rem;
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+}
+
+.builder-actions {
+    display: flex;
+    gap: 0.6rem;
+    margin-top: 0.7rem;
+    flex-wrap: wrap;
+}
+
+.btn-small {
+    padding: 0.55rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.demo-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.demo-panel-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    justify-content: center;
+}
+
+.panel-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.attempts {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.binary-options,
+.classify-options {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.binary-option,
+.classify-option {
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    padding: 0.72rem 0.82rem;
+    cursor: pointer;
+    font-size: 0.91rem;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.binary-option:hover,
+.classify-option:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.binary-option.selected,
+.classify-option.selected {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.2);
+    color: #c7d2fe;
+}
+
+.binary-option.correct,
+.classify-option.correct {
+    border-color: rgba(16, 185, 129, 0.6);
+    background: rgba(16, 185, 129, 0.15);
+    color: #6ee7b7;
+}
+
+.binary-option.incorrect,
+.classify-option.incorrect {
+    border-color: rgba(239, 68, 68, 0.6);
+    background: rgba(239, 68, 68, 0.15);
+    color: #fca5a5;
+}
+
+.action-row {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.action-row button {
+    flex: 1;
+}
+
+.word-problem {
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.finite-demo-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1rem;
+}
+
+.finite-grid-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.95rem;
+}
+
+.finite-grid {
+    margin-top: 0.65rem;
+}
+
+.empty-grid-note {
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-md);
+    background: var(--bg-tertiary);
+    padding: 1rem;
+    color: var(--text-secondary);
+    text-align: center;
+}
+
+.table-scroll {
+    overflow-x: auto;
+}
+.pair-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+.pair-table th,
+.pair-table td {
+    border: 1px solid var(--border-subtle);
+    padding: 0.5rem 0.55rem;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 0.86rem;
+}
+
+.pair-table th {
+    background: rgba(99, 102, 241, 0.12);
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.pair-table td {
+    background: var(--bg-tertiary);
+    color: #cbd5e1;
+    font-family: 'Cambria Math', 'Times New Roman', serif;
+}
+
+.diag-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+}
+
+.diag-grid-wrap {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.9rem;
+}
+
+.diag-grid {
+    margin-top: 0.65rem;
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 0.4rem;
+}
+
+.diag-cell {
+    min-height: 3rem;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    background: var(--bg-tertiary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.22rem;
+    transition: all 0.2s;
+}
+
+.diag-cell .coords {
+    font-size: 0.7rem;
+    color: var(--text-tertiary);
+}
+
+.diag-cell .order {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #c4b5fd;
+}
+
+.diag-cell.visited {
+    border-color: rgba(99, 102, 241, 0.6);
+    background: rgba(99, 102, 241, 0.18);
+}
+
+.interval-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 1rem;
+}
+
+.interval-canvas-wrap {
+    background: #0b101a;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--radius-lg);
+    padding: 0.7rem;
+}
+
+.interval-canvas-wrap canvas {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-md);
+}
+
+.exercise-feedback.show {
+    display: block;
+}
+
+.feedback-box {
+    margin-top: 0.35rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    display: none;
+    line-height: 1.55;
+    font-size: 0.92rem;
+}
+
+.feedback-box.show {
+    display: block;
+}
+
+.feedback-box.correct {
+    border-color: rgba(16, 185, 129, 0.35);
+    background: rgba(16, 185, 129, 0.1);
+    color: #6ee7b7;
+}
+
+.feedback-box.incorrect {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+}
+
+.feedback-box.info {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: rgba(59, 130, 246, 0.1);
+    color: #93c5fd;
+}
+
+@media (max-width: 1200px) {
+    .finite-demo-layout,
+    .diag-layout,
+    .interval-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .compact-table .formula-row {
+        grid-template-columns: 1fr;
+        gap: 0.3rem;
+    }
+
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .builder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diag-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .action-row {
+        flex-direction: column;
+    }
+}
+

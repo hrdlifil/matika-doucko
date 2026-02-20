@@ -1,0 +1,54 @@
+Q: Jehlan má obsah podstavy Sp = 54 cm² a výšku v = 10 cm. Jeho objem je:
+Options:
+  (a) 180 cm³ <= key
+  (b) 540 cm³
+  (c) 270 cm³
+
+[2] id=- type=- answer=- correct=b
+Q: Pravidelný čtyřboký jehlan má a = 10, v = 12. Sklonová výška je:
+Options:
+  (a) √119
+  (b) 13 <= key
+  (c) 17
+
+[3] id=- type=- answer=- correct=a
+Q: Rotační kužel má r = 3, v = 4. Jeho objem je:
+Options:
+  (a) 12π <= key
+  (b) 36π
+  (c) 15π
+
+[4] id=- type=- answer=- correct=b
+Q: Kužel má r = 4, v = 3. Celkový povrch je:
+Options:
+  (a) 20π
+  (b) 36π <= key
+  (c) 48π
+
+[5] id=- type=- answer=- correct=b
+Q: Komolý jehlan má S1 = 81, S2 = 25, v = 9. Objem je:
+Options:
+  (a) 351
+  (b) 453 <= key
+  (c) 531
+
+[6] id=- type=- answer=- correct=b
+Q: Čtyřboký komolý jehlan má a₁ = 6, a₂ = 2, v = 4. Sklonová výška je:
+Options:
+  (a) 4
+  (b) √20 <= key
+  (c) √32
+
+[7] id=- type=- answer=- correct=b
+Q: Komolý kužel má R = 6, r = 2, v = 9. Jeho objem je:
+Options:
+  (a) 108π
+  (b) 156π <= key
+  (c) 204π
+
+[8] id=- type=- answer=- correct=b
+Q: Komolý kužel má R = 8, r = 5, v = 4. Jaký je plášť?
+Options:
+  (a) 52π
+  (b) 65π <= key
+  (c) 91π

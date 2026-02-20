@@ -1,0 +1,54 @@
+Q: Krychle má hranu a = 5 cm. Jaký je její povrch?
+Options:
+  (a) 125 cm²
+  (b) 150 cm² <= key
+  (c) 25 cm²
+
+[2] id=- type=- answer=- correct=c
+Q: Krychle s hranou a = 2 má tělesovou úhlopříčku:
+Options:
+  (a) 2√2
+  (b) 4
+  (c) 2√3 <= key
+
+[3] id=- type=- answer=- correct=a
+Q: Kvádr má hrany 3, 4, 12. Tělesová úhlopříčka je:
+Options:
+  (a) 13 <= key
+  (b) 12
+  (c) 11
+
+[4] id=- type=- answer=- correct=b
+Q: Kvádr má hrany 2, 3, 4. Jeho povrch je:
+Options:
+  (a) 24
+  (b) 52 <= key
+  (c) 48
+
+[5] id=- type=- answer=- correct=a
+Q: Válec má r = 2 a v = 5. Jeho objem je:
+Options:
+  (a) 20π <= key
+  (b) 10π
+  (c) 40π
+
+[6] id=- type=- answer=- correct=b
+Q: Válec má r = 4, v = 6. Celkový povrch je:
+Options:
+  (a) 64π
+  (b) 80π <= key
+  (c) 96π
+
+[7] id=- type=- answer=- correct=a
+Q: Kolmý hranol má Sp = 18 cm² a v = 7 cm. Objem je:
+Options:
+  (a) 126 cm³ <= key
+  (b) 144 cm³
+  (c) 252 cm³
+
+[8] id=- type=- answer=- correct=a
+Q: Kolmý hranol má Sp = 18 cm², op = 20 cm, v = 7 cm. Celkový povrch je:
+Options:
+  (a) 176 cm² <= key
+  (b) 194 cm²
+  (c) 214 cm²

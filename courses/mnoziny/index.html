@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Množiny - strukturovaný kurz od základního úvodu přes množinové vztahy a operace až po kartézský součin a zobrazení množin.">
+    <title>Množiny – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html#kurzy">Kurzy</a></li>
+                <li><a href="../../index.html#procvicovani">Procvičování</a></li>
+                <li><a href="../../index.html#komunita">Komunita</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+                <a href="#" class="btn-primary">Registrace zdarma</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="course-hero">
+        <div class="course-hero-container">
+            <div class="course-breadcrumb">
+                <a href="../../index.html">Domů</a>
+                <span class="breadcrumb-separator">›</span>
+                <a href="../../index.html#kurzy">Kurzy</a>
+                <span class="breadcrumb-separator">›</span>
+                <span class="breadcrumb-current">Množiny</span>
+            </div>
+            <div class="course-hero-content">
+                <div class="course-hero-info">
+                    <span class="course-badge">Nový kurz</span>
+                    <h1 class="course-title">Množiny</h1>
+                    <p class="course-description">
+                        Kurz je připravený jako struktura pěti kapitol od základního úvodu do množin,
+                        přes vztahy a operace, až po kartézský součin a zobrazení množin.
+                        Obsah jednotlivých témat je nyní připravený v menu a sekcích pro následné doplnění.
+                    </p>
+                    <div class="course-stats">
+                        <div class="course-stat">
+                            <span class="stat-icon">📚</span>
+                            <span class="stat-value">5 kapitol</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">⏱️</span>
+                            <span class="stat-value">~6 hodin</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🧩</span>
+                            <span class="stat-value">15 témat</span>
+                        </div>
+                        <div class="course-stat">
+                            <span class="stat-icon">🎯</span>
+                            <span class="stat-value">Středně pokročilý</span>
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a href="lessons/uvod-a-graficke-zobrazeni/index.html#uvod-do-mnozin" class="btn-primary btn-large">Začít kurz</a>
+                        <a href="#obsah" class="btn-outline btn-large">Zobrazit obsah</a>
+                    </div>
+                </div>
+                <div class="course-hero-visual">
+                    <div class="course-icon-large">
+                        <svg viewBox="0 0 200 200" class="geometry-svg">
+                            <line x1="20" y1="170" x2="180" y2="170" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <line x1="20" y1="170" x2="20" y2="30" stroke="currentColor" stroke-width="1.5" opacity="0.3" />
+                            <circle cx="95" cy="95" r="42" fill="none" stroke="#6366f1" stroke-width="2.8" />
+                            <circle cx="125" cy="95" r="42" fill="none" stroke="#10b981" stroke-width="2.8" />
+                            <text x="74" y="73" fill="#93c5fd" font-size="12" font-family="Inter">A</text>
+                            <text x="138" y="73" fill="#6ee7b7" font-size="12" font-family="Inter">B</text>
+                            <text x="106" y="101" fill="#fbbf24" font-size="10" font-family="Inter">A ∩ B</text>
+                        </svg>
+                    </div>
+                    <div class="floating-formulas">
+                        <div class="formula formula-1">A ∪ B</div>
+                        <div class="formula formula-2">A ∩ B</div>
+                        <div class="formula formula-3">A × B</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-progress-section">
+        <div class="section-container">
+            <div class="progress-card">
+                <div class="progress-info">
+                    <span class="progress-label">Váš pokrok v kurzu</span>
+                    <span class="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 0%;"></div>
+                </div>
+                <p class="progress-hint">Přihlaste se pro sledování pokroku</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content-section" id="obsah">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Obsah kurzu</h2>
+                <p class="section-subtitle">Struktura kapitol a témat připravená pro následné doplnění výkladu</p>
+            </div>
+
+            <div class="chapters-list">
+                <div class="chapter-card chapter-card-active" data-chapter="1">
+                    <div class="chapter-header">
+                        <div class="chapter-number">1</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Úvod a grafické zobrazení</h3>
+                            <p class="chapter-description">Úvod do množin, typy množin a Vennovy diagramy</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/uvod-a-graficke-zobrazeni/index.html#uvod-do-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Úvod do množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-a-graficke-zobrazeni/index.html#typy-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Typy množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/uvod-a-graficke-zobrazeni/index.html#vennovy-diagramy-a-zakresleni-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Vennovy diagramy a zakreslení množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="2">
+                    <div class="chapter-header">
+                        <div class="chapter-number">2</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Množinové vztahy</h3>
+                            <p class="chapter-description">Podmnožina množiny (inkluze) a rovnost množin</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">2 témata</span>
+                            <span class="chapter-time">~30 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/mnozinove-vztahy/index.html#podmnozina-mnoziny-inkluze" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Podmnožina množiny (inkluze)</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/mnozinove-vztahy/index.html#rovnost-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rovnost množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="3">
+                    <div class="chapter-header">
+                        <div class="chapter-number">3</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Operace s množinami</h3>
+                            <p class="chapter-description">Průnik, sjednocení, rozdíl a doplněk množiny</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">4 témata</span>
+                            <span class="chapter-time">~60 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/operace-s-mnozinami/index.html#prunik-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Průnik množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-s-mnozinami/index.html#sjednoceni-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Sjednocení množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-s-mnozinami/index.html#rozdil-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Rozdíl množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/operace-s-mnozinami/index.html#doplnek-mnoziny" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Doplněk množiny</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="4">
+                    <div class="chapter-header">
+                        <div class="chapter-number">4</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Kartézský součin množin</h3>
+                            <p class="chapter-description">Definice kartézského součinu a případy konečných i nekonečných množin</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/kartezsky-soucin-mnozin/index.html#definice-kartezskeho-soucinu" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Definice kartézského součinu</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kartezsky-soucin-mnozin/index.html#kartezsky-soucin-konecnych-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kartézský součin konečných množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/kartezsky-soucin-mnozin/index.html#kartezsky-soucin-nekonecnych-mnozin" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Kartézský součin nekonečných množin</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="chapter-card chapter-card-active" data-chapter="5">
+                    <div class="chapter-header">
+                        <div class="chapter-number">5</div>
+                        <div class="chapter-info">
+                            <h3 class="chapter-title">Zobrazení množin</h3>
+                            <p class="chapter-description">Injektivní, surjektivní a bijektivní zobrazení, skládání a inverzní zobrazení</p>
+                        </div>
+                        <div class="chapter-meta">
+                            <span class="chapter-lessons">3 témata</span>
+                            <span class="chapter-time">~45 min</span>
+                            <span class="chapter-badge-interactive">🧱 Struktura</span>
+                        </div>
+                        <button class="chapter-toggle" aria-label="Rozbalit kapitolu">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="chapter-content">
+                        <ul class="lessons-list">
+                            <a href="lessons/zobrazeni-mnozin/index.html#injektivni-surjektivni-a-bijektivni-zobrazeni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Injektivní, surjektivní a bijektivní zobrazení</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/zobrazeni-mnozin/index.html#skladani-zobrazeni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Skládání zobrazení</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                            <a href="lessons/zobrazeni-mnozin/index.html#inverzni-zobrazeni" class="lesson-item lesson-item-link">
+                                <span class="lesson-icon">📘</span>
+                                <span class="lesson-title">Inverzní zobrazení</span>
+                                <span class="lesson-duration">15 min</span>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-outcomes">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Co se v kurzu pokryje</h2>
+                <p class="section-subtitle">Přehled dovedností připravených v osnově</p>
+            </div>
+            <div class="outcomes-grid">
+                <div class="outcome-card">
+                    <div class="outcome-icon">∈</div>
+                    <h3>Základy množin</h3>
+                    <p>Práce se zápisem množin a jejich základními typy.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">⊂</div>
+                    <h3>Množinové vztahy</h3>
+                    <p>Rozpoznání podmnožiny a ověřování rovnosti množin.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">∪</div>
+                    <h3>Operace</h3>
+                    <p>Průnik, sjednocení, rozdíl a doplněk množiny v příkladech.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">×</div>
+                    <h3>Kartézský součin</h3>
+                    <p>Sestavení a interpretace uspořádaných dvojic z množin.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">f</div>
+                    <h3>Zobrazení</h3>
+                    <p>Injektivita, surjektivita, bijektivita a inverzní funkce.</p>
+                </div>
+                <div class="outcome-card">
+                    <div class="outcome-icon">🧠</div>
+                    <h3>Abstraktní myšlení</h3>
+                    <p>Přesná práce s definicemi a logickými vazbami mezi pojmy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Připraven začít?</h2>
+                <p>Struktura kurzu Množiny je připravená. V dalším kroku lze doplnit detailní obsah každého tématu.</p>
+                <a href="lessons/uvod-a-graficke-zobrazeni/index.html#uvod-do-mnozin" class="btn-white btn-large">Přejít do 1. kapitoly</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <a href="../../index.html" class="logo">
+                    <span class="logo-icon">ČVUT</span>
+                    <span class="logo-text">FBMI</span>
+                </a>
+                <p>Příprava na přijímací zkoušky z matematiky pro ČVUT FBMI.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Učení</h4>
+                    <a href="#">Kurzy</a>
+                    <a href="#">Procvičování</a>
+                    <a href="#">Výzvy</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Komunita</h4>
+                    <a href="#">Fórum</a>
+                    <a href="#">Discord</a>
+                    <a href="#">Události</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Společnost</h4>
+                    <a href="#">O nás</a>
+                    <a href="#">Kariéra</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ČVUT FBMI. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+    <script src="course.js"></script>
+</body>
+
+</html>

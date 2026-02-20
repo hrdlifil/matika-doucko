@@ -1,0 +1,46 @@
+Q: Určete sdružené číslo k \(z=-2+5i\).
+Options:
+  (a) \(2+5i\)
+  (b) \(-2+5i\)
+  (c) \(-2-5i\) <= key
+  (d) \(2-5i\)
+
+[2] id=- type=choice answer=d correct=-
+Q: Určete modul čísla \(z=3-4i\).
+Options:
+  (a) \(1\)
+  (b) \(7\)
+  (c) \(\sqrt{7}\)
+  (d) \(5\) <= key
+
+[3] id=- type=choice answer=b correct=-
+Q: Jaký typ řešení má rovnice \(x^2+2x+5=0\)?
+Options:
+  (a) Dva různé reálné kořeny.
+  (b) Dva komplexně sdružené kořeny. <= key
+  (c) Jeden dvojnásobný reálný kořen.
+  (d) Žádný kořen ani v \(\mathbb{C}\).
+
+[4] id=- type=choice answer=d correct=-
+Q: Vyberte správné řešení rovnice \(x^2-4x+8=0\).
+Options:
+  (a) \(x=4\pm2i\)
+  (b) \(x=-2\pm2i\)
+  (c) \(x=2\pm i\)
+  (d) \(x=2\pm2i\) <= key
+
+[5] id=- type=choice answer=a correct=-
+Q: Co geometricky znamená násobení komplexního čísla číslem \(i\)?
+Options:
+  (a) Rotaci o \(90^\circ\) proti směru hodinových ručiček. <= key
+  (b) Rotaci o \(90^\circ\) po směru hodinových ručiček.
+  (c) Pouze dvojnásobné zvětšení modulu.
+  (d) Zrcadlení podle osy Re.
+
+[6] id=- type=choice answer=c correct=-
+Q: Spočítejte součin \((1+i)(1-i)\).
+Options:
+  (a) \(0\)
+  (b) \(1\)
+  (c) \(2\) <= key
+  (d) \(2i\)

@@ -1,0 +1,1796 @@
+[
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Jaký je definiční obor funkce \\(f(x)=\\arcsin x\\)?",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Určete hlavní hodnotu \\(\\arcsin\\left(\\frac12\\right)\\).",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Určete hlavní hodnotu \\(\\arccos\\left(-\\frac12\\right)\\).",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Jaká je hodnota \\(\\arcsin x+\\arccos x\\) pro \\(x\\in[-1,1]\\)?",
+    "id": "exercise4",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Jaký je obor hodnot \\(\\arctan x\\)?",
+    "id": "exercise5",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Vypočtěte \\(\\arctan(1)\\).",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Při větvi \\(\\arccot x\\in(0,\\pi)\\) platí \\(\\arccot(-1)=\\)",
+    "id": "exercise7",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "question": "Vyřešte rovnici \\(\\arctan x=-\\frac{\\pi}{3}\\).",
+    "id": "exercise8",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Jaký je obor hodnot funkce \\(f(x)=3^x\\)?",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Vyřešte rovnici \\(2^x=8\\).",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Funkce \\(f(x)=\\left(\\frac13\\right)^x\\) je na \\(\\mathbb{R}\\):",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Jaká je vodorovná asymptota funkce \\(g(x)=2^{x-3}+5\\)?",
+    "id": "exercise4",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Určete obor hodnot funkce \\(g(x)=-3\\cdot2^x+4\\).",
+    "id": "exercise5",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Vyřešte \\(\\left(\\frac12\\right)^{x-1}=4\\).",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Vypočtěte \\(g(0)\\) pro \\(g(x)=3\\cdot2^{x-2}-1\\).",
+    "id": "exercise7",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "question": "Které tvrzení o základní exponenciále \\(f(x)=a^x\\) je pravdivé?",
+    "id": "exercise8",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "Určete vrchol funkce \\(f(x)=2x^2-8x+5\\).",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "K funkci \\(f(x)=x^2\\) vezměte \\(g(x)=f(x-3)-4\\). Kde je vrchol \\(g\\)?",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "Určete obor hodnot funkce \\(f(x)=-x^2+4x-3\\).",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "Kde je funkce \\(f(x)=x^2-5x+6\\) záporná?",
+    "id": "exercise4",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "Kolik reálných kořenů má rovnice \\(3x^2+6x+3=0\\)?",
+    "id": "exercise5",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "question": "Kdy se graf funkce \\(F(x)=|x^2-1|\\) shoduje s původní funkcí \\(q(x)=x^2-1\\)?",
+    "id": "exercise6",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Najděte nulový bod funkce \\(f(x)=-3x+6\\).",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Body \\(A(1,3)\\), \\(B(4,-3)\\) určují přímku:",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Nechť \\(f(x)=x-1\\). Jaký předpis má \\(g(x)=f(x-2)+3\\)?",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Pro \\(f(x)=0x-4\\) platí:",
+    "id": "exercise4",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Kde je kladná funkce \\(f(x)=2x-5\\)?",
+    "id": "exercise5",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "question": "Která lineární funkce je současně sudá i lichá?",
+    "id": "exercise6",
+    "data-correct": "d"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Jaký je definiční obor funkce \\(f(x)=\\log_2 x\\)?",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Vyřešte rovnici \\(\\log_3 x=2\\).",
+    "id": "exercise2",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Vyřešte rovnici \\(\\log_{\\frac12} x=-3\\).",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Jaká je asymptota funkce \\(g(x)=\\log_2(x-4)+1\\)?",
+    "id": "exercise4",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Určete obor hodnot funkce \\(g(x)=-2\\log_5(x)+3\\).",
+    "id": "exercise5",
+    "data-correct": "d"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Funkce \\(f(x)=\\log_{\\frac13}x\\) je na \\((0,\\infty)\\):",
+    "id": "exercise6",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Vyřešte \\(\\log_2(x-1)=3\\).",
+    "id": "exercise7",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "question": "Vypočtěte \\(\\log_{10}(0.001)\\).",
+    "id": "exercise8",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Obor hodnot \\(2x^4\\):",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Střed \\(g(x)=(x+1)^3-2\\):",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Pro \\(3/x^5\\) platí:",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Monotónnost \\(1/x^2\\):",
+    "id": "exercise4",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Obor hodnot \\(-2/(x-1)^2+3\\):",
+    "id": "exercise5",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "question": "Znaménko \\(-4/x^3\\) pro \\(x>0\\):",
+    "id": "exercise6",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Jsou funkce \\(f(x)=x^2-1\\) a \\(g(x)=(x-1)(x+1)\\) na \\(\\mathbb{R}\\) rovné?",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Na maximálních definičních oborech jsou funkce \\(f(x)=\\frac{x^2-1}{x-1}\\) a \\(g(x)=x+1\\):",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Je dáno \\(f(x)=\\sqrt{x}\\), \\(g(x)=x-4\\). Definiční obor \\((f\\circ g)(x)\\) je:",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Pro \\(f(x)=2x+3\\), \\(g(x)=x^2\\) je \\((g\\circ f)(x)\\):",
+    "id": "exercise4",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Inverzní funkce k \\(f(x)=3x-5\\) je:",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "K \\(f(x)=x^2\\) na \\([0,\\infty)\\) platí:",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Pro bijekci \\(f:D\\to H\\) je definiční obor inverzní funkce \\(f^{-1}\\):",
+    "id": "exercise7",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "question": "Jsou-li \\(f\\) a \\(g\\) navzájem inverzní, pak pro všechna \\(x\\in D(g)\\) platí:",
+    "id": "exercise8",
+    "data-correct": "d"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Určete definiční obor funkce \\(f(x)=\\frac{1}{x+3}\\).",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Která relace je funkcí?",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Určete obor hodnot funkce \\(g(x)=x^2+1\\).",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Bod \\((2,5)\\) leží na grafu funkce \\(f(x)=ax+1\\). Jaká je hodnota \\(a\\)?",
+    "id": "exercise4",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Pro funkci \\(f(x)=|x-4|-2\\) je hodnota \\(f(1)\\):",
+    "id": "exercise5",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "question": "Je výraz \\(\\sqrt{x-2}\\) definovaný pro \\(x=1\\)?",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Která funkce je na \\(\\mathbb{R}\\) striktně rostoucí a zároveň prostá?",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Funkce \\(f(x)=2\\) na \\(\\mathbb{R}\\) je:",
+    "id": "exercise2",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Určete paritu funkce \\(f(x)=x^3+x\\).",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Funkce \\(f(x)=\\frac{1}{1+x^2}\\) je na \\(\\mathbb{R}\\):",
+    "id": "exercise4",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Na intervalu \\([-1,5]\\) má funkce \\(f(x)=x^2-4x+1\\) absolutní minimum:",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Jaká je základní perioda \\(f(x)=\\cos(4x)\\)?",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Která funkce je periodická s periodou \\(\\pi\\)?",
+    "id": "exercise7",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "question": "Je funkce \\(f(x)=x^2\\) periodická na \\(\\mathbb{R}\\)?",
+    "id": "exercise8",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Který goniometrický tvar odpovídá číslu \\(z=-1+\\sqrt3\\,i\\)?",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Převeďte \\(z=-2-2i\\) do goniometrického tvaru (úhel v \\([0^\\circ,360^\\circ)\\)).",
+    "data-type": "choice",
+    "data-answer": "d"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Převeďte \\(z=4(\\cos60^\\circ+i\\sin60^\\circ)\\) do tvaru \\(a+bi\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Vypočtěte \\(z_1-z_2\\) pro \\(z_1=3\\,\\mathrm{cis}\\,0^\\circ\\), \\(z_2=4\\,\\mathrm{cis}\\,90^\\circ\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Určete \\((3\\,\\mathrm{cis}\\,25^\\circ)(2\\,\\mathrm{cis}\\,40^\\circ)\\).",
+    "data-type": "choice",
+    "data-answer": "a"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "question": "Vyjádřete v algebraickém tvaru \\(\\frac{6\\,\\mathrm{cis}\\,135^\\circ}{3\\,\\mathrm{cis}\\,45^\\circ}\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Spočítejte \\((2-5i)+(-7+3i)\\).",
+    "data-type": "choice",
+    "data-answer": "b"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Vypočítejte \\((6+4i)-(-2+9i)\\) a zadejte ve tvaru \\(a+bi\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Spočítejte \\((3+i)(2-4i)\\).",
+    "data-type": "choice",
+    "data-answer": "d"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Vypočítejte \\((2-3i)(-1+2i)\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Určete \\(\\frac{4+2i}{1-i}\\).",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Vypočítejte \\(\\frac{3-5i}{2+i}\\).",
+    "data-type": "complex-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Určete \\(|-6+8i|\\).",
+    "data-type": "number-input"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "question": "Je dáno \\(|z|=3\\). Které tvrzení je správné?",
+    "data-type": "choice",
+    "data-answer": "a"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Určete kořeny rovnice \\(x^2-8x+20=0\\).",
+    "data-type": "choice",
+    "data-answer": "b"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Která rovnice má kořeny \\(-2+3i\\) a \\(-2-3i\\)?",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Sestavte monickou rovnici s kořeny \\(1-4i\\) a \\(1+4i\\).",
+    "data-type": "choice",
+    "data-answer": "d"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Určete kořeny rovnice \\(2x^2-10x+26=0\\).",
+    "data-type": "choice",
+    "data-answer": "b"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Vyberte úplný rozklad nad \\(\\mathbb{C}\\) pro \\(x^3-3x^2+4x-12\\).",
+    "data-type": "choice",
+    "data-answer": "a"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "question": "Rozložte v \\(\\mathbb{R}[x]\\) mnohočlen \\(x^3-6x^2+13x-10\\).",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Určete sdružené číslo k \\(z=-2+5i\\).",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Určete modul čísla \\(z=3-4i\\).",
+    "data-type": "choice",
+    "data-answer": "d"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Jaký typ řešení má rovnice \\(x^2+2x+5=0\\)?",
+    "data-type": "choice",
+    "data-answer": "b"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Vyberte správné řešení rovnice \\(x^2-4x+8=0\\).",
+    "data-type": "choice",
+    "data-answer": "d"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Co geometricky znamená násobení komplexního čísla číslem \\(i\\)?",
+    "data-type": "choice",
+    "data-answer": "a"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "question": "Spočítejte součin \\((1+i)(1-i)\\).",
+    "data-type": "choice",
+    "data-answer": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\((x-4)(x+1)(x-2)\\le0\\).",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\((x+3)^2(x-1)&gt;0\\).",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\frac{(x-2)(x+1)}{(x-4)(x+3)}&gt;0\\).",
+    "id": "exercise3",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\frac{x-5}{x-5}\\ge0\\).",
+    "id": "exercise4",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\(x^4-5x^2+4\\le0\\).",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\((x-1)^4(x+2)^3&lt;0\\).",
+    "id": "exercise6",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\(|(x-1)(x+1)|\\le0\\).",
+    "id": "exercise7",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "question": "Vyřeš \\(|x^2-4x+3|&gt;2\\).",
+    "id": "exercise8",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(2^{x+1}&gt;8\\).",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\left(\\frac13\\right)^{2x-1}\\le\\left(\\frac13\\right)^5\\).",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(5^{x^2-4}\\ge1\\).",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\log_2(x-1)&lt;3\\).",
+    "id": "exercise4",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\log_{1/2}(2x+3)\\ge-1\\).",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\log_3(x^2-4)\\le2\\).",
+    "id": "exercise6",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(4^{x-1}&lt;7\\).",
+    "id": "exercise7",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\log_2(x)+\\log_2(x-2)\\ge3\\).",
+    "id": "exercise8",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\,x^2-5x+6&lt;0\\).",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\,-2x^2+8x-6\\ge0\\).",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\,x^2-6x+9&gt;0\\).",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\,|x^2-4|\\le0\\).",
+    "id": "exercise4",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Vyřeš \\(\\,|x^2-5x+6|\\le2\\).",
+    "id": "exercise5",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "question": "Jaké je řešení \\(\\,|x^2+1|&lt;0.2\\)?",
+    "id": "exercise6",
+    "data-correct": "d"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(7-3x&lt;1\\).",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(4x-6\\ge4x+2\\).",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(-1\\le3x+2&lt;11\\).",
+    "id": "exercise3",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(2x-5&gt;1\\) nebo \\(x+4\\le1\\).",
+    "id": "exercise4",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(|x+2|&lt;5\\).",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Jaké je řešení \\(|4x-1|\\le-0.5\\)?",
+    "id": "exercise6",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "question": "Vyřeš \\(|2x-6|&gt;8\\).",
+    "id": "exercise7",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\{\\,3x-1>5,\\;x+4\\le10\\,\\}\\).",
+    "id": "exercise1",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\{\\,-2x+4\\le0,\\;x-3<2\\,\\}\\).",
+    "id": "exercise2",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\{\\,x^2-9\\le0,\\;x>1\\,\\}\\).",
+    "id": "exercise3",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Vyřeš \\(\\{\\,|x+2|\\ge5,\\;x<4\\,\\}\\).",
+    "id": "exercise4",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Patří bod \\((4,1)\\) do soustavy \\(\\{\\,x+y\\le6,\\;x-2y\\ge0\\,\\}\\)?",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Pro soustavu \\(\\{\\,2x+y>3,\\;y\\le2\\,\\}\\) vyber správný typ hranic.",
+    "id": "exercise6",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Jaké jsou vrcholy řešení soustavy \\(\\{\\,x\\ge0,\\;y\\ge0,\\;x+y\\le4\\,\\}\\)?",
+    "id": "exercise7",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "question": "Vyřeš soustavu \\(\\{\\,x+y\\le1,\\;x+y>3\\,\\}\\).",
+    "id": "exercise8",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Vyřeš nerovnici \\(\\,4-3x&lt;1\\).",
+    "id": "exercise1",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Vyřeš dvojitou nerovnici \\(\\,2&lt;x+5\\le9\\).",
+    "id": "exercise2",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Vyřeš kvadratickou nerovnici \\(\\,x^2-x-6\\le0\\).",
+    "id": "exercise3",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Vyřeš racionální nerovnici \\(\\,\\frac{x-4}{x+1}&gt;0\\).",
+    "id": "exercise4",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Vyřeš nerovnici s absolutní hodnotou \\(\\,|3x-6|&lt;9\\).",
+    "id": "exercise5",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "question": "Jaké je řešení nerovnice \\(\\,|2x+1|\\ge -4\\)?",
+    "id": "exercise6",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html",
+    "question": "Který útvar má počáteční bod a pokračuje neomezeně jedním směrem?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html",
+    "question": "Kdy jsou úsečky AB a CD shodné?",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html",
+    "question": "Co je osa úhlu?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html",
+    "question": "Jaká je odchylka dvou rovnoběžných přímek?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Co značí ve Heronově vzorci proměnná s?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Jaký je obsah trojúhelníku se stranami 13, 14, 15?",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Pro strany 5, 6, 7 je semiperimetr s roven:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Který vztah je klíčový v odvození přes projekci x?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Pokud je výraz s(s-a)(s-b)(s-c) záporný, znamená to typicky:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "question": "Hlavní výhoda Heronova vzorce v praxi je, že:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Co je kružnice?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Který vzorec platí pro obsah výseče o středovém úhlu φ (v radiánech)?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Pokud je vzdálenost přímky od středu kružnice menší než poloměr (d &lt; r), jde o:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Co platí v dotykovém bodě tečny?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Pro r₁ = 4, r₂ = 2 a d = 6 jsou kružnice:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "question": "Pro r₁ = 5, r₂ = 3 a d = 1 platí:",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "question": "Kolik úhlopříček má osmiúhelník (n = 8)?",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "question": "Jaký je vnitřní úhel pravidelného šestiúhelníku?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "question": "Co vždy platí pro každý obdélník?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "question": "Pro tětivový čtyřúhelník platí:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "question": "Pro tečnový čtyřúhelník s délkami stran a, b, c, d v pořadí platí:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Co platí pro příčku trojúhelníku spojující středy dvou stran?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Kde leží střed kružnice vepsané?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Jaký údaj je navíc potřeba u věty SUS pro shodnost trojúhelníků?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Pro podobné trojúhelníky s koeficientem k = 2 platí poměr obsahů:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Která věta o podobnosti trojúhelníků využívá shodu dvou úhlů?",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "question": "Pokud v trojúhelníku OA = OB = OC, bod O je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Jehlan má obsah podstavy Sp = 54 cm² a výšku v = 10 cm. Jeho objem je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Pravidelný čtyřboký jehlan má a = 10, v = 12. Sklonová výška je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Rotační kužel má r = 3, v = 4. Jeho objem je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Kužel má r = 4, v = 3. Celkový povrch je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Komolý jehlan má S1 = 81, S2 = 25, v = 9. Objem je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Čtyřboký komolý jehlan má a₁ = 6, a₂ = 2, v = 4. Sklonová výška je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Komolý kužel má R = 6, r = 2, v = 9. Jeho objem je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "question": "Komolý kužel má R = 8, r = 5, v = 4. Jaký je plášť?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Koule má poloměr r = 7 cm. Její povrch je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Koule má průměr d = 10 cm. Její objem je:",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Pro kouli r = 10 cm a kulovou úseč výšky v = 2 cm je poloměr podstavy:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Objem kulové úseče pro r = 5 cm a v = 2 cm je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Objem kulové výseče pro r = 5 cm a odpovídající výšku v = 2 cm je:",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Kulová vrstva má a = 4 cm, b = 4 cm a h = 6 cm. Objem je:",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Kulový pás má pro r = 5 cm a h = 6 cm plochu:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "question": "Který vztah je správný pro kouli?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Jaký je obsah čtverce s úhlopříčkou u = 10?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Obdélník má strany 8 a 5. Kolik je jeho obvod?",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Která trojice stran netvoří trojúhelník?",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Kolik je přibližně obsah trojúhelníku se stranami 7, 8, 9?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Kosodélník má a = 10, b = 6, γ = 30°. Obsah je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Kosočtverec má diagonály 10 a 24. Jaký má obsah?",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Lichoběžník má základny 12 a 8 a výšku 5. Kolik je jeho obsah?",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "question": "Střední příčka lichoběžníku se základnami 14 a 6 má délku:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Krychle má hranu a = 5 cm. Jaký je její povrch?",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Krychle s hranou a = 2 má tělesovou úhlopříčku:",
+    "data-correct": "c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Kvádr má hrany 3, 4, 12. Tělesová úhlopříčka je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Kvádr má hrany 2, 3, 4. Jeho povrch je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Válec má r = 2 a v = 5. Jeho objem je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Válec má r = 4, v = 6. Celkový povrch je:",
+    "data-correct": "b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Kolmý hranol má Sp = 18 cm² a v = 7 cm. Objem je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "question": "Kolmý hranol má Sp = 18 cm², op = 20 cm, v = 7 cm. Celkový povrch je:",
+    "data-correct": "a"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Najděte všechna řešení rovnice x2 = 2x + 3.",
+    "id": "exercise-g1",
+    "data-type": "set",
+    "data-answer": "-1,3",
+    "data-solution": "K = {-1, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "U rovnice 2x + 1 = x2 - 3 zapište větší kořen (přibližně).",
+    "id": "exercise-g2",
+    "data-type": "number",
+    "data-answer": "3.2360679775",
+    "data-solution": "větší kořen je x = 1 + √5 ≈ 3,236"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Co představují průsečíky grafů y = f(x) a y = g(x)?",
+    "id": "exercise-g3",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: x-ové souřadnice průsečíků jsou řešení f(x) = g(x)"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Pro kterou hodnotu p nemá rovnice (p - 1)x = p + 3 řešení?",
+    "id": "exercise-p1",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: pro p = 1 dostaneme 0x = 4, tedy bez řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Dosadíme p = 5 do rovnice (p - 2)x = p + 1. Jaké je x?",
+    "id": "exercise-p2",
+    "data-type": "number",
+    "data-answer": "2",
+    "data-solution": "x = 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Pro kterou hodnotu k má rovnice x2 - 2(k + 1)x + k2 - 1 = 0 právě jedno reálné řešení?",
+    "id": "exercise-p3",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: právě pro k = -1 je diskriminant nulový"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Dosadíme m = 4 do rovnice (m - 2)x = m2 - 4. Určete x.",
+    "id": "exercise-p4",
+    "data-type": "number",
+    "data-answer": "6",
+    "data-solution": "x = 6"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Ze vztahu v = v0 + at spočítejte t pro v = 23, v0 = 5, a = 3.",
+    "id": "exercise-f1",
+    "data-type": "number",
+    "data-answer": "6",
+    "data-solution": "t = 6"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Vyjádřete h ze vzorce S = (ah)/2.",
+    "id": "exercise-f2",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: h = 2S / a"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Použijte R2 = RR1/(R1 - R). Pro R = 6 a R1 = 10 určete R2.",
+    "id": "exercise-f3",
+    "data-type": "number",
+    "data-answer": "15",
+    "data-solution": "R₂ = 15"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Jak správně vyjádříte poloměr z rovnice A = πr2 v geometrii?",
+    "id": "exercise-f4",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: r = √(A/π), protože poloměr bereme nezáporný"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "question": "Ze vzorce S = (a va)/2 vyjádřete a pro S = 24 a va = 6.",
+    "id": "exercise-f5",
+    "data-type": "number",
+    "data-answer": "8",
+    "data-solution": "a = 8"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici 2x+1 = 32.",
+    "id": "exercise-q1",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: 2^(x+1) = 32 = 2^5, tedy x + 1 = 5 a x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici 32x-1 = 27.",
+    "id": "exercise-q2",
+    "data-type": "number",
+    "data-answer": "2",
+    "data-solution": "x = 2, protože 3^(2x-1) = 27 = 3^3 ⇒ 2x - 1 = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici 52x - 6·5x + 5 = 0.",
+    "id": "exercise-q3",
+    "data-type": "set",
+    "data-answer": "0,1",
+    "data-solution": "K = {0, 1}; po substituci t = 5^x vyjde (t - 1)(t - 5) = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Kolik reálných řešení má rovnice 4x-2 = -3?",
+    "id": "exercise-q4",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: exponenciální výraz je vždy kladný, takže 4^(x-2) = -3 nemá řešení v ℝ"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici 2x = 7 (zaokrouhlete na 3 desetinná místa).",
+    "id": "exercise-q5",
+    "data-type": "number",
+    "data-answer": "2.807354922",
+    "data-solution": "x = log_2(7) = ln 7 / ln 2 ≈ 2,807"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici 9x = 3x+2.",
+    "id": "exercise-q6",
+    "data-type": "number",
+    "data-answer": "2",
+    "data-solution": "x = 2, protože 9^x = (3^2)^x = 3^(2x) a tedy 2x = x + 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici log₂(x - 1) = 5.",
+    "id": "exercise-q7",
+    "data-type": "number",
+    "data-answer": "33",
+    "data-solution": "x = 33, protože log_2(x-1)=5 ⇒ x-1=2^5=32"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Pro jaké x je definován výraz log₃(2x - 7)?",
+    "id": "exercise-q8",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: argument 2x - 7 musí být kladný, tedy x &gt; 7/2"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici log₅(x2 - 4) = 1.",
+    "id": "exercise-q9",
+    "data-type": "set",
+    "data-answer": "-3,3",
+    "data-solution": "K = {−3, 3}; po převodu vyjde x^2 - 4 = 5 ⇒ x^2 = 9"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici ln(x - 1) = ln(2x - 5).",
+    "id": "exercise-q10",
+    "data-type": "number",
+    "data-answer": "4",
+    "data-solution": "x = 4; z rovnosti ln(x-1) = ln(2x-5) plyne x - 1 = 2x - 5"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Vyřešte rovnici log₂(x+3) + log₂(x-1) = 3 (zaokrouhlete na 3 desetinná místa).",
+    "id": "exercise-q11",
+    "data-type": "number",
+    "data-answer": "2.464101615",
+    "data-solution": "x = -1 + 2√3 ≈ 2,464; druhý kořen nevyhoví podmínce x &gt; 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "question": "Kolik reálných řešení má rovnice log(x - 4) = log(1 - x)?",
+    "id": "exercise-q12",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: podmínky x - 4 &gt; 0 a 1 - x &gt; 0 nelze splnit současně"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vyřešte rovnici: x² − 7x + 12 = 0.",
+    "id": "exercise-q1",
+    "data-type": "set",
+    "data-answer": "3,4",
+    "data-solution": "K = {3, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vyřešte rovnici: 2x² + x − 3 = 0.",
+    "id": "exercise-q2",
+    "data-type": "set",
+    "data-answer": "-3/2,1",
+    "data-solution": "K = {−3/2, 1}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Kolik reálných kořenů má rovnice 3x² + 2x + 5 = 0?",
+    "id": "exercise-q3",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: diskriminant je záporný, rovnice nemá reálné kořeny"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Určete dvojnásobný kořen rovnice x² − 6x + 9 = 0.",
+    "id": "exercise-q4",
+    "data-type": "number",
+    "data-answer": "3",
+    "data-solution": "x = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vypočítejte diskriminant rovnice 4x² − 4x + 1 = 0.",
+    "id": "exercise-q5",
+    "data-type": "number",
+    "data-answer": "0",
+    "data-solution": "D = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Co platí pro kvadratickou rovnici, když D &lt; 0?",
+    "id": "exercise-q6",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: při D &lt; 0 nemá kvadratická rovnice reálné kořeny"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Určete c, aby rovnice x² − 4x + c = 0 měla právě jeden reálný kořen.",
+    "id": "exercise-q7",
+    "data-type": "number",
+    "data-answer": "4",
+    "data-solution": "c = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Který vzorec je správný obecný vzorec pro kořeny kvadratické rovnice?",
+    "id": "exercise-q8",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: x = (−b ± √(b² − 4ac)) / (2a)"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vyřešte rovnici: |x² − 5x + 6| = 2.",
+    "id": "exercise-q9",
+    "data-type": "set",
+    "data-answer": "1,4",
+    "data-solution": "K = {1, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vyřešte rovnici: |x² − 1| = 0.",
+    "id": "exercise-q10",
+    "data-type": "set",
+    "data-answer": "-1,1",
+    "data-solution": "K = {−1, 1}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Kolik řešení má rovnice |x² + 2x + 5| = 1?",
+    "id": "exercise-q11",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: výraz x² + 2x + 5 je vždy kladný a minimálně 4, proto rovnost s 1 nenastane"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "question": "Vyřešte rovnici: |x² − 4x + 3| = 3.",
+    "id": "exercise-q12",
+    "data-type": "set",
+    "data-answer": "0,4",
+    "data-solution": "K = {0, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Vyřešte rovnici: 7x - 9 = 2x + 11.",
+    "id": "exercise-l1",
+    "data-type": "number",
+    "data-answer": "4",
+    "data-solution": "x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Vyřešte rovnici: 3(2x - 5) - 4 = 2(x + 7).",
+    "id": "exercise-l2",
+    "data-type": "number",
+    "data-answer": "33/4",
+    "data-solution": "x = 33/4 = 8,25"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Kolik řešení má rovnice 4(x - 2) = 4x - 8?",
+    "id": "exercise-l3",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: rovnice je identita, má nekonečně mnoho řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Vyřešte rovnici: |x - 4| = 9.",
+    "id": "exercise-l4",
+    "data-type": "set",
+    "data-answer": "-5,13",
+    "data-solution": "K = {−5, 13}"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Vyřešte rovnici: |x - 1| = x + 3.",
+    "id": "exercise-l5",
+    "data-type": "number",
+    "data-answer": "-1",
+    "data-solution": "x = −1"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Jaká je množina řešení rovnice |3x - 6| = −2?",
+    "id": "exercise-l6",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: absolutní hodnota nemůže být rovna zápornému číslu"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Určete x-souřadnici průsečíku přímek y = 4x - 1 a y = x + 8.",
+    "id": "exercise-l7",
+    "data-type": "number",
+    "data-answer": "3",
+    "data-solution": "x = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Kolik průsečíků mají přímky y = 2x + 5 a y = 2x - 1?",
+    "id": "exercise-l8",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: přímky jsou rovnoběžné, proto nemají průsečík"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Kolik řešení má rovnice 5 − 2x = 5 − 2x?",
+    "id": "exercise-l9",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: obě strany rovnice jsou stejné, jde o identitu"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Pro kterou hodnotu m má rovnice (m - 1)x = 2m - 2 nekonečně mnoho řešení?",
+    "id": "exercise-l10",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: pro m = 1 dostaneme rovnici 0x = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Pro kterou hodnotu k nemá rovnice (k + 3)x = k - 1 řešení?",
+    "id": "exercise-l11",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: pro k = −3 vyjde 0x = −4, tedy bez řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "question": "Dosadíme p = 5 do rovnice (p - 2)x = p + 7. Určete x.",
+    "id": "exercise-l12",
+    "data-type": "number",
+    "data-answer": "4",
+    "data-solution": "x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Vyřešte rovnici: (x-3)(2x+5)=0.",
+    "id": "exercise-p1",
+    "data-type": "set",
+    "data-answer": "-5/2,3",
+    "data-solution": "K = {−5/2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Vyřešte rovnici: x(x-4)^2=0.",
+    "id": "exercise-p2",
+    "data-type": "set",
+    "data-answer": "0,4",
+    "data-solution": "K = {0, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Jaká je množina řešení v ℝ pro rovnici (x²+1)(x-2)=0?",
+    "id": "exercise-p3",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: v reálných číslech platí jen x = 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Určete dvojnásobný kořen rovnice (x-7)^2(x+1)=0.",
+    "id": "exercise-p4",
+    "data-type": "number",
+    "data-answer": "7",
+    "data-solution": "dvojnásobný kořen je x = 7"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Student řeší (x-4)(x+3)=0 tak, že rovnici vydělí (x-4). Co platí?",
+    "id": "exercise-p5",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: dělení výrazem (x−4) ztratí kořen x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Vyřešte rovnici: (x-8)/(x+1)=0.",
+    "id": "exercise-r1",
+    "data-type": "number",
+    "data-answer": "8",
+    "data-solution": "x = 8"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Vyřešte rovnici: 3/(x-2)=1/(x+4).",
+    "id": "exercise-r2",
+    "data-type": "number",
+    "data-answer": "-7",
+    "data-solution": "x = −7"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Vyřešte rovnici: (x+1)/(x-2)=3.",
+    "id": "exercise-r3",
+    "data-type": "number",
+    "data-answer": "7/2",
+    "data-solution": "x = 7/2"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Jaké je řešení rovnice (x²-1)/(x-1)=0 v ℝ?",
+    "id": "exercise-r4",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: z podmínky x ≠ 1 vychází jediný kořen x = −1"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "question": "Kolik řešení má rovnice (x-4)/(x-4)=0 v ℝ?",
+    "id": "exercise-r5",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: při x ≠ 4 je levá strana rovna 1, takže rovnice 1 = 0 nemá řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Jaký stupeň má rovnice x⁵ - 4x + 1 = 0?",
+    "id": "exercise-q1",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: nejvyšší mocnina je x⁵, jde tedy o rovnici 5. stupně"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Kolik kořenů má v komplexních číslech polynom 4. stupně (včetně násobností)?",
+    "id": "exercise-q2",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: polynom 4. stupně má v C vždy 4 kořeny včetně násobností"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Co platí pro polynomickou rovnici lichého stupně s reálnými koeficienty?",
+    "id": "exercise-q3",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "správně je A: polynom lichého stupně s reálnými koeficienty má alespoň jeden reálný kořen"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: x⁴ - 5x³ + 4x² = 0.",
+    "id": "exercise-q4",
+    "data-type": "set",
+    "data-answer": "0,1,4",
+    "data-solution": "K = {0, 1, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: 2x⁵ - 18x³ = 0.",
+    "id": "exercise-q5",
+    "data-type": "set",
+    "data-answer": "-3,0,3",
+    "data-solution": "K = {−3, 0, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Jaká je násobnost kořene x = 0 v rovnici x³(x - 2) = 0?",
+    "id": "exercise-q6",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: v rovnici x³(x − 2) = 0 má x = 0 násobnost 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: x³ - 6x² + 11x - 6 = 0.",
+    "id": "exercise-q7",
+    "data-type": "set",
+    "data-answer": "1,2,3",
+    "data-solution": "K = {1, 2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Které číslo je kořenem rovnice 2x³ - 3x² - 8x + 12 = 0?",
+    "id": "exercise-q8",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: pro x = 2 vyjde P(2) = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: x³ + x² - 4x - 4 = 0.",
+    "id": "exercise-q9",
+    "data-type": "set",
+    "data-answer": "-2,-1,2",
+    "data-solution": "K = {−2, −1, 2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Jaký je zbytek při dělení x³ - 6x² + 11x - 6 výrazem x - 1?",
+    "id": "exercise-q10",
+    "data-type": "number",
+    "data-answer": "0",
+    "data-solution": "zbytek je 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: x⁴ - 3x³ - 7x² + 27x - 18 = 0.",
+    "id": "exercise-q11",
+    "data-type": "set",
+    "data-answer": "-3,1,2,3",
+    "data-solution": "K = {−3, 1, 2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Co platí, když při dělení P(x) výrazem x - r vyjde zbytek 0?",
+    "id": "exercise-q12",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "správně je B: když je zbytek 0, je (x − r) činitel polynomu"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Vyřešte rovnici: x⁴ - 5x² + 4 = 0.",
+    "id": "exercise-q13",
+    "data-type": "set",
+    "data-answer": "-2,-1,1,2",
+    "data-solution": "K = {−2, −1, 1, 2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Kolik reálných řešení má rovnice x⁴ + 4x² + 4 = 0?",
+    "id": "exercise-q14",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: v reálných číslech nemá rovnice x⁴ + 4x² + 4 = 0 řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "question": "Jaká substituce je nejvhodnější pro rovnici x⁶ - 7x³ + 6 = 0?",
+    "id": "exercise-q15",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "správně je C: pro rovnici x⁶ − 7x³ + 6 = 0 je vhodná substituce t = x³"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Vyřešte soustavu x + y = 7, &nbsp; 2x - y = 8.",
+    "id": "exercise-s1-1",
+    "data-type": "choice",
+    "data-answer": "a",
+    "data-solution": "(x, y) = (5, 2)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Určete y v soustavě 3x + 2y = 7, &nbsp; x - y = 1.",
+    "id": "exercise-s1-2",
+    "data-type": "number",
+    "data-answer": "4/5",
+    "data-solution": "y = 4/5, protože ze soustavy 3x + 2y = 7, x - y = 1 vyjde x = y + 1 a 5y = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Kolik řešení má soustava 4x - 2y = 6, &nbsp; 2x - y = 3?",
+    "id": "exercise-s1-3",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "soustava má nekonečně mnoho řešení, protože druhá rovnice je polovinou první"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Vyřešte soustavu x = 2y - 1, &nbsp; 3x + y = 8.",
+    "id": "exercise-s1-4",
+    "data-type": "pair",
+    "data-answer": "15/7,11/7",
+    "data-solution": "(x, y) = (15/7, 11/7)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Vyřešte soustavu 2x + 3y = 12, &nbsp; 5x - 3y = 9.",
+    "id": "exercise-s2-5",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "(x, y) = (3, 2)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Určete y v soustavě 4x + 5y = 3, &nbsp; 2x - 5y = 9.",
+    "id": "exercise-s2-6",
+    "data-type": "number",
+    "data-answer": "-1",
+    "data-solution": "y = -1, protože ze soustavy 4x + 5y = 3, 2x - 5y = 9 vyjde x = 2 a pak y = -1"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Kolik řešení má soustava 3x - 2y = 7, &nbsp; 6x - 4y = 15?",
+    "id": "exercise-s2-7",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "žádné řešení: po úpravě vyjde spor 6x - 4y = 14 a zároveň 6x - 4y = 15"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Vyřešte soustavu 3x + 2y = 4, &nbsp; 5x - 2y = 12.",
+    "id": "exercise-s2-8",
+    "data-type": "pair",
+    "data-answer": "2,-1",
+    "data-solution": "(x, y) = (2, -1)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Vyřešte soustavu y = 3x - 2, &nbsp; y = -x + 6.",
+    "id": "exercise-s3-9",
+    "data-type": "pair",
+    "data-answer": "2,4",
+    "data-solution": "(x, y) = (2, 4)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Určete x pro soustavu y = 0,5x + 4, &nbsp; y = -x + 10.",
+    "id": "exercise-s3-10",
+    "data-type": "number",
+    "data-answer": "4",
+    "data-solution": "x = 4, protože z rovnic y = 0,5x + 4 a y = -x + 10 vyjde 0,5x + 4 = -x + 10"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Kolik řešení má soustava y = 2x + 1, &nbsp; y = 2x - 3?",
+    "id": "exercise-s3-11",
+    "data-type": "choice",
+    "data-answer": "b",
+    "data-solution": "žádné řešení: stejné směrnice, různé absolutní členy"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "question": "Kolik řešení má soustava y = -3x + 4, &nbsp; 6x + 2y = 8?",
+    "id": "exercise-s3-12",
+    "data-type": "choice",
+    "data-answer": "c",
+    "data-solution": "nekonečně mnoho řešení: rovnice y = -3x + 4 a 6x + 2y = 8 popisují stejnou přímku"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "question": "Vyřeš rovnici: 3(x + 2) - 4 = 2x + 7",
+    "id": "exercise1",
+    "data-type": "number",
+    "data-answer": "5"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "question": "Vyřeš rovnici: (x + 3)/(x - 1) = 2 (s podmínkou x ≠ 1).",
+    "id": "exercise2",
+    "data-type": "number",
+    "data-answer": "5"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "question": "Která úprava obecně není ekvivalentní bez dalších podmínek?",
+    "id": "exercise3",
+    "data-type": "choice",
+    "data-answer": "b"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "question": "Vyřeš rovnici: √(x + 6) = x. Zapiš všechna řešení oddělená čárkou.",
+    "id": "exercise4",
+    "data-type": "set",
+    "data-answer": "3"
+  }
+]

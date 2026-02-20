@@ -1,0 +1,752 @@
+[
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "b",
+    "prompt": "Rovnice sin x = √3/2 má řešení:",
+    "options": [
+      {
+        "value": "a",
+        "text": "x = π/6 + 2kπ, x = 5π/6 + 2kπ"
+      },
+      {
+        "value": "b",
+        "text": "x = π/3 + 2kπ, x = 2π/3 + 2kπ"
+      },
+      {
+        "value": "c",
+        "text": "x = π/4 + kπ"
+      },
+      {
+        "value": "d",
+        "text": "x = ±π/3 + 2kπ"
+      }
+    ],
+    "onclick": "checkExercise('ex1','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "c",
+    "prompt": "Rovnice cos x = −1 má řešení:",
+    "options": [
+      {
+        "value": "a",
+        "text": "x = 2kπ"
+      },
+      {
+        "value": "b",
+        "text": "x = π/2 + kπ"
+      },
+      {
+        "value": "c",
+        "text": "x = π + 2kπ"
+      },
+      {
+        "value": "d",
+        "text": "nemá řešení"
+      }
+    ],
+    "onclick": "checkExercise('ex2','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "b",
+    "prompt": "Rovnici 2sin²x − 3sin x + 1 = 0 řešíme substitucí t = sin x. Kořeny jsou:",
+    "options": [
+      {
+        "value": "a",
+        "text": "t = 1, t = 2"
+      },
+      {
+        "value": "b",
+        "text": "t = ½, t = 1"
+      },
+      {
+        "value": "c",
+        "text": "t = −½, t = 1"
+      },
+      {
+        "value": "d",
+        "text": "t = ½, t = −1"
+      }
+    ],
+    "onclick": "checkExercise('ex3','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex4",
+    "correct_key": "b",
+    "prompt": "Při univerzální substituci t = tg(x/2) platí, že sin x =",
+    "options": [
+      {
+        "value": "a",
+        "text": "(1 − t²)/(1 + t²)"
+      },
+      {
+        "value": "b",
+        "text": "2t/(1 + t²)"
+      },
+      {
+        "value": "c",
+        "text": "2t/(1 − t²)"
+      },
+      {
+        "value": "d",
+        "text": "t²/(1 + t²)"
+      }
+    ],
+    "onclick": "checkExercise('ex4','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex5",
+    "correct_key": "c",
+    "prompt": "Výraz (1 − cos 2x) / sin 2x se zjednoduší na:",
+    "options": [
+      {
+        "value": "a",
+        "text": "cos x"
+      },
+      {
+        "value": "b",
+        "text": "sin x"
+      },
+      {
+        "value": "c",
+        "text": "tg x"
+      },
+      {
+        "value": "d",
+        "text": "cotg x"
+      }
+    ],
+    "onclick": "checkExercise('ex5','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/gonio-rovnice/index.html",
+    "exercise_id": "ex6",
+    "correct_key": "b",
+    "prompt": "Rovnice sin 2x = cos x se rozloží na:",
+    "options": [
+      {
+        "value": "a",
+        "text": "sin x · (2cos x + 1) = 0"
+      },
+      {
+        "value": "b",
+        "text": "cos x · (2sin x − 1) = 0"
+      },
+      {
+        "value": "c",
+        "text": "cos x · (2sin x + 1) = 0"
+      },
+      {
+        "value": "d",
+        "text": "sin x · (2cos x − 1) = 0"
+      }
+    ],
+    "onclick": "checkExercise('ex6','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/sinus-kosinus/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "b",
+    "prompt": "Jaká je perioda funkce sin x?",
+    "options": [
+      {
+        "value": "a",
+        "text": "π"
+      },
+      {
+        "value": "b",
+        "text": "2π"
+      },
+      {
+        "value": "c",
+        "text": "4π"
+      },
+      {
+        "value": "d",
+        "text": "360"
+      }
+    ],
+    "onclick": "checkExercise('ex1','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/sinus-kosinus/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "b",
+    "prompt": "Funkce cos x je:",
+    "options": [
+      {
+        "value": "a",
+        "text": "Lichá funkce"
+      },
+      {
+        "value": "b",
+        "text": "Sudá funkce"
+      },
+      {
+        "value": "c",
+        "text": "Ani lichá, ani sudá"
+      },
+      {
+        "value": "d",
+        "text": "Periodická, ale ne sudá"
+      }
+    ],
+    "onclick": "checkExercise('ex2','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/sinus-kosinus/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "b",
+    "prompt": "Jaká je perioda funkce y = sin(2x)?",
+    "options": [
+      {
+        "value": "a",
+        "text": "2π"
+      },
+      {
+        "value": "b",
+        "text": "π"
+      },
+      {
+        "value": "c",
+        "text": "4π"
+      },
+      {
+        "value": "d",
+        "text": "π/2"
+      }
+    ],
+    "onclick": "checkExercise('ex3','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/sinus-kosinus/index.html",
+    "exercise_id": "ex4",
+    "correct_key": "c",
+    "prompt": "Kolik je sin 30°?",
+    "options": [
+      {
+        "value": "a",
+        "text": "√3/2"
+      },
+      {
+        "value": "b",
+        "text": "√2/2"
+      },
+      {
+        "value": "c",
+        "text": "1/2"
+      },
+      {
+        "value": "d",
+        "text": "1"
+      }
+    ],
+    "onclick": "checkExercise('ex4','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/sinus-kosinus/index.html",
+    "exercise_id": "ex5",
+    "correct_key": "a",
+    "prompt": "Graf funkce y = 3sin(x) + 2 má amplitudu a vertikální posun:",
+    "options": [
+      {
+        "value": "a",
+        "text": "A = 3, k = 2"
+      },
+      {
+        "value": "b",
+        "text": "A = 2, k = 3"
+      },
+      {
+        "value": "c",
+        "text": "A = 3, k = −2"
+      },
+      {
+        "value": "d",
+        "text": "A = 5, k = 0"
+      }
+    ],
+    "onclick": "checkExercise('ex5','a')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "b",
+    "prompt": "Jaká je perioda funkce tg x?",
+    "options": [
+      {
+        "value": "a",
+        "text": "2π"
+      },
+      {
+        "value": "b",
+        "text": "π"
+      },
+      {
+        "value": "c",
+        "text": "π/2"
+      },
+      {
+        "value": "d",
+        "text": "4π"
+      }
+    ],
+    "onclick": "checkExercise('ex1','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "b",
+    "prompt": "Funkce tg x je:",
+    "options": [
+      {
+        "value": "a",
+        "text": "Sudá funkce"
+      },
+      {
+        "value": "b",
+        "text": "Lichá funkce"
+      },
+      {
+        "value": "c",
+        "text": "Ani lichá, ani sudá"
+      },
+      {
+        "value": "d",
+        "text": "Konstantní"
+      }
+    ],
+    "onclick": "checkExercise('ex2','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "b",
+    "prompt": "Kolik je tg 45°?",
+    "options": [
+      {
+        "value": "a",
+        "text": "0"
+      },
+      {
+        "value": "b",
+        "text": "1"
+      },
+      {
+        "value": "c",
+        "text": "√3"
+      },
+      {
+        "value": "d",
+        "text": "Není definován"
+      }
+    ],
+    "onclick": "checkExercise('ex3','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex4",
+    "correct_key": "b",
+    "prompt": "Kde má funkce tg x svislé asymptoty?",
+    "options": [
+      {
+        "value": "a",
+        "text": "x = kπ"
+      },
+      {
+        "value": "b",
+        "text": "x = π/2 + kπ"
+      },
+      {
+        "value": "c",
+        "text": "x = 2kπ"
+      },
+      {
+        "value": "d",
+        "text": "x = π/4 + kπ"
+      }
+    ],
+    "onclick": "checkExercise('ex4','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex5",
+    "correct_key": "c",
+    "prompt": "Kolik je tg 60°?",
+    "options": [
+      {
+        "value": "a",
+        "text": "1/2"
+      },
+      {
+        "value": "b",
+        "text": "√3/3"
+      },
+      {
+        "value": "c",
+        "text": "√3"
+      },
+      {
+        "value": "d",
+        "text": "1"
+      }
+    ],
+    "onclick": "checkExercise('ex5','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/tangens-kotangens/index.html",
+    "exercise_id": "ex6",
+    "correct_key": "b",
+    "prompt": "Jaký je vztah mezi tg x a cotg x?",
+    "options": [
+      {
+        "value": "a",
+        "text": "tg x + cotg x = 1"
+      },
+      {
+        "value": "b",
+        "text": "tg x · cotg x = 1"
+      },
+      {
+        "value": "c",
+        "text": "tg x − cotg x = 0"
+      },
+      {
+        "value": "d",
+        "text": "tg x / cotg x = 1"
+      }
+    ],
+    "onclick": "checkExercise('ex6','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trigonometrie/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "b",
+    "prompt": "V trojúhelníku ABC je α = 30°, β = 45°, a = 10. Kolik je b?",
+    "options": [
+      {
+        "value": "a",
+        "text": "b ≈ 12,25"
+      },
+      {
+        "value": "b",
+        "text": "b ≈ 14,14"
+      },
+      {
+        "value": "c",
+        "text": "b ≈ 7,07"
+      },
+      {
+        "value": "d",
+        "text": "b ≈ 8,66"
+      }
+    ],
+    "onclick": "checkExercise('ex1','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trigonometrie/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "a",
+    "prompt": "V trojúhelníku s a = 5, b = 7, γ = 60°. Kolik je c?",
+    "options": [
+      {
+        "value": "a",
+        "text": "c = √39 ≈ 6,24"
+      },
+      {
+        "value": "b",
+        "text": "c = √74 ≈ 8,60"
+      },
+      {
+        "value": "c",
+        "text": "c = √109 ≈ 10,44"
+      },
+      {
+        "value": "d",
+        "text": "c = √29 ≈ 5,39"
+      }
+    ],
+    "onclick": "checkExercise('ex2','a')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trigonometrie/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "b",
+    "prompt": "Obsah trojúhelníku se stranami a = 10, b = 6, γ = 90° je:",
+    "options": [
+      {
+        "value": "a",
+        "text": "S = 60"
+      },
+      {
+        "value": "b",
+        "text": "S = 30"
+      },
+      {
+        "value": "c",
+        "text": "S = 15√3"
+      },
+      {
+        "value": "d",
+        "text": "S = 24"
+      }
+    ],
+    "onclick": "checkExercise('ex3','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trigonometrie/index.html",
+    "exercise_id": "ex4",
+    "correct_key": "a",
+    "prompt": "Heronův vzorec pro trojúhelník 7, 8, 9 dá obsah:",
+    "options": [
+      {
+        "value": "a",
+        "text": "S = 12√5 ≈ 26,83"
+      },
+      {
+        "value": "b",
+        "text": "S = 24"
+      },
+      {
+        "value": "c",
+        "text": "S = 6√15 ≈ 23,24"
+      },
+      {
+        "value": "d",
+        "text": "S = 28"
+      }
+    ],
+    "onclick": "checkExercise('ex4','a')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trojuhelniky/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "c",
+    "prompt": "Kde leží střed kružnice vepsané?",
+    "options": [
+      {
+        "value": "a",
+        "text": "Na průsečíku os stran"
+      },
+      {
+        "value": "b",
+        "text": "Na průsečíku těžnic (v těžišti)"
+      },
+      {
+        "value": "c",
+        "text": "Na průsečíku os vnitřních úhlů"
+      },
+      {
+        "value": "d",
+        "text": "Na průsečíku výšek (v ortocentru)"
+      }
+    ],
+    "onclick": "checkExercise('ex1','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trojuhelniky/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "b",
+    "prompt": "Trojúhelníky ABC a KLM jsou podobné s koeficientem k = 2. Obsah ABC je 10 cm². Jaký je obsah KLM?",
+    "options": [
+      {
+        "value": "a",
+        "text": "20 cm²"
+      },
+      {
+        "value": "b",
+        "text": "40 cm²"
+      },
+      {
+        "value": "c",
+        "text": "10 cm²"
+      },
+      {
+        "value": "d",
+        "text": "100 cm²"
+      }
+    ],
+    "onclick": "checkExercise('ex2','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/trojuhelniky/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "c",
+    "prompt": "Podle které věty JSOu shodné trojúhelníky, pokud známe délky všech tří stran?",
+    "options": [
+      {
+        "value": "a",
+        "text": "sus"
+      },
+      {
+        "value": "b",
+        "text": "uu"
+      },
+      {
+        "value": "c",
+        "text": "sss"
+      },
+      {
+        "value": "d",
+        "text": "usu"
+      }
+    ],
+    "onclick": "checkExercise('ex3','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex1",
+    "correct_key": "b",
+    "prompt": "Vyjádřete sin(α + β) pomocí sin α, cos α, sin β, cos β:",
+    "options": [
+      {
+        "value": "a",
+        "text": "sin α · sin β + cos α · cos β"
+      },
+      {
+        "value": "b",
+        "text": "sin α · cos β + cos α · sin β"
+      },
+      {
+        "value": "c",
+        "text": "sin α · cos β − cos α · sin β"
+      },
+      {
+        "value": "d",
+        "text": "cos α · cos β − sin α · sin β"
+      }
+    ],
+    "onclick": "checkExercise('ex1','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex2",
+    "correct_key": "c",
+    "prompt": "Jaký je vzorec pro cos 2α ?",
+    "options": [
+      {
+        "value": "a",
+        "text": "2 · cos α · sin α"
+      },
+      {
+        "value": "b",
+        "text": "cos²α + sin²α"
+      },
+      {
+        "value": "c",
+        "text": "cos²α − sin²α"
+      },
+      {
+        "value": "d",
+        "text": "2 · cos²α + 1"
+      }
+    ],
+    "onclick": "checkExercise('ex2','c')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex3",
+    "correct_key": "a",
+    "prompt": "Zjednodušte: 2 sin 15° · cos 15°",
+    "options": [
+      {
+        "value": "a",
+        "text": "sin 30° = 1/2"
+      },
+      {
+        "value": "b",
+        "text": "cos 30° = √3/2"
+      },
+      {
+        "value": "c",
+        "text": "sin 15° = √6/4"
+      },
+      {
+        "value": "d",
+        "text": "2 sin 15°"
+      }
+    ],
+    "onclick": "checkExercise('ex3','a')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex4",
+    "correct_key": "a",
+    "prompt": "Výraz sin 50° + sin 10° lze přepsat jako:",
+    "options": [
+      {
+        "value": "a",
+        "text": "2·sin 30°·cos 20° = cos 20°"
+      },
+      {
+        "value": "b",
+        "text": "2·cos 30°·sin 20° = √3·sin 20°"
+      },
+      {
+        "value": "c",
+        "text": "sin 60°"
+      },
+      {
+        "value": "d",
+        "text": "2·sin 60°·cos 10°"
+      }
+    ],
+    "onclick": "checkExercise('ex4','a')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex5",
+    "correct_key": "b",
+    "prompt": "Jaký vzorec platí pro sin(α/2) ?",
+    "options": [
+      {
+        "value": "a",
+        "text": "½ · sin α"
+      },
+      {
+        "value": "b",
+        "text": "±√((1 − cos α) / 2)"
+      },
+      {
+        "value": "c",
+        "text": "sin α / 2"
+      },
+      {
+        "value": "d",
+        "text": "±√((1 + cos α) / 2)"
+      }
+    ],
+    "onclick": "checkExercise('ex5','b')"
+  },
+  {
+    "file": "courses/goniometrie-trigonometrie/lessons/vzorce-goniometrie/index.html",
+    "exercise_id": "ex6",
+    "correct_key": "c",
+    "prompt": "Zjednodušte: cos²x − sin²x",
+    "options": [
+      {
+        "value": "a",
+        "text": "1"
+      },
+      {
+        "value": "b",
+        "text": "sin 2x"
+      },
+      {
+        "value": "c",
+        "text": "cos 2x"
+      },
+      {
+        "value": "d",
+        "text": "2 cos x"
+      }
+    ],
+    "onclick": "checkExercise('ex6','c')"
+  }
+]

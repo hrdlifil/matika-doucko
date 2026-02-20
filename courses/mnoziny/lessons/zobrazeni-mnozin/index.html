@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Zobrazeni mnozin: injektivni, surjektivni a bijektivni zobrazeni, skladani zobrazeni a inverzni zobrazeni. Interaktivni vyklad s priklady a procvicovanim.">
+    <title>Zobrazeni mnozin - Mnoziny - CVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">CVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Mnoziny</a>
+                <span class="lesson-nav-separator">></span>
+                <span class="lesson-nav-current">Kapitola 5: Zobrazeni mnozin</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Prihlasit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 5</h3>
+                    <p>Zobrazeni mnozin</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#injektivni-surjektivni-a-bijektivni-zobrazeni" class="sidebar-link active"
+                        data-section="injektivni-surjektivni-a-bijektivni-zobrazeni">
+                        <span class="sidebar-icon">1</span>
+                        Injektivni, surjektivni a bijektivni zobrazeni
+                    </a>
+                    <a href="#skladani-zobrazeni" class="sidebar-link" data-section="skladani-zobrazeni">
+                        <span class="sidebar-icon">2</span>
+                        Skladani zobrazeni
+                    </a>
+                    <a href="#inverzni-zobrazeni" class="sidebar-link" data-section="inverzni-zobrazeni">
+                        <span class="sidebar-icon">3</span>
+                        Inverzni zobrazeni
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpet na prehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="injektivni-surjektivni-a-bijektivni-zobrazeni" class="lesson-section active">
+                    <div class="section-badge">Tema 1</div>
+                    <h1>Injektivni, surjektivni a bijektivni zobrazeni</h1>
+                    <p class="lead">
+                        Zobrazeni (funkce) mezi mnozinami je pravidlo, ktere kazdemu prvku z definicni mnoziny priradi
+                        prave jeden prvek z kodomeny. V teto casti se naucite presne rozlisit, kdy je zobrazeni
+                        <strong>injektivni</strong>, <strong>surjektivni</strong> nebo <strong>bijektivni</strong>.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Formalni definice</h4>
+                        <div class="equation-large">\(f\colon A\to B\)</div>
+                        <div class="equation-large">\(f\text{ je injektivni} \iff \forall x_1,x_2\in A:\ f(x_1)=f(x_2)\Rightarrow x_1=x_2\)</div>
+                        <div class="equation-large">\(f\text{ je surjektivni} \iff \forall y\in B\ \exists x\in A:\ f(x)=y\)</div>
+                        <div class="equation-large">\(f\text{ je bijektivni} \iff f\text{ je injektivni i surjektivni}\)</div>
+                        <p class="formula-note">
+                            Ekvivalentne pro bijekci: \(\forall y\in B\ \exists!\,x\in A:\ f(x)=y\), tedy ke kazdemu
+                            prvku kodomeny existuje prave jeden vzor.
+                        </p>
+                    </div>
+
+                    <div class="formula-table compact-table">
+                        <div class="formula-row formula-head">
+                            <div>Vlastnost</div>
+                            <div>Znacka</div>
+                            <div>Prakticky vyznam</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Injektivita</div>
+                            <div class="symbol">\(x_1\neq x_2\Rightarrow f(x_1)\neq f(x_2)\)</div>
+                            <div>Ruzne vstupy se nikdy "nesliji" do stejneho vystupu.</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Surjektivita</div>
+                            <div class="symbol">\(f(A)=B\)</div>
+                            <div>Kodomena je pokryta beze zbytku, zadny prvek nezustane bez vzoru.</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Bijektivita</div>
+                            <div class="symbol">\(\forall y\in B\ \exists!x\in A\)</div>
+                            <div>Jde o perfektni parovani: kazdy prvek v \(B\) ma prave jeden vzor v \(A\).</div>
+                        </div>
+                    </div>
+
+                    <div class="theorem-card">
+                        <h4>Dusledek pro konecne mnoziny</h4>
+                        <div class="equation-list">
+                            <div class="equation-large">\(f\colon A\to B\ \text{ injektivni} \Rightarrow |A|\le |B|\)</div>
+                            <div class="equation-large">\(f\colon A\to B\ \text{ surjektivni} \Rightarrow |A|\ge |B|\)</div>
+                            <div class="equation-large">\(f\colon A\to B\ \text{ bijektivni} \Rightarrow |A|=|B|\)</div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Reseny priklad: injektivni, ale ne surjektivni</h4>
+                            <p class="math-line">\(A=\{1,2,3\},\ B=\{a,b,c,d\}\)</p>
+                            <p class="math-line">\(f(1)=a,\ f(2)=b,\ f(3)=c\)</p>
+                            <p>
+                                Vystupy jsou ruzne, takze funkce je injektivni. Prvek \(d\in B\) ale nema vzor,
+                                proto funkce neni surjektivni.
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h4>Reseny priklad: surjektivni, ale ne injektivni</h4>
+                            <p class="math-line">\(A=\{1,2,3,4\},\ B=\{x,y\}\)</p>
+                            <p class="math-line">\(f(1)=x,\ f(2)=x,\ f(3)=y,\ f(4)=y\)</p>
+                            <p>
+                                Kodomena \(B\) je pokryta, proto je zobrazeni surjektivni. Dvojice vstupu se ale
+                                slivaji do stejneho vystupu, tedy injektivni neni.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Laborator vlastnosti zobrazeni</h3>
+                        <p>
+                            Nastavujte prirazeni \(f\colon A\to B\) a sledujte okamzite vyhodnoceni. Diagram i textova
+                            analyza ukazou, proc je zobrazeni injektivni/surjektivni/bijektivni.
+                        </p>
+
+                        <div class="mapping-lab-layout">
+                            <div class="demo-controls">
+                                <div class="control-panel">
+                                    <h4>Prirazeni prvku</h4>
+                                    <div id="classificationSetMeta" class="operation-definition"></div>
+                                    <div id="classificationMappingControls" class="mapping-controls-grid"></div>
+                                    <div class="panel-actions">
+                                        <button id="classificationRandomBtn" class="btn-outline">Nahodne prirazeni</button>
+                                        <button id="classificationResetBtn" class="btn-outline">Vychozi mapovani</button>
+                                    </div>
+                                </div>
+
+                                <div class="control-panel result-panel">
+                                    <h4>Vyhodnoceni</h4>
+                                    <div id="classificationSummary" class="result-equation"></div>
+                                    <div id="classificationPropertyBadges" class="property-badges"></div>
+                                    <div id="classificationDetails" class="operation-definition"></div>
+                                    <div id="classificationCounterexample" class="feedback-inline"></div>
+                                </div>
+                            </div>
+
+                            <div class="mapping-diagram-wrap">
+                                <svg id="classificationDiagram" viewBox="0 0 760 380" role="img"
+                                    aria-label="Diagram zobrazeni f: A do B"></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Rychla klasifikace</h3>
+                        <p>
+                            U kazdeho zobrazeni vyberte spravnou klasifikaci. Po chybe uvidite spravnou odpoved i duvod.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktualni uloha</div>
+                                <div id="classificationQuizQuestion" class="dynamic-math"></div>
+                                <div id="classificationQuizProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div id="classificationQuizOptions" class="classify-options">
+                                    <button class="classify-option" data-value="injective-only">Jen injektivni</button>
+                                    <button class="classify-option" data-value="surjective-only">Jen surjektivni</button>
+                                    <button class="classify-option" data-value="bijective">Bijektivni</button>
+                                    <button class="classify-option" data-value="neither">Ani injektivni, ani surjektivni</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="classificationQuizCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="classificationQuizNextBtn" class="btn-outline">Dalsi uloha</button>
+                                </div>
+
+                                <div id="classificationQuizFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons nav-single">
+                        <button class="btn-primary btn-next" data-next="skladani-zobrazeni">Pokracovat na skladani zobrazeni -></button>
+                    </div>
+                </section>
+
+                <section id="skladani-zobrazeni" class="lesson-section">
+                    <div class="section-badge">Tema 2</div>
+                    <h1>Skladani zobrazeni</h1>
+                    <p class="lead">
+                        Skladani zobrazeni propojuje dve transformace za sebou. Poradi je zasadni: nejdriv se vyhodnoti
+                        vnitrni zobrazeni, teprve potom vnejsi.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice kompozice</h4>
+                        <div class="equation-large">\(f\colon A\to B,\ g\colon B\to C\)</div>
+                        <div class="equation-large">\((g\circ f)\colon A\to C,\quad (g\circ f)(x)=g(f(x))\)</div>
+                        <p>
+                            Aby kompozice davala smysl, musi byt kodomena \(f\) kompatibilni s definicni mnozinou \(g\).
+                        </p>
+                    </div>
+
+                    <div class="formula-table compact-table">
+                        <div class="formula-row formula-head">
+                            <div>Vlastnost</div>
+                            <div>Zapis</div>
+                            <div>Vyznam</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Asociativita</div>
+                            <div class="symbol">\(h\circ(g\circ f)=(h\circ g)\circ f\)</div>
+                            <div>Pri trech zobrazenich je vysledek stejny bez ohledu na zavorkovani.</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Nezamenitelnost poradi</div>
+                            <div class="symbol">\(g\circ f\neq f\circ g\)</div>
+                            <div>Obecne nejde o komutativni operaci.</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Jednotkove zobrazeni</div>
+                            <div class="symbol">\(f\circ\mathrm{id}_A=f,\ \mathrm{id}_B\circ f=f\)</div>
+                            <div>Zobrazeni \(\mathrm{id}\) nic nemeni a v kompozici funguje jako jednotka.</div>
+                        </div>
+                    </div>
+
+                    <div class="theorem-card">
+                        <h4>Dulezite implikace</h4>
+                        <div class="equation-list">
+                            <div class="equation-large">\(f,g\ \text{injektivni}\ \Rightarrow\ g\circ f\ \text{injektivni}\)</div>
+                            <div class="equation-large">\(f,g\ \text{surjektivni}\ \Rightarrow\ g\circ f\ \text{surjektivni}\)</div>
+                            <div class="equation-large">\(g\circ f\ \text{injektivni}\ \Rightarrow\ f\ \text{injektivni}\)</div>
+                            <div class="equation-large">\(g\circ f\ \text{surjektivni}\ \Rightarrow\ g\ \text{surjektivni}\)</div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Skladaci simulator \(g\circ f\)</h3>
+                        <p>
+                            Nastavte zobrazeni \(f\colon A\to B\) a \(g\colon B\to C\). Simulator spocita kompozici
+                            \(h=g\circ f\), vykresli sipky a vyhodnoti vlastnosti vsech tri zobrazeni.
+                        </p>
+
+                        <div class="composition-layout">
+                            <div class="demo-controls">
+                                <div class="control-panel">
+                                    <h4>Zobrazeni \(f\colon A\to B\)</h4>
+                                    <div id="compositionControlsF" class="mapping-controls-grid"></div>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Zobrazeni \(g\colon B\to C\)</h4>
+                                    <div id="compositionControlsG" class="mapping-controls-grid"></div>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Vysledek \(h=g\circ f\colon A\to C\)</h4>
+                                    <div id="compositionResultTable" class="operation-definition"></div>
+                                    <div class="panel-actions">
+                                        <button id="compositionRandomBtn" class="btn-outline">Nahodna zobrazeni</button>
+                                        <button id="compositionResetBtn" class="btn-outline">Vychozi zobrazeni</button>
+                                    </div>
+                                </div>
+
+                                <div class="control-panel result-panel">
+                                    <h4>Vlastnosti</h4>
+                                    <div id="compositionPropertyF" class="operation-definition"></div>
+                                    <div id="compositionPropertyG" class="operation-definition"></div>
+                                    <div id="compositionPropertyH" class="operation-definition"></div>
+                                </div>
+                            </div>
+
+                            <div class="mapping-diagram-wrap">
+                                <svg id="compositionDiagram" viewBox="0 0 860 400" role="img"
+                                    aria-label="Diagram skladani zobrazeni"></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Vypocet hodnoty slozeneho zobrazeni</h3>
+                        <p>
+                            Doplnte vysledek. Po chybe se zobrazi spravna hodnota i postup vyhodnoceni vnitrni a vnejsi funkce.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktualni uloha</div>
+                                <div id="compositionNumericQuestion" class="dynamic-math"></div>
+                                <div id="compositionNumericProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <label for="compositionNumericInput" class="panel-label">Vase odpoved</label>
+                                <input id="compositionNumericInput" type="text" class="exercise-input"
+                                    placeholder="Napr. 25 nebo -3">
+
+                                <div class="action-row">
+                                    <button id="compositionNumericCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="compositionNumericNextBtn" class="btn-outline">Dalsi uloha</button>
+                                </div>
+
+                                <div id="compositionNumericFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Pravidla skladani: pravda/nepravda</h3>
+                        <p>
+                            Overte, ze rozumite obecnym vetam o kompozici. Kazda chyba zobrazi spravne tvrzeni i komentar.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktualni tvrzeni</div>
+                                <div id="compositionRuleQuestion" class="dynamic-math"></div>
+                                <div id="compositionRuleProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div id="compositionRuleOptions" class="binary-options">
+                                    <button class="binary-option" data-value="true">Pravda</button>
+                                    <button class="binary-option" data-value="false">Nepravda</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="compositionRuleCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="compositionRuleNextBtn" class="btn-outline">Dalsi tvrzeni</button>
+                                </div>
+
+                                <div id="compositionRuleFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="injektivni-surjektivni-a-bijektivni-zobrazeni">← Zpet</button>
+                        <button class="btn-primary btn-next" data-next="inverzni-zobrazeni">Pokracovat na inverzni zobrazeni -></button>
+                    </div>
+                </section>
+
+                <section id="inverzni-zobrazeni" class="lesson-section">
+                    <div class="section-badge">Tema 3</div>
+                    <h1>Inverzni zobrazeni</h1>
+                    <p class="lead">
+                        Inverzni zobrazeni obraci smer puvodniho zobrazeni. Existuje prave tehdy, kdyz je puvodni
+                        zobrazeni bijektivni.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice inverze</h4>
+                        <div class="equation-large">\(f\colon A\to B\ \text{ bijekce}\ \Rightarrow\ \exists f^{-1}\colon B\to A\)</div>
+                        <div class="equation-large">\(f^{-1}(f(x))=x\ \forall x\in A\)</div>
+                        <div class="equation-large">\(f(f^{-1}(y))=y\ \forall y\in B\)</div>
+                        <p>
+                            Inverzni funkci nikdy nezamenujte s vyrazem \(1/f(x)\). Symbol \(f^{-1}\) znamena
+                            <strong>inverzni zobrazeni</strong>, nikoli prevracenou hodnotu.
+                        </p>
+                    </div>
+
+                    <div class="theorem-card">
+                        <h4>Klicove vztahy</h4>
+                        <div class="equation-list">
+                            <div class="equation-large">\(f\ \text{ma inverzi} \iff f\ \text{je bijektivni}\)</div>
+                            <div class="equation-large">\((g\circ f)^{-1}=f^{-1}\circ g^{-1}\)</div>
+                            <div class="equation-large">\((f^{-1})^{-1}=f\)</div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Postup vypoctu inverzni funkce (u vzorce)</h4>
+                            <p>1. Napiste \(y=f(x)\).</p>
+                            <p>2. Vyjadrete \(x\) pomoci \(y\).</p>
+                            <p>3. Prohodte role promennych: misto \(y\) napiste \(x\).</p>
+                            <p>4. Zkontrolujte \(f(f^{-1}(x))=x\) a \(f^{-1}(f(x))=x\).</p>
+                        </div>
+                        <div class="column">
+                            <h4>Reseny priklad</h4>
+                            <p class="math-line">\(f(x)=3x-5\)</p>
+                            <p class="math-line">\(y=3x-5\Rightarrow x=\frac{y+5}{3}\)</p>
+                            <p class="math-line">\(f^{-1}(x)=\frac{x+5}{3}\)</p>
+                            <p>
+                                Kontrola: \(f(f^{-1}(x))=3\cdot\frac{x+5}{3}-5=x\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Stavitel inverzniho zobrazeni</h3>
+                        <p>
+                            Vygenerujeme nahodnou bijekci \(f\colon A\to B\). Vasim ukolem je spravne sestavit
+                            \(f^{-1}\colon B\to A\). Po chybe se ukaze spravne prirazeni.
+                        </p>
+
+                        <div class="inverse-layout">
+                            <div class="demo-controls">
+                                <div class="control-panel">
+                                    <h4>Zadana bijekce \(f\)</h4>
+                                    <div id="inverseForwardDisplay" class="operation-definition"></div>
+                                </div>
+
+                                <div class="control-panel">
+                                    <h4>Doplnte \(f^{-1}\)</h4>
+                                    <div id="inverseControls" class="mapping-controls-grid"></div>
+                                    <div class="panel-actions">
+                                        <button id="inverseCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                        <button id="inverseNewBtn" class="btn-outline">Nova bijekce</button>
+                                    </div>
+                                </div>
+
+                                <div class="control-panel result-panel">
+                                    <h4>Vyhodnoceni</h4>
+                                    <div id="inverseResultDisplay" class="operation-definition"></div>
+                                    <div id="inverseBuilderFeedback" class="feedback-inline"></div>
+                                </div>
+                            </div>
+
+                            <div class="mapping-diagram-wrap">
+                                <svg id="inverseDiagram" viewBox="0 0 840 390" role="img"
+                                    aria-label="Diagram zobrazeni a jeho inverze"></svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Ciselne ulohy na inverzi</h3>
+                        <p>
+                            Vypocitejte hodnotu inverzni funkce. U chybne odpovedi system zobrazi spravny vysledek
+                            i strucny postup.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktualni uloha</div>
+                                <div id="inverseNumericQuestion" class="dynamic-math"></div>
+                                <div id="inverseNumericProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <label for="inverseNumericInput" class="panel-label">Vase odpoved</label>
+                                <input id="inverseNumericInput" type="text" class="exercise-input"
+                                    placeholder="Zadejte cislo">
+
+                                <div class="action-row">
+                                    <button id="inverseNumericCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="inverseNumericNextBtn" class="btn-outline">Dalsi uloha</button>
+                                </div>
+
+                                <div id="inverseNumericFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvicovani cele kapitoly</h2>
+                    <p>
+                        Smiseny set uloh kombinuje klasifikaci zobrazeni, skladani i inverze. Kazda chybna odpoved
+                        zobrazi spravne reseni.
+                    </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise-card" data-type="choice" data-answer="b" data-name="ex1"
+                            data-explanation="U konecnych mnozin s |A|<|B| nemuze byt zobrazeni A->B surjektivni.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Necht \(|A|=3\), \(|B|=5\). Ktere tvrzeni je pravdive?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="a">
+                                    <span class="option-text">Existuje surjektivni zobrazeni \(f\colon A\to B\).</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="b">
+                                    <span class="option-text">Zadne zobrazeni \(f\colon A\to B\) nemuze byt surjektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="c">
+                                    <span class="option-text">Kazde zobrazeni \(f\colon A\to B\) je bijektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="d">
+                                    <span class="option-text">Kazde zobrazeni \(f\colon A\to B\) je surjektivni i injektivni.</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="d" data-name="ex2"
+                            data-explanation="Funkce x^2 na R neni injektivni (napr. 2 a -2) ani surjektivni na R (nepokryva zaporna cisla).">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Urcete vlastnosti \(f\colon\mathbb{R}\to\mathbb{R},\ f(x)=x^2\).
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex2" value="a">
+                                    <span class="option-text">Jen injektivni</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex2" value="b">
+                                    <span class="option-text">Jen surjektivni</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex2" value="c">
+                                    <span class="option-text">Bijektivni</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex2" value="d">
+                                    <span class="option-text">Ani injektivni, ani surjektivni</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="number" data-answer="25"
+                            data-explanation="(g∘f)(3)=g(f(3))=g(5)=5^2=25.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Necht \(f(x)=2x-1\), \(g(x)=x^2\). Vypoctete \((g\circ f)(3)\).
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zadejte cislo">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="a" data-name="ex4"
+                            data-explanation="Pro bijekce plati (g∘f)^(-1)=f^(-1)∘g^(-1). Poradi se obraci.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Pro bijekce \(f\colon A\to B\), \(g\colon B\to C\) je inverze kompozice:
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex4" value="a">
+                                    <span class="option-text">\((g\circ f)^{-1}=f^{-1}\circ g^{-1}\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex4" value="b">
+                                    <span class="option-text">\((g\circ f)^{-1}=g^{-1}\circ f^{-1}\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex4" value="c">
+                                    <span class="option-text">\((g\circ f)^{-1}=g\circ f\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex4" value="d">
+                                    <span class="option-text">Inverze kompozice obecne neexistuje.</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="number" data-answer="7"
+                            data-explanation="f(7)=3*7-5=16, tedy f^{-1}(16)=7.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Je dano \(f(x)=3x-5\). Urcete \(f^{-1}(16)\).
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zadejte cislo">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="c" data-name="ex6"
+                            data-explanation="Jestlize g∘f je injektivni, pak f musi byt injektivni. O g to samo o sobe tvrdit nelze.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Pokud je \(g\circ f\) injektivni, co nutne plati?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="a">
+                                    <span class="option-text">\(g\) je surjektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="b">
+                                    <span class="option-text">\(g\) je injektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="c">
+                                    <span class="option-text">\(f\) je injektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="d">
+                                    <span class="option-text">\(f\) je surjektivni.</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="b" data-name="ex7"
+                            data-explanation="Inverze existuje prave tehdy, kdyz je funkce soucasne injektivni i surjektivni.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Uloha 7</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Ktera podminka je nutna a zaroven postacujici pro existenci inverzniho zobrazeni \(f^{-1}\)?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex7" value="a">
+                                    <span class="option-text">\(f\) je pouze injektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex7" value="b">
+                                    <span class="option-text">\(f\) je bijektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex7" value="c">
+                                    <span class="option-text">\(f\) je pouze surjektivni.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex7" value="d">
+                                    <span class="option-text">\(A\) i \(B\) jsou nekonecne mnoziny.</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokoncena</h2>
+                        <p>
+                            Ovladate klasifikaci zobrazeni, praci se skladanim i konstrukci inverzniho zobrazeni.
+                            To je klicovy zaklad pro dalsi temata z funkci a abstraktni algebry.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpet na prehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="skladani-zobrazeni">← Zpet</button>
+                        <a href="../../index.html" class="btn-primary">Dokoncit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kartézský součin množin: definice, výpočty pro konečné množiny, práce s nekonečnými množinami, interaktivní vizualizace a procvičování.">
+    <title>Kartézský součin množin - Množiny - ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Množiny</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 4: Kartézský součin množin</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 4</h3>
+                    <p>Kartézský součin množin</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#definice-kartezskeho-soucinu" class="sidebar-link active"
+                        data-section="definice-kartezskeho-soucinu">
+                        <span class="sidebar-icon">1</span>
+                        Definice kartézského součinu
+                    </a>
+                    <a href="#kartezsky-soucin-konecnych-mnozin" class="sidebar-link"
+                        data-section="kartezsky-soucin-konecnych-mnozin">
+                        <span class="sidebar-icon">2</span>
+                        Kartézský součin konečných množin
+                    </a>
+                    <a href="#kartezsky-soucin-nekonecnych-mnozin" class="sidebar-link"
+                        data-section="kartezsky-soucin-nekonecnych-mnozin">
+                        <span class="sidebar-icon">3</span>
+                        Kartézský součin nekonečných množin
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="definice-kartezskeho-soucinu" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Definice kartézského součinu</h1>
+                    <p class="lead">
+                        Kartézský součin dvou množin spojuje každý prvek první množiny s každým prvkem druhé množiny
+                        do <strong>uspořádané dvojice</strong>. Klíčové je slovo uspořádané: pořadí složek není možné
+                        měnit.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Formální definice</h4>
+                        <div class="equation-large">\(A\times B = \{(a,b)\mid a\in A\land b\in B\}\)</div>
+                        <p>
+                            Kartézský součin je množina všech uspořádaných dvojic, kde první složka pochází z
+                            \(A\) a druhá z \(B\).
+                        </p>
+                        <div class="equation-large">\((a,b)=(c,d)\iff a=c\land b=d\)</div>
+                    </div>
+
+                    <div class="formula-table compact-table">
+                        <div class="formula-row formula-head">
+                            <div>Vlastnost</div>
+                            <div>Zápis</div>
+                            <div>Význam</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Prázdná množina</div>
+                            <div class="symbol">\(A\times\varnothing=\varnothing\)</div>
+                            <div>Pokud je aspoň jedna složka prázdná, nejsou žádné dvojice.</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Nekomutativita prvků</div>
+                            <div class="symbol">\((a,b)\neq(b,a)\)</div>
+                            <div>Obecně jde o jiné dvojice, pokud \(a\neq b\).</div>
+                        </div>
+                        <div class="formula-row">
+                            <div>Stejná mohutnost</div>
+                            <div class="symbol">\(|A\times B|=|B\times A|\)</div>
+                            <div>Záměna složek \((a,b)\mapsto(b,a)\) je bijekce.</div>
+                        </div>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Řešený příklad</h4>
+                            <p class="math-line">\(A=\{1,2\},\ B=\{x,y,z\}\)</p>
+                            <p>
+                                Vezmeme všechny kombinace první složky z \(A\) a druhé z \(B\):
+                            </p>
+                            <div class="equation-large equation-small">
+                                \(A\times B=\{(1,x),(1,y),(1,z),(2,x),(2,y),(2,z)\}\)
+                            </div>
+                        </div>
+                        <div class="column">
+                            <h4>Kontrast s \(B\times A\)</h4>
+                            <p>
+                                V kartézském součinu \(B\times A\) jsou dvojice otočené:
+                            </p>
+                            <div class="equation-large equation-small">
+                                \(B\times A=\{(x,1),(x,2),(y,1),(y,2),(z,1),(z,2)\}\)
+                            </div>
+                            <p>
+                                Proto obecně \(A\times B\neq B\times A\), i když mají stejný počet prvků.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Interaktivní generátor dvojic</h3>
+                        <p>
+                            Klikáním vyberte prvky množin \(A\) a \(B\). Nástroj okamžitě sestaví \(A\times B\)
+                            i \(B\times A\) a ukáže jejich mohutnost.
+                        </p>
+
+                        <div class="builder-grid">
+                            <div class="builder-panel">
+                                <h4>Množina \(A\)</h4>
+                                <div id="builderSetA" class="chip-grid"></div>
+                            </div>
+                            <div class="builder-panel">
+                                <h4>Množina \(B\)</h4>
+                                <div id="builderSetB" class="chip-grid"></div>
+                            </div>
+                            <div class="builder-panel builder-panel-wide">
+                                <h4>Výsledek</h4>
+                                <div id="builderDisplayA" class="math-result"></div>
+                                <div id="builderDisplayB" class="math-result"></div>
+                                <div id="builderDisplayAxB" class="math-result"></div>
+                                <div id="builderDisplayBxA" class="math-result"></div>
+                                <div id="builderCardinality" class="math-meta"></div>
+                                <div class="builder-actions">
+                                    <button id="builderRandomBtn" class="btn-outline btn-small">Náhodně vybrat</button>
+                                    <button id="builderResetBtn" class="btn-outline btn-small">Vymazat</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Rychlá kontrola porozumění</h3>
+                        <p>
+                            Rozhodněte, zda daná uspořádaná dvojice patří do zadaného kartézského součinu.
+                            Po chybě se zobrazí správná odpověď i zdůvodnění.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální úloha</div>
+                                <div id="membershipQuestion" class="dynamic-math"></div>
+                                <div id="membershipProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="binary-options" id="membershipOptions">
+                                    <button class="binary-option" data-value="true">Ano, patří</button>
+                                    <button class="binary-option" data-value="false">Ne, nepatří</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="membershipCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="membershipNextBtn" class="btn-outline">Další úloha</button>
+                                </div>
+
+                                <div id="membershipFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons nav-single">
+                        <button class="btn-primary btn-next" data-next="kartezsky-soucin-konecnych-mnozin">Pokračovat na konečné množiny →</button>
+                    </div>
+                </section>
+
+                <section id="kartezsky-soucin-konecnych-mnozin" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Kartézský součin konečných množin</h1>
+                    <p class="lead">
+                        Pro konečné množiny je kartézský součin především kombinatorický nástroj: počítáme všechny
+                        možné volby „první složka × druhá složka“. Mohutnost součinu je součinem mohutností.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní vzorec</h4>
+                        <div class="equation-large">\(|A\times B| = |A|\cdot|B|\)</div>
+                        <p>
+                            Každý z \(|A|\) prvků lze zkombinovat s \(|B|\) možnostmi druhé složky. Tím vznikne
+                            přesně \(|A|\cdot|B|\) uspořádaných dvojic.
+                        </p>
+                        <div class="equation-large">\(|A_1\times A_2\times\dots\times A_k| = \prod_{i=1}^{k}|A_i|\)</div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Důležitý okrajový případ</h4>
+                            <p>
+                                Pokud je některá množina prázdná, součin je prázdný. Vzorec to respektuje: pokud
+                                \(|A|=0\) nebo \(|B|=0\), pak \(|A\times B|=0\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Kalkulačka mohutnosti a tabulka dvojic</h3>
+                        <p>
+                            Nastavte velikosti množin. V tabulce uvidíte všechny dvojice z \(A\times B\),
+                            pod ní i počet trojic \(A\times B\times C\).
+                        </p>
+
+                        <div class="finite-demo-layout">
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="finiteSizeA">\(|A|\) = <span id="finiteSizeAValue">3</span></label>
+                                    <input type="range" id="finiteSizeA" min="0" max="8" value="3" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label for="finiteSizeB">\(|B|\) = <span id="finiteSizeBValue">4</span></label>
+                                    <input type="range" id="finiteSizeB" min="0" max="8" value="4" step="1">
+                                </div>
+                                <div class="control-group">
+                                    <label for="finiteSizeC">\(|C|\) = <span id="finiteSizeCValue">2</span></label>
+                                    <input type="range" id="finiteSizeC" min="0" max="8" value="2" step="1">
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Aktuální množiny</h4>
+                                    <div id="finiteSetA" class="dynamic-math"></div>
+                                    <div id="finiteSetB" class="dynamic-math"></div>
+                                    <div id="finiteSetC" class="dynamic-math"></div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Počty prvků</h4>
+                                    <div id="finiteProductAB" class="dynamic-math"></div>
+                                    <div id="finiteProductABC" class="dynamic-math"></div>
+                                </div>
+                            </div>
+
+                            <div class="finite-grid-wrap">
+                                <div class="panel-label">Tabulka všech dvojic z \(A\times B\)</div>
+                                <div id="finiteGrid" class="finite-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Slovní úlohy na počítání možností</h3>
+                        <p>
+                            Doplňte výsledek. Po špatné odpovědi systém ukáže správný výpočet.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální úloha</div>
+                                <div id="finiteWordProblem" class="word-problem"></div>
+                                <div id="finiteWordProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <label for="finiteWordInput" class="panel-label">Vaše odpověď</label>
+                                <input id="finiteWordInput" type="text" class="exercise-input" placeholder="Zadejte číslo">
+
+                                <div class="action-row">
+                                    <button id="finiteWordCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="finiteWordNextBtn" class="btn-outline">Další úloha</button>
+                                </div>
+
+                                <div id="finiteWordFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="definice-kartezskeho-soucinu">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="kartezsky-soucin-nekonecnych-mnozin">Pokračovat na nekonečné množiny →</button>
+                    </div>
+                </section>
+
+                <section id="kartezsky-soucin-nekonecnych-mnozin" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Kartézský součin nekonečných množin</h1>
+                    <p class="lead">
+                        U nekonečných množin se místo konkrétního výpisu pracuje s <strong>mohutností</strong>
+                        (kardinalitou). Výsledkem může být množina spočetná i nespočetná podle typu vstupních množin.
+                    </p>
+
+                    <div class="theorem-card">
+                        <h4>Nejdůležitější výsledky</h4>
+                        <div class="equation-list">
+                            <div class="equation-large">\(\mathbb{N}_0\times\mathbb{N}_0\) je spočetně nekonečná množina.</div>
+                            <div class="equation-large">\(\mathbb{N}\times\mathbb{Z}\) je spočetně nekonečná množina.</div>
+                            <div class="equation-large">\([0,1]\times[0,1]\) je nespočetně nekonečná množina.</div>
+                            <div class="equation-large">\(|\mathbb{R}\times\mathbb{R}|=|\mathbb{R}|\) (kontinuum).</div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">i</div>
+                        <div class="info-card-content">
+                            <h4>Intuice</h4>
+                            <p>
+                                Množina \(\mathbb{N}_0\times\mathbb{N}_0\) se dá očíslovat diagonálně, takže je
+                                spočetná. Naproti tomu \([0,1]\times[0,1]\) tvoří celou čtvercovou oblast v rovině,
+                                která je nespočetná.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Diagonální očíslování \(\mathbb{N}_0\times\mathbb{N}_0\)</h3>
+                        <p>
+                            Posuňte krok a sledujte, jak se postupně pokrývají dvojice \((x,y)\) po diagonálách.
+                            Tím dostáváme explicitní očíslování a důkaz spočetnosti.
+                        </p>
+
+                        <div class="diag-layout">
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="diagStep">Počet zobrazených dvojic: <span id="diagStepValue">1</span></label>
+                                    <input id="diagStep" type="range" min="1" max="64" value="1" step="1">
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Aktuální dvojice</h4>
+                                    <div id="diagCurrent" class="dynamic-math"></div>
+                                    <div id="diagPrefix" class="operation-definition"></div>
+                                </div>
+                            </div>
+
+                            <div class="diag-grid-wrap">
+                                <div class="panel-label">Mřížka dvojic \((x,y)\), kde \(x,y\in\{0,\dots,7\}\)</div>
+                                <div id="diagGrid" class="diag-grid" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>Součin intervalů v \(\mathbb{R}^2\)</h3>
+                        <p>
+                            Pro intervaly \(I=[a,b]\) a \(J=[c,d]\) je součin \(I\times J\) obdélník všech bodů
+                            \((x,y)\), kde \(x\in I\) a \(y\in J\).
+                        </p>
+
+                        <div class="interval-layout">
+                            <div class="demo-controls">
+                                <div class="control-group">
+                                    <label for="intervalXStart">\(a\) = <span id="intervalXStartValue">-2</span></label>
+                                    <input id="intervalXStart" type="range" min="-5" max="5" value="-2" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="intervalXEnd">\(b\) = <span id="intervalXEndValue">3</span></label>
+                                    <input id="intervalXEnd" type="range" min="-5" max="5" value="3" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="intervalYStart">\(c\) = <span id="intervalYStartValue">-1</span></label>
+                                    <input id="intervalYStart" type="range" min="-5" max="5" value="-1" step="0.5">
+                                </div>
+                                <div class="control-group">
+                                    <label for="intervalYEnd">\(d\) = <span id="intervalYEndValue">2</span></label>
+                                    <input id="intervalYEnd" type="range" min="-5" max="5" value="2" step="0.5">
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Aktuální intervaly</h4>
+                                    <div id="intervalXText" class="dynamic-math"></div>
+                                    <div id="intervalYText" class="dynamic-math"></div>
+                                    <div id="intervalProductText" class="dynamic-math"></div>
+                                    <div id="intervalMeta" class="operation-definition"></div>
+                                </div>
+                            </div>
+
+                            <div class="interval-canvas-wrap">
+                                <canvas id="intervalCanvas" width="560" height="430"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="interactive-demo">
+                        <h3>Klasifikace mohutnosti</h3>
+                        <p>
+                            U každé množiny určete, zda je <strong>konečná</strong>, <strong>spočetná</strong> nebo
+                            <strong>nespočetná</strong>. Po chybě se zobrazí správná odpověď.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální tvrzení</div>
+                                <div id="infiniteClassQuestion" class="dynamic-math"></div>
+                                <div id="infiniteClassProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="classify-options" id="infiniteClassOptions">
+                                    <button class="classify-option" data-value="finite">Konečná</button>
+                                    <button class="classify-option" data-value="countable">Spočetně nekonečná</button>
+                                    <button class="classify-option" data-value="uncountable">Nespočetně nekonečná</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="infiniteClassCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="infiniteClassNextBtn" class="btn-outline">Další úloha</button>
+                                </div>
+
+                                <div id="infiniteClassFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2>Procvičování celé kapitoly</h2>
+                    <p>
+                        Následující mix úloh kombinuje definici, počítání pro konečné množiny i práci s nekonečnými.
+                        Po každé chybě se zobrazí správný výsledek.
+                    </p>
+
+                    <div class="exercise-container">
+                        <div class="exercise-card" data-type="choice" data-answer="c" data-name="ex1"
+                            data-explanation="V kartézském součinu musí první složka pocházet z A a druhá z B.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 1</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Který zápis přesně odpovídá definici \(A\times B\)?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="a">
+                                    <span class="option-text">\(A\times B=\{(a,b)\mid a\in A\lor b\in B\}\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="b">
+                                    <span class="option-text">\(A\times B=\{(a,b)\mid a,b\in A\}\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="c">
+                                    <span class="option-text">\(A\times B=\{(a,b)\mid a\in A\land b\in B\}\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex1" value="d">
+                                    <span class="option-text">\(A\times B=\{a+b\mid a\in A,b\in B\}\)</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="number" data-answer="20"
+                            data-explanation="Použijeme vzorec |A×B|=|A|·|B|=4·5.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 2</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Mějme \(|A|=4\) a \(|B|=5\). Určete \(|A\times B|\).
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zadejte číslo">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="a" data-name="ex3"
+                            data-explanation="Dvojice (2,c) má první složku v A a druhou složku v B.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 3</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Pro \(A=\{1,2\}\), \(B=\{a,b,c\}\) platí:
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex3" value="a">
+                                    <span class="option-text">\((2,c)\in A\times B\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex3" value="b">
+                                    <span class="option-text">\((c,2)\in A\times B\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex3" value="c">
+                                    <span class="option-text">\((1,1)\in A\times B\)</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex3" value="d">
+                                    <span class="option-text">\((a,b)\in A\times B\)</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+                        <div class="exercise-card" data-type="number" data-answer="60"
+                            data-explanation="|A×B×C|=|A|·|B|·|C|=3·4·5.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 4</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Pokud \(|A|=3\), \(|B|=4\), \(|C|=5\), kolik prvků má \(A\times B\times C\)?
+                            </p>
+                            <div class="exercise-answer-row">
+                                <input type="text" class="exercise-input" placeholder="Zadejte číslo">
+                                <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            </div>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="b" data-name="ex5"
+                            data-explanation="Množina N×N se dá očíslovat diagonálně, proto je spočetně nekonečná.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 5</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Jakou mohutnost má \(\mathbb{N}\times\mathbb{N}\)?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="a">
+                                    <span class="option-text">Konečnou</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="b">
+                                    <span class="option-text">Spočetně nekonečnou</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="c">
+                                    <span class="option-text">Nespočetně nekonečnou</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex5" value="d">
+                                    <span class="option-text">Nelze rozhodnout</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+
+                        <div class="exercise-card" data-type="choice" data-answer="c" data-name="ex6"
+                            data-explanation="[0,1]×[0,1] je čtverec v rovině a má nespočetně mnoho bodů.">
+                            <div class="exercise-head">
+                                <span class="exercise-number">Úloha 6</span>
+                                <span class="exercise-status"></span>
+                            </div>
+                            <p>
+                                Které tvrzení je správně?
+                            </p>
+                            <div class="exercise-options">
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="a">
+                                    <span class="option-text">\([0,1]\times[0,1]\) je spočetně nekonečná množina.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="b">
+                                    <span class="option-text">\(\mathbb{R}\times\mathbb{R}\) je konečná množina.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="c">
+                                    <span class="option-text">\([0,1]\times[0,1]\) je nespočetně nekonečná množina.</span>
+                                </label>
+                                <label class="option">
+                                    <input type="radio" name="ex6" value="d">
+                                    <span class="option-text">\(\mathbb{N}\times\mathbb{N}\) je konečná množina.</span>
+                                </label>
+                            </div>
+                            <button class="btn-primary btn-check-exercise">Zkontrolovat</button>
+                            <div class="exercise-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonComplete" style="display: none;">
+                        <div class="complete-icon">✓</div>
+                        <h2>Kapitola dokončena</h2>
+                        <p>
+                            Umíte definovat kartézský součin, počítat jeho mohutnost pro konečné množiny
+                            a správně klasifikovat základní případy nekonečných součinů.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="kartezsky-soucin-konecnych-mnozin">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>
+

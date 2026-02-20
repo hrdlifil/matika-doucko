@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Množiny – Množinové vztahy: podmnožina množiny (inkluze) a rovnost množin s důkazy, příklady a interaktivním procvičováním.">
+    <title>Množinové vztahy – Množiny – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Množiny</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 2: Množinové vztahy</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 2</h3>
+                    <p>Množinové vztahy</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#podmnozina-mnoziny-inkluze" class="sidebar-link active" data-section="podmnozina-mnoziny-inkluze">
+                        <span class="sidebar-icon">1</span>
+                        Podmnožina množiny (inkluze)
+                    </a>
+                    <a href="#rovnost-mnozin" class="sidebar-link" data-section="rovnost-mnozin">
+                        <span class="sidebar-icon">2</span>
+                        Rovnost množin
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="podmnozina-mnoziny-inkluze" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Podmnožina množiny (inkluze)</h1>
+                    <p class="lead">
+                        Inkluze vyjadřuje vztah „všechny prvky jedné množiny leží i ve druhé“. Je to jeden ze
+                        základních stavebních kamenů celé teorie množin i důkazů v matematice.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Konvence symbolů</h4>
+                            <p>
+                                V této lekci používáme \(\subseteq\) pro „podmnožina (může být i rovna)“ a
+                                \(\subsetneq\) pro „vlastní podmnožina (striktní inkluze)“.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Formální definice</h4>
+                        <p>
+                            Pro množiny \(A\) a \(B\) platí:
+                        </p>
+                        <div class="equation-large">\(A\subseteq B \iff (\forall x)\,(x\in A \Rightarrow x\in B)\)</div>
+                        <p>
+                            Striktní inkluze:
+                        </p>
+                        <div class="equation-large">\(A\subsetneq B \iff (A\subseteq B)\land(A\neq B)\)</div>
+                    </div>
+
+                    <h2>Jak inkluzi ověřit a jak ji vyvrátit</h2>
+                    <p>
+                        Pro důkaz \(A\subseteq B\) bereme <strong>libovolné</strong> \(x\in A\) a ukážeme, že nutně
+                        \(x\in B\). Pro vyvrácení stačí <strong>jeden protipříklad</strong>.
+                    </p>
+                    <div class="equation-large">\(A\nsubseteq B \iff (\exists x)\,(x\in A\land x\notin B)\)</div>
+                    <p class="formula-note">
+                        Protipříklad je vždy prvek z rozdílu \(A\setminus B\). Pokud je \(A\setminus B\neq\varnothing\),
+                        inkluze \(A\subseteq B\) neplatí.
+                    </p>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Příklad platné inkluze</h4>
+                            <p class="math-inline">\(A=\{2,4,6\}\), \(B=\{1,2,3,4,5,6\}\)</p>
+                            <p>
+                                Každý prvek z \(A\) je i v \(B\), tedy \(A\subsetneq B\).
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h4>Příklad neplatné inkluze</h4>
+                            <p class="math-inline">\(C=\{1,3,5\}\), \(D=\{1,2,3,4\}\)</p>
+                            <p>
+                                Prvek \(5\in C\), ale \(5\notin D\). Proto \(C\nsubseteq D\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Důsledky definice</h4>
+                        <ul>
+                            <li>\(\varnothing\subseteq A\) pro každou množinu \(A\).</li>
+                            <li>\(A\subseteq A\) (reflexivita inkluze).</li>
+                            <li>Z \(A\subseteq B\) a \(B\subseteq C\) plyne \(A\subseteq C\) (tranzitivita).</li>
+                            <li>Pro konečnou množinu \(B\): počet všech podmnožin je \(|\mathcal{P}(B)|=2^{|B|}\).</li>
+                        </ul>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧪 Laboratoř inkluze</h3>
+                        <p>
+                            Označte prvky, které patří do \(A\) a \(B\). Nástroj okamžitě dopočítá vztah
+                            mezi množinami i rozdíly \(A\setminus B\), \(B\setminus A\).
+                        </p>
+
+                        <div class="demo-container demo-container-wide">
+                            <div class="subset-builder">
+                                <div class="builder-card">
+                                    <h4>Množina \(A\)</h4>
+                                    <div id="subsetAElements" class="element-grid"></div>
+                                </div>
+
+                                <div class="builder-card">
+                                    <h4>Množina \(B\)</h4>
+                                    <div id="subsetBElements" class="element-grid"></div>
+                                </div>
+
+                                <div class="builder-actions">
+                                    <button id="subsetPreset1Btn" class="btn-outline btn-small">Preset 1</button>
+                                    <button id="subsetPreset2Btn" class="btn-outline btn-small">Preset 2</button>
+                                    <button id="subsetPreset3Btn" class="btn-outline btn-small">Preset 3</button>
+                                    <button id="subsetResetBtn" class="btn-outline btn-small">Reset</button>
+                                </div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="calc-panel">
+                                    <h4>Aktuální zápis</h4>
+                                    <div id="subsetDisplayA" class="dynamic-math"></div>
+                                    <div id="subsetDisplayB" class="dynamic-math"></div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Vztah mezi množinami</h4>
+                                    <div id="subsetRelation" class="dynamic-math"></div>
+                                    <p id="subsetExplanation" class="operation-definition"></p>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola rozdílů</h4>
+                                    <div id="subsetDiffA" class="dynamic-math"></div>
+                                    <div id="subsetDiffB" class="dynamic-math"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎯 Kvíz: určete správný vztah</h3>
+                        <p>
+                            U každé dvojice množin určete, co platí. Po chybě se zobrazí správná odpověď i stručné
+                            zdůvodnění.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální zadání</div>
+                                <div id="relationTaskA" class="dynamic-math"></div>
+                                <div id="relationTaskB" class="dynamic-math"></div>
+                                <div id="relationProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div id="relationOptions" class="relation-options">
+                                    <button class="relation-option" data-relation="aProperB">\(A\subsetneq B\)</button>
+                                    <button class="relation-option" data-relation="equal">\(A=B\)</button>
+                                    <button class="relation-option" data-relation="bProperA">\(B\subsetneq A\)</button>
+                                    <button class="relation-option" data-relation="incomparable">Ani jedno není podmnožinou druhého</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="relationCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="relationNextBtn" class="btn-outline">Další příklad</button>
+                                </div>
+
+                                <div id="relationFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba v zápisu</h4>
+                            <p>
+                                Nezaměňujte \(x\in A\) (prvek a množina) s \(A\subseteq B\) (množina a množina).
+                                Symboly \(\in\) a \(\subseteq\) mají odlišný význam.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons nav-single">
+                        <button class="btn-primary btn-next" data-next="rovnost-mnozin">Pokračovat na rovnost množin →</button>
+                    </div>
+                </section>
+
+                <section id="rovnost-mnozin" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Rovnost množin</h1>
+                    <p class="lead">
+                        Dvě množiny jsou stejné právě tehdy, když mají přesně stejné prvky.
+                        Nezáleží na pořadí, ani na opakovaném zapsání stejného prvku.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Definice rovnosti množin</h4>
+                        <p>
+                            Množiny \(A\) a \(B\) jsou rovny právě tehdy, když každý prvek patří do obou nebo do
+                            žádné z nich:
+                        </p>
+                        <div class="equation-large">\(A=B \iff (\forall x)\,(x\in A \Leftrightarrow x\in B)\)</div>
+                        <p>
+                            Praktické kritérium:
+                        </p>
+                        <div class="equation-large">\(A=B \iff (A\subseteq B)\land(B\subseteq A)\)</div>
+                    </div>
+
+                    <h2>Jak dokazovat rovnost množin</h2>
+                    <ol class="proof-steps">
+                        <li>Ukažte \(A\subseteq B\): vezměte libovolné \(x\in A\) a dokažte \(x\in B\).</li>
+                        <li>Ukažte \(B\subseteq A\): vezměte libovolné \(x\in B\) a dokažte \(x\in A\).</li>
+                        <li>Uzavřete: platí obě inkluze, tedy \(A=B\).</li>
+                    </ol>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Rovnost platí</h4>
+                            <p class="math-inline">\(A=\{1,2,3\}\), \(B=\{3,2,1,1\}\)</p>
+                            <p>
+                                Duplicitní zápis prvku \(1\) nic nemění, proto \(A=B\).
+                            </p>
+                        </div>
+                        <div class="column">
+                            <h4>Rovnost neplatí</h4>
+                            <p class="math-inline">\(C=\{-1,0,1\}\), \(D=\{-1,1\}\)</p>
+                            <p>
+                                \(0\in C\), ale \(0\notin D\). Stačí jediný takový prvek a \(C\neq D\).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧮 Kontrola rovnosti ze zadaných prvků</h3>
+                        <p>
+                            Zadejte prvky oddělené čárkou. Nástroj odstraní duplicity, normalizuje zápis a ověří,
+                            zda \(A=B\). Pokud ne, vypíše i korektní protipříklad.
+                        </p>
+
+                        <div class="equality-checker">
+                            <label for="equalityInputA">Množina \(A\):</label>
+                            <input id="equalityInputA" type="text" placeholder="např. 1, 2, 2, 3" autocomplete="off">
+
+                            <label for="equalityInputB">Množina \(B\):</label>
+                            <input id="equalityInputB" type="text" placeholder="např. 3, 1, 2" autocomplete="off">
+
+                            <div class="action-row">
+                                <button id="equalityCheckBtn" class="btn-primary">Vyhodnotit</button>
+                                <button id="equalityClearBtn" class="btn-outline">Vyčistit</button>
+                            </div>
+
+                            <div id="equalityResult" class="result-box">Po vyhodnocení se zde zobrazí normalizované množiny a výsledek.</div>
+                            <div id="equalityFeedback" class="feedback-box" aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>✅/❌ Kvíz: jsou množiny stejné?</h3>
+                        <p>
+                            U každého tvrzení rozhodněte, zda je pravdivé. Po chybě uvidíte správný verdikt i důvod.
+                        </p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální tvrzení</div>
+                                <div id="equalityQuizA" class="dynamic-math"></div>
+                                <div id="equalityQuizB" class="dynamic-math"></div>
+                                <div id="equalityQuizProgress" class="attempts"></div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <div class="binary-options" id="equalityBinaryOptions">
+                                    <button class="binary-option" data-value="true">Platí \(A=B\)</button>
+                                    <button class="binary-option" data-value="false">Neplatí \(A=B\)</button>
+                                </div>
+
+                                <div class="action-row">
+                                    <button id="equalityQuizCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="equalityQuizNextBtn" class="btn-outline">Další příklad</button>
+                                </div>
+
+                                <div id="equalityQuizFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonCompleteCard">
+                        <div class="complete-icon">✓</div>
+                        <h2>Množinové vztahy dokončeny</h2>
+                        <p>
+                            Umíte korektně rozhodovat inkluzi, nalézt protipříklad při neplatné inkluzi
+                            a testovat rovnost množin pomocí oboustranné inkluze.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="podmnozina-mnoziny-inkluze">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>

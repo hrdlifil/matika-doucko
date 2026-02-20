@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Množiny – Úvod a grafické zobrazení: úvod do množin, typy množin a Vennovy diagramy s interaktivními příklady.">
+    <title>Úvod a grafické zobrazení – Množiny – ČVUT FBMI</title>
+    <link rel="stylesheet" href="../../../../style.css">
+    <link rel="stylesheet" href="../../course.css">
+    <link rel="stylesheet" href="lesson.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../../../index.html" class="logo">
+                <span class="logo-icon">ČVUT</span>
+                <span class="logo-text">FBMI</span>
+            </a>
+            <div class="lesson-nav-info">
+                <a href="../../index.html" class="lesson-course-link">Množiny</a>
+                <span class="lesson-nav-separator">›</span>
+                <span class="lesson-nav-current">Kapitola 1: Úvod a grafické zobrazení</span>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="btn-ghost">Přihlásit se</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="lesson-main">
+        <div class="lesson-container">
+            <aside class="lesson-sidebar">
+                <div class="sidebar-header">
+                    <h3>Kapitola 1</h3>
+                    <p>Úvod a grafické zobrazení</p>
+                </div>
+
+                <nav class="sidebar-nav">
+                    <a href="#uvod-do-mnozin" class="sidebar-link active" data-section="uvod-do-mnozin">
+                        <span class="sidebar-icon">1</span>
+                        Úvod do množin
+                    </a>
+                    <a href="#typy-mnozin" class="sidebar-link" data-section="typy-mnozin">
+                        <span class="sidebar-icon">2</span>
+                        Typy množin
+                    </a>
+                    <a href="#vennovy-diagramy-a-zakresleni-mnozin" class="sidebar-link"
+                        data-section="vennovy-diagramy-a-zakresleni-mnozin">
+                        <span class="sidebar-icon">3</span>
+                        Vennovy diagramy a zakreslení
+                    </a>
+                </nav>
+
+                <div class="sidebar-progress">
+                    <div class="progress-label">Pokrok v lekci</div>
+                    <div class="progress-bar-small">
+                        <div class="progress-fill-small" style="width: 0%"></div>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="lesson-back-link">← Zpět na přehled kurzu</a>
+            </aside>
+
+            <div class="lesson-content">
+                <section id="uvod-do-mnozin" class="lesson-section active">
+                    <div class="section-badge">Téma 1</div>
+                    <h1>Úvod do množin</h1>
+                    <p class="lead">
+                        Množina je přesně určený soubor navzájem odlišných prvků.
+                        Klíčové je slovo „přesně“: pro každý objekt musí být jednoznačné,
+                        zda do množiny patří, nebo nepatří.
+                    </p>
+
+                    <div class="info-card">
+                        <div class="info-card-icon">💡</div>
+                        <div class="info-card-content">
+                            <h4>Konvence v této lekci</h4>
+                            <p>
+                                Budeme používat značení \(\mathbb{N}=\{1,2,3,\dots\}\),
+                                \(\mathbb{Z}\) pro celá čísla a \(\mathbb{R}\) pro reálná čísla.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Základní zápis</h4>
+                        <p>Prvek \(a\) je v množině \(A\): \(a\in A\). Prvek v množině není: \(a\notin A\).</p>
+                        <div class="equation-large">\(A = \{2,4,6,8\}\), \quad \(3\notin A\), \(4\in A\)</div>
+                        <p class="formula-note">
+                            Na pořadí prvků nezáleží a duplicitní zápis prvků nic nemění:
+                            \(\{1,1,2,3,3\}=\{1,2,3\}\).
+                        </p>
+                    </div>
+
+                    <div class="two-columns">
+                        <div class="column">
+                            <h4>Výčtový zápis</h4>
+                            <p>Prvky vypíšeme přímo:</p>
+                            <p class="math-inline">\(B=\{-2,-1,0,1,2\}\)</p>
+                        </div>
+                        <div class="column">
+                            <h4>Charakteristická vlastnost</h4>
+                            <p>Prvky popíšeme pravidlem:</p>
+                            <p class="math-inline">\(B=\{x\in\mathbb{Z}\mid -2\le x\le 2\}\)</p>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🎯 Interaktivní kontrola členství</h3>
+                        <p>Rozhodněte, jestli zobrazený prvek patří do zadané množiny.</p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Aktuální zadání</div>
+                                <div id="membershipSetLatex" class="dynamic-math">\(A=\{x\in\mathbb{N}\mid x\text{ je sudé a }x\le 12\}\)</div>
+                                <div class="candidate-box">
+                                    <span class="candidate-label">Testovaný prvek</span>
+                                    <strong id="membershipCandidate">\(x=8\)</strong>
+                                </div>
+                                <div class="attempts" id="membershipProgress">Příklad 1 z 6</div>
+                            </div>
+
+                            <div class="demo-controls">
+                                <button id="membershipBelongsBtn" class="btn-primary">Patří (\(\in\))</button>
+                                <button id="membershipNotBelongsBtn" class="btn-outline">Nepatří (\(\notin\))</button>
+                                <button id="membershipNextBtn" class="btn-outline">Další příklad</button>
+                                <div id="membershipFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card info-card-warning">
+                        <div class="info-card-icon">⚠️</div>
+                        <div class="info-card-content">
+                            <h4>Častá chyba</h4>
+                            <p>
+                                \(\varnothing\) (prázdná množina) a \(\{\varnothing\}\) nejsou totéž.
+                                Druhý zápis je jednoprvková množina, jejím jediným prvkem je prázdná množina.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="btn-primary btn-next" data-next="typy-mnozin">Pokračovat na typy množin →</button>
+                </section>
+
+                <section id="typy-mnozin" class="lesson-section">
+                    <div class="section-badge">Téma 2</div>
+                    <h1>Typy množin</h1>
+                    <p class="lead">
+                        Typ množiny určuje její strukturu: zda je prázdná, jednoprvková, konečná nebo nekonečná.
+                        V praxi se často používá i univerzální množina \(U\) a počet prvků \(|A|\).
+                    </p>
+
+                    <div class="type-grid">
+                        <article class="type-card">
+                            <h4>Prázdná množina</h4>
+                            <p class="math-inline">\(\varnothing\)</p>
+                            <p>Nemá žádný prvek, tedy \(|\varnothing|=0\).</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Jednoprvková množina</h4>
+                            <p class="math-inline">\(\{\pi\}\)</p>
+                            <p>Obsahuje právě jeden prvek.</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Konečná množina</h4>
+                            <p class="math-inline">\(\{2,4,6,8\}\)</p>
+                            <p>Má konečný počet prvků, zde \(|A|=4\).</p>
+                        </article>
+                        <article class="type-card">
+                            <h4>Nekonečná množina</h4>
+                            <p class="math-inline">\(\mathbb{N}\), \(\mathbb{Z}\), \(\mathbb{R}\)</p>
+                            <p>Má nekonečně mnoho prvků.</p>
+                        </article>
+                    </div>
+
+                    <div class="definition-box">
+                        <h4>Podmnožina a vlastní podmnožina</h4>
+                        <p>
+                            \(A\subseteq B\) znamená, že každý prvek \(A\) leží i v \(B\).<br>
+                            \(A\subsetneq B\) znamená, že \(A\subseteq B\) a zároveň \(A\ne B\).
+                        </p>
+                        <div class="equation-large">\(A=\{2,4\},\; B=\{2,4,6\}\;\Rightarrow\; A\subsetneq B\)</div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧩 Klasifikace množin</h3>
+                        <p>Vyberte nejpřesnější typ zobrazené množiny.</p>
+
+                        <div class="demo-container">
+                            <div class="demo-panel demo-panel-main">
+                                <div class="panel-label">Zadaná množina</div>
+                                <div id="typeSetDisplay" class="dynamic-math">\(\varnothing\)</div>
+                                <div id="typeProgress" class="attempts">Příklad 1 z 6</div>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="type-options" id="typeOptions">
+                                    <button class="type-option" data-type="empty">Prázdná</button>
+                                    <button class="type-option" data-type="singleton">Jednoprvková</button>
+                                    <button class="type-option" data-type="finite">Konečná (více prvků)</button>
+                                    <button class="type-option" data-type="infinite">Nekonečná</button>
+                                </div>
+                                <div class="action-row">
+                                    <button id="typeCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                    <button id="typeNextBtn" class="btn-outline">Další příklad</button>
+                                </div>
+                                <div id="typeFeedback" class="feedback-box" aria-live="polite"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧮 Kardinalita a duplicity</h3>
+                        <p>
+                            Zadejte prvky oddělené čárkou. Nástroj odstraní duplicity a spočítá kardinalitu.
+                            (Např. <code>a, a, b, c</code>)
+                        </p>
+
+                        <div class="cardinality-box">
+                            <label for="cardinalityInput">Prvky množiny:</label>
+                            <input id="cardinalityInput" type="text" placeholder="např. 1, 2, 2, 3, 5" autocomplete="off">
+                            <button id="cardinalityCheckBtn" class="btn-primary">Vyhodnotit</button>
+                            <div id="cardinalityResult" class="result-box">Po vyhodnocení se zde zobrazí normalizovaná množina a \(|A|\).</div>
+                            <div id="cardinalityFeedback" class="feedback-box" aria-live="polite"></div>
+                        </div>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="uvod-do-mnozin">← Zpět</button>
+                        <button class="btn-primary btn-next" data-next="vennovy-diagramy-a-zakresleni-mnozin">Pokračovat na Vennovy diagramy →</button>
+                    </div>
+                </section>
+
+                <section id="vennovy-diagramy-a-zakresleni-mnozin" class="lesson-section">
+                    <div class="section-badge">Téma 3</div>
+                    <h1>Vennovy diagramy a zakreslení množin</h1>
+                    <p class="lead">
+                        Vennův diagram zobrazuje množiny jako oblasti v univerzu \(U\).
+                        Umožňuje rychle číst průnik, sjednocení, rozdíl i doplněk množiny.
+                    </p>
+
+                    <div class="definition-box">
+                        <h4>Základní operace</h4>
+                        <p>
+                            \(A\cup B=\{x\mid x\in A\lor x\in B\}\)<br>
+                            \(A\cap B=\{x\mid x\in A\land x\in B\}\)<br>
+                            \(A\setminus B=\{x\in A\mid x\notin B\}\)<br>
+                            \(A^c=U\setminus A\)
+                        </p>
+                        <div class="equation-large">\(|A\cup B|=|A|+|B|-|A\cap B|\) (pro konečné množiny)</div>
+                    </div>
+
+                    <div class="interactive-demo">
+                        <h3>🧠 Interaktivní Vennův explorér</h3>
+                        <p>
+                            Pracujeme s pevnými množinami:
+                            \(U=\{1,2,\dots,12\}\),
+                            \(A=\{2,4,6,8,10,12\}\),
+                            \(B=\{2,3,5,7,11\}\).
+                        </p>
+
+                        <div class="demo-container demo-container-large">
+                            <div class="demo-panel venn-panel">
+                                <canvas id="vennCanvas" width="620" height="360"></canvas>
+                            </div>
+                            <div class="demo-controls">
+                                <div class="operation-grid" id="operationGrid">
+                                    <button class="operation-btn active" data-operation="union">\(A\cup B\)</button>
+                                    <button class="operation-btn" data-operation="intersection">\(A\cap B\)</button>
+                                    <button class="operation-btn" data-operation="aMinusB">\(A\setminus B\)</button>
+                                    <button class="operation-btn" data-operation="bMinusA">\(B\setminus A\)</button>
+                                    <button class="operation-btn" data-operation="aComplement">\(A^c\)</button>
+                                    <button class="operation-btn" data-operation="bComplement">\(B^c\)</button>
+                                    <button class="operation-btn" data-operation="symDiff">\(A\triangle B\)</button>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Aktuální operace</h4>
+                                    <div id="operationFormula" class="dynamic-math">\(A\cup B\)</div>
+                                    <div id="operationDefinition" class="operation-definition"></div>
+                                    <div id="operationResult" class="dynamic-math"></div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Kontrola kardinality</h4>
+                                    <div id="operationCardinality" class="dynamic-math"></div>
+                                </div>
+
+                                <div class="calc-panel">
+                                    <h4>Zkuste vypsat výsledek sami</h4>
+                                    <label for="vennAnswerInput">Zapište prvky oddělené čárkou:</label>
+                                    <input id="vennAnswerInput" type="text" placeholder="např. 2, 3, 5" autocomplete="off">
+                                    <div class="action-row">
+                                        <button id="vennCheckBtn" class="btn-primary">Zkontrolovat</button>
+                                        <button id="vennResetBtn" class="btn-outline">Vyčistit</button>
+                                    </div>
+                                    <div id="vennFeedback" class="feedback-box" aria-live="polite"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lesson-complete" id="lessonCompleteCard">
+                        <div class="complete-icon">✓</div>
+                        <h2>Hotovo: základy množin zvládnuty</h2>
+                        <p>
+                            Umíte číst zápis množin, rozlišit hlavní typy množin a správně interpretovat
+                            Vennovy diagramy včetně základních operací.
+                        </p>
+                        <a href="../../index.html" class="btn-primary btn-large">Zpět na přehled kurzu</a>
+                    </div>
+
+                    <div class="nav-buttons">
+                        <button class="btn-outline btn-prev" data-prev="typy-mnozin">← Zpět</button>
+                        <a href="../../index.html" class="btn-primary">Dokončit lekci</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['\\(', '\\)'], ['$', '$']],
+                displayMath: [['\\[', '\\]']]
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="lesson.js"></script>
+</body>
+
+</html>

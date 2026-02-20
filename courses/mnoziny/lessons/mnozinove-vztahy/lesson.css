@@ -1,0 +1,322 @@
+@import url("../../../analyticka-geometrie/lessons/vzdalenost-stred/lesson.css");
+
+/* Lesson-specific extensions for Mnoziny / Kapitola 2 */
+
+.math-inline {
+    font-family: 'Times New Roman', serif;
+    color: var(--accent-primary);
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.dynamic-math {
+    font-family: 'Times New Roman', serif;
+    font-size: 1.12rem;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+.formula-note {
+    margin-top: 1rem;
+    padding: 0.85rem 1rem;
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-md);
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.proof-steps {
+    margin: 1rem 0 1.5rem;
+    padding-left: 1.25rem;
+}
+
+.proof-steps li {
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+}
+
+.demo-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.demo-panel-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.panel-label {
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+    font-weight: 600;
+}
+
+.attempts {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.demo-container-wide {
+    grid-template-columns: 1fr 320px;
+}
+
+.subset-builder {
+    display: grid;
+    gap: 1rem;
+}
+
+.builder-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1rem;
+}
+
+.builder-card h4 {
+    font-size: 0.95rem;
+    margin: 0 0 0.75rem;
+}
+
+.element-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.element-chip {
+    position: relative;
+    display: block;
+}
+
+.element-chip input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.element-chip span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 2.1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-tertiary);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.element-chip span:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.element-chip input:checked + span {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.24);
+    color: #c7d2fe;
+}
+
+.builder-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+}
+
+.btn-small {
+    padding: 0.55rem 0.7rem;
+    font-size: 0.84rem;
+}
+
+.calc-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 0.9rem;
+}
+
+.calc-panel h4 {
+    margin: 0 0 0.65rem;
+    font-size: 0.86rem;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.operation-definition {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+#subsetDiffA,
+#subsetDiffB {
+    margin-top: 0.45rem;
+}
+
+.relation-options,
+.binary-options {
+    display: grid;
+    gap: 0.55rem;
+}
+
+.relation-option,
+.binary-option {
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border-radius: var(--radius-md);
+    padding: 0.7rem 0.8rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    text-align: left;
+}
+
+.relation-option:hover,
+.binary-option:hover {
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+}
+
+.relation-option.selected,
+.binary-option.selected {
+    border-color: var(--accent-primary);
+    background: rgba(99, 102, 241, 0.2);
+    color: #c7d2fe;
+}
+
+.relation-option.correct,
+.binary-option.correct {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.14);
+    color: #6ee7b7;
+}
+
+.relation-option.incorrect,
+.binary-option.incorrect {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.14);
+    color: #fca5a5;
+}
+
+.action-row {
+    display: flex;
+    gap: 0.6rem;
+}
+
+.action-row button {
+    flex: 1;
+}
+
+.equality-checker {
+    display: grid;
+    gap: 0.7rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 1rem;
+}
+
+.equality-checker label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.equality-checker input {
+    width: 100%;
+    padding: 0.7rem 0.75rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+    font-size: 0.92rem;
+}
+
+.equality-checker input:focus {
+    outline: 2px solid rgba(99, 102, 241, 0.35);
+    border-color: rgba(99, 102, 241, 0.55);
+}
+
+.result-box {
+    background: var(--bg-tertiary);
+    border: 1px dashed var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 0.8rem;
+    min-height: 3rem;
+    line-height: 1.55;
+    color: var(--text-secondary);
+}
+
+.feedback-box {
+    margin-top: 0.35rem;
+    padding: 0.8rem 0.9rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    display: none;
+    line-height: 1.55;
+    font-size: 0.92rem;
+}
+
+.feedback-box.show {
+    display: block;
+}
+
+.feedback-box.correct {
+    border-color: rgba(16, 185, 129, 0.35);
+    background: rgba(16, 185, 129, 0.1);
+    color: #6ee7b7;
+}
+
+.feedback-box.incorrect {
+    border-color: rgba(239, 68, 68, 0.35);
+    background: rgba(239, 68, 68, 0.1);
+    color: #fca5a5;
+}
+
+.feedback-box.info {
+    border-color: rgba(59, 130, 246, 0.35);
+    background: rgba(59, 130, 246, 0.1);
+    color: #93c5fd;
+}
+
+.nav-single {
+    justify-content: flex-end;
+}
+
+#lessonCompleteCard {
+    margin-top: 2rem;
+}
+
+@media (max-width: 1200px) {
+    .demo-container-wide {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .builder-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .element-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .action-row {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,72 @@
+Q: Vyřešte soustavu x + y = 7, &nbsp; 2x - y = 8.
+Options:
+  (a) (5, 2) <= key
+  (b) (2, 5)
+  (c) (3, 4)
+  (d) (6, 1)
+SolutionText: (x, y) = (5, 2)
+
+[2] id=exercise-s1-2 type=number answer=4/5 correct=-
+Q: Určete y v soustavě 3x + 2y = 7, &nbsp; x - y = 1.
+SolutionText: y = 4/5, protože ze soustavy 3x + 2y = 7, x - y = 1 vyjde x = y + 1 a 5y = 4
+
+[3] id=exercise-s1-3 type=choice answer=c correct=-
+Q: Kolik řešení má soustava 4x - 2y = 6, &nbsp; 2x - y = 3?
+Options:
+  (a) Žádné
+  (b) Právě jedno
+  (c) Nekonečně mnoho <= key
+SolutionText: soustava má nekonečně mnoho řešení, protože druhá rovnice je polovinou první
+
+[4] id=exercise-s1-4 type=pair answer=15/7,11/7 correct=-
+Q: Vyřešte soustavu x = 2y - 1, &nbsp; 3x + y = 8.
+SolutionText: (x, y) = (15/7, 11/7)
+
+[5] id=exercise-s2-5 type=choice answer=b correct=-
+Q: Vyřešte soustavu 2x + 3y = 12, &nbsp; 5x - 3y = 9.
+Options:
+  (a) (2, 3)
+  (b) (3, 2) <= key
+  (c) (4, 1)
+  (d) (3, -2)
+SolutionText: (x, y) = (3, 2)
+
+[6] id=exercise-s2-6 type=number answer=-1 correct=-
+Q: Určete y v soustavě 4x + 5y = 3, &nbsp; 2x - 5y = 9.
+SolutionText: y = -1, protože ze soustavy 4x + 5y = 3, 2x - 5y = 9 vyjde x = 2 a pak y = -1
+
+[7] id=exercise-s2-7 type=choice answer=c correct=-
+Q: Kolik řešení má soustava 3x - 2y = 7, &nbsp; 6x - 4y = 15?
+Options:
+  (a) Právě jedno
+  (b) Nekonečně mnoho
+  (c) Žádné <= key
+SolutionText: žádné řešení: po úpravě vyjde spor 6x - 4y = 14 a zároveň 6x - 4y = 15
+
+[8] id=exercise-s2-8 type=pair answer=2,-1 correct=-
+Q: Vyřešte soustavu 3x + 2y = 4, &nbsp; 5x - 2y = 12.
+SolutionText: (x, y) = (2, -1)
+
+[9] id=exercise-s3-9 type=pair answer=2,4 correct=-
+Q: Vyřešte soustavu y = 3x - 2, &nbsp; y = -x + 6.
+SolutionText: (x, y) = (2, 4)
+
+[10] id=exercise-s3-10 type=number answer=4 correct=-
+Q: Určete x pro soustavu y = 0,5x + 4, &nbsp; y = -x + 10.
+SolutionText: x = 4, protože z rovnic y = 0,5x + 4 a y = -x + 10 vyjde 0,5x + 4 = -x + 10
+
+[11] id=exercise-s3-11 type=choice answer=b correct=-
+Q: Kolik řešení má soustava y = 2x + 1, &nbsp; y = 2x - 3?
+Options:
+  (a) Právě jedno
+  (b) Žádné <= key
+  (c) Nekonečně mnoho
+SolutionText: žádné řešení: stejné směrnice, různé absolutní členy
+
+[12] id=exercise-s3-12 type=choice answer=c correct=-
+Q: Kolik řešení má soustava y = -3x + 4, &nbsp; 6x + 2y = 8?
+Options:
+  (a) Právě jedno
+  (b) Žádné
+  (c) Nekonečně mnoho <= key
+SolutionText: nekonečně mnoho řešení: rovnice y = -3x + 4 a 6x + 2y = 8 popisují stejnou přímku

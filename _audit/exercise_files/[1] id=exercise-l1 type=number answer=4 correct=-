@@ -1,0 +1,73 @@
+Q: Vyřešte rovnici: 7x - 9 = 2x + 11.
+SolutionText: x = 4
+
+[2] id=exercise-l2 type=number answer=33/4 correct=-
+Q: Vyřešte rovnici: 3(2x - 5) - 4 = 2(x + 7).
+SolutionText: x = 33/4 = 8,25
+
+[3] id=exercise-l3 type=choice answer=c correct=-
+Q: Kolik řešení má rovnice 4(x - 2) = 4x - 8?
+Options:
+  (a) Žádné řešení.
+  (b) Právě jedno řešení.
+  (c) Nekonečně mnoho řešení. <= key
+SolutionText: správně je C: rovnice je identita, má nekonečně mnoho řešení
+
+[4] id=exercise-l4 type=set answer=-5,13 correct=-
+Q: Vyřešte rovnici: |x - 4| = 9.
+SolutionText: K = {−5, 13}
+
+[5] id=exercise-l5 type=number answer=-1 correct=-
+Q: Vyřešte rovnici: |x - 1| = x + 3.
+SolutionText: x = −1
+
+[6] id=exercise-l6 type=choice answer=b correct=-
+Q: Jaká je množina řešení rovnice |3x - 6| = −2?
+Options:
+  (a) x = 2
+  (b) Žádné řešení. <= key
+  (c) x = −2
+  (d) Nekonečně mnoho řešení.
+SolutionText: správně je B: absolutní hodnota nemůže být rovna zápornému číslu
+
+[7] id=exercise-l7 type=number answer=3 correct=-
+Q: Určete x-souřadnici průsečíku přímek y = 4x - 1 a y = x + 8.
+SolutionText: x = 3
+
+[8] id=exercise-l8 type=choice answer=b correct=-
+Q: Kolik průsečíků mají přímky y = 2x + 5 a y = 2x - 1?
+Options:
+  (a) Právě jeden průsečík.
+  (b) Žádný průsečík. <= key
+  (c) Nekonečně mnoho průsečíků.
+SolutionText: správně je B: přímky jsou rovnoběžné, proto nemají průsečík
+
+[9] id=exercise-l9 type=choice answer=c correct=-
+Q: Kolik řešení má rovnice 5 − 2x = 5 − 2x?
+Options:
+  (a) Žádné řešení.
+  (b) Právě jedno řešení.
+  (c) Nekonečně mnoho řešení. <= key
+SolutionText: správně je C: obě strany rovnice jsou stejné, jde o identitu
+
+[10] id=exercise-l10 type=choice answer=b correct=-
+Q: Pro kterou hodnotu m má rovnice (m - 1)x = 2m - 2 nekonečně mnoho řešení?
+Options:
+  (a) m = −1
+  (b) m = 1 <= key
+  (c) m = 2
+  (d) Žádná hodnota m.
+SolutionText: správně je B: pro m = 1 dostaneme rovnici 0x = 0
+
+[11] id=exercise-l11 type=choice answer=a correct=-
+Q: Pro kterou hodnotu k nemá rovnice (k + 3)x = k - 1 řešení?
+Options:
+  (a) k = −3 <= key
+  (b) k = 0
+  (c) k = 1
+  (d) k = 3
+SolutionText: správně je A: pro k = −3 vyjde 0x = −4, tedy bez řešení
+
+[12] id=exercise-l12 type=number answer=4 correct=-
+Q: Dosadíme p = 5 do rovnice (p - 2)x = p + 7. Určete x.
+SolutionText: x = 4

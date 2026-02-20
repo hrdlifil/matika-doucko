@@ -1,0 +1,46 @@
+Q: Vyřeš nerovnici \(\,4-3x&lt;1\).
+Options:
+  (a) \(x&lt;1\)
+  (b) \(x&gt;1\) <= key
+  (c) \(x\le1\)
+  (d) \(x\ge1\)
+
+[2] id=exercise2 type=- answer=- correct=a
+Q: Vyřeš dvojitou nerovnici \(\,2&lt;x+5\le9\).
+Options:
+  (a) \((-3,4]\) <= key
+  (b) \([-3,4]\)
+  (c) \((-3,4)\)
+  (d) \((-\infty,4]\)
+
+[3] id=exercise3 type=- answer=- correct=b
+Q: Vyřeš kvadratickou nerovnici \(\,x^2-x-6\le0\).
+Options:
+  (a) \((-\infty,-2]\cup[3,\infty)\)
+  (b) \([-2,3]\) <= key
+  (c) \((-2,3)\)
+  (d) \([-3,2]\)
+
+[4] id=exercise4 type=- answer=- correct=b
+Q: Vyřeš racionální nerovnici \(\,\frac{x-4}{x+1}&gt;0\).
+Options:
+  (a) \((-1,4)\)
+  (b) \((-\infty,-1)\cup(4,\infty)\) <= key
+  (c) \((-\infty,-1]\cup[4,\infty)\)
+  (d) \((-\infty,4)\setminus\{-1\}\)
+
+[5] id=exercise5 type=- answer=- correct=a
+Q: Vyřeš nerovnici s absolutní hodnotou \(\,|3x-6|&lt;9\).
+Options:
+  (a) \((-1,5)\) <= key
+  (b) \([-1,5]\)
+  (c) \((-\infty,-1)\cup(5,\infty)\)
+  (d) \((-5,1)\)
+
+[6] id=exercise6 type=- answer=- correct=b
+Q: Jaké je řešení nerovnice \(\,|2x+1|\ge -4\)?
+Options:
+  (a) \(\emptyset\)
+  (b) Všechna reálná čísla \(\mathbb{R}\) <= key
+  (c) \(x\ge -\frac{1}{2}\)
+  (d) \(x\ne -\frac{1}{2}\)

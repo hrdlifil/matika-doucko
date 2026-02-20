@@ -1,0 +1,90 @@
+Q: Jaký stupeň má rovnice x⁵ - 4x + 1 = 0?
+Options:
+  (a) 3
+  (b) 4
+  (c) 5 <= key
+SolutionText: správně je C: nejvyšší mocnina je x⁵, jde tedy o rovnici 5. stupně
+
+[2] id=exercise-q2 type=choice answer=b correct=-
+Q: Kolik kořenů má v komplexních číslech polynom 4. stupně (včetně násobností)?
+Options:
+  (a) Nejvýše 2
+  (b) Přesně 4 <= key
+  (c) Vždy nekonečně mnoho
+SolutionText: správně je B: polynom 4. stupně má v C vždy 4 kořeny včetně násobností
+
+[3] id=exercise-q3 type=choice answer=a correct=-
+Q: Co platí pro polynomickou rovnici lichého stupně s reálnými koeficienty?
+Options:
+  (a) Má alespoň jeden reálný kořen. <= key
+  (b) Nikdy nemá reálný kořen.
+  (c) Vždy má přesně dva reálné kořeny.
+SolutionText: správně je A: polynom lichého stupně s reálnými koeficienty má alespoň jeden reálný kořen
+
+[4] id=exercise-q4 type=set answer=0,1,4 correct=-
+Q: Vyřešte rovnici: x⁴ - 5x³ + 4x² = 0.
+SolutionText: K = {0, 1, 4}
+
+[5] id=exercise-q5 type=set answer=-3,0,3 correct=-
+Q: Vyřešte rovnici: 2x⁵ - 18x³ = 0.
+SolutionText: K = {−3, 0, 3}
+
+[6] id=exercise-q6 type=choice answer=c correct=-
+Q: Jaká je násobnost kořene x = 0 v rovnici x³(x - 2) = 0?
+Options:
+  (a) 1
+  (b) 2
+  (c) 3 <= key
+SolutionText: správně je C: v rovnici x³(x − 2) = 0 má x = 0 násobnost 3
+
+[7] id=exercise-q7 type=set answer=1,2,3 correct=-
+Q: Vyřešte rovnici: x³ - 6x² + 11x - 6 = 0.
+SolutionText: K = {1, 2, 3}
+
+[8] id=exercise-q8 type=choice answer=b correct=-
+Q: Které číslo je kořenem rovnice 2x³ - 3x² - 8x + 12 = 0?
+Options:
+  (a) x = 1
+  (b) x = 2 <= key
+  (c) x = 7/2
+SolutionText: správně je B: pro x = 2 vyjde P(2) = 0
+
+[9] id=exercise-q9 type=set answer=-2,-1,2 correct=-
+Q: Vyřešte rovnici: x³ + x² - 4x - 4 = 0.
+SolutionText: K = {−2, −1, 2}
+
+[10] id=exercise-q10 type=number answer=0 correct=-
+Q: Jaký je zbytek při dělení x³ - 6x² + 11x - 6 výrazem x - 1?
+SolutionText: zbytek je 0
+
+[11] id=exercise-q11 type=set answer=-3,1,2,3 correct=-
+Q: Vyřešte rovnici: x⁴ - 3x³ - 7x² + 27x - 18 = 0.
+SolutionText: K = {−3, 1, 2, 3}
+
+[12] id=exercise-q12 type=choice answer=b correct=-
+Q: Co platí, když při dělení P(x) výrazem x - r vyjde zbytek 0?
+Options:
+  (a) r není kořen.
+  (b) (x - r) je činitel P(x). <= key
+  (c) Polynom nelze dále rozkládat.
+SolutionText: správně je B: když je zbytek 0, je (x − r) činitel polynomu
+
+[13] id=exercise-q13 type=set answer=-2,-1,1,2 correct=-
+Q: Vyřešte rovnici: x⁴ - 5x² + 4 = 0.
+SolutionText: K = {−2, −1, 1, 2}
+
+[14] id=exercise-q14 type=choice answer=c correct=-
+Q: Kolik reálných řešení má rovnice x⁴ + 4x² + 4 = 0?
+Options:
+  (a) 4 reálná řešení
+  (b) 2 reálná řešení
+  (c) Žádné reálné řešení <= key
+SolutionText: správně je C: v reálných číslech nemá rovnice x⁴ + 4x² + 4 = 0 řešení
+
+[15] id=exercise-q15 type=choice answer=c correct=-
+Q: Jaká substituce je nejvhodnější pro rovnici x⁶ - 7x³ + 6 = 0?
+Options:
+  (a) t = x
+  (b) t = x²
+  (c) t = x³ <= key
+SolutionText: správně je C: pro rovnici x⁶ − 7x³ + 6 = 0 je vhodná substituce t = x³

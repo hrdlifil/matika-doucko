@@ -1,0 +1,2774 @@
+[
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ y=\\arcsin x \\iff \\sin y=x,\\quad y\\in\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right],\\quad x\\in[-1,1] \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ y=\\arccos x \\iff \\cos y=x,\\quad y\\in[0,\\pi],\\quad x\\in[-1,1] \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ D(\\arcsin)=D(\\arccos)=[-1,1] \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ H(\\arcsin)=\\left[-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right],\\quad H(\\arccos)=[0,\\pi] \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arcsin x+\\arccos x=\\frac{\\pi}{2}\\quad\\text{pro každé }x\\in[-1,1] \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arcsin\\left(\\frac12\\right)=\\frac{\\pi}{6},\\quad \\arcsin\\left(-\\frac{\\sqrt3}{2}\\right)=-\\frac{\\pi}{3} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arccos\\left(\\frac12\\right)=\\frac{\\pi}{3},\\quad \\arccos\\left(-\\frac12\\right)=\\frac{2\\pi}{3} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arcsin(1)=\\frac{\\pi}{2},\\quad \\arccos(1)=0,\\quad \\arccos(-1)=\\pi \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\sin(\\arcsin x)=x,\\quad \\cos(\\arccos x)=x \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\cos(\\arcsin x)=\\sqrt{1-x^2} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\sin(\\arccos x)=\\sqrt{1-x^2} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ y=\\arctan x \\iff \\tan y=x,\\quad y\\in\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right),\\quad x\\in\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ y=\\arccot x \\iff \\cot y=x,\\quad y\\in(0,\\pi),\\quad x\\in\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ D(\\arctan)=D(\\arccot)=\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ H(\\arctan)=\\left(-\\frac{\\pi}{2},\\frac{\\pi}{2}\\right),\\quad H(\\arccot)=(0,\\pi) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arctan x+\\arccot x=\\frac{\\pi}{2}\\quad\\text{(v této zvolené větvi)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ (\\arctan x)'=\\frac{1}{1+x^2},\\qquad (\\arccot x)'=-\\frac{1}{1+x^2} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arctan(1)=\\frac{\\pi}{4},\\quad \\arctan(\\sqrt3)=\\frac{\\pi}{3},\\quad \\arctan(-\\sqrt3)=-\\frac{\\pi}{3} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\arccot(1)=\\frac{\\pi}{4},\\quad \\arccot(\\sqrt3)=\\frac{\\pi}{6},\\quad \\arccot(-1)=\\frac{3\\pi}{4} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\tan t=2 \\iff t=\\arctan 2+k\\pi,\\quad k\\in\\mathbb{Z} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/cyklometricke-funkce/index.html",
+    "formula": "\\[ \\cot t=-3 \\iff t=\\arccot(-3)+k\\pi,\\quad k\\in\\mathbb{Z} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ f(x)=a^x,\\qquad a>0,\\ a\\ne1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ D(f)=\\mathbb{R},\\qquad H(f)=(0,\\infty),\\qquad f(0)=1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ a^{x+1}=a\\cdot a^x,\\qquad \\frac{f(x+1)}{f(x)}=a \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ 2^3=8,\\quad 2^{-2}=\\frac14,\\quad \\left(\\frac12\\right)^3=\\frac18 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ 3^{x+2}=9\\cdot3^x,\\qquad \\left(\\frac13\\right)^x=3^{-x} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ g(x)=A\\cdot a^{(x-h)}+k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ h>0\\Rightarrow\\text{posun doprava},\\quad h<0\\Rightarrow\\text{posun doleva} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ k>0\\Rightarrow\\text{posun nahoru},\\quad k<0\\Rightarrow\\text{posun dolů} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ 2^{x-3}+5 \\quad\\text{(doprava o 3, nahoru o 5)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ -3\\cdot\\left(\\frac12\\right)^{x+1}+2 \\quad\\text{(zrcadlení, vlevo o 1, nahoru o 2)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ A>0 \\Rightarrow H(g)=(k,\\infty) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ A<0 \\Rightarrow H(g)=(-\\infty,k) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ A=0 \\Rightarrow g(x)=k\\ \\text{(konstantní funkce)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ a>1:\\ \\lim_{x\\to\\infty}a^x=\\infty,\\ \\lim_{x\\to-\\infty}a^x=0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ 0<a<1:\\ \\lim_{x\\to\\infty}a^x=0,\\ \\lim_{x\\to-\\infty}a^x=\\infty \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/exponencialni-funkce/index.html",
+    "formula": "\\[ a^x=b,\\ b>0 \\Longleftrightarrow x=\\log_a b=\\frac{\\ln b}{\\ln a} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ f(x)=ax^2+bx+c,\\qquad a\\ne0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ x_V=-\\frac{b}{2a},\\qquad y_V=f(x_V) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ f(x)=a(x-p)^2+q,\\qquad V=[p,q],\\qquad \\text{osa: }x=p \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ f(x)=x^2-4x+3=(x-2)^2-1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ g(x)=f(x-h)+k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ g(x)=a(x-h)^2+k,\\qquad V=[h,k],\\qquad \\text{osa: }x=h \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ D(f)=\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ H(f)=\\begin{cases} [y_V,\\infty), & a&gt;0,\\\\ (-\\infty,y_V], & a&lt;0 \\end{cases} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ \\text{f klesá na }(-\\infty,x_V),\\ \\text{roste na }(x_V,\\infty)\\ \\text{pro }a&gt;0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ \\text{f roste na }(-\\infty,x_V),\\ \\text{klesá na }(x_V,\\infty)\\ \\text{pro }a&lt;0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ F(x)=|q(x)|,\\qquad q(x)=ax^2+bx+c \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ |q(x)|=\\begin{cases} q(x), & q(x)\\ge0,\\\\ -q(x), & q(x)&lt;0 \\end{cases} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/kvadraticka-funkce/index.html",
+    "formula": "\\[ F(x)=0 \\iff q(x)=0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ f(x)=ax+b, \\qquad a,b\\in\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ a=\\frac{\\Delta y}{\\Delta x} \\quad\\text{(směrnice, změna na 1 jednotku v ose }x\\text{)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ P_y=(0,b), \\qquad P_x=\\left(-\\frac{b}{a},0\\right)\\text{ pro }a\\ne0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\(f(x)=2x-3\\): roste, \\(P_y=(0,-3)\\), \\(x_0=1.5\\)."
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\(g(x)=-\\frac12x+4\\): klesá, \\(P_y=(0,4)\\), \\(x_0=8\\)."
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\(h(x)=5\\): konstantní, bez nulového bodu."
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ a=\\frac{y_2-y_1}{x_2-x_1} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ b=y_1-a x_1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ y=ax+b \\quad\\text{(ekvivalentně }y-y_1=a(x-x_1)\\text{)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ g(x)=f(x-h)+k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ f(x)=ax+b \\Rightarrow g(x)=a(x-h)+b+k=ax+(b-ah+k) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ h>0\\Rightarrow\\text{posun doprava},\\quad h0\\Rightarrow\\text{nahoru},\\quad k<0\\Rightarrow\\text{dolů} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ D(f)=\\mathbb{R} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ H(f)=\\begin{cases} \\mathbb{R}, & a\\ne0,\\\\ \\{b\\}, & a=0 \\end{cases} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/linearni-funkce/index.html",
+    "formula": "\\[ f\\text{ je lichá }\\Leftrightarrow b=0, \\qquad f\\text{ je sudá }\\Leftrightarrow a=0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ f(x)=\\log_a x,\\qquad a>0,\\ a\\ne1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ D(f)=(0,\\infty),\\qquad H(f)=\\mathbb{R},\\qquad f(1)=0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ f(a)=1,\\qquad a^{\\log_a x}=x\\ (x>0),\\qquad \\log_a(a^x)=x \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_2 8=3,\\qquad \\log_3\\frac19=-2 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_{10}(0.01)=-2,\\qquad \\log_a(a\\cdot x)=\\log_a x+1 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ g(x)=A\\cdot\\log_a(x-h)+k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ D(g)=(h,\\infty),\\qquad \\text{asymptota: } x=h \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ h>0\\Rightarrow\\text{posun doprava},\\quad h<0\\Rightarrow\\text{posun doleva} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ k>0\\Rightarrow\\text{posun nahoru},\\quad k<0\\Rightarrow\\text{posun dolů} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_2(x-3)+2 \\quad\\text{(doprava o 3, nahoru o 2)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ -2\\log_{0.5}(x+1)-1 \\quad\\text{(zrcadlení, vlevo o 1, dolů o 1)} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ g(h+1)=k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ g(h+a)=A+k \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_a(xy)=\\log_a x+\\log_a y \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_a\\!\\left(\\frac{x}{y}\\right)=\\log_a x-\\log_a y \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_a(x^r)=r\\log_a x \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_a x=b\\iff x=a^b \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_3 x=2\\iff x=3^2=9 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/logaritmicka-funkce/index.html",
+    "formula": "\\[ \\log_2(x-1)=3\\iff x-1=8\\iff x=9 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "formula": "\\[ n \\text{ sudé} \\Rightarrow f(-x)=f(x),\\quad n \\text{ liché} \\Rightarrow f(-x)=-f(x) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "formula": "\\[ f(0)=0,\\qquad x=0\\text{ je kořen násobnosti }n \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "formula": "\\[ h>0:\\ \\text{doprava},\\ h0:\\ \\text{nahoru},\\ k<0:\\ \\text{dolů} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/mocninna-funkce/index.html",
+    "formula": "\\[ D(f)=\\mathbb{R}\\setminus\\{0\\},\\quad \\text{asymptoty: }x=0,\\ y=0 \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "formula": "\\[ f=g\\iff D(f)=D(g)\\ \\land\\ \\forall x\\in D(f):\\ f(x)=g(x). \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "formula": "\\[ (f\\circ g)(x)=f(g(x)). \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "formula": "\\[ D(f\\circ g)=\\{x\\in D(g)\\mid g(x)\\in D(f)\\}. \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "formula": "\\[ f^{-1}\\text{ je inverzní k }f\\iff f^{-1}(f(x))=x\\ \\text{pro všechna }x\\in D(f) \\ \\land\\ f(f^{-1}(y))=y\\ \\text{pro všechna }y\\in D(f^{-1}). \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/operace-s-funkcemi/index.html",
+    "formula": "\\[ D(f^{-1})=H(f),\\qquad H(f^{-1})=D(f). \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "formula": "\\[ f(x)=\\frac{1}{x-2},\\quad D(f)=\\mathbb{R}\\setminus\\{2\\},\\quad H(f)=\\mathbb{R}\\setminus\\{0\\} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "formula": "\\[ g(x)=\\sqrt{x+1},\\quad D(g)=[-1,\\infty),\\quad H(g)=[0,\\infty) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "formula": "\\[ h(x)=x^2-4,\\quad D(h)=\\mathbb{R},\\quad H(h)=[-4,\\infty) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "formula": "\\[ \\forall x\\in D\\ \\exists!\\ y\\in H:\\ y=f(x) \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/uvod-do-funkci/index.html",
+    "formula": "\\[ G_f=\\{(x,f(x))\\mid x\\in D(f)\\} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "formula": "\\[ \\begin{aligned} &\\text{rostoucí: }x_1f(x_2),\\\\ &\\text{nerostoucí: }x_1<x_2\\Rightarrow f(x_1)\\ge f(x_2). \\end{aligned} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "formula": "\\[ y=c\\ \\text{protíná graf nejvýše jednou} \\Longleftrightarrow f\\ \\text{je prostá.} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "formula": "\\[ \\begin{aligned} f\\text{ je sudá } &\\Longleftrightarrow f(-x)=f(x),\\\\ f\\text{ je lichá } &\\Longleftrightarrow f(-x)=-f(x). \\end{aligned} \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "formula": "\\[ f(x+T)=f(x)\\ \\text{pro všechna }x\\text{ z definičního oboru, kde }T>0. \\]"
+  },
+  {
+    "file": "courses/funkce/lessons/vlastnosti-funkci/index.html",
+    "formula": "\\[ \\sin(kx),\\cos(kx):\\ T=\\frac{2\\pi}{|k|},\\quad \\tan(kx):\\ T=\\frac{\\pi}{|k|},\\ k\\ne0. \\]"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=\\sqrt2(\\cos45^\\circ+i\\sin45^\\circ)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=2(\\cos150^\\circ+i\\sin150^\\circ)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=2\\sqrt2(\\cos225^\\circ+i\\sin225^\\circ)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=-3\\sqrt3+3i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z_1-z_2=2\\sqrt3\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(=6\\,\\mathrm{cis}\\,65^\\circ\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(=2\\,\\mathrm{cis}\\,90^\\circ=2i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=1+i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=-\\sqrt3+i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=-2-2i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z=6(\\cos150^\\circ+i\\sin150^\\circ)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(z_1=2\\,\\mathrm{cis}\\,30^\\circ,\\ z_2=2\\,\\mathrm{cis}\\,150^\\circ\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\((3\\,\\mathrm{cis}\\,25^\\circ)(2\\,\\mathrm{cis}\\,40^\\circ)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/goniometricky-tvar-komplexniho-cisla/index.html",
+    "formula": "\\(\\frac{6\\,\\mathrm{cis}\\,135^\\circ}{3\\,\\mathrm{cis}\\,45^\\circ}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=7+7i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=4-5i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=-4+11i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=11+10i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=-13+i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=-2i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=-\\frac{11}{5}+\\frac{13}{5}i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=\\frac{6}{5}-\\frac{13}{5}i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(=-\\frac{1}{2}+\\frac{3}{2}i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(|z|=5\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(|z|=10\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(|z|=2\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((3-2i)+(4+9i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((5+2i)-(1+7i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((-6+8i)-(-2-3i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((2+3i)(4-i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((-1+2i)(3+5i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\((1-i)^2\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(\\frac{3+7i}{1-2i}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(\\frac{5-4i}{2+i}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(\\frac{-2+i}{1+i}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(z=3-4i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(z=-6+8i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/operace-a-absolutni-hodnota/index.html",
+    "formula": "\\(z=1-\\sqrt{3}i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x_{1,2}=3\\pm2i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x_{1,2}=-1\\pm\\frac{\\sqrt6}{2}i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^2-4x-5=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^2-6x+13=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^2-7x+10=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\((x-3)(x-2i)(x+2i)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^4+5x^2+6=\\prod (x-r_k)\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(=(x-2)(x-(2+i))(x-(2-i))\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^2-6x+13=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(2x^2+4x+5=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "Kořeny: \\(x_1=5,\\ x_2=-1\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "Dáno: \\(S=7,\\ P=10\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^3-3x^2+4x-12\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^4+5x^2+6\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/reseni-rovnic-a-rozklad-na-soucin/index.html",
+    "formula": "\\(x^3-6x^2+13x-10\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(K=\\{i,-i\\}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(x=3\\pm 2i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(x=-2\\pm i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(z=-3+4i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(z=2-5i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(i^{23}\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(x^2+1=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(x^2-6x+13=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(x^2+4x+5=0\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(z=1,\\;z\\cdot i=i\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(z=2+2i,\\;w=-1\\)"
+  },
+  {
+    "file": "courses/komplexni-cisla/lessons/uvod-do-komplexnich-cisel/index.html",
+    "formula": "\\(|w|=2,\\ \\arg(w)=30^\\circ\\)"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ (x-4)(x+1)(x-2)\\le 0 \\Rightarrow x\\in(-\\infty,-1]\\cup[2,4] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ (x-3)^2(x+2)&gt;0 \\Rightarrow x\\in(-2,3)\\cup(3,\\infty) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ \\frac{P(x)}{Q(x)}\\;\\square\\;0, \\qquad D(f)=\\{x\\in\\mathbb{R}\\mid Q(x)\\neq0\\} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ \\frac{(x-1)(x+3)}{(x-2)(x+1)}\\ge0 \\Rightarrow x\\in(-\\infty,-3]\\cup(-1,1]\\cup(2,\\infty) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ \\frac{(x-4)(x-1)}{x-1}&lt;0 \\Rightarrow x&lt;4,\\ x\\neq1 \\Rightarrow x\\in(-\\infty,1)\\cup(1,4) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ (x-2)^3(x+1)^2&gt;0 \\Rightarrow x\\in(2,\\infty) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ x^4-5x^2+4\\le0 \\Rightarrow t^2-5t+4\\le0,\\ t=x^2\\ge0 \\Rightarrow t\\in[1,4] \\Rightarrow x\\in[-2,-1]\\cup[1,2] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ |F(x)|&lt;k\\iff-k&lt;F(x)&lt;k, \\qquad |F(x)|\\le k\\iff-k\\le F(x)\\le k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ |F(x)|&gt;k\\iff F(x)&gt;k\\ \\text{nebo}\\ F(x)&lt;-k, \\qquad |F(x)|\\ge k\\iff F(x)\\ge k\\ \\text{nebo}\\ F(x)\\le-k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ |x^2-1|\\le3 \\iff -3\\le x^2-1\\le3 \\iff -2\\le x^2\\le4 \\iff x\\in[-2,2] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/dalsi-typy-nerovnic/index.html",
+    "formula": "\\[ |x^2-4x+3|&gt;2 \\iff x^2-4x+3&gt;2\\ \\text{nebo}\\ x^2-4x+3&lt;-2 \\Rightarrow x\\in(-\\infty,2-\\sqrt3)\\cup(2+\\sqrt3,\\infty) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ a^{u(x)}\\;\\square\\;a^{v(x)}\\iff \\begin{cases} u(x)\\;\\square\\;v(x), & a&gt;1\\\\ u(x)\\;\\widetilde{\\square}\\;v(x), & 0&lt;a&lt;1 \\end{cases} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ 2^{x+1}&gt;8=2^3 \\iff x+1&gt;3 \\iff x&gt;2 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ \\left(\\frac13\\right)^{2x-1}\\le\\left(\\frac13\\right)^5 \\iff 2x-1\\ge5 \\iff x\\ge3 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ 5^{x^2-4}\\ge1=5^0 \\iff x^2-4\\ge0 \\iff x\\in(-\\infty,-2]\\cup[2,\\infty) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ \\log_a T(x)\\;\\square\\;p\\iff \\begin{cases} T(x)\\;\\square\\;a^p, & a&gt;1\\\\ T(x)\\;\\widetilde{\\square}\\;a^p, & 0&lt;a&lt;1 \\end{cases} \\quad\\text{a současně}\\quad T(x)&gt;0 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ \\log_2(x-1)&lt;3 \\iff x-1&lt;8\\ \\text{a}\\ x-1&gt;0 \\iff 1&lt;x&lt;9 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ \\log_{1/2}(2x+3)\\ge-1 \\iff 2x+3\\le2\\ \\text{a}\\ 2x+3&gt;0 \\iff -\\frac32&lt;x\\le-\\frac12 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/exponencialni-a-logaritmicke-nerovnice/index.html",
+    "formula": "\\[ \\log_2 x+\\log_2(x-2)\\ge3 \\iff \\log_2(x(x-2))\\ge3, \\ x&gt2 \\] \\[ x^2-2x\\ge8\\iff x\\le-2\\ \\text{nebo}\\ x\\ge4, \\ x&gt2\\Rightarrow x\\ge4 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ D&lt;0:\\ \\text{bez reálných kořenů},\\qquad D=0:\\ \\text{dvojnásobný kořen},\\qquad D&gt;0:\\ \\text{dva různé kořeny} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ x^2-5x+6&lt;0\\iff(x-2)(x-3)&lt;0\\Rightarrow x\\in(2,3) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ -2x^2+8x-6\\ge0\\iff x^2-4x+3\\le0\\Rightarrow x\\in[1,3] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ |Q(x)|&lt;k\\iff-k&lt;Q(x)&lt;k,\\quad |Q(x)|\\le k\\iff-k\\le Q(x)\\le k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ |Q(x)|&gt;k\\iff Q(x)&gt;k\\ \\text{nebo}\\ Q(x)&lt;-k,\\quad |Q(x)|\\ge k\\iff Q(x)\\ge k\\ \\text{nebo}\\ Q(x)\\le-k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ |Q(x)|\\le 0\\iff Q(x)=0,\\qquad |Q(x)|>0\\iff Q(x)\\neq 0 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ |x^2-5x+6|\\le2\\iff -2\\le x^2-5x+6\\le2 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/kvadraticke-nerovnice/index.html",
+    "formula": "\\[ x^2-5x+8\\ge0\\ \\text{a}\\ x^2-5x+4\\le0 \\Rightarrow x\\in[1,4] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ 3(2x-1)-5\\le4x+7 \\Rightarrow 6x-8\\le4x+7 \\Rightarrow 2x\\le15 \\Rightarrow x\\le\\frac{15}{2} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ -3&lt;2x+1\\le7 \\Rightarrow -4&lt;2x\\le6 \\Rightarrow -2&lt;x\\le3 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ 5-2x\\ge1\\;\\text{nebo}\\;3x-6&gt;9 \\Rightarrow x\\le2\\;\\text{nebo}\\;x&gt;5 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ |A(x)|&lt;k\\iff-k&lt;A(x)&lt;k,\\quad |A(x)|\\le k\\iff-k\\le A(x)\\le k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ |A(x)|&gt;k\\iff A(x)&lt;-k\\ \\text{nebo}\\ A(x)&gt;k,\\quad |A(x)|\\ge k\\iff A(x)\\le-k\\ \\text{nebo}\\ A(x)\\ge k \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ |2x-5|\\le7\\iff -7\\le2x-5\\le7\\iff -1\\le x\\le6 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/linearni-nerovnice/index.html",
+    "formula": "\\[ |3x+1|&gt;4\\iff 3x+1&gt;4\\ \\text{nebo}\\ 3x+1&lt;-4\\iff x&gt;1\\ \\text{nebo}\\ x&lt;-\\frac{5}{3} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} N_1(x)\\\\ N_2(x)\\\\ \\vdots \\end{aligned}\\right. \\quad\\Longrightarrow\\quad S = S_1 \\cap S_2 \\cap \\dots \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} 2x-3\\le 7\\\\ -x+5>1 \\end{aligned}\\right. \\Rightarrow \\left\\{\\begin{aligned} x\\le 5\\\\ x<4 \\end{aligned}\\right. \\Rightarrow x<4 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} x^2-5x+6\\ge 0\\\\ x<4 \\end{aligned}\\right. \\Rightarrow \\left\\{\\begin{aligned} (x-2)(x-3)\\ge 0 \\Rightarrow x\\in(-\\infty,2]\\cup[3,\\infty)\\\\ x\\in(-\\infty,4) \\end{aligned}\\right. \\] \\[ S=(-\\infty,2]\\cup[3,4) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} |x-1|<3\\\\ x\\ge -1 \\end{aligned}\\right. \\Rightarrow \\left\\{\\begin{aligned} -2<x<4\\\\ x\\ge -1 \\end{aligned}\\right. \\Rightarrow S=[-1,4) \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} a_1x+b_1y\\;\\square_1\\;c_1\\\\ a_2x+b_2y\\;\\square_2\\;c_2 \\end{aligned}\\right. \\quad\\Longrightarrow\\quad S=H_1\\cap H_2 \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} x+y\\le4\\\\ x-y\\ge0 \\end{aligned}\\right. \\Longrightarrow \\left\\{\\begin{aligned} y\\le 4-x\\\\ y\\le x \\end{aligned}\\right. \\] Řešení je oblast pod oběma přímkami."
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} 2x+y>1\\\\ x+2y\\le6 \\end{aligned}\\right. \\] První hranice je čárkovaná (ostré \\(>\\)), druhá plná (\\(\\le\\))."
+  },
+  {
+    "file": "courses/nerovnice/lessons/soustavy-nerovnic/index.html",
+    "formula": "\\[ \\left\\{\\begin{aligned} x+y\\le1\\\\ x+y>3 \\end{aligned}\\right. \\Rightarrow S=\\emptyset \\] Poloroviny se nepřekrývají, soustava nemá řešení."
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "formula": "\\[ x &gt; 3 \\iff (3,\\infty),\\qquad x \\le -1 \\iff (-\\infty,-1] \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "formula": "\\[ \\begin{aligned} -6x+3+5 &\\le 14\\\\ -6x+8 &\\le 14\\\\ -6x &\\le 6\\\\ x &\\ge -1 \\end{aligned} \\]"
+  },
+  {
+    "file": "courses/nerovnice/lessons/zaklady-o-nerovnicich/index.html",
+    "formula": "\\[ |A(x)| &lt; k \\iff -k &lt; A(x) &lt; k,\\quad |A(x)| &gt; k \\iff A(x)&lt;-k \\ \\text{nebo}\\ A(x)&gt;k\\quad (k&gt;0) \\]"
+  },
+  {
+    "file": "courses/planimetrie/lessons/bod-primka-poloprimka-usecka-uhel/index.html",
+    "formula": "tan ω = |(m₂ - m₁) / (1 + m₁m₂)|"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S = √(s(s-a)(s-b)(s-c))"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "s = (a+b+c)/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S = c·vc/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "a + b &gt; c"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "a + c &gt; b"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "b + c &gt; a"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "s(s-a)(s-b)(s-c) ≥ 0"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S² = s(s-a)(s-b)(s-c)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S = c·vc/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S = c·vc/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "vc² = b² - x²"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "x = (b² + c² - a²)/(2c)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S² = (1/4)c²(b² - x²)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S² = [4b²c² - (b² + c² - a²)²]/16"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "S² = s(s-a)(s-b)(s-c)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "x = (a+b+c)/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "x = (b² + c² - a²)/(2c)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "x = √(ab)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/heronuv-vzorec/index.html",
+    "formula": "s(s-a)(s-b)(s-c)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "o = 2πr"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "S = πr²"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "c = 2r sin(φ/2)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "l = r · φ"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "S_v = (1/2) r² φ"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "S_u = S_v - (1/2) r² sin φ"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "d = r"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "d = r"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "r₁ + r₂"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "|r₁ - r₂|"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "r₁ + r₂"
+  },
+  {
+    "file": "courses/planimetrie/lessons/kruh-a-kruznice/index.html",
+    "formula": "|r₁ - r₂|"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "d = n(n - 3) / 2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "S = (n - 2) · 180°"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "n - 2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "φ = 360° / n"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "α = (n - 2) · 180° / n"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "a = 2R · sin(π / n)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "r = R · cos(π / n)"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "∠A + ∠C = 180°"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "∠B + ∠D = 180°"
+  },
+  {
+    "file": "courses/planimetrie/lessons/mnohouhelniky/index.html",
+    "formula": "a + c = b + d"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "formula": "S = r · s"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "formula": "s = (a+b+c)/2"
+  },
+  {
+    "file": "courses/planimetrie/lessons/trojuhelniky-kruznice-opsana-vepsana/index.html",
+    "formula": "a'/a = b'/b = c'/c = k"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (1/3) · Sp · v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = Sp + Spl"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = (1/2) · op · s"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(v² + ρ²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Sp = (n · a²) / (4 · tan(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 8 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Sp = a² = 36 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(8² + 3²) = √73 ≈ 8,54 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = (1/2)·(4a)·s = 2as ≈ 102,53 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = 36 + 102,53 ≈ 138,53 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (1/3)·36·8 = 96 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 8 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(r² + v²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (1/3)πr²v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = πrs"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = πr² + πrs = πr(r + s)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 12 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(5² + 12²) = 13 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = π·5·13 = 65π ≈ 204,20 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = π·5(5+13) = 90π ≈ 282,74 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (1/3)π·5²·12 = 100π ≈ 314,16 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 12 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (v/3) · (S1 + S2 + √(S1S2))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = (1/2) · (o1 + o2) · s"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = S1 + S2 + Spl"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(v² + (ρ1 - ρ2)²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = (n·a²)/(4·tan(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "ρ = a/(2·tan(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₁ = 8 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₂ = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S1 = 64 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S2 = 16 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √(6² + (4−2)²) = √40 ≈ 6,32 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = (1/2)(32+16)·6,32 ≈ 151,79 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S ≈ 64 + 16 + 151,79 = 231,79 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (6/3)(64 + 16 + √1024) = 224 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₁ = 8"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₂ = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 6"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √((R - r)² + v²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = π(R + r)s"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = π(R² + r²) + π(R + r)s"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (πv/3)(R² + Rr + r²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "R = 7 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 3 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 8 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "s = √((7−3)² + 8²) = √80 ≈ 8,94 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Spl = π(7+3)·8,94 ≈ 280,99 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S = π(49+9) + Spl ≈ 463,20 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "V = (π·8/3)(49+21+9) = (632/3)π ≈ 661,83 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "R = 7"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 8"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "Sp = 54 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a = 10"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 12"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S1 = 81"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "S2 = 25"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 9"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₁ = 6"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "a₂ = 2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "R = 6"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 9"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "R = 8"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "r = 5"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/jehlan-a-kuzel/index.html",
+    "formula": "v = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "V = (4/3)πr3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "S = 4πr2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Shl = πr2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "dV/dr = 4πr2 = S"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "ρ(x) = √(r² - x²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "A(x) = π(r² - x²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "V = ∫-rr π(r² - x²) dx = (4/3)πr³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "V = (4/3)π·6³ = 288π ≈ 904,78 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "S = 4π·6² = 144π ≈ 452,39 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "dV/dr = 4π·6² = 144π = S"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 3 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "V = (r/3)·Svrchlík"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "a² = v(2r-v)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Súseč = Svrchlík + πa²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Spás = 2πrh"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "v = 2 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "a = √(2rv-v²) = √(20-4) = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Svrchlík = 2πrv = 20π ≈ 62,83 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Vúseč = πv²(r-v/3) = (52/3)π ≈ 54,45 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Vvýseč = (2/3)πr²v = (100/3)π ≈ 104,72 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "v = 2 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "z = -3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "z = 3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "h = 3 - (-3) = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "a = b = √(25-9) = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "V = (πh/6)(3a²+3b²+h²) = 132π ≈ 414,69 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "Spás = 2πrh = 60π cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "a = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "b = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "h = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 7 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "d = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "(500/3)π cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "v = 2 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "v = 2 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "(100/3)π cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "(52/3)π cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "v = 2 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "(52/3)π cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "(100/3)π cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "a = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "b = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "h = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "h = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "dV/dr = 3πr²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "dV/dr = 4πr² = S"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/koule-a-jeji-casti/index.html",
+    "formula": "dV/dr = 2πr"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "O = n · a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = (n · a²) / (4 · tan(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = (1/2) · O · r"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "R = a / (2 · sin(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = a / (2 · tan(π/n)) = R · cos(π/n)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "α = ((n - 2) · 180°) / n"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = n · (1/2 · a · r) = (1/2) · (n · a) · r = (1/2) · O · r"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = a/(2·tan(π/n))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "a = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "O = 8 · 5 = 40 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = (8 · 25)/(4 · tan(π/8)) = 50/(tan(22,5°)) ≈ 120,71 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "a = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "o = 2πr"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = πr²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "o = 2πr = πd"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = πr²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = (1/2) · o · r"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = (πr) · r"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "o/d"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 7 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "o = 2π·7 = 14π ≈ 43,98 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S = π·7² = 49π ≈ 153,94 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 3,5"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "p_in = 2nr sin(π/n)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "p_out = 2nr tan(π/n)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "A_in = (1/2)nr² sin(2π/n)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "A_out = nr² tan(π/n)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "p_in/(2r) &lt; π &lt; p_out/(2r)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "n = 96"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 1"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "π ≈ p_in/(2r)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "s = rθ"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_v = (1/2)r²θ"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_u = (1/2)r²(θ - sin θ)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "a = 2r sin(θ/2)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_m = π(R² - r²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_{mv} = (θ/2)(R² - r²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "θ = 60° = π/3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_u = (1/2)·10²·(π/3 - sin(π/3))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "R = 9 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "S_m = π(9² - 5²) = 56π ≈ 175,93 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "o_m = 2π(R + r) = 28π ≈ 87,96 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "R = 9"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/mnohouhelnik-a-kruh/index.html",
+    "formula": "r = 5"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = 4a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = a²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = a√2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "r = a/2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "R = a/√2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = u/√2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = u²/2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u² = a² + a² = 2a²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = a√2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = 4 · 6 = 24 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = 6² = 36 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = 6√2 ≈ 8,49 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = 2(a + b)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = a · b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = √(a² + b²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "R = u/2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "tan α = b/a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 9 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = 2(9 + 4) = 26 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = 9 · 4 = 36 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = √(81 + 16) = √97 ≈ 9,85 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = a + b + c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "s = (a + b + c) / 2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = (1/2) · c · v_c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = √(s(s-a)(s-b)(s-c))"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "r = S/s"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "R = abc/(4S)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a + b &gt; c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a + c &gt; b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b + c &gt; a"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 7"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b = 8"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "c = 9"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "s = (7 + 8 + 9)/2 = 12"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = √(12·5·4·3) = √720 ≈ 26,83"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = 2(a + b)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = a · v_a = a · b · sin γ"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "v_a = b · sin γ"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "e = √(a² + b² + 2ab cos γ)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "f = √(a² + b² - 2ab cos γ)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = (e·f)/2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = b"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "γ = 30°"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = a·b·sinγ = 10·6·0,5 = 30 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = ((a + c)/2) · v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "m = (a + c)/2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "O = a + b + c + d"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b = d"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 12 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "c = 8 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "v = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "S = ((12 + 8)/2)·5 = 50 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "u = 10"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "a = 10"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "b = 6"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-rovinne-utvary/index.html",
+    "formula": "γ = 30°"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = a³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 6a²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "us = a√2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "ut = a√3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = ∛V"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = ut/√3"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = 6³ = 216 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 6·6² = 216 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "us = 6√2 ≈ 8,49 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "ut = 6√3 ≈ 10,39 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = 6 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = b = c"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = abc"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2(ab + ac + bc)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "u = √(a² + b² + c²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "uab = √(a²+b²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "uac = √(a²+c²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "ubc = √(b²+c²)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = 4 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "b = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "c = 12 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = 4·5·12 = 240 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2(4·5 + 4·12 + 5·12) = 2(20 + 48 + 60) = 256 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "u = √(4² + 5² + 12²) = √185 ≈ 13,60 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Sp = πr²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = πr²v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Spl = 2πrv"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2πr(r+v)"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "r = 3 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = π·3²·10 = 90π ≈ 282,74 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2π·3(3+10) = 78π ≈ 245,04 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "r = 3 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = Sp · v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Spl = op · v"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2Sp + opv"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Sp = 32 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "op = 28 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "V = Sp·v = 32·10 = 320 cm³"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "S = 2Sp + opv = 64 + 280 = 344 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Sp = 32 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "op = 28 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 10 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = 5 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "a = 2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "r = 2"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 5"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "r = 4"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 6"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Sp = 18 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 7 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "Sp = 18 cm²"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "op = 20 cm"
+  },
+  {
+    "file": "courses/rovinne-utvary-a-telesa/lessons/zakladni-telesa/index.html",
+    "formula": "v = 7 cm"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "f(x) - g(x) = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "A(p)x = B(p)"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "x2 - 2(a + 1)x + a2 - 1 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "x1 ≈ -1,236; x2 ≈ 3,236"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "K = {4/3, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "x = (3 ± √5)/2 ≈ 0,382; 2,618"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "K = {-1, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "pro m = 2 má rovnice nekonečně mnoho řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "pro m = 2 rovnice nemá řešení"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "t = (v - v0) / a, a ≠ 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "va = 2S / a, a ≠ 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "R2 = RR1 / (R1 - R), R1 ≠ R"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "r = √(A / π), r ≥ 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "Řešte rovnici: 2x + 1 = x2 - 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "Řešte rovnici: |x - 2| = x/2"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "Řešte rovnici: 1/(x - 1) = x - 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "(m - 2)x = m2 - 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "(m - 2)x = m + 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "v = v0 + at, vyjádři t."
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "S = (a va) / 2, vyjádři va."
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "R = (R1R2) / (R1 + R2), vyjádři R2."
+  },
+  {
+    "file": "courses/rovnice/lessons/doplnujici-informace/index.html",
+    "formula": "A = πr2, vyjádři r."
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = 0 nebo x = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = ln 7 / ln 2 ≈ 2,807"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = 9"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = (1 + 3√5) / 2 ≈ 3,854"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "K = {−3, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "x = 4 (vyhovuje podmínkám)"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "2x+1 = 32"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "9x = 3x+2"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "52x - 6·5x + 5 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "2x = 7"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "log₂(x - 1) = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "log₃(x + 1) + log₃(x - 2) = 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "log₅(x2 - 4) = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/exponencialni-a-logaritmicke-rovnice/index.html",
+    "formula": "ln(x - 1) = ln(2x - 5)"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "K = {2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "K = {−2, 1/2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "K = {2} (dvojnásobný kořen)"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "K = {1, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "K = {0, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: x² − 5x + 6 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: 2x² + 3x − 2 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: 3x² − 12x + 12 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: |x² − 5x + 6| = 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: |x² − 4x + 3| = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/kvadraticke-rovnice/index.html",
+    "formula": "Řešte: |2x² + 2x + 5| = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "ax + b = 0, kde a, b ∈ ℝ"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "x = (d − b)/(a − c), kde a ≠ c"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "A(p)x = B(p)"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "|u| = u, pokud u ≥ 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "x = 33/4 = 8,25"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "x = −17/7"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "K = {−1, 6}"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "K = {−6/5, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Průsečík je (2, 5), řešení je x = 2."
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Pro m = 1 má rovnice nekonečně mnoho řešení."
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Pro k = −3 rovnice nemá řešení."
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: 7x - 9 = 2x + 11"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: 3(2x - 5) - 4 = 2(x + 7)"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: (5 - 2x)/3 - (x + 1)/2 = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: |2x - 5| = 7"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: |3x + 1| = 2x + 5"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: |3x - 6| = −2"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: 2x + 1 = −x + 7"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: 3x − 4 = 3x + 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "Řešte rovnici: 5 − 2x = 5 − 2x"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "(m - 1)x = 2m - 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "(k + 3)x = k − 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/linearni-rovnice/index.html",
+    "formula": "(a² − 4)x = a + 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {−5/2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {0, 4}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {−3, 1, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "V ℝ: K = {2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {5}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {11}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {7/2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "K = {−3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: (x-3)(2x+5)=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: x(x-4)^2=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: (x²-9)(x-1)=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte v ℝ: (x²+1)(x-2)=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: (x-5)/(x+2)=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: 2/(x-1)=3/(x+4)"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: (x+1)/(x-2)=3"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-v-soucinovem-a-podilovem-tvaru/index.html",
+    "formula": "Řešte: (x²-9)/(x-3)=0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {0, 1, 4} (x = 0 je dvojnásobný kořen)"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {−3, 0, 3} (x = 0 je trojnásobný kořen)"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "V ℝ: K = {0, ±1, ±√3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {1, 2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {−2, 3/2, 2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {−3, −1, 1, 2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {−3, 1, 2, 3}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "K = {−2, −1, 1, 2}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "V ℝ: K = {1, ∛6}"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "Určete stupeň rovnice: 2x⁵ - 3x² + 1 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "Posuďte: x³ - 3x + 2 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "Určete vhodnou metodu pro x⁶ - 7x³ + 6 = 0."
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁴ - 5x³ + 4x² = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "2x⁵ - 18x³ = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "−3x⁶ + 12x⁴ − 9x² = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x³ - 6x² + 11x - 6 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "2x³ - 3x² - 8x + 12 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁴ + x³ - 7x² - x + 6 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x³ - 6x² + 11x - 6, test r = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁴ - 3x³ - 7x² + 27x - 18 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "Určete zbytek po dělení x³ + 2x² - 5x - 6 výrazem x - 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁴ - 5x² + 4 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁶ - 7x³ + 6 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/rovnice-vyssich-mocnin/index.html",
+    "formula": "x⁴ + 4x² + 4 = 0"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "x = 5, tedy (x, y) = (5, 2)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "x = 9/5, tedy (x, y) = (9/5, 4/5)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "(x, y) = (3, 2)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "(x, y) = (2, -1)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "y = 3, tedy (x, y) = (4, 3)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "y = 11/5, tedy (x, y) = (14/5, 11/5)"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "x + y = 7, &nbsp; 2x - y = 8"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "3x + 2y = 7, &nbsp; x - y = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "4x - 2y = 6, &nbsp; 2x - y = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "2x + 3y = 12, &nbsp; 5x - 3y = 9"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "3x + 2y = 4, &nbsp; 5x - 2y = 12"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "3x - 2y = 7, &nbsp; 6x - 4y = 15"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "2x + y = 11, &nbsp; x - y = 1"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "3x - 2y = 4, &nbsp; x + y = 5"
+  },
+  {
+    "file": "courses/rovnice/lessons/soustavy-linearnich-rovnic/index.html",
+    "formula": "y = 2x + 1, &nbsp; y = 2x - 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "x = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "x = 7/2"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "Po zkoušce platí jen x = 4"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "x = 5"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "x = 5"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "Po zkoušce platí pouze x = 3"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "Řeš: 2(3x - 1) + 5 = 4x + 9"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "Řeš: (x + 1)/(x - 2) = 3, x ≠ 2"
+  },
+  {
+    "file": "courses/rovnice/lessons/zaklady-o-rovnicich/index.html",
+    "formula": "Řeš: √(x + 5) = x - 1"
+  }
+]

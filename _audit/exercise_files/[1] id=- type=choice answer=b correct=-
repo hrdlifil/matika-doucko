@@ -1,0 +1,46 @@
+Q: Určete kořeny rovnice \(x^2-8x+20=0\).
+Options:
+  (a) \(x_{1,2}=4\pm4i\)
+  (b) \(x_{1,2}=4\pm2i\) <= key
+  (c) \(x_{1,2}=-4\pm2i\)
+  (d) \(x_{1,2}=8\pm2i\)
+
+[2] id=- type=choice answer=c correct=-
+Q: Která rovnice má kořeny \(-2+3i\) a \(-2-3i\)?
+Options:
+  (a) \(x^2-4x+13=0\)
+  (b) \(x^2+4x-13=0\)
+  (c) \(x^2+4x+13=0\) <= key
+  (d) \(x^2-2x+13=0\)
+
+[3] id=- type=choice answer=d correct=-
+Q: Sestavte monickou rovnici s kořeny \(1-4i\) a \(1+4i\).
+Options:
+  (a) \(x^2+2x+17=0\)
+  (b) \(x^2-2x-17=0\)
+  (c) \(x^2-8x+17=0\)
+  (d) \(x^2-2x+17=0\) <= key
+
+[4] id=- type=choice answer=b correct=-
+Q: Určete kořeny rovnice \(2x^2-10x+26=0\).
+Options:
+  (a) \(x_{1,2}=5\pm3\sqrt3\,i\)
+  (b) \(x_{1,2}=\frac{5\pm3\sqrt3\,i}{2}\) <= key
+  (c) \(x_{1,2}=\frac{-5\pm3\sqrt3\,i}{2}\)
+  (d) \(x_{1,2}=\frac{5\pm\sqrt3\,i}{2}\)
+
+[5] id=- type=choice answer=a correct=-
+Q: Vyberte úplný rozklad nad \(\mathbb{C}\) pro \(x^3-3x^2+4x-12\).
+Options:
+  (a) \((x-3)(x-2i)(x+2i)\) <= key
+  (b) \((x+3)(x-2i)(x+2i)\)
+  (c) \((x-3)(x^2-4)\)
+  (d) \((x-3)(x-4i)(x+4i)\)
+
+[6] id=- type=choice answer=c correct=-
+Q: Rozložte v \(\mathbb{R}[x]\) mnohočlen \(x^3-6x^2+13x-10\).
+Options:
+  (a) \((x-2)(x^2+4x+5)\)
+  (b) \((x+2)(x^2-4x+5)\)
+  (c) \((x-2)(x^2-4x+5)\) <= key
+  (d) \((x-1)(x^2-5x+10)\)
